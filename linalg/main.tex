@@ -1,5 +1,5 @@
 \documentclass[a4paper]{report}
-\input{preamble.tex}
+\input{../preamble.tex}
 \title{Algebre Linéaire}
 
 \begin{document}
@@ -311,6 +311,11 @@ Rappele:
    \[
    \forall f \in E^*, \exists! n \in E \text{ tq } \phi(n) = f, \text{ i.e } f(x) = <n, x> \, \forall x \in E
    \] 
-   Dans
+   Dans ce cas $E = \R^n$, le lemme de Riesz est tres simple à comprendre:\\
+   Soit  $f: \R^n \to \R$ une forme linéaire. Si on note $(e_1, \ldots, e_n)$ la base canonique de $\R^n$, tout $x \in \R^n$ s'écrit 
+    \begin{align*}
+        x = \sum_{n=1}^{n} \alpha_ie_i \qquad \alpha_i \in \R, \forall i \in \{1, \ldots, n\}\\
+        \implies f(x) = \sum_{n=1}^{n} \alpha_if(e_i) = <(\alpha_1, \ldots, \alpha_n), (a_1, \ldots, a_n)> = <(a_1, \ldots, a_n), (\alpha_1, \ldots, \alpha_n)>
+   \end{align*}
 \end{explanation}
 \end{document}
