@@ -1,0 +1,60 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{exemple}{Exemple}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{propriete}{Propriété(s)}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{remarque}{Remarque}
+
+\begin{document}
+\section{Éspaces}
+   \begin{definition}
+       Une \textbf{norme} sur $\R^d$ est une application $N: \R^d \to \R$ tel que:
+       \begin{enumerate}
+           \item $N(\lambda X) = |\lambda|N(X)$
+           \item  $N(X + Y) \le N(X) + N(Y)$
+           \item $N(X) \ge 0$ et $N(X) = 0 \iff X = 0_d$
+       \end{enumerate}
+   \end{definition} 
+   \begin{definition}
+       Une \textbf{distance} sur $\R^d$ est une application:  $d: \R^d \times \R^d \to \R$ tel que:
+       \begin{enumerate}
+           \item $d(X, Y) = d(Y, X)$
+           \item  $d(X, Y) \le d(X, Z) + d(Z, Y)$
+           \item $d(X, Y) \ge 0 \quad \forall X,Y$ et $d(X,Y) = 0 \iff X = Y$
+       \end{enumerate}
+   \end{definition}
+\end{document}
