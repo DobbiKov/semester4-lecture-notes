@@ -1,3 +1,24 @@
+\section{Parties bornées d'un éspace métrique}
+\begin{definition}
+    Une partie $A \subset E$ est bornée s'ils existent $x_0 \in E$ et  $r > 0$ tels que  $A \subset B(x_0, r)$
+\end{definition}
+\begin{prop}
+    S'il existe $r > 0$ tel que $\forall x, y \in A, \, d(x, y) \le r$, alors $A$ est bornée.
+\end{prop}
+\begin{definition}
+    La distance entre deux ensembles $A, B$ est:
+     \[
+         d(A, B) := \underset{x \in A, y \in B}{inf}d(x, y)
+    \] 
+    Intuitivement, on cherche deux points $x$ et  $y$ tel que la distance est la plus petite possible.
+\end{definition}
+\begin{definition}
+    La distance entre un points $x$ et un ensemble  $B$ est:
+     \[
+         d(x, B) := \underset{y \in B}{inf}d(x, y)
+    \] 
+    La même intuition.
+\end{definition}
 \section{Topologie des éspaces métriques}
 \begin{definition}
     .
@@ -201,3 +222,42 @@ Soit $A \subset E$.
     \caption{$\Q$ pas complet}
     \label{fig:q_not_complete}
 \end{figure}
+
+\begin{definition}
+    Soit une suite $(x_n)_{n \in \N}$ et une application  $\phi:\N \to \N$ \underline{strictement croissante}. Une suite $(x_n)_{\phi(n)}$ est appellée une sous-suite.
+\end{definition}
+\begin{eg}
+    Soit une application $\phi: \N \to \N$ telle que $\phi(n) = 2n$. Donc  $(x_n)_{\phi(n)}$ est une sous-suite de  $(x_n)_{n \in \N}$ et:
+    \[
+        (x_n)_{\phi(n)} = \{x_0, x_2, x_4, \ldots\}
+    \] 
+\end{eg}
+
+\section{Compacité}
+\begin{definition}
+    Soit $F \subset E$. Un \textbf{recouvrement ouvert} de $F$, est une union des enesembles ouverts:  $\bigcup_{i \in I} U_i$ tel que $F \subset \bigcup_{i \in I} U_i$
+\end{definition}
+\begin{eg}
+    Soit $F = ]0, 1[$. Soit $A = \left\{]\frac{1}{n}, 1 + \frac{1}{n}[, n \in N\right\}$. $F \subset \bigcup_{n \in N^{*}} A_n$ i.e union infinie des $A_i$ couvre $F$.
+\end{eg}
+\begin{definition}
+    Un ensemble $F \subset E$ est \textbf{compact} si \underline{pour tout} recouvrement ouvert, i.e \underline{pour tout} union des ensembles ouvert $\bigcup_{i \in I} U_i$ qui couvre $F$, on peut prendre un nombre \underline{fini} des  $U_i$ et couvrir $F$.
+\end{definition}
+\begin{theorem}
+    Un ensemble $K \subset E$ est compact, si toute suite $(x_n)_{n \in \N}$ des éléments de $K$, possede une sous-suite qui converge  vers un éléments $x \in K$.
+\end{theorem}
+\begin{intuition}
+    S'il existe tel suite $(x_n)_{n \in \N}$ sans sous-suite convergente vers un éléments de  $K$, donc les valeurs sont en-dehors de  $K$ et donc il existe un ensemble qui couvre $K$  seulement avec un nombre infini des ensembles. 
+\end{intuition}
+Pourquoi a-t-on besoin de compacité? Car cela nous donne une
+\begin{prop}
+    Si $K \subset E$ est compact, alors $K$ est fermé et borné.
+\end{prop}
+\begin{property}
+    La différence entre \textit{compacité} et {complecité}:
+    \begin{itemize}
+        \item complecité nous assure qu'il n'y a pas de trou dans un espace
+        \item compacité nous assure qu'un ensemble est fermé et borné
+    \end{itemize}
+\end{property}
+
