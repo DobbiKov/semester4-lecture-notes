@@ -1,0 +1,180 @@
+\chapter{cours 1}
+\section{Modèles discrètes}
+On diésigne par $N(t)$ la population d'individus à l'instant  $t$.\\
+Équation du modèle discret:
+ \[
+     \underbrace{N(t + \Delta t) - N(t)}_{\text{variation de la population}} = \underbrace{n}_{\text{nombre de naissances}} - \underbrace{m}_{\text{nombre de décès}} + \underbrace{ \underbrace{i}_{\text{immigration}} - \underbrace{e}_{\text{émigration}} }_{\text{sol de migration}}
+\] 
+\subsection{Modèle de croissance géomètrique}
+\begin{itemize}
+    \item \underline{hypothèse}:
+        \begin{itemize}
+            \item solde migration nul: i.e $i - e = 0$
+            \item nombre de croissance proportionnel à la taille de la population  $\underbrace{n = \lambda \Delta t N(t)}_{\text{taux de natalité}}$
+            \item Idem pour le mobre de décès: $\underline{m = \mu \Delta t N(t)}_{\text{taux de mortalité}}$
+        \end{itemize}
+    \item \underline{Modèle}: On pose $N_n = N(t_n)$ la taille de la population à l'instant  $t_n$.
+         \[
+             N_{n+1} - N_{n} = \lambda \Delta t N_n - \mu \delta t N_n
+        \] 
+        on pose $r = \lambda - \mu$
+         \begin{align}
+             N_{n+1} = ( 1 + r\Delta t )N_n, \qquad n = 0 
+        \end{align}
+    \item \underline{Solution}: $N_n = (1 + r \Delta t)^{n}N_0, \quad n \in \N$
+    \item \underline{Visualisation}: $\Delta t$ fixé
+\begin{figure}[H]
+   \centering 
+   \begin{subfigure}{0.3\textwidth}
+       \centering
+       \incfig{natalite-superieure}
+       \caption{Natalité supérieure\\ à la mortalité}
+       \label{fig:natalite-superieure}
+   \end{subfigure}
+   \begin{subfigure}{0.3\textwidth}
+       \centering
+       \incfig{natalite-egale}
+       \caption{Natalité égale\\ à la mortalité}
+       \label{fig:natalite-egale}
+   \end{subfigure}
+   \begin{subfigure}{0.3\textwidth}
+       \centering
+       \incfig{natalite-inferieur}
+       \caption{Natalité inférieure\\ à la mortalité}
+       \label{fig:natalite-inferieur}
+   \end{subfigure}
+\end{figure}
+\end{itemize}
+\begin{property}.
+    \begin{itemize}
+        \item Lorsque $t \to 0$, la population semble tendre vers une courbe $N(t) = N_0 e^{rt}$, solution de $\begin{cases}
+                N'(t) = rN(t)\\
+                N(0) = N_0
+            \end{cases}$ 
+        \item Si $r > 0$, la population croît indéfiniment
+        \item Si  $r < 0$, il y a extinction de l'éspèce.
+    \end{itemize} 
+\end{property}
+\underline{Inconvenients:}
+\begin{enumerate}
+    \item Une croissance infinie n'est pas réaliste
+    \item Pour être rigoureux, on devrait écrire $E(rN_n)$ i.e partie entière.
+\end{enumerate}
+
+\section{Modèles continues}
+\underline{Motivation:} L'observation qui prend $\Delta t$ proche de  $0$ aura beaucoup plus d'information. 
+ \begin{remark}
+   Le modèle de croissance géomètrique 
+   \begin{align*}
+       &N(t + \Delta t) - N(t) = \lambda \Delta t N(t) - \mu \Delta t N(t)\\
+       \implies&\frac{N(t + \Delta t) - N(t)}{\Delta t} = \lambda N(t) - \mu N(t)
+   \end{align*}
+   en faisant $\Delta t \to 0$
+    \[
+        N'(t) = \lambda N(t) - \mu N(t)
+    \] 
+    D'où l'équation des modèles continues:
+    \[
+        \underbrace{N'(t)}_{\text{vitesse de variation}} = \underbrace{n(t)}_{\text{vitesse de naissance}} - \underbrace{m(t)}_{\text{vitesse de décès}} + \underbrace{i(t)}_{\text{vitesse d'immigration}} - \underbrace{e(t)}_{\text{vitesse d'émigration}}
+    \] 
+\end{remark}
+\subsection{Modèle de Malthus}
+\begin{itemize}
+    \item \underline{hypothèse}: 
+        \begin{itemize}
+            \item solde migration nul: $i(t) - e(t) = 0$
+            \item vitesse de naissance proportionnel à la population à l'instant  $t$:  $n(t) = \lambda N(t)$
+            \item vitesse de décès: $m(t) = \mu N(t)$
+        \end{itemize}
+    \item \underline{Modèle}: $\begin{cases}
+        N'(t) = (\lambda - \mu)N(t)\\
+        N(0) = N_0
+    \end{cases}$
+\item \underline{Solution}: $N(t) = N_0e^{(\lambda - \mu)t}$
+\item 
+    \begin{property}
+       \begin{itemize}
+           \item Il peut être si comme limite du modèle de croissance géomètrique.
+           \item Lorsque $r = \lambda - \mu > 0$ croissance est proportionnel.
+           \item Lorsque  $r = \lambda - \mu = 0$ la population n'évolue pas.
+           \item Lorsque  $r = \lambda - \mu < 0$ la population tend vers 0.
+       \end{itemize} 
+    \end{property}
+\item \underline{Inconvenients}:
+    \begin{itemize}
+        \item croissance exponentielle pas réaliste. Il faut prendre en compte:
+            \begin{itemize}
+                \item la limitation des ressources
+                \item l'interaction avec l'environnement
+            \end{itemize}
+    \end{itemize}
+\end{itemize}
+\subsection{Modèle Verhulst}
+Corrige le modèle de Malthus en prennant en compte la limitation de ressources.
+\begin{itemize}
+    \item \underline{Idée}: limiter la croissance à un seuil $K$ appelé capacité biotique
+\begin{figure}[H]
+    \centering
+    \incfig{malthus-prendre-en-compte}
+    \caption{Modèle de Malthus}
+    \label{fig:malthus-prendre-en-compte}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \incfig{verhulst}
+    \caption{Modèle de Verhulst}
+    \label{fig:verhulst}
+\end{figure}
+\item \underline{hypothèse}: Sole de migration nul
+    \begin{itemize}
+        \item taux de natalité fonction afiine décroissante de la population $\lambda \approx \lambda (1 - \frac{N(t)}{K})$ 
+        \item taux de mortalité fonction affine croissante de la population $\mu \approx -\mu (1 - \frac{N(t)}{K})$
+    \end{itemize}
+\item \underline{Modèle}: $\begin{cases}
+    N'(t) = rN(t)(1 - \frac{N(t)}{K})\\
+    N(0) = N_0
+\end{cases}$
+\item \underline{Solutions}: $N(t) = \frac{K}{1 + (\frac{K}{N_0} - 1) e^{-rt}}$ \quad $t > 0$ 
+\item \underline{Visualisation}:
+    \begin{figure}[H]
+    \centering
+    \incfig{verhulst-visualisation}
+    \caption{Verhulst solution}
+    \label{fig:verhulst-visualisation}
+\end{figure}
+\item 
+    \begin{property}
+    Si $r>0$, on a:
+    \begin{itemize}
+        \item si $N_0 = 0$ $N_0 = K$ on a: $N(t) = N_0 \, \forall t > 0$
+        \item si $0 < N_0 < K$, $N$ croissante
+        \item si $N_0 > K$, $N$ décroissante 
+        \item $N$ possède une limite si  $N_0 > 0$
+            \[
+            \lim_{t \to \infty} N(t) = K
+            \] 
+    \end{itemize}
+    \end{property}
+\end{itemize}
+\section{Modèle de croissance logistique}
+C'est un modèle discrét
+\begin{itemize}
+    \item \underline{hypothèse}: i.e $= 0$\\
+         $n - m$ est une fonction affine de la population,  i.e $n - m = r \Delta t N(t)( 1 - \frac{N(t)}{K} )$ 
+    \item \underline{Modèle}: On suppose $\Delta t = 1$: On pose  $N_n = N(t_n)$
+         \[
+        \text{On a:} \begin{cases}
+            N_{n+1} - N_n = r N_n (1 - \frac{N_n}{K})\\
+            N_0 \text{ donné}
+        \end{cases}
+        \] 
+    \item 
+        \begin{property} (À vérifier numeriquement) 
+            \begin{itemize}
+                \item si $r < 2$, la suite converge vers  $K$ 
+                \item si  $2 < r < 2.449$, la suite converge vers un cycle
+                \item si  $2.449 < r < 2.57$, la suite est encore un cycle mais plus complèxe
+                \item si  $r > 2.57$, la suite devient chaotique
+            \end{itemize}
+        \end{property}
+\end{itemize}
