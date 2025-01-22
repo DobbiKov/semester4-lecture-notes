@@ -1,0 +1,192 @@
+\section{Bases orthonormales}
+Soit $(E, <,>)$ un espace euclidien et  $F \subset E$ un sous-espace vectoriel ($dim(F) < \infty$) car $dim(E) < \infty$.
+\begin{note}
+    \[
+        F^{\perp} := \{x \in E \mid <X, Z> = 0 \, \forall z \in F\} 
+    \] 
+    l'orthogonale de $F$.
+\end{note}
+\begin{theorem}
+    On a $E = F \oplus F^{\perp}$.\\
+    En particulier,  $dim(F^{\perp}) = dim(E) - dim(F)$ et  $F = (F^{\perp})^{\perp}$
+\end{theorem}
+\begin{preuve}
+   On doit montrer que:
+   \begin{enumerate}
+       \item $F \cap F^{\perp} = \O$
+       \item $E = F + F^{\perp}$ i.e  $\forall x \in E, \exists x' \in F, \, x'' \in F^{\perp}$ tq $x = x' + x''$ 
+   \end{enumerate}
+   \begin{enumerate}
+       \item Soit $x \in F \cap F^{\perp}$\\
+            $\implies$ $<X, Z> = 0 \, \forall Z \in F$ car $x \in F \implies <X, X> = 0 \implies x = 0 (<,> \text{ est définie})$ 
+        \item Soit $x \in E$. Considérons  $f_x \in E^{*}$, i.e  $f_x: E \to \R, y \mapsto <x, y>$ et $f := f_{x|F}: F \to \R \implies f \in E^{*}$
+            Lemme de Riesz $\implies$ $\exists! x' \in F$ tq $f = f_{x'}: F \to \R, z \mapsto <x', z>$\\
+            $\implies f_{x}(z) = f_{x'}(z) = f(z)\, \forall z \in F$ (Attention: pas l'égalité pour tout $z$ dans  $E$)\\
+            Posons $x'' := x - x'$, i.e  $x = x' + x'' \in F$. Montrons  $x'' \in  F^{\perp}$.\\
+            Si $z \in F$,  $<x'', z> = <x - x', z> = <x, z> - <x', z> = 0$. Donc $x'' \in F^{\perp}$ et  $E = F \oplus F^{\perp}$ ($dim(E) = dim(F) + dim(F^{\perp})$) \\
+            $F \subseteq (F^{\perp})^{\perp}$ car $<x, z> = 0 \, \forall x \in F \, \forall z \in F^{\perp}$
+            \[
+                dim(F) = dim(E) - dim(F^{\perp})
+            \] 
+            car $E = G \oplus G^{\perp}$, donc  $dim(G) = dim(E) - dim(G^{\perp})$ pour  $G = F^{\perp}, \, dim(F^{\perp}) = dim(G)$
+   \end{enumerate}
+\end{preuve}
+\begin{definition}
+    Soit $E$ un espace vectoriel muni d'un produit scalaire  $<,>$
+     \begin{itemize}
+         \item Une famille $(v_i)_{i \ge 0}$ de vecteurs de $E$ est dite \underline{orthogonale} si pour $i \neq j$ on a $<v_i, v_j> = 0$ i.e  $v_i \perp v_j$
+         \item Une famille orthogonale de  $E$ est une famille orthogonale  $(v_i)_{i \ge  0}$ tq de plus $\|v_i\| = 1$ pour  $i \ge 0$
+    \end{itemize}
+\end{definition}
+\begin{eg}
+   \begin{enumerate}
+       \item $E = \R^{n}$ muni du produit scalaire canonique. La base canonique $(e_1, \ldots, e_n)$ est orthogonale car 
+           \[
+           <e_i, e_j> = \begin{cases}
+               1 \, i = j\\
+               0 \, i \neq j
+           \end{cases}
+           \] 
+       \item Dans $E = \mathcal{C}^{0}([-1, 1], \R)$ muni de $<f,g> = \int_{-1}^{1} f(t)g(t)\,d{t}$. La famille $(\cos(t), \sin(t))$ est orthogonale. La famille $(1, t^2)$ n'est pas orthogonale:
+            \[
+                <1, t^2> = \int_{-1}^{1} 1 t^2 \, d{t} = \frac{2}{3} \neq  0 
+           \] 
+   \end{enumerate} 
+\end{eg}
+\begin{prop}
+    Une famille orthogonale constituée de vecteurs \underline{non-nuls} est libre. En particulier, une famille orthonormale est libre. 
+\end{prop}
+\begin{preuve}
+    Suppososns $(v_1, \ldots, v_n)$ orthogonale avec $v_i \neq 0 \, \forall i = 1, \ldots, n$ si $\sum_{j=1}^{n} \underset{\in \R}{\alpha_iv_i} = 0$, alors  
+    \[
+        \forall i \in \{1, \ldots, n\} 0 = <v_i, \sum_{j=1}^{n} \alpha_iv_i> = \sum_{j=1}^{n} <v_i, v_j> = \alpha_i \underset{\neq 0}{\|v_i\|^2}
+    \] 
+    Donc $\alpha_i = 0 \, \forall i = 1, \ldots, n$.\\
+    Si $(v_1, \ldots, v_n)$ est orthonormale, alors $\|v_i\| = 1$. Donc  $v_i \neq 0, \, \forall i = 1, \ldots, n$.
+\end{preuve}
+\begin{definition}
+    $(E, <,>)$ espace euclidien. Une famille  $B = (e_1, \ldots, e_n)$ est une bse orthonormale (où BON) si elle est une base et famille orthonormale.
+\end{definition}
+\begin{theorem}
+    $(E, <,>)$ espace euclidien. Alors, il admet une BON.
+\end{theorem}
+\begin{preuve}
+   Soit $n := dim(E)$. Soit  $(e_1, \ldots, e_p)$ une famille orthogonale (du point de vue du cardinal $p$) tq  $e_i \neq 0 \, \forall i = 1, \ldots, p$.\\
+   Supposons par l'absurde que $p < n$. Posons  $F = Vect(e_1, \ldots, e_p)$. Alors, $E = F \oplus F^{\perp}$ et  $dim(F) \le p < n$. Donc $F^{\perp} \neq  \{0\}$. Soit $x \in F^{\perp}, \, x \neq 0$. Alors, $(e_1, \ldots, e_p, x)$ est orthogonale de cardinale $> p$. Donc,  $p = n$ et  $(e_1, \ldots, e_n)$ est une base de $E$. Pour avoir une famille orthonormale  $(e_1', \ldots, e_n')$ il suffit de prendre $e_i' = \frac{1}{\|e_i\|}e_i \, \forall i = 1, \ldots, n$.
+\end{preuve}
+\begin{prop}
+   Soit $(E, <,>)$ un espace euclidien et soit  $(e_1, \ldots, e_n)$ une BON de $E$. Si  $x \in E$, on a:
+   \[
+   x = \sum_{i=1}^{n} <x_ie_i>e_i
+   \] 
+   Autrement dit, le réél $<x, e_i>$ est la  $i^{\text{ème}}$ coordonnée de $x$ dans la base  $(e_1, \ldots, e_n)$.
+\end{prop}
+\begin{preuve}
+   Posons $y := \sum_{i=1}^{n} <x_i, e_i>e_i$ . Alors, 
+   \[
+       \forall j = 1, \ldots, n, \, <x - y, e_j> = <x_1,e_j> - \sum_{i=1}^{n} <x_1, e_i><e_i,e_j> = <x_1,e_i> - <x_1,e_i>\underset{= 1}{<e_i, e_i>} = 0
+   \] 
+   Donc, $x - y \in Vect(e_j, \, (j = 1, \ldots, n))^{\perp} = E^{\perp} = \{0\}$. Donc $x = y$
+\end{preuve}
+\begin{corollary}
+   $\forall x \in E, \, \|x\|^2 = \sum_{i=1}^{n} <x, e_i>^2$ 
+\end{corollary}
+\begin{preuve}
+   On a $x = \sum_{i=1}^{n} <x_i, e_i>e_i = \sum_{i=1}^{n} x_ie_i$ avec $x_i := <x_1, e_i> \, \forall i = 1,\ldots,n$\\ 
+   et $\|x\|^2 = <x, x> = <\sum_{i=1}^{n} x_1e_i, \sum_{j=1}^{n} x_1e_j> = \sum_{i, j=1}^{n} x_ix_j<e_i, e_j> = \sum_{i=1}^{n} x_i^2 = \sum_{i=1}^{n} <x_1, e_i>^2$
+\end{preuve}
+\begin{prop} Soient $(E, <,>)$ un espace euclidien et $\epsilon = (e_1, \ldots, e_n)$ une BON. Soient $f \in \mathcal{L}(E, E)$ et $A = (a_{i,j})_{1 \le i,j \le n}$ la matrice représentative de $f$ dans  $\epsilon$, i.e,  $A = Mat_{\epsilon}(f)$ 
+    \[
+        a_{i,j} = <f(e_i), e_j> \, \forall i,j = 1, \ldots, n
+    \] 
+\end{prop}
+\begin{preuve}
+   $A$ est la matrice dont les colonnes sont les vecteurs  $f(e_j)$ écrits dans la base $\epsilon$:
+    \[
+        A = (e_1 | \ldots | e_n)\, e_j = \begin{pmatrix} a_{1,j}\\ \ldots\\ a_{n, j} \end{pmatrix} 
+   \] 
+   \[
+       f(e_j) = a_{1, j}e_1 + \ldots a_{n, j}e_n
+   \] 
+   par la prop ci-dessu:
+   \[
+       a_{i, j} = <f(e_j), e_i>
+   \] 
+\end{preuve}
+\section{Projections orthogonales}
+Soit $(E, <,>)$ un espace euclidien,  $F \subseteq E$ un sous-espace vectoriel. Alors,  $E = F \oplus F^{\perp}$. Donc $\forall x \in E$ s'ecrit 
+\[
+x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
+\] 
+\begin{definition}
+    La \textbf{projection orthogonale} de $E$ dans  $F$ est la projection  $P_F$ de  $E$ sur  $F$ parallèlement  à $F^{\perp}$, i.e
+    \begin{align*}
+        P_F: E = F \oplus F^{\perp} &\longrightarrow F \\
+        x = x_F + x_{F^{\perp}} &\longmapsto P_F(x = x_F + x_{F^{\perp}}) = x_F
+    .\end{align*}
+\end{definition}
+\begin{remark}
+   \begin{enumerate}
+       \item $p_F$ est linéaire
+       \item  $\forall x \in E \, p_{F}(x)$ est complétement caractérisé par la propriété suivante:\\
+           Soit $y \in E$, alors
+            \[
+                \eta = P_F(x) \iff \left( \underset{\implies y = x_F}{e \in F \text{ et } x - y} \in F^{\perp} \right) 
+           \] 
+           En particulier $<P_F(x), x - P_F(x)> \,= 0$. Alors, si $(v_1, \ldots, v_R)$ est une BON de $F$, on a:
+            \[
+           \forall x \in E, \, P_F(x) = \sum_{i=1}^{k} <x, v_i>v_i
+           \] 
+           En effet, il suffit de vérfier que le vecteur $y = \sum_{i=1}^{k} <x, v_i>v_i$ vérfie:
+           \[
+               \eta \in F \text{ et } x - y \in F^{\perp}
+           \] 
+   \end{enumerate} 
+\end{remark}
+\begin{prop}
+   Soit $x \in E$. Alors,
+   \[
+       \|x - P_F(x)\| = inf\{\|x - y\| \mid y \in F\}
+   \] 
+   i.e $\|x - P_F(x)\|$ est la distance de  $x$ à  $F$.
+    \begin{TODO}
+      pic from phone 
+   \end{TODO}
+\end{prop}
+\begin{preuve}
+   Comme $P_F(x) \in F$ il suffit de prouver que, si  $\eta \in F$, alors 
+   \[
+   \|x - P_F(x)\| \le \|x - \eta\|
+   \] 
+   Mais, $\underset{(x - P_F(x)) + (P_F(x) - \eta)}{\|x - \eta\|^2} = \|x - P_F(x)\|^2 + 2\overbrace{<\overset{\in F^{\perp}}{x - P_F(x)}, \overset{\in F}{P_F(x) - \eta}>}^{= 0} + \underbrace{\|P_F(x) - \eta\|^2}_{\ge 0} \ge \|x - P_F(x)\|^2$
+\end{preuve}
+\begin{theorem}Gram-Shmidt\\
+    Soit $E$ un espace vectoriel muni d'un produit scalaire  $<,>$. Soit  $(v_1, \ldots, v_n)$ une famille libre d'élement $\in E$. Alors,  il existe une famille $(w_1, \ldots, w_n)$ orthogonale tq 
+    \[
+        \forall i = 1, \ldots, n \quad Vect(v_1, \ldots, v_i) = Vect(w_1, \ldots, w_i)
+    \] 
+\end{theorem}
+\begin{preuve}
+   Récurrence sur $i$\\ 
+   \begin{itemize}
+       \item $i = 1$:  $w_1 := v_1$ suffit
+       \item $i \ge 1$: Supposons $(w_1, \ldots, w_i)$ construits. 
+           Posons $F_i = Vect(w_1, \ldots, w_i) = Vect(v_1, \ldots, v_i)$. 
+           Alors on prend $w_{i+1} := v_{i+1} - P_{F_i}(v_{i+1})$. 
+           Donc,  $w_{i+1} \in F_i^{\perp}$ (par caractérisation de $P_{F_i}$) et $(w_1, \ldots, w_{i+1})$ est orthogonale. On note $P_{F_i}(v_{i+1}) \in F_i$, donc
+            \[
+                Vect(w_1, \ldots, w_i, w_{i+1}) \underset{w_{i+1} = v_{i+1} - P_{F_i}(v_{i+1})} = Vect(w_1, \ldots, w_i, v_{i+1}) = Vect(v_1, \ldots, v_i, v_{i+1})
+           \] 
+   \end{itemize}
+\end{preuve}
+\begin{remark}
+   La preuve donne une récette concrète pour construir une BON.\\ 
+   Soit $(E, <,>)$ un espace euclidien.  $(v_1, \ldots, v_n)$ base de $E$.\\
+   Le but: construit une base  $(w_1', \ldots w_n')$ orthogonale de $E$ avec  $Vect(v_1, \ldots, v_i) = Vect(w_1, \ldots, w_i) \quad \forall i = 1, \ldots, n$\\
+   Posons:
+   \begin{enumerate}
+       \item $w_1' := v_1$
+       \item $w_{i+1}' = \sum_{j=1}^{i} \frac{<v_{i+1}, w_j'>}{<w_j', w_j'>}w_j'$. \\
+           Alors, $(w_1, \ldots, w_n)$ avec $w_i = \frac{1}{\|w_i'\|}w_i'$ est une BON.
+   \end{enumerate}
+\end{remark}
