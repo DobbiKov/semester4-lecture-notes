@@ -8,3 +8,7 @@
 *.out
 .DS_Store
 *.pdf
+!*/figures/
+!figures
+!figures/*
+!*/figures/*
