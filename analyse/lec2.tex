@@ -73,24 +73,28 @@
 \end{definition}
 \section{Distance entre ensembles}
 \begin{definition}
-    Soit $A, B$ deux parties de  $E$. On pose  $d(A, B) = \underset{ x \in A, \, y \in B}{inf} d(x, y)$
+    La distance entre deux ensembles $A, B$ est:
+     \[
+         d(A, B) := \underset{x \in A, y \in B}{inf}d(x, y)
+    \] 
+    Intuitivement, on cherche deux points $x$ et  $y$ tel que la distance est la plus petite possible.
+\end{definition}
+\begin{definition}
+    La distance entre un points $x$ et un ensemble  $B$ est:
+     \[
+         d(x, B) := \underset{y \in B}{inf}d(x, y)
+    \] 
+    La même intuition.
 \end{definition}
 \begin{property}
    $\forall x \in A, \, y \in B, \, d(x, y) \ge d(A, B)$ et $\forall \epsilon > 0, \exists x \in A, \, y \in B$ tq $d(x, y) \le d(A, B) + \epsilon$
 \end{property}
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \incfig{distance-entre-ensembles}
     \caption{Distance entre ensembles}
     \label{fig:distance-entre-ensembles}
 \end{figure}
-\begin{definition}
-    Distance entre un point et un ensemble:
-    \[
-        d(x, A) = d(\{x\}, A) = \underset{y \in A}{inf}\: d(x, y)
-    \] 
-    $x \neq \{x\}$
-\end{definition}
 \section{Topologie des espaces métriques}
 distance $d(x, y)$ $\longrightarrow$ boules  $B(x_0, r)$ $\longrightarrow$ ensembles ouverts
 \begin{definition}
@@ -101,6 +105,78 @@ distance $d(x, y)$ $\longrightarrow$ boules  $B(x_0, r)$ $\longrightarrow$ ensem
     \end{enumerate}
     $\O$ est ouvert et $E$ est ouvert.  $\O$ est fermé et $E$ est fermé.
 \end{definition}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering 
+        \begin{tikzpicture}
+            % Define colors
+            \definecolor{lightgreen}{RGB}{230, 255, 230}
+            \definecolor{lightblue}{RGB}{200, 220, 255}
+            \definecolor{darkgreen}{RGB}{0, 128, 0}
+
+            % Large background circle
+            \fill[lightgreen] (0, 0) circle (4cm);
+
+            % Main circle
+            \draw[thick, fill=lightgray] (0, 0) circle (2.5cm);
+            \node[above right] at (1.8, 0) {\textbf{\textit{F}}};
+            \node[above right] at (3, 0) {$E\setminus F$};
+
+            % Small blue circle
+            \draw[blue, thick] (-2.4, -.7) circle (0.4cm);
+
+            % Highlighted area for excluded point
+            \fill[lightblue, opacity=0.5] (-2.2, -2.2) circle (0.6cm);
+            \node (_) at (-2.2, -2.2){\small $B(x_0, \delta)$};
+        \end{tikzpicture}
+        \caption{Un ensemble fermé\\
+            \textit{À la borne, il est impossible de trouver une boules qui appartient à $F$, car il est impossible d'avoir une boule ouverte de  $r = 0$. Exemple: circle bleu foncé}\\
+            \textit{Pour tout point dans $E \setminus F$ on peut trouver une boule ouverte}
+        }
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \begin{tikzpicture}
+            % Define colors
+            \definecolor{lightblue}{RGB}{230, 240, 255}
+            \definecolor{lightgray}{RGB}{200, 200, 200}
+            \definecolor{darkgreen}{RGB}{0, 128, 0}
+            \definecolor{lightgreen}{RGB}{230, 255, 230}
+
+            % Draw large circle
+            \fill[lightgreen] (0, 0) circle (4cm);
+            \fill[lightgray] (0, 0) circle (3cm);
+
+            % Draw small circle
+            \fill[lightblue] (1.6, 1.6) circle (0.7cm);
+            \draw[fill=black] (1.6, 1.6) circle(0.4mm);
+            \node[below right] at (1.6, 1.6) {\textbf{\small 2.993}};
+
+            \draw[->] (0.9, 0.9)--(1.2, 1.2);
+            \node[below left] (_) at (1, 1){\small $B(2.993, \delta)$};
+            % Add points and labels
+            \node[fill=black, circle, inner sep=1pt, label=below:{\textbf{0,0}}] at (0, 0) {};
+
+            % Add text
+            \node[right] at (1, 5) [align=left, text=darkgreen] {
+                };
+            \node (_) at (-1.9, -1.9){\Large $U$};
+            \node (_) at (-2.5, -2.5){\Large $E$};
+        \end{tikzpicture} 
+        \caption{Un ensemble ouvert\\
+            \textit{
+                pour tout point pres de la borne
+                on peut trouver une boule
+                infiniment petite avec des
+                points autour ce point inclu dans $U$.
+            }
+        }
+
+    \end{subfigure}
+    \caption{Démonstration des espaces ouverts et fermés}
+\end{figure}
 \begin{remark}
    dans $\R$ les intervalles ouverts sont des ouverts (pareil pour fermés) 
 \end{remark}
