@@ -57,15 +57,16 @@ Soit $(E, <,>)$ un espace euclidien et  $F \subset E$ un sous-espace vectoriel (
     Une famille orthogonale constituée de vecteurs \underline{non-nuls} est libre. En particulier, une famille orthonormale est libre. 
 \end{prop}
 \begin{preuve}
-    Suppososns $(v_1, \ldots, v_n)$ orthogonale avec $v_i \neq 0 \, \forall i = 1, \ldots, n$ si $\sum_{j=1}^{n} \underset{\in \R}{\alpha_iv_i} = 0$, alors  
+    Suppososns $(v_1, \ldots, v_n)$ orthogonale avec $v_i \neq 0 \, \forall i = 1, \ldots, n$\\
+    si $\sum_{j=1}^{n} \underset{\in \R}{\alpha_iv_i} = 0$, alors  
     \[
-        \forall i \in \{1, \ldots, n\} 0 = <v_i, \sum_{j=1}^{n} \alpha_iv_i> = \sum_{j=1}^{n} <v_i, v_j> = \alpha_i \underset{\neq 0}{\|v_i\|^2}
+        \forall i \in \{1, \ldots, n\} 0 = <v_i, \sum_{j=1}^{n} \alpha_jv_j> = \sum_{j=1}^{n}\alpha_j <v_i, v_j> = \alpha_i \underset{\neq 0}{\|v_i\|^2}
     \] 
     Donc $\alpha_i = 0 \, \forall i = 1, \ldots, n$.\\
     Si $(v_1, \ldots, v_n)$ est orthonormale, alors $\|v_i\| = 1$. Donc  $v_i \neq 0, \, \forall i = 1, \ldots, n$.
 \end{preuve}
 \begin{definition}
-    $(E, <,>)$ espace euclidien. Une famille  $B = (e_1, \ldots, e_n)$ est une bse orthonormale (où BON) si elle est une base et famille orthonormale.
+    $(E, <,>)$ espace euclidien. Une famille  $B = (e_1, \ldots, e_n)$ est une base orthonormale (où BON) si elle est une base et famille orthonormale.
 \end{definition}
 \begin{theorem}
     $(E, <,>)$ espace euclidien. Alors, il admet une BON.
@@ -75,25 +76,70 @@ Soit $(E, <,>)$ un espace euclidien et  $F \subset E$ un sous-espace vectoriel (
    Supposons par l'absurde que $p < n$. Posons  $F = Vect(e_1, \ldots, e_p)$. Alors, $E = F \oplus F^{\perp}$ et  $dim(F) \le p < n$. Donc $F^{\perp} \neq  \{0\}$. Soit $x \in F^{\perp}, \, x \neq 0$. Alors, $(e_1, \ldots, e_p, x)$ est orthogonale de cardinale $> p$. Donc,  $p = n$ et  $(e_1, \ldots, e_n)$ est une base de $E$. Pour avoir une famille orthonormale  $(e_1', \ldots, e_n')$ il suffit de prendre $e_i' = \frac{1}{\|e_i\|}e_i \, \forall i = 1, \ldots, n$.
 \end{preuve}
 \begin{prop}
-   Soit $(E, <,>)$ un espace euclidien et soit  $(e_1, \ldots, e_n)$ une BON de $E$. Si  $x \in E$, on a:
+    Soit $(E, \scalar{}{})$ un espace euclidien et soit  $(e_1, \ldots, e_n)$ une BON de $E$. Si  $x \in E$, on a:
    \[
-   x = \sum_{i=1}^{n} <x_ie_i>e_i
+       x = \sum_{i=1}^{n} \scalar{x}{e_i}e_i
    \] 
-   Autrement dit, le réél $<x, e_i>$ est la  $i^{\text{ème}}$ coordonnée de $x$ dans la base  $(e_1, \ldots, e_n)$.
+Autrement dit, le réél $\scalar{x}{e_i}$ est la  $i^{\text{ème}}$ coordonnée de $x$ dans la base  $(e_1, \ldots, e_n)$.
 \end{prop}
-\begin{preuve}
-   Posons $y := \sum_{i=1}^{n} <x_i, e_i>e_i$ . Alors, 
+\begin{intuition}
+    L'orthonormalité de la base nous simplifie la vie. Mais avant, petite introduction. Soit un e.v $E = \R^2$ et la base $(e_1, e_2) = (\begin{pmatrix} 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0\\ 1 \end{pmatrix})$. Soit un vecteur $\vec{v} = (2, 3)$ :
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                scale=1,
+                axis lines=middle,        % Draw axes in the middle
+                xmin=-2, xmax=4,          % X-axis range
+                ymin=-2, ymax=4,          % Y-axis range
+                xlabel={$x$},             % Label for X-axis
+                ylabel={$y$},             % Label for Y-axis
+                xtick={-2,-1,0,1,2,3,4},% X-axis ticks
+                ytick={-2,-1,0,1,2,3,4},% Y-axis ticks
+                ]
+            \draw[color=red, ->, thick] (0, 0) -- node[below]{$e_1$}(1, 0);
+            \draw[color=blue, ->, thick] (0, 0) -- node[left]{$e_2$}(0, 1);
+            \draw[color=green, ->] (0, 0) --node[above]{$\vec{v}$} (2, 3);
+
+            \draw[color=gray, ->, thick] (1, 0) -- node[below]{$e_1$}(2, 0);
+            \draw[color=gray, ->, thick] (2, 0) -- node[left]{$e_2$}(2, 1);
+            \draw[color=gray, ->, thick] (2, 1) -- node[left]{$e_2$}(2, 2);
+            \draw[color=gray, ->, thick] (2, 2) -- node[left]{$e_2$}(2, 3);
+
+            \node[right, above] (_) at (2, 3){$(2, 3)$};
+        \end{axis} 
+        \end{tikzpicture}
+    \end{center}
+    Donc, on peut écrire $\vec{v} = \vec{(2, 3)} = 2 \cdot \vec{e_1} + 3 \cdot \vec{e_2}$. Les $x$ et  $y$ (les coordonnées de $v$) nous donnes combien de parties de chaque vecteur de bases (le nombre peut être $\in \R$) et prendre leurs sommes, pour obtenir $\vec{v}$. (Le plus simple: combien on doit aller à gauche et en haut).
+    \par
+    Dans la base orthonormale $\scalair{v, e_i}$ nous donne combien on prend d'un vecteur $e_i$ pour faire le vecteur  $\vec{v}$ et  $\vec{e_i}$ donne la direction. D'où $\scalair{v, e_1}$ équivaut à $2$, et  $\scalair{v, e_2}$ à  $3$, puis: 
    \[
-       \forall j = 1, \ldots, n, \, <x - y, e_j> = <x_1,e_j> - \sum_{i=1}^{n} <x_1, e_i><e_i,e_j> = <x_1,e_i> - <x_1,e_i>\underset{= 1}{<e_i, e_i>} = 0
-   \] 
-   Donc, $x - y \in Vect(e_j, \, (j = 1, \ldots, n))^{\perp} = E^{\perp} = \{0\}$. Donc $x = y$
+       \vec{v} = \underbrace{\scalair{v, e_1}}_{= 2} \cdot \vec{e_1} + \underbrace{\scalair{v, e_2}}_{= 3} \cdot \vec{e_2}
+   \]  
+\end{intuition}
+\begin{preuve}
+    Posons $y := \sum_{i=1}^{n} \scalar{x}{e_i}e_i$ . Alors, 
+   \begin{align*}
+       &\forall j = 1, \ldots, n,\\
+       &\scalar{x - y}{e_j}\\ 
+       = &\scalar{x}{e_j} - \scalar{y}{e_j}\\ 
+       = &\scalar{x}{e_j} - \scalar{\sum_{i=1}^{n} \scalar{x}{e_i}e_i}{e_j}\\ 
+       = &\scalar{x}{e_j} - \underbrace{ \sum_{i=1}^{n} \scalar{x}{e_i} }_{\substack{\text{moved out}\\ \text{like constant}}}\scalar{e_i}{e_j}\\ 
+       = &\scalar{x}{e_j}\\ 
+       -& \left(\scalar{x}{e_1}\underbrace{ \scalar{e_1}{e_j} }_{= 0} + \ldots + \scalar{x}{e_{j-1}}\underbrace{\scalar{e_{j-1}}{e_j}}_{= 0} + \scalar{x}{e_{j}}\underbrace{ \scalar{e_{j}}{e_j} }_{= 1} + \scalar{x}{e_{j+1}}\underbrace{ \scalar{e_{j+1}}{e_j} }_{= 0} + \ldots + \scalar{x}{e_{n}}\underbrace{ \scalar{e_{n}}{e_j} }_{= 0}\right)\\
+        &\text{(} \forall i \neq j, \, \scalar{e_i}{e_j} = 0 \text{ car un produit scalaire des vecteur orthogonaux)}\\ 
+        &\text{(} \forall j \, \scalar{e_j}{e_j} = 1 \text{ car un produit scalaire de même vecteur)}\\
+       = &\scalar{x}{e_j} - \scalar{x}{e_j}\underset{= 1}{\scalar{e_j}{e_j}} = 0
+   \end{align*}
+   Donc, $x - y \in Vect(e_1, \ldots, e_n)^{\perp} = E^{\perp} = \{0\}$. Donc $x = y$
 \end{preuve}
 \begin{corollary}
-   $\forall x \in E, \, \|x\|^2 = \sum_{i=1}^{n} <x, e_i>^2$ 
+    $\forall x \in E, \, \|x\|^2 = \sum_{i=1}^{n} \scalar{x}{e_i}^2$ 
 \end{corollary}
 \begin{preuve}
-   On a $x = \sum_{i=1}^{n} <x_i, e_i>e_i = \sum_{i=1}^{n} x_ie_i$ avec $x_i := <x_1, e_i> \, \forall i = 1,\ldots,n$\\ 
-   et $\|x\|^2 = <x, x> = <\sum_{i=1}^{n} x_1e_i, \sum_{j=1}^{n} x_1e_j> = \sum_{i, j=1}^{n} x_ix_j<e_i, e_j> = \sum_{i=1}^{n} x_i^2 = \sum_{i=1}^{n} <x_1, e_i>^2$
+    Si $x = \sum_{i=1}^{n} \scalar{x}{e_i}e_i = \sum_{i=1}^{n} x_ie_i$ donc
+    \[
+        \|x\|^2 = \scalar{\sum_{i=1}^{n} x_ie_i}{\sum_{j=1}^{n} x_je_j} = \sum_{i,j=1}^{n} x_ix_j\scalar{e_i}{e_j} = \sum_{i=1}^{n} x_i^2
+    \] 
 \end{preuve}
 \begin{prop} Soient $(E, <,>)$ un espace euclidien et $\epsilon = (e_1, \ldots, e_n)$ une BON. Soient $f \in \mathcal{L}(E, E)$ et $A = (a_{i,j})_{1 \le i,j \le n}$ la matrice représentative de $f$ dans  $\epsilon$, i.e,  $A = Mat_{\epsilon}(f)$ 
     \[
@@ -103,26 +149,33 @@ Soit $(E, <,>)$ un espace euclidien et  $F \subset E$ un sous-espace vectoriel (
 \begin{preuve}
    $A$ est la matrice dont les colonnes sont les vecteurs  $f(e_j)$ écrits dans la base $\epsilon$:
     \[
-        A = (e_1 | \ldots | e_n)\, e_j = \begin{pmatrix} a_{1,j}\\ \ldots\\ a_{n, j} \end{pmatrix} 
+        A = (f(e_1) | \ldots | f(e_n))\quad f(e_j) = \begin{pmatrix} a_{1,j}\\ \ldots\\ a_{n, j} \end{pmatrix} 
    \] 
-   \[
-       f(e_j) = a_{1, j}e_1 + \ldots a_{n, j}e_n
-   \] 
-   par la prop ci-dessu:
+   Car $\forall v \in E, \, v = c_1e_1 + \ldots c_ne_n$ donc $f(v) = c_1f(e_1) + \ldots c_nf(e_n)$ par la linéarité, donc il nous reste à étudier chaque $f(e_j)$
+   \begin{align*}
+       f(e_j) = a_{1, j}e_1 + \ldots a_{n, j}e_n \implies\\
+       \langle f(e_j), e_i \rangle = \left\langle \sum_{k=1}^n a_{k,j} e_k, e_i \right\rangle = \sum_{k=1}^{n} a_{k,j}\scalar{e_k}{e_i} = a_{k, j}
+   \end{align*}
+   car $\scalar{e_k}{e_j} = \begin{cases}
+       0 \text{ si } k \neq j\\
+       1 \text{ si } k = j
+   \end{cases}$
+   Donc:
    \[
        a_{i, j} = <f(e_j), e_i>
    \] 
 \end{preuve}
+
 \section{Projections orthogonales}
 Soit $(E, <,>)$ un espace euclidien,  $F \subseteq E$ un sous-espace vectoriel. Alors,  $E = F \oplus F^{\perp}$. Donc $\forall x \in E$ s'ecrit 
 \[
 x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
 \] 
 \begin{definition}
-    La \textbf{projection orthogonale} de $E$ dans  $F$ est la projection  $P_F$ de  $E$ sur  $F$ parallèlement  à $F^{\perp}$, i.e
+    La \textbf{projection orthogonale} de $E$ dans  $F$ est la projection  $p_F$ de  $E$ sur  $F$ parallèlement  à $F^{\perp}$, i.e
     \begin{align*}
-        P_F: E = F \oplus F^{\perp} &\longrightarrow F \\
-        x = x_F + x_{F^{\perp}} &\longmapsto P_F(x = x_F + x_{F^{\perp}}) = x_F
+        p_F: E = F \oplus F^{\perp} &\longrightarrow F \\
+        x = x_F + x_{F^{\perp}} &\longmapsto p_F(x = x_F + x_{F^{\perp}}) = x_F
     .\end{align*}
 \end{definition}
 \begin{remark}
@@ -131,34 +184,55 @@ x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
        \item  $\forall x \in E \, p_{F}(x)$ est complétement caractérisé par la propriété suivante:\\
            Soit $y \in E$, alors
             \[
-                \eta = P_F(x) \iff \left( \underset{\implies y = x_F}{e \in F \text{ et } x - y} \in F^{\perp} \right) 
+                y = p_F(x) \iff \left( \underset{\implies y = x_F}{y \in F \text{ et } x - y} \in F^{\perp} \right) 
            \] 
-           En particulier $<P_F(x), x - P_F(x)> \,= 0$. Alors, si $(v_1, \ldots, v_R)$ est une BON de $F$, on a:
+           En particulier $<p_F(x), x - P_F(x)> \,= 0$. Alors, si $(v_1, \ldots, v_R)$ est une BON de $F$, on a:
             \[
-           \forall x \in E, \, P_F(x) = \sum_{i=1}^{k} <x, v_i>v_i
+           \forall x \in E, \, p_F(x) = \sum_{i=1}^{k} <x, v_i>v_i
            \] 
            En effet, il suffit de vérfier que le vecteur $y = \sum_{i=1}^{k} <x, v_i>v_i$ vérfie:
            \[
-               \eta \in F \text{ et } x - y \in F^{\perp}
+               y \in F \text{ et } x - y \in F^{\perp}
            \] 
    \end{enumerate} 
 \end{remark}
+\begin{figure}[H]
+   \centering 
+\begin{tikzpicture}
+
+% Draw the plane
+\fill[gray!20] (-2,-1) -- (2,-1) -- (3,1) -- (-1,1) -- cycle;
+
+% Draw the vectors
+\draw[->, thick, black] (0,0) -- (2,2.2) node[anchor=south east] {\large $\mathbf{x}$};
+
+\node[anchor=north, blue] (_) at ($(0,0)!0.5!(2,0)$) {\large $\text{proj}_\mathbf{F} \mathbf{x}$};
+\node[anchor=west, blue] (_) at ($(2,0)!0.5!(2,2.2)$) {\large $\text{proj}_\mathbf{F^{\perp}} \mathbf{x}$};
+% Add the labels for w and w perpendicular
+\draw[->, thick, blue] (0,0) -- (2,0) ;
+\draw[thick, black] (2,0) -- (2,3) node[anchor=west] {\large $\mathbf{F}^\perp$};
+\draw[->, thick, blue] (2,0) -- (2,2.2);
+\node[anchor=north west] (_) at (1.5, -0.5) {\large $\mathbf{F}$};
+% Add the right angle symbol
+
+\end{tikzpicture}
+\caption{Projection}
+\label{pic:projection}
+\end{figure}
 \begin{prop}
    Soit $x \in E$. Alors,
    \[
-       \|x - P_F(x)\| = inf\{\|x - y\| \mid y \in F\}
+       \|x - p_F(x)\| = inf\{\|x - y\| \mid y \in F\}
    \] 
-   i.e $\|x - P_F(x)\|$ est la distance de  $x$ à  $F$.
-    \begin{TODO}
-      pic from phone 
-   \end{TODO}
+   i.e $\|x - p_F(x)\|$ est la distance de  $x$ à  $F$.\\
+   Voir Figure~\ref{pic:projection}
 \end{prop}
 \begin{preuve}
-   Comme $P_F(x) \in F$ il suffit de prouver que, si  $\eta \in F$, alors 
+   Comme $p_F(x) \in F$ il suffit de prouver que, si  $y \in F$, alors 
    \[
-   \|x - P_F(x)\| \le \|x - \eta\|
+   \|x - p_F(x)\| \le \|x - y\|
    \] 
-   Mais, $\underset{(x - P_F(x)) + (P_F(x) - \eta)}{\|x - \eta\|^2} = \|x - P_F(x)\|^2 + 2\overbrace{<\overset{\in F^{\perp}}{x - P_F(x)}, \overset{\in F}{P_F(x) - \eta}>}^{= 0} + \underbrace{\|P_F(x) - \eta\|^2}_{\ge 0} \ge \|x - P_F(x)\|^2$
+   Mais, $\underset{(x - p_F(x)) + (P_F(x) - y)}{\|x - y\|^2} = \|x - P_F(x)\|^2 + 2\overbrace{<\overset{\in F^{\perp}}{x - P_F(x)}, \overset{\in F}{P_F(x) - y}>}^{= 0} + \underbrace{\|P_F(x) - y\|^2}_{\ge 0} \ge \|x - P_F(x)\|^2$
 \end{preuve}
 \begin{theorem}Gram-Shmidt\\
     Soit $E$ un espace vectoriel muni d'un produit scalaire  $<,>$. Soit  $(v_1, \ldots, v_n)$ une famille libre d'élement $\in E$. Alors,  il existe une famille $(w_1, \ldots, w_n)$ orthogonale tq 
