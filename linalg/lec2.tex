@@ -1,8 +1,8 @@
 \section{Bases orthonormales}
-Soit $(E, <,>)$ un espace euclidien et  $F \subset E$ un sous-espace vectoriel ($dim(F) < \infty$) car $dim(E) < \infty$.
+Soit $(E, \scalair{,})$ un espace euclidien et  $F \subset E$ un sous-espace vectoriel ($dim(F) < \infty$) car $dim(E) < \infty$.
 \begin{note}
     \[
-        F^{\perp} := \{x \in E \mid <X, Z> = 0 \, \forall z \in F\} 
+        F^{\perp} := \{x \in E \mid \scalair{X, Z} = 0 \, \forall z \in F\} 
     \] 
     l'orthogonale de $F$.
 \end{note}
@@ -18,13 +18,13 @@ Soit $(E, <,>)$ un espace euclidien et  $F \subset E$ un sous-espace vectoriel (
    \end{enumerate}
    \begin{enumerate}
        \item Soit $x \in F \cap F^{\perp}$\\
-            $\implies$ $<X, Z> = 0 \, \forall Z \in F$ car $x \in F \implies <X, X> = 0 \implies x = 0 (<,> \text{ est définie})$ 
-        \item Soit $x \in E$. Considérons  $f_x \in E^{*}$, i.e  $f_x: E \to \R, y \mapsto <x, y>$ et $f := f_{x|F}: F \to \R \implies f \in E^{*}$
-            Lemme de Riesz $\implies$ $\exists! x' \in F$ tq $f = f_{x'}: F \to \R, z \mapsto <x', z>$\\
+       $\implies$ $\scalair{X, Z} = 0 \, \forall Z \in F$ car $x \in F \implies \scalair{X, X} = 0 \implies x = 0 (\scalair{,} \text{ est définie})$ 
+        \item Soit $x \in E$. Considérons  $f_x \in E^{*}$, i.e  $f_x: E \to \R, y \mapsto \scalair{x, y}$ et $f := f_{x|F}: F \to \R \implies f \in E^{*}$
+            Lemme de Riesz $\implies$ $\exists! x' \in F$ tq $f = f_{x'}: F \to \R, z \mapsto \scalair{x', z}$\\
             $\implies f_{x}(z) = f_{x'}(z) = f(z)\, \forall z \in F$ (Attention: pas l'égalité pour tout $z$ dans  $E$)\\
             Posons $x'' := x - x'$, i.e  $x = x' + x'' \in F$. Montrons  $x'' \in  F^{\perp}$.\\
-            Si $z \in F$,  $<x'', z> = <x - x', z> = <x, z> - <x', z> = 0$. Donc $x'' \in F^{\perp}$ et  $E = F \oplus F^{\perp}$ ($dim(E) = dim(F) + dim(F^{\perp})$) \\
-            $F \subseteq (F^{\perp})^{\perp}$ car $<x, z> = 0 \, \forall x \in F \, \forall z \in F^{\perp}$
+            Si $z \in F$,  $\scalair{x'', z} = \scalair{x - x', z} = \scalair{x, z} - \scalair{x', z} = 0$. Donc $x'' \in F^{\perp}$ et  $E = F \oplus F^{\perp}$ ($dim(E) = dim(F) + dim(F^{\perp})$) \\
+            $F \subseteq (F^{\perp})^{\perp}$ car $\scalair{x, z} = 0 \, \forall x \in F \, \forall z \in F^{\perp}$
             \[
                 dim(F) = dim(E) - dim(F^{\perp})
             \] 
@@ -32,9 +32,9 @@ Soit $(E, <,>)$ un espace euclidien et  $F \subset E$ un sous-espace vectoriel (
    \end{enumerate}
 \end{preuve}
 \begin{definition}
-    Soit $E$ un espace vectoriel muni d'un produit scalaire  $<,>$
+    Soit $E$ un espace vectoriel muni d'un produit scalaire  $\scalair{,}$
      \begin{itemize}
-         \item Une famille $(v_i)_{i \ge 0}$ de vecteurs de $E$ est dite \underline{orthogonale} si pour $i \neq j$ on a $<v_i, v_j> = 0$ i.e  $v_i \perp v_j$
+         \item Une famille $(v_i)_{i \ge 0}$ de vecteurs de $E$ est dite \underline{orthogonale} si pour $i \neq j$ on a $\scalair{v_i, v_j} = 0$ i.e  $v_i \perp v_j$
          \item Une famille orthogonale de  $E$ est une famille orthogonale  $(v_i)_{i \ge  0}$ tq de plus $\|v_i\| = 1$ pour  $i \ge 0$
     \end{itemize}
 \end{definition}
@@ -42,14 +42,14 @@ Soit $(E, <,>)$ un espace euclidien et  $F \subset E$ un sous-espace vectoriel (
    \begin{enumerate}
        \item $E = \R^{n}$ muni du produit scalaire canonique. La base canonique $(e_1, \ldots, e_n)$ est orthogonale car 
            \[
-           <e_i, e_j> = \begin{cases}
+           \scalair{e_i, e_j} = \begin{cases}
                1 \, i = j\\
                0 \, i \neq j
            \end{cases}
            \] 
-       \item Dans $E = \mathcal{C}^{0}([-1, 1], \R)$ muni de $<f,g> = \int_{-1}^{1} f(t)g(t)\,d{t}$. La famille $(\cos(t), \sin(t))$ est orthogonale. La famille $(1, t^2)$ n'est pas orthogonale:
+       \item Dans $E = \mathcal{C}^{0}([-1, 1], \R)$ muni de $\scalair{f,g} = \int_{-1}^{1} f(t)g(t)\,d{t}$. La famille $(\cos(t), \sin(t))$ est orthogonale. La famille $(1, t^2)$ n'est pas orthogonale:
             \[
-                <1, t^2> = \int_{-1}^{1} 1 t^2 \, d{t} = \frac{2}{3} \neq  0 
+                \scalair{1, t^2} = \int_{-1}^{1} 1 t^2 \, d{t} = \frac{2}{3} \neq  0 
            \] 
    \end{enumerate} 
 \end{eg}
@@ -60,20 +60,23 @@ Soit $(E, <,>)$ un espace euclidien et  $F \subset E$ un sous-espace vectoriel (
     Suppososns $(v_1, \ldots, v_n)$ orthogonale avec $v_i \neq 0 \, \forall i = 1, \ldots, n$\\
     si $\sum_{j=1}^{n} \underset{\in \R}{\alpha_iv_i} = 0$, alors  
     \[
-        \forall i \in \{1, \ldots, n\} 0 = <v_i, \sum_{j=1}^{n} \alpha_jv_j> = \sum_{j=1}^{n}\alpha_j <v_i, v_j> = \alpha_i \underset{\neq 0}{\|v_i\|^2}
+        \forall i \in \{1, \ldots, n\} 0 = \scalair{v_i, \sum_{j=1}^{n} \alpha_jv_j} = \sum_{j=1}^{n}\alpha_j \scalair{v_i, v_j} = \alpha_i \underset{\neq 0}{\|v_i\|^2}
     \] 
     Donc $\alpha_i = 0 \, \forall i = 1, \ldots, n$.\\
     Si $(v_1, \ldots, v_n)$ est orthonormale, alors $\|v_i\| = 1$. Donc  $v_i \neq 0, \, \forall i = 1, \ldots, n$.
 \end{preuve}
+\begin{intuition}
+   Les vecteurs orthogonales (perpendiculaires) ne sont jamais dans l'un l'autre (i.e $e_i = \lambda e_j$ n'est pas possible) si les vecteurs sont liés, soit l'angle est $< 90º$ (donc les vecteurs ne sont pas orthogonales, absurd), (ils sont dans l'un l'autre, ils ne sont pas orthogonales, absurd). Donc ils sont bien libres.
+\end{intuition}
 \begin{definition}
-    $(E, <,>)$ espace euclidien. Une famille  $B = (e_1, \ldots, e_n)$ est une base orthonormale (où BON) si elle est une base et famille orthonormale.
+    $(E, \scalair{,})$ espace euclidien. Une famille  $B = (e_1, \ldots, e_n)$ est une base orthonormale (où BON) si elle est une base et famille orthonormale.
 \end{definition}
 \begin{theorem}
-    $(E, <,>)$ espace euclidien. Alors, il admet une BON.
+    $(E, \scalair{,})$ espace euclidien. Alors, il admet une BON.
 \end{theorem}
 \begin{preuve}
    Soit $n := dim(E)$. Soit  $(e_1, \ldots, e_p)$ une famille orthogonale (du point de vue du cardinal $p$) tq  $e_i \neq 0 \, \forall i = 1, \ldots, p$.\\
-   Supposons par l'absurde que $p < n$. Posons  $F = Vect(e_1, \ldots, e_p)$. Alors, $E = F \oplus F^{\perp}$ et  $dim(F) \le p < n$. Donc $F^{\perp} \neq  \{0\}$. Soit $x \in F^{\perp}, \, x \neq 0$. Alors, $(e_1, \ldots, e_p, x)$ est orthogonale de cardinale $> p$. Donc,  $p = n$ et  $(e_1, \ldots, e_n)$ est une base de $E$. Pour avoir une famille orthonormale  $(e_1', \ldots, e_n')$ il suffit de prendre $e_i' = \frac{1}{\|e_i\|}e_i \, \forall i = 1, \ldots, n$.
+Supposons par l'absurde que $p < n$. Posons  $F = Vect(e_1, \ldots, e_p)$. Alors, $E = F \oplus F^{\perp}$ et  $dim(F) \le p < n$. Donc $F^{\perp} \neq  \{0\}$. Soit $x \in F^{\perp}, \, x \neq 0$. Alors, $(e_1, \ldots, e_p, x)$ est orthogonale de cardinale $> p$. Donc,  $p = n$ et  $(e_1, \ldots, e_n)$ est une base de $E$. Pour avoir une famille orthonormale  $(e_1', \ldots, e_n')$ il suffit de prendre $e_i' = \frac{1}{\|e_i\|}e_i \, \forall i = \{1, \ldots, n\}$.
 \end{preuve}
 \begin{prop}
     Soit $(E, \scalar{}{})$ un espace euclidien et soit  $(e_1, \ldots, e_n)$ une BON de $E$. Si  $x \in E$, on a:
@@ -115,6 +118,7 @@ Autrement dit, le réél $\scalar{x}{e_i}$ est la  $i^{\text{ème}}$ coordonnée
    \[
        \vec{v} = \underbrace{\scalair{v, e_1}}_{= 2} \cdot \vec{e_1} + \underbrace{\scalair{v, e_2}}_{= 3} \cdot \vec{e_2}
    \]  
+   Habituelement, pour trouver les coordonnées dans une base, on devrait résoudre un système linéaire.
 \end{intuition}
 \begin{preuve}
     Posons $y := \sum_{i=1}^{n} \scalar{x}{e_i}e_i$ . Alors, 
@@ -141,9 +145,9 @@ Autrement dit, le réél $\scalar{x}{e_i}$ est la  $i^{\text{ème}}$ coordonnée
         \|x\|^2 = \scalar{\sum_{i=1}^{n} x_ie_i}{\sum_{j=1}^{n} x_je_j} = \sum_{i,j=1}^{n} x_ix_j\scalar{e_i}{e_j} = \sum_{i=1}^{n} x_i^2
     \] 
 \end{preuve}
-\begin{prop} Soient $(E, <,>)$ un espace euclidien et $\epsilon = (e_1, \ldots, e_n)$ une BON. Soient $f \in \mathcal{L}(E, E)$ et $A = (a_{i,j})_{1 \le i,j \le n}$ la matrice représentative de $f$ dans  $\epsilon$, i.e,  $A = Mat_{\epsilon}(f)$ 
+\begin{prop} Soient $(E, \scalair{,})$ un espace euclidien et $\epsilon = (e_1, \ldots, e_n)$ une BON. Soient $f \in \mathcal{L}(E, E)$ et $A = (a_{i,j})_{1 \le i,j \le n}$ la matrice représentative de $f$ dans  $\epsilon$, i.e,  $A = Mat_{\epsilon}(f)$ 
     \[
-        a_{i,j} = <f(e_i), e_j> \, \forall i,j = 1, \ldots, n
+        a_{i,j} = \scalair{f(e_i), e_j} \, \forall i,j = 1, \ldots, n
     \] 
 \end{prop}
 \begin{preuve}
@@ -162,12 +166,12 @@ Autrement dit, le réél $\scalar{x}{e_i}$ est la  $i^{\text{ème}}$ coordonnée
    \end{cases}$
    Donc:
    \[
-       a_{i, j} = <f(e_j), e_i>
+       a_{i, j} = \scalair{f(e_j), e_i}
    \] 
 \end{preuve}
 
 \section{Projections orthogonales}
-Soit $(E, <,>)$ un espace euclidien,  $F \subseteq E$ un sous-espace vectoriel. Alors,  $E = F \oplus F^{\perp}$. Donc $\forall x \in E$ s'ecrit 
+Soit $(E, \scalair{,})$ un espace euclidien,  $F \subseteq E$ un sous-espace vectoriel. Alors,  $E = F \oplus F^{\perp}$. Donc $\forall x \in E$ s'ecrit 
 \[
 x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
 \] 
@@ -186,11 +190,11 @@ x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
             \[
                 y = p_F(x) \iff \left( \underset{\implies y = x_F}{y \in F \text{ et } x - y} \in F^{\perp} \right) 
            \] 
-           En particulier $<p_F(x), x - P_F(x)> \,= 0$. Alors, si $(v_1, \ldots, v_R)$ est une BON de $F$, on a:
+       En particulier $\scalair{p_F(x), x - p_F(x)} \,= 0$. Alors, si $(v_1, \ldots, v_R)$ est une BON de $F$, on a:
             \[
-           \forall x \in E, \, p_F(x) = \sum_{i=1}^{k} <x, v_i>v_i
+                \forall x \in E, \, p_F(x) = \sum_{i=1}^{k} \scalair{x, v_i}v_i
            \] 
-           En effet, il suffit de vérfier que le vecteur $y = \sum_{i=1}^{k} <x, v_i>v_i$ vérfie:
+           En effet, il suffit de vérfier que le vecteur $y = \sum_{i=1}^{k} \scalair{x, v_i}v_i$ vérfie:
            \[
                y \in F \text{ et } x - y \in F^{\perp}
            \] 
@@ -219,6 +223,12 @@ x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
 \caption{Projection}
 \label{pic:projection}
 \end{figure}
+\begin{figure}[ht]
+    \centering
+    \incfig{projection-with-bon}
+    \caption{Projection avec BON}
+    \label{fig:projection-with-bon}
+\end{figure}
 \begin{prop}
    Soit $x \in E$. Alors,
    \[
@@ -232,10 +242,10 @@ x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
    \[
    \|x - p_F(x)\| \le \|x - y\|
    \] 
-   Mais, $\underset{(x - p_F(x)) + (P_F(x) - y)}{\|x - y\|^2} = \|x - P_F(x)\|^2 + 2\overbrace{<\overset{\in F^{\perp}}{x - P_F(x)}, \overset{\in F}{P_F(x) - y}>}^{= 0} + \underbrace{\|P_F(x) - y\|^2}_{\ge 0} \ge \|x - P_F(x)\|^2$
+   Mais, $\underset{(x - p_F(x)) + (p_F(x) - y)}{\|x - y\|^2} = \|x - p_F(x)\|^2 + 2\overbrace{\scalair{\overset{\in F^{\perp}}{x - p_F(x)}, \overset{\in F}{p_F(x) - y}}}{= 0} + \underbrace{\|p_F(x) - y\|^2}_{\ge 0} \ge \|x - p_F(x)\|^2$
 \end{preuve}
 \begin{theorem}Gram-Shmidt\\
-    Soit $E$ un espace vectoriel muni d'un produit scalaire  $<,>$. Soit  $(v_1, \ldots, v_n)$ une famille libre d'élement $\in E$. Alors,  il existe une famille $(w_1, \ldots, w_n)$ orthogonale tq 
+    Soit $E$ un espace vectoriel muni d'un produit scalaire  $\scalair{,}$. Soit  $(v_1, \ldots, v_n)$ une famille libre d'élement $\in E$. Alors,  il existe une famille $(w_1, \ldots, w_n)$ orthogonale tq 
     \[
         \forall i = 1, \ldots, n \quad Vect(v_1, \ldots, v_i) = Vect(w_1, \ldots, w_i)
     \] 
@@ -246,21 +256,21 @@ x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
        \item $i = 1$:  $w_1 := v_1$ suffit
        \item $i \ge 1$: Supposons $(w_1, \ldots, w_i)$ construits. 
            Posons $F_i = Vect(w_1, \ldots, w_i) = Vect(v_1, \ldots, v_i)$. 
-           Alors on prend $w_{i+1} := v_{i+1} - P_{F_i}(v_{i+1})$. 
-           Donc,  $w_{i+1} \in F_i^{\perp}$ (par caractérisation de $P_{F_i}$) et $(w_1, \ldots, w_{i+1})$ est orthogonale. On note $P_{F_i}(v_{i+1}) \in F_i$, donc
+           Alors on prend $w_{i+1} := v_{i+1} - p_{F_i}(v_{i+1})$. 
+           Donc,  $w_{i+1} \in F_i^{\perp}$ (par caractérisation de $p_{F_i}$) et $(w_1, \ldots, w_{i+1})$ est orthogonale. On note $p_{F_i}(v_{i+1}) \in F_i$, donc
             \[
-                Vect(w_1, \ldots, w_i, w_{i+1}) \underset{w_{i+1} = v_{i+1} - P_{F_i}(v_{i+1})} = Vect(w_1, \ldots, w_i, v_{i+1}) = Vect(v_1, \ldots, v_i, v_{i+1})
+                Vect(w_1, \ldots, w_i, w_{i+1}) \underset{w_{i+1} = v_{i+1} - p_{F_i}(v_{i+1})} = Vect(w_1, \ldots, w_i, v_{i+1}) = Vect(v_1, \ldots, v_i, v_{i+1})
            \] 
    \end{itemize}
 \end{preuve}
 \begin{remark}
    La preuve donne une récette concrète pour construir une BON.\\ 
-   Soit $(E, <,>)$ un espace euclidien.  $(v_1, \ldots, v_n)$ base de $E$.\\
+   Soit $(E, \scalair{,})$ un espace euclidien.  $(v_1, \ldots, v_n)$ base de $E$.\\
    Le but: construit une base  $(w_1', \ldots w_n')$ orthogonale de $E$ avec  $Vect(v_1, \ldots, v_i) = Vect(w_1, \ldots, w_i) \quad \forall i = 1, \ldots, n$\\
    Posons:
    \begin{enumerate}
        \item $w_1' := v_1$
-       \item $w_{i+1}' = \sum_{j=1}^{i} \frac{<v_{i+1}, w_j'>}{<w_j', w_j'>}w_j'$. \\
+       \item $w_{i+1}' = \sum_{j=1}^{i} \frac{\scalair{v_{i+1}, w_j'}}{\scalair{w_j', w_j'}}w_j'$. \\
            Alors, $(w_1, \ldots, w_n)$ avec $w_i = \frac{1}{\|w_i'\|}w_i'$ est une BON.
    \end{enumerate}
 \end{remark}
