@@ -6,5 +6,147 @@
 \tableofcontents
 \input{cours1.tex}
 \input{cours2.tex}
+
+\chapter{cours3:\\Interpolation polynomiale}
+On va essayer de construire des polynôms qui passent par un ensemble (nuages) de points donnés.
+
+Si ces points sont les valeurs d'une fonction, on amerait:
+\begin{itemize}
+    \item savoir si le polynôme construit est d'autant plus proche de la fonction que le nombre de point est grand. C'est-à-dre, est-ce que nute des "erreurs" tend vers zero lorsque le nombre de points tend vers l'infini.
+    \item Si oui, comment quantifier cette convergence? C'est-à-dire, quelle est la vitesse (ordre) de cette convergence.
+        \begin{figure}[H]
+            \centering
+            \incfig{evolution-de-population-en-annee}
+            \caption{evolution-de-population-en-annee}
+            \label{fig:evolution-de-population-en-annee}
+        \end{figure}
+\end{itemize}
+\begin{enumerate}
+    \item Approche 1: approximation linéaire. 
+        \begin{itemize}
+            \item Polynôme de degré 1
+        \end{itemize}
+    \item Approche 2: 
+        \begin{itemize}
+            \item polynôme de degré 1
+            \item approximation quadratique
+        \end{itemize}
+    \item Approche 3: prise en compre d'Historique
+\end{enumerate}
+
+\section*{Rappels sur les nuts numériques\\
+          Vitesse (ordre) de convergence\\
+          valeur ajoutée par itérations
+      }
+\begin{definition}
+    Soit $(x_n)_n \subset \R^n$ une suite qui converge vers $x^* \in \R^n$, pour une norme $\| \, \|$ de  $\R^n$
+    \begin{itemize}
+        \item Si $k_1 = \lim_{x \to \infty} \frac{\|x_{n+1} - x^*\|}{\|x_n - x^*\|}$ existe et $k_1 \in ]-1, 1[ \setminus \{0\}$. On dit que la suite convere \underline{linéairement} vers $x^*$ ou que la convergence est d'ordre  $1$.
+        \item Si  $k_1 = 0$, $k_2 = \lim_{n \to \infty} \frac{\|x_{n+1} - x^*\|}{\|x_n - x^*\|^2}$ existe et non nul. On dit que la suite coverge \underline{quadratiquement} vers $x^*$, ou que la convergence est \underline{d'ordre $2$}.  
+        \item Si $k_q = \lim_{n \to \infty} \frac{\|x_{n+1} - x^*\|}{\|x_n - x^*\|^q}$ existe et $\neq 0$ la convergence est \underline{ d'ordre $q$ }. La constante $K_q$ est appelée \underline{constante asymptotique d'erreur}.
+    \end{itemize}
+\end{definition}
+\begin{eg}
+    \begin{enumerate}
+        \item 
+   $x_n = (0.2)^n$ 
+   \begin{itemize}
+       \item On a $\lim_{n \to \infty} x_n = 0$. La convergence vers $x^* = 0$.
+       \item  $\lim_{n \to \infty} \frac{|x_{n+1} - x^*|}{|x_n - x^*|} = \lim_{n \to \infty} \frac{(0.2)^{n+1}}{(0.2)^n} = 0.2 \in ]-1, 1[ \setminus \{0\}$
+   \end{itemize}
+   D'où
+   \begin{itemize}
+       \item $x_n$ converge à \underline{l'ordre $1$} 
+       \item Sa constante asymptotique est \underline{$k_1 = 0.2$}
+   \end{itemize}
+   \item
+       $I_n = (0.2)^{2^n}$. On a  $\lim_{n \to \infty} I_n = 0$\\
+       On a:
+       \begin{align*}
+           I_{n+1} = (0.2)^{2^{n+1}} &= (0.2)^{2^n \cdot 2}\\
+                                     &= \left( (0.2)^{2^n} \right)^2\\
+                                     &= \left( I_n \right)^2
+       \end{align*}
+       D'où $\lim_{n \to \infty} \frac{I_{n+1}}{\left( I_n \right)^2} = \lim_{n \to \infty} \frac{\left( I_n \right)^2}{\left( I_n \right)^2} = 1$
+       D'où
+       \begin{itemize}
+           \item convergence \underline{d'ordre $2$}
+           \item de constante $k_2 = 1$
+       \end{itemize}
+\end{enumerate}
+\end{eg}
+En pratique, on ne dispose pas de $K_q$
+ \begin{definition}
+    \[
+        \substack{x_n \text{ converge vers } x^*\\\text{à l'ordre } q} \implies \exists N \in \N, \exists A,B \in \R \text{ tq } \forall n \ge N, 0 < A \le \frac{\|x_{n+1} - x^*\|}{\|x_n - x^*\|^q} \le B < +\infty
+    \] 
+    La convergence est au moins d'ordre $q$ si et seulement si on a (deuxieme partie d'équation)
+\end{definition}
+
+\subsection{Valeur ajoutée par l'itération}
+Il est question de comparer $2$ suites qui ont la même vitesse de convergence.
+\begin{remark}
+    Si $|x_n - x^*| = 4 \cdot 10^{-8} = 0.\underbrace{0000000}_{7 \text{ chiffres}}4$. On dira que $x_n$ et  $x^*$ ont 7 chiffres exactes apres la virgule.
+    \begin{align*}
+    &\log_{10} |x_n - x^*| = \log_{10}4 - 8\log_{10}(10)\\
+    &\frac{\log|x_n - x^*}{\log 10} = \frac{\log 4}{\log 10} - 8
+    \end{align*}
+    i.e $d_n = - \log_{10} |x_n - x^*|$ mesure de nombre de chiffres décimales entre $x_n$ et  $x^*$ qui coincident.
+\end{remark}
+\begin{remark}
+   \[
+       \lim_{n \to \infty} \frac{\|x_{n+1} - x^*\|}{\|x_n - x^*\|^q} = K_q \implies K_q \approx \frac{\|x_{n+1} - x^*\|}{\|x_n - x^*\|^q}
+   \]  
+   D'où $d_{n+1} - q d_n \approx -\log_{10} K_q$, i.e
+   \[
+   d_{n+1} + \frac{\log_{10} K_q}{1 - q} \approx q(d_n + \frac{\log_{10} K_q}{1 - q})
+   \] 
+   Donc, le nombre de chiffres significatives est multiplié par $q$.
+\end{remark}
+\begin{prop}
+   Si $x_n$ converge à l'ordre  $1$ vers  $x^*$ de constante asymptotique  $K_1$, alors le nombre d'itérations nécessaires pour gagner un chiffre exacte est la partié enitère de  $-\frac{1}{\log_{10}K_1}$ 
+\end{prop}
+\begin{preuve}
+Soit $m$ le nombre d'itérations pour gegner un chiffre. Comme  $d_{n+1} - d_n = -\log_{10} K_1$, en partant de $d_n$, après  $m$ itérations on aura
+ \[
+     d_{n+m} - d_{n} = -m \log_{10}K_1
+\] 
+D'où on aura gagné $1$ chiffre si  $d_{n+m} - d_n = 1$, i.e
+\[
+1 = -m \log_{10}K_1 \implies m = \left( -\frac{1}{\log_{10}K_1} \right) 
+\] 
+\end{preuve}
+
+\subsection{Obtenir numériquement la vitesse de convergence}
+On cherche $q$ tq:  $\lim_{n \to \infty} \frac{\|x_{n+1} - x^*\|}{\|x_n - x^*\|^q} = K_q \in  \R^*$
+\begin{remark}
+    \begin{align*}
+        &\frac{\|x_{n+1} - x^*\|}{\|x_n - x^*\|^q} \approx K_q
+        \implies& \underbrace{ \log \|x_{n+1} - x^*\|  }_{Y} - \underbrace{q \log\|x_n - x^*\|}_{X} = \log K_q
+    \end{align*}
+    i.e $Y = aX + b$. 
+    \par
+    Conclusion: pour détérminer q:
+     \begin{itemize}
+        \item Traiter la courbe $\log\|x_n - x^*\| \mapsto \log\|x_{n+1} - x^*\|$
+        \item Détérminer $q$ comme la parte de la droite passant par le maximum de points.
+    \end{itemize}
+\end{remark}
+\begin{align*}
+    &x_n = x_0, x_1, \ldots, x_N\\
+    &x_n - x^* = x_0 - x^*, x_1 - x^*, \ldots, x_N - x^*\\
+    &x_{n+1} - x^* = x_1 - x^*, x_2 - x^*, \ldots, x_{N+1} - x^*
+\end{align*}
+En python:
+
+\begin{lstlisting}
+xn = np.array([x0, ..., xN])
+e = np.log(np.abs(xn - x^*))
+ex = e[0:-1] #de premier a avant dernier
+ey = e[1:] #de deuxieme au dernier
+plt.scatter(ex, ey, label="miage")
+a,b = np.polyfit(ex, ey, 1)
+plt.plot(ex, b + a * ex, label=f"$x \mapsto {b:32f} + {a:32f}x$")
+\end{lstlisting}
 \end{document}
 
