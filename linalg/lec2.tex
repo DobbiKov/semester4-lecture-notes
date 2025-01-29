@@ -300,33 +300,71 @@ x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
    \] 
    Mais, $\underset{(x - p_F(x)) + (p_F(x) - y)}{\|x - y\|^2} = \|x - p_F(x)\|^2 + 2\overbrace{\scalair{\overset{\in F^{\perp}}{x - p_F(x)}, \overset{\in F}{p_F(x) - y}}}{= 0} + \underbrace{\|p_F(x) - y\|^2}_{\ge 0} \ge \|x - p_F(x)\|^2$
 \end{preuve}
-\begin{theorem}Gram-Shmidt\\
+\begin{theorem}\label{thm:gram-schmidt}Gram-Shmidt\\
     Soit $E$ un espace vectoriel muni d'un produit scalaire  $\scalair{,}$. Soit  $(v_1, \ldots, v_n)$ une famille libre d'élement $\in E$. Alors,  il existe une famille $(w_1, \ldots, w_n)$ orthogonale tq 
     \[
         \forall i = 1, \ldots, n \quad Vect(v_1, \ldots, v_i) = Vect(w_1, \ldots, w_i)
     \] 
+    De plus, ce théorème nous donne un procédé de construction d'une base orthonormée à partir d'une base quelconque.
 \end{theorem}
-\begin{preuve}
-   Récurrence sur $i$\\ 
-   \begin{itemize}
-       \item $i = 1$:  $w_1 := v_1$ suffit
-       \item $i \ge 1$: Supposons $(w_1, \ldots, w_i)$ construits. 
-           Posons $F_i = Vect(w_1, \ldots, w_i) = Vect(v_1, \ldots, v_i)$. 
-           Alors on prend $w_{i+1} := v_{i+1} - p_{F_i}(v_{i+1})$. 
-           Donc,  $w_{i+1} \in F_i^{\perp}$ (par caractérisation de $p_{F_i}$) et $(w_1, \ldots, w_{i+1})$ est orthogonale. On note $p_{F_i}(v_{i+1}) \in F_i$, donc
-            \[
-                Vect(w_1, \ldots, w_i, w_{i+1}) \underset{w_{i+1} = v_{i+1} - p_{F_i}(v_{i+1})} = Vect(w_1, \ldots, w_i, v_{i+1}) = Vect(v_1, \ldots, v_i, v_{i+1})
-           \] 
-   \end{itemize}
+\begin{preuve} du Théorème \ref{thm:gram-schmidt}
+    Construisons la base orthogonale: $\{w_1, \ldots, w_p\}$. Posons d'abord:
+    \[
+    \begin{cases}
+        w_1 = v_1\\
+        w_2 = v_2 + \lambda w_1, \qquad \text{avec } \lambda \text{ tel que } w_1 \perp w_2
+    \end{cases}
+    \] 
+    En imposant cette condition on trouve:
+    \[
+        0 = \scalair{v_2 + \lambda w_1, w_1} = \scalair{v_2, w_1} + \lambda \|w_1\|^2
+    \] 
+    Comme $w_1 \neq 0$, on obtient $\lambda = - \frac{\scalair{v_2, w_1}}{\|w_1\|^2}$. On remarque que:
+    \[
+    \begin{cases}
+        v_1 = w_1\\
+        v_2 = w_2 - \lambda w_1
+    \end{cases}
+    \] 
+    donc $Vect\{v_1, v_2\} = Vect\{w_1, w_2\}$.
+    \par
+    Une fois construit $w_2$, on construit $w_3$ en posant:
+    \begin{align*}
+        &w_3 = v_3 + \mu w_1 + \nu w_2\\
+        &\text{avec } \mu \text{ et } \nu \text{ tels que: } w_3 \perp w_1 \text{ et } w_3 \perp w_2
+    \end{align*}
+    On peut voir $w_3 = v_3 - \lambda' w_1 - \lambda'' w_2 $ comme $w_3 = v_3 - proj_{F_2}v_3$ où $F_i = Vect\{w_1, \ldots, w_i\}$
+    \begin{figure}[H]
+        \centering
+        \incfig{projection-with-bon-thm}
+        \caption{Vecteur par projection}
+        \label{fig:projection-with-bon-thm}
+    \end{figure}
+    Ceci donne
+    \begin{align*}
+        0 &= \scalair{v_3 + \mu w_1 + \nu w_2, w_1} = \scalair{v_3, w_1} + \mu \underset{= \|w_1\|^2}{\scalair{w_1, w_1}} + \nu \underset{= 0}{\scalair{w_2, w_1}}\\
+          &= \scalair{v_3, w_1} + \mu \|w_1\|^2 
+    \end{align*}
+    d'où $\mu = - \frac{\scalair{v_3, w_1}}{\|w_1\|^2}$. De même, en imposant que $w_3 \perp w_2$, on trouve $\nu = - \frac{\scalair{v_3, w_2}}{\|w_2\|^2}$. Comme
+    \[
+    \begin{cases}
+        v_1 = w_1\\
+        v_2 = w_2 - \lambda w_1\\
+        v_3 = w_3 - \mu w_1 - \nu w_2
+    \end{cases}
+    \] 
+    on voit bien que $Vect\{w_1, w_2, w_3\} = Vect\{v_1, v_2, v_3\}$. C'est-à-dire, $\{w_1, w_2, w_3\}$ est une base orthogonale de l'éspace engendre par $v_1, v_2, v_3$. On voit bien maintenant le procédé de récurrence.
+    \par
+    Supposons avoir construit $w_1, \ldots, w_{k-1}$ pour $k \le p$. On pose:
+    \begin{align*}
+        w_k &= v_k + \text{ combinaison linéaire des vecteurs déjà trouvés}\\
+            &= v_k + \lambda_1w_1 + \ldots + \lambda_{k-1}w_{k-1}
+    \end{align*}
+    Les conditions $w_k \perp w_i$ (pour $i \in \{1, \ldots, k-1\}$) sont équivalentes à:
+    \[
+        \lambda_i = - \frac{\scalair{v_k, w_i}}{\|w_i\|^2}
+    \] 
+    comme on le vérifie immédiatement. Puisque $v_k = w_k - \lambda_1 - \ldots - \lambda_{k-1}w_{k-1}$, on voit par récurrence que $Vect\{w_1, \ldots, w_k\} = Vect\{v_1, \ldots, v_k\}$ $\iff$ $\{w_1, \ldots, w_k\}$ est une base orthogonale de $Vect\{v_1, \ldots, v_k\}$.
+    \par
+    Ce qu'il nous rester c'est à la normaliser, i.e  $\forall i \in \{1, \ldots, k\}$ $e_i = \frac{w_i}{\|w_i\|}$, d'où $\{e_1, \ldots, e_k\}$ est une base orthonormale de $F = Vect\{v_1, \ldots, v_k\}$.
 \end{preuve}
-\begin{remark}
-   La preuve donne une récette concrète pour construir une BON.\\ 
-   Soit $(E, \scalair{,})$ un espace euclidien.  $(v_1, \ldots, v_n)$ base de $E$.\\
-   Le but: construit une base  $(w_1', \ldots w_n')$ orthogonale de $E$ avec  $Vect(v_1, \ldots, v_i) = Vect(w_1, \ldots, w_i) \quad \forall i = 1, \ldots, n$\\
-   Posons:
-   \begin{enumerate}
-       \item $w_1' := v_1$
-       \item $w_{i+1}' = \sum_{j=1}^{i} \frac{\scalair{v_{i+1}, w_j'}}{\scalair{w_j', w_j'}}w_j'$. \\
-           Alors, $(w_1, \ldots, w_n)$ avec $w_i = \frac{1}{\|w_i'\|}w_i'$ est une BON.
-   \end{enumerate}
-\end{remark}

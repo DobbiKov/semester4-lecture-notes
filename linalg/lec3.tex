@@ -1,0 +1,60 @@
+\section{Isométries et Adjoints}
+\subsection{Isométries}
+\begin{definition}
+    Une \textbf{isométrie} de $E$ (ou \textbf{transformation orthogonale}) est un endomorphisme  $f \in \mathcal{L}(E) := \mathcal{L}(E, E)$ préservant le produit vectoriel, i.e:
+     \[
+         \scalair{f(x), f(y)} = \scalair{x, y} \quad \forall x, y \in E
+    \] 
+\end{definition}
+\begin{definition}
+    Soient $x, y \in E$ deux vecteurs non nuls. On a, d'après l'inégalité de Cauchy-Schwarz (voir lemma \ref{lemma:inegalite-cauchy-schwarz}):
+    \[
+        \frac{| \scalair{x, y} |}{\|x\| \cdot \|y\|} \le 1
+    \] 
+    Alors, il existe un et un seul $\theta \in [0, \pi]$ tel que:
+     \begin{equation}
+        \cos \theta = \frac{ \scalair{x, y}}{\|x\| \cdot \|y\|} 
+    \end{equation}
+    $\theta$ est dit \textbf{angle} (non-orienté) entre les vecteurs  $x$ et  $y$.
+\end{definition}
+\begin{prop}\label{prop:isometrie-reserve-norme}
+   Si  $f$ est une isométrie de  $E$, donc, on a:
+   \[
+   \|f(x)\| = \|x\| \quad \forall x \in E
+   \] 
+\end{prop}
+\begin{preuve}
+   Supposons que $f$ est une isométrie de  $E$. Soit  $x, y \in E$. Par définition:  $\scalair{f(x), f(y)} = \scalair{x, y}$, donc, posons $y := x$, alors, on a:
+   \begin{align*}
+       &\underbrace{\scalair{f(x), f(x)}}_{\|f(x)\|^2} = \underbrace{\scalair{x, x}}_{\|x\|^2}\\
+       \iff &\|f(x)\|^2 = \|x\|^2\\
+       \iff &\|f(x)\| = \|x\|
+   \end{align*}
+\end{preuve}
+\begin{prop}
+   Soit $f$ une isométrie dans  $E$, alors:
+   \begin{enumerate}
+       \item $f$ est bijective
+       \item  $f$ présérve la distance euclidienne et les angles
+   \end{enumerate}
+\end{prop}
+\begin{preuve}
+   Soit $f$ une isométrie dans  $E$ et deux vecteurs  $u, v \in E$ 
+   \begin{enumerate}
+       \item  
+           \begin{align*}
+               \|f(u) - f(v)\| = \sqrt{\scalair{f(u), f(v)}} = \sqrt{\scalair{u, v}} = \|u - v\| 
+           \end{align*}
+       \item Soit $\theta_1$ angle entre  $f(u)$ et  $f(v)$ et $\theta_2$ angle entre  $u$ et  $v$, donc:
+            \[
+                \cos \theta_1 := \frac{\scalair{f(u), f(v)}}{\|f(u)\| \cdot \|f(v)\|}
+           \] 
+           \[
+                \cos \theta_2 := \frac{\scalair{u, v}}{\|u\| \cdot \|v\|}
+           \] 
+           Par définition, $\scalair{f(u), f(v)} = \scalair{u, v}$, d'après proposition \ref{prop:isometrie-reserve-norme},  $\forall x, \|f(x)\| = \|x\|$, donc:
+           \[
+                \cos \theta_1 := \frac{\scalair{f(u), f(v)}}{\|f(u)\| \cdot \|f(v)\|} = \frac{\scalair{u, v}}{\|u\| \cdot \|v\|} = \cos \theta_2
+           \] 
+   \end{enumerate}
+\end{preuve}
