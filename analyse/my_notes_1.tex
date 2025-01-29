@@ -1,71 +1,3 @@
-\section{Intérieur, adhérence, frontière}
-Soit $A \subset E$. 
-\begin{definition}
-    Un point $x \in E$ est intérieur à $A$ s'il existe  $\delta > 0$ tel que  $B(x, \delta) \subset A$.\\
-    Ensembles des points intérieur à $A$ se note  $Int(A)$ ou  $\mathring{A}$.
-\end{definition}
-\begin{intuition}
-   $Int(A)$ est un ensemble qui est totalement dans  $A$ est se trouve loin des bords. 
-\end{intuition}
-\begin{tabular}[c]{@{}l@{}r@{}}
-    \adjustbox{valign=t}{
-    \parbox[t]{0.79\textwidth}{
-    \begin{definition}
-        Un point $x \in E$ est adhérent à  $A$ si  $\forall r > 0, \, B(x, r) \cap A \neq \O$ (toute boule centré dans $x$ intersecte  $A$).  \\
-        Ensemble des points adhérents à $A$ se note  $Adh(A)$ ou  $\overline{A}$.
-    \end{definition}
-}
-}
-    &
-    \hfill
-    \adjustbox{valign=t}{
-        \parbox[t]{0.2\textwidth}{
-            \vspace{0.3cm}
-    \begin{tikzpicture}
-            \definecolor{lightgray}{RGB}{200, 200, 200}
-        \filldraw[color=lightgray] (0,0) circle (1cm); 
-        \coordinate (x) at (1, 0);
-        \filldraw[color=black] (x) circle (0.4mm);
-        \node[right] (_) at (x){\small $x$};
-        \node (_) at (0.5, 0.5){A};
-
-        \draw (x) circle (0.2cm);
-        \draw (x) circle (0.3cm);
-        \draw (x) circle (0.1cm);
-        \node[below] (_) at (1.3, -0.3){\small $B(x, r)$};
-    \end{tikzpicture} 
-}
-}
-\end{tabular}
-\begin{intuition}
-   Si $A$ est ouvert (ses bords n'appartiennent pas à $A$), ses bords appartiennent à $Adh(A)$. Cette notion est utile pour completer des ensembles.
-   \begin{eg}
-       $\overline{\Q} = \R$ 
-   \end{eg} 
-\end{intuition}
-\begin{definition}
-    $Adh(A) \cap Adh(E \setminus A)$ est le bord de $A$ est s'appelle  la frontière de $A$.
-\end{definition}
-\section{Suite dans un éspace métrique}
-\begin{definition}
-    Une suite $(x_n)_{n \in \N}$ converge vers $x \in E$, si  $\forall \epsilon > 0, \exists N \in \N$ tel que :
-    \[
-    \forall n \ge N, \, d(x_n, x) \le  \epsilon
-    \] 
-\end{definition}
-\begin{prop}
-   Soit $A \in E$.\\ 
-   \begin{enumerate}
-       \item $x \in Adh(A)$ si et seulement si, il existe une suite $(x_n)_{n \in \N}$ d'éléments de $A$ telle que  $x_n \xrightarrow[n \to +\infty]{} x$ 
-       \item $A$ est fermé (i.e contient sa frontière) si et seulement si la limite de toute suite  $(x_n)_{n \in \N}$ d'éléments de $A$ appartient à  $A$.
-   \end{enumerate}
-\end{prop}
-\begin{intuition}
-   \begin{enumerate}
-       \item Si $(x_n)_{n \in \N}$ est d'éléments de  $A$ ($\forall n \in N, \, x_n \in A$), donc elle converge vers un éléments $x$ qui peut être soit dans  $A$, soit la borne des éléments de  $A$, alors à la frontière. 
-       \item Si la limite de toute suite $(x_n)_{n \in \N}$ des éléments de  $A$ est aussi dans  $A$, alors la frontière de  $A$ est inclu dans  $A$. Car l'une des suites tend vers la borne.
-   \end{enumerate} 
-\end{intuition}
 \begin{definition}
     Une suite $(x_n)_{x \in \N}$ est de Cauchy si  $\forall \epsilon > 0, \exists N \in \N$ tel que:
     \[
@@ -141,7 +73,7 @@ Soit $A \subset E$.
 Pourquoi a-t-on besoin de compacité? Car cela nous donne une
 \begin{prop}
     Si $K \subset E$ est compact, alors $K$ est fermé et borné.\\
-    Si $K$ est compact est  $F$ est borné, donc  $K \cap F$ est compact\\
+    Si $K$ est compact et  $F$ est borné, donc  $K \cap F$ est compact\\
     Si $K$ est compact, donc  $K$ est complet
 \end{prop}
 \begin{property}
