@@ -145,6 +145,7 @@ Autrement dit, le réél $\scalar{x}{e_i}$ est la  $i^{\text{ème}}$ coordonnée
         \|x\|^2 = \scalar{\sum_{i=1}^{n} x_ie_i}{\sum_{j=1}^{n} x_je_j} = \sum_{i,j=1}^{n} x_ix_j\scalar{e_i}{e_j} = \sum_{i=1}^{n} x_i^2
     \] 
 \end{preuve}
+\section{Matrices et produits vectoriels}
 \begin{prop} Soient $(E, \scalair{,})$ un espace euclidien et $\epsilon = (e_1, \ldots, e_n)$ une BON. Soient $f \in \mathcal{L}(E, E)$ et $A = (a_{i,j})_{1 \le i,j \le n}$ la matrice représentative de $f$ dans  $\epsilon$, i.e,  $A = Mat_{\epsilon}(f)$ 
     \[
         a_{i,j} = \scalair{f(e_i), e_j} \, \forall i,j = 1, \ldots, n
@@ -169,6 +170,61 @@ Autrement dit, le réél $\scalar{x}{e_i}$ est la  $i^{\text{ème}}$ coordonnée
        a_{i, j} = \scalair{f(e_j), e_i}
    \] 
 \end{preuve}
+
+
+La matrice d'un produit vectoriel est très utile dans l'algèbre linéaire. Avant donner une definition:
+\par
+Soit $E$ un espace vectoriel de dimension finie  $n$, un espace  $K$ et une forme bilinéaire  $b: E \times E \longrightarrow K$. Si $\{e_1, \ldots, e_n\}$ est une base de $E$, alors:  $x = \sum_{i=1}^{n} x_ie_i$ et $y = \sum_{j=1}^{n} y_je_j$, alors on a:
+\[
+b(x, y) = \sum_{i,j = 1}^{n} x_iy_jb(e_i, e_j)
+\] 
+$b$ est donc détérminé par la conaissance des valeurs  $b(e_i, e_j)$ sur une base.
+ \begin{definition}
+     On appelle  \textbf{matrice de $b$} dans la base $\{e_i\}$ la matrice:
+      \[
+          M(b)_{e_i} = \begin{pmatrix} 
+              b(e_1, e_1) & b(e_1, e_2) & \ldots & b(e_1, e_n)\\
+              b(e_2, e_1) & b(e_2, e_2) & \ldots & b(e_2, e_n)\\
+              \ldots & \ldots & \ldots & \ldots\\
+              b(e_n, e_1) & \ldots & \ldots & b(e_n, e_n)
+          \end{pmatrix} 
+     \] 
+     Ainsi l'élément de la $\text{i}^{\text{ème}}$ ligne et $\text{j}^{\text{ème}}$ colonne est le coefficient de $x_iy_j$.
+\end{definition}
+\begin{eg}
+   La matrice du produit scalair canonique dans $\R^3$ est:
+   \[
+       \scalair{X, Y} = x_1y_1 + x_2y_2 + x_3y_3 
+   \] 
+   \[
+       Mat(\scalair{,})_{e_i} = \begin{pmatrix} 
+            1 & 0 & 0\\
+            0 & 1 & 0\\
+            0 & 0 & 1
+       \end{pmatrix} 
+   \] 
+\end{eg}
+\begin{prop}
+   Notons:
+   \begin{align*}
+       \underbrace{A = M(b)_{e_i}}_{\text{matrice de produit scalair}} && \underbrace{X = M(x)_{e_i}}_{\substack{\text{coordonnées de $x$}\\ \text{dans la base  $e_i$}}} && \underbrace{Y = M(y)_{e_i}}_{\substack{\text{coordonnées de $y$}\\ \text{dans la base $e_i$}}} && (x, y \in E)
+   \end{align*}
+   Alors, on a:
+   \[
+       b(x, y) = X^{t}AY
+   \] 
+\end{prop}
+\begin{eg}
+    Repronnons l'exemple avec $b = \scalair{,}$ le produit scalair canonique dans  $\R^3$. Soit $X = \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix}$ et $Y = \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix} $ dans la base canonique de $\R^3$. Donc:
+    \begin{align*}
+        \scalair{x, y} = X^{t}AY &= \overbrace{(1, 2, -1)}^{X^{t}} \times \overbrace{\begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1 \end{pmatrix}}^{A} \times \overbrace{ \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix} }^{Y} \\
+                                 &= \underbrace{(1, 2, -1)}_{X} \times \underbrace{ \begin{pmatrix} 2 \\ 3\\ 1 \end{pmatrix} }_{A \times Y} \\
+                                 &= 1 \cdot 2 + 2 \cdot 3 + (-1) \cdot 1 = 2 + 6 - 1 = 7
+    \end{align*}
+\end{eg}
+\begin{TODO}
+   changement de base de la matrice d'une forme bilinéaire 
+\end{TODO}
 
 \section{Projections orthogonales}
 Soit $(E, \scalair{,})$ un espace euclidien,  $F \subseteq E$ un sous-espace vectoriel. Alors,  $E = F \oplus F^{\perp}$. Donc $\forall x \in E$ s'ecrit 
