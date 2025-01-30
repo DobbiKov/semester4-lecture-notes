@@ -31,10 +31,10 @@
        \iff &\|f(x)\| = \|x\|
    \end{align*}
 \end{preuve}
-\begin{prop}
+\begin{prop}\label{prop:isometrie-bijective}
    Soit $f$ une isométrie dans  $E$, alors:
    \begin{enumerate}
-       \item $f$ est bijective
+       \item $f$ est bijective 
        \item  $f$ présérve la distance euclidienne et les angles
    \end{enumerate}
 \end{prop}
@@ -57,4 +57,48 @@
                 \cos \theta_1 := \frac{\scalair{f(u), f(v)}}{\|f(u)\| \cdot \|f(v)\|} = \frac{\scalair{u, v}}{\|u\| \cdot \|v\|} = \cos \theta_2
            \] 
    \end{enumerate}
+\end{preuve}
+\begin{definition}
+    Soit $F$ un sous-espace vectoriel de  $E$, donc  $E = F \oplus F^{\perp}$ d'où  $\forall v \in E, \exists v_1 \in F, v_2 \in F^{\perp}$ tel que $v = v_1 + v_2$. On pose:
+    \[
+    s_F(v) = v_1 - v_2
+    \] 
+    et on appelle $s_F$ une symétrie orthogonale d'axe F.
+\end{definition}
+\begin{figure}[H]
+    \centering
+    \incfig{symetrie-orthogonale-axe-f}
+    \caption{Symétrie orthogonale d'axe $F$}
+    \label{fig:symetrie-orthogonale-axe-f}
+\end{figure}
+\begin{prop}
+   La symétrie orthogonale est une isométrie. 
+\end{prop}
+\begin{proof}
+   TODO ou pas besoin 
+\end{proof}
+\begin{prop}
+   $f$ est une isométrie si et seulement si elle transforme toute base orthonormée en une base orthonormée. 
+\end{prop}
+\begin{preuve}
+    Soit $f$ une isométrie, alors elle transforme toute base en une base car  $f$ est bijective par la prop. \ref{prop:isometrie-bijective}. 
+    \begin{itemize}
+        \item ($\implies$) Soit $\{e_i\}$ une base orthonormée, alors, on a:
+             \[
+                 \scalair{f(e_i), f(e_j)} = \scalair{e_i, e_j} = \delta_{i,j}
+            \] 
+            Donc, $\{f(e_i)\}$ est une base orthonormée.
+        \item ($\impliedby$) Supposons, qu'il existe une base orthonormée $\{e_i\}$ telle que  $\{f(e_i)\}$ est aussi une base orthonormée. De plus, soit  $x = x_1e_1 + \ldots x_ne_n$ et $y = y_1e_1 + \ldots + y_ne_n$ avec $x_i, y_i \in \R$
+            \par
+            Comme $\{e_i\}$ est orthonormée, alors on a:
+             \[
+                 \scalair{x, y} = x_1y_1 + \ldots + x_ny_n = \sum_{i=1}^{n} x_iy_i
+            \] 
+            D'autre part:
+            \begin{align*}
+                \scalair{f(x), f(y)} &= \scalair{\sum_{i=1}^{n} x_if(e_i), \sum_{i=1}^{n} y_if(e_i)} = \sum_{i,j = 1}^{n} x_iy_j\scalair{f(e_i), f(e_j)}\\
+                                     &= \sum_{i,j=1}^{n} x_iy_j\scalair{e_i, e_j} \underset{\text{car } f \text{ isométrie}}{=} = \sum_{i=1}^{n} x_iy_i \underset{\text{car } \{e_i\} \text{ orthonormée}} = \scalair{x, y}
+            \end{align*}
+            Donc $f$ est une isométrie.
+    \end{itemize}
 \end{preuve}

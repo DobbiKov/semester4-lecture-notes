@@ -1,4 +1,6 @@
 \documentclass[a4paper]{report}
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{refs.bib}
 \input{../preamble.tex}
 \title{Notes du cours d'Algebre Linéaire 2}
 
@@ -15,4 +17,8 @@
 \input{lec1.tex}
 \input{lec2.tex}
 \input{lec3.tex}
+
+\nocite{*}
+\printbibliography
+
 \end{document}
