@@ -102,3 +102,39 @@
             Donc $f$ est une isométrie.
     \end{itemize}
 \end{preuve}
+\begin{prop}
+    Si $\{e_i\}$ est une base orthonormée, $f$ une isométrie et  $A = M(f)_{e_i}$, alors  $A^{T}A = I = AA^{T}$.
+\end{prop}
+\begin{preuve}
+    Pour prouver cela, on va utiliser la proposition \ref{prop:prod-scal-par-matrice}. 
+    \par
+    Par définition de l'isométrie, on a:
+    \begin{align*}
+        &\scalair{f(x), f(y)} = \scalair{x, y} \quad \forall x, y \in E\\
+        \iff &\underbrace{ (AX)^{T}(AY) }_{\scalair{f(x), f(y)}} = X^TA^TAY = \underbrace{X^TY}_{\scalair{x, y}}\\
+        \iff &A^TA = I
+    \end{align*}
+\end{preuve}
+\subsection{Endomorphisme adjoint}
+\begin{prop}
+   Soit $E$ un espace euclidien et  $f \in End(E)$. Il existe un et un seul endomorphisme  $f^* \in E$ tel que
+   \[
+       \scalair{f(x), y} = \scalair{x, f^*(y)}, \quad \forall x, y \in E
+   \] 
+   $f^*$ est dit  \textbf{adjoint} de $f$.
+   \par
+   Si  $\{e_i\}$ est une base orthonormée et  $A = M(f)_{e_i}$, alors la matrice $A^* = M(f^*)_{e_i}$ est la transposée de $A$, i.e  $A^* = A^T$
+\end{prop}
+\begin{preuve}
+    Encore, pour la preuve, on va utiliser la proposition \ref{prop:prod-scal-par-matrice} qui est très utile, donc je vous conseil maîtriser ce concept.
+    \par
+    Soit $\{e_i\}$ une base orthonormée de $E$ et notons
+     \[
+    A = M(f)_{e_i} \quad A^* = M(f^*)_{e_i} \quad X = M(x)_{e_i} \quad Y = M(y)_{e_i}
+    \] 
+    Comme on est dans une base orthonormée, alors l'énoncé s'ecrit:
+    \[
+        \underbrace{(AX)^TY}_{\scalair{f(x),y}} = X^TA^TY = \underbrace{X^T(A^*Y)}_{\scalair{x, f^*(y)}} \quad \forall X, Y \in \mathcal{M}_{n, 1}(\R)
+    \] 
+    ce qui implique que $A^* = A$ et, de plus, démontre l'unicité de tel adjoint.
+\end{preuve}
