@@ -77,7 +77,7 @@
 \begin{proof}
    TODO ou pas besoin 
 \end{proof}
-\begin{prop}
+\begin{prop}\label{prop:isometrie-ssi-transforme-bon-en-bon}
    $f$ est une isométrie si et seulement si elle transforme toute base orthonormée en une base orthonormée. 
 \end{prop}
 \begin{preuve}
@@ -102,7 +102,7 @@
             Donc $f$ est une isométrie.
     \end{itemize}
 \end{preuve}
-\begin{prop}
+\begin{prop}\label{prop:isometrie-ata-eg-i}
     Si $\{e_i\}$ est une base orthonormée, $f$ une isométrie et  $A = M(f)_{e_i}$, alors  $A^{T}A = I = AA^{T}$.
 \end{prop}
 \begin{preuve}
@@ -115,6 +115,20 @@
         \iff &A^TA = I
     \end{align*}
 \end{preuve}
+\begin{prop}
+   Si $A$ est une matrice de l'isométrie dans une base orthonormée, alors  $det(A) = \pm 1$ 
+\end{prop}
+\begin{preuve}
+    Par la proposition \ref{prop:isometrie-ata-eg-i}, on a: $A^TA = I$, d'où:
+     \begin{align*}
+         det(A^TA) = det(I) = 1 \implies& det(A)^2 = 1 \quad \text{ (car }  det(A^T) = det(A) \text{)}\\
+                                \implies& det(A) = \pm 1
+    \end{align*}
+\end{preuve}
+\begin{intuition}
+   Une isométrie fait une rotation ou une réflexion, elle concerve les ditance, donc l'air (ou volume) d'une figure qui est construit par la base de cette transfomation est égale à $1$. 
+\end{intuition}
+
 \subsection{Endomorphisme adjoint}
 \begin{prop}
    Soit $E$ un espace euclidien et  $f \in End(E)$. Il existe un et un seul endomorphisme  $f^* \in E$ tel que
@@ -137,4 +151,57 @@
         \underbrace{(AX)^TY}_{\scalair{f(x),y}} = X^TA^TY = \underbrace{X^T(A^*Y)}_{\scalair{x, f^*(y)}} \quad \forall X, Y \in \mathcal{M}_{n, 1}(\R)
     \] 
     ce qui implique que $A^* = A$ et, de plus, démontre l'unicité de tel adjoint.
+\end{preuve}
+
+
+\section{Groupes orthogonaux}
+Rappel:
+\begin{definition}\label{def:general-linear-group}
+    Un groupe linéaire général:
+    \[
+        GL(n, \R) = \{A \in \mathcal{M}_{n}(\R) \mid det(A) \neq 0\}
+    \] 
+    est un groupe de toutes transfomrations linéaires (matrices carrées) qui sont invérsibles (car $det(A) \neq 0$).
+\end{definition}
+
+\begin{definition} \textbf{Groupe orthogonal}:
+    L'ensemble:
+    \[
+        O(n, \R) := \{A \in \mathcal{M}_{n}(\R) \mid A^TA = I\} = \{A \in \mathcal{M}_{n}(\R) \mid AA^T = I\}
+    \] 
+    vérifie les propriétés suivantes:
+    \begin{enumerate}
+        \item si $A, B \in O(n, \R)$, donc $AB \in O(n, \R)$
+        \item $I \in O(n, \R)$
+        \item si $A \in O(n, \R)$ alors $A^{-1} \in O(n, \R)$
+    \end{enumerate}
+    En particulier, $O(n, \R)$ est un sous-groupe de $GL(n, \R)$ (groupe des matrices inversibles) (voir la definition \ref{def:general-linear-group}).
+\end{definition}
+\begin{intuition}
+    La signification des matrices orthogonales est claire: elles représentent les matrices des transformations orthogonales (isométrie) dans \textbf{une base orthonormée} (voir defn \ref{def:orthogonal}). 
+\end{intuition}
+On peut remarquer que si $det(A) = 1$, cette isométrie représente une rotation, de plus, on a la définition suivante:
+ \begin{definition}
+    L'ensemble des matrices orthogonales directes (i.e telles que $det(A) = 1$)
+    \[
+    SO(n, \R) = \{A \in O(n, \R) \mid det(A) = 1 \}
+    \] 
+    est un groupe, dit  \textbf{groupe spécial orthogonal}.
+\end{definition}
+\begin{eg}
+   La matrice
+   \[
+       A = \frac{1}{3} \begin{pmatrix} 2 & -1 & 2\\ 2 & 2 & -1\\ -1 & 2 & 2 \end{pmatrix} 
+   \] 
+   est orthogonale. On peut vérifier que $A^TA = I$, ou, il suffit de montrer que  $c_1, c_2, c_3$ est une famille orthonormée, i.e:
+   \[
+       \|c_i\|^2 = 1 \quad \text{ et } \quad \scalair{c_i, c_j} = 0 \quad \text{ si } i \neq j
+   \] 
+   On peut interpreter $A$ comme une matrice d'une transformation $f$ dans la base canonique $\{e_i\}$, donc on a bien:  $c_i = f(e_i)$, d'après la proposition \ref{prop:isometrie-ssi-transforme-bon-en-bon} $f$ est orthogonale. De plus, on voit que  $det(A) = +1$. En conséquent,  $f$ est une transformation orthogonale directe.
+\end{eg}
+\begin{prop}
+   La matrice de passage d'une base orthonormée à une base orthonormée est une matrice orthogonale. 
+\end{prop}
+\begin{preuve}
+   Je donne de l'intuition. Matrice de passage transforme une base en autre base, elle passe les vecteurs de la base, alors elle transforme la base de la BON en vecteurs de la base de la BON, donc, d'après la proposition \ref{prop:isometrie-ssi-transforme-bon-en-bon}, cette matrice est orthogonale.
 \end{preuve}

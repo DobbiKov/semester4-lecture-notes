@@ -65,7 +65,7 @@ Produit scalaire:
     \] 
     la norme (ou longeur) de $X$. (Il est bien définie car $<., .>$ est toujours positif)
 \end{property}
-\begin{lemma} inégalité de Cauchy-Schwarz
+\begin{lemma}\label{lemma:inegalite-cauchy-schwarz} inégalité de Cauchy-Schwarz
    On a
    \[
    |<u, v>| \le \|u\| \cdot \|v\| \qquad \forall u, v \in E
@@ -168,7 +168,7 @@ La définition suivante sera étudiée dans le cours d'analyse:
 \end{explanation}
 \section{Orthogonalité}
 Soit $E$ un  $\R$-espace vectoriel et  $< , >$ un produit scalaire sur  $E$.
- \begin{definition}
+\begin{definition}\label{def:orthogonal}
      $u, v \in E$ sont dits \underline{orthogonaux} si  $<u, v> = 0$. On note  $u \perp v$
       \begin{itemize}
          \item Deux sous-ensembles $A, B$ de  $E$ sont orthogonaux si:
@@ -179,7 +179,7 @@ Soit $E$ un  $\R$-espace vectoriel et  $< , >$ un produit scalaire sur  $E$.
               \[
                   A^{\perp} = \{ u \in E \mid <u, v> = 0 \quad \forall v \in A \}
              \] 
-         \item Une famille $(v_1, \ldots, v_n)$ de vecteurs de $E$ est dite orthogonale si  $\forall i \neq j, v_i \perp v_j$. Elle est dite orthogonale si elle est orthogonale et si de plus $\|v_i\| = 1 \forall i \in \{ 1, \ldots, n \}$
+         \item Une famille $(v_1, \ldots, v_n)$ de vecteurs de $E$ est dite orthogonale si  $\forall i \neq j, v_i \perp v_j$. Elle est dite orthonomée si elle est orthogonale et de plus $\|v_i\| = 1 \quad \forall i \in \{ 1, \ldots, n \}$
      \end{itemize}
 \end{definition}
 \begin{eg}

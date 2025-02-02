@@ -1,4 +1,6 @@
 \documentclass[a4paper]{report}
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{refs.bib}
 \input{../preamble.tex}
 \title{Notes du cours d'Analyse et Géometrie\\\vspace{1cm}
 \Large Professeur: Christian Gérard \normalsize}
@@ -27,5 +29,10 @@ Chercher dans google "page personnelle cristiang gérard Orsay", puis MDD251
 \input{lec2.tex}
 \input{lec3.tex}
 \input{my_notes_1.tex}
+
+\nocite{*}
+\printbibliography
+
+
 \end{document}
 

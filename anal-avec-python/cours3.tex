@@ -1,4 +1,4 @@
-\chapter{cours3:\\Interpolation polynomiale}
+\chapter{Interpolation polynomiale}
 On va essayer de construire des polynôms qui passent par un ensemble (nuages) de points donnés.
 
 Si ces points sont les valeurs d'une fonction, on amerait:
@@ -19,13 +19,13 @@ Si ces points sont les valeurs d'une fonction, on amerait:
         \end{itemize}
     \item Approche 2: 
         \begin{itemize}
-            \item polynôme de degré 1
+            \item polynôme de degré 2
             \item approximation quadratique
         \end{itemize}
     \item Approche 3: prise en compre d'Historique
 \end{enumerate}
 
-\section*{Rappels sur les nuts numériques\\
+\section{Rappels sur les nuts numériques\\
           Vitesse (ordre) de convergence\\
           valeur ajoutée par itérations
       }
@@ -80,7 +80,7 @@ Il est question de comparer $2$ suites qui ont la même vitesse de convergence.
     Si $|x_n - x^*| = 4 \cdot 10^{-8} = 0.\underbrace{0000000}_{7 \text{ chiffres}}4$. On dira que $x_n$ et  $x^*$ ont 7 chiffres exactes apres la virgule.
     \begin{align*}
     &\log_{10} |x_n - x^*| = \log_{10}4 - 8\log_{10}(10)\\
-    &\frac{\log|x_n - x^*}{\log 10} = \frac{\log 4}{\log 10} - 8
+    &\frac{\log|x_n - x^*|}{\log 10} = \frac{\log 4}{\log 10} - 8
     \end{align*}
     i.e $d_n = - \log_{10} |x_n - x^*|$ mesure de nombre de chiffres décimales entre $x_n$ et  $x^*$ qui coincident.
 \end{remark}
