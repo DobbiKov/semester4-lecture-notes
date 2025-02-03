@@ -1,0 +1,323 @@
+\section{Interpolation: définition-motivation-exemples}
+\subsection{Définition}
+\begin{definition}
+    Soient $(x_i, y_i)_{i = \{1, \ldots, N\}}$ un nuage de points(exemple un ensemble discret de point du graphe d'une fonction). Interpoler ce nuage de points correspond à chercher un polynôme de degré $N-1$, qui passe par chacun de ces points.
+\end{definition}
+\begin{figure}[H]
+    \centering
+    \incfig{definition-example}
+    \caption{L'exemple visuel de la définition}
+    \label{fig:definition-example}
+\end{figure}
+Questions:
+\begin{enumerate}
+    \item Comment le construire?
+    \item $P_{N-1} \in \R_{N-1}[X]$
+    \item $P_{N-1}(x_i) = y_i$
+\end{enumerate}
+
+\subsection{Motivations}
+\begin{itemize}
+    \item La solution d'un problème est fournie par une formule représentative: Noyau de la chaleur (i.e convolution) est un cherche la solution en un nombre de points.
+    \begin{itemize}
+        \item On approche alors la fonction par un polynôme: i.e chercher le polynôme de degré "bas" proche de la fonction
+    \end{itemize}
+    \item La solution d'un problème n'est connue qu'à table des valeurs en un nombre fini de points et on souhaite l'évaluer partout.
+        \begin{itemize}
+            \item l'intérpolation
+        \end{itemize}
+    \item On peut utiliser l'intérpolation dans 
+        \begin{itemize}
+            \item l'intégration numérique
+            \item la résolution numérique des EDO
+            \item la visualisation scientifique
+        \end{itemize}
+\end{itemize}
+
+\begin{definition}
+    Un tel polynôme est appelé \textbf{polynôme intérpolateur de lagrange} de degré $N-1$ de ces points.
+\end{definition}
+\subsection{exemples d'intérpolation}
+\begin{theorem}
+    Polynôme intérpolateur de degré 1.
+    \par
+    Soient $(x_1, y_1), \, (x_2, y_2)$ 2 points distincts de $\R^2$
+    \begin{itemize}
+        \item Il existe une unique droite passant par les 2 points.
+            \[
+                (x, y) \in \mathcal{D} \iff (x-x_1)(y_2 - y_1) - (y - y_1)(x_2 - x_1) = 0
+            \] 
+        \item Si de plus, $x_1 \neq  x_2$, il existe un unique polynôme de degré $1$ (i.e $P_1 \in \R_1[X]$) tq:
+            \[
+                (x, y) \in \mathcal{D} \iff y = P(x) \text{ avec } P_1 = \frac{(x - x_1)y_1 - (x - x_2)y_2}{x_2 - x_1}
+            \] 
+    \end{itemize}
+\end{theorem}
+\begin{preuve}
+    \begin{itemize}
+        \item 
+    \begin{align*}
+        M \begin{pmatrix} x \\ y \end{pmatrix} \in \mathcal{D} &\iff \vec{MM_1} / \vec{M_1M_2}\\
+                                                               &\iff det(\vec{MM_1}, \vec{M_1M_2}) = 0\\
+                                                               &\iff \begin{vmatrix} x - x_1 & x_2 - x_1 \\ y - y_1 & y_2 - y_1 \end{vmatrix} = 0\\
+                                                               &\iff (x - x_1)(y_2 - y_1) - (y - y_1)(x_2 - x_1) = 0
+    \end{align*}
+\item Si $x_1 \neq x_2$
+    \begin{align*}
+        M \in \mathcal{D} &\iff y - y_1 = \frac{(x - x_1)(y_2 - y_1)}{x_2 - x_1}\\
+                          &\iff y = P_1(X)
+    \end{align*}
+\end{itemize}
+\end{preuve}
+\begin{remark}
+    On a l'écriture équivalente de $P_1$:
+   \begin{itemize}
+       \item 
+           \[
+               P_1 \frac{x_0y_1 - x_1y_2}{x_2 - x_1} + X \frac{y_2 - y_1}{x_2 - x_1} \equiv a_0 + a_1X
+           \] 
+           C'est l'écriture dans la base $(1, X)$ de  $\R_1[X]$
+       \item 
+           \[
+               P_1 = \underbrace{ \frac{x - x_2}{x_1 - x_2} }_{l_1}y_1 + \underbrace{ \frac{x - x_1}{x_2 - x_1} }_{l_2}y_2
+           \] 
+           C'est l'écriture dans la base $(l_1, l_2)$ de $\R_1[X]$
+           \par
+           RQ:
+           \[
+           l_1(x_1) = 1 \quad l_1(x_2) = 0 \quad l_2(x_1) = 0 \quad l_2(x_2) = 1
+           \] 
+           (base de lagrange)
+        \item 
+            \[
+            P_1 = y_1 + \frac{y_2 - y_1}{x_2 - x_1}(x - x_1)
+            \] 
+            C'est l'écriture dans la base $(1, x - x_1)$ de $\R_1[X]$ (base de newton)
+   \end{itemize} 
+\end{remark}
+\begin{eg}
+   Méthode de calcul employle 
+   \par
+   Chercher le polynôme interpolateur de lagrange aux points $(x_1, y_1), (x_2, y_2), (x_3, y_3)$
+   \begin{itemize}
+       \item \underline{Méthode 1}: $x_1 \neq x_2 \neq x_3$ \par
+           $P_2$ est un polynôme de degré 2
+           \[
+           P_2 = a_0 + a_1x + a_2x^2
+           \] 
+           \begin{lemma}
+              \[
+              P_2(x_1) = y_1, \quad P_2(x_2) = y_2 \qquad \text{i.e } a_0 + a_1x_1 + a_2x_1^2 = y_1
+              \]  
+           \end{lemma}
+           \[
+               \underbrace{
+                   \begin{bmatrix} 
+                       1 & x_1 & x_1^2\\
+                       1 & x_2 & x_2^2\\
+                       1 & x_3 & x_3^2
+                   \end{bmatrix} 
+               }_{M}\underbrace{\begin{bmatrix} a_0 \\ a_1 \\ a_2 \end{bmatrix} }_{} = \underbrace{\begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix} }_{} \implies \begin{bmatrix} a_0 \\ a_1 \\ a_2 \end{bmatrix} = \underbrace{M^{-1}}_{???}\begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix} 
+           \] 
+           \begin{remark}
+              Par 2 points 
+              \[
+                  M = \begin{bmatrix} 1 & x_1 \\ 1 & x_2 \end{bmatrix} \text{ et } M^{-1} = \frac{1}{x_2 - x_1}\begin{bmatrix} x_2 & -x_1\\ -1 & 1 \end{bmatrix} 
+              \] 
+           \end{remark}
+        \item \underline{Méthode 2}:\par
+            \[
+            P_2 = a_0 + a_1(x - x_1) + a_2(x - x_1)(x - x_2)
+            \] 
+            \begin{align*}
+                \underset{i = 1,2,3}{P_2(x_i) = y_i} \implies &\begin{cases}
+                    a_0 &=y_1\\
+                    a_0 + a_1(x_2 - x_1) &= y_2\\
+                    a_0 + a_1(x_3 - x_1) + a_2(x_3 - x_1)(x_3 - x_2) &= y_3
+                \end{cases}\\
+                                                        \implies &\begin{cases}
+                                                                  a_0 &= y_1\\
+                                                                  a_1 &= \frac{y_2 - y_1}{x_2 - x_1}\\
+                                                                  a_2 &= \frac{y_3 - y_1 - \frac{y_2 - y_1}{x_2 - x_1}(x_3 - x_1)}{(x_3 - x_1)(x_3 - x_2)}
+                                                              \end{cases}
+            \end{align*}
+            \begin{remark}
+               On a:
+               \[
+               a_2 = \frac{\frac{y_2 - y_1}{x_2 - x_1} - \frac{y_3 - y_2}{x_3 - x_2}}{x_3 - x_1}
+               \] 
+               càd 
+               \[
+               P_3 = y_1 + \frac{y_2 - y_1}{x_2 - x_1}(x - x_1) + \frac{\frac{y_2 - y_1}{x_2 - x_1} - \frac{y_3 - y_2}{x_3 - x_2}}{x_3 - x_2}(x-x_1)(x-x_2)
+               \] 
+               \begin{center}
+                   \begin{tabular}{| c | c | c | c |}
+                       \hline
+                   $x_1$ & $y_1 =: a_3$ &  &  \\
+                       \hline
+                   $x_2$ & $y_2$ & $\frac{y_2 - y_1}{x_2 - x_1} =: a_1$ & \\
+                   \hline
+                   $x_3$ & $y_3$ & $\frac{y_3 - y_2}{x_3 - x_2}$ & $\frac{\frac{y_2 - y_1}{x_2 - x_1} - \frac{y_3 - y_2}{x_3 - x_2}}{x_3 - x_1} =: a_2$\\
+                   \hline
+                   \end{tabular}
+               \end{center}
+            \end{remark}
+        \item \underline{Méthode 3}:
+            \par
+            \[
+            P_3 = \frac{(x - x_2)(x - x_3)}{(x_1 - x_2)(x_1 - x_3)}y_1 + \frac{(x - x_1)(x - x_3)}{(x_2 - x_1)(x_2 - x_3)}y_2 + \frac{(x - x_1)(x - x_2)}{(x_3 - x_1)(x_3 - x_2)}y_3 = \sum_{i=1}^{3} \underbrace{\left( \prod_{j=1}^{3} \frac{x - x_j}{x_i - x_j}  \right)}_{l_i(x)} y_i
+            \] 
+            \begin{remark}
+               $(x_1, y_1), (x_2, y_2)$ 
+               \[
+               y = \frac{x - x_2}{x_1 - x_2}y_1 + \frac{x - x_1}{x_2 - x_1}y_2
+               \] 
+            \end{remark}
+   \end{itemize}
+\end{eg}
+\section{Polynôme interpolateur de lagrange}
+\subsection{Définition et propriétés}
+\begin{theorem}
+    (existence et utilité) \par
+    Soit $x_1, \ldots, x_n$ des réels 2 à 2 distincts et $y_1, \ldots, y_n$ des rééls quelconques: Il existe \underline{un unique} polynôme $P \in \R_{n-1}[X]$ (i.e de degré $n-1$) tel que $p(x_i) = y_i, \, i = 1, \ldots, n$
+    \par
+    On dit que $P$ est le polynôme interpolateur de lagrange aux points  $(x_1, y_1), \, \ldots, \, (x_n, y_n)$
+\end{theorem}
+\begin{preuve}
+   Soit \begin{align*}
+       \Phi: \R_{n-1}[X] &\longrightarrow \R^{n-1} \\
+       P &\longmapsto \Phi(P) = (P(x_1), \ldots, P(x_n))
+   .\end{align*} 
+   on a:
+   \begin{itemize}
+       \item $\Phi$ linéaire
+       \item  $\Phi$ injective
+   \end{itemize}
+   En effet, $\Phi(P) = 0 \iff P(x_i) = 0 \iff P \equiv 0$ car $deg(P) \le n-1$.
+   D'où $\Phi$ isomorphisme d'espace vectoriel et la surjection assure le résultat.
+\end{preuve}
+\begin{definition}
+    Si $f$ est continue sur  $[a, b] \to \R$, $x_1, \ldots, x_n \in [a, b]$ 2 à 2 distincts, alors, l'unique $P \in \R_{n-1}[X]$ tq $P(x_i) = f(x_i) \, i = 1, \ldots, n$ est appelé \underline{polynôme d'interpolation de lagrange} de $f$ aux points  $x_1, \ldots, x_n$
+\end{definition}
+\subsection{Estiomation d'erreur}
+\begin{theorem}
+    l'erreur  \par
+    Soient
+    \begin{itemize}
+        \item $a < b$  $f: [a, b] \to \R$ continue
+        \item $x_1, \ldots, x_n$ 2 à 2 distincts de $[a, b]$
+        \item  $P$ polyôme d'interpolation de lagrange de  $f$ aux points  $x_i$
+    \end{itemize}
+    Si $f$ est $n$ fois dérivable sur  $]a, b[$, alors, pour tout  $a \in [a, b]$, il existe  $t \in ]a, b[$ tq 
+     \[
+         f(x) - P(x) = \omega_n(x)\frac{f^{(n)}(t)}{n!}
+    \] 
+    où $\omega_n(x) = (x - x_1)\ldots(x - x_n)$
+\end{theorem}
+\begin{corollary}
+    Si $f^{(n)}$ est bornée par  $M$ sur  $]a, b[$, alors  $\forall x \in [a, b]$ 
+    \[
+    |f(x) - P(x)| \le \frac{M}{n!}|\omega_n(x)| \le \frac{M}{n!}(b - a)^n
+    \] 
+\end{corollary}
+\begin{preuve}
+    à faire
+\end{preuve}
+
+\subsection{Implémentation avec python}
+\begin{lstlisting}
+   from scipy.interpolite import lagrange
+   x = np.array([x_1, x_2, x_3])
+   y = np.array([y_1, y_2, y_3])
+   p = lagrange(x, y)
+   print(p) # affiche le polynome
+   print(p(3)) # collable
+\end{lstlisting}
+
+\section{Construction des polynôme d'intérpolation de lagrange}
+$x_0, \ldots, x_{n-1}$ 2 à 2 distincts
+\subsection{Interpolation dans la base canonique (Vandermonde)}
+\subsubsection{Construction}
+\[
+P = \sum_{i=1}^{n-1} a_ix^i
+\] 
+\[
+P(x_i) = y_i, \, i = 0, \ldots, n-1
+\] 
+\[
+    \underbrace{
+        \begin{bmatrix} 
+            1 & x_0 & \ldots & x_0^{n-1}\\
+            1 & x_1 & \ldots & x_1^{n-1}\\
+            \ldots & \ldots & \ldots & \ldots\\
+            1 & x_{n-1} & \ldots & x_{n-1}^{n-1}
+        \end{bmatrix} 
+    }_{V(x_0, \ldots, x_{n-1})} \underbrace{\begin{bmatrix} a_0 \\ \ldots \\ a_{n-1} \end{bmatrix} }_{a} 
+    =
+    \underbrace{\begin{bmatrix} y_1 \\ \ldots \\ y_{n-1} \end{bmatrix} }_{b}
+\] 
+Matrice de Vandermonde
+\begin{itemize}
+    \item elle pleine
+    \item malconditionnée
+\end{itemize}
+\begin{lstlisting}
+def VDM_Mat(x):
+    x_n = np.reshape(x, (x.size, 1))
+    return x_n ** np.arange(x.size)
+\end{lstlisting}
+\begin{lstlisting}
+def VDM_Poly(x, y):
+    M = VDM_Mat(x)
+    a = np.linalg.solve(M, y)
+    return a
+\end{lstlisting}
+\subsubsection{Evaluation efficace de $P$ algorithme de Horner}
+\begin{prop}
+   Si $X$ est un réel et  $Q$ est le polynôme défini par 
+   \[
+       Q(X) = a_0X^n + a_1X^{n-1} + \ldots + a_{n-1}X + a_n
+   \] 
+   alors la suite
+   \[
+   \begin{cases}
+       q_0 = a_0\\
+       q_k = q_{k-1}x + a_k, \, k=1,\ldots,n
+   \end{cases}
+   \] 
+   vérfiie $q_n = Q(x)$
+\end{prop}
+\begin{preuve}
+    (laissé exo)
+    \[
+    Q(X) = X^2 + 2X + 1 \equiv (X+2)X + 1
+    \] 
+\end{preuve}
+\begin{lstlisting}
+def Horner(P, xx): 
+   y = 0
+   for a in P:
+        y = y * xx + a
+   return y
+\end{lstlisting}
+\begin{lstlisting}
+def IntuP_VDM(x, y, xx):
+    a = VDM_Poly(x, y)
+    yy = Horner(a[::-1], xx)
+    return yy
+\end{lstlisting}
+\subsection{Interpolation dans la base duale: Formule de lagrange et points barycentrique}
+\subsubsection{Construction}
+Idée prendre pour base de $\R_{n-1}[X]$ l'image réciproque de la base canonique de $\R^{n-1}$ pour $\Phi$ 
+\[
+L_i(x_j) = \begin{cases}
+    1 \text{ si } i \neq j\\
+    0 \text{ sinon}
+\end{cases}
+\] 
+\[
+    L_i(x) = \frac{\prod_{j\neq i \, j = 0}^{n-1}(x - x_j) }{\prod_{j = 0 \, j \neq i}^{n-1} (x_i - x_j) } = \prod_{j = 1 \, j \neq i}^{n-1} \frac{x - x_j}{x_i - x_j} 
+\] 
+\[
+P(X) = \sum_{i=0}^{n-1} y_iL_i(X)
+\] 
