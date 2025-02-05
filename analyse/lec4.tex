@@ -1,0 +1,295 @@
+\section{Suites de Cauchy}
+\begin{definition}
+    $(x_n)_{n \in \N}$ suite dans $E$ est de \underline{Cauchy} si:
+     \[
+    \forall \epsilon > 0 \, \exists N(\epsilon) \in \N \text{ tel que } \forall n, p \ge N(\epsilon), d(x_n, x_p) \le \epsilon
+    \] 
+\end{definition}
+\begin{intuition}
+   Une suite de Cauchy c'est comme on mesure un point et on le localise, i.e:
+   \begin{enumerate}
+       \item On dit qu'il est entre $0$ et  $1$.
+       \item Ensuite, on precise plus et on dit qu'il est entre  $0.5$ et  $0.6$.
+       \item Puis, entre  $0.55$ et  $0.56$
+   \end{enumerate}
+   On peut infiniment augmenter le niveau de précision. C'est ça l'idée d'une suite de Cauchy.
+\end{intuition}
+\begin{prop}
+   \begin{enumerate}
+       \item Toute suite de Cauchy est bornée.
+        \item Toute suite convergente est de Cauchy
+   \end{enumerate} 
+\end{prop}
+\begin{preuve}
+   \begin{enumerate}
+       \item voir poly
+       \item Soit $(x_n)$ une suite avec  $\lim_{n \to \infty} x_n = x$ avec $x \in E$.
+           \begin{itemize}
+               \item 
+                   \underline{Hyp:}  $\frac{\epsilon}{2} > 0 \, \exists N(\frac{\epsilon}{2}) \in \N \text{ tel que } \forall n \ge N(\frac{\epsilon}{2}), d(x_n, x) \le \epsilon/2$
+                \item 
+                    \underline{À montrer:} $\epsilon > 0 \, \exists M(\epsilon) \in \N \text{ tel que } \forall n, p \ge M(\epsilon), d(x_n, x_p) \le \epsilon$
+           \end{itemize}
+           \[
+               d(x_n, x_p) < d(x_n, x) + d(x, x_p) \text{ si } n, p \ge  N(\frac{\epsilon}{2}) \, d(x_n, x_p) \le 2 \frac{\epsilon}{2} = \epsilon
+           \] 
+   \end{enumerate} 
+\end{preuve}
+\begin{definition}
+    $(E, d)$ est \underline{complet} si toute suite de cauchy dans  $E$ est convergente.
+\end{definition}
+\begin{definition}
+    Un éspace métrique $(E, d)$ est \textbf{complet} si toute suite  $(x_n)_{n \in \N}$ d'éléments de  $E$ converge vers une limite  $x$ qui appartient aussi à  $E$.
+\end{definition}
+\begin{eg}
+    Un éspace métrique $(]0, 1], d)$ avec $d$ une distance euclidienne n'est pas complet, car  soit une suite: $x_n = \frac{1}{n}$ dont la limite est $0$. Par contre,  $0 \not\in ]0, 1]$. Donc cet éspace n'est pas complet. 
+\end{eg}
+\begin{figure}[h]
+   \centering 
+   \begin{tikzpicture}
+       \draw[->] (-1, 0) -- (2, 0); 
+       \node[below] (_) at (2,0){$x$};
+
+       \node (_) at (0,0){]};
+       \node[below] (_) at (0,-0.3){$0$};
+       \node (_) at (1,0){]};
+       \node[below] (_) at (1,-0.3){$1$};
+       \draw[color=red] (0,0)--(1,0);
+   \end{tikzpicture}
+   \caption{$(]0, 1], d)$ n'est pas complet}
+\end{figure}
+\begin{eg}
+   Un éspace $(\Q, d)$ n'est pas complet. Car on peut prendre une suite  $x_n$ tendant vers  $\sqrt{2} \not\in \Q$.
+\end{eg}
+
+\begin{figure}[H]
+    \centering
+    \incfig{q_not_complete}
+    \caption{$\Q$ pas complet}
+    \label{fig:q_not_complete}
+\end{figure}
+\begin{prop}
+   $\R^d$ muni de la distance usuelle est complet. 
+\end{prop}
+\begin{preuve}
+   \[
+   X_n = (x_{1,n}, \ldots, x_{d,n})
+   \]  
+   \[
+   |x_i - y_i| \le d(X, Y) = \|X - Y\|_2 \quad \forall 1 \le i \le d
+   \] 
+   les suites réelles $(x_{i,n})_{n \in \N}$ sont de Cauchy si $(X_n)$ est de Cauchy.
+\end{preuve}
+\begin{property}
+   $\R$ est complet 
+\end{property}
+\begin{preuve}
+    (Suit de la propriété de la borne supérieure) 
+    \par
+    Il existe $x_i \in \R$ avec $1 \le i \le d$ tels que $|x_{i,n} - x_{i}| \xrightarrow[n \to \infty]{} 0$
+    \[
+        d(X, Y) \le \sqrt{d} \underset{1 \le i \le d}{max} |x_i - y_i| 
+    \] 
+    donc $X_n \xrightarrow[n \to \infty]{} X$, $X = (x_1, \ldots, x_d)$
+\end{preuve}
+\section{Sous-suites}
+\begin{definition}
+    Soit $(x_n)_{n \in \N}$ une suite dans $E$. Une suite  
+    \[
+        (y_n)_{n \in \N} \text{ avec } y_n = x_{\phi(n)}
+    \] 
+    où $\phi: \N \to \N$ est \underline{strictement croissante} est appelée \textbf{sous-suite} de la suite $(x_n)$.
+\end{definition}
+\begin{eg}
+    Soit une application $\phi: \N \to \N$ telle que $\phi(n) = 2n$. Donc  $(x_n)_{\phi(n)}$ est une sous-suite de  $(x_n)_{n \in \N}$ et:
+    \[
+        (x_n)_{\phi(n)} = \{x_0, x_2, x_4, \ldots\}
+    \] 
+\end{eg}
+\begin{prop}
+   \begin{enumerate}
+       \item Toute sous-suite d'une suite convergente converge vers la limite de cette suite.
+           \par
+           Cela signifie que, $\forall (x_n)_{n \in \N}$ tq $\exists x \in E, \lim_{n \to \infty} x_n = x$
+           \[
+               \forall \phi: \N \to \N \text{ strictement croissante}, \lim_{n \to \infty} x_{\phi(n)} = x
+           \] 
+        \item Si $(x_n)$ est de Cauchy et admet une sous-suite qui converge vers  $X$, alors  $(x_n)$ converge vers  $x$.
+   \end{enumerate} 
+\end{prop}
+\begin{preuve}
+   \begin{enumerate}
+       \item Soit $(x_n)$ avec  $\lim x_n = x$
+            \[
+                \forall \epsilon > 0 \, \exists M(\epsilon) \text{ tq si } n \ge N(\epsilon), d(x_n ,x) \le \epsilon 
+           \] 
+           Soit $y_n = x_{\phi(n)}$ une sous-suite.
+           \begin{itemize}
+               \item \underline{But:} Soit $\epsilon > 0$, trouver $N(\epsilon)$ tq si  $n \ge  N(\epsilon), \, d(\underbrace{y_n}_{:= x_{\phi(n)}}, x) \le \epsilon$
+           \end{itemize}
+           Je choisis $N(\epsilon)$ tel que si  $n \ge N(\epsilon)$ alors $\phi(n) \ge M(\epsilon)$, donc $d(y_n, x) d(x_{\phi(n)}, x) \le  \epsilon$. C'est possible car $\phi(n) \xrightarrow[n \to \infty]{} \infty$, $N(\epsilon) = M(\epsilon)$ 
+        \item 
+            \begin{itemize}
+                \item  \underline{Hyp1:} $\forall \epsilon > 0 \, \exists M(\epsilon)$ tq si $n, p \ge M(\epsilon)$ $d(x_n, x_p) \le \epsilon$
+                \item  \underline{Hyp2:} $\forall \epsilon > 0 \, \exists P(\epsilon)$ tq si $p \ge P(\epsilon), d(y_p, x) \le \epsilon$, $d(y_p, x) = d(x_{\phi(p)}, x)$
+            \end{itemize}
+            \begin{align*}
+                d(x_n, x) \le d(x_n, x_{\phi(p)}) + d(x_{\phi(p)}, x) \quad \text{par l'inégalité triangulaire}
+            \end{align*}
+            \begin{align*}
+                d(x_n, x_{\phi(p)}) \le \epsilon \text{ si } n \ge M(\epsilon) \text{ et } \phi(p) \ge M(\epsilon)
+            \end{align*}
+            \begin{align*}
+                d(x_{\phi(p)}, x) \le \epsilon \text{ si } p \ge P(\epsilon)
+            \end{align*}
+            Si $n \ge M(\epsilon)$, je choisis $p$ tel que  $\phi(p) \ge  M(\epsilon)$ et $p \ge P(\epsilon)$. Je fixe ce $p$!
+             \[
+            \text{si } n \ge M(\epsilon) \text{ alors } d(x_n, x) \le 2\epsilon
+            \] 
+   \end{enumerate} 
+\end{preuve}
+
+\section{Procédé de construction de l'intérieur et l'adhérence}
+J'ai $A \subset \R$ ou $\R^2$ (ou $\R^3$). Je dois trouver $Int(A)$ et  $Adh(A)$
+ \begin{enumerate}
+    \item Je dessine $A$ sur une feuille
+    \item Je pense que  $Int(A) = C$ ($C$ dit être inclu dans  $A$!)
+         \begin{enumerate}
+             \item Je montre que \underline{$C$ est ouvert} (facile), donc
+                 \[
+                 C \subset Int(A)
+                 \] 
+            \item Je montre que $Int(A) \subset C$: je prends $X \in A, X \not\in C$, je montre que $X \not\in Int(A)$
+                Je construit une suite $(X_n)$ avec  $X_n \in A$ mais  $X_n \to X$.
+         \end{enumerate}
+    \item Je pense que $Adh(A) = B$ (il faut que $A \subset B$)
+        \begin{enumerate}
+            \item Je montre que $B$ est fermé (facile)
+                \[
+                \text{donc } Adh(A) \subset B
+                \] 
+            \item  On montre que $B \subset Adh(A)$: On fixe $X \in B$, on cherche une suite  $(X_n)$ avec  $X_n \in A$ et  $X_n \xrightarrow[n \to \infty]{} X$. 
+                \underline{On regarde seulement les} $X \in B, X \not\in A$
+        \end{enumerate}
+\end{enumerate}
+\begin{eg}
+   \[
+       A = \{(x, y) \in \R^2 \mid 2x + 3y \le 4, x \neq y\}
+   \]  
+\begin{figure}[H]
+    \centering
+    \incfig{example-interieur}
+    \caption{Exemple de l'intérieur}
+    \label{fig:example-interieur}
+\end{figure}
+.
+\begin{itemize}
+    \item 
+        Je dévine que $Int(A) = C = \{(x, y) \mid 2x + 3y < 4, x \neq y\}$
+    \item
+        Convect: $\{(x, y) \mid 2x + 3y < 4, x < y\} \cup \{(x, y) \mid 2x + 3y < 4, x > y\}$
+\end{itemize}
+Je construit une suite $(X_n)$ avec  $X_n \not\in A$ mais $X_n \to X$. Soit $X \in A, X \not\in C$, $X = (x, y)$ donc:  $2x + 3y = 4 \, x \neq y$
+\[
+X_n = (x, y + \frac{1}{n})
+\] 
+\[
+2x_n + 3y_n = 2x + 3y + \frac{3}{n} = 4 + \frac{3}{n} > 4
+\] 
+\[
+X_n \not\in A \text{ mais } X_n \to X
+\] 
+\end{eg}
+\begin{eg}
+   \[
+       A = \{(x, y) \in \R^2 \mid x > 0, y = x^{-1}\}
+   \]  
+   $Int(A) = \O$? $C = \O$
+\begin{figure}[H]
+    \centering
+    \incfig{example-interieur-hyperbola}
+    \caption{Exemple de l'intérieur de l'hyperbole}
+    \label{fig:example-interieur-hyperbola}
+\end{figure}
+$\O$ ouvert, donc $C \subset Int(A)$
+\par
+Soit $X \in A \quad X \not\in C$, donc $X \in A$.
+ \[
+X_n := (x, y + \frac{1}{n}) \quad X_n \not\in A
+\] 
+\[
+x_ny_n = xy + \frac{x}{n} = 1 + \frac{x}{n} \neq 1
+\] 
+\[
+X_n \xrightarrow[n \to \infty]{} X \text{ donc } X \not\in Int(A)
+\] 
+\[
+Int(A) = \O
+\] 
+\end{eg}
+\begin{eg}
+   \[
+       A = \{(x, y) \in \R^2 \mid x > 0, y = x^{-1}\}
+   \]  
+   $Adh(A) = ?$
+   \par
+   Je pense que  $Adh(A) = A$ ($B = A$). Il suffit de montrer que $A$ \underline{est fermé}.
+    \[
+   x > 0 \quad y \le \frac{1}{x} \quad y \ge \frac{1}{x}
+   \] 
+   Si $X_n = (x_n, y_n)$  \quad $X_n \in A$ et  $X_n \to X$, alors $X \in A$
+    \[
+        X = (x, y) \quad \substack{x_n \to x \\ y_n \to y} \quad \substack{x_n \to x \\ \frac{1}{x_n} \to y} \quad (x_n > 0)
+   \] 
+   donc $x > 0$ et  $y = \frac{1}{x}$ donc $X \in A$
+    \[
+   A \text{ est fermé}
+   \] 
+\end{eg}
+\begin{eg}
+   \[
+       A = \{(x, y) \in \R^2 \mid 2x + 3y \le 4, x \neq y\}
+   \]  
+\begin{figure}[H]
+    \centering
+    \incfig{example-adherence}
+    \caption{example-adherence}
+    \label{fig:example-adherence}
+\end{figure}
+.
+\begin{enumerate}
+    \item 
+        $B$ est fermé (facile), donc  $Adh(A) \subset B$
+    \item Soit $X \in B$. On montre que  $X \in Adh(A)$ (on cherche $X_n \in A$ avec  $X_n \to X$) 
+        \par
+        Je regarde juste $X \in B, X \not\in A$
+        \[
+        X_n = (x_n, y_n) \in A \quad x_n \to x \text{ et } y_n \to y
+        \] 
+        \[
+        x_n = x + \frac{1}{n}, y_n = y = x
+        \] 
+        \[
+        X_n \to X \text{ et } 2x_n + 3y_n = 2x + 3y - \frac{2}{n} \le 4 et x_n \neq y_n 
+        \] 
+        donc $X_n \in A$
+\end{enumerate}
+\end{eg}
+\begin{eg}
+   \[
+       A = \{(x, y) \mid |x| \le 1, |y| < 1\}
+   \]  
+   \[
+       Int(A) = \{(x, y) \mid |x| < 1, |y| < 1 \}
+   \] 
+   \[
+       Adh(A) = \{(x, y) \mid |x| \le 1, |y| \le 1\}
+   \] 
+\end{eg}
+\begin{eg}
+   \[
+       A = \{(x,y) \mid x > 0, y = \sin(\frac{1}{n}) \}
+   \]  
+   $Adh(A) = A \cup \{(0, y) \mid -1 \le y \le 1\}$
+   $Int(A) = $
+\end{eg}
