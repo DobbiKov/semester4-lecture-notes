@@ -1,0 +1,104 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newtheorem{theoreme}{Théorème}[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{exemple}{Exemple}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{propriete}{Propriété(s)}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{remarque}{Remarque}
+
+\newcommand{\scalair}[1]{\left\langle #1 \right\rangle}
+
+\title{Oraux des Mathématiques: Séance 2}
+\author{Yehor KOROTENKO}
+\date{\today}
+\begin{document}
+\section{Algèbre}
+\begin{prop}\label{prop:isometrie-ssi-transforme-bon-en-bon}
+   $f$ est une isométrie si et seulement si elle transforme toute base orthonormée en une base orthonormée. 
+\end{prop}
+\begin{proof}
+    Soit $f$ une isométrie, alors elle transforme toute base en une base car  $f$ est bijective d'apres le cours.
+    \begin{itemize}
+        \item ($\implies$) Supposons que $f$ est une isométrie. Soit $\{e_i\}$ une base orthonormée, alors, on a:
+             \[
+                 \scalair{f(e_i), f(e_j)} = \scalair{e_i, e_j} = \delta_{i,j}
+            \] 
+            Donc, $\{f(e_i)\}$ est une base orthonormée.
+        \item ($\impliedby$) Supposons, qu'il existe une base orthonormée $\{e_i\}$ telle que  $\{f(e_i)\}$ est aussi une base orthonormée. De plus, soit  $x = x_1e_1 + \ldots x_ne_n$ et $y = y_1e_1 + \ldots + y_ne_n$ avec $x_i, y_i \in \R$
+            \par
+            Comme $\{e_i\}$ est orthonormée, alors on a:
+            \begin{equation}
+                \scalair{x, y} = x_1y_1 + \ldots + x_ny_n = \sum_{i=1}^{n} x_iy_i
+            \end{equation}
+            D'autre part:
+            \begin{align*}
+                \scalair{f(x), f(y)} &= \scalair{\sum_{i=1}^{n} x_if(e_i), \sum_{i=1}^{n} y_if(e_i)} = \sum_{i,j = 1}^{n} x_iy_j\scalair{f(e_i), f(e_j)}\\
+                                     &= \sum_{i=1}^{n} x_iy_i = \scalair{x, y}
+            \end{align*}
+            Donc $f$ est une isométrie.
+    \end{itemize}
+\end{proof}
+
+\section{Analyse}
+\begin{prop}
+    \begin{enumerate}
+        \item $K$ compact $\implies$ $K$ fermé et borné. (réciproque est fausse en général!)
+        \item Si $K$ compact et $F$ fermé, alors  $K \cap F$ est compact.
+        \item Si $K$ compact, toute suite de Cauchy dans  $K$ converge dans  $K$
+    \end{enumerate}
+\end{prop}
+
+\begin{proof}
+   \begin{enumerate}
+       \item Soit $K$ compact.  $K$ fermé si  $(u_n)$ suite dans  $K$ qui converge vers  $u$, alors  $u \in K$.
+           \par
+           \underline{clair:}  $(u_n)$ a une sous-suite  $v_n = u_{\phi(n)}$ avec $v_n \to v \in K$, $u_n \to u$, donc $v_n \to u$ $\implies$ $u = v$  $\implies$ $u \in K$
+           Donc $K$ est fermé.
+           \par
+           $K$ \underline{est borné}:
+           Soit $U_x = \bigcup_{x \in K} B(x, 1)$ un recouvrement ouvert de $K$. Or  $K$ est compact, donc il existent  $x_1, \ldots, x_n \in K$, tels que $K \subset \bigcup_{i = 1, \ldots, n} B(x_i, 1) $, donc $K$ est borné.
+        \item $K$ compact et $F$ fermé. $(u_n)$ une suite dans $K \cap F$. $u_n \in K$. $ \exists$ sous-suite $v_n = u_{\phi(n)}$ avec $v_n \to x \in K$. $v_n \in F, v_n \to x$, $F$ fermé donc $x \in F$, $x \in K \cap F$. Donc $K \cap F$ est séquentiellement compact, donc compact.
+        \item Soit $K$ un espace métrique compact et soit $(x_n)$ une suite de Cauchy dans $K$. Nous allons montrer que $(x_n)$ converge dans $K$.
+            \par 
+            Supposons que $(u_n)$ est de Cauchy, i.e  $\forall \epsilon > 0, \exists N \in \N, \forall n, m \ge N, d(u_n, u_m) < \epsilon$. Soit $\epsilon > 0$. Or  $K$ est compact, alors il existe  $v_n = u_{\phi(n)}$ tq  $v_n \xrightarrow[n \to +\infty]{} x \in K$. Donc $\exists M \in \N, \forall n \ge M, d(v_n, x) < \frac{\epsilon}{2}$. Or $u_n$ est de Cauchy, donc  $\forall n \ge N, \phi(n) \ge N, d(u_n, u_{\phi(n)}) < \frac{\epsilon}{2}$. L'inégalité triangulaire donne:
+            \[
+            d(u_n, x) \le d(u_n, u_{\phi(n)}) + d(u_{\phi(n)}, x) = \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+            \] 
+            Donc $u_n$ converge vers  $x$.
+   \end{enumerate} 
+\end{proof}
+
+\end{document}

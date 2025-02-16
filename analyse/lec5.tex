@@ -81,22 +81,7 @@ $u_n = (n, 0)$  $(u_n)$ suite dans  $F$ sans sous-suite convergente.
            \par
            $K$ \underline{est borné}:
            \par
-           Supposons  $K$ non borné. Je fixe  $a \in E$,  $\forall n \in \N$
-           \[
-           K \not\subset B(a, n)
-           \] 
-           donc, il existe $u_n \in K$ tel que 
-            \[
-           d(a, u_n) \ge n
-           \] 
-           $(u_n)$ n'a pas de sous-suite convergente: si  $v_n = u_{\phi(n)}$ sous-suite
-           \[
-                \text{(contradiction!)}
-               \begin{cases}
-                   d(a, v_n) \ge \phi(n) \xrightarrow[n \to  \infty]{} +\infty \quad \text{}\\
-                   \text{si } v_n \to v, \, d(a, v_n) \to  d(a, v)
-               \end{cases}
-           \] 
+              Soit $U_x = \bigcup_{x \in K} B(x, 1)$ un recouvrement ouvert de $K$. Or  $K$ est compact, donc il existent  $x_1, \ldots, x_n \in K$, tels que $K \subset \bigcup_{i = 1, \ldots, n} B(x_i, 1) $, donc $K$ est borné.
         \item $K$ compact et $F$ fermé. $(u_n)$ une suite dans $K \cap F$. $u_n \in K$. $ \exists$ sous-suite $v_n = u_{\phi(n)}$ avec $v_n \to x \in K$. $v_n \in F, v_n \to x$, $F$ fermé donc $x \in F$, $x \in K \cap F$.
         \item Sout $(u_n)$ suite de Cauchy dans $K$. $(u_n)$ a une sous-suite $v_n = u_ { \phi(n)}$ qui converge vers $x \in K$. $u_n \to x \in K$
    \end{enumerate} 
@@ -167,6 +152,12 @@ Je prends $(E_1, d_1), (E_2, d_2)$ deux espaces métriques et $F: E_1 \to E_2$. 
             \] 
    \end{enumerate}
 \end{prop}
+\begin{figure}[H]
+    \centering
+    \incfig{continuite-topologique}
+    \caption{continuite-topologique}
+    \label{fig:continuite-topologique}
+\end{figure}
 \begin{eg}
    \[
        U = \{(x, y) \in \R^2: x \sin(y) - e^x > 1\}
@@ -206,3 +197,45 @@ Je prends $(E_1, d_1), (E_2, d_2)$ deux espaces métriques et $F: E_1 \to E_2$. 
        \item[$2 \implies 3$:]: $F^{-1}(U_2)^{c} = F^{-1}(U_2^c)$
    \end{itemize}
 \end{preuve}
+
+\begin{eg} résultat de cette proposition.
+    Prenons la fonction: $f(x) = x^2$.  $f^{-1}(]4, 9[) = \{x \in \R \mid 4 < x^2 < 9\} = ]-3, -2[ \cup ]2, 3[$. Autrement dire, la continuité de $f$ (évident) donne que  $U = ]4, 9[$ ouvert, alors $f^{-1}(U)$ aussi ouvert.
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle,
+                xlabel = $x$,
+                ylabel = {$f(x) = x^2$},
+                xmin=-5, xmax=5,
+                ymin=0, ymax=10,
+                samples=100,
+                domain=-5:5,
+                xtick={-4,-3,-2,-1,0,1,2,3,4,5},  % Custom x-axis numbers
+                ytick={0,4,9},   % Custom y-axis numbers
+                thick
+                ]
+                \addplot[blue, thick] {x^2};
+                \coordinate (a) at (2, 0);
+                \node (_) at (a){$]$};
+                \coordinate (b) at (-2, 0);
+                \node (_) at (b){$[$};
+                \coordinate (c) at (3, 0);
+                \node (_) at (c){$[$};
+                \coordinate (d) at (-3, 0);
+                \node (_) at (d){$]$};
+
+                \coordinate (fa) at (2, 4);
+                \coordinate (fb) at (-2, 4);
+                \coordinate (fc) at (3, 9);
+                \coordinate (fd) at (-3, 9);
+                \draw[color=red] (a) -- (c);
+                \draw[color=red] (b) -- (d);
+
+                \draw[dashed] (a) -- (fa) -- (fb) -- (b);
+                \draw[dashed] (c) -- (fc) -- (fd) -- (d);
+            \end{axis}
+        \end{tikzpicture} 
+        \caption{Exemple en $f(x) = x^2$}
+    \end{figure}
+\end{eg}
