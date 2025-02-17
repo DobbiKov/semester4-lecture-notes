@@ -1,0 +1,147 @@
+\chapter{Intégration numérique}
+\underline{But:} On souhaite calculer au mieux
+\[
+I(f) = \int_{{a}}^{{b}} {f(x)} \: d{x} {} 
+\] 
+où $f: [a, b] \to \R$ donné
+\par
+\underline{Contraintes}
+\begin{itemize}
+    \item $f$ n'a pas de primitive connue (ou évidente)
+    \item  $f$ n'est connue ou ne peut être évaluée qu'en un certain nombre fini de points 
+         \[
+             (x_i, 0\le i \le n \text{ sur } [a, b])
+        \] 
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \incfig{integration-exemple}
+    \caption{integration-exemple}
+    \label{fig:integration-exemple}
+\end{figure}
+
+\[
+I(f) = \int_{{a}}^{{b}} {f(x)} \: d{x} {}
+\] 
+\[
+    S(f, \sum_{N} = \sum_{i=0}^{N} f(\xi_i)\underbrace{(x_{i+1} - x_{i})}_{\omega_i}
+\] 
+somme de Rieman associée à $\sum_{N}$. Théorème: $\lim_{N \to \infty} S(f, \sum_{N}) = \int_{{a}}^{{b}} {f(x)} \: d{x} {}$
+
+\section{Formule de quadratique}
+\begin{definition}
+    Étant donnée $N$ points  $x_1, \ldots, x_N$ de l'intervalle $[a, b]$  et $N$ poids  $\omega_1, \ldots, \omega_N \in \R$ associées à chaque points.
+    \par
+    On appelle \underline{formule de quadratique} associé aux $(x_i),(\omega_i)$ l'application linéaire sur  $\mathcal{C}^0([a, b])$
+     \[
+         \tilde{I}(f) = \sum_{i=1}^{N} \omega_i f(x_i)
+    \] 
+    On dit que la formule de quadratique est \underline{d'ordre} $p$ si elle est \underline{exacte} pour les polynôme de degré  $p_1$. i.e
+     \[
+         \tilde{I}(Q) = \int_{{a}}^{{b}} {Q} \: d{x} {} \forall Q \in \R_{p-1}[X]
+    \] 
+    et s'il existe $Q \in \R_{p-1}[X]$ tq $I(Q) \neq \int_{{a}}^{{b}} {Q} \: d{x}$, autrement dit si elle exacte pour le polyôme de degré \underline{au plus} $p-1$.
+\end{definition}
+\begin{remark}
+   On note:
+   \[
+   \int_{{a}}^{{b}} {f(x)} \: d{x} \approx \sum_{i=1}^{n} \omega_i f(x_i)
+   \] 
+   \begin{center}
+    \begin{tabular}{| c | c | c | c |}
+        \hline
+        Points & $x_1$ &  $x_2$ &  \ldots \\  
+        \hline
+        Poids & $\omega_1$ &  $\omega_2$ &  \ldots \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{remark}
+\begin{eg}
+   Soit la formulle de quadratique 
+   \[
+   \int_{{a}}^{{b}} {f(x)} \: d{x} \approx (b-a)f(a)
+   \] 
+   \begin{itemize}
+       \item si $f = 1$, on a  
+           \[
+               \int_{{a}}^{{b}} {f(x)} \: d{x} {} = b - a = (b-a)f(a)
+           \] 
+           elle exacte pour les polynômes de degré 0.
+        \item si $f(x) = x$ on a
+             \[
+                 \int_{{a}}^{{b}} {f(x)} \: d{x} = \left[ \frac{x^2}{2} \right]_{a}^{b}  = \frac{(b-a)(a+b)}{2} \neq (b-a)a
+            \] 
+            elle n'est pas exacte pour les polynômes de degré $1$.
+   \end{itemize}
+   Conclusion: elle est exacte pour les polynômes de degré au plus 0. Elle est donné d'ordre $1$.
+\end{eg}
+
+\subsection{Construction de formule de quadratique à points donnés}
+\begin{prop}
+    Soit $x_1, \ldots, x_N$, $N$ points 2 à 2 distincts de  $[a, b]$. 
+    \begin{enumerate}
+        \item Il existe un unique $(\omega_1, \ldots, \omega_N) \in \R^N$ tels que 
+            \[
+                \tilde{I}(Q) \overset{def}{\equiv} \sum_{i=1}^{N} \omega_iQ(x_i) = \int_{{a}}^{{b}} {Q(x)} \: d{x} \quad \forall Q \in \R_{N-1}[X]
+            \] 
+        \item Pour toute fonction $f: [a, b] \to \R$ de calsse $\mathcal{C}^N$
+             \[
+                 \left| \int_{{a}}^{{b}} {f(x)} \: d{x} - \tilde{I}(f) \right| \le \frac{(b-a)^{N+1}}{N!}\|f^{(N)}\|_{\infty}
+            \] 
+    \end{enumerate}
+\end{prop}
+\begin{preuve}
+   Soit $l_i, i = 1, \ldots, N$  la base de Lagrange associé aux $x_i$, i.e
+    \[
+        l_i(x) = \prod_{\substack{j=1}\\ \substack{j\neq i}}^{N}  \frac{X - x_j}{x_i - x_j} 
+   \] 
+   on a $l_i \in \R_{N-1}[X]$.
+   \par
+   Soit $Q \in \R_{N-1}[X]$, $Q$ coïncide avec le polynôme d'interpolation de lagrange aux points  $x_1, \ldots, x_N$
+   \[
+   Q(X) = \sum_{i=1}^{N} Q(x_i)l_i(X)
+   \] 
+   d'où
+   \begin{align*}
+       \int_{{a}}^{{b}} {Q(x)} \: d{x} &= \sum_{i=1}^{N} Q(x_i)\int_{a}^{b} l_i(x) \, d{x}\\ 
+                                       &= \sum_{i=1}^{n} Q(x_i)\omega_i
+   \end{align*}
+   où $\omega_i = \int_{a}^{b} l_i(x) \, d{x} $. D'où l'existence.\par
+   \underline{Unicité:}
+   Soit $\tilde{\omega_i} \, i = 1, \ldots, N$, 
+   \[
+       k: \int_{a}^{b} Q(x) \, d{x} = \sum_{i=1}^{N} \tilde{\omega_i}Q(x_i) \quad \forall Q \in \R_{N-1}[X] 
+   \] 
+   alors, puisque $l_i \in \R_{N-1}[X]$, on a
+   \[
+       \int_{a}^{b} l_i(x) \, d{x} = \tilde{\omega_i} \quad i = 1, \ldots, N 
+   \] 
+   D'où $(\tilde{\omega}_i = \omega_i)$ et on a l'unicité
+
+   \par
+   \underline{Estimation d'erreur}:
+   \par
+   Soit $f$ de classe  $\mathcal{C}^N$ sur  $[a, b]$ et  $R_f$ un poly d'interpolation aux points  $x_i$  $\quad i = 1, \ldots, N$. On a:
+   \begin{align*}
+       \tilde{I}(f) = \sum_{i=1}^{N} f(x_i)\omega_i &= \sum_{i=1}^{N} P_f(x_i)\omega_i\\
+                                                    &= \int_{a}^{b} P_f(x) \, d{x} 
+   \end{align*}
+   D'où 
+   \begin{align*}
+       \left| \int_{a}^{b} f(x) \, d{x} - \tilde{I}(f) \right| &= \left| \int_{a}^{b} f(x) \, d{x} - \int_{a}^{b} P_f(x) \, d{x}   \right| \\
+                                                               &\le \int_{a}^{b} |f(x) - P_f(x)| \, d{x} \\
+                                                               &\le \frac{\|f^{(N)}\|_{\infty}(b-a)^N}{N!}(b-a)
+   \end{align*}
+   \[
+       \left| \int_{a}^{b} f(x) \, d{x} - \tilde{I}(f)  \right| \le \frac{\|f^{(N)}\|_{\infty}}{N!}(b-a)^N(b-a)
+   \] 
+\end{preuve}
+
+python:
+\begin{lstlisting}
+   from scipy.Integrate  import quad
+   quad(f, a, b) = 
+\end{lstlisting}
+

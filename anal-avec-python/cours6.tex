@@ -1,0 +1,123 @@
+\section{Comportement asymptotique "lorsque $N \to \infty$"}
+\subsection{Observation}
+On n'a pas toujours une convergence uniforme de l'interpolation
+\begin{eg}
+    $f(x) = \sqrt{x}$ avec $[a, b] = [0, 1]$,  $x_1, \ldots, x_n$ équirépartis sur $[a, b]$ 
+    \[
+        \underset{a \le t \le b}{max}|f(t) - P(t)| \xrightarrow[n \to \infty]{} +\infty
+    \] 
+    ce phénomène est appelé \underline{phénoème de Runge}.
+\end{eg}
+
+Il en reste une solution: 
+\begin{itemize}
+    \item si $f$ est lipschitziènne sur  $[a, b]$ ou Hölderienne 
+         \[
+             \exists a \in ]0, 1[, |f(x) - f(y)| \le C|x - y|
+        \] 
+    \item Si $x_1, \ldots, x_n$ sont les racines du n-ème polynôme de Tchebychev.
+        \[
+            |f(x) - P(x)| \le \frac{|f^{(n)}(x)}{n!}\prod_{i=1}^{n} (x - x_i)  
+        \] 
+\end{itemize}
+
+\subsection{Polynôme de Tchebychev}
+\begin{definition}
+    Les polynômes de Tchebychev sont définis par la recurrence:
+    \[
+    \begin{cases}
+        T_0 = 1\\
+        T_1 = x\\
+        T_n = 2xT_{n-1} - T_{n-2} \quad n\ge 2
+    \end{cases}
+    \] 
+\end{definition}
+\begin{prop}
+   Le n-ième polynôme de Tchebychev vérifie:
+   \begin{enumerate}
+       \item $T_n$ est de degré exactement  $n$ et son coefficient de plus haut degré est  $2^{n-1}$,  $n \ge 1$
+       \item $T_n$ a  $n$ racines distinctes simples
+            \[
+                T_n(x) = 0 \iff x \in \{x_1, \ldots, x_n\}, x_j = \cos( \frac{2j - 1}{2n} \pi)  \quad (1 \le j \le  n)
+           \] 
+       \item $|T_n(x)| \le 1, \quad \forall x \in [-1, 1], |T_n(x) = 1 \iff x \in \{x_0, \ldots, x_n\} x_k = \cos(k\frac{\pi}{n})$
+           \[
+               |T_n(x)| = 1 \text{ si } x \in \{x_k\} \quad x_k = \cos(k\frac{\pi}{n}) \quad (0 \le k \le n)
+           \] 
+   \end{enumerate}
+\end{prop}
+
+\begin{preuve}
+    \begin{enumerate}
+        \item 
+   Par récurrence:
+   \par
+   Soit $(P_n)$ la propriété "$T_n$ est de degré  $n$ et son coef. de plus haut degré est  $2^{n-1}$", $n\ge 1$. $P_0$ et $P_1$ vraies ($k \le n$). \par
+   Supposons $P_k$ vrai et montrons que  $P_{n+1}$ vrai. \par
+   En effet, nous avons $T_{n+1} = 2xT_n - T_{n-1}$, on en déduit que $P_{n+1}$ est vraie.\par
+   Maintenant,
+   \[
+       \forall x \in [-1, 1], T_n(x) = \cos(n \cdot \arccos(x))
+   \] 
+   En effet, pour $\begin{cases}
+       n = 0, T_0(x) = 1 = \cos(0)\\
+       n = 1, T_n(x) = \cos(\arccos(x))
+   \end{cases}$ et  $n > 1$
+    \begin{align*}
+       \cos((n+1)\arccos(x)) = \cos(n\arccos(x))\cos(\arccos(x)) - \sin(n\arccos(x))\sin(\arccos(x))\\
+       \cos((n-1)\arccos(x)) =  \cos(n\arccos(x))\cos(\arccos(x)) + \sin(n\arccos(x))\sin(\arccos(x))\\
+   \end{align*}
+   On a:
+   \[
+   \cos((n+1)\arccos(x)) = 2x\cos(n\arccos(x)) - \cos((n-1)\arccos(x))
+   \] 
+   D'où $x \mapsto \cos(n\arccos(x))$ vérifie la même récurrence sur $[-1, 1]$ que  $T_n$. Par conséquent les 2 coïncident sur  $[-1, 1]$. On en déduit $\forall x \in [-1, 1]$
+   \item
+   \begin{align*}
+       T_n(x) = 0 &\iff \cos(n\arccos(x)) = 0\\
+                  &\iff n\arccos(x) = \frac{\pi}{2} \text{ mod } \pi \\
+                  &\iff \arccos(x) = \frac{\pi}{2n} \text{ mod } \frac{\pi}{n}
+                  &\iff x = \cos(\frac{\pi}{2n} + k\frac{\pi}{n}) \quad 0 \le k \le n-1
+   \end{align*}
+\item $|\cos(x)| \le 1$ D'où $|T_n(x)| \le 1, \forall x \in [-1, 1]$
+    \begin{align*}
+        |T_n(x)| = 1 \iff n&\arccos(x) = 0 \text{ mod } \pi\\
+                           &\arccos(x) = 0 \text{ mod } \frac{\pi}{n}
+    \end{align*}
+    \[
+        \in x \in \{\cos(k\frac{\pi}{n}), k \in [0, n] \}
+    \] 
+\end{enumerate}
+\end{preuve}
+
+\begin{prop}
+   Si $Q_n$ est un polyôme de degré  $n$ de même coeff. de plus haut degré que  $T_n$, alors:
+   \[
+       \underset{x \in [-1, 1]}{max} |Q_n(x)| \ge \underset{x \in [-1, 1]}{max} |T_n(x)| = 1
+   \] 
+\end{prop}
+
+\begin{corollary}
+    Si $\xi_1, \ldots, \xi_n$  sont $n$ points  $2$ à  $2$ distincts de  $[-1, 1]$, on a:
+     \[
+         \underset{x \in [-1, 1]}{max} \left| \prod_{j=1}^{n} (x - \xi_{j})  \right| \ge \underset{x \in [-1, 1]}{max} \left| \prod_{j=1}^{n} (x - x_j)  \right| = \underset{x \in [-1, 1]}{max} \frac{1}{2^{n-1}} |T_n(x)| = \frac{1}{2^{n-1}}
+    \] 
+    où $x_j$ sont les racines de  $T_n$
+\end{corollary}
+
+\subsection{Application}
+Soit $\xi_1, \ldots, \xi_n$, 2 à 2 distincts, $P$ le polynôme de lagrange de  $f$ (suffisament régulière), alors:
+ \begin{align*}
+     |f(x) - P(x)| &\le \frac{\|f^{(n)}\|_{\infty}}{n!}|\omega_n(x)|\\
+                   &\le \frac{\|f^{(n)}\|_{\infty}}{n!}\|\omega_n(x)\|_{\infty}
+\end{align*}
+où $\omega_i = \prod_{j=1}^{n} (x - \xi_j) $ et $\| . \|_{\infty}$ et loi norme inf sur $[-1, 1]$. Ainsi, le choix de $\xi_i$ qui possede la plus petite valeur de  $\| \omega_n\|_{\infty}$ est celui des racines du n-ìeme polynôme de Tchebychev.
+
+\begin{remark}
+    On se ramène à un intervalle quelconque $[a, b]$ par 
+    \[
+    x_j = \frac{a + b}{2} + \frac{b - a}{2}\cos(\frac{2j - 1}{2n}\pi) \quad (1 \le j \le n)
+    \] 
+    sont les racines des polynômes de Tchebychev sur $[a, b]$
+\end{remark}
+
