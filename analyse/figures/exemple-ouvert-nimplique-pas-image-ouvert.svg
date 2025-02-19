@@ -3,8 +3,8 @@
 
 <svg
    width="240mm"
-   height="120mm"
-   viewBox="0 0 240 120"
+   height="75mm"
+   viewBox="0 0 240 75"
    version="1.1"
    id="svg8"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.3214285"
-     inkscape:cx="356.17205"
-     inkscape:cy="170.40861"
+     inkscape:zoom="0.90919883"
+     inkscape:cx="401.45234"
+     inkscape:cy="199.07637"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -62,7 +62,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -73,60 +72,98 @@
      transform="translate(0,-177)">
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none"
-       d="m 80.090179,187.11105 v 69.97913"
+       d="m 103.95276,178.08983 v 69.97913"
        id="path1" />
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none"
-       d="m 39.37989,222.10062 h 113.6163"
+       d="M 63.242474,213.0794 H 176.85877"
        id="path2" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none"
-       x="80.88842"
-       y="225.95879"
+       x="104.75101"
+       y="216.93756"
        id="text2"><tspan
          sodipodi:role="line"
          id="tspan2"
          style="stroke-width:0.184"
-         x="80.88842"
-         y="225.95879">$0$</tspan></text>
+         x="104.75101"
+         y="216.93756">$0$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none"
-       x="117.07534"
-       y="225.95879"
+       x="140.93793"
+       y="216.93756"
        id="text3"><tspan
          sodipodi:role="line"
          id="tspan3"
          style="stroke-width:0.184"
-         x="117.07534"
-         y="225.95879">$1$</tspan></text>
+         x="140.93793"
+         y="216.93756">$1$</tspan></text>
     <path
        style="fill:none;stroke:#d40000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 80.195295,221.80661 c 19.436636,-62.98714 9.542795,50.67393 39.008695,0.16096"
+       d="m 104.05788,212.78539 c 19.43663,-62.98714 9.54279,50.67393 39.00869,0.16096"
        id="path3"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#d40000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       x="81.571327"
-       y="201.61479"
+       x="97.570976"
+       y="194.07425"
        id="text4"><tspan
          sodipodi:role="line"
          id="tspan4"
          style="stroke-width:0.184"
-         x="81.571327"
-         y="201.61479">$1$</tspan></text>
+         x="97.570976"
+         y="194.07425">$1$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#d40000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       x="80.535759"
-       y="236.5853"
+       x="95.509903"
+       y="227.32704"
        id="text5"><tspan
          sodipodi:role="line"
          id="tspan5"
          style="stroke-width:0.184"
-         x="80.535759"
-         y="236.5853">$-1$</tspan></text>
+         x="95.509903"
+         y="227.32704">$-1$</tspan></text>
+    <path
+       style="fill:none;stroke:#da0000;stroke-width:0.184;stroke-linecap:round;stroke-opacity:1"
+       d="m 144.05319,211.17387 h -0.86798 l 0.0511,3.01243 h 0.91905 v 0"
+       id="path4" />
+    <path
+       style="fill:none;stroke:#da0000;stroke-width:0.184;stroke-linecap:round;stroke-opacity:1"
+       d="m 103.13152,211.46704 h 0.86798 l -0.0511,3.01243 h -0.91905 v 0"
+       id="path4-0" />
+    <path
+       style="fill:none;stroke:#da0000;stroke-width:0.184;stroke-linecap:round;stroke-opacity:1"
+       d="m 103.99302,193.17926 70.05835,-0.0741"
+       id="path5" />
+    <path
+       style="fill:none;stroke:#da0000;stroke-width:0.184;stroke-linecap:round;stroke-opacity:1"
+       d="m 104.08812,226.43626 70.05835,-0.0741"
+       id="path5-9" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#da0000;stroke-width:0.184;stroke-linecap:round;stroke-opacity:1"
+       x="164.92036"
+       y="190.84372"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         style="stroke-width:0.184"
+         x="164.92036"
+         y="190.84372">$y=1$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#da0000;stroke-width:0.184;stroke-linecap:round;stroke-opacity:1"
+       x="163.63098"
+       y="224.88324"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         style="stroke-width:0.184"
+         x="163.63098"
+         y="224.88324">$y=-1$</tspan></text>
   </g>
 </svg>

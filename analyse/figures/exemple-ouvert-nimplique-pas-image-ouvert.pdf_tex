@@ -50,14 +50,17 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.5)%
+  \begin{picture}(1,0.3125)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{exemple-ouvert-nimplique-pas-image-ouvert.pdf}}%
-    \put(0.33703508,0.29600506){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
-    \put(0.48781392,0.29600506){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.43646253,0.1460935){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
+    \put(0.58724136,0.1460935){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{exemple-ouvert-nimplique-pas-image-ouvert.pdf}}%
-    \put(0.33988053,0.39743837){\color[rgb]{0.83137255,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
-    \put(0.33556566,0.25172793){\color[rgb]{0.83137255,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-1$\end{tabular}}}}%
+    \put(0.40654573,0.24135729){\color[rgb]{0.83137255,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.39795793,0.10280399){\color[rgb]{0.83137255,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{exemple-ouvert-nimplique-pas-image-ouvert.pdf}}%
+    \put(0.68716818,0.25481784){\color[rgb]{0.85490196,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y=1$\end{tabular}}}}%
+    \put(0.68179576,0.1129865){\color[rgb]{0.85490196,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y=-1$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

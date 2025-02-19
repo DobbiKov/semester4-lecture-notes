@@ -46,9 +46,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.78095976"
-     inkscape:cx="297.07036"
-     inkscape:cy="172.22398"
+     inkscape:zoom="1.1331298"
+     inkscape:cx="477.4387"
+     inkscape:cy="77.219753"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -101,33 +101,24 @@
        id="path2" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:0.184, 1.104;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 76.34152,217.92756 c 26.41949,-6.03969 59.28758,-21.44963 86.27439,-15.66674"
-       id="path3" />
+       d="M 76.684832,218.38531 C 103.10432,212.34562 135.6291,196.47793 162.61591,202.26082"
+       id="path3"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#787878;fill-opacity:1;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 101.70316,203.08446 14.75572,-13.87914 29.07315,4.09069 -17.09326,13.29476 z"
+       id="path5"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#000000;fill-opacity:0.18299;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ArrowWide)"
+       d="m 120.57595,198.58186 5.84386,-18.26203"
+       id="path6" />
     <circle
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4"
        cx="120.62262"
        cy="198.77463"
        r="0.51133686" />
-    <text
-       xml:space="preserve"
-       style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="121.71835"
-       y="200.45473"
-       id="text4"><tspan
-         sodipodi:role="line"
-         id="tspan4"
-         style="stroke-width:0.184"
-         x="121.71835"
-         y="200.45473">$x_0$</tspan></text>
-    <path
-       style="fill:#000000;fill-opacity:0.18299;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 101.70316,203.08446 14.75572,-13.87914 29.07315,4.09069 -17.09326,13.29476 z"
-       id="path5" />
-    <path
-       style="fill:#000000;fill-opacity:0.18299;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ArrowWide)"
-       d="m 120.40347,198.40938 5.84386,-18.26203"
-       id="path6" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -139,5 +130,16 @@
          style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.184;stroke-opacity:1"
          x="129.02315"
          y="181.31612">$\vec{\nabla}f(X_0)$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.184;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="121.71835"
+       y="200.45473"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="stroke-width:0.184"
+         x="121.71835"
+         y="200.45473">$x_0$</tspan></text>
   </g>
 </svg>

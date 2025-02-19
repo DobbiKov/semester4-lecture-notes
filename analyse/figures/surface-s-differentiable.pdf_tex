@@ -54,8 +54,7 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{surface-s-differentiable.pdf}}%
-    \put(0.50715981,0.1106053){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{surface-s-differentiable.pdf}}%
     \put(0.53759645,0.19034952){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\vec{\nabla}f(X_0)$\end{tabular}}}}%
+    \put(0.50715981,0.1106053){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

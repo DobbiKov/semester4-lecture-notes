@@ -1,0 +1,160 @@
+
+\chapter{Dérivation des fonctions de plusieurs variables}
+\section{Introduction}
+$n = 1$: comment définir  $f'(x_0)$?
+\begin{enumerate}
+    \item $f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$
+    \item DL: $f(x) = f(x_0) + a_1(x - x_0) + (x - x_0)\epsilon(x)$ où $a_1 = f'(x_0)$
+\end{enumerate}
+
+\[
+f: D \to R \quad D \text{ ouvert } \quad X_0 \in D \quad D \subset \R^n
+\] 
+
+\begin{definition}
+    $f$ est dérivable en  $X_0$ dans la direction $\vec{u}$ $(\neq \vec{0})$ si la fonction
+    \begin{align*}
+        g: \R &\longrightarrow \R \\
+        t &\longmapsto g(t) = f(X_0 + t\vec{u})
+    .\end{align*}
+    est dérivable en $t = 0$
+\end{definition}
+Autrement dire, la dérivée directionnelle (dans la direction de vecteur $\vec{u}$) est donnée par:
+\begin{equation}\label{eq:derivee-directionnelle}
+    D_{u}f(X_0) = \lim_{t \to 0} \frac{f(X_0 + t\vec{u}) - f(X_0)}{t}
+\end{equation}
+Dans le cas $\R$ on a eu la définition de la dérivée:
+\[
+f'(x_0) = \lim_{t \to 0} \frac{f(x_0 + t) - f(x_0)}{t} 
+\] 
+La diréction était toujours la même (l'axe $x$), on peut voir ça comme prendre un vecteur $u = (1)$ et utiliser comme la direction seulement l'axe $x$ et on obtient  l'eq. (~\ref{eq:derivee-directionnelle})
+\begin{figure}[H]
+    \centering
+    \incfig{continuite-multidimensionelle}
+    \caption{Dérivée directionnelle}
+    \label{fig:continuite-multidimensionelle}
+\end{figure}
+$\vec{e_1}, \ldots, \vec{e_n}$ base canonique de $\R^n$, $f$ admet des dérivées partielles en  $X_0$ si $f$ dérivable en  $X_0$ dans les directions $\vec{e_1}, \ldots, \vec{e_n}$.
+\[
+    \frac{d}{dt} f(X_0 + t \vec{e_i}) \mid_{t = 0}
+\] 
+noté
+\[
+\frac{\partial f}{\partial x_i}(X_0)
+\] 
+Par contre, une fonction peut être dérivable dans \underline{toutes les diréctions} en un point mais \underline{ne pas être} continue en ce point, voici 
+
+\begin{eg}
+   \[
+   f(x_1, x_2) = \begin{cases}
+       1  \text{ si } x_2 = x_1^2 \text{ et } (x_1, x_2) \neq (0, 0)\\
+       0 \text{ sinon}
+   \end{cases}
+   \]  
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-dervie-partielle}
+    \caption{Exemple dérivable mais pas continue}
+    \label{fig:exemple-dervie-partielle}
+\end{figure}
+\[
+    f((0, 0) + t \vec{u}) = f(t \vec{u}) = 0
+\] 
+si $t\neq 0$ et $t$ petit, on a $f$ dérivable dans toutes les directions.
+\par
+Mais, $f$ n'est pas continue en  $(0, 0)$:
+ \[
+X_n = (\frac{1}{n}, \frac{1}{n^2}) \quad X_n \to (0, 0)
+\] 
+\[
+\forall n, f(X_n) = 1 \quad f(X_n) \not\xrightarrow[n \to \infty]{} f(0, 0)
+\] 
+\end{eg}
+
+\begin{definition}\label{def:fonction-differentiable}
+    Soient $D \subset \R^n$ ouvert et $X_0 \in D$, la fonction
+    $f: D \to \R$
+    est \textbf{différentiable} en $X_0$ s'il existe un vecteur $\vec{u} \in \R^n$ tel que 
+    \[
+        f(X_0 + \vec{X}) = f(X_0) + \vec{u} \cdot \vec{X} + \|\vec{X}\|\epsilon(\vec{X})
+    \] 
+    où $\lim_{\vec{X} \to \vec{0}} \epsilon(\vec{X}) = 0$
+\end{definition}
+\begin{intuition}
+   Je propose de réflechir sur ce que cette définition signifie. 
+   Rappelons ce que signifie intuitivement la dérivée au cas $\R^n = \R$ ($n = 1$). 
+   Intuitivement, si on zoom la fonction qu'on dérive elle se comporte et a l'air d'être une ligne. 
+   Dans le cas $R^n = \R^2$, si on zoom la fonction elle a l'air d'être un plan. 
+   En effet, c'est ça l'idée de la dérivée, que si on fait un petit petit pas d'un fourmit, le deplacement et aussi petit et uniforme. 
+   En augmentant $n$, la dérivée donne des scalaire pour contruire un sous-éspace de dimension $n-1$ de l'espace $\R^n$. 
+\end{intuition}
+
+\section{DL à l'ordre 1}
+Cette représentation de la dérivée comme un sous-éspace lorsqu'on zoom est représenté par le DL à l'ordre $1$.
+De la définition ~\ref{def:fonction-differentiable}, ce vecteur $\vec{u}$ se note $\vec{\nabla}f(X_0)$ (gradient de $f$ en  $X_0$)
+
+\begin{prop}
+   $f$ différentiable en  $X_0$ $\implies$ $f$ dérivable dans toutes les directions en  $X_0$, et alors: 
+   \[
+       \vec{\nabla}f(X_0) = \begin{pmatrix} \frac{\partial f}{\partial x_1}f(X_0)\\ \ldots \\  \frac{\partial f}{\partial x_n}f(X_0)\end{pmatrix} 
+   \] 
+   dans la base $\vec{e_1}, \ldots, \vec{e_n}$
+\end{prop}
+
+\begin{preuve}
+$f$ est continue en  $X_0$ $|\vec{u} \cdot X \le \|\vec{u}\| \|X\|$
+\begin{enumerate}
+    \item continuité
+        \begin{align*}
+            |f(X_0 + X) - f(X_0)| &\le |\vec{u} \cdot X| + \|X\| |\epsilon(X)|\\
+                                  &\le \|X\|\left( \|\vec{u}\| + |\epsilon(x)|  \right) \le c\|X\|
+        \end{align*}
+        donc: $f(X_0 + X) \xrightarrow[X \to \vec{0}]{} f(X_0)$
+    \item .
+        \begin{align*}
+            g(t) = f(X_0 + t \vec{v}) &= f(X_0) + \vec{\nabla}f(X_0) \cdot t \vec{v} + \|t \vec{v}\| \cdot \epsilon(t \vec{v})\\
+                                      &= f(X_0) + t\vec{\nabla}f(X_0) \cdot \vec{v} + |t|\|\vec{v}\|\epsilon_1(t)\\
+                                      &= f(X_0) + t\vec{\nabla }f(X_0)\cdot 
+        \end{align*}
+        \[
+            \frac{d}{dt} f(X_0 + t\vec{v})\mid_{t = 0} = \vec{\nabla}f(X_0)\cdot \vec{v}
+        \] 
+        (prendre $\vec{v} = \vec{e_1}, \ldots, \vec{e_n}$ pour les coordonnées de $\vec{\nabla}f(X_0)$)
+\end{enumerate}
+\end{preuve}
+\begin{definition}
+    \[
+        D \subset \R^n \quad D \text{ ouvert } \quad f: D \to \R \text{ est } \mathcal{C}^1 \text{ sur } D
+    \] 
+    si $f$ différentiable en tout  $X \in D$ et les fonctions  $D \to \R$, $x \mapsto \frac{\partial f}{\partial x_i}(X)$ $1 \le i \le n$ sont continues sur $D$
+    \begin{align*}
+        : D &\longrightarrow \R^n \\
+        X &\longmapsto \vec{\nabla}f(X)
+    \end{align*}
+    est continue.
+\end{definition}
+\begin{theorem}
+    $f$ de classe  $\mathcal{C}^1$ sur  $D$ ssi  $f$ admet des dérivées partielles continues en tout point de  $D$. 
+\end{theorem}
+
+\begin{eg}
+   \[
+       f(X) = f(X_0) + \vec{\nabla}f(X_0) \cdot (X - X_0) + \|X - X_0\| \epsilon(X - X_0)
+   \]  
+   linéaire
+   \par
+   Dans $\R^3$: $f(x, y, z)$
+    \[
+        S = \{(x, y, z): f(x, y, z) = 0 \}
+   \] 
+   $S$: surface dans  $\R^3$, $X_0 \in S$ plan tangent à $S$ en  $X_0$, plan d'équation:
+   \[
+       f(X_0) + \vec{\nabla}f(X_0)\cdot X = 0
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{surface-s-differentiable}
+    \caption{surface-s-differentiable}
+    \label{fig:surface-s-differentiable}
+\end{figure}
+\end{eg}
