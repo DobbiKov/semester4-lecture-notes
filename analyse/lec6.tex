@@ -1,0 +1,340 @@
+\[
+F:D \to \R^p \quad D \subset \R^n
+\] 
+
+\[
+F(x_1, \ldots, x_n) = (F_1(x_1, \ldots, x_n), \ldots, F_p(x_1, \ldots, x_p))
+\] 
+$F$ continue ssi chaque  $F_i$ est continue  $(x_1, \ldots, x_n) \mapsto x_i$ avec $1 \le i \le n$ continues.
+
+\begin{prop}
+   Soit $f, g: D \to \R$ continue. 
+   \begin{itemize}
+       \item $f + g, f \times g$ sont continues sur $D$
+       \item si  $g(X) \neq 0, \: \forall X \in D, \frac{f}{g}$ continue sur $D$
+       \item si  $f(D) \subset I$ intervalle et $\phi: I \to \R$ continue, alors $\phi \circ f: D \to \R$ est continue.
+       \item $P: X \to \sum_{\alpha_1 + \ldots + \alpha_n \le d}^{} a_{\alpha_1, \ldots, \alpha_n}x^{\alpha_1} \ldots x^{\alpha_n}$, $a_{\alpha_1, \ldots, \alpha_n} \in \R, d = \text{ degré de } P$. $P: \R^n \to \R$ continue.
+   \end{itemize}
+\end{prop}
+\begin{eg}
+   \[
+       D = \{(x_1, x_2, x_3): x_1^2 + 2x_2x_3^2 \le 2, \sin(x_1x_2) > 0\}
+   \]  
+   \[
+   D = D_1 \cap D_2
+   \] 
+   \begin{align*}
+       &D_1 = f_1^{-1}(]-\infty, 2[) &f_1(x) = x_1^2 + 2x_2x_3^2\\
+       &D_2 = f_2^{-1}(]0, +\infty[) &f_2(x) = \sin(x_1x_2)
+   \end{align*}
+   $D_1, D_2$ sont ouverts, donc $D$ ouvert.
+\end{eg}
+\begin{eg}
+   \[
+       D = \{(x_1, x_2): \frac{e^{x_1 - 2x_2^2}}{x_1^2 + 3x_2^4} \ge 1 \}
+   \]  
+   \begin{align*}
+       &D = f^{-1}([1, +\infty[) &f(x) = \frac{e^{x_1 - 2x_2^2}}{x_1^2 + 3x_2^4}
+   \end{align*}
+\end{eg}
+
+\section{lien avec la compacité}
+\begin{theorem}
+    Soit $F: \R^n \to \R^p$ continue et $K \subset \R^n$ compact. Alors, $F(K)$ est compact dans  $\R^p$
+\end{theorem}
+\begin{remark}
+    On peut remplacer $\R^n, \R^p$ par $E, F$ \underline{espaces métriques}.
+\end{remark}
+\begin{remark}
+   $U$ ouvert,  $f$ continue $\not\implies f(U)$ ouvert:
+\end{remark}
+\begin{eg}
+   \[
+       f(]0, 1[) = [-1, 1]
+   \]  
+   \[
+   f(x) = \sin(2\pi x)
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-ouvert-nimplique-pas-image-ouvert}
+    \caption{exemple-ouvert-nimplique-pas-image-ouvert}
+    \label{fig:exemple-ouvert-nimplique-pas-image-ouvert}
+\end{figure}
+\end{eg}
+\begin{eg}
+   \begin{align*}
+       f: \R &\longrightarrow \R \\
+       x &\longmapsto f(x) = \arctan x
+   .\end{align*} 
+   \[
+       f(\underbrace{[-\frac{\pi}{2}, \frac{\pi}{2}]}_{\text{compact}}) = \underbrace{\R}_{\text{pas compact}}
+   \] 
+\end{eg}
+\begin{preuve}
+    Soit $(v_n)_{n \in \N}$ une suite dans $F(K)$. On a:  $v_n = F(u_n)$ où  $u_n \in K$.  $(u_n)_{n \in \N}$ suite dans $K$,  $K$ compact: donc:  $\exists$ sous suite $(u_{\phi(n)})_{n \in \N}$ avec 
+    \[
+        u_{\phi_n} \xrightarrow[n \to +\infty]{} u \in K
+    \] 
+    $F$ continue: donc  $F(u_{\phi(n)}) = v_{\phi(n)} \to F(u) \in K$. $(v_n)$ a une sous suite  $(v_{\phi(n)})$ qui converge vers $F(u) \in F(K)$, donc $F(K)$ compact!
+\end{preuve}
+\begin{theorem}
+    Soit $F: \R^n \to \R$ continue et $K \subset \R^n$ compact. Alors $f$ est bornée sur  $K$ et atteint ses bornes. 
+\end{theorem}
+\begin{preuve}
+    \underline{Weierstrass:} $f: \R \to \R$ $K = [a, b]$. \par
+    Je prends  $(E, d)$ à la place de  $\R^n$. $f$ bornée sur  $K$:  $\exists c_1, c_2$ telles que 
+    \[
+    c_1 \le f(x) \le c_2, \forall x \in K \iff f(K) \subset [c_1, c_2] 
+\] 
+    C'est clair car $f(K)$ est compact dans  $\R$, donc  bornée.
+    \par
+    \begin{align*}
+        &m = \underset{x \in K}{inf} f(x) = inf \: f(K) &M = \underset{x \in K}{sup} f(x) = sup \: f(K)
+    \end{align*}
+    À montrer: $\exists x \in K$ tel que $f(x) = m$ et  $\exists x' \in K$ tel que $f(x') = M$
+    \par
+     $m = inf \: f(K)$, ça veut dire que 
+      \begin{enumerate}
+          \item $f(K) \subset [m, +\infty[$ ($m$ minorant de  $f(K)$)
+          \item $\forall \epsilon > 0, \exists y \in f(K)$ tel que $y \le m + \epsilon$
+     \end{enumerate}
+     $\epsilon = \frac{1}{n}$ donne une suite $y_n \in f(K)$ telle que 
+      \[
+     y_n \to m
+     \] 
+     \begin{align*}
+         &y_n = f(x_n) &x_n \in K
+     \end{align*}
+     $K$ compact:   $\exists$ sous suite     $x_{\phi(n)}$ telle que 
+      \[
+      x_{\phi(n)} \xrightarrow[n \to \infty]{} x \in K
+      \] 
+
+     \[
+     f: E \to \R
+     \] 
+     continue, donc 
+     \[
+         f(x_{\phi(n)}) = y_{\phi(n)} \to f(x) 
+     \] 
+     $y_n \to m$, donc $y_{\phi(n)} \to m$, donc $m = \phi(x)$,  $m$ est atteint.
+\end{preuve}
+
+\section{Continuité partielle (inutile)}
+\begin{align*}
+    D \subset \R^n  \quad f: D \to \R \text{ continue} \quad D \text{ ouvert}
+\end{align*}
+\begin{figure}[H]
+    \centering
+    \incfig{continuite-partielle}
+    \caption{continuite-partielle}
+    \label{fig:continuite-partielle}
+\end{figure}
+Soit  $A = (a_1, \ldots, a_n) \in D$, il existe des intervalles ouverts $I_1, \ldots, I_n$ avec $a_i \in I_i$ tels que $I_1 \times \ldots \times I_n \subset D$ 
+\par
+Je peux poser 
+\[
+f_i(t) = f(a_1, \ldots, a_{i-1}, t, a_{i+1}, \ldots, a_n) \qquad t \in I_i
+\] 
+\begin{eg}
+   \[
+   n = 2 \quad f_1(t) = f(t, a_2) \quad f_2(t) = f(a_1, t)
+   \]  
+\begin{figure}[H]
+    \centering
+    \incfig{n-est-2-continuite-partielle}
+    \caption{n-est-2-continuite-partielle}
+    \label{fig:n-est-2-continuite-partielle}
+\end{figure}
+\end{eg}
+
+\begin{definition}
+    $f$ est partiellement continue en  $A = (a_1, \ldots, a_n)$ si les $f_i(t)$ sont continues en  $a_i$ $(1 \le i \le n)$
+\end{definition}
+\begin{itemize}
+    \item 
+\underline{continuité:} $f(x_1, x_2) \to f(a_1, a_1)$ $(x_1, x_2) \to (a_1, a_2)$ 
+    \item 
+\underline{partielle:} $f(x_1, a_2) \to  f(a_1, a_2)$ $x_1 \to a_1$ et $f(a_1, x_2) \to f(a_1, a_2)$ $x_2 \to a_2$
+    \item 
+\underline{Bonne notion:} continuité implique la continuité partielle (réciproque fausse)
+\end{itemize}
+\begin{eg}
+\[
+f(x_1, x_2) = \begin{cases}
+    \frac{x_1x_2}{x_1^2 + x_2^2} \text{ si } (x_1, x_2) \neq (0, 0)\\
+    0 \text{ si } (x_1, x_2)=(0, 0)
+\end{cases}
+\]     
+\begin{itemize}
+    \item continue sur $\R^2 \setminus \{(0, 0)\}$
+    \item partiellement continue en $(0, 0)$
+         \[
+        f(x_1, 0) = \begin{cases}
+            0 \text{ si } x_1 = 0\\
+            0 \text{ si } x_1 \neq 0
+        \end{cases}
+        \] 
+        \[
+        f(0, x_2) = 0 \, \forall x_2
+        \] 
+    \item pas continue en $(0, 0)$:
+         \[
+        x_1 = r \cos(\theta) \quad x_2 = r \sin(\theta)
+        \] 
+        \[
+        f(r\cos(\theta), r\sin(\theta)) = \begin{cases}
+            0 \text{ si } r = 0\\
+            \frac{r^2\cos(\theta)\sin(\theta)}{r^2} = \cos(\theta)\sin(\theta) \text{ si } r \neq 0
+        \end{cases}
+        \] 
+        \[
+        \lim_{r \to 0} f(r\cos(\theta), r\sin(\theta)) = \cos(\theta)\sin(\theta) \neq 0 \text{ si } \theta \neq 0, \pi, \frac{\pi}{2}, \ldots
+        \] 
+\end{itemize}
+\end{eg}
+
+
+\section{Dérivation des fonctions de plusieurs variables}
+$n = 1$: comment définir  $f'(x_0)$?
+\begin{enumerate}
+    \item $f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$
+    \item DL: $f(x) = f(x_0) + a_1(x - x_0) + (x - x_0)\epsilon(x)$ où $a_1 = f'(x_0)$
+\end{enumerate}
+
+\[
+f: D \to R \quad D \text{ ouvert } \quad X_0 \in D \quad D \subset \R^n
+\] 
+
+\begin{definition}
+    $f$ est dérivable en  $X_0$ dans la direction $\vec{u}$ $(\neq \vec{0})$ si 
+    \[
+        t \mapsto f(X_0 + t\vec{u})
+    \] 
+    est dérivable en $t = 0$
+\end{definition}
+\begin{figure}[H]
+    \centering
+    \incfig{continuite-multidimensionelle}
+    \caption{continuite-multidimensionelle}
+    \label{fig:continuite-multidimensionelle}
+\end{figure}
+$\vec{e_1}, \ldots, \vec{e_n}$ base canonique de $\R^n$, $f$ admet des dérvicées partielles en  $X_0$ si $f$ dérivable en  $X_0$ dans les directions $\vec{e_1}, \ldots, \vec{e_n}$.
+\par
+\[
+    \frac{d}{dt} f(X_0 + t \vec{e_i}) \mid_{t = 0}
+\] 
+noté
+\[
+\frac{\partial f}{\partial x_i}(X_0)
+\] 
+
+\begin{eg}
+   \[
+   f(x_1, x_2) = \begin{cases}
+       1  \text{ si } x_2 = x_1^2 \text{ et } (x_1, x_2) \neq (0, 0)\\
+       0 \text{ sinon}
+   \end{cases}
+   \]  
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-dervie-partielle}
+    \caption{exemple-dervie-partielle}
+    \label{fig:exemple-dervie-partielle}
+\end{figure}
+\[
+    f((0, 0) + t \vec{u}) = f(t \vec{u}) = 0
+\] 
+si $t\neq 0$, $t$ petit dérivable dans toutes les directions.
+\par
+$f$ pas continue en  $(0, 0)$
+ \[
+X_n = (\frac{1}{n}, \frac{1}{n^2}) \quad X_n \to (0, 0)
+\] 
+\[
+\forall n, f(X_n) = 1 \quad f(X_n) \not\xrightarrow[n \to \infty]{} f(0, 0)
+\] 
+\end{eg}
+
+\begin{definition}
+    $D \subset \R^n$ ouvert et $X_0 \in D$
+    \[
+    f: D \to \R
+    \] 
+    est diffeérentiable en $X_0$ s'il existe un vecteur $\vec{u} \in \R^n$ tel que 
+    \[
+        f(X_0 + \vec{X}) = f(X_0) + \vec{u} \cdot \vec{X} + \|\vec{X}\|\epsilon(\vec{X})
+    \] 
+    où $\lim_{\vec{X} \to \vec{0}} \epsilon(\vec{X}) = 0$
+\end{definition}
+
+\section{DL à l'ordre 1}
+$\vec{u}$ se note $\vec{\nabla}f(X_0)$ (gradiant de $f$ en  $X_0$)
+
+\begin{prop}
+   $f$ différentiable en  $X_0$ $\implies$ $f$ dérivable dans toutes les directions en  $X_0$, et alors: 
+   \[
+       \vec{\nabla}f(X_0) = \begin{pmatrix} \frac{\partial f}{\partial x_1}f(X_0)\\ \ldots \\  \frac{\partial f}{\partial x_n}f(X_0)\end{pmatrix} 
+   \] 
+   dans la base $\vec{e_1}, \ldots, \vec{e_n}$
+\end{prop}
+
+\begin{TODO}
+   c'est quoi 
+\end{TODO}
+$f$ est continue en  $X_0$ $|\vec{u} \cdot X \le \|\vec{u}\| \|X\|$
+\begin{enumerate}
+    \item continuité
+        \begin{align*}
+            |f(X_0 + X) - f(X_0)| &\le |\vec{u} \cdot X| + \|X\| |\epsilon(X)|\\
+                                  &\le \|X\|\left( \|\vec{u}\| + |\epsilon(x)|  \right) \le c\|X\|
+        \end{align*}
+        donc: $f(X_0 + X) \xrightarrow[X \to \vec{0}]{} f(X_0)$
+    \item .
+        \begin{align*}
+            g(t) = f(X_0 + t \vec{v}) &= f(X_0) + \vec{\nabla}f(X_0) \cdot t \vec{v} + \|t \vec{v}\| \cdot \epsilon(t \vec{v})\\
+                                      &= f(X_0) + t\vec{\nabla}f(X_0) \cdot \vec{v} + |t|\|\vec{v}\|\epsilon_1(t)\\
+                                      &= f(X_0) + t\vec{\nabla }f(X_0)\cdot 
+        \end{align*}
+        \[
+            \frac{d}{dt} f(X_0 + t\vec{v})\mid_{t = 0} = \vec{\nabla}f(X_0)\cdot \vec{v}
+        \] 
+        (prendre $\vec{v} = \vec{e_1}, \ldots, \vec{e_n}$ pour les coordonnées de $\vec{\nabla}f(X_0)$)
+\end{enumerate}
+\begin{definition}
+    \[
+        D \subset \R^n \quad D \text{ ouvert } \quad f: D \to \R \text{ est } \mathcal{C}^1 \text{ sur } D
+    \] 
+    si $f$ différentiable en tout  $X \in D$ et les fonctions  $D \to \R$, $x \mapsto \frac{\partial f}{\partial x_i}(X)$ $1 \le i \le n$ sont continues sur $D$
+    \begin{align*}
+        : D &\longrightarrow \R^n \\
+        X &\longmapsto \vec{\nabla}f(X)
+    \end{align*}
+    est continue.
+\end{definition}
+\begin{theorem}
+    $f$ de classe  $\mathcal{C}^1$ sur  $D$ ssi  $f$ admet des dérivées partielles continues en tout point de  $D$. 
+\end{theorem}
+
+\begin{eg}
+   \[
+       f(X) = f(X_0) + \vec{\nabla}f(X_0) \cdot (X - X_0) + \|X - X_0\| \epsilon(X - X_0)
+   \]  
+   linéaire
+   \par
+   Dans $\R^3$: $f(x, y, z)$
+    \[
+        S = \{(x, y, z): f(x, y, z) = 0 \}
+   \] 
+   $S$: surface dans  $\R^3$, $X_0 \in S$ plan tangent à $S$ en  $X_0$, plan d'équation:
+   \[
+       f(X_0) + \vec{\nabla}f(X_0)\cdot X = 0
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{surface-s-differentiable}
+    \caption{surface-s-differentiable}
+    \label{fig:surface-s-differentiable}
+\end{figure}
+\end{eg}
