@@ -1,0 +1,51 @@
+\chapter{Déterminants}
+Ce chapitre est plutôt un cheatsheet des déterminants car je ne vais pas donner des preuves mais les propriétés utiles et de l'intuition.
+
+\begin{definition}
+    Soit $A = [a_{i, j}] \in \mathcal{M}_{n}(\R)$ une matrice carée $n \times n$, alors:
+    \[
+        \operatorname{det}(A) = \sum_{\sigma \in S_n}^{} \operatorname{signe}(\sigma) \cdot \prod_{i=1}^{n} a_{i, \sigma(i)} 
+    \] 
+    où 
+    \begin{itemize}
+        \item $S_n$ est un groupe de toute permutation de  $\{1, \ldots, n\}$
+        \item $\operatorname{signe}(\sigma)$ est une signe de pérmutation
+    \end{itemize}
+\end{definition}
+
+Cette définition est très formelle, alors au bout de ce chapitre on va reformuler cette définition. D'abord, on va étudier les propriétés de déterminants:
+
+\begin{prop} les propriétés de déterminant.
+    Pour cette proposition, on note $\det(c_1, \ldots, c_n)$ un déterminant où $\forall i, \, r_i$ et $\forall i, \, y_i$ représentent une colonne (ou un vecteur colonne). Et $\forall i, \lambda_i \in \R$.
+    \begin{enumerate}
+        \item \textbf{Linéarité 1}:
+            \[
+            \det(r_1, \ldots, r_i + y_i, \ldots, r_n) = \det(r_1, \ldots, r_i, \ldots, r_n) + \det(r_1, \ldots, y_i, \ldots, r_n)
+            \] 
+        \item \textbf{Linéarité 2}:
+            \[
+            \det(r_1, \ldots, \lambda_ir_i, \ldots, r_n) = \lambda_i\det(r_1, \ldots, r_i, \ldots, r_n) 
+            \] 
+            \begin{note}
+               C'est pourquoi:
+               \[
+               \det(\lambda A) = \lambda^n\det(A)
+               \] 
+            \end{note}
+        \item \textbf{Mêmes colonnes}: Supposons que $i \neq j$ et $c_i = c_j$ alors:
+             \[
+            \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) = 0
+            \] 
+            S'il y a deux colonnes identiques, alors $\det$ est égale à 0.
+        \item \textbf{Déplacements des colonnes}:
+            
+\[
+    \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) 
+    = -\det(c_1, \ldots, 
+    \underbrace{c_j , \ldots, 
+    c_i}_{\text{permutation}}, \ldots, c_n)
+\]
+
+% Drawing the arc manually
+\end{enumerate}
+\end{prop}
