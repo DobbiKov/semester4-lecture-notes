@@ -105,5 +105,6 @@
     \put(0,0){\includegraphics[width=\unitlength,page=6]{mat-ligne-1-colonne-3.pdf}}%
     \put(0.20619009,0.07843043){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$A_{2,3} = $\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{mat-ligne-1-colonne-3.pdf}}%
+    \put(0.01127735,0.37558835){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ce qui est au centre\\des lignes est le $a_{i,j}$. \\Ici: $a_{2, 1}$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

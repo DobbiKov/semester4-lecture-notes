@@ -18,6 +18,38 @@
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2">
+    <marker
+       style="overflow:visible"
+       id="ArrowWide"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path5" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect4"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
     <inkscape:path-effect
        effect="spiro"
        id="path-effect3"
@@ -168,9 +200,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2876028"
-     inkscape:cx="458.99249"
-     inkscape:cy="376.28065"
+     inkscape:zoom="1.1713782"
+     inkscape:cx="209.15534"
+     inkscape:cy="142.99396"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -178,9 +210,9 @@
      width="200mm"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1800"
+     inkscape:window-width="1088"
      inkscape:window-height="1096"
-     inkscape:window-x="3"
+     inkscape:window-x="600"
      inkscape:window-y="44"
      inkscape:window-maximized="0"
      inkscape:showpageshadow="2"
@@ -840,5 +872,33 @@
        inkscape:path-effect="#path-effect3-2-5-2"
        inkscape:original-d="m 170.81724,226.92417 c -0.17585,3.34383 -0.45721,6.76597 -0.73856,10.18811 -0.28135,3.42215 0.56271,6.55963 0.84406,9.83944"
        transform="matrix(-1,0,0,1,359.358,43.136607)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.284;stroke-linecap:round;stroke-dasharray:none;marker-end:url(#ArrowWide)"
+       d="m 46.805611,212.01489 c 10.639447,-1.86587 21.278891,-3.73175 27.690346,-5.99461 6.411455,-2.26287 8.594922,-4.92273 10.77839,-7.58259"
+       id="path4"
+       inkscape:path-effect="#path-effect4"
+       inkscape:original-d="m 46.805611,212.01489 c 10.639446,-1.86588 21.27889,-3.73175 31.918333,-5.59762 2.183469,-2.65986 4.366935,-5.31972 6.550403,-7.97958"
+       transform="translate(1.1909825,0.35729476)" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#000000;stroke-width:0.284001;stroke-linecap:round;stroke-dasharray:none"
+       x="2.7065637"
+       y="209.8588"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="stroke-width:0.284"
+         x="2.7065637"
+         y="209.8588">Ce qui est au centre</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.284"
+         x="2.7065637"
+         y="213.82755"
+         id="tspan7">des lignes est le $a_{i,j}$. </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.284"
+         x="2.7065637"
+         y="217.7963"
+         id="tspan8">Ici: $a_{2, 1}$</tspan></text>
   </g>
 </svg>
