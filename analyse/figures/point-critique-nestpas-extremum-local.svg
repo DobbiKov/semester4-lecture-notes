@@ -63,8 +63,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.1436101"
-     inkscape:cx="445.02975"
-     inkscape:cy="183.38788"
+     inkscape:cx="445.34785"
+     inkscape:cy="183.22883"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -72,9 +72,9 @@
      width="200mm"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1104"
-     inkscape:window-height="1096"
-     inkscape:window-x="600"
+     inkscape:window-width="1800"
+     inkscape:window-height="1097"
+     inkscape:window-x="0"
      inkscape:window-y="44"
      inkscape:window-maximized="0"
      inkscape:showpageshadow="2"
@@ -159,14 +159,14 @@
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ca0000;fill-opacity:1;stroke:#d90000;stroke-width:0.284001;stroke-linecap:round;stroke-opacity:1"
-       x="76.974564"
-       y="233.90352"
+       x="82.866142"
+       y="236.09183"
        id="text5"><tspan
          sodipodi:role="line"
          id="tspan5"
          style="stroke-width:0.284"
-         x="76.974564"
-         y="233.90352">$1 \in [0, 1]$, $1 \not\in ]0, 1[$</tspan></text>
+         x="82.866142"
+         y="236.09183">$1 \in [0, 1]$, $1 \not\in ]0, 1[$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ca0000;fill-opacity:1;stroke:#d90000;stroke-width:0.284001;stroke-linecap:round;stroke-opacity:1"

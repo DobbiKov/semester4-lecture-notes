@@ -1,26 +1,33 @@
-\[
-    f(X) = f(X_0) + \vec{\nabla}f(X_0)\cdot (X - X_0) + \|X - X_0\| \cdot o(X - X_0)
-\] 
-
-\begin{prop}
-    $f$ est de classe  $\mathcal{C}^1$:  $f$ différentiable et 
-    \begin{align*}
-        : D &\longrightarrow \R^n \\
-        X &\longmapsto \vec{\nabla}f(X)
-    \end{align*} continue $\iff$ $f$ admet des dérviées partielles continues.
-\end{prop}
-
 \section{Extrema et points critiques}
 \begin{definition}
-    Extremum (local) de $f$: minimum ou maximum (local) de  $f$
+    Extremum (local) de $f$ est un minimum ou un maximum (local) de  $f$
+    \begin{itemize}
+        \item $X_0$ est un maximum local de $f$ si: $\exists \delta > 0$ tel que
+            \[
+            \forall X \in D, f(X) \le f(X_0) \text{ avec } d(X, X_0) \le \delta
+            \] 
+        \item $X_0$ est un minimum local de $f$ si: $\exists \delta > 0$ tel que
+            \[
+            \forall X \in D, f(X) \ge f(X_0) \text{ avec } d(X, X_0) \le \delta
+            \] 
+    \end{itemize}
 \end{definition}
 
 \begin{definition}
-    $X_0$ point critique de $f$: 
+    Soit $f: D \to \R$ et $X_0 \in D$, alors si
      \[
          \vec{\nabla}f(X_0) = \vec{0}
     \] 
+    donc $X_0$ est un \textbf{point critique}.
 \end{definition}
+\begin{intuition}
+   Le lien entre les extremums et le point critique: 
+   \begin{enumerate}
+       \item pour que l'extremum existe, il faut qu'il existe au moins un point critique - c'est un critère nécessaire \underline{mais pas suffisant}.
+       \item tout extremum local est un point critique
+   \end{enumerate}
+   Les points critiques falicites la recherche des extremums locaux.
+\end{intuition}
 
 \begin{theorem}
     Soit $f: D \longrightarrow \R$ différentiable, $D$ ouvert et  $X_0 \in D$ (sinon, si $D$ pas ouvert, il faut  $X_0 \in \operatorname{Int}(D)$) alors:
@@ -29,11 +36,11 @@
     \] 
 \end{theorem}
 
-\begin{eg}
+\begin{eg} Pas tout point critique est un extremum local
 \begin{figure}[H]
     \centering
     \incfig{point-critique-nestpas-extremum-local}
-    \caption{point-critique-nestpas-extremum-local}
+    \caption{Point critique qui n'est pas un extremum local}
     \label{fig:point-critique-nestpas-extremum-local}
 \end{figure}
 \end{eg}
@@ -46,22 +53,23 @@
 \begin{definition}
     Soient $\alpha = (\alpha_1, \ldots, \alpha_n)$ \quad $\alpha_i \in \N$. On pose
     \[
-        \partial_{x}^{\alpha}f = \frac{\partial^{\alpha_1}}{\partial_{x_1}^{\alpha_1}} \cdot \ldots \cdot \frac{\partial^{\alpha_n}}{\partial_{x_n}^{\alpha_n}}
+        \partial_{x}^{\alpha}f = \frac{\partial^{\alpha_1}}{\partial x_1^{\alpha_1}} \cdot \ldots \cdot \frac{\partial^{\alpha_n}}{\partial x_n^{\alpha_n}}
     \] 
-    \[
-        \frac{\partial}{\partial_{x_1}}\frac{\partial}{\partial_{x_2}}\frac{\partial}{\partial_{x_1}} f \overset{?}{=}  \frac{\partial^2}{\partial_{x_1}^2}\frac{\partial}{\partial_{x_2}}f
-    \] 
+    est la notation pour la dérivée d'ordre supérieure.
 \end{definition}
+\[
+    \frac{\partial}{\partial x_1}\frac{\partial}{\partial x_2}\frac{\partial}{\partial x_1} f \overset{?}{=}  \frac{\partial^2}{\partial x_1^2}\frac{\partial}{\partial x_2}f
+\] 
 
-\begin{theorem}
+\begin{theorem}\label{thm:lemme-de-schwarz}
     Lemme de Schwarz
     \par
     Si $f \in \mathcal{C}^2(D)$ alors 
     \[
-        \displaystyle \frac{\partial^2 f}{\partial_{x_i}\partial_{x_j}}(X) = \frac{\partial^2 f}{\partial_{x_j}\partial_{x_i}}(X) \qquad \forall X \in D, \forall i, j
+        \displaystyle \frac{\partial^2 f}{\partial x_i\partial x_j}(X) = \frac{\partial^2 f}{\partial x_j\partial x_i}(X) \qquad \forall X \in D, \forall i, j
     \] 
 \end{theorem}
-\begin{eg}
+\begin{eg} où une fonction admet des dérivées partielles d'ordre supérieure mais $\displaystyle \frac{\partial^2 f}{\partial x_i\partial x_j}(X) \neq  \frac{\partial^2 f}{\partial x_j\partial x_i}(X)$
    \[
    f(x_1, x_2) = \begin{cases}
        x_1x_2 \frac{x_1^2 - x_2^2}{x_1^2 + x_2^2} \text{ si } (x_1, x_2) \neq (0, 0)\\
@@ -91,11 +99,13 @@
     \] 
 \end{eg}
 
+\section{Formule de Taylor à l'ordre 2}
 \begin{definition}
     Soit $f \in \mathcal{C}^2(D)$. Matrice hessienne: matrice  $n \times n$
     \[
     H_f(X_0) = \begin{bmatrix} \frac{\partial^2}{\partial x_i \partial x_j}(X_0) \end{bmatrix} 1\le i,j \le n
     \] 
+    Le lemme \ref{thm:lemme-de-schwarz} nous donne que $H_f(X_0)$ est symmetrique si $f \in \mathcal{C}^2(D)$
     \[
         \vec{\nabla}f(X_0) = \begin{pmatrix} \frac{\partial f}{\partial x_1}(X_0) \\ \vdots \\ \frac{\partial f}{\partial x_n}(X_0) \end{pmatrix} 
     \] 
@@ -112,9 +122,10 @@
     \] 
 \end{theorem}
 \begin{intuition}
-   Alors, matrice hessienne sert à calculer dérivée d'ordre 2. 
+   Alors, la matrice hessienne sert à calculer la dérivée d'ordre 2. 
 \end{intuition}
 
+\section{Un rappel d'algèbre linéaire et le lien avec l'analyse}
 \[
     \vec{X} \cdot A\vec{X} = \sum_{1\le i,j \le n}^{} x_ia_{i,j}x_j
 \] 
@@ -173,36 +184,17 @@ Il existe une base $\vec{u_1}, \ldots, \vec{u_n}$ de $\R^n$ avec $\vec{u_i} \cdo
    \] 
 \end{eg}
 
+\section{Nature des points critiques}
 \begin{theorem}\label{thm:nature-des-points-critiques}
     (Nature des points critiques) \par
     Soient $f \in \mathcal{C}^2(D)$,  $X_0 \in D$, $D$ ouvert et  $\vec{\nabla }f(X_0) = \vec{0}$
     \begin{enumerate}
         \item si toutes les valeurs propres de $H_f(X_0)$ sont $> 0$ (resp $< 0$) $X_0$ est minimum (resp. maximum) local.
         \item si toutes les valeurs propres de $H_f(X_0)$ sont \underline{non nulles} mais pas de même signe, $X_0$ n'est pas un extremum local: $X_0$ est un point selle (un col).
-        \item si 0 valeurs propres de $H_f(X_0)$, pas de conclusion, ($X_0$ point critique dégénéré)
+        \item si 0 valeurs propres de $H_f(X_0)$, pas de conclusion, ($X_0$ point critique dégénéré) i.e on ne peut rien conclure
     \end{enumerate}
 \end{theorem}
 
-\begin{eg}
-   \[
-   f(x, y) = \frac{1}{2}(x^2 - y^2)
-   \]  
-   \[
-       H_f(0, 0) = \begin{pmatrix} 1 & 0\\ 0 & -1 \end{pmatrix} 
-   \] 
-   \[
-       I_f = \{(x, y, z): z = \frac{1}{2}(x^2 - y^2)\}
-   \] 
-\begin{figure}[H]
-    \centering
-    \incfig{exemple-point-selle}
-    \caption{exemple-point-selle}
-    \label{fig:exemple-point-selle}
-\end{figure}
-\end{eg}
-\[
-    \vec{\nabla }f(X_0) = \vec{0}!
-\] 
 \begin{preuve} du théorème ~\ref{thm:nature-des-points-critiques}
    \[
        f(X_0 + X) - f(X_0) = \frac{1}{2}X\cdot H_f(X_0)X + \|X\|^2\epsilon(X)
@@ -233,6 +225,26 @@ Il existe une base $\vec{u_1}, \ldots, \vec{u_n}$ de $\R^n$ avec $\vec{u_i} \cdo
    \end{enumerate}
 \end{preuve}
 
+\begin{eg}
+   \[
+   f(x, y) = \frac{1}{2}(x^2 - y^2)
+   \]  
+   \[
+       H_f(0, 0) = \begin{pmatrix} 1 & 0\\ 0 & -1 \end{pmatrix} 
+   \] 
+   \[
+       I_f = \{(x, y, z): z = \frac{1}{2}(x^2 - y^2)\}
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-point-selle}
+    \caption{Exemple de point selle.}
+    \label{fig:exemple-point-selle}
+\end{figure}
+Les lignes rouges représentent les dérivées partielles et on voit bien que les uns sont croissants et les autres décroissants, donc ce point n'est ni le minimum ni le maximum
+\end{eg}
+
+\begin{eg}
 $n = 2$
  \[
 A = \begin{pmatrix} 
@@ -274,26 +286,4 @@ A = H_f(X_0)
         \end{enumerate}
     \item $\det(A) = 0$,  $X_0$ point critique dégénéré
 \end{enumerate}
-
-\chapter{Espaces vectoriels normés}
-Soient:
-\begin{itemize}
-    \item espace vectoriel $E$,  $F$, etc
-    \item vecteurs:  $x, y, e$, etc.
-    \item vecteur nul: noté  $0_E$ ou simplement  $0$
-    \item scalaires:  $\lambda, \mu \in \mathbb{K}$
-    \item  $\mathbb{K} = \R \text{ ou } \mathbb{C}$
-    \item $A \in \mathcal{L}(E, F)$ action sur $x$, notée  $Ax$ (plutôt que $A(x)$)
-    \item dimension: $E$ de dimension finie si  $E$ admet une base avec un nombre fini d'éléments, sinon  $E$ est dit de dimension infinie  $\iff$ $\forall N \in \N$, il existe une famille libre de $N$ vecteurs. La dimension dépend de  $\mathbb{K}$!
-         \begin{itemize}
-             \item sur $\mathbb{C}$  $\dim \mathbb{C} = 1$ base formée du vecteur  $1 \in \mathbb{C}$
-             \item sur  $\R$ $\dim \mathbb{C} = 2$ base formée de $1, i$
-        \end{itemize}
-        \begin{align*}
-            &z = z \cdot 1 \quad z \in \mathbb{C}\\
-            &z = x \cdot 1 + y \cdot i \quad x, y \in \R
-        \end{align*}
-        \[
-            \mathbb{C} \sim \R^2 \text{ comme } \R \text{ espace vectoriel}
-        \] 
-\end{itemize}
+\end{eg}

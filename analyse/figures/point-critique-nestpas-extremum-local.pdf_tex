@@ -56,7 +56,7 @@
     \put(0,0){\includegraphics[width=\unitlength,page=1]{point-critique-nestpas-extremum-local.pdf}}%
     \put(0.3310942,0.05450039){\color[rgb]{0.79215686,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$[$\end{tabular}}}}%
     \put(0.49905024,0.05434087){\color[rgb]{0.79215686,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$]$\end{tabular}}}}%
-    \put(0.32072735,0.01290201){\color[rgb]{0.79215686,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1 \in [0, 1]$, $1 \not\in ]0, 1[$\end{tabular}}}}%
+    \put(0.34527559,0.00378405){\color[rgb]{0.79215686,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1 \in [0, 1]$, $1 \not\in ]0, 1[$\end{tabular}}}}%
     \put(0.3310942,0.03622735){\color[rgb]{0.79215686,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
     \put(0.49905024,0.03321775){\color[rgb]{0.79215686,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
   \end{picture}%
