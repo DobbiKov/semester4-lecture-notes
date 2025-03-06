@@ -40,7 +40,7 @@
 \newtheorem*{remarque}{Remarque}
 
 \begin{document}
-\section{Éspaces}
+\section{Distances et normes}
    \begin{definition}
        Une \textbf{norme} sur $\R^d$ est une application $N: \R^d \to \R$ tel que:
        \begin{enumerate}
@@ -57,4 +57,126 @@
            \item $d(X, Y) \ge 0 \quad \forall X,Y$ et $d(X,Y) = 0 \iff X = Y$
        \end{enumerate}
    \end{definition}
+   \begin{exemple} La distance et la norme canonique. Soit $X = (x_1, \ldots, x_n)$
+      \begin{enumerate}
+          \item La norme:
+            \[
+                \|X\| = \left( \sum_{i=1}^{n} x_i^2 \right)^{\frac{1}{2}}  = \sqrt{x_1^2 + \ldots + x_n^2} 
+            \]               
+        \item La distance: 
+            \[
+                d(X, Y) = \|X - Y\| = \sqrt{(x_1 - y_1)^2 + \ldots + (x_n - y_n)^2 } 
+            \] 
+
+      \end{enumerate} 
+   \end{exemple}
+\section{Éspaces métriques}
+\begin{definition}
+    Espace métrique est un ensemble muni de la distance.
+\end{definition}
+\begin{definition}
+    $(E, d)$ espace métrique et $x_0 \in E$ et $r \ge 0$, alors:
+    \begin{enumerate}
+        \item $B(x_0, r) = \{ x \in E : d(x_0, x) < r \}$ boule ouverte de centre $x_0$ et de rayon $r$
+        \item $B(x_0, r) = \{ x \in E : d(x_0, x) \le  r \}$ boule fermé de centre $x_0$ et de rayon $r$
+    \end{enumerate}
+\end{definition}
+\begin{definition}
+    Une partie $A \subset E$ est bornée si $\exists R > 0$ et $x_0 \in E$ tq $A \subset B(x_0, R)$. Autrement dit, s'il existe une boule dans laquelle $A$ est inclu.
+\end{definition}
+\section{Ouverts - fermés}
+\begin{definition}
+    Soit $(E, d)$ espace métrique.
+     \begin{enumerate}
+        \item $U \subset E$ est ouvert si $\forall x_0 \in U, \exists r > 0$ tel que $B(x_0, r) \subset U$ (si pour tout point de $U$ il existe une boule ouverte inclu dans  $U$)
+        \item $F \subset E$ est fermé si $E \setminus F$ est ouvert (si le complémentaire de $F$ est ouvert).
+    \end{enumerate}
+\end{definition}
+
+\begin{theorem} Très important!!
+    \begin{enumerate}
+        \item Soit $U_i$,  $i \in I$ une collection d'ouverts. Alors,  $\cup_{i \in I} \,U_i$ est ouvert.\\
+            Translate: Une union quelconque des ensembles ouverts est ouvert.
+        \item Si $U_1, \ldots, U_n$ sont ouverts
+            \[
+                \bigcap\limits_{i=1}^{n} \, U_i \text{ est ouvert.}
+            \] 
+            Translate: intersection \underline{finie} des ensembles ouverts est ouvert.
+    \end{enumerate}
+    \begin{enumerate}
+        \item Soit $U_i$,  $i \in I$ une collection de fermés. Alors,  $\cup_{i \in I} \,U_i$ est fermé.\\
+            Translate: Une union quelconque des ensembles fermés est fermé.
+        \item Si $U_1, \ldots, U_n$ sont fermés 
+            \[
+                \bigcap\limits_{i=1}^{n} \, U_i \text{ est fermé.}
+            \] 
+            Translate: intersection \underline{finie} des ensembles fermés est fermé.
+    \end{enumerate}
+\end{theorem}
+
+\section{Intérieur, Adhérence, Frontière}
+\begin{definition} 
+    Un point $x_0 \in A$ est intérieur à $A$ s'il existe  $r > 0$ tq  $B(x_0, r) \subset A$. \underline{Intérieur} de $A$ est l'ensemble de tous les points intérieurs à  $A$:
+     \[
+         \operatorname{Int}(A) = \{ x \in A : x \text{ est intérieur à } A \}
+    \] 
+    Note: le plus grand ouvert inclu dans $A$
+\end{definition}
+\begin{definition} 
+    Un point $x_0 \in A$ est adhérent à $A$ s'il existe  $r > 0$ tq  $B(x_0, r)$ intersecte $A$. \underline{Adhérence} de $A$ est l'ensemble de tous les points intérieurs à  $A$:
+     \[
+         \operatorname{Adh}(A) = \{ x \in E : x \text{ est adhérent à } A \}
+    \] 
+    Note: le plus petit fermé contenant $A$
+\end{definition}
+\begin{definition}
+    La frontière: $\partial A = \operatorname{Adh}(A) \setminus \operatorname{Int}(A) = \operatorname{Adh}(A) \cap \operatorname{Adh}(E \setminus A)$
+\end{definition}
+
+\begin{definition}
+    Soit $A \subset B$. On dit que $A$ est dense dans  $B$ si  $B \subset \operatorname{Adh}(A)$
+\end{definition}
+\begin{proposition} Caractérisations séquentielles:
+   \begin{enumerate}
+       \item \textbf{de férmé}: $A$ est fermé ssi pour toute suite  $(x_n)$ d'éléments de  $A$ qui covnverge (supposons vers $x$), sa limite $x$ est aussi dans  $A$ ($x \in A$)
+       \item \textbf{d'adhérence}: $x \in \operatorname{Adh}(A)$ ssi il existe une suite  $(x_n)$ d'éléments de  $A$ tq  $\lim_{n \to \infty} x_n = x$
+       \item \textbf{de compact}: $A \subset E$ est compact si pour toute suite $(x_n)$ d'éléments de  $A$, il existe une sous-suite  $(x_{\phi(n)})$ qui converge vers une limite  $x \in A$
+   \end{enumerate} 
+\end{proposition}
+\begin{proposition}
+   \begin{enumerate}
+       \item Si une suite $(x_n)$ converge vers une limite  $x$, cette limite est \textbf{unique}.
+       \item Si une suite  $(x_n)$ coverge vers une limite  $x$ et cette suite admet une sous-suite  $(x_{\phi(n)})$ qui converge vers une limite  $x'$. Alors on a toujours:  $x = x'$
+   \end{enumerate} 
+\end{proposition}
+\section{Compact}
+\begin{definition}
+    Soient $U = \bigcup_{i \in I} U_i$ où $U_i$ est ouvert  $\forall i \in I$. Alors, si $A \subset U$, donc $U$ est un recouvrement ouvert de  $A$.
+\end{definition}
+\begin{definition}
+    $K \subset E$ est \textbf{compact} si \underline{de TOUT recouvrement ouvert} de $K$ on peut extraire un sous-recouvrement ouvert fini: i.e, on peut trouver $i_1, \ldots, i_n \in I$ (un nombre fini de $i_i$) tels que:
+    \[
+        K \subset U_{i_1} \cup \ldots \cup U_{i_n}
+    \] 
+\end{definition}
+\begin{proposition}
+   \begin{enumerate}
+       \item Un ensemble fini est compact.
+       \item $K$ compact $\implies$ $K$ fermé et borné
+       \item Si $K$ compact et $F$ fermé, alors  $K \cap F$ est compact.
+       \item Si  $K$ compact, toute suite de Cauchy dans  $K$ coverge dans  $K$.
+   \end{enumerate} 
+\end{proposition}
+\section{Utilisation des fonctions continues}
+\begin{proposition}
+   Soit $F: E_1 \to  E_2$ une fonction continue avec $E_1$, $E_2$ éspaces métriques, alors:
+   \begin{enumerate}
+       \item Pour tout $U_2 \subset E_2$ ouvert, $F^{-1}(U_2)$ est ouvert dans $E_1$.
+       \item Pour tout $F_2 \subset E_2$ fermé, $F^{-1}(F_2)$ est fermé dans $E_1$. 
+       \item Pour toute suite $(x_n)$ dans  $E_1$ ayant limite $x$ (i.e $\lim_{n \to \infty} x_n = x$) on a:
+           \[
+           \lim_{n \to \infty} F(x_n) = F(x)
+           \] 
+   \end{enumerate}
+\end{proposition}
 \end{document}

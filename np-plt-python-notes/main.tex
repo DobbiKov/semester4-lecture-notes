@@ -1,0 +1,78 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newtheorem{theoreme}{Théorème}[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{exemple}{Exemple}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{propriete}{Propriété(s)}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{remarque}{Remarque}
+
+\usepackage{minted}
+\begin{document}
+    \section{NumPy}
+    \subsection{Meshgrid}
+    In order to simplify ploting, there exists a function called Meshgrid. It takes $x$ and  $y$ values and returns all possible combinations.
+     \begin{exemple}
+         if there are two arrays:
+         \begin{minted}[frame=lines, fontsize=\small, bgcolor=lightgray]{python}
+x = [1, 2]
+y = [3, 4]
+        \end{minted} 
+then meshgrid creates all possible combinations
+
+
+         \begin{minted}[frame=lines, fontsize=\small, bgcolor=lightgray]{python}
+xv, yv = np.meshgrid(x, y)
+xv = [
+[1, 2],
+[1, 2]
+]
+
+yv = [
+[ 3, 3 ],
+[ 4, 4]
+]
+        \end{minted} 
+
+Then, we have combinations of each x with each y.
+    \end{exemple}
+
+    \section{Matplotlib}
+    \subsection{quiver}
+    \begin{minted}{python}
+plt.quiver(X, Y, U, V) 
+    \end{minted}
+    This function draws vectors, it takes vector origins ($X, Y$) and vector directions ($U, V$)
+\end{document}
