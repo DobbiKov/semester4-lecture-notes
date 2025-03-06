@@ -32,9 +32,17 @@ jobs:
         latexmk_shell_escape: true
         working_directory: anal-avec-python
       # (*) To add a file, add the PDF filename to the following
+      #
+    - name: Analyse CheatSheet
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: cheatsheet.tex
+        latexmk_shell_escape: true
+        working_directory: analyse
     - name: Check PDF files
       run: |
         file analyse/main.pdf | grep -q ' PDF '
+        file analyse/cheatsheet.pdf | grep -q ' PDF '
         file linalg/main.pdf | grep -q ' PDF '
         file anal-avec-python/main.pdf | grep -q ' PDF '
         
@@ -53,6 +61,7 @@ jobs:
 
         # (*) To add a file, add the following command for that file
         cp -f analyse/main.pdf "$GITHUB_WORKSPACE/deploy/analyse.pdf"
+        cp -f analyse/cheatsheet.pdf "$GITHUB_WORKSPACE/deploy/analyse_cheatsheet.pdf"
         cp -f linalg/main.pdf "$GITHUB_WORKSPACE/deploy/linalg.pdf"
         cp -f anal-avec-python/main.pdf "$GITHUB_WORKSPACE/deploy/anal-avec-python.pdf"
 
