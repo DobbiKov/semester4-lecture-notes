@@ -22,14 +22,6 @@ Produit scalaire:
         \item définie si $B(u, u) = 0 \iff u = 0$
     \end{enumerate}
 \end{definition}
-\begin{explanation}
-    \begin{align*}
-        B(0, 0) &= B(0 + 1 \cdot 0, 0)\\
-                &\overset{\text{linéarité}}{=} B(0, 0) + 1 \cdot B(0, 0) \\
-                &= B(0,0) + B(0, 0)\\
-                & \implies B(0, 0) = 0
-    \end{align*}
-\end{explanation}
 \begin{notation}
    Produit scalaire est noté: $<u, v>$ 
 \end{notation}
@@ -65,6 +57,20 @@ Produit scalaire:
     \] 
     la norme (ou longeur) de $X$. (Il est bien définie car $<., .>$ est toujours positif)
 \end{property}
+\begin{property}
+   Soient $X, Y \in E$, alors:
+   \[
+       \|X + Y\|^2 = \|X\|^2 + 2\scalair{X, Y} + \|Y\|^2
+   \] 
+\end{property}
+\begin{proof}
+   \begin{align*}
+       \|X + Y\|^2 = \sqrt{\scalair{X + Y, X + Y}}^2 &= \scalair{X + Y, X + Y} \\ 
+                                                     &= \scalair{X, X + Y} + \scalair{Y, X + Y}  \\
+                                                     &= \scalair{X, X} + \scalair{X, Y} + \scalair{Y, X} + \scalair{Y, Y}\\
+                                                     &= \|X\|^2 + 2\scalair{X, Y} + \|Y\|
+   \end{align*} 
+\end{proof}
 \begin{lemma}\label{lemma:inegalite-cauchy-schwarz} inégalité de Cauchy-Schwarz
    On a
    \[
