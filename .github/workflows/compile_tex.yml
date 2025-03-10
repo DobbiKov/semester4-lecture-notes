@@ -39,11 +39,20 @@ jobs:
         root_file: cheatsheet.tex
         latexmk_shell_escape: true
         working_directory: analyse
+
+    - name: Linear Algebra CheatSheet
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: cheatsheet.tex
+        latexmk_shell_escape: true
+        working_directory: linalg
+
     - name: Check PDF files
       run: |
         file analyse/main.pdf | grep -q ' PDF '
         file analyse/cheatsheet.pdf | grep -q ' PDF '
         file linalg/main.pdf | grep -q ' PDF '
+        file linalg/cheatsheet.pdf | grep -q ' PDF '
         file anal-avec-python/main.pdf | grep -q ' PDF '
         
     - name: Upload to GitHub pages
@@ -64,6 +73,7 @@ jobs:
         cp -f analyse/cheatsheet.pdf "$GITHUB_WORKSPACE/deploy/analyse_cheatsheet.pdf"
         cp -f linalg/main.pdf "$GITHUB_WORKSPACE/deploy/linalg.pdf"
         cp -f anal-avec-python/main.pdf "$GITHUB_WORKSPACE/deploy/anal-avec-python.pdf"
+        cp -f linalg/cheatsheet.pdf "$GITHUB_WORKSPACE/deploy/linalg_cheatsheet.pdf"
 
         cd "$GITHUB_WORKSPACE/deploy"
 
