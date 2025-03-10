@@ -81,7 +81,7 @@
    Les formules utiles: (pour $X, Y \in E$)
    \begin{enumerate}
        \item $|\scalair{X, Y}| \le \|X\| \cdot \|Y\|$
-       \item $\|X + Y\| = \|X\|^2 + 2\scalair{X, Y} + \|Y\|^2$ 
+       \item $\|X + Y\|^2 = \|X\|^2 + 2\scalair{X, Y} + \|Y\|^2$ 
        \item $\|X + Y\|^2 + \|X - Y\|^2 = 2\left( \|X\|^2 + \|Y\|^2 \right) $
        \item $\scalair{X, Y} = \frac{1}{4}\left( \|X + Y\|^2 - \|X - Y\|^2 \right) $
    \end{enumerate}
@@ -89,5 +89,48 @@
 \subsection{Orthogonalité}
 \begin{definition}
     $u, v \in E$ sont \textbf{orthogonaux} si $\scalair{u, v} = 0$ et on les notes  $u \perp v$
+\end{definition}
+\begin{definition}
+    \textbf{Orthogonale de $A$}:
+    \[
+        A^{\perp} = \{ u \in E \mid \scalair{u, v} = 0 \quad \forall v \in A \}
+    \] 
+    aussi connu comme  \textbf{complement orthogonale}.
+\end{definition}
+\begin{prop}
+   Si $E$ est un espace euclidien et  $A \subset E$ son sous-espace vectoriel, alors:
+   \[
+       E = A \oplus A^{\perp}
+   \] 
+   i.e tout vecteur $x \in E$ peut s'écrit comme  $x = e + e'$ où  $e \in A$ et  $e' \in A'$.
+\end{prop}
+\begin{prop}
+   Si $f$ est une projection orthogonale sur  $F \subset E$, alors:
+   \[
+   f(f(x)) = f(x) \quad \forall x \in E
+   \] 
+\end{prop}
+\begin{definition}
+    La \textbf{projection orthogonale} sur un sous-espace $A \subset E$ est une application:
+    \begin{align*}
+        p_F: E &\longrightarrow F \\
+        x &\longmapsto p_F(x = e + e') = e
+    \end{align*}
+\end{definition}
+\begin{prop}
+    \textbf{La distance} d'un vecteur $x$ à un sous-espace  $F$ est:
+    \[
+    \|x - p_F(x)\|
+    \] 
+\end{prop}
+\begin{definition}
+    Une \textbf{isométrie} de $E$ est un endomorphisme tel que:
+     \[
+         \forall x, y \in E, \quad \scalair{f(x), f(y)} = \scalair{x, y}
+    \]
+    de plus,
+    \[
+    \forall x \in E, \quad \|f(x)\| = \|x\|
+    \] 
 \end{definition}
 \end{document}
