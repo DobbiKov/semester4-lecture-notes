@@ -30,6 +30,7 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\scalair}[1]{\left\langle #1 \right\rangle}
 
 \newtheorem{theorem}{Théorème}[section]
 \newtheorem{definition}{Définition}[section]
@@ -39,9 +40,54 @@
 \newtheorem*{notation}{Notation}
 \newtheorem*{remark}{Remarque}
 
+\author{Yehor KOROTENKO}
+\title{CheatSheet pour l'Algèbre Linéaire}
+
 \begin{document}
-\section{Algèbre Linéaire Révision}
+\maketitle
+\section{Éspaces euclidiens}
    \begin{prop}
       Endomorphisme $f: E \to E$ un drapeau invariant (i.e $f(E_i) \subset E_i$) $\iff$ $Mat(f)$ triangulaire supérieure 
    \end{prop} 
+\subsection{Produits scalairs et normes}
+\begin{definition}
+    Une forme bilinéaire sur $E$ (\textbf{produit scalair}) un espace euclidien est une application:
+    \begin{align*}
+        f: E \times E &\longrightarrow \R \\
+        (u, v) &\longmapsto f(u, v) 
+    \end{align*}
+    qui vérifie ces propriétés:
+    \begin{enumerate}
+        \item \textbf{Bilinéarité}:
+            \begin{enumerate}
+                \item $f(u + \lambda v, w) = B(u, w) + \lambda B(v, w)$ avec $u, v, w \in E$ et  $\lambda \in \R$
+                \item $f(u, v + \lambda w) = B(u, v) + \lambda B(v, w)$ avec $u, v, w \in E$ et $\lambda \in \R$
+            \end{enumerate}
+        \item \textbf{Symétrie}: $B(u, v) = B(v, u) \qquad \forall u, v \in E$ 
+        \item \textbf{Définie positive}: $\forall u \in E, B(u, u) \ge 0$
+        \item \textbf{Définie}: $B(u, u) = 0 \iff u = 0$
+    \end{enumerate}
+\end{definition}
+\begin{remark}
+    Le produit vectoriel est noté: $\scalair{., .}$ 
+\end{remark}
+\begin{definition}
+    La norme $\forall X \in E$:
+    \[
+        \|X\| = \sqrt{\scalair{X, X}} 
+    \] 
+\end{definition}
+\begin{prop}
+   Les formules utiles: (pour $X, Y \in E$)
+   \begin{enumerate}
+       \item $|\scalair{X, Y}| \le \|X\| \cdot \|Y\|$
+       \item $\|X + Y\| = \|X\|^2 + 2\scalair{X, Y} + \|Y\|^2$ 
+       \item $\|X + Y\|^2 + \|X - Y\|^2 = 2\left( \|X\|^2 + \|Y\|^2 \right) $
+       \item $\scalair{X, Y} = \frac{1}{4}\left( \|X + Y\|^2 - \|X - Y\|^2 \right) $
+   \end{enumerate}
+\end{prop}
+\subsection{Orthogonalité}
+\begin{definition}
+    $u, v \in E$ sont \textbf{orthogonaux} si $\scalair{u, v} = 0$ et on les notes  $u \perp v$
+\end{definition}
 \end{document}
