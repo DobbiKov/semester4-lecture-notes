@@ -86,7 +86,7 @@
    \end{center}
 \end{intuition}
 \begin{prop}
-    Produit scalaire respectes ces propriétés:
+    Produit scalaire respecte ces propriétés:
     \begin{enumerate}
         \item bilinaiarité $\quad \lambda \in \R$
             \begin{enumerate}
@@ -191,9 +191,9 @@
 On pose:
 \begin{align*}
     \|X\| & \text{(ou }\|X\|_2\text{)}\\
-          &= (X|X)^{\frac{1}{2}} = \left( \sum_{n=1}^{d} |x_i|^2 \right)^2
+          &= (X|X)^{\frac{1}{2}} = \left( \sum_{n=1}^{d} |x_i|^2 \right)^{\frac{1}{2}}
 \end{align*}
-norme hibertienne
+norme hilbertienne
 \[
     \underset{\in \C^d}{\|X\|^2} = \underset{\in \R^d}{\|Re\,X\|^2} + i\underset{\in \R^d}{\:\|Im\,X\|^2}\\
 \] 
@@ -224,17 +224,7 @@ norme hibertienne
 \end{itemize}
 \section{Distance sur $\R^d$}
 On oublie norme et produit scalaire. On introduit la distance
-\begin{definition}\label{def:distance} La distance
-    \[
-        d(X, Y) = \|X - Y\| 
-    \] 
-\end{definition}
-\begin{definition} La distance euclidienne
-    \[
-        d(X, Y) = \|X - Y\| = \sqrt{\sum_{n=1}^{d} (x_i - y_i)^2} 
-    \] 
-\end{definition}
-\begin{prop} Une distance est une application:
+\begin{definition}\label{def:distance} Une distance est une application:
     \begin{align*}
         d: \R^d &\longrightarrow \R \\
         (X, Y) &\longmapsto d((X, Y)) 
@@ -245,7 +235,12 @@ On oublie norme et produit scalaire. On introduit la distance
         \item $d(X, Y) \le d(X, Z) + d(Z, Y)$ (inég. triangulaire) $\forall X, Y, Z$ 
         \item $d(X, Y) \ge 0 \quad \forall X, Y$ et $d(X, Y) = 0 \iff X = Y$ 
     \end{enumerate}
-\end{prop}
+\end{definition}
+\begin{definition} La distance euclidienne
+    \[
+        d(X, Y) = \|X - Y\| = \sqrt{\sum_{n=1}^{d} (x_i - y_i)^2} 
+    \] 
+\end{definition}
 \begin{eg} Distances
    \begin{enumerate}
        \item $d_2(X, Y) = \|X - Y\|_2$ (distance euclidienne sur $\R^d$)

@@ -57,7 +57,7 @@
 \begin{property}
    \begin{enumerate}
        \item Toute partie finie est bornée
-       \item Si $A$ botnée et  $B \subset A$ alors $B$ bornée
+       \item Si $A$ bornée et  $B \subset A$ alors $B$ bornée
        \item L'union d'un nombre \underline{fini} de bornés est borné
    \end{enumerate} 
 \end{property}
@@ -248,3 +248,51 @@ distance $d(x, y)$ $\longrightarrow$ boules  $B(x_0, r)$ $\longrightarrow$ ensem
             On fixe $i$.  $x \in U_i$,  $U_i$ ouvert, donc  $\exists r_i > 0$ tel que $B(x, r) \subset U_i$, $1 \le i \le n$, donc $B(x, r) \subset U := \bigcap\limits_{1 \le i \le n} U_i$
     \end{enumerate}
 \end{preuve}
+
+\section{Algorithmes pour montrer qu'un ensemble est ouvert/fermé}
+\begin{center}
+    
+\begin{tabular}{c | c}
+    {\large \bf
+    Montrer qu'un ensemble est ouvert      } 
+ & 
+    {\large \bf
+    Montrer qu'un ensemble est fermé }
+ \\
+ \hline
+ \parbox[t]{8cm}{
+\begin{itemize}
+    \item \textbf{Utiliser la définition :} 
+    \[
+    \forall x \in \mathcal{U}, \exists r > 0 \quad \text{tel que} \quad B(x, r) \subset \mathcal{U}
+    \]
+    
+    \item Montrer que \( E \setminus \mathcal{U} \) est fermé.
+    
+    \item Montrer que \(\mathcal{U}\) est l'image réciproque d'un ouvert par une application continue.
+    
+    \item Exprimer \(\mathcal{U}\) comme une boule ouverte.
+    
+    \item Écrire \(\mathcal{U}\) comme :
+    \begin{itemize}
+        \item une réunion d'ouverts ;
+        \item une intersection finie d'ouverts.
+    \end{itemize}
+    
+    \item \(\mathcal{U} = \operatorname{Int}(U)\).
+    
+    \item Écrire \(\mathcal{U} = I_1 \times \dots \times I_n\) avec \( I_i \) ouvert.
+\end{itemize}
+} & \parbox[t]{8cm}{
+\begin{itemize}
+    \item \textbf{Utiliser la définition :} \( E \setminus V \) est ouvert.
+    
+    \item \textbf{Caractérisation séquentielle :} Toute suite convergente dans \(V\), sa limite est aussi dans \(V\).
+    
+    \item Montrer que \(V\) est l'image réciproque d'un fermé par une application continue.
+    
+    \item Montrer que \(V\) est compact.
+\end{itemize}
+}
+\end{tabular}
+\end{center}
