@@ -152,7 +152,7 @@ La définition suivante sera étudiée dans le cours d'analyse:
            \] 
        \item Identité de polarisation:
            \[
-           <u, v> = \frac{1}{4}(\|u + v\|^2 - \|u - v\|^2)
+               \scalair{u, v} = \frac{1}{4}(\|u + v\|^2 - \|u - v\|^2)
            \] 
    \end{enumerate}
 \end{prop}
@@ -160,20 +160,20 @@ La définition suivante sera étudiée dans le cours d'analyse:
    \begin{enumerate}
        \item 
            \begin{align*}
-               \|u + v\|^2 &= <u + v, u + v>\\
-                           &= \|u\|^2 + 2<u,v> + \|v\|^2
+               \|u + v\|^2 &= \scalair{u + v, u + v}\\
+                           &= \|u\|^2 + 2\scalair{u,v} + \|v\|^2
            \end{align*}
-        \item $\|u - v\|^2 = \|u\|^2 - 2<u, v> + \|v\|^2$
+       \item $\|u - v\|^2 = \|u\|^2 - 2\scalair{u, v} + \|v\|^2$
    \end{enumerate} 
    On a:
    \begin{itemize}
        \item 
            $(1) + (2)$:  $\|u + v\|^2 + \|u - v\|^2 = 2 (\|u\|^2 + \|v\|^2)$
-       \item $(1) - (2)$:  $\|u + v\|^2 - \|u - v\|^2 = 4<u, v>$ 
+       \item $(1) - (2)$:  $\|u + v\|^2 - \|u - v\|^2 = 4\scalair{u, v}$ 
    \end{itemize}
 \end{explanation}
 \section{Orthogonalité}
-Soit $E$ un  $\R$-espace vectoriel et  $< , >$ un produit scalaire sur  $E$.
+Soit $E$ un  $\R$-espace vectoriel et  $\scalair{ , }$ un produit scalaire sur  $E$.
 \begin{definition}\label{def:orthogonal}
      $u, v \in E$ sont dits \underline{orthogonaux} si  $<u, v> = 0$. On note  $u \perp v$
       \begin{itemize}
@@ -276,7 +276,7 @@ Rappele:
    Alors, forcément  $dim(Ker(f)) = 0$ et par le théorème du rang on a  $dim(F) = dim(Im(f))$, donc  $Im(f) = F'$
 \end{explanation}
 \begin{lemma} du Riesz:\\
-    Soit $(E, <.,.>)$ un espace euclidien de  dimension finie et $f \in E^*$. Alors, $\exists! u \in E$ tel que $f(x) = <u, x> \quad \forall x \in E$. La forme linéaire $f$ est donné par un produit scalaire avec un vecteur. 
+    Soit $(E, \scalair{.,.})$ un espace euclidien de  dimension finie et $f \in E^*$. Alors, $\exists! u \in E$ tel que $f(x) = \scalair{u, x} \quad \forall x \in E$. La forme linéaire $f$ est donné par un produit scalaire avec un vecteur. 
 \end{lemma}
 \begin{notation}
    Pour tout $v \in E$ on note par  $f_v$ l'application:

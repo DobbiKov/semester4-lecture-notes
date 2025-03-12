@@ -35,7 +35,7 @@ Soit $(E, \scalair{,})$ un espace euclidien et  $F \subset E$ un sous-espace vec
     Soit $E$ un espace vectoriel muni d'un produit scalaire  $\scalair{,}$
      \begin{itemize}
          \item Une famille $(v_i)_{i \ge 0}$ de vecteurs de $E$ est dite \underline{orthogonale} si pour $i \neq j$ on a $\scalair{v_i, v_j} = 0$ i.e  $v_i \perp v_j$
-         \item Une famille orthogonale de  $E$ est une famille orthogonale  $(v_i)_{i \ge  0}$ tq de plus $\|v_i\| = 1$ pour  $i \ge 0$
+         \item Une famille orthonormale de  $E$ est une famille orthogonale  $(v_i)_{i \ge  0}$ tq de plus $\|v_i\| = 1$ pour  $i \ge 0$
     \end{itemize}
 \end{definition}
 \begin{eg}
@@ -43,8 +43,8 @@ Soit $(E, \scalair{,})$ un espace euclidien et  $F \subset E$ un sous-espace vec
        \item $E = \R^{n}$ muni du produit scalaire canonique. La base canonique $(e_1, \ldots, e_n)$ est orthogonale car 
            \[
            \scalair{e_i, e_j} = \begin{cases}
-               1 \, i = j\\
-               0 \, i \neq j
+               1 \text{ si } i = j\\
+               0 \text{ si } i \neq j
            \end{cases}
            \] 
        \item Dans $E = \mathcal{C}^{0}([-1, 1], \R)$ muni de $\scalair{f,g} = \int_{-1}^{1} f(t)g(t)\,d{t}$. La famille $(\cos(t), \sin(t))$ est orthogonale. La famille $(1, t^2)$ n'est pas orthogonale:
@@ -118,7 +118,7 @@ Autrement dit, le réél $\scalar{x}{e_i}$ est la  $i^{\text{ème}}$ coordonnée
    \[
        \vec{v} = \underbrace{\scalair{v, e_1}}_{= 2} \cdot \vec{e_1} + \underbrace{\scalair{v, e_2}}_{= 3} \cdot \vec{e_2}
    \]  
-   Habituelement, pour trouver les coordonnées dans une base, on devrait résoudre un système linéaire.
+   Habituelement, pour trouver les coordonnées dans une base, on devrait résoudre un système linéaire, tandis qu’une base orthonormale permet de les obtenir en calculant le produit scalaire avec chaque vecteur de la base, ce qui est beaucoup plus simple.
 \end{intuition}
 \begin{preuve}
     Posons $y := \sum_{i=1}^{n} \scalar{x}{e_i}e_i$ . Alors, 
