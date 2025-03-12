@@ -216,7 +216,7 @@ Développons ce déterminant par rapport à la première colonne:
 \end{align*}
 \end{eg}
 
-\section{Matrice adjointe}
+\section{Comatrice et matrice adjointe}
 D'abord, rappelons la définition de $A_{i,j}$. C'est une matrice carrée où $i^{\text{ième}}$ ligne et $j^{\text{ième}}$ colonne sont supprimé. (Voir la définition ~\ref{def:matrice-ligne-colonne-supprime}).
 \begin{definition}
     Soit une matrice carrée $A = (a_{i, j}) \in \mathcal{M}_n(\R)$. On note
@@ -231,8 +231,10 @@ D'abord, rappelons la définition de $A_{i,j}$. C'est une matrice carrée où $i
             \vdots  & \ddots & \vdots  \\
             b_{n,1} & \ldots & b_{n, n}\\
         \end{bmatrix} 
+        = \operatorname{Com}(A)
     \] 
-    Alors, la matrice adjointe de $A$ est définie comme:
+    La matrice $N$ est appelée \textbf{la comatrice} de $A$.
+    Alors, la \textbf{matrice adjointe} de $A$ est définie comme la comatrice transposée:
     \[
         A^{*} = N^{T} = 
         \begin{bmatrix} 
