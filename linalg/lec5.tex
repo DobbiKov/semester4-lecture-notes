@@ -205,6 +205,9 @@ Ne vous concentrez pas trop sur cette équation pour l'instant, on va y revenir.
    P_f(\lambda) = \det(A - \lambda I)
    \] 
 \end{prop}
+\begin{definition}
+    L'ensemble des valeurs propres de $f$ est dit  \textbf{spectre} de $f$ et est noté  $\operatorname{Sp}_K(f)$ ou  $\operatorname{Sp}_K(A)$ si $A$ une matrice de  $f$.
+\end{definition}
 Pour clarifier:
 \begin{eg}
    Soit $f$ un endomorphisme dans  $\R^2$ dont la matrice représentative dans la base canonique est:
@@ -318,6 +321,71 @@ Ensuite, généralisons ce qu'on a fait.
            \] 
    \end{enumerate} 
 \end{remark}
+
+\begin{prop}
+    Soient $\lambda_1, \ldots, \lambda_p$ des scalaires deux à deux distincts. Alors les espaces propres $E_{\lambda_1}, \ldots, E_{\lambda_p}$ sont en somme directe. Autrement dit, si $\mathcal{B}_1, \ldots, \mathcal{B}_p$ sont des bases de $E_{\lambda_1}, \ldots, E_{\lambda_p}$, la famille $\{\mathcal{B}_1, \ldots, \mathcal{B}_p\}$ est libre (mais pas nécessairement génératrice de $E$).
+\end{prop}
+\begin{preuve}
+Soient $E_{\lambda_1}, \ldots, E_{\lambda_p}$ les espaces propres associés aux valeurs propres $\lambda_1, \ldots, \lambda_p$ d’un endomorphisme $f$ d’un espace vectoriel E. Nous devons montrer que ces sous-espaces sont en somme directe, c’est-à-dire que si un vecteur appartient à leur intersection, alors il est nul.
+
+Prenons un élément v appartenant à leur somme, c’est-à-dire qu’il peut s’écrire sous la forme :
+\[
+    v = v_1 + v_2 + \cdots + v_p
+\] 
+avec $v_i \in E_{\lambda_i}$ pour tout $i$.
+
+Puisque chaque $v_i$ est un vecteur propre pour $f$ associé à $\lambda_i$, on a :
+\[
+    f(v_i) = \lambda_i v_i.
+\] 
+Appliquons f à la somme :
+\[
+    f(v) = f(v_1 + v_2 + \cdots + v_p) = f(v_1) + f(v_2) + \cdots + f(v_p).
+\] 
+En utilisant la linéarité de $f$, cela donne :
+\[
+    f(v) = \lambda_1 v_1 + \lambda_2 v_2 + \cdots + \lambda_p v_p.
+\] 
+Or, $v$ est aussi une combinaison de ces mêmes vecteurs :
+\[
+    v = v_1 + v_2 + \cdots + v_p.
+\] 
+Donc, en réarrangeant :
+\[
+    (\lambda_1 v_1 + \lambda_2 v_2 + \cdots + \lambda_p v_p) - (v_1 + v_2 + \cdots + v_p) = 0.
+\] 
+Ce qui donne :
+\[
+    (\lambda_1 - 1) v_1 + (\lambda_2 - 1) v_2 + \cdots + (\lambda_p - 1) v_p = 0.
+\] 
+Factorisons chaque terme :
+\[
+    (\lambda_1 - \lambda) v_1 + (\lambda_2 - \lambda) v_2 + \cdots + (\lambda_p - \lambda) v_p = 0.
+\] 
+Or, les $\lambda_i$ sont supposés deux à deux distincts. On en déduit que les coefficients sont différents, et que la somme est nulle uniquement si tous les $v_i$ sont nuls (puisque les espaces propres sont en général en somme directe).
+
+Ainsi, $v = 0$, ce qui prouve que les espaces propres sont en somme directe.
+\end{preuve}
+Ainsi, les espaces propres sont toujours en sommes directe, mais pas necessairement égale à $E$:
+ \[
+     E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p} \underset{\neq}{\subset} E
+\] 
+ce qu'on a si:
+\[
+\dim E_{\lambda_1} + \ldots + \dim E_{\lambda_p} < \dim E
+\] 
+
+\begin{theorem}
+    Soit $f$ un endomorphisme dans  $E$ et  $\lambda_1, \ldots, \lambda_p$ ses valeurs propres, alors les propriétés suivantes sont équivalentes:
+    \begin{enumerate}
+        \item $f$ est diagonalisable
+        \item  $E$ est somme directe de ses espaces propres:  $E = E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p}$
+        \item $\dim E_{\lambda_1} + \ldots + \dim E_{\lambda_p} = \dim E$
+    \end{enumerate}
+\end{theorem}
+\begin{corollary}
+   Si $f$ est un endomorphisme de  $E$ avec  $\dim E = n$ et  $f$ admet  $n$ valeurs propres  deux à deux distinctes, alors $f$ est diagonalisable.
+\end{corollary}
 
 
 % \begin{tikzpicture}
