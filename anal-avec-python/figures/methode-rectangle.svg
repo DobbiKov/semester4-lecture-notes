@@ -17,7 +17,14 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
-     id="defs2" />
+     id="defs2">
+    <rect
+       x="59.004509"
+       y="38.025128"
+       width="675.27383"
+       height="346.15979"
+       id="rect3" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,9 +32,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.7389419"
-     inkscape:cx="289.83142"
-     inkscape:cy="166.19302"
+     inkscape:zoom="0.87053877"
+     inkscape:cx="400.90116"
+     inkscape:cy="350.9321"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -35,9 +42,9 @@
      width="200mm"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1800"
-     inkscape:window-height="1097"
-     inkscape:window-x="0"
+     inkscape:window-width="1104"
+     inkscape:window-height="1096"
+     inkscape:window-x="600"
      inkscape:window-y="44"
      inkscape:window-maximized="0"
      inkscape:showpageshadow="2"

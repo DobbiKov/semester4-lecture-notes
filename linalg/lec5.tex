@@ -37,7 +37,7 @@ Soit $\{e_i'\}$ une autre base de  $E$, alors on peut représenter l'application
      A' = M(f)_{e_i'} = P^{-1}AP = \|f(e_1'), \ldots, f(e_n')\|_{e_i'}
 \] 
 \begin{definition}\label{def:matrice-diagonalisable}
-    La matrice $A$ est \textbf{diagonalisable} s'il existe une matrice semblable  $A'$ diagonale:
+    La matrice $A$ est \textbf{diagonalisable} s'il existe une matrice semblable\footnote{$A$ est semblable à  $A'$ s'il existe une matrice de passage  $P$ telle que  $A' = P^{-1}AP$}  $A'$ diagonale:
      \[
          A' = 
          \begin{bmatrix} 
@@ -199,11 +199,12 @@ En développant ce détérminant on obtient une équiation du type:
 \] 
 dont les racines sont les valeurs propres de $f$ (rappelle: valeur propre est un facteur $\lambda$).
 Ne vous concentrez pas trop sur cette équation pour l'instant, on va y revenir.
-\begin{prop}
+\begin{prop}\label{prop:polynome-caracteristique}
    Soit $f$ un endomorphisme dans un espace vectoriel  $E$ de dimension finie  $n$ et $A$ la matrice représentative de  $f$ dans une base de  $E$. Les valeurs propres de  $f$ sont les racine du polynôme:
    \[
    P_f(\lambda) = \det(A - \lambda I)
    \] 
+   Ce polynôme est dit \textbf{polynôme caracteristique} de $f$.
 \end{prop}
 \begin{definition}
     L'ensemble des valeurs propres de $f$ est dit  \textbf{spectre} de $f$ et est noté  $\operatorname{Sp}_K(f)$ ou  $\operatorname{Sp}_K(A)$ si $A$ une matrice de  $f$.
@@ -287,7 +288,7 @@ Revenons sur l'utilité des vecteurs propres. Soit $f$ un endomorphisme de  $E$ 
           \item On peut calculer les coordonnées de $f(v_1)$ et $f(v_2)$ dans la base $\{v_1, v_2\}$, on a:
               \begin{align*}
                   &f(v_1) = 3v_1 = 3 \cdot v_1 + 0 \cdot v_2\\
-                  &f(v_2) = 2v_2 = 0 \cdot v_0 + 2 \cdot v_2
+                  &f(v_2) = 2v_2 = 0 \cdot v_1 + 2 \cdot v_2
               \end{align*}
               Et alors $\operatorname{Mat}_{v_i}(f) = \|f(v_1), f(v_2)\|_{v_i} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} $ 
           \item On peut calculer la matrice $P = P_{e_i \to v_i}$de passage d'une base $\{e_i\}$ vers la base  $\{v_i\}$ et en déduire la matrice de $f$ dans la nouvelle base. On a:
@@ -387,6 +388,122 @@ ce qu'on a si:
    Si $f$ est un endomorphisme de  $E$ avec  $\dim E = n$ et  $f$ admet  $n$ valeurs propres  deux à deux distinctes, alors $f$ est diagonalisable.
 \end{corollary}
 
+Mais comme les valeurs propres sont les racines du polynôme caracteristique (voir prop \ref{prop:polynome-caracteristique}) on a:
+\begin{prop}
+   Soit $f$ un endomorphisme dans $E$ et  $\lambda$ une valeur propre d'ordre  $\alpha$ (i.e $\alpha$ est une racine de  $P_f(\lambda)$ d'ordre  $\alpha$, i.e  $P_f(\lambda) = (X - \lambda)^nQ(X)$ avec  $n \in \N^*$). Alors:
+   \[
+   \dim E_{\lambda} \le \alpha
+   \] 
+\end{prop}
+\begin{theorem}
+   Soit $f$ un endomorphisme dans  $E$ avec $\dim E = n$. Alors  $f$ est diagonalisable si et seulement si: 
+   \begin{enumerate}
+       \item $P_f(X)$ est \underline{scindé}, i.e:
+            \[
+                P_f(X) = (-1)^n (X - \lambda_1)^{\alpha_1} \cdot \ldots \cdot (X - \lambda_p)^{\alpha_p}
+           \] 
+           ($\lambda_i$ sont les racines donc les valeurs propres) et $\alpha_1 + \ldots + \alpha_p = n$. Alors, si la somme des multiplicités des racines est égale à la dimension de l'éspace vectoriel.
+       \item Les dimensions des espaces propres sont \underline{maximales}, i.e $\forall i \in \{1, \ldots, p\}$
+           \[
+                \dim E_{\lambda_i} = \alpha_i 
+           \] 
+   \end{enumerate}
+\end{theorem}
+\begin{intuition}
+   Ce n'est pas toujours facile de comprendre l'idée par les polynômes caracteristiques, alors une autre façon de voir ça est:
+   \begin{enumerate}
+       \item On trouve les valeurs propres: $\lambda_1, \ldots, \lambda_p$
+       \item Puis on trouve les espaces propres: $E_{\lambda_i} = \ker(f - \lambda_i I)$
+       \item On somme les dimension: $\dim E_{\lambda_1} + \ldots + \dim E_{\lambda_p} =: d$.  
+           \begin{itemize}
+               \item 
+                   Si $d = \dim E$ i.e si la somme des dimension est égale à la dimension de l'espace  $E$, les espaces propres engendrent  $E$ et donc  $f$ est diagonalisable (car sa matrice peut s'écrire dans la base de ces vecteurs propres).
+              \item Sinon le nombre de vecteurs propres libres ne suffit pas pour engendrer  $E$.
+           \end{itemize}
+   \end{enumerate}
+\end{intuition}
+
+\section{Les applications}
+\subsection{Calcul de la puissance}
+Alors, on est revenu là, où on a commencé, je vous rappele l'exercice du début du chapitre:
+\begin{ex}
+   Calculer 
+   \[
+   \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+   \end{bmatrix}^{15} = \underbrace{
+       \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+       \end{bmatrix}
+       \cdot
+       \ldots
+       \cdot
+       \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+       \end{bmatrix}
+   }_{15 \text{ fois}}
+   \] 
+On rappelle, que les vecteurs propres de $A$ sont: 
+\[
+v_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \text{ et } v_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix} 
+\] 
+qui sont libres et engendrent $\R^2$ alors forment une base de $\R^2$, alors on peut écrire à dans cette nouvelle base et comme on a déjà trouvé:
+
+\[
+    A' = P^{-1}AP = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} 
+\] 
+dans la base $(v_1, v_2)$ avec la matrice de passage:
+\[
+    P = \begin{bmatrix} 1 & -1\\ 0 & 1 \end{bmatrix} \text{ et } P^{-1} = \begin{bmatrix} 1 & 1 \\ 0 & 1  \end{bmatrix}
+\] 
+De plus, en multipliant $A'$ avec $A'$, on a:  
+\[
+    A' \cdot A' = (P^{-1}AP)(P^{-1}AP) = P^{-1}A^2P = A'^2
+\] 
+d'où
+\[
+    A'^n = P^{-1}A^{n}P \implies PA'^nP^{-1} = PP^{-1}A^{n}PP^{-1} = A^{n}
+\] 
+Cela nous donne la possibilité de calculer d'abord la puissance de $A'$:
+ \[
+     A'^{15} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}^{15} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}^{13} = \begin{bmatrix} 3^2 & 0 \\ 0 & 2^2 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}^{13} = \begin{bmatrix} 3^{15} & 0 \\ 0 & 2^{15} \end{bmatrix}
+\] 
+Voilà, beaucoup plus facile, que calculer $A^15$ directement, alors il nous reste à revenir en base canonique:
+ \[
+     P \begin{bmatrix} 3^{15} & 0 \\ 0 & 2^{15} \end{bmatrix} P^{-1} = \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 3^{15} & 0 \\ 0 & 2^{15} \end{bmatrix}\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 3^{15} & 3^{15} - 2^{15} \\ 0 & 2^{15}\end{bmatrix} 
+\] 
+\end{ex}
+Ce qui est très utile dans les matrices diagonales, c'est que la puissance de telle matrice égale à la même matrice avec les éléments diagonaux pris à la puissance, i.e:
+\[
+    A' = \begin{bmatrix} 
+        \lambda_1 & 0 & \ldots & 0\\ 
+        0 & \lambda_2 & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n
+    \end{bmatrix} \implies A'^{n} = \begin{bmatrix} 
+        \lambda_1 & 0 & \ldots & 0\\ 
+        0 & \lambda_2 & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n
+    \end{bmatrix}^{n} = \begin{bmatrix} 
+        \lambda_1^n & 0 & \ldots & 0\\ 
+        0 & \lambda_2^n & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n^n
+    \end{bmatrix}
+\] 
+Généralisons: Si $A \in \mathcal{M}_n(K)$ est diagonalisable (i.e  il existe $P$ et  $A'$ telles que  $A' = P^{-1}AP$), alors:
+\[
+    A^{n} = P(A'^{n})P^{-1} = P\begin{bmatrix} 
+        \lambda_1^n & 0 & \ldots & 0\\ 
+        0 & \lambda_2^n & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n^n
+    \end{bmatrix}P^{-1}
+\] 
 
 % \begin{tikzpicture}
 %     \begin{axis}[
