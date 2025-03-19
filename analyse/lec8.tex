@@ -1,0 +1,241 @@
+\begin{definition}
+    Soit $E$ un  $\mathbb{K}$-espace vectoriel et $\lambda \in \R$, la \textbf{norme} sur  $E$ est une application $N: E \to \R_{+}$ avec:
+    \begin{enumerate}
+        \item $N(\lambda u) = |\lambda|N(u) \quad u \in E$
+        \item $N(u + v) \le N(u) + N(v)$
+        \item $N(u) = 0 \iff u = 0_{E}$
+    \end{enumerate}
+    \textbf{semi-norme}: $1$ et  $2$ seulement.
+\end{definition}
+
+On peut interpreter $2$ comme:
+ \[
+\left| N(u) - N(v) \right| \le N(u - v)
+\] 
+
+\begin{prop}
+    \textbf{Norme induite}: Si $F \subset E$ un sous-espace vectoriel, je restreins $N$ à  $F$, alors  $(F, N)$ est un espace vectoriel normé.
+\end{prop}
+
+\begin{eg}
+    $E = \mathbb{K}^n$ avec  $x = (x_1, \ldots, x_n) \in E$ 
+    \begin{itemize}
+        \item $\|x\|_1 = \sum_{i=1}^{n} |x_i|$
+        \item $\|x\|_2 = \left(\sum_{i=1}^{n} |x_i|^2\right)^{\frac{1}{2}}$
+        \item $\|x\|_{\infty} = \max_{1 \le i \le n} |x_i|$
+        \item $\|x\|_p = \left( \sum_{i=1}^{n} |x_i|^p \right)^{\frac{1}{p}}$ avec $1 \le p < \infty$
+    \end{itemize}
+\end{eg}
+
+TODO: ingégalité de Minkowski
+
+\begin{definition}
+    Soit $U$  un ensemble $E = \{f: U \to \mathbb{K} \text{ bornée} \}$ 
+    \[
+        \|f\|_{\infty} = \sup_{x \in U} |f(x)| \text{ norme sur E}
+    \] 
+\end{definition}
+\begin{definition}
+    $R([a, b], \mathbb{K})$ les  $f: [a, b] \to \mathbb{K}$ intégrables au sens de Riemann,
+\end{definition}
+
+\begin{eg}
+    \[
+        \|f\|_{p} = \left( \int_{{a}}^{{b}} {|f(x)|^{p}} \: d{x} {} \right)^{\frac{1}{p}} \text{ avec } 1 \le p < \infty
+    \] 
+    $\| . \|_{p}$ est une semi-norme sur $R([a, b], \mathbb{K})$ (inégalité de Minkowski). $\|f\|_{p} = 0$ n'entraine pas que $f = 0$ (e.g: $[a, b] = [-1, 1]$,  $f(x) = x$, $p = 3$). 
+    \[
+        \|u + v\|_{p} \le \|u\|_p + \|v\|_p
+    \] 
+    Sur $E = \mathcal{C}([a, b], \mathbb{K})$,  $\| . \|_{p}$ est une norme:
+    si $f: [a, b] \to \mathbb{K}$ continue et $\int_{{a}}^{{b}} {|f(x)|^p} \: d{x} = 0$ alors $f(x) = 0 \forall x \in [a, b]$
+\end{eg}
+
+\begin{eg}
+    $E = \mathbb{K}^{\N}$ un ensemble des suites $u$ à valeurs dans  $\mathbb{K}$ 
+    \[
+    u = (u_1, u_2, \ldots, u_n, \ldots )
+    \] 
+    pour $1 \le p < \infty$
+    \[
+        l^{p}(\N, \mathbb{K}) = \{(u_n): \sum_{n \in \N}^{} |u_n|^{p} \text{ est convergente } \}
+    \] 
+    \[
+        \|u\|_p = \left( \sum_{n=0}^{\infty} |u_n|^{p} \right)^{\frac{1}{p}}
+    \] 
+    est une norme sur $l^{p}(\N, \mathbb{K})$
+    \[
+        p = \infty \quad l^{\infty}(\N, \mathbb{K}) = \{u \text{ bornée } \}
+    \] 
+    \[
+        \|u\|_{\infty} = \sup_{n \in \N} |u_n|
+    \] 
+\end{eg}
+\section{Topologie des espaces vectoriels normés}
+\begin{prop}
+    Soit $(E, \| . \|)$ un espace vectoriel normé avec 
+     \[
+    d(u, v) = \|u - v\|
+    \] 
+    une distance sur $E$ (induite par $\| . \|$), alors  $(E, d)$ est un espace métrique.
+\end{prop}
+\begin{definition}
+    Un espace vectoriel normé complet s'appelle \textbf{un espace de Banach}.
+\end{definition}
+Cas de dimension finie:
+\begin{enumerate}
+    \item Tout espace vectoriel normé de dimension finie est compet (voir plus bas)
+    \item Si $E$ de dim finie:
+         \[
+        K \text{ compact} \iff K \text{ fermé et borné }
+        \] 
+\end{enumerate}
+\begin{lemma}
+   \[
+       \left( \mathcal{C}([0, 1], \R), \|.\|_1 \right) 
+   \]  
+   n'est pas complet.
+\end{lemma}
+\begin{figure}[H]
+    \centering
+    \incfig{lemma-n-est-pas-complet}
+    \caption{lemma-n-est-pas-complet}
+    \label{fig:lemma-n-est-pas-complet}
+\end{figure}
+$\|f_n - f\|_1 = 2 \cdot \frac{1}{n} \cdot \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{2n} \xrightarrow[n \to +\infty]{} 0$ 
+$\|f_n - f_p\|_1 \le \|f_n - f\|_1 + \|f - f_p\|_1 \le  \frac{1}{n} + \frac{1}{p}$
+Soit $\epsilon > 0$, si  $n, p \ge \frac{2}{\epsilon}$, alors $\|f_n - f_p\|_1 \le  \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$, alors $(f_n)$ de Cauchy. Supposons que  $\exists g \in \mathcal{C}([0,1], \R)$ avec $\|f_n - g\|_1 \xrightarrow[n \to  \infty]{} 0$
+\[
+    \|f - g\|_1 \le \underset{\xrightarrow[n \to  \infty]{} 0}{\|f - f_n\|_1} + \underset{\xrightarrow[n \to  \infty]{} 0}{\|f_n - g\|_1}
+\]
+donc $\|f - g\|_1 = 0$
+ \[
+     \|f - g\|_1 = \int_{{0}}^{{1}} {|f(x) - g(x)|} \: d{x} \ge \int_{{0}}^{{\frac{1}{2} - \delta}} {|f(x) - g(x)|} \: d{x} + \int_{{\frac{1}{2} + \delta}}^{{1}} {|f(x) - g(x)|} \: d{x} 
+\] 
+\begin{itemize}
+    \item sur $[0, \frac{1}{2} - \delta]$ $f$ continue
+    \item sur $[\frac{1}{2} + \delta, 1]$ $f$ continue
+\end{itemize}
+\[
+g(x) = \begin{cases}
+    0 \text{ si } x \le \frac{1}{2} - \delta\\
+    1 \text{ si } x \ge \frac{1}{2} + \delta
+\end{cases}
+\] 
+$g$ pas continue en  $\frac{1}{2}$
+ 
+\begin{lemma}
+    Dans $E = l^{1}(\N, \R)$ muni de
+    \[
+    \|u\|_1 = \sum_{n=0}^{\infty} |u_n|
+    \] 
+    $B_f(0, 1)$ n'est pas compacte.
+\end{lemma}
+\begin{preuve}
+    On construit une suite d'éléments de $B_f(0, 1)$ \underline{sans sous-suite convergente}.
+    \[
+    u \in E \quad u: \N \to \R
+    \] 
+    Je note $u(p)$ au lieu de  $u_p$ suite dans  $E$ noté  $(u_n)$,  $u_n \in E$. $u_n(p)$ p-ième terme de  $u_n$. Je pose  
+    \[
+    u_n(p) = \delta_{n, p} = \begin{cases}
+        1 \text{ si } n = p\\
+        0 \text{ sinon}
+    \end{cases}
+    \] 
+    \[
+    \|u_n\|_1 = \sum_{p=0}^{\infty} |u_n(p)| = |u_n(n)| = 1
+    \] 
+    Donc $u_n \in B_f(0, 1) \forall n$.
+    \par
+    Si $v \in l^1(\N, \R)$
+    \[
+    |v(p)| \le \sum_{p=0}^{\infty} |v(p)| = \|v\|_1
+    \] 
+    si $\|v_n - v\|_1 \xrightarrow[n \to \infty]{} 0$ alors $\forall p, v_n(p) \to v(p)$. Supposons que $(v_n) = (u_{\phi(n)})$ est une sous-suite de $(u_n)$ qui converge vers  $v$ pour  $\| . \|$. Je fixe $p \in \N$, $v_n(p) = u_{\phi(n)}(p) \xrightarrow[n \to \infty]{} v(p)$, mais $v_n(p) \xrightarrow[n \to \infty]{} 0$, donc $v(p) = 0 \forall p$. $v$: suite nulle, aussi 
+     \[
+    \|v_n\|_1 = 1 \forall n \text{ et } \|v_n\|_1 \xrightarrow[n \to \infty]{} \|v\|_1
+    \] 
+    contradiction
+\end{preuve}
+\section{Normes équivalentes}
+\begin{definition}
+    Deux normes $N_1$ et  $N_2$ sur  $E$ sont équivalentes ($N_1 \sim N_2$) si $\exists c_1, c_2 > 0$ telles que 
+    \begin{itemize}
+        \item $N_1(u) \le c_1N_2(u) \quad \forall u \in E$
+        \item $N_2(u) \le c_2N_1(u) \quad \forall u \in E$
+    \end{itemize}
+    $\exists c > 0$ telle que
+    \[
+    cN_1(u) \le N_2(u) \le cN_1(u)
+    \] 
+\end{definition}
+\begin{remark}
+   Si  $N_1 \sim N_2$ et $N_2 \sim N_3$, alors $N_1 \sim N_3$ 
+\end{remark}
+\begin{definition}
+    Les normes $N_1$ et $N_2$ sont \textbf{topologiquement équivalentes} si elles définissent les mêmes ensembles ouverts.
+\end{definition}
+\begin{theorem}
+    Soientt $N_1, N_2$ deux normes, alors:
+    \[
+    N_1, N_2 \text{ topologiquement équivalentes } \iff N_1, N_2 \text{ équivalentes }
+    \] 
+\end{theorem}
+\begin{eg}
+    \begin{enumerate}
+        \item $E = \mathcal{C}([0, 1], \R)$
+        \item $\|f\|_{\infty} = \sup_{x \in [0, 1]}|f(x)|$
+        \item $\|f\|_1 = \int_{{0}}^{{1}} {|f(x)|} \: d{x}$
+    \end{enumerate}
+    On remarque que $\|f\|_1 \le \|f\|_{\infty}$. Est-ce que $\exists c > 0$ telle que 
+    \[
+    \|f\|_{\infty} \le c\|f_1\| \forall f \in E
+    \] 
+    ?
+    Pour le voir, construire une suite $(f_n)$ dans  $E$ telle que  $\|f_n\|_1 \to 0$ mais $\|f_n\|_{\infty} \not\to 0$
+\end{eg}
+\begin{theorem}
+    Soit $E$ un espace de dimension finie. Alors toutes normes sur  $E$ sont équivalentes.
+\end{theorem}
+\begin{preuve}
+    Je peux supposer que $\mathbb{K} = \R$. Je fixe  une base $(e_1, \ldots, e_n)$ de $E$, j'identifie  $E$ à  $\R^n$ avec cette base ($E = \R^n$)
+    \[
+    \|x\|_{\infty} = \max_{1 \le i \le n} |x_i|
+    \] 
+    \[
+    S_{\infty} = \{ x \in \R^n: \|x\|_{\infty} = 1 \}
+    \] 
+    fermé et borné de $\R^n$, donc $S_{\infty}$ compact. Soit $N: \R^n \to \R_{+}$ une norme sur $\R^n$
+    \[
+        N(x) = N(\sum_{i=1}^{n} x_i\vec{e_i}) \le  \sum_{i=1}^{n} |x_i|N(\vec{e_i}) \le C\|x\|_{\infty}
+    \] 
+    \[
+        C = \sum_{i=1}^{n} N(\vec{e_i})
+    \] 
+    \[
+    \left| N(x) - N(y) \right| \le N(x - y) \le C \|x - y\|_{\infty}
+    \] 
+    Donc $N: \R^n \to  \R$ continue
+    \[
+    N(x) > 0 \quad \forall x \in S_{\infty}
+    \] 
+    $S_{\infty}$ compact, donc $N$ est bornée et atteint ses bornes sur  $S_{\infty}$. $\exists a, b > 0$ telles que 
+    \[
+    a \le N(x) \le b \forall x \in S_{\infty}
+    \] 
+    Si $x \in \R^n$ et $x \neq \vec{0}$
+    \[
+    \frac{x}{\|x\|} \in S_{\infty}
+    \] 
+    \[
+    a \le N(\frac{x}{\|x\|_{\infty}}) \le b
+    \] 
+    \[
+    N(x) = \|x\|_{\infty}N(\frac{x}{\|x\|_{\infty}})
+    \] 
+    donc: 
+    \[
+        a \|x\|_{\infty} \le  N(x) \le b\|x\|_{\infty} \forall x \neq  \vec{0}
+    \] 
+\end{preuve}
