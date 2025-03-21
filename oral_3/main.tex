@@ -1,0 +1,115 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newtheorem{theoreme}{Théorème}[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{exemple}{Exemple}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{propriete}{Propriété(s)}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{remarque}{Remarque}
+
+\begin{document}
+\section{Algèbre}
+\begin{theoreme}
+    Soit $A \in \mathcal{M}_n(\mathbb{K})$. On a:
+    \[
+        \operatorname{Com}(A)^{T}A = A\operatorname{Com}(A)^{T} = \det(A)I_n
+    \] 
+\end{theoreme}
+\begin{proof}
+    On pose $B = (b_{i, j})_{\substack{1 \le i \le n \\ 1 \le j \le n}}$ où
+    \begin{align*}
+        b_{i, j} &= \sum_{k=1}^{n} \operatorname{cof}_{k,i}(A)a_{k,j} \text{ par la multiplication des matrices}\\
+                 &= \sum_{k=1}^{n} (-1)^{k+i}\det(A_{k,i})a_{k,j} \text{ par la définition de la cofacteur}
+    \end{align*}
+    On remarque que si $j = i$ (l'élément diagonal), on a:
+     \[
+    b_{i, j} = \sum_{k=1}^{n} (-1)^{k+i}\det(A_{k,i})a_{k,i} 
+    \] 
+    ce qui est le développement par rapport à la i-ème colonne.
+    \par
+    Alors, pour le cas où $j \neq i$ on a:
+
+    \[
+        b_{i, j} = \sum_{k=1}^{n} (-1)^{k+i}\det(A_{k,i})a_{k,j} 
+    \] 
+    ce qui est aussi un développement sauf que si on aurait changé la j-ième colonne par la i-ème:
+    \[
+        b_{i, j} = 
+        \begin{vmatrix} 
+            a_{1, 1} & \ldots & a_{1, i} & \ldots & a_{1, i} & \ldots & a_{1, n}\\
+            \vdots   &        &          &        &          &        & \vdots \\
+            a_{n, 1} & \ldots & a_{n, i} & \ldots & a_{n, i} & \ldots & a_{n, n}\\
+        \end{vmatrix} = 0 \text{ car deux colonnes identiques}
+    \] 
+    Alors, $b_{i, j} = \begin{cases}
+        \det(A) \text{ si } i = j\\
+        0 \text{ si } i \neq  j
+    \end{cases}$, d'où
+    \[
+    B = \begin{bmatrix} 
+        \det(A) & 0 & \ldots & 0\\
+        0       & \det(A) & \ldots & 0\\
+        \vdots  & \ddots  & \ddots & \vdots\\
+        0       & 0       & \ldots & \det(A) 
+    \end{bmatrix}  = \det(A)I_n
+    \] 
+\end{proof}
+
+\section{Analyse}
+\begin{theoreme}
+    Soit $f: \R^n \to \R$ une fonction continue et $K \subset \R^n$ un compact. Alors $f(K)$ est bornée et atteint ses bornes.
+\end{theoreme}
+\begin{proof}
+   D'après le cours, $f(K)$ est compact dans  $\R$ car $K$ compact et  $f$ continue, donc bornée. Alors, $\exists a, b$ tq $a < b$ et  $\forall X \in K, a \le f(X) \le b$. Montrons que $\exists X_a, X_b \in K$ tq $a = f(X_a)$ et  $b = f(X_b)$.
+   \par
+   Soit  $a = \inf_{X \in K}(f)$, or  $f$ continue, donc  il existe une suite $X_n$ à valeur dans $K$, telle que  $f(X_n) \xrightarrow[n \to \infty]{} a$. Or $K$ compact, donc  il existe une sous-suite $X_{\phi(n)}$ qui converge vers une limite $X \in K$. Par l'unicité de limite, 
+   \[
+       a = \lim_{n \to \infty} f(X_{\phi(n)}) = f(X)
+   \] 
+   Soit  $b = \sup_{X \in K}(f)$, or  $f$ continue, donc  il existe une suite $X_n$ à valeur dans $K$, telle que  $f(X_n) \xrightarrow[n \to \infty]{} b$. Or $K$ compact, donc  il existe une sous-suite $X_{\phi(n)}$ qui converge vers une limite $X \in K$. Par l'unicité de limite, 
+   \[
+       b = \lim_{n \to \infty} f(X_{\phi(n)}) = f(X)
+   \] 
+   Donc les deux bornes de $f(K)$  $a$ et  $b$ sont atteintes.
+\end{proof}
+
+\section{Si jamais}
+\begin{theoreme}
+    Soit $f: \R^n \to \R^p$ une application continue et $K \subset \R^n$ un compact. Alors $f(K) \subset \R^p$ est compact.    
+\end{theoreme}
+\begin{proof}
+    Soit $(Y_n) = (f(X_n))$ une suite dans  $f(K)$. La suite  $(X_n)$ est à valeur dans le compact  $K$, donc il existe une sous-suite  $(X_{\phi(n)})$ qui converge vers une limite $X$. Or  $f$ continue, donc  $\lim_{n \to \infty} Y_{\phi(n)} = \lim_{n \to \infty} f(X_{\phi(n)}) = f(X)$, donc de toute suite à valeurs dans $f(K)$ on peut extraire une sous-suite qui converge vers une limite aussi dans $f(K)$, alors  $f(K)$ est compact.
+\end{proof}
+\end{document}

@@ -1,10 +1,10 @@
-\section{Utilisation des formules de quadratiuie. Formule de quadratuie élémentaires et composées}
+\section{Utilisation des formules de quadratiuie. Formule de quadrature élémentaires et composées}
 \subsection{Définition}
-On appelle formule de quadratuie élémentaire $I_e$ sur  $[-1, 1]$ associée aux poits  $\xi_i \in [-1, 1]$ et de poids $\omega_i$,  $i = 1, \ldots, N$, la formule
+On appelle formule de quadrature élémentaire $I_e$ sur  $[-1, 1]$ associée aux poits  $\xi_i \in [-1, 1]$ et de poids $\omega_i$,  $i = 1, \ldots, N$, la formule
 \[
     I_e(f) = \sum_{i=1}^{N} \omega_if(\xi_i) \quad \text{ pour } f \in \mathcal{C}^0([-1, 1])
 \] 
-Une subdivision d'un intervalle $[a, b]$ en  $n$ points  $a = x_1 < x_2 < \ldots < x_n = b$ étant donnée, elle induit une formule de quadratuie composite $I_c$ pour  $[a, b]$ 
+Une subdivision d'un intervalle $[a, b]$ en  $n$ points  $a = x_1 < x_2 < \ldots < x_n = b$ étant donnée, elle induit une formule de quadrature composite $I_c$ pour  $[a, b]$ 
 \[
 I_c = \sum_{i=1}^{n-1} I_e(f; x_i, x_{i+1}) \equiv \sum_{j=1}^{n-1} \frac{x_{j+1} - x_{j}}{2}\sum_{i=1}^{N} \omega_{i}f(x_{i,j}) \text{ où } x_{i, j} = \frac{(x_j + x_{j+1}) + \xi_{i}(x_{j+1} - x_j))}{2}
 \] 
@@ -25,7 +25,7 @@ I_c = \sum_{i=1}^{n-1} I_e(f; x_i, x_{i+1}) \equiv \sum_{j=1}^{n-1} \frac{x_{j+1
                                                                                                                                          &\approx \sum_{i=1}^{N} \left( \frac{\beta - \alpha}{2}\omega_i \right) f(x_i)\\
                                                                                                                                          &\approx I_e(f, \alpha, \beta)
 \end{align*}
-\subsection{Méthode de quadratuie clamique}
+\subsection{Méthode de quadrature clamique}
 \subsubsection*{Méthode de rectangles}
 \begin{definition}
     \[
@@ -41,11 +41,11 @@ I_c = \sum_{i=1}^{n-1} I_e(f; x_i, x_{i+1}) \equiv \sum_{j=1}^{n-1} \frac{x_{j+1
 \begin{prop}
     \begin{itemize}
         \item 
-            Si $f$ est  $\mathcal{C}^{1}$ sur  $[\alpha, \beta]$ l'erreur de la méthode de quadratuie élémentaires :
+            Si $f$ est  $\mathcal{C}^{1}$ sur  $[\alpha, \beta]$ l'erreur de la méthode de quadrature élémentaires :
             \[
                 E_e(f) = I(f) - I_e(f) = \frac{f'(c)}{2}(\beta - \alpha )^2 \text{ où } c \in ]\alpha, \beta[
             \] 
-        \item Si $f$ est de classe  $\mathcal{C}^1$ sur  $[a, b]$, l'erreur de quadratuie de la méthode composite associée à une subdivision uniforme de pas  $h$ est majorée par 
+        \item Si $f$ est de classe  $\mathcal{C}^1$ sur  $[a, b]$, l'erreur de quadrature de la méthode composite associée à une subdivision uniforme de pas  $h$ est majorée par 
              \[
                  \left| E_c(f) \right| = \left| I(f) - I_c(f) \right| \le h \underbrace{\|f'\|_{\mathcal{C}^0([a, b])}}_{\max_{a \le x \le b}|f'(x)|} \frac{b - a}{2}
             \] 
@@ -139,7 +139,7 @@ I_c = \sum_{i=1}^{n-1} I_e(f; x_i, x_{i+1}) \equiv \sum_{j=1}^{n-1} \frac{x_{j+1
              \[
             E_c(f) = I(f) - I_c(f) = \frac{f''(c)}{24}(b - a)^3
             \] 
-        \item Si $f$ est  $\mathcal{C}^2$ sur  $[a, b]$, l'erreur de quadratuie de la méthode composite associée à une subdivision uniforme de  $[a, b]$ de pas  $h$ est majorée par
+        \item Si $f$ est  $\mathcal{C}^2$ sur  $[a, b]$, l'erreur de quadrature de la méthode composite associée à une subdivision uniforme de  $[a, b]$ de pas  $h$ est majorée par
              \[
             \left| E_c(f) \right| = \left| I(f) - I_c(f) \right| \le h^2 \frac{\|f''\|_{\infty}}{24}(b - a)
             \] 

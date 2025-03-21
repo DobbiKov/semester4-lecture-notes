@@ -54,16 +54,16 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{lemma-n-est-pas-complet.pdf}}%
-    \put(0.17145851,0.14922129){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
-    \put(0.13776582,0.43972747){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
-    \put(0.48629831,0.15558548){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
-    \put(0.32157834,0.1368674){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{1}{2}$\end{tabular}}}}%
-    \put(0.25587265,0.1372715){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{1}{2} - \frac{1}{n}$\end{tabular}}}}%
+    \put(0.33793856,0.14694074){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
+    \put(0.30424585,0.43744691){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.65277837,0.15330493){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.48805838,0.13458684){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{1}{2}$\end{tabular}}}}%
+    \put(0.4223527,0.13499095){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{1}{2} - \frac{1}{n}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{lemma-n-est-pas-complet.pdf}}%
-    \put(0.34703506,0.13574422){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{1}{2} + \frac{1}{n}$\end{tabular}}}}%
+    \put(0.52243433,0.13315608){\color[rgb]{0.18823529,0.12156863,0.12156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{1}{2} + \frac{1}{n}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{lemma-n-est-pas-complet.pdf}}%
-    \put(0.47194754,0.29327558){\color[rgb]{0.83137255,0,0.16862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$f$\end{tabular}}}}%
-    \put(0.45963205,0.26644535){\color[rgb]{0,0.18823529,0.83137255}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$f_n$\end{tabular}}}}%
+    \put(0.63842761,0.29099503){\color[rgb]{0.83137255,0,0.16862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$f$\end{tabular}}}}%
+    \put(0.62611211,0.2641648){\color[rgb]{0,0.18823529,0.83137255}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$f_n$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{lemma-n-est-pas-complet.pdf}}%
   \end{picture}%
 \endgroup%

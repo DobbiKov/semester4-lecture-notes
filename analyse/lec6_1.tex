@@ -102,7 +102,7 @@ De la définition ~\ref{def:fonction-differentiable}, ce vecteur $\vec{u}$ se no
 \end{prop}
 
 \begin{preuve}
-$f$ est continue en  $X_0$ $|\vec{u} \cdot X \le \|\vec{u}\| \|X\|$
+$f$ est continue en  $X_0$ $|\vec{u} \cdot X| \le |\vec{u}| |X|$
 \begin{enumerate}
     \item continuité
         \begin{align*}
@@ -114,8 +114,9 @@ $f$ est continue en  $X_0$ $|\vec{u} \cdot X \le \|\vec{u}\| \|X\|$
         \begin{align*}
             g(t) = f(X_0 + t \vec{v}) &= f(X_0) + \vec{\nabla}f(X_0) \cdot t \vec{v} + \|t \vec{v}\| \cdot \epsilon(t \vec{v})\\
                                       &= f(X_0) + t\vec{\nabla}f(X_0) \cdot \vec{v} + |t|\|\vec{v}\|\epsilon_1(t)\\
-                                      &= f(X_0) + t\vec{\nabla }f(X_0)\cdot 
+                                      &= f(X_0) + t\vec{\nabla }f(X_0)\cdot \vec{v}
         \end{align*}
+        donc:
         \[
             \frac{d}{dt} f(X_0 + t\vec{v})\mid_{t = 0} = \vec{\nabla}f(X_0)\cdot \vec{v}
         \] 
@@ -126,7 +127,8 @@ $f$ est continue en  $X_0$ $|\vec{u} \cdot X \le \|\vec{u}\| \|X\|$
     \[
         D \subset \R^n \quad D \text{ ouvert } \quad f: D \to \R \text{ est } \mathcal{C}^1 \text{ sur } D
     \] 
-    si $f$ différentiable en tout  $X \in D$ et les fonctions  $D \to \R$, $x \mapsto \frac{\partial f}{\partial x_i}(X)$ $1 \le i \le n$ sont continues sur $D$
+    Soit $D \subset \R^n$ ouvert, alors la fonction $f: D \to \R$ est de classe $\mathcal{C}^1$ sur  $D$ si 
+    $f$ est différentiable en tout  $X \in D$ et la fonction
     \begin{align*}
         : D &\longrightarrow \R^n \\
         X &\longmapsto \vec{\nabla}f(X)
