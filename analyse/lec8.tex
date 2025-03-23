@@ -1,3 +1,5 @@
+\chapter{Espaces vectoriels normés}
+\section{Introduction}
 \begin{definition}
     Soit $E$ un  $\mathbb{K}$-espace vectoriel et $\lambda \in \R$, la \textbf{norme} sur  $E$ est une application $N: E \to \R_{+}$ avec:
     \begin{enumerate}
@@ -27,16 +29,21 @@ On peut interpreter $2$ comme:
     \end{itemize}
 \end{eg}
 
-TODO: ingégalité de Minkowski
+\begin{prop}
+    L'inégalité triangulaire pour $p > 2$ s'appelle \textbf{l'inégalité de Minkowski}:
+    \[
+        \left( \sum_{i=1}^{n} |x_i + y_i|^p \right)^{\frac{1}{p}} \le  \left( \sum_{i=1}^{n} |x_i |^p \right)^{\frac{1}{p}} + \left( \sum_{i=1}^{n} |y_i|^p \right)^{\frac{1}{p}}
+    \] 
+\end{prop}
 
 \begin{definition}
-    Soit $U$  un ensemble $E = \{f: U \to \mathbb{K} \text{ bornée} \}$ 
+    Soit $U$ un ensemble et $E = \{f: U \to \mathbb{K} \text{ bornée} \}$ 
     \[
         \|f\|_{\infty} = \sup_{x \in U} |f(x)| \text{ norme sur E}
     \] 
 \end{definition}
 \begin{definition}
-    $R([a, b], \mathbb{K})$ les  $f: [a, b] \to \mathbb{K}$ intégrables au sens de Riemann,
+    $R([a, b], \mathbb{K})$ = $\{$ les  $f: [a, b] \to \mathbb{K}$ intégrables au sens de Riemann\footnote{La fonction est Riemann intégrable (pas forcément continue) si on peut calculer l'air en utilisant l'intégration par les sommes de Riemann. Alors, si $f$ discontinue, elle est Riemann intégrable si la discontinuité est négligable.} $\}$
 \end{definition}
 
 \begin{eg}
@@ -84,7 +91,7 @@ TODO: ingégalité de Minkowski
 \end{definition}
 Cas de dimension finie:
 \begin{enumerate}
-    \item Tout espace vectoriel normé de dimension finie est compet (voir plus bas)
+    \item Tout espace vectoriel normé de dimension finie est complet (rappel: proposition \ref{prop:rd-est-complet}) (voir plus bas)
     \item Si $E$ de dim finie:
          \[
         K \text{ compact} \iff K \text{ fermé et borné }
@@ -96,40 +103,77 @@ Cas de dimension finie:
    \]  
    n'est pas complet.
 \end{lemma}
+\begin{preuve}
+    On construit une suite de fonctions continues $(f_n)_{n \in \mathbb{N}}$ sur $[0,1]$ qui converge en norme $\| \cdot \|_1$ vers une fonction $f$ discontinue. Cela montrera que la limite de cette suite dans la norme $\| \cdot \|_1$ n’appartient pas à $\mathcal{C}([0,1], \mathbb{R})$, donc que cet espace n’est pas complet.
+    
 \begin{figure}[H]
     \centering
     \incfig{lemma-n-est-pas-complet}
-    \caption{lemma-n-est-pas-complet}
+    \caption{Lemma avec un espace pas complet}
     \label{fig:lemma-n-est-pas-complet}
 \end{figure}
-$\|f_n - f\|_1 = 2 \cdot \frac{1}{n} \cdot \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{2n} \xrightarrow[n \to +\infty]{} 0$ 
-$\|f_n - f_p\|_1 \le \|f_n - f\|_1 + \|f - f_p\|_1 \le  \frac{1}{n} + \frac{1}{p}$
-Soit $\epsilon > 0$, si  $n, p \ge \frac{2}{\epsilon}$, alors $\|f_n - f_p\|_1 \le  \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$, alors $(f_n)$ de Cauchy. Supposons que  $\exists g \in \mathcal{C}([0,1], \R)$ avec $\|f_n - g\|_1 \xrightarrow[n \to  \infty]{} 0$
+
+\medskip
+
+\textbf{Définition de la suite $(f_n)$ :} pour chaque $n \in \mathbb{N}$, on définit $f_n : [0,1] \to \mathbb{R}$ par
 \[
-    \|f - g\|_1 \le \underset{\xrightarrow[n \to  \infty]{} 0}{\|f - f_n\|_1} + \underset{\xrightarrow[n \to  \infty]{} 0}{\|f_n - g\|_1}
-\]
-donc $\|f - g\|_1 = 0$
- \[
-     \|f - g\|_1 = \int_{{0}}^{{1}} {|f(x) - g(x)|} \: d{x} \ge \int_{{0}}^{{\frac{1}{2} - \delta}} {|f(x) - g(x)|} \: d{x} + \int_{{\frac{1}{2} + \delta}}^{{1}} {|f(x) - g(x)|} \: d{x} 
-\] 
-\begin{itemize}
-    \item sur $[0, \frac{1}{2} - \delta]$ $f$ continue
-    \item sur $[\frac{1}{2} + \delta, 1]$ $f$ continue
-\end{itemize}
-\[
-g(x) = \begin{cases}
-    0 \text{ si } x \le \frac{1}{2} - \delta\\
-    1 \text{ si } x \ge \frac{1}{2} + \delta
+f_n(x) = 
+\begin{cases}
+0 & \text{si } x \le \frac{1}{2} - \frac{1}{2n}, \\[4pt]
+2n\left(x - \frac{1}{2} + \frac{1}{2n}\right) & \text{si } \frac{1}{2} - \frac{1}{2n} < x < \frac{1}{2} + \frac{1}{2n}, \\[4pt]
+1 & \text{si } x \ge \frac{1}{2} + \frac{1}{2n}.
 \end{cases}
-\] 
-$g$ pas continue en  $\frac{1}{2}$
- 
+\]
+Chaque $f_n$ est continue sur $[0,1]$ car elle est affine par morceaux avec raccords continus.
+
+\medskip
+
+\textbf{Définition de la fonction limite :} posons
+\[
+f(x) = 
+\begin{cases}
+0 & \text{si } x < \frac{1}{2}, \\
+1 & \text{si } x > \frac{1}{2}, \\
+\text{valeur quelconque} & \text{si } x = \frac{1}{2}.
+\end{cases}
+\]
+Alors $f$ est \textbf{discontinue} en $x = \frac{1}{2}$, donc $f \notin \mathcal{C}([0,1], \mathbb{R})$.
+
+\medskip
+
+\textbf{Convergence de $(f_n)$ vers $f$ dans $\| \cdot \|_1$ :}
+
+On a
+\[
+\|f_n - f\|_1 = \int_0^1 |f_n(x) - f(x)|\, dx.
+\]
+Mais $f_n(x) = f(x)$ sauf sur l’intervalle $\left[\frac{1}{2} - \frac{1}{2n}, \frac{1}{2} + \frac{1}{2n}\right]$ de longueur $\frac{1}{n}$, et sur cet intervalle, $|f_n(x) - f(x)| \le 1$, donc :
+\[
+\|f_n - f\|_1 \le \int_{\frac{1}{2} - \frac{1}{2n}}^{\frac{1}{2} + \frac{1}{2n}} 1\, dx = \frac{1}{n} \xrightarrow[n \to \infty]{} 0.
+\]
+
+Ainsi, $f_n \to f$ dans la norme $\| \cdot \|_1$.
+
+\medskip
+
+\textbf{Conséquence :} la suite $(f_n)$ est de Cauchy dans $\left( \mathcal{C}([0,1], \mathbb{R}), \| \cdot \|_1 \right)$, car :
+\[
+\|f_n - f_p\|_1 \le \|f_n - f\|_1 + \|f - f_p\|_1 \le \frac{1}{n} + \frac{1}{p} \xrightarrow[n,p \to \infty]{} 0.
+\]
+
+Cependant, la limite $f$ n’est pas continue, donc $f \notin \mathcal{C}([0,1], \mathbb{R})$.
+
+\medskip
+
+\textbf{Conclusion :} Il existe une suite de Cauchy dans $\left( \mathcal{C}([0,1], \mathbb{R}), \| \cdot \|_1 \right)$ qui ne converge pas dans cet espace. Par conséquent, cet espace n’est pas complet.
+
+\end{preuve}
 \begin{lemma}
     Dans $E = l^{1}(\N, \R)$ muni de
     \[
     \|u\|_1 = \sum_{n=0}^{\infty} |u_n|
     \] 
-    $B_f(0, 1)$ n'est pas compacte.
+    $B_f(0, 1)$ n'est pas compact.
 \end{lemma}
 \begin{preuve}
     On construit une suite d'éléments de $B_f(0, 1)$ \underline{sans sous-suite convergente}.
@@ -199,43 +243,44 @@ $g$ pas continue en  $\frac{1}{2}$
     Soit $E$ un espace de dimension finie. Alors toutes normes sur  $E$ sont équivalentes.
 \end{theorem}
 \begin{preuve}
-    Je peux supposer que $\mathbb{K} = \R$. Je fixe  une base $(e_1, \ldots, e_n)$ de $E$, j'identifie  $E$ à  $\R^n$ avec cette base ($E = \R^n$)
-    \[
-    \|x\|_{\infty} = \max_{1 \le i \le n} |x_i|
-    \] 
-    \[
-    S_{\infty} = \{ x \in \R^n: \|x\|_{\infty} = 1 \}
-    \] 
-    fermé et borné de $\R^n$, donc $S_{\infty}$ compact. Soit $N: \R^n \to \R_{+}$ une norme sur $\R^n$
-    \[
-        N(x) = N(\sum_{i=1}^{n} x_i\vec{e_i}) \le  \sum_{i=1}^{n} |x_i|N(\vec{e_i}) \le C\|x\|_{\infty}
-    \] 
-    \[
-        C = \sum_{i=1}^{n} N(\vec{e_i})
-    \] 
-    \[
-    \left| N(x) - N(y) \right| \le N(x - y) \le C \|x - y\|_{\infty}
-    \] 
-    Donc $N: \R^n \to  \R$ continue
-    \[
-    N(x) > 0 \quad \forall x \in S_{\infty}
-    \] 
-    $S_{\infty}$ compact, donc $N$ est bornée et atteint ses bornes sur  $S_{\infty}$. $\exists a, b > 0$ telles que 
-    \[
-    a \le N(x) \le b \forall x \in S_{\infty}
-    \] 
-    Si $x \in \R^n$ et $x \neq \vec{0}$
-    \[
-    \frac{x}{\|x\|} \in S_{\infty}
-    \] 
-    \[
-    a \le N(\frac{x}{\|x\|_{\infty}}) \le b
-    \] 
-    \[
-    N(x) = \|x\|_{\infty}N(\frac{x}{\|x\|_{\infty}})
-    \] 
-    donc: 
-    \[
-        a \|x\|_{\infty} \le  N(x) \le b\|x\|_{\infty} \forall x \neq  \vec{0}
-    \] 
+
+   Puisque \( E \) est de dimension finie, il existe une base de \( E \) et donc un isomorphisme linéaire entre \( E \) et \(\mathbb{R}^n\) (ou \(\mathbb{C}^n\)). En conséquence, on peut se ramener à l'étude de normes sur \(\mathbb{R}^n\).
+
+
+   Considérons la norme \(\|\cdot\|_1\) sur \( E \) et définissons la sphère unité associée :
+   \[
+   S = \{ x \in E : \|x\|_1 = 1 \}.
+   \]
+   Dans un espace de dimension finie, la sphère unité \( S \) est compacte (cela repose sur le fait que dans \(\mathbb{R}^n\), les ensembles fermés et bornés sont compacts).
+
+
+   La fonction
+   \[
+   f : S \to \mathbb{R}, \quad f(x) = \|x\|_2
+   \]
+   est continue car \(\|\cdot\|_2\) est une norme (et donc une fonction continue). Par le théorème de Weierstrass, \( f \) atteint ses bornes sur \( S \). Il existe donc :
+   \begin{itemize}
+       \item Un minimum \( m = \min_{x \in S} f(x) > 0 \) (la stricteté de \( m > 0 \) s’explique par le fait que \( x \neq 0 \) pour \( x \in S \)).
+       \item Un maximum \( M = \max_{x \in S} f(x) \).
+   \end{itemize}
+
+
+   Soit \( x \in E \) quelconque, \( x \neq 0 \). On écrit \( x = \|x\|_1 \, y \) avec \( y = \frac{x}{\|x\|_1} \) qui appartient à \( S \). Alors,
+   \[
+   \|x\|_2 = \|x\|_1\,\|y\|_2.
+   \]
+   Or, puisque \( y \in S \), on a
+   \[
+   m \le \|y\|_2 \le M.
+   \]
+   Ainsi,
+   \[
+   m\,\|x\|_1 \le \|x\|_2 \le M\,\|x\|_1.
+   \]
+   En posant \( c = m \) et \( C = M \), nous obtenons exactement l'équivalence des normes.
+
+
+   Pour \( x = 0 \), l'inégalité est triviale car \( \|0\|_1 = \|0\|_2 = 0 \).
+
+
 \end{preuve}
