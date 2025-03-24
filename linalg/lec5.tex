@@ -424,7 +424,7 @@ Mais comme les valeurs propres sont les racines du polynôme caracteristique (vo
 \end{intuition}
 
 \section{Les applications}
-\subsection{Calcul de la puissance}
+\subsection{Calcul de la puissance}\label{subsec:calcule-de-la-puissance-diagonalisation}
 Alors, on est revenu là, où on a commencé, je vous rappele l'exercice du début du chapitre:
 \begin{ex}
    Calculer 
@@ -504,6 +504,180 @@ Généralisons: Si $A \in \mathcal{M}_n(K)$ est diagonalisable (i.e  il existe $
         0 & 0 & \ldots & \lambda_n^n
     \end{bmatrix}P^{-1}
 \] 
+
+\subsection{Résolution d'un système de suites récurrentes}
+Soit $(u_n)_{n \in \N}$ et $(v_n)_{n \in \N}$ deux suites telles que:
+\begin{equation}\label{eq:systeme-appli-diagonalisation}
+    \begin{cases}
+        u_{n+1} = u_n - v_n\\
+        v_{n+1} = 2u_n + 4v_n
+    \end{cases}
+\end{equation}
+avec $u_0 = 2$ et $v_n = 1$. On pose $X_n = \begin{pmatrix} u_n \\ v_n \end{pmatrix} $, alors le système \ref{eq:systeme-appli-diagonalisation} s'écrit:
+\[
+    X_{n+1} = AX_n \quad \text{ avec } \quad A = \begin{pmatrix} 1 & -1\\ 2 & 4 \end{pmatrix} 
+\] 
+par récurrence on obtient:
+\[
+X_n = A^nX_0 \quad \text{ avec } X_0 = \begin{pmatrix} 2 \\ 1 \end{pmatrix} 
+\] 
+
+Alors, on est ramené au calcul de la puissance d'une matrice: $A^n$ ce qu'on a vu à la section ~\ref{subsec:calcule-de-la-puissance-diagonalisation}. Vous pouvez vérifiez qu'il existe $P \in GL_2(\R)$ tq 
+\[
+    P = \begin{pmatrix} -1 & 1 \\ 1 & -2 \end{pmatrix} \quad \text{ avec } \quad A = P\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}P^{-1}
+\] 
+et alors 
+\[
+    A^n = P\begin{pmatrix} 2^n & 0 \\ 0 & 3^n \end{pmatrix}P^{-1} = \begin{pmatrix} -1 & 1 \\ 1 & -2 \end{pmatrix}  \begin{pmatrix} 2^n & 0 \\ 0 & 3^n \end{pmatrix}  \begin{pmatrix} -2 & -1 \\ -1 & -1 \end{pmatrix}  =  
+    \begin{pmatrix}
+        2 \cdot 2^n - 3^n & 2^n - 3^n \\
+        -2 \cdot 2^n + 2 \cdot 3^n & -2^n + 2 \cdot 3^n
+    \end{pmatrix}
+\] 
+D'où
+\[
+\begin{pmatrix} u_n \\ v_n \end{pmatrix} = 
+    \begin{pmatrix}
+        2 \cdot 2^n - 3^n & 2^n - 3^n \\
+        -2 \cdot 2^n + 2 \cdot 3^n & -2^n + 2 \cdot 3^n
+    \end{pmatrix}
+    \begin{pmatrix} 2 \\ 1 \end{pmatrix} 
+    =
+    \begin{pmatrix}
+        4 \cdot 2^n - 2 \cdot 3^n + 2^n - 3^n \\
+        -4 \cdot 2^n + 4 \cdot 3^n -2^n + 2 \cdot 3^n
+    \end{pmatrix}
+\] 
+c'est-à-dire:
+\[
+\begin{cases}
+   u_n = 5 \cdot 2^n - 3\cdot 3^n \\
+   v_n = -5 \cdot 2^n + 6\cdot 3^n
+\end{cases}
+\] 
+
+\subsection{Résolution des equations différentielles}
+Soit à résoudre le système différentiel
+\[
+\left\{
+\begin{aligned}
+\frac{dx_1}{dt} &= a_{11}x_1 + \cdots + a_{1n}x_n \\
+&\vdots \\
+\frac{dx_n}{dt} &= a_{n1}x_1 + \cdots + a_{nn}x_n
+\end{aligned}
+\right.
+\]
+avec \( a_{ij} \in \mathbb{R} \) et \( x_i : \mathbb{R} \rightarrow \mathbb{R} \) dérivables.\\
+
+Sous forme matricielle le système s’écrit :
+\begin{equation}\label{eq:equation-differentielle-diagonalisation}
+\frac{dX}{dt} = AX, \quad \text{où} \quad A = (a_{ij}), \quad X = 
+\begin{pmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{pmatrix}
+\end{equation}
+
+Supposons \( A \) diagonalisable. Il existe alors \( A' \) matrice diagonale et \( P \) matrice inversible telles que : 
+\[
+A' = P^{-1}AP.
+\]
+Si on considère \( A \) comme la matrice d’un endomorphisme dans la base canonique, \( A' \) est la matrice de \( f \) dans la base de vecteurs propres \( \{v_i\} \).\\
+De même \( X \) est la matrice d’un vecteur \( \vec{x} \) dans la base canonique et \( X' = M(\vec{x})_{v_i} \), est liée à \( X \) par
+\[
+X' = P^{-1}X
+\]
+\begin{note}
+   Attention! Dans cette section $X'$ ne décrit pas la dérivé, mais un vecteur noté  $X'$! 
+\end{note}
+En dérivant cette relation :
+\[
+\frac{dX'}{dt} = P^{-1} \frac{dX}{dt}
+\]
+(car \( A \) étant à coefficients constants, \( P \) sera aussi à coefficients constants). Donc :
+\[
+\frac{dX'}{dt} = P^{-1}AX = \left( P^{-1}AP \right) X' = A'X'
+\]
+Le système \ref{eq:equation-differentielle-diagonalisation} est donc équivalent au système
+\[
+\frac{dX'}{dt} = A'X'
+\]
+
+Ce système s’intègre facilement, car \( A' \) est diagonale.\\
+Ainsi, on peut résoudre le système \( \frac{dX}{dt} = AX \) de la manière suivante :
+\begin{enumerate}
+    \item[a)] On diagonalise \( A \). Soit \( A' = P^{-1}AP \) une matrice diagonale semblable à \( A \);
+    \item[b)] on intègre le système \( \frac{dX'}{dt} = A'X' \);
+    \item[c)] on revient à \( X \) par \( X = PX' \).
+\end{enumerate}
+
+\subsection*{Exemple}
+
+Soit le système
+\[
+\left\{
+\begin{aligned}
+\frac{dx}{dt} &= x - y \\
+\frac{dy}{dt} &= 2x + 4y
+\end{aligned}
+\right.
+\]
+
+On a \( A' = \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix} \) et 
+\( P = \begin{pmatrix} 1 & 1 \\ -1 & -2 \end{pmatrix} \)
+
+Le système \( \frac{dX'}{dt} = A'X' \) s’écrit :
+\[
+\left\{
+\begin{aligned}
+\frac{dx'}{dt} &= 2x' \\
+\frac{dy'}{dt} &= 3y'
+\end{aligned}
+\right.
+\]
+qui donne immédiatement 
+\[
+\left\{
+\begin{aligned}
+x' &= C_1 e^{2t} \\
+y' &= C_2 e^{3t}
+\end{aligned}
+\right.
+\]
+et donc, en revenant à \( X \) par \( X = PX' \) :
+\[
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 1 \\
+-1 & -2
+\end{pmatrix}
+\begin{pmatrix}
+C_1 e^{2t} \\
+C_2 e^{3t}
+\end{pmatrix}
+=
+\begin{pmatrix}
+C_1 e^{2t} + C_2 e^{3t} \\
+- C_1 e^{2t} - 2C_2 e^{3t}
+\end{pmatrix}
+\]
+
+c’est-à-dire :
+\[
+\left\{
+\begin{aligned}
+x &= C_1 e^{2t} + C_2 e^{3t} \\
+y &= -C_1 e^{2t} - 2C_2 e^{3t}
+\end{aligned}
+\right.
+\]
+
+\section{Trigonalisation}
 
 % \begin{tikzpicture}
 %     \begin{axis}[
