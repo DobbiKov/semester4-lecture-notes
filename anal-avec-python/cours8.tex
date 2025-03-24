@@ -1,0 +1,158 @@
+\subsection{Méthode de Newton-Côte}
+C'est une généralisation des methodes élémentairs.
+
+\begin{definition}
+    On appelle méthode de Newton-Côte d'ordre $k$ la méthode élémentaire construite en utilisant le polynôme d'intérpolation d'ordre  $k$, associé aux $k+1$ points équidistants  
+    \[
+    x_i = \alpha + i \frac{\beta - \rho}{k}, \quad i = 0, \ldots, k
+    \] 
+    \[
+    \int_{{\alpha}}^{{\beta}} {f(x)} \: d{x} \approx \sum_{i=0}^{k} \omega_if(x_i)
+    \] 
+    où $x_i = \alpha + i \frac{\beta - \rho}{k}, \quad i = 0, \ldots, k$ et 
+    \[
+        \omega_i = \int_{{\alpha}}^{{\beta}} {\prod_{\substack{j = 0 \\ j\neq i}}^{k} \frac{x - x_j}{x_i - x_j} } \: d{x} {}
+    \] 
+\end{definition}
+
+\begin{remark}
+    \begin{itemize}
+        \item Cette formule est $\begin{cases}
+           \text{d'ordre } k \text{ si }  k \text{ impair}\\
+           \text{d'ordre } k+1 \text{ si } k \text{ pair}
+           \end{cases}$ 
+       \item On n'utilise les méthodes que pour $k$ pair sauf le cas  $k = 1$
+       \item Si  $k=1$ on a la formule des trapèzes
+       \item Si  $k=2$ on a la formule de Simpson
+       \item Si  $k=4$ on a la formule de Boole-Villarceau
+            \[
+           \int_{{-1}}^{{1}} {f(x)} \: d{x} \approx \frac{7}{90}f(-1) + \frac{16}{49}f(-\frac{1}{2}) + \frac{2}{15}f(0) + \frac{16}{45}f(\frac{1}{2}) + \frac{7}{90}f(1)
+           \] 
+       \item Pour $k=6$, on a la formule de Hordy
+       \item Pour  $k\ge8$ on a des points $\omega_i$, négatifs, ce qui rendent les formules sembles aux erreurs d'arronde.
+\end{itemize}
+\end{remark}
+\begin{theorem}
+    Soient  $I(f) = \int_{{\alpha}}^{{\beta}} {f(x)} \: d{x} $, $I_e(f) = \sum_{i=0}^{k} \omega_if(x_i)$, $E(f) = I(f) - I_e(f)$. Supposons que la méthode d'intégration soit d'ordre $p \ge k$. Posons
+    \begin{align*}
+        K(t) = E(x \mapsto (x - t)^{p}_+) = \int_{{\alpha}}^{{\beta}} {(x - t)^{p}_+} \: d{x} - \sum_{i=0}^{k} \omega_i(x_i - t)^{p}_+
+    \end{align*}
+    avec $x_+ = \begin{cases}
+        x \text{ si } x \ge 0 \\
+        0 \text{ sinon}
+    \end{cases}$. On a:
+    \begin{align*}
+        E(t) = \int_{{\alpha}}^{{\beta}} {\frac{K(t)}{p!}f^{(p+1)}(t)} \: d{t} \quad \forall f \in \mathcal{C}^{p+1}([\alpha, \beta])
+    \end{align*}
+    Si de plus $K$ est de signe constante sur $[\alpha, \beta]$, il existe  $c \in [\alpha, \beta]$ telle que
+     \[
+         E(f) = f^{(p+1)}(c)\int_{{\alpha}}^{{\beta}} {\frac{K(t)}{p!}} \: d{t} {}
+    \] 
+    On appelle \underline{Noyay de Peano} associée à la méthode, la fonction
+    \[
+    t \mapsto \frac{K(t)}{p!}
+    \] 
+\end{theorem}
+\begin{preuve}
+    Formule de Taylor avec reste intégrale:
+   \[
+       f(x) = \sum_{i=0}^{l} \frac{(x - \alpha)^l}{l!} + \int_{{\alpha}}^{{x}} {\frac{(x-t)^{p}}{p!}f^{l+1}(t)} \: d{t} {}
+   \]  
+   \[
+   E(f) = E\left( \sum_{i=0}^{l} \frac{(x - \alpha)^l}{l!} \right) + E\left( \int_{{\alpha}}^{{x}} {\frac{(x-t)^{p}}{p!}f^{l+1}(t)} \: d{t} {} \right) 
+   \] 
+\end{preuve}
+\begin{remark}
+    Lorsque $K$ est de signe constante,
+    \[
+        E(t \mapsto u^{p+1}) = (p+1)!\int_{{\alpha}}^{{\beta}} {\frac{K(t)}{p!}} \: d{t} {}
+    \] 
+    D'où
+    \[
+        E(f) = \frac{f^{(p+1)}(c)}{(p+1)!}E(x\mapsto x^{p+1})
+    \] 
+    Dans les méthodes et Newton-Côte le noyau de Peano a une signe constante.
+\end{remark}
+
+\section{Construction de formule de quadrature (à points inconnus): Formules de Gauss Legedre}
+On cherche s'il existe un meilleur choix des points $x_1, \ldots, x_n$ de $[\alpha, \beta]$ tel que la formule de quadrature associéé soit exacte sur $\R_{n'}[X]$ pour $n' > n$.
+ \begin{eg}
+   Cherchons une table fomrule à 2 ponts
+   \[
+   \int_{{-1}}^{{1}} {f(x)} \: d{x} \approx \omega_1f(x_1) + \omega_2f(x_2)
+   \] 
+   En effet, on a 4 inconnus, il faut donc $4$ équations. On pose comme condition l'éxactitude de cette formule pour les polynômes  $1, x, x^2, x^3$, d'où
+    \[
+   \begin{cases}
+       2 = \omega_1 + \omega_2 \\
+       0 = \omega_1x_1 + \omega_2x_2\\
+       \frac{2}{3} = \omega_1x_1^3 + \omega_2x_2^3\\
+       0 = \omega_1 x_1^3 + \omega_2 x_2^3
+   \end{cases}
+   \] 
+
+   \begin{remark}
+      $x_1$ et $x_2$ sont racines du polynôme $\frac{1}{2}(3x^2 -1)$ i.e $x_1 = -\frac{1}{\sqrt{3} }$ $x_2 = \frac{1}{\sqrt{3} }$. D'où $\omega_1 = \omega_2 = 1$.
+   \end{remark}
+   D'où
+   \[
+   \int_{{-1}}^{{1}} {f(x)} \: d{x} \approx f(-\frac{1}{\sqrt{3} }) + f(\frac{1}{\sqrt{3} })
+   \] 
+   est exacte sur $\R_3[X]$ ($3 = 2\cdot 2 - 1$)
+\end{eg}
+\begin{eg} Formule à 3 points
+   \[
+   \int_{{-1}}^{{1}} {f(x)} \: d{x} \approx \omega_1f(x_1) + \omega_2f(x) + \omega_3f(x_3)
+   \]  
+   On impose l'exactitude $1, x, x^2, x^3, x^4, x^5$
+   \begin{align*}
+       \left| \int_{{\alpha}}^{{\beta}} {f(x)} \: d{x} - I_e[f, \alpha, \beta] \right| \le c (\beta - \alpha)^{5 + 2}\\
+       \left| \int_{{\alpha}}^{{\beta}} {f(x)} \: d{x} - I_c[f, \alpha, \beta] \right| \le ch^6
+   \end{align*}
+   On obtient $x_i$ sont racines du polynôme  $\frac{1}{3}(5x^3 - 3x)$. D'où, $x_1 = - \sqrt{\frac{3}{5}} $, $x_2 = 0$,  $x_3 = \sqrt{\frac{3}{5}} $ et $\omega_1 = \frac{5}{9}$, $\omega_2 = \frac{8}{9}$, $\omega_3 = \frac{5}{9}$. D'où
+   \[
+   \int_{{-1}}^{{1}} {f(x)} \: d{x} \approx \frac{5}{9}f(-\sqrt{\frac{3}{5}} ) + \frac{8}{9}f(0) + \frac{5}{9}f(\sqrt{\frac{3}{5}} )
+   \] 
+\end{eg}
+\begin{prop}
+   Considérons la formule à $n$ points
+   \[
+   \int_{{-1}}^{{1}} {f(x)} \: d{x} \approx \omega_1f(x_1) + \ldots + \omega_nf(x_n)
+   \] 
+   exacte pour les polynôms de degré $\le 2n - 1$. Alors les abscisses $x_1, \ldots, x_n$ sont les $n$ racines du polynôme de legendre de degré  $n$ définie par la recurrence.
+    \begin{align*}
+       &L_0(x) = 1\\
+       &L_1(x) = x\\
+       &L_{n+1}(x) = \frac{1}{n+1}\left[ (2n + 1)xL_n(x) - nL_{n-1}(x) \right] 
+   \end{align*}
+   \[
+       \omega_i = \int_{{-1}}^{{1}} {\prod_{\substack{j=1 \\ j \neq i}}^{n} \frac{x - x_j}{x_i - x_j} } \: d{x} {} \quad i = 1, 2, \ldots, n
+   \] 
+   La formule de quadrature ainsi construite est appellé formule de Gauss-Legendre.
+   \[
+   \int_{{-1}}^{{1}} {f(x)} \: d{x} \approx \omega_1f(x_1) + \omega_2f(x_2)
+   \] 
+   exacte pour $1, x, x^2, x^3$ pour  $(x - x_1)(x - x_2)$
+   \[
+   \int_{{-1}}^{{1}} {(x - x_1)(x - x_2)} \: d{x} {= 0}
+   \] 
+   \[
+   \int_{{-1}}^{{1}} {x(x - x_1)(x - x_2)} \: d{x} {= 0}
+   \] 
+   \[
+   \int_{{-1}}^{{1}} {x^2 - (x_1 + x_2)x + x_1x_2} \: d{x} {= 0}
+   \] 
+   \begin{align*}
+       \begin{cases}
+           \frac{2}{3} + (x_1x_2)2 = 0\\
+           -\frac{2}{3}(x_1x_2) = 0
+       \end{cases}
+   \end{align*}
+   \[
+   \int_{{-1}}^{{1}} {f(x)} \: d{x} {\approx \omega_1f(-\frac{1}{\sqrt{3} })} + \omega_2 f(\frac{1}{\sqrt{3} })
+   \] 
+   \begin{itemize}
+       \item $f \equiv (x - \frac{1}{\sqrt{3} }) \equiv (x - x_1) \implies -x_{1}2 = \omega_1 2 x_1$
+       \item $f \equiv (x + \frac{1}{\sqrt{3} }) \equiv (x - x_{2}) $
+   \end{itemize}
+\end{prop}
