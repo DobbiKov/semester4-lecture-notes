@@ -678,41 +678,259 @@ y &= -C_1 e^{2t} - 2C_2 e^{3t}
 \]
 
 \section{Trigonalisation}
+Une matrice $A \in \mathcal{M}_n(K)$ est dite triangulaire supérieure si elle est de la forme:
+\[
+         A = 
+         \begin{bmatrix} 
+         a_{1,1} & a_{1,2} & \ldots & a_{1,n} \\
+         0 & a_{2,2} & \ddots & \vdots\\
+         \vdots & \ddots & \ddots & a_{n-1,n}\\
+         0 & \ldots & 0 & a_{n,n}
+        \end{bmatrix}
+\] 
+respectivement triangulaire inférieure:
+\[
+         A = 
+         \begin{bmatrix} 
+         a_{1,1} & 0 & \ldots & 0 \\
+         a_{2, 1} & a_{2,2} & \ddots & \vdots\\
+         \vdots & \ddots & \ddots & 0\\
+         a_{n, 1} & \ldots & a_{n, n-1} & a_{n,n}
+        \end{bmatrix} 
+\] 
+\begin{remark}
+   Toute matrice $A$ triangulaire supérieure est semblable à une matrice triangulaire inférieure. 
+\end{remark}
+\begin{proof}
+    Soit $A$ une matrice triangulaire supérieure et  $f$ l'endomorphisme de  $K^n$ qui dans la base $\{e_1, \ldots, e_n\}$ est représentée par la matrice $A$, alors:
+     \[
+    \begin{cases}
+        f(e_1) = a_{1, 1} e_1\\
+        f(e_2) = a_{1, 2} e_1 + a_{2, 2}e_2\\
+        \vdots \\
+        f(e_n) = a_{1, n} e_1 + a_{2, n}e_2 + \ldots + a_{n, n}e_n
+    \end{cases} 
+    \iff
+         A = 
+         \begin{bmatrix} 
+         a_{1,1} & a_{1,2} & \ldots & a_{1,n} \\
+         0 & a_{2,2} & \ddots & \vdots\\
+         \vdots & \ddots & \ddots & a_{n-1,n}\\
+         0 & \ldots & 0 & a_{n,n}
+        \end{bmatrix}
+    \] 
+    Considérons la base 
+    \[
+    \varepsilon_1 = e_n, \quad \varepsilon_2 = e_{n-1}, \quad \ldots, \quad \varepsilon_n = e_1
+    \] 
+    alors, on a:
+    \[
+    \begin{cases}
+        f(\underbrace{\varepsilon_1}_{e_n}) = = a_{1, n}\underbrace{\varepsilon_n}_{e_1} + a_{2, n}\underbrace{\varepsilon_{n-1}}_{e_2} + \ldots + a_{n, n}\underbrace{\varepsilon_1}_{e_n} \\
+        f(\underbrace{\varepsilon_2}_{e_{n-1}}) = = a_{1, n-1}\underbrace{\varepsilon_n}_{e_1} + \ldots + a_{n-1, n-1}\underbrace{\varepsilon_2}_{e_{n-1}} \\
+        \vdots \\
+        f(\underbrace{\varepsilon_n}_{e_1}) = a_{1,1}\underbrace{\varepsilon_n}_{e_1}
+    \end{cases}
+    \] 
+    donc 
+    \[
+    A' = M(f)_{\varepsilon_{i}} = 
+    \begin{bmatrix} 
+        a_{n, n}   &              & \ldots & 0\\
+        a_{n-1, n} & a_{n-1, n-1} & \ldots & 0\\
+        \vdots     &              & \ddots & \\
+        a_{1, n}   & \ldots       &        & a_{1,1}
+    \end{bmatrix} 
+    \] 
+\end{proof}
+\subsection{L'intuition géométrique de la diagonalisation}
+Rappellons la diagonalisation. La matrice $A$ représentative de l'endomorphisme  $f$ dans $K^n = \operatorname{Vect}(e_1, \ldots, e_n)$ ést diagonalisable, s'il existe suffisament de sous-espaces vectoriels $\{F_1, \ldots, F_n\}$ de dimension $1$ chaqun, tel que  $K^n = F_1 \oplus \ldots \oplus F_n$ et $\forall i \in \{1, \ldots, n\}, f(F_i) \subset F_i$ (un vecteur après l'application de $f$ reste dans l'espace). Ce qu'on peut voir géométriquement:
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle, 
+        grid=major, 
+        xlabel={$x$}, 
+        ylabel={$y$}, 
+        title={Eigenvector Transformation},
+        ymin=-2, ymax=5,
+        xmin=-3, xmax=5
+    ]
+        \addplot[thick, blue] coordinates {(-3, 0) (5, 0)};
+        \node[below] at (axis cs:4.8,0) {$F_1$};
 
-% \begin{tikzpicture}
-%     \begin{axis}[
-%         axis lines=middle, 
-%         grid=major, 
-%         xlabel={$x$}, 
-%         ylabel={$y$}, 
-%         title={Eigenvector Transformation},
-%         ymin=-2, ymax=5,
-%         xmin=-3, xmax=5
-%     ]
-%         % Define original vectors
-%         \addplot[->, thick, red] coordinates {(0,0) (1,0)};
-%         \node[right] at (axis cs:1,0) {$v_1$};
-%
-%         \addplot[->, thick, red] coordinates {(0,0) (-1, 1)};
-%         \node[above] at (axis cs:-1,1) {$v_2$};
-%
-%         \addplot[->, thick, blue] coordinates {(0,0) (1,1)};
-%         \node[right] at (axis cs:1,1) {$v_3$};
-%
-%         \addplot[->, thick, blue] coordinates {(0,0) (-1,2)};
-%         \node[left] at (axis cs:-1,2) {$v_4$};
-%
-%         % Define transformed vectors
-%         \addplot[->, thick, red, dashed] coordinates {(0,0) (3,0)};
-%         \node[right] at (axis cs:3,0) {$A v_1$};
-%
-%         \addplot[->, thick, red, dashed] coordinates {(0,0) (-2,2)};
-%         \node[above] at (axis cs:-2,2) {$A v_2$};
-%
-%         \addplot[->, thick, blue, dashed] coordinates {(0,0) (4,2)};
-%         \node[right] at (axis cs:4,2) {$A v_3$};
-%
-%         \addplot[->, thick, blue, dashed] coordinates {(0,0) (-1,4)};
-%         \node[left] at (axis cs:-1,4) {$A v_4$};
-%     \end{axis}
-% \end{tikzpicture}
+        \addplot[thick, blue] coordinates {(-3,3) (5, -5)};
+        \node[below, left] at (axis cs:-2.2,2.2) {$F_2$};
+
+        % Define original vectors
+        \addplot[->, thick, red] coordinates {(0,0) (1,0)};
+        \node[right] at (axis cs:1,0) {$v_1$};
+
+        \addplot[->, thick, red] coordinates {(0,0) (-1, 1)};
+        \node[above] at (axis cs:-1,1) {$v_2$};
+
+        % \addplot[->, thick, blue] coordinates {(0,0) (1,1)};
+        % \node[right] at (axis cs:1,1) {$v_3$};
+        %
+        % \addplot[->, thick, blue] coordinates {(0,0) (-1,2)};
+        % \node[left] at (axis cs:-1,2) {$v_4$};
+
+        % Define transformed vectors
+        \addplot[->, thick, red, dashed] coordinates {(0,0) (3,0)};
+        \node[right] at (axis cs:3,0) {$A v_1$};
+
+        \addplot[->, thick, red, dashed] coordinates {(0,0) (-2,2)};
+        \node[above] at (axis cs:-2,2) {$A v_2$};
+
+        %
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+On sait déjà que tel endomorphisme est très utile mais ça n'arrive pas souvent qu'on peut le diagonaliser, alors, ça serait utile d'avoir quelque chose plus général mais encore semblable à la diagonalisation.
+\subsection{L'intuition géométrique de la trigonalisation}
+La géométrie de l'endomorphisme trigonalisable est similaire mais quand même différente. Soit $A$ une matrice représentative de l'endomorphisme  $f$ dans  $K^n$. Il est trigonalisable s'il existe une base  $\{v_1, \ldots, v_n\}$ de $K^n$, notons  $F_1 = \operatorname{Vect}(v_1), F_2 = \operatorname{Vect}(v_1, v_2), \ldots, F_n = \operatorname{Vect}(v_1, v_2, \ldots, v_n)$ tels que
+\[
+F_1 \subset F_2 \subset \ldots \subset F_n
+\] 
+et 
+\[
+    \forall i \in \{1, \ldots, n\}, f(F_i) \subset F_i
+\] 
+Voyez-vous la similarité? L'endomorphisme est stable par le sous-espace! Le vecteur appliqué à $f$ ne quite jamais son sous-espace. Prennons pour l'exemple la matrice suivante:
+\[
+    A = \begin{bmatrix} 
+        1 & 1 & 0\\
+        0 & 2 & 1\\
+        0 & 0 & 3
+    \end{bmatrix} = \operatorname{Mat}(f)_{e_i}
+\] 
+% \[
+% \begin{cases}
+%     v_1 := \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \in F_1, f(\begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix}) = \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \in F_1\\
+%     v_2 = 
+% \end{cases}
+% \] 
+
+\begin{center}
+    
+\begin{tikzpicture}
+  \begin{axis}[
+      view={60}{30},
+      axis lines=center,
+      xlabel={$x$},
+      ylabel={$y$},
+      zlabel={$z$},
+      xmin=-1, xmax=4,
+      ymin=-1, ymax=4,
+      zmin=-1, zmax=4,
+      samples=10,
+      domain=-1:4,
+      y domain=-1:4,
+      z buffer=sort,
+      width=10cm, height=8cm,
+  ]
+    % F1: Invariant line (x-axis)
+    \addplot3[blue, ultra thick, domain=-1:3]({x},{0},{0});
+    \node[blue] at (axis cs:3.2,0,0) {$F_1$};
+
+    % \addplot3[->, black, thick] coordinates {(0, 0, 0) (2, 0, 0)};
+    % \node[black, above] at (axis cs:2,0,0) {$v_1 = f(v_1)$};
+
+    % F2: Invariant plane (xy-plane)
+    \addplot3[
+      surf,
+      fill=red,
+      opacity=0.3,
+      shader=interp,
+      samples=2,
+      domain=-1:3,
+      y domain=-1:3,
+    ]
+    ({x},{y},{0});
+    \node[red] at (axis cs:1.5,1.5,0.2) {$F_2$};
+
+    % Optionally: Draw a vector in F3 (illustrating the full space)
+    \addplot3[black,->,thick] coordinates {(0,0,0) (2,1,2)};
+    \node at (axis cs:2.1,1.1,2.3) {$v\in F_3$};
+
+  \end{axis}
+\end{tikzpicture}
+\end{center}
+Comme on a de l'intuition de l'endomorphisme trigonalisable, revenons sur les maths pures.
+\subsection{Théorie}
+\begin{theorem}
+    Un endomorphisme est trigonalisable dans $K$ si et seulement si son polyôme caractéristique est scindé dans  $K$. 
+    \par 
+    Ça veut dire que le polynôme caractéristique admet exactement $n$ racine où  $n = \dim(E)$ et dont s'écrit:
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1}\cdots(X - \lambda_p)^{\alpha_p}
+    \] 
+    avec $\alpha_1 + \ldots + \alpha_p = n$
+\end{theorem}
+\begin{preuve} -
+   \begin{itemize}
+       \item[($\implies$)] Supposons l'endomorphisme $f$ est trigonalisable et soit une base  $\{e_1, \ldots, e_n\}$ telle que
+           \[
+               M(f)_{e_i} = \begin{pmatrix} 
+                   a_{1,1} &            & & *\\
+                   0       & a_{2, 2}   & & \\
+                   \vdots  &      & \ddots & \\
+                   0        & \ldots    & 0 & a_{n, n}
+               \end{pmatrix} 
+           \] 
+           On a:
+           \[
+            P_f(X) = \det \begin{pmatrix} 
+                   a_{1,1} - X &            & & *\\
+                   0       & a_{2, 2} - X   & & \\
+                   \vdots  &      & \ddots & \\
+                   0        & \ldots    & 0 & a_{n, n} - X
+               \end{pmatrix} = (a_{1,1} - X) \cdots (a_{n,n} - X)
+           \] 
+           Donc $P_f(X)$ est bien scindé (on peut remarquer que ses racines sont les valeurs propres de $f$).
+       \item[($\impliedby$)] Supposons $P_f(X)$ scindé et montrons par récurrence que  $f$ trigonalisable.
+            \par
+            Pour  $n=1$ triviale.
+            \par
+            Supposons que le résultat est vrai à l'ordre  $n-1$. Or  $P_f(X)$ est scindé il admet au moins une racine  $\lambda_1 \in K$ et donc un vecteur propre $\varepsilon_1 \in E_{\lambda_1}$. Complétons $\{\varepsilon_1\}$ en une base $\{varepsilon_1, \ldots, \varepsilon_n\}$, donc on a:
+            \[
+            A = M(f)_{\varepsilon_i} = \begin{pmatrix} 
+                \lambda_1 & b_2 & \ldots & b_n\\
+                0         &     &        &    \\
+                \vdots    &     & B      &    \\
+                0         &     &        &
+            \end{pmatrix}, \quad \text{où:} B \in \mathcal{M}_{n-1}(K)
+            \] 
+            Soit $F = \operatorname{Vect}(\varepsilon_2, \ldots, \varepsilon_n)$ et $g: F \to F$ l'unique endomorphisme de $F$ tel que  $M(g)_{\varepsilon_2, \ldots, \varepsilon_n} = B$, on a:
+            \[
+            P_f(X) = \det(A - XI_n) = (\lambda_1 - X)\det(B - XI_{n-1}) = (\lambda_1 - X)P_g(X)
+            \] 
+            Or $P_f(X)$ est scindé,  $P_g(X)$ l'est aussi et d'après l'hypothèse de récurrence  $B$ est trigonalisable, donc il existe une base  $\{v_2, \ldots, v_n\}$ dans laquelle $M(g)_{v_2, \ldots, v_n}$ est triangulaire et donc la matrice de $f$ dans la base  $\{\varepsilon_1, v_2, \ldots, v_n\}$ est triangulaire donc $f$ est trigonalisable.
+   \end{itemize} 
+\end{preuve}
+\begin{corollary}
+    Toute matrice $A \in \mathcal{M}_n(\mathbb{C})$  est semblable à une matrice triangulaire de $\mathcal{M}_n(\mathbb{C})$.
+\end{corollary}
+\begin{intuition}
+    D'après le cours d'algèbre abstrait, tout polyôme dans $\mathbb{C}$ est scindé. 
+\end{intuition}
+\begin{remark}-
+   \begin{enumerate}
+       \item Si $A$ est trigonalisable et  $A'$ triangulaire semblable à $A$, donc  $A'$ a des valeurs prorpes sur les diagonales.
+       \item Toute matrice $A \in \mathcal{M}_n(K)$ est trigonalisable sur la clôture $K'$ de  $K$. (e.g: $A \in \mathcal{M}_n(\R)$ est trigonalisable sur $\mathbb{C}$).
+   \end{enumerate} 
+\end{remark}
+\begin{corollary}
+    Soit $A \in \mathcal{M}_n(K)$ est $\{\lambda_1, \ldots, \lambda_n\}$ ses valeurs propres, donc
+    \begin{align*}
+        \operatorname{Tr}(A) = \lambda_1 + \ldots + \lambda_n\\
+        \det(A) = \lambda_1 \cdot \ldots \cdot  \lambda_n
+    \end{align*}
+\end{corollary}
+\begin{proof}
+    On $A' \in \mathcal{M}_n(K')$ triangulaire semblable à $A$ (reappel: clôture $K'$ sur  $K$), donc les valeurs prorpes sont sur les diagonales de $A'$. Or les matrices semblables ont les même traces et détérminant, donc $\operatorname{Tr}(A) = \operatorname{Tr}(A') = \lambda_1 + \ldots + \lambda_n$ et $\det(A) = \det(A') = \lambda_1 \cdot \ldots \cdot \lambda_n$.
+\end{proof}
+
+\begin{TODO}
+   exemple du processus de trigonalisation. 
+\end{TODO}

@@ -29,15 +29,15 @@ I(f) = \int_{{a}}^{{b}} {f(x)} \: d{x} {}
 \] 
 somme de Rieman associée à $\sum_{N}$. Théorème: $\lim_{N \to \infty} S(f, \sum_{N}) = \int_{{a}}^{{b}} {f(x)} \: d{x} {}$
 
-\section{Formule de quadratique}
+\section{Formule de quadrature}
 \begin{definition}
     Étant donnée $N$ points  $x_1, \ldots, x_N$ de l'intervalle $[a, b]$  et $N$ poids  $\omega_1, \ldots, \omega_N \in \R$ associées à chaque points.
     \par
-    On appelle \underline{formule de quadratique} associé aux $(x_i),(\omega_i)$ l'application linéaire sur  $\mathcal{C}^0([a, b])$
+    On appelle \underline{formule de quadrature} associé aux $(x_i),(\omega_i)$ l'application linéaire sur  $\mathcal{C}^0([a, b])$
      \[
          \tilde{I}(f) = \sum_{i=1}^{N} \omega_i f(x_i)
     \] 
-    On dit que la formule de quadratique est \underline{d'ordre} $p$ si elle est \underline{exacte} pour les polynôme de degré  $p_1$. i.e
+    On dit que la formule de quadrature est \underline{d'ordre} $p$ si elle est \underline{exacte} pour les polynôme de degré  $p_1$. i.e
      \[
          \tilde{I}(Q) = \int_{{a}}^{{b}} {Q} \: d{x} {} \forall Q \in \R_{p-1}[X]
     \] 
@@ -59,7 +59,7 @@ somme de Rieman associée à $\sum_{N}$. Théorème: $\lim_{N \to \infty} S(f, \
 \end{center}
 \end{remark}
 \begin{eg}
-   Soit la formulle de quadratique 
+   Soit la formulle de quadrature 
    \[
    \int_{{a}}^{{b}} {f(x)} \: d{x} \approx (b-a)f(a)
    \] 
@@ -78,7 +78,7 @@ somme de Rieman associée à $\sum_{N}$. Théorème: $\lim_{N \to \infty} S(f, \
    Conclusion: elle est exacte pour les polynômes de degré au plus 0. Elle est donné d'ordre $1$.
 \end{eg}
 
-\subsection{Construction de formule de quadratique à points donnés}
+\subsection{Construction de formule de quadrature à points donnés}
 \begin{prop}
     Soit $x_1, \ldots, x_N$, $N$ points 2 à 2 distincts de  $[a, b]$. 
     \begin{enumerate}

@@ -1,4 +1,4 @@
-\section{Utilisation des formules de quadratiuie. Formule de quadrature élémentaires et composées}
+\section{Utilisation des formules de quadrature. Formule de quadrature élémentaires et composées}
 \subsection{Définition}
 On appelle formule de quadrature élémentaire $I_e$ sur  $[-1, 1]$ associée aux poits  $\xi_i \in [-1, 1]$ et de poids $\omega_i$,  $i = 1, \ldots, N$, la formule
 \[
@@ -86,10 +86,7 @@ I_c = \sum_{i=1}^{n-1} I_e(f; x_i, x_{i+1}) \equiv \sum_{j=1}^{n-1} \frac{x_{j+1
 \begin{prop}
     Si $f$ est  $\mathcal{C}^{?}$ sur  $[a, b]$ 
     \[
-        \left| E_c(f) \right| = \left| I(f) - I_c(f) \right| \le \frac{\|f^{1 + 2}}{1 \cdot 2}(b - a)^{12}
-    \] 
-    \[
-        \left| E_c(f) \right| = \left| I(f) - I_c(f) \right| \le h^{2} \|f\|_{\infty}\frac{(b - a)}{12}
+        \left| E_c(f) \right| = \left| I(f) - I_c(f) \right| \le h^{2} \|f''\|_{\infty}\frac{(b - a)}{12}
     \] 
 \end{prop}
 \begin{preuve}
