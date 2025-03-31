@@ -365,4 +365,34 @@ On a le schéma d'Euler explicite
             x_0 \text{ donné}
         \end{cases}
     \end{equation}
+    \begin{equation}
+        \begin{cases}
+            x_{n+1}^{*} = x_n + \Delta t f(t_n, x_n) \quad n = 0, \ldots, N-1\\
+            x_{n+1} = x_n + \frac{\Delta t}{2}\left[ f(t_n, x_n) + f(t_{n+1}, x_{n+1}^{*}) \right] 
+        \end{cases}
+    \end{equation}
+    C'est un schema explicite appelé schema de Heun. Généralisation des schema à un pas.
+    \begin{equation}
+        \begin{cases}
+            x_{n+1} = x_n + \Delta t \Phi(t_n, x_n, \Delta t), \quad n = 0, \ldots, N-1\\
+            x_0 \text{ donné}
+        \end{cases}
+    \end{equation}
+    où $\Phi: \R \times \R^d \times \R \to  \R^d$
 \end{remark}
+
+\begin{eg}
+    \begin{itemize}
+        \item 
+            Euler explicite : $\Phi(t, y, \Delta t) = f(t, y)$ 
+        \item Point - Millieu : $\Phi(t, y, \Delta t) = f(t + \frac{\Delta t}{2}, y + \frac{\Delta t}{2}f(t, y))$
+        \item HEUN: $\Phi(t, y, \Delta t) = \frac{1}{2}\left[ f(t, y) + f(t + \Delta t, y + \Delta t f(t, y))  \right] $
+    \end{itemize}
+    \begin{equation}
+        \begin{cases}
+            x_{n+1} = x_n + \Delta t f(t_n + \frac{\Delta t}{2}, x_n + \frac{\Delta t}{2}f(t_n, x_n))\\
+            x_0 = x^0
+        \end{cases}
+    \end{equation}
+\end{eg}
+
