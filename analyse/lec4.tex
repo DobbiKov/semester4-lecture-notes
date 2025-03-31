@@ -22,7 +22,15 @@
 \end{prop}
 \begin{preuve}
    \begin{enumerate}
-       \item voir poly
+       \item Soit $(x_n)_{n \in \N}$ une suite de Cauchy. Alors, par définition
+           \[
+           \forall \varepsilon > 0, \, \exists N \in \N \text{ tq } \forall n, p \ge N, d(x_n, x_p) < \varepsilon
+           \] 
+           Soit $\varepsilon = 1$. Donc  $\exists N \in \N$ tq $\forall n, p \ge N, d(x_n, x_p) < 1$, donc $\forall n \ge N$, $d(x_n, x_N) < 1$. On a donc:
+           \[
+               \forall n \in  N, d(x_n, x_N) < 1 + \overbrace{\sup_{1 \le i \le N}d(x_n, x_N)}^{=: r_0}
+           \] 
+           Alors $\forall n \in \N, \, x_n \in B(x_N, 1 + r_0)$ donc $(x_n)_{n \in \N}$ bornée.
        \item Soit $(x_n)$ une suite avec  $\lim_{n \to \infty} x_n = x$ avec $x \in E$.
            \begin{itemize}
                \item 
@@ -41,6 +49,11 @@
 \begin{definition}
     Un éspace métrique $(E, d)$ est \textbf{complet} si toute suite  $(x_n)_{n \in \N}$ d'éléments de  $E$ converge vers une limite  $x$ qui appartient aussi à  $E$.
 \end{definition}
+\begin{intuition}
+   Ce n'est pas très correcte à dire, mais, on peut dire qu'une suite de Cauchy $(x_n)_{n \in \N}$ converge toujours car il existe un moment $N \in \N$ après lequel les éléments sont très proches mais la limite n'appartient pas toujours à l'ensemble dans lequel cette suite est de Cauchy. 
+
+   Par exemple, une suite $(u_n)_{n \in \N}$ à valeur dans $\Q$ qui converge vers $\sqrt{2} $ dans $\R$. Dans $\R$ elle est convergente et de Cauchy, mais dans $\Q$ elle est de Cauchy mais \underline{pas convergente} car la limite $\sqrt{2} \not\in \Q $.
+\end{intuition}
 \begin{eg}
     Un éspace métrique $(]0, 1], d)$ avec $d$ une distance euclidienne n'est pas complet, car  soit une suite: $x_n = \frac{1}{n}$ dont la limite est $0$. Par contre,  $0 \not\in ]0, 1]$. Donc cet éspace n'est pas complet. 
 \end{eg}
