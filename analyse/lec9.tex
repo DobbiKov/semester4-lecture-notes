@@ -1,6 +1,6 @@
 \section{Compléments sur les espaces vectoriels normés}
 \subsection{Suites de fonctions}
-$X$ ensemble ($X \subset \R$), $f_n: X \to \R(\mathbb{C})$ et $(f_n)_{n \in \N}$.
+$X$ ensemble ($X \subset \R$), $f_n: X \to \R(\mathbb{C})$ et $(f_n)_{n \in \N}$. Utile pour la suite du chapitre: $B(X, \R)$ désigne un ensemble des fonctions $f: X \to \R$ \underline{bornées}
 \subsection{Convergence simple: }
 \begin{definition}
     $(f_n)_{n \in \N}$ converge simplement vers $f$ si  $\forall x_0 \in X$, $f_n(x_0) \xrightarrow[n \to \infty]{} f(x_0)$ (ne provient pas d'une norme).
@@ -25,8 +25,7 @@ $X$ ensemble ($X \subset \R$), $f_n: X \to \R(\mathbb{C})$ et $(f_n)_{n \in \N}$
    Si $\sum u_n$ et  $\sum v_n$ convergent, alors  
    \begin{itemize}
        \item $\sum u_n + v_n$ converge et  $\sum \lambda u_n$ converge
-       \item 
-           $\sum_{n=0}^{\infty} u_n u_n + v_n = \sum_{n=0}^{\infty} u_n + \sum_{n=0}^{\infty} v_n$ 
+       \item $\sum_{n=0}^{\infty} u_n + v_n = \sum_{n=0}^{\infty} u_n + \sum_{n=0}^{\infty} v_n$ 
        \item $\sum_{n=0}^{\infty} \lambda u_n = \lambda \sum_{n=0}^{\infty} u_n$
    \end{itemize}
 \end{remark}
@@ -107,7 +106,7 @@ Soient $E, F$ 2 espaces vectoriels normés avec  $\| \cdot \|_{E}$ et $\| \cdot 
                 \item Soit $ x \in E$ et $x \neq 0_E$
                 \item $y = \frac{\delta}{\|x\|_E}x$ donc $\|y\|_E = \delta$  $\implies\|Ay\|_F \le 1$
                 \item $Ay = \frac{\delta}{\|x\|_{E}}Ax$ et $A$ linéaire
-                \item  $\|Ay\|_{F} = \frac{\delta}{\|x\|_E}\|Ax\|F \le 1 \implies \|Ax\|_F \le \frac{1}{\delta}\|x\|_E$
+                \item  $\|Ay\|_{F} = \frac{\delta}{\|x\|_E}\|Ax\|_F \le 1 \implies \|Ax\|_F \le \frac{1}{\delta}\|x\|_E$
             \end{itemize}
         \item $3) \implies 1)$ 
             \begin{itemize}

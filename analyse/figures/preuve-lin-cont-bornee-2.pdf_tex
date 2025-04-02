@@ -50,18 +50,18 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.5)%
+  \begin{picture}(1,0.16666667)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{preuve-lin-cont-bornee-2.pdf}}%
-    \put(0.19925419,0.31828575){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-1$\end{tabular}}}}%
-    \put(0.28323504,0.31780802){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.24259518,0.04117858){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-1$\end{tabular}}}}%
+    \put(0.32657604,0.04070085){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{preuve-lin-cont-bornee-2.pdf}}%
-    \put(0.17966283,0.13682137){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0 - \frac{1}{n}$\end{tabular}}}}%
-    \put(0.28671719,0.1359993){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0 + \frac{1}{n}$\end{tabular}}}}%
+    \put(0.67984123,0.02604987){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0 - \frac{1}{n}$\end{tabular}}}}%
+    \put(0.78689562,0.0252278){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0 + \frac{1}{n}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{preuve-lin-cont-bornee-2.pdf}}%
-    \put(0.24382153,0.31765048){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
+    \put(0.28716253,0.0405433){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{preuve-lin-cont-bornee-2.pdf}}%
-    \put(0.24376615,0.15206807){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0$\end{tabular}}}}%
+    \put(0.74394455,0.04129658){\color[rgb]{0,0.21568627,0.76862745}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

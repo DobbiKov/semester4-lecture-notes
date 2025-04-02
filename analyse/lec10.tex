@@ -52,7 +52,7 @@
 \begin{figure}[H]
     \centering
     \incfig{preuve-prop-line-cont-borne}
-    \caption{preuve-prop-line-cont-borne}
+    \caption{$f_n$}
     \label{fig:preuve-prop-line-cont-borne}
 \end{figure}
 \[
@@ -69,7 +69,7 @@ f_n(x) = \begin{cases}
 \begin{figure}[H]
     \centering
     \incfig{preuve-lin-cont-bornee-2}
-    \caption{preuve-lin-cont-bornee-2}
+    \caption{$f_n$}
     \label{fig:preuve-lin-cont-bornee-2}
 \end{figure}
 \[
@@ -84,8 +84,8 @@ alors $m$ continue en  $x_0$.
     \|Af_n\|_{1} = \int_{{a}}^{{b}} {|m(x)f_n(x)|} \: d{x} \le \int_{{a}}^{{b}} {|m(x) - m(x_0)| |f_n(x)|} \: d{x} + \int_{{a}}^{{b}} {|m(x_0)| |f_n(x)|} \: d{x} 
 \end{align*}
 \begin{itemize}
-    \item [1-er terme:] $\le \varepsilon_n\|f_n\|_{1} = \varepsilon_n$
-    \item [2-eme terma:] $:= \|m\|_{\infty}\|f_n\|_{1} = \|m\|_{\infty}$
+    \item $1^{er}$ terme: $\le \varepsilon_n\|f_n\|_{1} = \varepsilon_n$
+    \item $2^{eme}$ terme: $:= \|m\|_{\infty}\|f_n\|_{1} = \|m\|_{\infty}$
 \end{itemize}
 Alors:
 \begin{align*}
@@ -95,7 +95,7 @@ Alors:
 \end{align*}
 \end{preuve}
 \begin{prop}
-   Le case de $B(E)$:
+   Le cas de $B(E)$:
    \par
    Si $A, B \in B(E)$, $A \circ B$ (noté $AB$) $\in B(E)$ et 
    \[
@@ -122,15 +122,15 @@ Alors:
    \end{enumerate}
    Donc:
    \begin{enumerate}
-       \item $\Omega$ ouvert  pour $N_2$ $\implies$ $\omega$ ouvert  pour  $N_1$
-       \item $\Omega$ ouvert  pour $N_1$ $\implies$ $\omega$ ouvert pour  $N_2$
+       \item $\Omega$ ouvert  pour $N_2$ $\implies$ $\Omega$ ouvert  pour  $N_1$
+       \item $\Omega$ ouvert  pour $N_1$ $\implies$ $\Omega$ ouvert pour  $N_2$
    \end{enumerate}
 
    \begin{enumerate}
        \item $\iff$ $N_2(Id \, u) (= N_2(u)) \le c_1N_1(u)$
        \item $\iff$ $N_1(Id \, u) (= N_1(u)) \le c_2N_2(u)$
    \end{enumerate}
-   car $Id$ continue et linéaire, donc bornée  $\exists c, tq N_2 \le cN_1$
+   car $Id$ continue et linéaire, donc bornée  $\exists c$ tq $\underbrace{Id \, u}_{\in E_2} \le c \underbrace{u}_{E_1}$ donc $N_2(Id \, u) \le c N_1(u)$
    \par
    $(1)$ et  $(2)$  $\iff$ $N_1$ et $N_2$ équivalentes.
 \end{preuve}
