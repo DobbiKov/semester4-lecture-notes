@@ -1,0 +1,113 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{listings}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newtheorem{theoreme}{Théorème}[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{exemple}{Exemple}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{propriete}{Propriété(s)}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{remarque}{Remarque}
+
+\title{TP 6 de BDD}
+
+\begin{document}
+\maketitle
+\subsection*{Question 18}
+\begin{lstlisting}[language=SQL]
+SELECT personne.nom, personne.prenom FROM personne WHERE personne.pid 
+in 
+( SELECT sub2.pid FROM 
+( SELECT sub.pid, sub.an FROM
+(
+SELECT role1.pid, film.fid, film.an FROM role1 JOIN film ON film.fid = role1.fid
+) as sub 
+GROUP BY sub.pid, sub.an HAVING COUNT(DISTINCT sub.fid) > 1 )
+as sub2); 
+\end{lstlisting}
+\subsection*{Question 19}
+\begin{lstlisting}[language=SQL]
+SELECT personne.nom, personne.prenom FROM personne WHERE personne.pid in 
+(
+  SELECT sub.pid FROM 
+(SELECT role1.pid, film.rang FROM role1 INNER JOIN film ON role1.fid = film.fid) as sub
+  WHERE sub.rang = (SELECT MAX(rang) FROM film)
+);
+\end{lstlisting}
+
+\subsection*{Question 20}
+\begin{lstlisting}[language=SQL]
+SELECT personne.nom, personne.prenom FROM personne WHERE NOT EXISTS
+(
+  SELECT 1 FROM role1 JOIN film ON role1.fid = film.fid 
+      JOIN mes ON mes.fid = film.fid
+      JOIN personne p2 ON p2.pid = mes.pid and p2.prenom = 'Woody' and p2.nom = 'Allen'
+  WHERE role1.pid = personne.pid
+); 
+\end{lstlisting}
+\subsection*{Question 21}
+Ici, on a changé l'énoncé à rendre les personnes qui ont joué seulement 'Nola Rice' car il n'y avait pas de personnes d'id 798
+\begin{lstlisting}[language=SQL]
+SELECT p1.nom, p1.prenom FROM personne p1 JOIN role1 r1 ON r1.pid = p1.pid 
+GROUP BY p1.pid, p1.nom, p1.prenom 
+HAVING COUNT(DISTINCT r1.nom) = 1 AND MIN(r1.nom) = 'Nola Rice'; 
+\end{lstlisting}
+
+\subsection*{Question 22}
+\begin{lstlisting}[language=SQL]
+SELECT p1.nom, p1.prenom FROM personne p1
+WHERE
+(SELECT COUNT(f.fid) FROM film f 
+  JOIN mes ON mes.fid = f.fid 
+  JOIN role1 r2 ON r2.fid = f.fid AND r2.pid = p1.pid
+  JOIN personne p2 ON p2.pid = mes.pid and p2.prenom = 'Woody' AND p2.nom = 'Allen'
+) >= 
+(SELECT COUNT(f2.fid) FROM film f2 
+  JOIN mes ON mes.fid = f2.fid 
+  JOIN personne p2 ON p2.pid = mes.pid and p2.prenom = 'Woody' and p2.nom = 'Allen'
+)
+;   
+\end{lstlisting}
+
+
+\subsection*{Question 23}
+\begin{lstlisting}[language=SQL]
+SELECT p1.nom, p1.prenom FROM personne p1
+JOIN role1 r1 ON r1.pid = p1.pid
+JOIN film f ON f.fid = r1.fid
+GROUP by f.fid, p1.pid HAVING COUNT(DISTINCT r1.nom) >= 
+(SELECT COUNT(DISTINCT r2.nom) FROM role1 r2 JOIN film f2 ON f2.fid = r2.fid WHERE f2.fid = f.fid);
+\end{lstlisting}
+
+\end{document}
