@@ -1,0 +1,173 @@
+\section{Étude de schémas pokes EDOs}
+On aimerait savoir si la suite $(x_n)_{n}$ générée par $S$ converge. Si oui,  "vers" la solution de $P$.
+\subsection{Définition}
+\begin{definition}
+    le schéma $S$ est dit convergent ssi pour toute solution x de  $P$ et toute suite de  $(x_n)_n$ construite par  $S$ courbe  $x^0 = x(t_0)$ on a
+    \[
+    \lim_{N \to +\infty} \left( \max_{0 \le n \le N} \|x(t_n) - x_n \| \right)  = 0
+    \] 
+    Où $x(t_n) - x_n =: e_n$ erreur globale à l'itération  $n$
+    \begin{itemize}
+        \item S'il existe $C > 0$, ne dépendant que de  $f, t_0, T$ tq  
+            \[
+                \max_{0 \le n \le N} \|e_n\| \le  C \Delta t^p \quad \forall t \in [0, \Delta t_0]
+            \] 
+    \end{itemize}
+    Le schéma est dit convergent d'ordre $p$.
+\end{definition}
+\begin{remark}
+   Pour étudier un schéma pour EDO, on procède en 2 étaps:
+   \begin{itemize}
+       \item On cherche l'ordre de consistance
+       \item Puis, on regarde sa stabilité
+   \end{itemize}
+\end{remark}
+\subsection{Ordre d'un shéma à un pas explicite}
+\begin{definition}
+    (erreur de consistance)\\
+    Soit $x$ la solution de  $P$. On appelle erreur locale de troncature du schéma  $S$ à l'instant  $t_n$ la quantité 
+    \[
+        \xi_n = x(t_{n+1}) - x(t_n) - \Delta t \Phi (t_n, x(t_n), \Delta t)
+    \] 
+\end{definition}
+\[
+P \begin{cases}
+    x'(t) = f(t, x(t)) \quad t \in ]t_0, t_0 + T[\\
+    x^0 = x(t_0)
+\end{cases}
+\] 
+
+\begin{definition}
+    $S$ et dit consistant d'ordre au moins  $q$ si pour toute solution exacte  $x$ de  $P$, il existe une constante  $C > 0$ telle que  
+    \[
+        \xi(t, \Delta t) = x(t + \Delta t) - x(t) - \Delta t + \Phi(t, x(t), \Delta t)
+    \] 
+    vérifie
+    \[
+        \|\xi(t, \Delta t)\| \le C \Delta t^{q+1}
+    \] 
+    \begin{itemize}
+        \item Si $S$ est d'ordre au moins  $q$ mais pas d'ordre au moins  $q+1$, alors il est dit consistant d'ordre exactement  $q$.
+    \end{itemize}
+\end{definition}
+\begin{eg}
+   Étude de consistance du Schéma d'Euler explicite
+   \[
+   S \begin{cases}
+       x_{n+1} = x_n + \Delta f(t_n, x_n), \quad n = 0, \ldots, N\\
+       x_0 = x^0
+   \end{cases}
+   \] 
+   \begin{itemize}
+       \item 
+   L'erreur de consistance à l'instant $t$ est 
+    \[
+        \xi(t, \Delta t) = x(t + \Delta t) - x(t) - \Delta t f(t, x(t)) 
+   \] 
+   où $x$ est solution suffisamment régulière de  $P$ (i.e $x'(t) = f(t, x(t))$)
+\item On cherche le petit $o$ de  $\Delta t$ dans  $\xi(t, \Delta t)$.
+\end{itemize}
+Comme $x$ est solution exacte, on a:
+ \[
+\xi(t, \Delta t) = x(t + \Delta t) - x(t) - \Delta t x'(t)
+\] 
+Effectons les $\Delta t$
+ \[
+x(t + \Delta t) = x(t) + \Delta x'(t) + \frac{\Delta t^2}{2}x''(t) + o(\Delta t^2)
+\] 
+D'où
+\[
+\xi(t, \Delta t) = \Delta t^2 \frac{x''(t)}{2} + o(\Delta t^2)
+\] 
+càd $\xi(t, \Delta t) = o(\Delta t^2)$ d'où le schema est consistant d'ordre au moins  $1$. 
+Or pour le problème $\begin{cases}
+    x^0(t) = f(t, x(t))
+\end{cases}$ avec $f(t, y) = 2t$., on a la solution exacte  $x(t) = x_0 + \frac{t^2}{2}$. Et on a:
+\[
+\xi(t, \Delta t) = \Delta t^2
+\] 
+D'où le schema ne peut pas être consistant d'ordre au moins $2$. \underline{Il est donc consistant d'ordre exactement $1$.}
+\end{eg}
+\begin{prop}
+    Soit $\Phi: I \times \R^d \times [0, \Delta t_0] \to \R^d$ telle que $\frac{\partial \Phi}{\partial \Delta t}, \frac{\partial^2 \Phi}{\partial \Delta t^2}, \ldots, \frac{\partial^q \Phi}{\partial \Delta t^q}$ existant et sont continues sur $I \times \R^d \times [0, \Delta t_0]$, $f$ étant de classe  $C^q$.
+    Alors le schema  
+    \[
+    S \begin{cases}
+        x_{n+1} = x_n + \Delta t \Phi(t_n, x_n, \Delta t) \quad n = 0, \ldots, N-1\\
+        x_0 = x^0
+    \end{cases}
+    \] 
+    est consistant d'ordre au moins $q$ ssi,
+    \begin{align*}
+        \Phi(t, y, 0) = f(t, y)\\
+        \frac{\partial \Phi}{\partial \Delta t}(t, y, 0) = \frac{1}{2}f^{[1]}(t, y)\\
+        \vdots\\
+        \frac{\partial^{q-1} \Phi}{\partial \Delta t^{q-1}}(t, y, 0) = \frac{1}{q}f^{[q-1]}(t, y)
+    \end{align*}
+    où $f^{[0]}(t, y) = f(t, y)$,  $f^{[j]}(t, y) = \frac{\partial f^{[j-1]}}{\partial t}(t, y) + f(t, y) \frac{\partial f^{[j-1]}}{\partial y}(t, y)$ et $j = 1, \ldots, q-1$
+\end{prop}
+\begin{eg}
+   Étude du schema du PM
+   \[
+   \begin{cases}
+       x_{n + \frac{1}{2}} = x_n + \frac{\Delta t}{2}f(t_n, x_n)\\
+       x_{n+1} = x_n + \Delta t f(t_{n + \frac{1}{2}}, x_{n + \frac{1}{2}})\\
+       x_0 = x^0
+   \end{cases}
+   \] 
+   ce schéma est explicite à un pas avec
+   \[
+   \Phi(t, y, \Delta t) = f(t + \frac{\Delta t}{2}, y + \frac{\Delta t}{2}f(t, y))
+   \] 
+   Comme 
+   \begin{itemize}
+       \item $\Phi(t, y, 0) = f(t, y)$ ce schema est consistant d'ordre au moins  $1$.
+       \item  $\frac{\partial \Phi}{\partial \Delta t}(t, y, \Delta t) = \frac{1}{2}\frac{\partial f}{\partial t}(t + \frac{\Delta t}{2}, y + \frac{\Delta t}{2}f(t, y)) + \frac{1}{2}f(t, y) \frac{\partial f}{\partial y}(y + \frac{\Delta t}{2}, y + \frac{\Delta t}{2}f(t, y))$
+           \[
+               \frac{\partial \Phi}{\partial \Delta t}(t, y, 0) = \frac{1}{2} \left[ \frac{\partial f}{\partial t}(t, y) + f(t, y) \frac{\partial f}{\partial y}(t, y) \right] = \frac{1}{2}f^{[1]}(t, y)
+           \] 
+   \end{itemize}
+   D'où le schema des $(PM)$ est consistant d'ordre au moins  $2$.
+\end{eg}
+\begin{ex}
+   Mq qu'il ne peut pas être consistant d'ordre. Choisissez $f(t, y) = g(t)$ et revenez à la définition de $\xi(t, \Delta t)$
+\end{ex}
+
+\subsection{Stabilité des schémas à un pas}
+\begin{definition}
+    $(S)$ est di stable pour une classe de fonction  $f$, s'il existe une constante  $S \ge 0$ indépendante de $\Delta t$ tq:\\
+    Pour toute suite  $(x_n)_{0 \le n \le N}$, $(\tilde{x_n})_{0 \le n \le N}$, $(r_n)_{0 \le n \le N-1}$ :
+    \begin{align*}
+        x_{n+1} = x_n + \Delta t \Phi(t_n, x_n, \Delta t)\\
+        \tilde{x}_{n+1} = \tilde{x}_n + \Delta t \Phi(t_n, \tilde{x}_{n}, \Delta t) + r_n
+    \end{align*}
+    on a la majoration 
+    \[
+        \underbrace{\max_{0 \le n \le N} \{ \|\tilde{x}_n - x_n\|  \}}_{\substack{\text{erreur maximale}\\ \text{pour toutes les itérations}}} \le S \{ \underbrace{\|\tilde{x}_0 - x_0\|}_{\text{erreur initiale}} + \sum_{j=0}^{N-1} \underbrace{\|\eta_n\|}_{\substack{\text{erreur ajoutée}\\ \text{à chaque itération}}} \}
+    \] 
+\end{definition}
+\begin{prop}
+    (Stabilité du schéma d'Euler explicite) \\ 
+    Si $f$ est lipschitzienne en espace, alors le schema d'Euler explicite est stable.
+\end{prop}
+\begin{preuve}
+    \[
+        \|x_{n+1} - \tilde{x}_{n+1}\| \le (1 + L\Delta t) \|x_n - \tilde{x}_n\| + \|\eta_n\|
+    \] 
+    Et on conclut pas le lemme de Gramwall discret.
+\end{preuve}
+\begin{lemma}
+   de Graomwall discret:\\  
+   $(a_n)_{0 \le n \le N}$, $(b_n)_{0 \le n \le N-1}$ termes positifs et $h > 0, L > 0$ tq
+    \[
+   a_{n+1} \le (1 + Lh)a_n + b_n \quad n = 0, \ldots, N-1
+   \] 
+   alors
+   \[
+       a_n \le e^{Lnh} a_0 + \sum_{j=0}^{n-1} e^{L(n - j - 1)h}b_j
+   \] 
+   D'où
+   \[
+       a_n \le e^{nhL}(a_0 + n\max_{0 \le j \le n-1}|b_j|)
+   \] 
+\end{lemma}
