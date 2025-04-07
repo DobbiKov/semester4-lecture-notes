@@ -171,3 +171,25 @@ D'où le schema ne peut pas être consistant d'ordre au moins $2$. \underline{Il
        a_n \le e^{nhL}(a_0 + n\max_{0 \le j \le n-1}|b_j|)
    \] 
 \end{lemma}
+\begin{prop}
+   Si la fonction $\Phi$  est telle que: il existe $\Lambda \ge 0$ tq:
+   \[
+       \forall \Delta t \in [0, \Delta t_0], \forall t \in [t_0, t_0 + T - \Delta t] \forall y_1, y_2 \in \R^d
+   \] 
+   \[
+   \left\| \Phi(t, y_1, \Delta t) - \Phi(t, y_2, \Delta t) \right\| \le \Lambda \|y_1 - y_2\|
+   \] 
+   alors le schéma $(S)$ est stable de constante de stabilité  $S = e^{\Lambda T}$
+\end{prop}
+
+\subsection{Convergence des schémas à un pas explicite}
+\begin{theorem}
+    \begin{enumerate}
+        \item Si la méthode $(S)$ est stable et consistant, alors elle est convergente
+        \item Si la méthode  $(S)$ est stable et consistant d'ordre  $q$, alors elle est convergente d'ordre  $q$ et pour toute suite $(x_n)_{0 \leq n \leq N}$ donnée par $S$, initialisée par $x_0 \in \R^d$, on a 
+            \[
+            \max_{0 \le n \le N} \|x(t_n) - x_n\| \le \left( \|x(t_n) - x_0\| + CT\Delta t^q \right) 
+            \] 
+            Où $S$ est une constante de stabilité et  $C$ - constante de consistance.
+    \end{enumerate}
+\end{theorem}
