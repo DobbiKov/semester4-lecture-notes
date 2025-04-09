@@ -1,0 +1,195 @@
+\chapter{Système d'équation diffeérentielles}
+\[
+    (E) 
+    \begin{cases}
+        x_1'(t) = a_{1,1}x_1(t) + \ldots + a_{1,n}x_n(t) + f_1(t)\\
+        \vdots\\
+        x_n'(t) = a_{n,1}x_1(t) + \ldots + a_{n,n}x_n(t) + f_n(t)
+    \end{cases}
+\] 
+\[
+x(t) = (x_1, \ldots, x_n(t)) \text{ ou } \begin{pmatrix} x_1(t) \\ \vdots \\ x_n(t) \end{pmatrix} 
+\] 
+
+\[
+    A = [a_{i,j}]_{1 \le i, j \le n} \quad f(t) = \begin{pmatrix} f_1(t) \\ \vdots \\ f_n(t) \end{pmatrix} 
+\] 
+\begin{align*}
+    f: \R &\longrightarrow \mathbb{C}^n \\
+    A &\longmapsto f(A) = \mathcal{M}_n(\mathbb{C})
+\end{align*}
+\begin{align*}
+    x'(t) = Ax(t) + f(t)\\
+\end{align*}
+\[
+    (H) \: x'(t) = Ax(t)
+\] 
+\[
+    (C) \begin{cases}
+        x'(t) = Ax(t) + f(t)\\
+        x(0) = x_0 \in \mathbb{C}^n
+    \end{cases}
+\] 
+
+\underline{Solution sur $I$:} $f: I \to \mathbb{C}^n$ avec $I \subset \R$ intervalle ($f$ supposée continue). $x: I \to  \mathbb{C}^n$ de classe $\mathcal{C}^1$ telle que  $(C)$ vérifiée  $\forall t \in I$
+\begin{itemize}
+    \item  \underline{Si $n=1$} $A = a \in  \mathbb{C}$. Solution de $(H)$:  $x(t) = e^{ta}x_0$ avec $x_0 \in \mathbb{C}$ 
+        \[
+            e^{a} = \sum_{n=0}^{\infty} \frac{a^n}{n!}
+        \] 
+\end{itemize}
+\underline{But:} définir $e^A$
+ \begin{theorem}
+     Soit $A \in \mathcal{M}_n(\mathbb{C})$ ($A \in B(E)$ où $(E, \| \cdot \|)$ complet!)
+     \begin{enumerate}
+         \item La série $\sum_{n \in \N}^{} \frac{A^n}{n!}$ converge dans $(\mathcal{M}_n(\mathbb{C}), \| \cdot \|)$, sa somme  $\sum_{n=0}^{\infty} \frac{A^n}{n!}$ notée $e^A$ s'appelle l'exponentielle de  $A$.
+         \item  $\|e^A\| \le e^{\|A\|}$
+         \item $\|e^A - \sum_{n=0}^{N} \frac{A^n}{n!}\| \le \frac{\|A\|^{N+1}}{(N+1)!}e^{\|A\|} (\le \frac{\|A\|_{HS}^{N+1}}{(N+1)!}e^{\|A\|_{HS}})$ 
+         \item $e^Ae^B = e^Be^A$ si  $AB=BA$
+         \item  $Be^A = e^AB$ si  $AB=BA$
+     \end{enumerate}
+\end{theorem}
+\begin{preuve} -
+    \begin{enumerate}
+        \item 
+            $\|AB\| \le \|A\|\|B\|$ (car $\| \cdot \|$ norme uniforme!) donc $\|A^n\| \le \|A\|^n$. $\sum_{n \in \N}^{} \frac{\|A\|^n}{n!}$ (série numérique!) converge vers $e^{\|A\|}$ donc $\sum_{n \in \N}^{} \frac{A^n}{n!}$ converge \underline{normalement} dans $\mathcal{M}_n(\mathbb{C})$. 
+            \par
+            $\mathcal{M}_n(\mathbb{C})$ est complet (comme $B(E)$ si  $E$ est complet) donc $\sum_{n \in \N}^{} \frac{A^n}{n!}$ converge dans $\mathcal{M}_n(\mathbb{C})$.
+        \item OK aussi
+        \item \[
+            \|e^A - \sum_{n=0}^{N} \frac{A^n}{n!}\| = \|\sum_{n=N+1}^{\infty} \frac{A^n}{n!}\| \le \sum_{n = N+1}^{\infty} \frac{\|A\|^n}{n!}
+            \] 
+            On note $f(x) = e^x$
+             \[
+                 f(x) = \sum_{n=0}^{N} f^{(n)}(0) \frac{x^n}{n!} + \frac{x^{N+1}}{(N+1)!}f^{(N+1)}(y) \quad (y \text{ entre } 0 \text{ et } x)
+            \] 
+            $x = \|A\|$
+        \item  
+            \[
+                e^Ae^B = e^{A + B} \text{ si } AB = BA
+            \] 
+            \begin{align*}
+                (A + B)^2 = A^2 + AB + BA + B^2 = A^2 + 2AB + B^2 \quad (\text{ si } AB = BA)
+            \end{align*}
+            \[
+                (A+B)^n = \sum_{p=0}^{n} C_n^p A^{n-p}B^p
+            \] 
+            Même preuve si $A = a, B = b$ avec  $a,b \in \R$
+        \item exercice
+    \end{enumerate}
+\end{preuve}
+\begin{remark}
+   \[
+        A = \begin{pmatrix} 
+            0 & 1\\
+            0 & 0
+        \end{pmatrix}  
+        \quad
+        B = \begin{pmatrix} 
+            0 & 0 \\
+            1 & 0
+        \end{pmatrix} 
+   \]  
+   \[
+       AB = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} 
+       \quad 
+       BA = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} 
+   \] 
+   \[
+       A^2 = 0 \quad e^A = \mathcal{I} + A \quad e^B = \mathcal{I} + B \text{ où } \mathcal{I} \text{ identité}
+   \] 
+   \[
+       e^A = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} 
+       \quad 
+       e^B = \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix} 
+       \quad 
+       e^Ae^B = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix} 
+   \] 
+   \[
+       e^{A+B} = ? \quad A + B = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \quad (A + B)^2 = \mathcal{I}
+   \] 
+   \[
+       C = A+B \quad C^{2p} = \mathcal{I} \quad C^{2p + 1} = C
+   \] 
+   \[
+       e^C = \sum_{p=0}^{\infty} \frac{C^{2p}}{2p!} + \sum_{p=0}^{\infty} \frac{C^{2p + 1}}{(2p + 1)!} = \mathcal{I}\underbrace{\sum_{p=0}^{\infty} \frac{1}{2p!}}_{= \operatorname{ch}(1)} + C\underbrace{\sum_{p=0}^{\infty} \frac{1}{(2p + 1)!}}_{= \operatorname{sh}(1)}
+   \] 
+   \[
+       e^{A + B} = \operatorname{ch}(1) \mathcal{I} + \operatorname{sh}(1)C = \begin{pmatrix} \operatorname{ch}(1) & \operatorname{sh}(1) \\ \operatorname{sh}(1) & \operatorname{ch}(1) \end{pmatrix} \neq e^A \times e^B
+   \] 
+\end{remark}
+\begin{prop}
+    $A \in \mathcal{M}_n(\mathbb{C})$ (ou $B(E)$)
+    \begin{enumerate}
+        \item $e^{tA}e^{sA} = e^{(s + t)A} \qquad s,t \in \R$ 
+        \item $(e^{tA})^{-1} = e^{-tA} \qquad  t \in \R$
+        \item $\frac{d}{dt}(e^{tA}) = Ae^{tA} \qquad t \in \R$
+    \end{enumerate}
+\end{prop}
+\begin{preuve}-
+    \begin{enumerate}
+        \item OK car $tA$ commute avec  $sA$
+        \item  $e^{tA}e^{-tA} = e^{-tA}e^{tA} = e^{0A} = \mathcal{I}$ donc  $(e^{tA})^{-1} = e^{-tA}$
+        \item À calculer: $\lim_{\varepsilon \to 0} \frac{e^{(t + \varepsilon)A} - e^{tA}}{\varepsilon} = ?$ 
+            \[
+            e^{tA}(\frac{e^{\varepsilon A }- \mathcal{I}}{\varepsilon})
+            \] 
+            \begin{align*}
+                e^{\varepsilon A} - \mathcal{I} &= \sum_{n=1}^{\infty} \frac{(\varepsilon A)^n}{n!} \quad n = 1 + p\\
+                                                &= \varepsilon A \times \sum_{p=0}^{\infty} \frac{(\varepsilon A)^p}{(p+1)!}\\
+                                                &= \varepsilon A \left( \mathcal{I} + \|\sum_{p=1}^{\infty} \frac{(\varepsilon A)^p}{(p+1)!}\| \right) \\
+                                                &= \varepsilon A \left( \mathcal{I} + R(\varepsilon) \right) 
+            \end{align*}
+            \[
+                \frac{e^{\varepsilon A} - \mathcal{I}}{\varepsilon} = A + AR(\varepsilon)
+            \] 
+            à voir: $\|AR(\varepsilon)\| \xrightarrow[\varepsilon \to 0]{} 0$ alors $\lim_{\varepsilon \to 0} \frac{e^{\varepsilon A} - \mathcal{I}}{\varepsilon} = A$
+            \[
+            \|AR(\varepsilon)\| \le c\varepsilon \xrightarrow[\varepsilon \to 0]{} 0
+            \] 
+            \begin{align*}
+                \|R(\varepsilon)\| \le \sum_{p=1}^{\infty} \frac{\varepsilon^p \|A\|^p}{(p+1)!} = \varepsilon \sum_{p=1}^{\infty} \frac{\varepsilon^{p-1}\|A\|^p}{(p+1)!} \le \varepsilon e^{\|A\|}
+            \end{align*}
+            Si $|\varepsilon| \le 1$
+            \[
+                \frac{\varepsilon^{p-1} \|A\|^p}{(p+1)!} \le \frac{\|A\|^p}{p!}
+            \] 
+    \end{enumerate}
+\end{preuve}
+\section{Application aux système d'ED}
+\[
+    (H) \: x'(t) = Ax(t)
+\] 
+\begin{theorem}
+    L'ensemble $\operatorname{Sol}(H)$ des solutions de  $(H)$ est donné par
+     \[
+         x(t) = e^{tA}x_0 \quad x_0 \in \mathbb{C}^{n}
+    \] 
+\end{theorem}
+Soit $x(t)$ une solution
+\begin{align*}
+            & y(t)  &&= e^{-tA}x(t)\\
+    \implies& y'(t) &&= -Ae^{-tA}x(t) + e^{-tA}x'(t)\\
+            &       &&= -Ae^{-tA}x(t) + e^{-tA}Ax(t)\\
+            &       &&= 0\\
+    \implies& y(t)  && = x_0 \implies x(t) = e^{tA}
+\end{align*}
+\[
+    (E) \quad x'(t) = Ax(t) + f(t)
+\] 
+\[
+    x(t) = e^{tA}x_0 + \int_{{0}}^{{t}} {e^{(t - s)A} f(s)} \: d{s} 
+\] 
+\[
+x(0) = x_0
+\] 
+\begin{preuve}
+   Chercher $x(t)$  sous la forme 
+   \[
+       x(t) = e^{tA}y(t)
+   \] 
+   Je trouve que $y'(t) = e^{-tA}f(t)$
+    \[
+        y(t) = x_0 + \int_{{0}}^{{t}} {e^{-sA}f(s)} \: d{s}
+   \] 
+\end{preuve}
