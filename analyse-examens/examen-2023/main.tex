@@ -1,0 +1,161 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newtheorem{theoreme}{Théorème}[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{exemple}{Exemple}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{propriete}{Propriété(s)}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{remarque}{Remarque}
+\title{Examen 2023}
+\begin{document}
+\maketitle
+\section*{Exercice 3} 
+\[
+    E = \{ f \in \mathcal{C}^1([0,1], \R): f(0) = 0 \}
+\] 
+\begin{itemize}
+    \item $N_1(f) = \sup_{x \in [0, 1]}|f'(x)|$
+    \item $N_2(f) = \sup_{x \in [0, 1]}|f(x) + f'(x)|$
+\end{itemize}
+
+\begin{enumerate}
+\item 
+    \begin{itemize}
+        \item 
+            $N_1(f) = 0 \implies f = 0$ i.e $f(x) = 0 \forall x \in [0, 1]$
+        \item 
+            $N_2(f) = 0 \implies \begin{cases}
+                f'(x) + f(x) = 0 \forall x \in [0, 1]\\
+                f(0) = 0
+            \end{cases}$
+        \item $N(f) = \sup_{x \in [0,1]} |f''(x)|$
+    \end{itemize}
+    \begin{itemize}
+        \item $(e^xf(x))' = e^xf'(x) + e^xf(x) = 0 \forall x$
+        \item $e^xf(x) = e^0f(0) = 0 \implies f(x) = 0 \forall x$
+    \end{itemize}
+    $N$ est une norme sur $E$.
+\item 
+    Si $f \in E \quad |f(x)| \le N_1(f) \forall x \in [0,1]$ 
+    \begin{itemize}
+        \item $f(x) - f(0) = \int_{{0}}^{{x}} {f(t)} \: d{t}$
+        \item $f(x) = \int_{{0}}^{{x}} {f'(t)} \: d{t}$
+        \item $|f(x)| \le \left| \int_{{0}}^{{x}} {f'(t)} \: d{t} \right| \le \int_{{0}}^{{x}} {|f'(t)|} \: d{t} \le \int_{{0}}^{{1}} {|f'(t)|} \: d{t} \le 1 \cdot \sup_{t \in [0, 1]} |f'(t)|$
+    \end{itemize}
+    \[
+    N_2(f) \le 2N_1(f)
+    \] 
+    \begin{align*}
+        N_2(f) = \sup_{x \in [0, 1]} |f'(x) + f(x)| \le \sup_{x \in [0,1]} |f'(x)| + \sup_{x \in [0, 1]} |f(x)| \le N_1(f) + N_1(f) = 2N_1(f)
+    \end{align*}
+
+\item 
+    \[
+    e^xf(x) = \int_{{0}}^{{x}} {(f'(t) + f(t))e^t} \: d{t} 
+    \] 
+
+    \begin{itemize}
+        \item $(e^xf(x))' = e^xf'(x) + e^xf(x)$
+        \item  $\left( \int_{{0}}^{{x}} {(f'(t) + f(t))e^t} \: d{t} \right)' = (f'(x) + f(x))e^x$
+    \end{itemize}
+    même valeur en $x=0$
+
+     \[
+    \frac{d}{dx}(e^xf) = e^x(\frac{d}{dx}f + f)
+    \] 
+
+\item 
+    \[
+        e^t \le e^x \text{ si } t \in [0, x]
+    \] 
+    \[
+    |e^xf(x)| = \left| \int_{{0}}^{{x}} {(f'(t) + f(t))e^t} \: d{t} \right| \le \int_{{0}}^{{x}} {|f'(t) + f(t)|e^t} \: d{t} \le e^x \int_{{0}}^{{x}} {|f'(t) + f(t)|} \: d{t}
+    \] 
+    \[
+    |f(x)| \le \int_{{0}}^{{x}} {|f'(t) + f(t)|} \: d{t} \le \int_{{0}}^{{1}} {|f'(t) + f(t)|} \: d{t} \le 1 \cdot N_2(f)
+    \] 
+    \[
+        \sup_{x \in [0,1]}|f(x)| \le N_2(f)
+    \] 
+    \[
+    |f'(x)| \le |f'(x) + f(x)| + |f(x)|
+    \] 
+    \[
+    N_1(f) \le 2N_2(f)
+    \] 
+\end{enumerate}
+\section*{Exercice 4}
+\[
+    E = \mathcal{M}_n(\mathbb{C}) = L(\mathbb{C}^n)
+\] 
+$\mathcal{M}_n(\mathbb{C})$ muni de la norme Hilbertienne sur $\mathbb{C}^n$.
+\begin{itemize}
+    \item $z = (z_1, \ldots, z_n) \quad z_i \in \mathbb{C}$
+    \item $\|u\|_2 = \left( \sum_{i=1}^{n} |z_i|^2 \right)^{\frac{1}{2}}$
+    \item $\|A\| = \sup_{\|u\| \le 1} \|Au\|_2$
+\end{itemize}
+\begin{enumerate}
+    \item si $A_n \to A$ alors $\|A_n\| \xrightarrow[n \to +\infty]{} \|A\|$ (dans $\R$)
+        \[
+        \left| \|A_n\| - \|A\| \right| \le \|A_n - A\|
+        \] 
+        donne le résultat.
+    \item si $A_n \to A$ et $B_n \to B$ alors $A_nB_n \to AB$ (car $\|AB\| \le \|A\|\times \|B\|$)
+        \[
+        A_nB_n - AB = (A_n - A)B_n + A(B_n - B)
+        \] 
+        \begin{align*}
+            \|A_nB_n - AB\| & \\
+                            &\le  \|(A_n - A)B_n\| + \|A(B_n - B)\|\\
+                            &\le \|B_n\|\|A_n - A\| + \|A\|\|B_n - B\|
+        \end{align*}
+        $\|B_n\| \xrightarrow[n \to \infty]{} \|B\|$ donc $\exists C \ge 0$ tq $\|B_n\| \le C \quad \forall n$
+        \par
+        Caché: $\mathcal{M}_n(\mathbb{C}) \to B(E)$ où $E$ e.v.n, donc
+         \[
+        \|A_nB_n - AB\| \le C\|A_n - A\| + \|A\|\|B_n - B\|
+        \] 
+        donc $\lim_{n \to \infty} \|A_nB_n - AB\| = 0$ i.e $A_nB_n \to AB$
+
+        \begin{align*}
+            P: B(E) \times B(E) &\longrightarrow B(E) \\
+            (A, B) &\longmapsto P((A, B)) = AB
+        \end{align*}
+        $B(E) \times B(E)$ munit de $\|(A,B)\| = \|A\| + \|B\|$,  $P$ est linéaire.
+    \item  $A \in B(E)$ telle que $\lim_{n \to \infty} A^n = C$. Montrer que $C^2 = C$ ($C$ est une projection).
+        \par
+        Soit $A_n = A^n$,  $A_n \times A_n = A^{2n} = A_{2n}$. $A_n \to C$ donc $A_{2n} \to  C \times C = C^2$, mais $A_{2n} \to C$ donc $C^2 = C$.
+\end{enumerate}
+\end{document}

@@ -1,0 +1,135 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newtheorem{theoreme}{Théorème}[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{exemple}{Exemple}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{propriete}{Propriété(s)}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{remarque}{Remarque}
+
+\title{Examen 2022}
+\begin{document}
+\maketitle
+\section*{Exercice 1} 
+\[
+    B(\R) = \{ u: \R \to \R \mid u \text{ bornée} \}
+\] 
+\[
+\|u\|_{\infty} = \sup_{x \in \R} |u(x)|
+\] 
+
+$u: \R \to \R$ bornée: $\{ u(x): x \in \R \}$ bornée dans $\R$.
+\begin{enumerate}
+    \item si $u_n \to u$ pour $\|\cdot\|_{\infty}$, alors $u_n(x_0) \to u(x_0)$ $\forall x_0 \in \R$.
+        \par
+        On fixe $x_0 \in \R$,
+        \[
+        |u_n(x_0) - u(x_0)| \le \|u_n - u\|_{\infty}
+        \] 
+        donc si $\|u_n - u\|_{\infty} \to 0$ alors $|u_n(x_0) - u(x_0)| \xrightarrow[n \to \infty]{} 0$ 
+        \begin{remarque}
+        \[
+            E = \mathcal{C}^0([a,b], \R)
+        \] 
+        \[
+            \|u\|_1 = \int_{{a}}^{{b}} {|u(x)|} \: d{x}
+        \] 
+        $u_n \to u$ pour $\|\cdot \|_{1}$ n'entraine pas que $u_n(x_0) \to u(x_0) \forall x_0 \in [a, b]$ 
+    \end{remarque}
+    \item $A \subset B(\R) = $ ensemble des fonctions bornées et croissantes. $u_n \in A$ avec $u_n \to u$ pour $\|\cdot \|_{\infty}$, montrer que $u \in A$.
+        \par
+        On fixe $x_0, x_1 \in \R$ avec $x_0 \le x_1$. 
+        \[
+        u(x_1) - u(x_0) = \lim_{n \to \infty} u_n(x_1) - u_n(x_0)
+        \] 
+        $\forall n, u_n(x_1) - u_n(x_0) \ge 0$ car $u_n$ croissante, donc  $u(x_1) - u(x_0) \ge 0$, donc $u$ croissante aussi. Alors \underline{$A$ est fermé}.
+    \item $C = \{ u \in B(\R) \text{ avec une limitie (finie) en } \pm\infty \}$ $C$ sous-espace vectoriel de $B(\R)$. 
+        \begin{enumerate}
+            \item 
+                $A \subset C$, $C$ est fermé
+            \item si  $u, v \in \mathbb{C}$ et $u^+ = \lim_{x \to \infty} u(x)$ et $v^+ = \lim_{x \to \infty} v(x)$, alors $|u^+ - v^+| \le \|u - v\|_{\infty}$
+                \[
+                |u^+| \le \|u\|_{\infty}
+                \] 
+                $|u(x)| \le \|u\|_{\infty} \quad \forall x \in \R$, donc 
+                \[
+                \lim_{x \to \infty} |u(x)| = u^+ \le \|u\|_{\infty}
+                \] 
+                (les inégalités larges passent à la limite)
+            \item 
+                $(u_n)$ suite dans  $C$ avec  $u_n \to u$ pour $\|\cdot\|_{\infty}$. $u_n^+ = \lim_{x \to \infty} u_n(x)$ et $(u_n^+)$ suite dans  $\R$. Montrer que $(u_n^+)$ converge dans  $\R$.
+                \par
+                $n, p \in \N$
+                \[
+                    (1) \quad |u_n^+ - u_p^+| \le \|u_n - u_p\|_{\infty}
+                \] 
+                $(u_n)$ converge vers  $u$ dans  $(B(\R), \|\cdot\|_{\infty})$ donc $(u_n)$ de  Cauchy (dans $B(\R), \|\cdot \|_{\infty}$)
+                \[
+                \forall \varepsilon > 0, \exists N \in \N \text{ tq si } n, p \ge N, \|u_n - u_p\|_{\infty} \le \varepsilon 
+                \] 
+                Par $(1)$  $(u_n^+)$ est de Cauchy dans  $\R$ donc  \underline{converge}.
+            \item 
+                $u_n \to u$ pour $\|\cdot\|_{\infty}$, on pose $l^+ = \lim_{n \to \infty} u_n^+$. \underline{But}: montrer que $\lim_{x \to \infty} u(x) = l^+$, donc $u \in C$, i.e montrer que 
+                \[
+                \lim_{n \to \infty} \lim_{x \to \infty} u_n(x) = \lim_{x \to \infty} \lim_{n \to \infty} u_n(x)
+                \] 
+                \par
+                \[
+                |l^+ - u(x)| \le |l^+ - u_n(x)| + |u_n(x) - u(x)| \le |l^+ - u_n^+| + |u_n^+ - u_n(x)| + |u_n(x) - u(x)|
+                \] 
+                $\forall \varepsilon > 0$, trouver $R \in \R$ tq si $x \ge R, |l^+ - u(x)| \le 3 \varepsilon$
+                \[
+                    |u_n(x) - u(x)| \le \|u_n - u\|_{\infty}
+                \] 
+                $u_n \to u$ pour $\|\cdot\|_{\infty}$ donc $\exists N \in \N$ si $n \ge N$
+                \[
+                |u_n(x) - u(x)| \le \varepsilon \forall x \in \R
+                \] 
+                $\lim_{n \to \infty} u_n^+ = l^+$: $\exists M \in \N$ tel que si $n \ge M$
+                \[
+                |l^+ - u_n^+| \le \varepsilon
+                \] 
+                Je fixe $n = \max(N, M)$ ou  $N + M$, pour ce  $n$ fixé: 
+                \[
+                u_n(x) \xrightarrow[x \to \infty]{} u_n^+
+                \] 
+                Donc $\exists R \ge 0$ tq si $x \ge R$
+                \[
+                |u_n(x) - u_n^+| \le \varepsilon
+                \] 
+                Si $x \ge R \quad |u(x) - l^+| \le \varepsilon$
+        \end{enumerate}
+\end{enumerate}
+\end{document}

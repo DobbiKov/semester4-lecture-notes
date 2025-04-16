@@ -1,0 +1,95 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newtheorem{theoreme}{Théorème}[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{exemple}{Exemple}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{propriete}{Propriété(s)}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{remarque}{Remarque}
+\title{Examen 2024}
+\begin{document}
+   \maketitle 
+   \section*{Exercice 2}
+   \[
+   f(x, y) = \begin{cases}
+       y^2x^{-1} \text{ si } x \neq 0\\
+       0 \text{ si } x = 0
+   \end{cases}
+   \] 
+   en polaires:
+   \[
+   f(x) = \begin{cases}
+            \frac{r^2 \sin \theta}{\cos \theta} = \frac{r \sin \theta}{\cos \theta} \text{ si } \cos \theta \neq 0\\
+            0 \text{ si } \cos \theta = 0
+   \end{cases}
+   \] 
+   \subsection*{$f$ admet des dérivées dans toutes les directions en $(0, 0)$:}
+   \par
+   $\vec{u} = (a, b)$ et  $f(0, 0) = 0$
+    \[
+        f(t\vec{u}) = \begin{cases}
+            \frac{t^2b^2}{ta} \text{ si } a \neq 0\\
+            0 \text{ si } a = 0
+        \end{cases}
+   \] 
+   \[
+       \frac{d}{dt}f(t\vec{u})|_{t = 0} = \begin{cases}
+           \frac{b^2}{a} \text{ si } a \neq 0\\
+           0 \text{ si } a = 0
+       \end{cases}
+   \] 
+   \par
+   \subsection*{$f$ pas continue en  $(0, 0)$:}
+   \par
+   2 suites  $x_n, \hat{x}_n$ dans $\R^2$ tq $x_n \to (0, 0)$ et $\hat{x}_n \to (0, 0)$
+   \[
+   \lim_{n \to \infty} f(x_n) \neq \lim_{n \to \infty} f(\hat{x}_n)
+   \] 
+   \[
+   x_n = (0, \frac{1}{n}) \quad f(x_n) = 0 \, \forall n
+   \] 
+   \[
+   \hat{x}_n = (\frac{1}{n^2}, \frac{1}{n}) \quad f(\hat{x}_n)=1 \, \forall n
+   \] 
+   Lignes de niveau
+   \[
+   f(x, y) = c
+   \] 
+   2 cas:
+   \begin{itemize}
+       \item $c = 0$  $f(x, y) = 0 \iff x= 0 \text{ ou } y = 0$ 
+       \item $c \neq 0$ $y^2 = cx$  $x \neq 0$
+   \end{itemize}
+\end{document}
