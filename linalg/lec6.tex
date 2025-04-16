@@ -58,7 +58,8 @@ Ce qui est important, c'est que les polynômes annulateurs sont très liés aux 
     \[
     Q_1 = (X - a_1) \cdots (X - a_r)
     \] 
-    est appelé \textbf{radical} de $Q$. ($Q_1 \mid Q$ radical d'un polynôme divise le polynôme lui-même).
+    est appelé \textbf{radical} de $Q$ (i.e polynôme scindé (le même polynôme mais sans puissances à côté des paranthèses). 
+    \par De plus, $Q_1 \mid Q$ i.e radical d'un polynôme divise le polynôme lui-même.
 \end{definition}
 \begin{prop}
     Soit $f$ est un endomorphisme et 
@@ -114,3 +115,8 @@ Ce qui est important, c'est que les polynômes annulateurs sont très liés aux 
 \begin{corollary}
     Un endomorphisme $f$ est diagonalisable si et seulement s'il existe un polynôme annulateur  $Q$ de  $f$ scindé et n'ayant que des racines simples \footnote{scindé: $(X - \lambda_i)^{\alpha_i}$ - $X$ est à la puissance  $1$! racines simples: si  $\alpha_i = 1$ aussi i.e les facteurs  $(X - \lambda)$ sont à la puissance 1!} 
 \end{corollary}
+
+\section{Recherche des polynômes annulateurs. Polynôme minimal}
+\begin{definition}
+    On appelle un  \textbf{polynôme minimal} de $f$ noté  $m_f(X)$ - le polynôme normalisé \footnote{i.e de coefficient $1$ du terme du plus haut degré, i.e:  $1*X^n + a_{n-1}X^{n-1} + \ldots + a_0$} qui annule $f$ de degré le plus petit.
+\end{definition}
