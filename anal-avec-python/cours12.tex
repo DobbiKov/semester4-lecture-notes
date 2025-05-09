@@ -9,7 +9,7 @@ Elle est adaptée aux problèmes
 \] 
 \begin{remark}
    Une équation $f(x^*) = 0$ devra être transformée pour rentrer dans ce cadre $(g = ?)$ \par
-   On cerche $x^*$ comme  $\lim_{n \to \infty} x_n$ où 
+   On cherche $x^*$ comme  $\lim_{n \to \infty} x_n$ où 
    \[
        (S) \, \begin{cases}
            x_{n+1} = y(x_n), \, n = 0, \ldots \\
@@ -206,5 +206,7 @@ def Newton(f, f_prime, x0, eps, IterMax):
          x_0 \text{ donnée }
      \end{cases}
      \] 
-     On aura convergence d'ordre $1$ i.e  $\lim_{n \to \infty} \frac{x_{n+1} - x^*}{x_n - x^*} = K_1 \neq 0$ avec $K_1 = 1 - \frac{1}{m} = \frac{2}{3}$
+     On aura convergence d'ordre $1$ i.e  $\lim_{n \to \infty} \frac{x_{n+1} - x^*}{x_n - x^*} = K_1 \neq 0$ avec $K_1 = 1 - \frac{1}{m} = \frac{2}{3}$ 
+     \par
+     I.e $x^*$ est racine d'ordre $m$ de  $f$ d'où  $f(x) = (x - x^*)^m h(x)$ avec  $h(x^*) \neq 0$
  \end{remark}

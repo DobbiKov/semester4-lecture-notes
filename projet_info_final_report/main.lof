@@ -1,0 +1,17 @@
+\babel@toc {french}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces La structure du projet}}{2}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Exemples des adders des registres $2^0$ et $2^1$ réspéctivement}}{5}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Exemple d'un carry look ahead}}{8}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Half-adder juste après l'initialisation}}{14}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Half-adder après le premier pas d'evaluate}}{15}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Comparaison de l'état de half-adder avant et apres d'une application d'une transformation intermédiaire ($0 | 0 = 0$)}}{16}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Les étapes avant la finalisation de l'évaluation de half-adder}}{16}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces L'état de \textit {half-adder} après l'évaluation complète}}{17}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces L'encodeur}}{17}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Le décodeur}}{18}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces La composition de l'encodeur et déodeur}}{18}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces L'identité après l'évaluation de la composition de l'encodeur et le décodeur}}{19}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Le décodeur avec une erreur (une porte non)}}{19}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces La composition de l'encodeur et du décodeur avec une erreur (une porte non)}}{20}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Le décodeur avec deux erreurs (voir deux portes non dans les inputs)}}{20}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces L'identité avec les bits changés qui ne correspondent pas aux bits initiales}}{21}{figure.16}%
