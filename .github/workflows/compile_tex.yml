@@ -46,6 +46,13 @@ jobs:
         root_file: cheatsheet.tex
         latexmk_shell_escape: true
         working_directory: linalg
+        
+    - name: Analyse Numerique avec python CheatSheet
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: main.tex
+        latexmk_shell_escape: true
+        working_directory: anp-cheatsheet
 
     - name: Check PDF files
       run: |
@@ -54,6 +61,7 @@ jobs:
         file linalg/main.pdf | grep -q ' PDF '
         file linalg/cheatsheet.pdf | grep -q ' PDF '
         file anal-avec-python/main.pdf | grep -q ' PDF '
+        file anp-cheatsheet/main.pdf | grep -q ' PDF '
         
     - name: Upload to GitHub pages
       run: |
@@ -74,6 +82,7 @@ jobs:
         cp -f linalg/main.pdf "$GITHUB_WORKSPACE/deploy/linalg.pdf"
         cp -f anal-avec-python/main.pdf "$GITHUB_WORKSPACE/deploy/anal-avec-python.pdf"
         cp -f linalg/cheatsheet.pdf "$GITHUB_WORKSPACE/deploy/linalg_cheatsheet.pdf"
+        cp -f anp-cheatsheet/main.pdf "$GITHUB_WORKSPACE/deploy/anp-cheatsheet.pdf"
 
         cd "$GITHUB_WORKSPACE/deploy"
 
