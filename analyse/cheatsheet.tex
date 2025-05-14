@@ -3,9 +3,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[english]{babel}
+\usepackage[french]{babel} % Changed to french
 \usepackage{amsmath, amssymb, amsthm}
-
+\usepackage{mathtools} % For \coloneqq
 
 % figure support
 \usepackage{import}
@@ -18,6 +18,7 @@
 
 \usepackage{setspace}
 \setlength{\parindent}{0in}
+\usepackage{enumitem} % For better lists
 
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
@@ -28,205 +29,448 @@
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}} % Added C
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\K}{\mathbb{K}} % Added K for field
 
 \newtheorem{theorem}{Théorème}[section]
 \newtheorem{definition}{Définition}[section]
 \newtheorem{exemple}{Exemple}[section]
 \newtheorem{proposition}{Proposition}[section]
-\newtheorem{propriete}{Propriété(s)}[section]
+\newtheorem{lemma}{Lemme}[section] % Added Lemma
+\newtheorem{propriete}{Propriété}[section] % Changed to singular
 \newtheorem*{notation}{Notation}
 \newtheorem*{remarque}{Remarque}
 
 \title{CheatSheet d'Analyse et Géometrie}
 \author{Yehor KOROTENKO}
+\date{D'après le cours de Christian Gérard} % Added date/source
 
 \begin{document}
 \maketitle
-\section{Distances et normes}
-   \begin{definition}
-       Une \textbf{norme} sur $\R^d$ est une application $N: \R^d \to \R$ tel que:
-       \begin{enumerate}
-           \item $N(\lambda X) = |\lambda|N(X)$
-           \item  $N(X + Y) \le N(X) + N(Y)$
-           \item $N(X) \ge 0$ et $N(X) = 0 \iff X = 0_d$
-       \end{enumerate}
-   \end{definition} 
-   \begin{definition}
-       Une \textbf{distance} sur $\R^d$ est une application:  $d: \R^d \times \R^d \to \R$ tel que:
-       \begin{enumerate}
-           \item $d(X, Y) = d(Y, X)$
-           \item  $d(X, Y) \le d(X, Z) + d(Z, Y)$
-           \item $d(X, Y) \ge 0 \quad \forall X,Y$ et $d(X,Y) = 0 \iff X = Y$
-       \end{enumerate}
+\tableofcontents % Added table of contents
+\newpage
+
+\section{Espaces Vectoriels Normés, Distances}
+% Content from PDF Chapter 1 & 5.1
+
+\subsection{Produit Scalaire et Norme Euclidienne sur \(\R^d\)}
+    \begin{definition}[Produit Scalaire sur \(\R^d\)]
+        Pour \(X=(x_1, ..., x_d)\) et \(Y=(y_1, ..., y_d)\) dans \(\R^d\), le \textbf{produit scalaire} est :
+        \[ X \cdot Y = \sum_{i=1}^d x_i y_i = \|X\| \|Y\| \cos(\theta) \]
+        Propriétés : bilinéarité, symétrie, défini positif (\(X \cdot X \ge 0\), et \(X \cdot X = 0 \iff X = 0_d\)).
+    \end{definition}
+    \begin{proposition}[Inégalité de Cauchy-Schwarz]
+        Pour \(X, Y \in \R^d\) :
+        \[ |X \cdot Y| \le (X \cdot X)^{1/2} (Y \cdot Y)^{1/2} \quad \text{i.e.} \quad |X \cdot Y| \le \|X\| \|Y\| \]
+    \end{proposition}
+   \begin{definition}[Norme Euclidienne sur \(\R^d\)]
+       La \textbf{norme euclidienne} d'un vecteur \(X \in \R^d\) est :
+       \[ \|X\| = \|X\|_2 = \left( \sum_{i=1}^{d} x_i^2 \right)^{1/2} = (X \cdot X)^{1/2} \]
    \end{definition}
-   \begin{exemple} La distance et la norme canonique. Soit $X = (x_1, \ldots, x_n)$
+   \begin{definition}[Norme sur un \(\K\)-espace vectoriel \(E\)]
+       Une \textbf{norme} sur \(E\) (où \(\K = \R\) ou \(\C\)) est une application \(N: E \to \R_+\) (notée \(\|\cdot\|\)) telle que :
+       \begin{enumerate}
+           \item \textbf{Séparation :} \(\|X\| = 0 \iff X = 0_E\)
+           \item \textbf{Homogénéité :} \(\|\lambda X\| = |\lambda| \|X\|\) pour tout \(\lambda \in \K, X \in E\)
+           \item \textbf{Inégalité triangulaire :} \(\|X + Y\| \le \|X\| + \|Y\|\) pour tout \(X, Y \in E\)
+       \end{enumerate}
+       Un espace vectoriel muni d'une norme est un \textbf{espace vectoriel normé} (EVN).
+   \end{definition}
+   \begin{exemple}[Autres normes sur \(\R^d\) ou \(\C^d\)] Soit \(X = (x_1, \ldots, x_d)\)
       \begin{enumerate}
-          \item La norme:
-            \[
-                \|X\| = \left( \sum_{i=1}^{n} x_i^2 \right)^{\frac{1}{2}}  = \sqrt{x_1^2 + \ldots + x_n^2} 
-            \]               
-        \item La distance: 
-            \[
-                d(X, Y) = \|X - Y\| = \sqrt{(x_1 - y_1)^2 + \ldots + (x_n - y_n)^2 } 
-            \] 
-
-      \end{enumerate} 
+          \item Norme 1 : \(\|X\|_1 = \sum_{i=1}^{d} |x_i|\)
+          \item Norme infinie : \(\|X\|_\infty = \max_{1 \le i \le d} |x_i|\)
+          \item Norme p (\(p \ge 1\)) : \(\|X\|_p = \left( \sum_{i=1}^{d} |x_i|^p \right)^{1/p}\)
+      \end{enumerate}
    \end{exemple}
-\section{Éspaces métriques}
-\begin{definition}
-    Espace métrique est un ensemble muni de la distance.
-\end{definition}
-\begin{definition}
-    $(E, d)$ espace métrique et $x_0 \in E$ et $r \ge 0$, alors:
-    \begin{enumerate}
-        \item $B(x_0, r) = \{ x \in E : d(x_0, x) < r \}$ boule ouverte de centre $x_0$ et de rayon $r$
-        \item $B(x_0, r) = \{ x \in E : d(x_0, x) \le  r \}$ boule fermé de centre $x_0$ et de rayon $r$
-    \end{enumerate}
-\end{definition}
-\begin{definition}
-    Une partie $A \subset E$ est bornée si $\exists R > 0$ et $x_0 \in E$ tq $A \subset B(x_0, R)$. Autrement dit, s'il existe une boule dans laquelle $A$ est inclu.
-\end{definition}
-\section{Ouverts - fermés}
-\begin{definition}
-    Soit $(E, d)$ espace métrique.
-     \begin{enumerate}
-        \item $U \subset E$ est ouvert si $\forall x_0 \in U, \exists r > 0$ tel que $B(x_0, r) \subset U$ (si pour tout point de $U$ il existe une boule ouverte inclu dans  $U$)
-        \item $F \subset E$ est fermé si $E \setminus F$ est ouvert (si le complémentaire de $F$ est ouvert).
-    \end{enumerate}
-\end{definition}
 
-\begin{theorem} Très important!!
+\subsection{Distance}
+   \begin{definition}[Distance sur un ensemble \(E\)]
+       Une \textbf{distance} sur \(E\) est une application \(d: E \times E \to \R_+\) telle que pour tous \(X,Y,Z \in E\):
+       \begin{enumerate}
+           \item \textbf{Séparation :} \(d(X,Y) = 0 \iff X = Y\)
+           \item \textbf{Symétrie :} \(d(X, Y) = d(Y, X)\)
+           \item \textbf{Inégalité triangulaire :} \(d(X, Y) \le d(X, Z) + d(Z, Y)\)
+       \end{enumerate}
+       Un ensemble muni d'une distance est un \textbf{espace métrique}.
+   \end{definition}
+   \begin{propriete}[Distance induite par une norme]
+       Si \((E, \|\cdot\|)\) est un EVN, alors \(d(X,Y) = \|X-Y\|\) définit une distance sur \(E\).
+   \end{propriete}
+   \begin{exemple}[Distance Euclidienne sur \(\R^d\)]
+        \(d(X, Y) = \|X - Y\|_2 = \sqrt{\sum_{i=1}^d (x_i - y_i)^2 }\)
+   \end{exemple}
+   \begin{definition}[Distances équivalentes]
+       Deux distances \(d_1, d_2\) sur \(E\) sont \textbf{équivalentes} s'il existe \(a,b > 0\) tels que \(\forall x,y \in E\),
+       \[ a \cdot d_1(x,y) \le d_2(x,y) \le b \cdot d_1(x,y) \]
+       Elles définissent alors les mêmes ouverts (la même topologie).
+   \end{definition}
+   \begin{definition}[Normes équivalentes]
+       Deux normes \(N_1, N_2\) sur un EVN \(E\) sont \textbf{équivalentes} s'il existe \(a,b > 0\) tels que \(\forall X \in E\),
+       \[ a \cdot N_1(X) \le N_2(X) \le b \cdot N_1(X) \]
+   \end{definition}
+   \begin{theorem}[Normes équivalentes en dimension finie]
+       Sur un espace vectoriel de dimension finie, toutes les normes sont équivalentes.
+   \end{theorem}
+
+\section{Espaces Métriques : Topologie}
+% Content from PDF Chapter 2
+\subsection{Boules et Ensembles Bornés}
+\begin{definition}[Boules]
+    Soit \((E, d)\) un espace métrique, \(x_0 \in E\) et \(r > 0\).
     \begin{enumerate}
-        \item Soit $U_i$,  $i \in I$ une collection d'ouverts. Alors,  $\cup_{i \in I} \,U_i$ est ouvert.\\
-            Translate: Une union quelconque des ensembles ouverts est ouvert.
-        \item Si $U_1, \ldots, U_n$ sont ouverts
-            \[
-                \bigcap\limits_{i=1}^{n} \, U_i \text{ est ouvert.}
-            \] 
-            Translate: intersection \underline{finie} des ensembles ouverts est ouvert.
+        \item \textbf{Boule ouverte} : \(B(x_0, r) = \{ x \in E : d(x_0, x) < r \}\)
+        \item \textbf{Boule fermée} : \(B_f(x_0, r) = \{ x \in E : d(x_0, x) \le r \}\)
+        \item \textbf{Sphère} : \(S(x_0, r) = \{ x \in E : d(x_0, x) = r \}\)
     \end{enumerate}
+\end{definition}
+\begin{definition}[Ensemble borné]
+    Une partie \(A \subset E\) est \textbf{bornée} si elle est contenue dans une boule, i.e., \(\exists x_0 \in E, \exists R > 0\) tel que \(A \subset B(x_0, R)\).
+    Cela est équivalent à : \(\forall x_0 \in E, \exists r > 0\) tel que \(A \subset B(x_0, r)\).
+    Ou encore : \(\operatorname{diam}(A) = \sup_{x,y \in A} d(x,y) < \infty\).
+\end{definition}
+\begin{propriete}
+    \begin{itemize}
+        \item Toute partie finie est bornée.
+        \item Toute sous-partie d'un borné est bornée.
+        \item Une union finie de bornés est bornée.
+    \end{itemize}
+\end{propriete}
+
+\subsection{Ouverts et Fermés}
+\begin{definition}[Ouvert, Fermé]
+    Soit \((E, d)\) un espace métrique.
+     \begin{enumerate}
+        \item \(U \subset E\) est \textbf{ouvert} si \(\forall x_0 \in U, \exists r > 0\) tel que \(B(x_0, r) \subset U\).
+        \item \(F \subset E\) est \textbf{fermé} si son complémentaire \(E \setminus F\) est ouvert.
+    \end{enumerate}
+    \(\emptyset\) et \(E\) sont à la fois ouverts et fermés.
+\end{definition}
+\begin{propriete}
+    \begin{itemize}
+        \item Une boule ouverte est un ouvert.
+        \item Une boule fermée est un fermé.
+    \end{itemize}
+\end{propriete}
+\begin{theorem}[Propriétés des ouverts et fermés]
     \begin{enumerate}
-        \item Soit $U_i$,  $i \in I$ une collection de fermés. Alors,  $\cup_{i \in I} \,U_i$ est fermé.\\
-            Translate: Une union quelconque des ensembles fermés est fermé.
-        \item Si $U_1, \ldots, U_n$ sont fermés 
-            \[
-                \bigcap\limits_{i=1}^{n} \, U_i \text{ est fermé.}
-            \] 
-            Translate: intersection \underline{finie} des ensembles fermés est fermé.
+        \item Une \textbf{union quelconque} d'ouverts est un ouvert.
+        \item Une \textbf{intersection finie} d'ouverts est un ouvert.
+        \item Une \textbf{intersection quelconque} de fermés est un fermé.
+        \item Une \textbf{union finie} de fermés est un fermé.
     \end{enumerate}
-    Note: pour union quelconque, intersection finie!
 \end{theorem}
 
-\begin{proposition} Soient $N \in \N$ et $\forall 1 \le i \le N, U_i \subset E$
-    \begin{enumerate}
-        \item Si tout $U_i$ est ouvert, alors  $U_1 \times \ldots \times U_N$ est aussi ouvert.
-        \item Si tout $U_i$ est fermé, alors  $U_1 \times \ldots \times U_N$ est aussi fermé.
-    \end{enumerate}
-\end{proposition}
+\subsection{Intérieur, Adhérence, Frontière}
+\begin{definition}[Point intérieur, Intérieur]
+    Soit \(A \subset E\). Un point \(x_0 \in E\) est \textbf{intérieur} à \(A\) s'il existe \(r > 0\) tel que \(B(x_0, r) \subset A\).
+    L'\textbf{intérieur} de \(A\), noté \(\operatorname{Int}(A)\) ou \(\mathring{A}\), est l'ensemble des points intérieurs à \(A\).
+    \begin{propriete}
+        \(\operatorname{Int}(A)\) est le plus grand ouvert inclus dans \(A\). \(A\) est ouvert \(\iff A = \operatorname{Int}(A)\).
+    \end{propriete}
+\end{definition}
+\begin{definition}[Point adhérent, Adhérence]
+    Soit \(A \subset E\). Un point \(x_0 \in E\) est \textbf{adhérent} à \(A\) si toute boule ouverte centrée en \(x_0\) rencontre \(A\), i.e., \(\forall r > 0, B(x_0, r) \cap A \neq \emptyset\). (Équivalent à \(d(x_0, A) = \inf_{y \in A} d(x_0,y) = 0\)).
+    L'\textbf{adhérence} de \(A\), notée \(\operatorname{Adh}(A)\) ou \(\bar{A}\), est l'ensemble des points adhérents à \(A\).
+    \begin{propriete}
+        \(\operatorname{Adh}(A)\) est le plus petit fermé contenant \(A\). \(A\) est fermé \(\iff A = \operatorname{Adh}(A)\).
+    \end{propriete}
+\end{definition}
+\begin{definition}[Frontière]
+    La \textbf{frontière} de \(A\), notée \(\operatorname{Fr}(A)\) ou \(\partial A\), est \(\operatorname{Adh}(A) \setminus \operatorname{Int}(A)\).
+    C'est aussi \(\operatorname{Adh}(A) \cap \operatorname{Adh}(E \setminus A)\).
+\end{definition}
+\begin{definition}[Ensemble dense]
+    Soit \(A \subset B \subset E\). On dit que \(A\) est \textbf{dense} dans \(B\) si \(B \subset \operatorname{Adh}(A)\).
+    \(A\) est dense dans \(E\) si \(\operatorname{Adh}(A) = E\).
+    Exemple : \(\Q\) est dense dans \(\R\). \(\Q^d\) est dense dans \(\R^d\).
+\end{definition}
 
-\section{Intérieur, Adhérence, Frontière}
-\begin{definition} 
-    Un point $x_0 \in A$ est intérieur à $A$ s'il existe  $r > 0$ tq  $B(x_0, r) \subset A$. \textbf{Intérieur} de $A$ est l'ensemble de tous les points intérieurs à  $A$:
-     \[
-         \operatorname{Int}(A) = \{ x \in A : x \text{ est intérieur à } A \}
-    \] 
-    Note: le plus grand ouvert inclu dans $A$
+\subsection{Suites dans un Espace Métrique}
+\begin{definition}[Convergence d'une suite]
+    Une suite \((x_n)_{n \in \N}\) d'éléments de \(E\) \textbf{converge} vers \(x \in E\) si \(\lim_{n \to \infty} d(x_n, x) = 0\).
+    On note \(\lim_{n \to \infty} x_n = x\) ou \(x_n \to x\). La limite, si elle existe, est unique.
 \end{definition}
-\begin{definition} 
-    Un point $x_0 \in A$ est adhérent à $A$ s'il existe  $r > 0$ tq  $B(x_0, r)$ intersecte $A$. \textbf{Adhérence} de $A$ est l'ensemble de tous les points intérieurs à  $A$:
-     \[
-         \operatorname{Adh}(A) = \{ x \in E : x \text{ est adhérent à } A \}
-    \] 
-    Note: le plus petit fermé contenant $A$
-\end{definition}
-\begin{definition}
-    La \textbf{frontière}: $\partial A = \operatorname{Adh}(A) \setminus \operatorname{Int}(A) = \operatorname{Adh}(A) \cap \operatorname{Adh}(E \setminus A)$
-\end{definition}
-
-\begin{definition}
-    Soit $A \subset B$. On dit que $A$ est \textbf{dense} dans  $B$ si  $B \subset \operatorname{Adh}(A)$
-\end{definition}
-\begin{proposition} Caractérisations séquentielles:
+\begin{proposition}[Caractérisations séquentielles]
    \begin{enumerate}
-       \item \textbf{de férmé}: $A$ est fermé ssi pour toute suite  $(x_n)$ d'éléments de  $A$ qui covnverge (supposons vers $x$), sa limite $x$ est aussi dans  $A$ ($x \in A$)
-       \item \textbf{d'adhérence}: $x \in \operatorname{Adh}(A)$ ssi il existe une suite  $(x_n)$ d'éléments de  $A$ tq  $\lim_{n \to \infty} x_n = x$
-       \item \textbf{de compact}: $A \subset E$ est compact si pour toute suite $(x_n)$ d'éléments de  $A$, il existe une sous-suite  $(x_{\phi(n)})$ qui converge vers une limite  $x \in A$
-   \end{enumerate} 
-\end{proposition}
-\begin{proposition}
-   \begin{enumerate}
-       \item Si une suite $(x_n)$ converge vers une limite  $x$, cette limite est \textbf{unique}.
-       \item Si une suite  $(x_n)$ coverge vers une limite  $x$ et cette suite admet une sous-suite  $(x_{\phi(n)})$ qui converge vers une limite  $x'$. Alors on a toujours:  $x = x'$
-   \end{enumerate} 
-\end{proposition}
-\section{Compact}
-\begin{definition}
-    Soient $U = \bigcup_{i \in I} U_i$ où $U_i$ est ouvert  $\forall i \in I$. Alors, si $A \subset U$, donc $U$ est un recouvrement ouvert de  $A$.
-\end{definition}
-\begin{definition}
-    $K \subset E$ est \textbf{compact} si \underline{de TOUT recouvrement ouvert} de $K$ on peut extraire un sous-recouvrement ouvert fini: i.e, on peut trouver $i_1, \ldots, i_n \in I$ (un nombre fini de $i_i$) tels que:
-    \[
-        K \subset U_{i_1} \cup \ldots \cup U_{i_n}
-    \] 
-\end{definition}
-\begin{proposition}
-   \begin{enumerate}
-       \item Un ensemble fini est compact.
-       \item $K$ compact $\implies$ $K$ fermé et borné
-       \item Si $K$ compact et $F$ fermé, alors  $K \cap F$ est compact.
-       \item Si  $K$ compact, toute suite de Cauchy dans  $K$ coverge dans  $K$.
-   \end{enumerate} 
-\end{proposition}
-\section{Utilisation des fonctions continues}
-\begin{proposition}
-   Soit $F: E_1 \to  E_2$ une fonction continue avec $E_1$, $E_2$ éspaces métriques, alors:
-   \begin{enumerate}
-       \item Pour tout $U_2 \subset E_2$ ouvert, $F^{-1}(U_2)$ est ouvert dans $E_1$.
-       \item Pour tout $F_2 \subset E_2$ fermé, $F^{-1}(F_2)$ est fermé dans $E_1$. 
-       \item Pour toute suite $(x_n)$ dans  $E_1$ ayant limite $x$ (i.e $\lim_{n \to \infty} x_n = x$) on a:
-           \[
-           \lim_{n \to \infty} F(x_n) = F(x)
-           \] 
+       \item \textbf{Adhérence :} \(x \in \operatorname{Adh}(A) \iff\) il existe une suite \((a_n)\) d'éléments de \(A\) telle que \(a_n \to x\).
+       \item \textbf{Fermé :} \(A\) est fermé \(\iff\) pour toute suite \((a_n)\) d'éléments de \(A\) qui converge vers \(x \in E\), on a \(x \in A\).
    \end{enumerate}
 \end{proposition}
+\begin{definition}[Suite de Cauchy]
+    Une suite \((x_n)\) dans \(E\) est de \textbf{Cauchy} si \(\forall \varepsilon > 0, \exists N \in \N\) tel que \(\forall n, p \ge N, d(x_n, x_p) \le \varepsilon\).
+\end{definition}
+\begin{propriete}
+    \begin{itemize}
+        \item Toute suite convergente est de Cauchy.
+        \item Toute suite de Cauchy est bornée.
+    \end{itemize}
+\end{propriete}
+\begin{definition}[Espace complet]
+    Un espace métrique \((E,d)\) est \textbf{complet} si toute suite de Cauchy dans \(E\) converge dans \(E\).
+    Un EVN complet est appelé \textbf{espace de Banach}.
+\end{definition}
+\begin{exemple}
+    \(\R^d\) muni de la distance usuelle est complet. \(\Q\) n'est pas complet. \(]0,1]\) avec la distance usuelle de \(\R\) n'est pas complet.
+\end{exemple}
 
-\section{Montrer qu'un ensemble et fermé ou ouvert}
-\subsection*{Pour montrer qu'un ensemble \(\mathcal{U}\) est ouvert}
+\subsection{Compacité}
+\begin{definition}[Recouvrement ouvert, Sous-recouvrement]
+    Soit \(K \subset E\). Une famille \((U_i)_{i \in I}\) d'ouverts de \(E\) est un \textbf{recouvrement ouvert} de \(K\) si \(K \subset \bigcup_{i \in I} U_i\).
+    Une sous-famille \((U_j)_{j \in J}\) (où \(J \subset I\)) est un \textbf{sous-recouvrement} si \(K \subset \bigcup_{j \in J} U_j\).
+\end{definition}
+\begin{definition}[Ensemble compact - Définition de Borel-Lebesgue]
+    Une partie \(K \subset E\) est \textbf{compacte} si de tout recouvrement ouvert de \(K\), on peut extraire un sous-recouvrement \textbf{fini}.
+\end{definition}
+\begin{theorem}[Caractérisation séquentielle de la compacité - Bolzano-Weierstrass]
+    Dans un espace métrique \((E,d)\), une partie \(K \subset E\) est compacte \(\iff\) de toute suite d'éléments de \(K\), on peut extraire une sous-suite qui converge \textbf{dans K}.
+\end{theorem}
+\begin{propriete}[Propriétés des compacts dans un espace métrique]
+   \begin{enumerate}
+       \item Un compact est fermé et borné. (La réciproque est fausse en général, mais vraie dans \(\R^d\)).
+       \item Une partie fermée d'un compact est compacte.
+       \item Une intersection quelconque de compacts est compacte.
+       \item Une union finie de compacts est compacte.
+       \item Un compact est complet.
+   \end{enumerate}
+\end{propriete}
+\begin{theorem}[Compacité dans \(\R^d\)]
+    Une partie \(K \subset \R^d\) (ou \(\C^d\)) est compacte \(\iff\) \(K\) est fermée et bornée.
+    (Théorème de Borel-Lebesgue).
+\end{theorem}
+\begin{exemple}
+    Les intervalles \([a,b]\) sont compacts dans \(\R\). Les boules fermées \(B_f(x_0, r)\) sont compactes dans \(\R^d\).
+\end{exemple}
 
+\section{Continuité dans les Espaces Métriques}
+\begin{definition}[Continuité en un point]
+    Soient \((E_1, d_1)\) et \((E_2, d_2)\) deux espaces métriques, \(f: E_1 \to E_2\) une application, et \(x_0 \in E_1\).
+    \(f\) est \textbf{continue en \(x_0\)} si
+    \[ \forall \varepsilon > 0, \exists \delta > 0 \text{ tel que } \forall x \in E_1, (d_1(x,x_0) < \delta \implies d_2(f(x), f(x_0)) < \varepsilon) \]
+    \(f\) est \textbf{continue sur \(E_1\)} si elle est continue en tout point de \(E_1\).
+\end{definition}
+\begin{proposition}[Caractérisations de la continuité]
+   Soit \(f: (E_1, d_1) \to (E_2, d_2)\). Les assertions suivantes sont équivalentes :
+   \begin{enumerate}
+       \item \(f\) est continue sur \(E_1\).
+       \item Pour tout ouvert \(U_2 \subset E_2\), l'image réciproque \(f^{-1}(U_2)\) est un ouvert de \(E_1\).
+       \item Pour tout fermé \(F_2 \subset E_2\), l'image réciproque \(f^{-1}(F_2)\) est un fermé de \(E_1\).
+       \item Pour toute suite \((x_n)\) de \(E_1\) convergeant vers \(x \in E_1\), la suite \((f(x_n))\) converge vers \(f(x)\) dans \(E_2\).
+   \end{enumerate}
+\end{proposition}
+\begin{theorem}[Continuité et compacité]
+    \begin{enumerate}
+        \item L'image d'un compact par une application continue est compacte.
+        Si \(f: E_1 \to E_2\) est continue et \(K \subset E_1\) est compact, alors \(f(K)\) est compact dans \(E_2\).
+        \item (Théorème des bornes atteintes) Si \(f: K \to \R\) est continue et \(K \subset E_1\) est un compact non vide, alors \(f\) est bornée sur \(K\) et atteint ses bornes.
+        (i.e., \(\exists x_m, x_M \in K\) tels que \(f(x_m) = \inf_{x \in K} f(x)\) et \(f(x_M) = \sup_{x \in K} f(x)\)).
+    \end{enumerate}
+\end{theorem}
+
+\section{Fonctions de Plusieurs Variables : Différentiation}
+Soit \(D \subset \R^n\) un ouvert, \(f: D \to \R^m\).
+\subsection{Dérivées Partielles, Différentiabilité}
+\begin{definition}[Dérivée selon un vecteur (directionnelle)]
+    Soit \(u \in \R^n, u \neq 0\). \(f\) est dérivable en \(X_0 \in D\) dans la direction \(u\) si la fonction \(\varphi(t) = f(X_0+tu)\) (définie pour \(t\) dans un voisinage de 0) est dérivable en \(t=0\). La dérivée est notée \(D_u f(X_0) = \varphi'(0)\).
+    \[ D_u f(X_0) = \lim_{t \to 0} \frac{f(X_0+tu) - f(X_0)}{t} \]
+\end{definition}
+\begin{definition}[Dérivées partielles (cas \(m=1\))]
+    La \(i\)-ème dérivée partielle de \(f: D \to \R\) en \(X_0\) est \(D_{e_i} f(X_0)\), où \((e_i)\) est la base canonique de \(\R^n\).
+    Notation : \(\frac{\partial f}{\partial x_i}(X_0)\) ou \(\partial_i f(X_0)\).
+\end{definition}
+\begin{definition}[Différentiabilité (cas \(m=1\))]
+    \(f: D \to \R\) est \textbf{différentiable} en \(X_0 \in D\) s'il existe une application linéaire \(L: \R^n \to \R\) telle que pour \(H \in \R^n\) avec \(X_0+H \in D\):
+    \[ f(X_0+H) = f(X_0) + L(H) + o(\|H\|) \quad \text{i.e.} \quad f(X_0+H) = f(X_0) + L(H) + \|H\| \varepsilon(H), \text{où } \lim_{H \to 0} \varepsilon(H) = 0 \]
+    Si \(f\) est différentiable en \(X_0\), alors \(L(H) = \nabla f(X_0) \cdot H\), où \(\nabla f(X_0) = \left(\frac{\partial f}{\partial x_1}(X_0), \dots, \frac{\partial f}{\partial x_n}(X_0)\right)\) est le \textbf{gradient} de \(f\) en \(X_0\).
+    L'application linéaire \(L\) est la \textbf{différentielle} de \(f\) en \(X_0\), notée \(df_{X_0}\).
+\end{definition}
+\begin{propriete}
+    Si \(f\) est différentiable en \(X_0\), alors \(f\) est continue en \(X_0\) et toutes ses dérivées directionnelles (donc partielles) existent en \(X_0\), et \(D_u f(X_0) = df_{X_0}(u) = \nabla f(X_0) \cdot u\).
+\end{propriete}
+\begin{theorem}[Condition suffisante de différentiabilité]
+    Si toutes les dérivées partielles \(\frac{\partial f}{\partial x_i}\) existent sur un voisinage ouvert de \(X_0\) et sont continues en \(X_0\), alors \(f\) est différentiable en \(X_0\).
+    Si elles sont continues sur \(D\), \(f\) est dite de \textbf{classe \(C^1\)} sur \(D\).
+\end{theorem}
+\begin{definition}[Différentiabilité (cas général \(f: D \to \R^m\))]
+    \(f=(f_1, \dots, f_m)\). \(f\) est différentiable en \(X_0\) si chaque composante \(f_j: D \to \R\) l'est.
+    La différentielle \(df_{X_0}\) est une application linéaire de \(\R^n\) dans \(\R^m\), dont la matrice dans les bases canoniques est la \textbf{matrice Jacobienne} \(J_f(X_0)\):
+    \[ (J_f(X_0))_{ji} = \frac{\partial f_j}{\partial x_i}(X_0) \]
+    Donc \(df_{X_0}(H) = J_f(X_0) H\) (où H est un vecteur colonne).
+\end{definition}
+
+\subsection{Dérivées d'Ordre Supérieur}
+\begin{definition}[Dérivées partielles d'ordre \(k\)]
+    Les dérivées partielles d'ordre \(k\) sont obtenues en dérivant successivement \(k\) fois par rapport aux variables.
+    Exemple : \(\frac{\partial^2 f}{\partial x_j \partial x_i} = \frac{\partial}{\partial x_j} \left(\frac{\partial f}{\partial x_i}\right)\).
+    \(f\) est de \textbf{classe \(C^k\)} sur \(D\) si toutes ses dérivées partielles jusqu'à l'ordre \(k\) existent et sont continues sur \(D\).
+\end{definition}
+\begin{theorem}[Schwarz/Clairaut]
+    Si \(f:D \to \R\) est de classe \(C^2\) sur \(D\) (i.e., toutes les dérivées partielles secondes existent et sont continues), alors l'ordre de dérivation ne compte pas :
+    \[ \frac{\partial^2 f}{\partial x_j \partial x_i}(X) = \frac{\partial^2 f}{\partial x_i \partial x_j}(X) \quad \forall X \in D, \forall i,j \]
+\end{theorem}
+\begin{definition}[Matrice Hessienne (cas \(m=1\))]
+    Si \(f: D \to \R\) est de classe \(C^2\), la \textbf{matrice Hessienne} de \(f\) en \(X_0 \in D\) est la matrice symétrique (par Schwarz) :
+    \[ H_f(X_0) = \left( \frac{\partial^2 f}{\partial x_i \partial x_j}(X_0) \right)_{1 \le i,j \le n} \]
+\end{definition}
+\begin{theorem}[Formule de Taylor-Young à l'ordre 2 (cas \(m=1\))]
+    Si \(f:D \to \R\) est de classe \(C^2\) sur \(D\), alors pour \(X_0 \in D\) et \(H \in \R^n\) tel que \(X_0+H \in D\) :
+    \[ f(X_0+H) = f(X_0) + \nabla f(X_0) \cdot H + \frac{1}{2} H^T H_f(X_0) H + o(\|H\|^2) \]
+    où \(H^T H_f(X_0) H = \sum_{i,j=1}^n \frac{\partial^2 f}{\partial x_i \partial x_j}(X_0) H_i H_j\) est la forme quadratique associée à la Hessienne.
+\end{theorem}
+
+\subsection{Extrema}
+\begin{definition}[Extremum local]
+    Soit \(f: D \to \R\). \(X_0 \in D\) est un \textbf{minimum local} (resp. \textbf{maximum local}) s'il existe un voisinage \(V\) de \(X_0\) tel que \(f(X_0) \le f(X)\) (resp. \(f(X_0) \ge f(X)\)) pour tout \(X \in V \cap D\). Un extremum est dit \textbf{strict} si l'inégalité est stricte pour \(X \neq X_0\).
+\end{definition}
+\begin{definition}[Point critique]
+    Si \(f\) est différentiable sur \(D\), \(X_0 \in D\) est un \textbf{point critique} (ou stationnaire) si \(\nabla f(X_0) = 0\).
+\end{definition}
+\begin{theorem}[Condition nécessaire d'extremum local (Ordre 1)]
+    Si \(f\) admet un extremum local en \(X_0 \in \operatorname{Int}(D)\) et si \(f\) est différentiable en \(X_0\), alors \(X_0\) est un point critique (\(\nabla f(X_0)=0\)).
+\end{theorem}
+\begin{theorem}[Condition suffisante d'extremum local (Ordre 2)]
+    Soit \(f:D \to \R\) de classe \(C^2\) sur \(D\) et \(X_0 \in \operatorname{Int}(D)\) un point critique. Soit \(q(H) = H^T H_f(X_0) H\) la forme quadratique hessienne.
+    \begin{enumerate}
+        \item Si \(H_f(X_0)\) est \textbf{définie positive} (i.e., \(q(H)>0\) pour \(H \neq 0\), ou toutes ses valeurs propres sont \(>0\)), \(X_0\) est un minimum local strict.
+        \item Si \(H_f(X_0)\) est \textbf{définie négative} (i.e., \(q(H)<0\) pour \(H \neq 0\), ou toutes ses valeurs propres sont \(<0\)), \(X_0\) est un maximum local strict.
+        \item Si \(H_f(X_0)\) est \textbf{indéfinie} (i.e., \(q(H)\) prend des valeurs \(>0\) et \(<0\), ou elle a des valeurs propres de signes opposés non nulles), \(X_0\) est un \textbf{point selle} (ou col), pas un extremum.
+        \item Si \(H_f(X_0)\) est semi-définie (positive ou négative) mais pas définie (i.e., \(q(H) \ge 0\) (ou \(\le 0\)) et \(q(H)=0\) pour certains \(H \neq 0\), ou au moins une valeur propre est nulle et les autres de même signe ou nulles), on ne peut pas conclure avec ce critère seul (cas douteux).
+    \end{enumerate}
+\end{theorem}
+
+\subsection{Règle de Dérivation en Chaîne}
+\begin{theorem}[Théorème de composition]
+    Soient \(U \subset \R^n\) et \(V \subset \R^m\) des ouverts.
+    Si \(g: U \to V\) est différentiable en \(X_0 \in U\), et \(f: V \to \R^p\) est différentiable en \(Y_0 = g(X_0) \in V\).
+    Alors \(h = f \circ g : U \to \R^p\) est différentiable en \(X_0\), et sa différentielle est :
+    \[ dh_{X_0} = df_{g(X_0)} \circ dg_{X_0} \]
+    En termes de matrices Jacobiennes :
+    \[ J_h(X_0) = J_f(g(X_0)) \cdot J_g(X_0) \]
+\end{theorem}
+Cas particulier : \(n=1\), \(g(t) = (g_1(t), \dots, g_m(t))\), \(f: \R^m \to \R\). \(h(t) = f(g(t))\).
+\[ h'(t) = \sum_{j=1}^m \frac{\partial f}{\partial y_j}(g(t)) \cdot g_j'(t) = \nabla f(g(t)) \cdot g'(t) \]
+
+\section{Espaces Vectoriels Normés : Compléments}
+\subsection{Suites et Séries de Fonctions}
+Soit \(X\) un ensemble, \(E\) un EVN (souvent \(\R\) ou \(\C\)). Soit \((f_n)_{n \in \N}\) une suite de fonctions \(f_n: X \to E\).
+\begin{definition}[Convergence simple]
+    \((f_n)\) converge \textbf{simplement} vers \(f: X \to E\) si \(\forall x \in X, \lim_{n \to \infty} \|f_n(x) - f(x)\|_E = 0\).
+\end{definition}
+\begin{definition}[Convergence uniforme]
+    \((f_n)\) converge \textbf{uniformément} vers \(f: X \to E\) si
+    \[ \lim_{n \to \infty} \sup_{x \in X} \|f_n(x) - f(x)\|_E = 0 \]
+    Ceci est la convergence dans l'espace \(B(X,E)\) des fonctions bornées de \(X\) dans \(E\), muni de la norme sup \(\|g\|_\infty = \sup_{x \in X} \|g(x)\|_E\).
+\end{definition}
+\begin{theorem}[Continuité et convergence uniforme]
+    Soit \(M\) un espace métrique. Si les \(f_n: M \to E\) sont continues pour tout \(n\) et \((f_n)\) converge uniformément vers \(f: M \to E\), alors \(f\) est continue.
+    L'espace \(C_b(M,E)\) des fonctions continues bornées de \(M\) dans \(E\), muni de \(\|\cdot\|_\infty\), est un espace de Banach si \(E\) est un espace de Banach.
+\end{theorem}
+\begin{definition}[Série de fonctions, Convergence normale]
+    Une série de fonctions \(\sum u_n\) (où \(u_n: X \to E\)) converge \textbf{normalement} si la série numérique \(\sum \|u_n\|_\infty\) converge.
+    (i.e. \(\sum_{n=0}^\infty \sup_{x \in X} \|u_n(x)\|_E < \infty\)).
+\end{definition}
+\begin{propriete}
+    Si \(E\) est un espace de Banach : Convergence normale \(\implies\) Convergence uniforme (et absolue) \(\implies\) Convergence simple.
+\end{propriete}
+
+\subsection{Applications Linéaires Continues}
+Soient \((E, \|\cdot\|_E)\) et \((F, \|\cdot\|_F)\) deux EVN sur \(\K\). Soit \(A: E \to F\) une application linéaire.
+\begin{theorem}[Continuité des applications linéaires]
+    Pour une application linéaire \(A: E \to F\), les propriétés suivantes sont équivalentes :
+    \begin{enumerate}
+        \item \(A\) est continue (en tout point de \(E\)).
+        \item \(A\) est continue en \(0_E\).
+        \item \(A\) est bornée : \(\exists C \ge 0\) tel que \(\forall x \in E, \|Ax\|_F \le C \|x\|_E\).
+    \end{enumerate}
+\end{theorem}
+\begin{definition}[Norme d'opérateur]
+    Si \(A: E \to F\) est une application linéaire continue, sa \textbf{norme d'opérateur} (ou norme subordonnée) est :
+    \[ \|A\|_{\mathcal{L}(E,F)} = \sup_{x \in E, \|x\|_E \le 1} \|Ax\|_F = \sup_{x \in E, x \neq 0_E} \frac{\|Ax\|_F}{\|x\|_E} \]
+    C'est la plus petite constante \(C \ge 0\) telle que \(\|Ax\|_F \le C \|x\|_E\) pour tout \(x \in E\).
+    L'espace \(\mathcal{L}(E,F)\) (ou \(B(E,F)\)) des applications linéaires continues de \(E\) dans \(F\) est un EVN. Si \(F\) est un espace de Banach, alors \(\mathcal{L}(E,F)\) est un espace de Banach.
+\end{definition}
+\begin{propriete}
+    Si \(A \in \mathcal{L}(E,F)\) et \(B \in \mathcal{L}(F,G)\), alors \(BA \in \mathcal{L}(E,G)\) et \(\|BA\| \le \|B\| \|A\|\).
+\end{propriete}
+\begin{lemma}[Dimension finie]
+    Si \(E\) est de dimension finie, toute application linéaire \(A: E \to F\) est continue.
+\end{lemma}
+\begin{theorem}[Norme matricielle pour \(A \in M_n(\C)\) ou \(L(\C^n)\)]
+    Si la norme sur \(\C^n\) est la norme euclidienne \(\|\cdot\|_2\), alors la norme d'opérateur associée est :
+    \[ \|A\| = \sup_{\|x\|_2=1} \|Ax\|_2 = \sqrt{\lambda_{\max}(A^*A)} \]
+    où \(A^*\) est l'adjointe de \(A\) (transposée conjuguée) et \(\lambda_{\max}(A^*A)\) est la plus grande valeur propre de la matrice hermitienne semi-définie positive \(A^*A\). (C'est aussi la plus grande valeur singulière de A).
+    On a aussi \(\|A\| = \|A^*\|\) et \(\|A\|^2 = \|A^*A\|\) (si la norme est induite par le produit scalaire).
+\end{theorem}
+\begin{propriete}[Majoration de la norme matricielle]
+    Norme de Frobenius (Hilbert-Schmidt) : \(\|A\|_{HS} = \left( \sum_{i,j=1}^n |a_{i,j}|^2 \right)^{1/2} = \sqrt{\operatorname{Tr}(A^*A)}\).
+    On a \(\|A\| \le \|A\|_{HS}\) pour la norme d'opérateur induite par \(\|\cdot\|_2\).
+\end{propriete}
+
+\section{Systèmes d'Équations Différentielles Linéaires}
+Considérons le système \(X'(t) = A X(t) + F(t)\), où \(X(t) \in \R^n\) (ou \(\C^n\)), \(A \in M_n(\K)\), \(F: I \to \K^n\).
+\subsection{Exponentielle de Matrice}
+\begin{definition}[Exponentielle de matrice]
+    Pour \(A \in M_n(\K)\), l'exponentielle de \(A\) est définie par la série :
+    \[ e^A = \exp(A) = \sum_{k=0}^\infty \frac{A^k}{k!} = I + A + \frac{A^2}{2!} + \dots \]
+    Cette série converge toujours (normalement dans \(M_n(\K)\) muni de n'importe quelle norme matricielle, car \(M_n(\K)\) est complet).
+\end{definition}
+\begin{propriete}[Propriétés de l'exponentielle]
+    \begin{enumerate}
+        \item \(\|e^A\| \le e^{\|A\|}\) (pour toute norme matricielle subordonnée ou de Frobenius).
+        \item Si \(AB=BA\), alors \(e^{A+B} = e^A e^B\).
+        \item \(e^0 = I\). \((e^A)^{-1} = e^{-A}\).
+        \item \(\frac{d}{dt} (e^{tA}) = A e^{tA} = e^{tA} A\).
+    \end{enumerate}
+\end{propriete}
+
+\subsection{Résolution de Systèmes}
+\begin{theorem}[Solution du système homogène]
+    Le problème de Cauchy \(\begin{cases} X'(t) = A X(t) \\ X(t_0) = X_0 \end{cases}\)
+    admet pour unique solution \(X(t) = e^{(t-t_0)A} X_0\).
+    L'ensemble des solutions de \(X'(t)=AX(t)\) est un espace vectoriel de dimension \(n\).
+\end{theorem}
+\begin{theorem}[Solution du système non homogène - Formule de Duhamel / Variation de la constante]
+    Le problème de Cauchy \(\begin{cases} X'(t) = A X(t) + F(t) \\ X(t_0) = X_0 \end{cases}\), où \(F\) est continue,
+    admet pour unique solution :
+    \[ X(t) = e^{(t-t_0)A} X_0 + \int_{t_0}^t e^{(t-s)A} F(s) ds \]
+\end{theorem}
+
+% The section "Montrer qu'un ensemble et fermé ou ouvert" from the template:
+\newpage
+\section*{Annexe : Comment montrer qu'un ensemble est ouvert/fermé}
+\subsection*{Pour montrer qu'un ensemble \(\mathcal{U} \subset E\) est ouvert}
 \begin{itemize}
-    \item \textbf{Utiliser la définition :} 
+    \item \textbf{Utiliser la définition :}
     \[
     \forall x \in \mathcal{U}, \exists r > 0 \quad \text{tel que} \quad B(x, r) \subset \mathcal{U}
     \]
-    
     \item Montrer que \( E \setminus \mathcal{U} \) est fermé.
-    
-    \item Montrer que \(\mathcal{U}\) est l'image réciproque d'un ouvert par une application continue.
-    
-    \item Exprimer \(\mathcal{U}\) comme une boule ouverte.
-    
+    \item Montrer que \(\mathcal{U}\) est l'image réciproque d'un ouvert par une application continue \(f:E \to E'\) (i.e. \(\mathcal{U} = f^{-1}(O)\) avec \(O\) ouvert de \(E'\)).
+    \item Exprimer \(\mathcal{U}\) comme une boule ouverte (qui est toujours un ouvert).
     \item Écrire \(\mathcal{U}\) comme :
     \begin{itemize}
-        \item une réunion d'ouverts ;
+        \item une réunion (quelconque) d'ouverts ;
         \item une intersection finie d'ouverts.
     \end{itemize}
-    
-    \item \(\mathcal{U} = \operatorname{Int}(U)\).
-    
-    \item Écrire \(\mathcal{U} = I_1 \times \dots \times I_n\) avec \( I_i \) ouvert.
+    \item Montrer que \(\mathcal{U} = \operatorname{Int}(\mathcal{U})\).
+    \item Si \(\mathcal{U} \subset \R^N\), écrire \(\mathcal{U} = I_1 \times \dots \times I_N\) où chaque \( I_i \subset \R\) est un intervalle ouvert.
 \end{itemize}
 
 \subsection*{Pour montrer qu'un ensemble \(V \subset E\) est fermé}
-
 \begin{itemize}
     \item \textbf{Utiliser la définition :} \( E \setminus V \) est ouvert.
-    
-    \item \textbf{Caractérisation séquentielle :} Toute suite convergente dans \(V\), sa limite est aussi dans \(V\).
-    
-    \item Montrer que \(V\) est l'image réciproque d'un fermé par une application continue.
-    
-    \item Montrer que \(V\) est compact.
+    \item \textbf{Caractérisation séquentielle :} Toute suite \((x_n)\) d'éléments de \(V\) qui converge vers \(x \in E\), a sa limite \(x\) dans \(V\) (\(x \in V\)).
+    \item Montrer que \(V\) est l'image réciproque d'un fermé par une application continue \(f:E \to E'\) (i.e. \(V = f^{-1}(F)\) avec \(F\) fermé de \(E'\)).
+    \item Montrer que \(V = \operatorname{Adh}(V)\).
+    \item Écrire \(V\) comme :
+    \begin{itemize}
+        \item une intersection (quelconque) de fermés ;
+        \item une union finie de fermés.
+    \end{itemize}
+    \item Si l'espace ambiant est \(\R^d\), montrer que \(V\) est compact (car un compact dans \(\R^d\) est fermé et borné). Attention, cela prouve aussi qu'il est borné.
+    \item Si \(V \subset \R^N\), écrire \(V = I_1 \times \dots \times I_N\) où chaque \( I_i \subset \R\) est un intervalle fermé.
 \end{itemize}
+
 \end{document}
