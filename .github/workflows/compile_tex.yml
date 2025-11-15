@@ -25,14 +25,14 @@ jobs:
         latexmk_shell_escape: true
         working_directory: linalg_translation/src/linalg/
 
-    - name: Linear Algebra
+    - name: Linear Algebra English
       uses: xu-cheng/latex-action@v3
       with:
         root_file: main.tex
         latexmk_shell_escape: true
         working_directory: linalg_translation/linalg_en/linalg/
 
-    - name: Linear Algebra
+    - name: Linear Algebra Ukrainian
       uses: xu-cheng/latex-action@v3
       with:
         root_file: main.tex
@@ -59,7 +59,7 @@ jobs:
       with:
         root_file: cheatsheet.tex
         latexmk_shell_escape: true
-        working_directory: linalg
+        working_directory: linalg_cheatsheet
         
     - name: Analyse Numerique avec python CheatSheet
       uses: xu-cheng/latex-action@v3
@@ -96,7 +96,7 @@ jobs:
         cp -f analyse/main.pdf "$GITHUB_WORKSPACE/deploy/analyse.pdf"
         cp -f analyse/cheatsheet.pdf "$GITHUB_WORKSPACE/deploy/analyse_cheatsheet.pdf"
         cp -f anal-avec-python/main.pdf "$GITHUB_WORKSPACE/deploy/anal-avec-python.pdf"
-        cp -f linalg/cheatsheet.pdf "$GITHUB_WORKSPACE/deploy/linalg_cheatsheet.pdf"
+        cp -f linalg_cheatsheet/cheatsheet.pdf "$GITHUB_WORKSPACE/deploy/linalg_cheatsheet.pdf"
         cp -f anp-cheatsheet/main.pdf "$GITHUB_WORKSPACE/deploy/anp-cheatsheet.pdf"
 
         cp -f linalg_translation/src/linalg/main.pdf "$GITHUB_WORKSPACE/deploy/linalg.pdf"
