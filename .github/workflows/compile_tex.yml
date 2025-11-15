@@ -23,7 +23,21 @@ jobs:
       with:
         root_file: main.tex
         latexmk_shell_escape: true
-        working_directory: linalg
+        working_directory: linalg_translation/src/linalg/
+
+    - name: Linear Algebra
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: main.tex
+        latexmk_shell_escape: true
+        working_directory: linalg_translation/linalg_en/linalg/
+
+    - name: Linear Algebra
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: main.tex
+        latexmk_shell_escape: true
+        working_directory: linalg_translation/linalg_ua/linalg/
         
     - name: Analyse Numerique avec python
       uses: xu-cheng/latex-action@v3
@@ -58,7 +72,9 @@ jobs:
       run: |
         file analyse/main.pdf | grep -q ' PDF '
         file analyse/cheatsheet.pdf | grep -q ' PDF '
-        file linalg/main.pdf | grep -q ' PDF '
+        file linalg_translation/src/linalg/main.pdf | grep -q ' PDF '
+        file linalg_translation/linalg_en/linalg/main.pdf | grep -q ' PDF '
+        file linalg_translation/linalg_ua/linalg/main.pdf | grep -q ' PDF '
         file linalg/cheatsheet.pdf | grep -q ' PDF '
         file anal-avec-python/main.pdf | grep -q ' PDF '
         file anp-cheatsheet/main.pdf | grep -q ' PDF '
@@ -79,10 +95,13 @@ jobs:
         # (*) To add a file, add the following command for that file
         cp -f analyse/main.pdf "$GITHUB_WORKSPACE/deploy/analyse.pdf"
         cp -f analyse/cheatsheet.pdf "$GITHUB_WORKSPACE/deploy/analyse_cheatsheet.pdf"
-        cp -f linalg/main.pdf "$GITHUB_WORKSPACE/deploy/linalg.pdf"
         cp -f anal-avec-python/main.pdf "$GITHUB_WORKSPACE/deploy/anal-avec-python.pdf"
         cp -f linalg/cheatsheet.pdf "$GITHUB_WORKSPACE/deploy/linalg_cheatsheet.pdf"
         cp -f anp-cheatsheet/main.pdf "$GITHUB_WORKSPACE/deploy/anp-cheatsheet.pdf"
+
+        cp -f linalg_translation/src/linalg/main.pdf "$GITHUB_WORKSPACE/deploy/linalg.pdf"
+        cp -f linalg_translation/linalg_ua/linalg/main.pdf "$GITHUB_WORKSPACE/deploy/linalg_ua.pdf"
+        cp -f linalg_translation/linalg_en/linalg/main.pdf "$GITHUB_WORKSPACE/deploy/linalg_en.pdf"
 
         cd "$GITHUB_WORKSPACE/deploy"
 
