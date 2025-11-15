@@ -12,3 +12,7 @@
 !figures
 !figures/*
 !*/figures/*
+!*/*/figures/*
+!*/*/*/figures/*
+!*/*/*/*/figures/*
+!*/*/*/*/*/figures/*
