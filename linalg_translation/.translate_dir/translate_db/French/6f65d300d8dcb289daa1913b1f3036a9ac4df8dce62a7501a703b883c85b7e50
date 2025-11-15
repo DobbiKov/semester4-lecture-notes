@@ -1,0 +1,8 @@
+\begin{definition}
+    Soit $f$ un endomorphisme dans  $E$ et un vecteur  $v \in E$ est dit \textbf{vecteur propre} de $f$ si:
+     \begin{enumerate}
+        \item $v \neq 0$
+        \item Il existe un réél $\lambda$ tel que  $f(v) = \lambda v$
+    \end{enumerate}
+    Le scalaire $\lambda \in \R$ est dit \textbf{valeur propre} correspondante à $v$.
+\end{definition}

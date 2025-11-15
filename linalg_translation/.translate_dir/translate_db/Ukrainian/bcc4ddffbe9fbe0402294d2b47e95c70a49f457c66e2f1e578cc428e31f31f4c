@@ -1,0 +1,8 @@
+\begin{theorem}\label{thm:lemme-de-schwarz}
+    Лема Шварца
+    \par
+    Якщо $f \in \mathcal{C}^2(D)$ тоді 
+    \[
+        \displaystyle \frac{\partial^2 f}{\partial x_i\partial x_j}(X) = \frac{\partial^2 f}{\partial x_j\partial x_i}(X) \qquad \forall X \in D, \forall i, j
+    \] 
+\end{theorem}

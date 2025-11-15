@@ -1,0 +1,7 @@
+\begin{prop}
+    Якщо $X \in E$ і $(e_1, \ldots, e_n)$  є ортонормальним базисом $E$, тоді:
+     \[
+         X =  \scalair{X, e_1}e_1 + \ldots + \scalair{X, e_n}e_n
+    \] 
+    Де $\scalair{X, e_i}$ є координатами в базисі  $(e_1, \ldots, e_n)$
+\end{prop}

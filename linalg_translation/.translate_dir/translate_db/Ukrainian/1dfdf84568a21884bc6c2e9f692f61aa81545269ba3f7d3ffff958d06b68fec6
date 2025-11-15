@@ -1,0 +1,25 @@
+\begin{preuve} до проп. \ref{prop:boules-fermes-sont-compactes}
+   \begin{enumerate}
+       \item $n = 1$. Показати: $[a, b]$ є компактним.
+           \par
+           Нехай $(U_i)_{i \in I}$ відкрите покриття для $[a, b]$. Нехай $F$: множина $x \in [a, b]$ такі що $[a, x]$ покривається скінченною кількістю $U_i$.
+           \par
+           \underline{Мета:} показати, що $b \in F$! (якщо $x \in F$, і $x' \le x$ $x' \in F$)
+            \begin{enumerate}
+                \item $F \neq \O$: $a \in F$ $[a, a] = \{ a \}$
+                \item $c = sup(F)$. \underline{Показуємо, що $c = b$} \par
+                    Припустимо, що $c < b$.
+                     \begin{itemize}
+                        \item $c$ належить одному з $U_i$ позначений $U_{i_0}$
+                        \item $U_{i_0}$ є відкритим, $c \in U_{i_0}$ отже $\exists \delta_0 > 0$ такий що $]c - \delta_0, c + \delta_0[ \subset U_{i_0}$
+                        \item $c = sup(F)$: $\forall \delta > 0, \, \exists x_{\delta} \in F$ з $c - \delta < x_{\delta} \le c$
+                            \[
+                            \delta = \delta_{0,2} \quad \exists x_{\delta_0} \in F, c - \delta_{0,2} < x_{\delta_0}
+                            \] 
+                            $[a, x_{\delta_0}]$ покривається $U_{i_1} \cup \ldots \cup U_{i_n}$ і $]c - \delta_0, c + \delta_0[ \subset U_{i_0}$ отже $[a, c + \delta_{0,2}]$ покривається $U_{i_0} \cup U_{i_1} \cup \ldots \cup U_{i_n}$, отже $c + \delta_{0, 2} \in F$ суперечить тому, що $c = sup(F)$. Отже $c = b$.
+                            \par
+                            $F$ це $[a, b[$ або $[a, b]$. $b \in F$ $\exists U_{i_1}, \ldots, U_{i_n}$ такі що $[a, b] \subset U_{i_1} \cup \ldots \cup U_{i_n}$, $[a, b]$ компактний.
+                    \end{itemize}
+            \end{enumerate}
+   \end{enumerate}
+\end{preuve}

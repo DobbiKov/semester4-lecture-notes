@@ -1,0 +1,19 @@
+\begin{preuve}
+   $A$ is the matrix whose columns are the vectors $f(e_j)$ written in the basis $\epsilon$:
+    \[
+        A = (f(e_1) | \ldots | f(e_n))\quad f(e_j) = \begin{pmatrix} a_{1,j}\\ \ldots\\ a_{n, j} \end{pmatrix} 
+   \]
+   Because $\forall v \in E, \, v = c_1e_1 + \ldots c_ne_n$ then $f(v) = c_1f(e_1) + \ldots c_nf(e_n)$ by linearity, so we only have to study each $f(e_j)$
+   \begin{align*}
+       f(e_j) = a_{1, j}e_1 + \ldots a_{n, j}e_n \implies\\
+       \langle f(e_j), e_i \rangle = \left\langle \sum_{k=1}^n a_{k,j} e_k, e_i \right\rangle = \sum_{k=1}^{n} a_{k,j}\scalar{e_k}{e_i} = a_{k, j}
+   \end{align*}
+   because $\scalar{e_k}{e_j} = \begin{cases}
+       0 \text{ si } k \neq j\\
+       1 \text{ si } k = j
+   \end{cases}$
+   Therefore:
+   \[
+       a_{i, j} = \scalair{f(e_j), e_i}
+   \] 
+\end{preuve}

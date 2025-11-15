@@ -1,0 +1,8 @@
+\begin{definition}
+    $f \in B(X, \R)$ si $\sup_{x \in X} |f(x)| = \|f\|_{\infty} < \infty$ ($f$ bornée sur  $X$). \\
+    Convergence uniforme: $\forall \varepsilon > 0, \exists N \in \N$ tq $\forall n \ge N \forall x \in X |f_n(x) - f(x)| < \varepsilon$ équivalent à
+    \[
+    \forall \varepsilon > 0 \exists N \in \N \text{ tq } \forall n \ge N, \|f_n - f\|_{\infty} < \varepsilon
+    \] 
+    $f_n \to f$ dans $(B(X, \R), \| \cdot \|_{\infty})$
+\end{definition}

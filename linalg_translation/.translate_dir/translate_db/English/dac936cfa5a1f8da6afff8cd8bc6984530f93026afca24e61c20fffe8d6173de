@@ -1,0 +1,10 @@
+
+Thus, the eigenspaces are always in direct sum, but not necessarily equal to $E$:
+ \[
+     E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p} \underset{\neq}{\subset} E
+\] 
+which holds if:
+\[
+\dim E_{\lambda_1} + \ldots + \dim E_{\lambda_p} < \dim E
+\] 
+

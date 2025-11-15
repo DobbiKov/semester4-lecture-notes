@@ -1,0 +1,9 @@
+\begin{preuve}
+    (Випливає з властивості верхньої межі) 
+    \par
+    Існує $x_i \in \R$ з $1 \le i \le d$ таке що $|x_{i,n} - x_{i}| \xrightarrow[n \to \infty]{} 0$
+    \[
+        d(X, Y) \le \sqrt{d} \underset{1 \le i \le d}{max} |x_i - y_i| 
+    \] 
+    тому $X_n \xrightarrow[n \to \infty]{} X$, $X = (x_1, \ldots, x_d)$
+\end{preuve}

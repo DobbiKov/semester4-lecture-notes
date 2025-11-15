@@ -1,0 +1,3 @@
+\begin{corollary}
+    Any matrix $A \in \mathcal{M}_n(\mathbb{C})$ is similar to a triangular matrix in $\mathcal{M}_n(\mathbb{C})$.
+\end{corollary}

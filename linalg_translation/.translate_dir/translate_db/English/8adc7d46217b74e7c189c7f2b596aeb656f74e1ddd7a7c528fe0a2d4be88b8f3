@@ -1,0 +1,6 @@
+\begin{prop}
+    Let $E$ be a metric space and two distances $d_1$ and $d_2$. The distances are said to be \textbf{equivalent} if $\exists a, b \in \R$ such that:
+    \[
+    \forall x, y \in E, \quad a\cdot d_1(x, y) \le d_2(x, y) \le b\cdot  d_1(x, y)
+    \] 
+\end{prop}

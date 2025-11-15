@@ -1,0 +1,41 @@
+\begin{preuve}
+Soient $E_{\lambda_1}, \ldots, E_{\lambda_p}$ les espaces propres associés aux valeurs propres $\lambda_1, \ldots, \lambda_p$ d’un endomorphisme $f$ d’un espace vectoriel E. Nous devons montrer que ces sous-espaces sont en somme directe, c’est-à-dire que si un vecteur appartient à leur intersection, alors il est nul.
+
+Prenons un élément v appartenant à leur somme, c’est-à-dire qu’il peut s’écrire sous la forme :
+\[
+    v = v_1 + v_2 + \cdots + v_p
+\] 
+avec $v_i \in E_{\lambda_i}$ pour tout $i$.
+
+Puisque chaque $v_i$ est un vecteur propre pour $f$ associé à $\lambda_i$, on a :
+\[
+    f(v_i) = \lambda_i v_i.
+\] 
+Appliquons f à la somme :
+\[
+    f(v) = f(v_1 + v_2 + \cdots + v_p) = f(v_1) + f(v_2) + \cdots + f(v_p).
+\] 
+En utilisant la linéarité de $f$, cela donne :
+\[
+    f(v) = \lambda_1 v_1 + \lambda_2 v_2 + \cdots + \lambda_p v_p.
+\] 
+Or, $v$ est aussi une combinaison de ces mêmes vecteurs :
+\[
+    v = v_1 + v_2 + \cdots + v_p.
+\] 
+Donc, en réarrangeant :
+\[
+    (\lambda_1 v_1 + \lambda_2 v_2 + \cdots + \lambda_p v_p) - (v_1 + v_2 + \cdots + v_p) = 0.
+\] 
+Ce qui donne :
+\[
+    (\lambda_1 - 1) v_1 + (\lambda_2 - 1) v_2 + \cdots + (\lambda_p - 1) v_p = 0.
+\] 
+Factorisons chaque terme :
+\[
+    (\lambda_1 - \lambda) v_1 + (\lambda_2 - \lambda) v_2 + \cdots + (\lambda_p - \lambda) v_p = 0.
+\] 
+Or, les $\lambda_i$ sont supposés deux à deux distincts. On en déduit que les coefficients sont différents, et que la somme est nulle uniquement si tous les $v_i$ sont nuls (puisque les espaces propres sont en général en somme directe).
+
+Ainsi, $v = 0$, ce qui prouve que les espaces propres sont en somme directe.
+\end{preuve}

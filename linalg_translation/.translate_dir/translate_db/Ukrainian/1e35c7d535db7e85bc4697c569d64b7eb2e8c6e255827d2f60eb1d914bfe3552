@@ -1,0 +1,15 @@
+\begin{eg}
+   \begin{enumerate}
+       \item $E = \R^{n}$ оснащене стандартним скалярним добутком. Канонічний базис $(e_1, \ldots, e_n)$ є ортогональним, тому що
+           \[
+           \scalair{e_i, e_j} = \begin{cases}
+               1 \text{ якщо } i = j\\
+               0 \text{ якщо } i \neq j
+           \end{cases}
+           \]
+       \item У $E = \mathcal{C}^{0}([-1, 1], \R)$ оснащене $\scalair{f,g} = \int_{-1}^{1} f(t)g(t)\,d{t}$. Сімейство $(\cos(t), \sin(t))$ є ортогональним. Сімейство $(1, t^2)$ не є ортогональним:
+            \[
+                \scalair{1, t^2} = \int_{-1}^{1} 1 t^2 \, d{t} = \frac{2}{3} \neq  0
+           \]
+   \end{enumerate}
+\end{eg}

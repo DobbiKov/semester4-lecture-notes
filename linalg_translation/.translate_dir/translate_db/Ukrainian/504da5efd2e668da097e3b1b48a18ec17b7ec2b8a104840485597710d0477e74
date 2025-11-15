@@ -1,0 +1,50 @@
+\begin{ex}
+   Обчислити 
+   \[
+   \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+   \end{bmatrix}^{15} = \underbrace{
+       \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+       \end{bmatrix}
+       \cdot
+       \ldots
+       \cdot
+       \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+       \end{bmatrix}
+   }_{15 \text{ разів}}
+   \] 
+Нагадаємо, що власні вектори $A$ це: 
+\[
+v_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \text{ та } v_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix} 
+\] 
+які є лінійно незалежними та породжують $\R^2$, отже, утворюють базис $\R^2$, тоді ми можемо записати в цьому новому базисі і, як ми вже знайшли:
+
+\[
+    A' = P^{-1}AP = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} 
+\] 
+в базисі $(v_1, v_2)$ з матрицею переходу:
+\[
+    P = \begin{bmatrix} 1 & -1\\ 0 & 1 \end{bmatrix} \text{ та } P^{-1} = \begin{bmatrix} 1 & 1 \\ 0 & 1  \end{bmatrix}
+\] 
+Крім того, множачи $A'$ на $A'$, маємо:  
+\[
+    A' \cdot A' = (P^{-1}AP)(P^{-1}AP) = P^{-1}A^2P = A'^2
+\] 
+звідки
+\[
+    A'^n = P^{-1}A^{n}P \implies PA'^nP^{-1} = PP^{-1}A^{n}PP^{-1} = A^{n}
+\] 
+Це дає нам можливість спочатку обчислити степінь $A'$:
+ \[
+     A'^{15} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}^{15} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}^{13} = \begin{bmatrix} 3^2 & 0 \\ 0 & 2^2 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}^{13} = \begin{bmatrix} 3^{15} & 0 \\ 0 & 2^{15} \end{bmatrix}
+\] 
+Ось, набагато простіше, ніж обчислювати $A^15$ безпосередньо, тоді нам залишається повернутися до канонічного базису:
+ \[
+     P \begin{bmatrix} 3^{15} & 0 \\ 0 & 2^{15} \end{bmatrix} P^{-1} = \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 3^{15} & 0 \\ 0 & 2^{15} \end{bmatrix}\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 3^{15} & 3^{15} - 2^{15} \\ 0 & 2^{15}\end{bmatrix} 
+\] 
+\end{ex}

@@ -1,0 +1,14 @@
+Let's start by clarifying the concept of a linear application and its matrix. Let's take for that the matrix from the exercise at the beginning of the chapter:
+\[
+A = \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+   \end{bmatrix}
+\] 
+This matrix transforms the vector space that we give it, or, to simplify, it transforms each vector of the vector space. Let's take a vector $v_3 = \begin{pmatrix} 1 \\ 1 \end{pmatrix} $, by applying $A$ we obtain:
+ \[
+Av_3 = \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+   \end{bmatrix}\begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 3 \\ 0 \end{bmatrix} + \begin{pmatrix} 1 \\ 2 \end{pmatrix} = \begin{bmatrix} 4 \\ 2 \end{bmatrix} 
+\]

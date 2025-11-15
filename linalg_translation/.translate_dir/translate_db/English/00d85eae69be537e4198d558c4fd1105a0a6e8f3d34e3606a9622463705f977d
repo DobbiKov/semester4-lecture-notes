@@ -1,0 +1,3 @@
+\begin{definition}
+    $E$ equipped with a distance application $d$ (see Definition \ref{def:distance}) is denoted $(E, d)$: \underline{metric space}
+\end{definition}

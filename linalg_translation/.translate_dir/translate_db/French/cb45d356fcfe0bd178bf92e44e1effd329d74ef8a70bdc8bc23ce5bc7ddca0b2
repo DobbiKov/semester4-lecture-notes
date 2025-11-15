@@ -1,0 +1,11 @@
+\begin{prop}
+   \begin{enumerate}
+       \item Toute sous-suite d'une suite convergente converge vers la limite de cette suite.
+           \par
+           Cela signifie que, $\forall (x_n)_{n \in \N}$ tq $\exists x \in E, \lim_{n \to \infty} x_n = x$
+           \[
+               \forall \phi: \N \to \N \text{ strictement croissante}, \lim_{n \to \infty} x_{\phi(n)} = x
+           \] 
+        \item Si $(x_n)$ est de Cauchy et admet une sous-suite qui converge vers  $X$, alors  $(x_n)$ converge vers  $x$.
+   \end{enumerate} 
+\end{prop}

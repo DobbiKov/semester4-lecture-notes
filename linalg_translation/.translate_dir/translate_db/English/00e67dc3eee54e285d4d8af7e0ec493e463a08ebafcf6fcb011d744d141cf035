@@ -1,0 +1,3 @@
+\begin{theorem}
+    A set $K \subset E$ is compact, if every sequence $(x_n)_{n \in \N}$ of elements of $K$, posseses a subsequence that converges to an element $x \in K$.
+\end{theorem}

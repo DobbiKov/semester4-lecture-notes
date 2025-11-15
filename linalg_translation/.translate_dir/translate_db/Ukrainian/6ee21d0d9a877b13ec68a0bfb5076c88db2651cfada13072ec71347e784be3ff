@@ -1,0 +1,4 @@
+\begin{theorem}[Schwarz/Clairaut]
+    Якщо \(f:D \to \R\) є класом \(C^2\) на \(D\) (тобто всі другі часткові похідні існують і є неперервними), тоді порядок диференціювання не має значення:
+    \[ \frac{\partial^2 f}{\partial x_j \partial x_i}(X) = \frac{\partial^2 f}{\partial x_i \partial x_j}(X) \quad \forall X \in D, \forall i,j \]
+\end{theorem}

@@ -1,0 +1,3 @@
+\begin{prop}\label{prop:isometrie-ssi-transforme-bon-en-bon}
+   $f$ est une isométrie si et seulement si elle transforme toute base orthonormée en une base orthonormée. 
+\end{prop}

@@ -1,0 +1,11 @@
+This doesn't seem very easy, does it? At the end of this chapter, we will find a way to simplify the calculation and in the end we will solve this exercise.
+\par
+
+We know from linear algebra that we can represent a matrix of a mapping in different bases, i.e. let $\{e_i\}$ be a basis of $E$ and $f$ a mapping. Then this mapping in the basis $\{e_i\}$ is represented:
+ \[
+A = M(f)_{e_i} = \|f(e_1), \ldots, f(e_n)\|
+\]
+Let $\{e_i'\}$ be another basis of $E$, then we can represent the mapping $f$ in this basis as well, let's denote: $P = P_{e_i \to e_i'}$ a change-of-basis matrix from the basis $\{e_i\}$ to the basis $\{e_i'\}$
+ \[
+     A' = M(f)_{e_i'} = P^{-1}AP = \|f(e_1'), \ldots, f(e_n')\|_{e_i'}
+\]

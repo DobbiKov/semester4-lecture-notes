@@ -1,0 +1,7 @@
+\begin{propriete}
+    \begin{itemize}
+        \item Any finite part is bounded.
+        \item Any sub-part of a bounded is bounded.
+        \item A finite union of bounded sets is bounded.
+    \end{itemize}
+\end{propriete}

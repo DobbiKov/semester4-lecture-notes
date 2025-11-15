@@ -1,0 +1,6 @@
+\begin{prop}
+    L'inégalité triangulaire pour $p > 2$ s'appelle \textbf{l'inégalité de Minkowski}:
+    \[
+        \left( \sum_{i=1}^{n} |x_i + y_i|^p \right)^{\frac{1}{p}} \le  \left( \sum_{i=1}^{n} |x_i |^p \right)^{\frac{1}{p}} + \left( \sum_{i=1}^{n} |y_i|^p \right)^{\frac{1}{p}}
+    \] 
+\end{prop}

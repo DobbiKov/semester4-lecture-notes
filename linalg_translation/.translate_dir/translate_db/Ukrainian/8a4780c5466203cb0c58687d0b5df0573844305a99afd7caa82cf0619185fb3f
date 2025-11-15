@@ -1,0 +1,4 @@
+\begin{itemize}
+    \item $(x|y) = \sum_{i=1}^{n} \overline{x_i}y_i$
+    \item $\|x\| = (x|x)^{\frac{1}{2}} = \left( \sum_{i=1}^{n} |x_i|^2 \right)^{\frac{1}{2}}$
+\end{itemize}

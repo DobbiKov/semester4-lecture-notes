@@ -1,0 +1,25 @@
+\begin{proof} of prop. \ref{prop:boules-fermes-sont-compactes}
+   \begin{enumerate}
+       \item $n = 1$. To show: $[a, b]$ is compact.
+           \par
+           Let $(U_i)_{i \in I}$ be an open cover of $[a, b]$. Let $F$: the $x \in [a, b]$ such that $[a, x]$ is covered by a finite number of $U_i$.
+           \par
+           \underline{Goal:} to show that $b \in F$! (if $x \in F$, and $x' \le x$ $x' \in F$)
+            \begin{enumerate}
+                \item $F \neq \O$: $a \in F$  $[a, a] = \{ a \}$
+                \item  $c = sup(F)$. \underline{We show that $c = b$} \par
+                    Suppose that $c < b$.
+                     \begin{itemize}
+                        \item $c$ belongs to one of the $U_i$ denoted $U_{i_0}$
+                        \item $U_{i_0}$ is open, $c \in U_{i_0}$ so $\exists \delta_0 > 0$ such that $]c - \delta_0, c + \delta_0[ \subset U_{i_0}$
+                        \item $c = sup(F)$:  $\forall \delta > 0, \, \exists x_{\delta} \in F$ with $c - \delta < x_{\delta} \le c$
+                            \[
+                            \delta = \delta_{0,2} \quad \exists x_{\delta_0} \in F, c - \delta_{0,2} < x_{\delta_0}
+                            \] 
+                            $[a, x_{\delta_0}]$ covered by $U_{i_1} \cup \ldots \cup U_{i_n}$ and $]c - \delta_0, c + \delta_0[ \subset U_{i_0}$ so $[a, c + \delta_{0,2}]$ is covered by $U_{i_0} \cup U_{i_1} \cup \ldots \cup U_{i_n}$, so $c + \delta_{0, 2} \in F$ contradicts that $c = sup(F)$. Thus $c = b$.
+                            \par
+                            $F$ is $[a, b[$ or $[a, b]$. $b \in F$  $\exists U_{i_1}, \ldots, U_{i_n}$ such that $[a, b] \subset U_{i_1} \cup \ldots \cup U_{i_n}$, $[a, b]$ is compact.
+                    \end{itemize}
+            \end{enumerate}
+   \end{enumerate}
+\end{proof}

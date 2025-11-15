@@ -1,0 +1,3 @@
+\begin{corollary}
+   Si $f$ est un endomorphisme de  $E$ avec  $\dim E = n$ et  $f$ admet  $n$ valeurs propres  deux à deux distinctes, alors $f$ est diagonalisable.
+\end{corollary}

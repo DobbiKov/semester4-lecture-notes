@@ -1,0 +1,20 @@
+\begin{preuve}
+   Soit $f$ une isométrie dans  $E$ et deux vecteurs  $u, v \in E$ 
+   \begin{enumerate}
+       \item  
+           \begin{align*}
+               \|f(u) - f(v)\| = \sqrt{\scalair{f(u), f(v)}} = \sqrt{\scalair{u, v}} = \|u - v\| 
+           \end{align*}
+       \item Soit $\theta_1$ angle entre  $f(u)$ et  $f(v)$ et $\theta_2$ angle entre  $u$ et  $v$, donc:
+            \[
+                \cos \theta_1 := \frac{\scalair{f(u), f(v)}}{\|f(u)\| \cdot \|f(v)\|}
+           \] 
+           \[
+                \cos \theta_2 := \frac{\scalair{u, v}}{\|u\| \cdot \|v\|}
+           \] 
+           Par définition, $\scalair{f(u), f(v)} = \scalair{u, v}$, d'après proposition \ref{prop:isometrie-reserve-norme},  $\forall x, \|f(x)\| = \|x\|$, donc:
+           \[
+                \cos \theta_1 := \frac{\scalair{f(u), f(v)}}{\|f(u)\| \cdot \|f(v)\|} = \frac{\scalair{u, v}}{\|u\| \cdot \|v\|} = \cos \theta_2
+           \] 
+   \end{enumerate}
+\end{preuve}

@@ -1,0 +1,46 @@
+\begin{center}
+    
+\begin{tabular}{c | c}
+    {\large \bf
+    Показати, що множина є відкритою      } 
+ & 
+    {\large \bf
+    Показати, що множина є замкненою }
+ \\
+ \hline
+ \parbox[t]{8cm}{
+\begin{itemize}
+    \item \textbf{Використовувати визначення :} 
+    \[
+    \forall x \in \mathcal{U}, \exists r > 0 \quad \text{таке що} \quad B(x, r) \subset \mathcal{U}
+    \]
+    
+    \item Показати, що \( E \setminus \mathcal{U} \) є замкненою.
+    
+    \item Показати, що \(\mathcal{U}\) є прообразом відкритої множини при неперервному відображенні.
+    
+    \item Виразити \(\mathcal{U}\) як відкриту кулю.
+    
+    \item Записати \(\mathcal{U}\) як :
+    \begin{itemize}
+        \item об'єднання відкритих множин ;
+        \item скінченний перетин відкритих множин.
+    \end{itemize}
+    
+    \item \(\mathcal{U} = \operatorname{Int}(U)\).
+    
+    \item Записати \(\mathcal{U} = I_1 \times \dots \times I_n\) з \( I_i \) відкритою.
+\end{itemize}
+} & \parbox[t]{8cm}{
+\begin{itemize}
+    \item \textbf{Використовувати визначення :} \( E \setminus V \) є відкритою.
+    
+    \item \textbf{Послідовнісна характеристика :} Будь-яка збіжна послідовність у \(V\), її границя також знаходиться в \(V\).
+    
+    \item Показати, що \(V\) є прообразом замкненої множини при неперервному відображенні.
+    
+    \item Показати, що \(V\) є компактною.
+\end{itemize}
+}
+\end{tabular}
+\end{center}

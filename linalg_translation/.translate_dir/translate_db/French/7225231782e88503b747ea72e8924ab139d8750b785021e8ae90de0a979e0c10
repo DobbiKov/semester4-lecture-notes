@@ -1,0 +1,8 @@
+\begin{theorem}[Théorème de composition]
+    Soient \(U \subset \R^n\) et \(V \subset \R^m\) des ouverts.
+    Si \(g: U \to V\) est différentiable en \(X_0 \in U\), et \(f: V \to \R^p\) est différentiable en \(Y_0 = g(X_0) \in V\).
+    Alors \(h = f \circ g : U \to \R^p\) est différentiable en \(X_0\), et sa différentielle est :
+    \[ dh_{X_0} = df_{g(X_0)} \circ dg_{X_0} \]
+    En termes de matrices Jacobiennes :
+    \[ J_h(X_0) = J_f(g(X_0)) \cdot J_g(X_0) \]
+\end{theorem}

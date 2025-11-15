@@ -1,0 +1,3 @@
+\begin{prop}
+   $Int(A)$ est le plus grand ouvert inclus dans  $A$. De manière équivalente, $Int(A)$ est l'union de tous les ouverts inclus dans  $A$.
+\end{prop}

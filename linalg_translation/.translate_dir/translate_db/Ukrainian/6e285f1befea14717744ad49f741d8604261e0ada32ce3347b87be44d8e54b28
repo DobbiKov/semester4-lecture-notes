@@ -1,0 +1,6 @@
+\begin{definition}[Неперервність в точці]
+    Нехай \((E_1, d_1)\) і \((E_2, d_2)\) два метричні простори, \(f: E_1 \to E_2\) відображення та \(x_0 \in E_1\).
+    \(f\) є \textbf{неперервною в \(x_0\)}, якщо
+    \[ \forall \varepsilon > 0, \exists \delta > 0 \text{ така що } \forall x \in E_1, (d_1(x,x_0) < \delta \implies d_2(f(x), f(x_0)) < \varepsilon) \]
+    \(f\) є \textbf{неперервною на \(E_1\)}, якщо вона неперервна в кожній точці \(E_1\).
+\end{definition}

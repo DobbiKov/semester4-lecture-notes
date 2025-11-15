@@ -1,0 +1,3 @@
+\begin{definition}[Local Extremum]
+    Let \(f: D \to \R\). \(X_0 \in D\) is a \textbf{local minimum} (resp. \textbf{local maximum}) if there exists a neighborhood \(V\) of \(X_0\) such that \(f(X_0) \le f(X)\) (resp. \(f(X_0) \ge f(X)\)) for all \(X \in V \cap D\). An extremum is said to be \textbf{strict} if the inequality is strict for \(X \neq X_0\).
+\end{definition}

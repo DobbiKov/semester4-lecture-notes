@@ -1,0 +1,335 @@
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 36021bd9338f148469777a87e4ed2e610c9439ec3e6582d27f0643f343147d29
+% --- CHUNK_METADATA_END ---
+\chapter{Визначники}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 44a2d221c3add834bc6b572b99510124a2c63bba4ec05ce651f652b780d76f03
+% --- CHUNK_METADATA_END ---
+Цей розділ скоріше є шпаргалкою з детермінантів, оскільки я не буду наводити докази, а дам корисні властивості, приклади та інтуїцію.% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 40efd2d3fc52732b3888f92ac0a106ef2761cbf5ee50d77432e068763701e0a1
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Нехай $A = [a_{i, j}] \in \mathcal{M}_{n}(\R)$ квадратна матриця $n \times n$, тоді:
+    \[
+        \operatorname{det}(A) = \sum_{\sigma \in S_n}^{} \operatorname{signe}(\sigma) \cdot \prod_{i=1}^{n} a_{i, \sigma(i)} 
+    \] 
+    де 
+    \begin{itemize}
+        \item $S_n$ це група всіх перестановок $\{1, \ldots, n\}$
+        \item $\operatorname{signe}(\sigma)$ це знак перестановки
+    \end{itemize}
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 20f6652d2214f140be1a59d411329f3b384abd960a030f5e030b154b62907f88
+% --- CHUNK_METADATA_END ---
+Це визначення дуже формальне, тому наприкінці цього розділу ми переформулюємо це визначення. Спочатку ми вивчимо властивості визначників:% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 3eb8343934111c2f78e660e6116691d199a7a9814717d78e0cc61cdf1b224c7b
+% --- CHUNK_METADATA_END ---
+\section{Найбільш важливі властивості}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 32621882b8dbdbf7e434295eb8c9e09d22a1dae72efea6e8036f3a0527152f20
+% --- CHUNK_METADATA_END ---
+\begin{prop} властивості визначника.
+    Для цієї пропозиції, ми позначаємо $\det(c_1, \ldots, c_n)$ визначник, де $\forall i, \, r_i$ і $\forall i, \, y_i$ представляють стовпець (або вектор-стовпець). І $\forall i, \lambda_i \in \R$.
+    \begin{enumerate}
+        \item \textbf{Визначник одиничної матриці дорівнює 1:}
+            \[
+            \det(I_n) = 1
+            \] 
+        \item \textbf{Визначник матриці рангу 1 є її єдиним елементом}:
+            \[
+                \det(\begin{bmatrix} a_{1,1} \end{bmatrix} ) = a_{1,1} \qquad \text{ де } a_{1,1} \in \R
+            \] 
+        \item \textbf{Лінійність 1}:
+            \[
+            \det(r_1, \ldots, r_i + y_i, \ldots, r_n) = \det(r_1, \ldots, r_i, \ldots, r_n) + \det(r_1, \ldots, y_i, \ldots, r_n)
+            \] 
+        \item \textbf{Лінійність 2}:
+            \[
+            \det(r_1, \ldots, \lambda_ir_i, \ldots, r_n) = \lambda_i\det(r_1, \ldots, r_i, \ldots, r_n) 
+            \] 
+            \begin{note}
+               Ось чому:
+               \[
+               \det(\lambda A) = \lambda^n\det(A)
+               \] 
+            \end{note}
+        \item \textbf{Однакові стовпці}: Припустимо, що $i \neq j$ і $c_i = c_j$ тоді:
+             \[
+            \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) = 0
+            \] 
+            Якщо є два однакових стовпці, тоді $\det$ дорівнює 0.
+        \item \textbf{Переміщення стовпців}:
+            
+\[
+    \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) 
+    = -\det(c_1, \ldots, 
+    \underbrace{c_j , \ldots, 
+    c_i}_{\text{permutation}}, \ldots, c_n)
+\]
+Інакше кажучи, перестановка стовпців змінює знак.
+
+\item \textbf{Визначник помножених матриць}: Нехай $A, B \in \mathcal{M}_n(\R)$
+    \[
+        \det(AB) = \det(A)\det(B) 
+    \] 
+
+\item \textbf{Визначник транспонованої матриці}: Нехай $A \in \mathcal{M}_n(\R)$
+    \[
+        \det(A^{T}) = \det(A)
+    \] 
+
+
+% Drawing the arc manually
+\end{enumerate}
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: d29d5cc905e9f7a28490c68906ad5cc4500a94e769e0aff9fc93e42cea9dbb4d
+% --- CHUNK_METADATA_END ---
+\section{Розкладання відносно рядка/стовпця}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 8ec8951f50302c7a9e14d2d472ca55b78eb8b272c33349b5b6498aad71b11232
+% --- CHUNK_METADATA_END ---
+\begin{definition}\label{def:matrice-ligne-colonne-supprime}
+    Soit $A = (a_{i, j}) \in \mathcal{M}_n(\R)$ une matrice carrée, i.e:
+    \[
+        A = 
+        \begin{bmatrix} 
+            a_{1, 1} & a_{1, 2} & \ldots & a_{1, i - 1} & a_{1, i} & a_{1, i+1} & \ldots & a_{1, n} \\
+            a_{2, 1} & a_{2, 2} & \ldots & a_{2, i - 1} & a_{2, i} & a_{2, i+1} & \ldots & a_{2, n} \\
+            \vdots   & \vdots   & \vdots & \vdots       & \vdots   & \vdots     & \vdots & \vdots \\
+            a_{j-1, 1} & a_{j-1, 2} & \ldots & a_{j-1, i - 1} & a_{j-1, i} & a_{j-1, i+1} & \ldots & a_{j-1, n} \\
+            a_{j, 1} & a_{j, 2} & \ldots & a_{j, i - 1} & a_{j, i} & a_{j, i+1} & \ldots & a_{j, n} \\
+            a_{j+1, 1} & a_{j+1, 2} & \ldots & a_{j+1, i - 1} & a_{j+1, i} & a_{j+1, i+1} & \ldots & a_{j+1, n} \\
+            \vdots   & \vdots   & \vdots & \vdots       & \vdots   & \vdots     & \vdots & \vdots \\
+            a_{n, 1} & a_{n, 2} & \ldots & a_{n, i - 1} & a_{n, i} & a_{n, i+1} & \ldots & a_{n, n} 
+        \end{bmatrix} 
+    \] 
+
+    Alors, $A_{j, i}$ est une matrice où la ligne $j$ et la colonne  $i$ sont supprimé, i.e:
+    \[
+        A_{j, i} = 
+        \begin{bmatrix} 
+            a_{1, 1} & a_{1, 2} & \ldots & a_{1, i - 1} & & a_{1, i+1} & \ldots & a_{1, n} \\
+            a_{2, 1} & a_{2, 2} & \ldots & a_{2, i - 1} & & a_{2, i+1} & \ldots & a_{2, n} \\
+            \vdots   & \vdots   & \vdots & \vdots       & & \vdots     & \vdots & \vdots \\
+           a_{j-1, 1} & a_{j-1, 2} & \ldots & a_{j-1, i - 1} & & a_{j-1, i+1} & \ldots & a_{j-1, n} \\
+             & & & & & & & \\
+            a_{j+1, 1} & a_{j+1, 2} & \ldots & a_{j+1, i - 1} & & a_{j+1, i+1} & \ldots & a_{j+1, n} \\
+            \vdots   & \vdots   & \vdots & \vdots       & \vdots   & & \vdots & \vdots \\
+            a_{n, 1} & a_{n, 2} & \ldots & a_{n, i - 1} & & a_{n, i+1} & \ldots & a_{n, n} 
+        \end{bmatrix} \in \mathcal{M}_{n-1}(\R)
+    \] 
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 637a10ec4a87946e03aa53ce35530ba441f5a4df33c9e676d1e70b4076ecacda
+% --- CHUNK_METADATA_END ---
+Це дозволяє нам розкласти визначник за рядком або стовпцем:% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 27b89bbf51d47b926dd224600a6434d7aa38408d1d58b9bffc7646ce944992c9
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+    Нехай $A = (a_{i, j}) \in \mathcal{M}_n(\R)$ квадратна матриця і нехай $1 \le k \le n$
+    \[
+        \displaystyle \det(A) = \sum_{i=1}^{n} (-1)^{i + k} a_{k,i} \det(A_{k, i}) 
+    \] 
+    є обчисленням детермінанта відносно $k^{\text{го}}$ рядка.
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: fa311f7859ee9b17fcd6cca9a67aef7b60b1c74de61a05708a9349498b016521
+% --- CHUNK_METADATA_END ---
+\begin{eg}
+   Нехай  
+   \[
+   A = 
+   \begin{bmatrix} 
+       1 & 4 & 5\\
+       2 & 9 & 8\\
+       3 & 7 & 6
+   \end{bmatrix} \in \mathcal{M}_3(\R)
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{mat-ligne-1-colonne-3}
+    \caption{Розклад по другому рядку}
+    \label{fig:mat-ligne-1-colonne-3}
+\end{figure}
+Тому:
+\begin{align*}
+    \det(A) &= \sum_{i=1}^{n} (-1)^{i + 2} a_{2, i} \det(A_{2, i}) \\
+            &= (-1)^{1 + 2} \cdot a_{2, 1} \cdot \det(A_{2, 1}) + (-1)^{2 + 2} \cdot a_{2, 2} \cdot \det(A_{2,2})  + (-1)^{3 + 2} \cdot a_{2, 3} \cdot \det(A_{2, 3}) \\
+            &= (-1)^{1 + 2} \cdot 2 \cdot \begin{vmatrix} 4 & 5 \\ 7 & 6 \end{vmatrix} + (-1)^{2 + 2} \cdot 9 \cdot \begin{vmatrix} 1 & 5 \\ 3 & 6 \end{vmatrix}  + (-1)^{3 + 2} \cdot 8 \cdot \begin{vmatrix} 1 & 4 \\ 3 & 7 \end{vmatrix} \\
+            &= (-1) \cdot 2 \cdot (-11) + 1 \cdot 9 \cdot (-9) + (-1) \cdot 8 \cdot (-5)\\
+            &= 22 - 81 + 40\\
+            &= -19
+\end{align*}
+\end{eg}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: da4514922af8f6770e1dde71517dc2ef44364f3dece95e4da27414409339a7e4
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+    Нехай $A = (a_{i, j}) \in \mathcal{M}_n(\R)$ квадратна матриця і нехай $1 \le k \le n$
+    \[
+        \displaystyle \det(A) = \sum_{i=1}^{n} (-1)^{i + k} a_{i,k} \det(A_{i,k}) 
+    \] 
+    є обчисленням визначника відносно $k^{\text{ій}}$ стовпця.
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 2a6f9f7c9f5d450adb53bc5d12421a0afbec1d3d8b46b1a9784b9086144c3fbd
+% --- CHUNK_METADATA_END ---
+\begin{eg}
+   Нехай  
+   \[
+   A = 
+   \begin{bmatrix} 
+       1 & 4 & 5\\
+       2 & 9 & 8\\
+       3 & 7 & 6
+   \end{bmatrix} \in \mathcal{M}_3(\R)
+   \] 
+
+\begin{figure}[H]
+    \centering
+    \incfig{mat-colonne-2}
+    \caption{Розклад за другою колонкою}
+    \label{fig:mat-colonne-2}
+\end{figure}
+Отже:
+\begin{align*}
+    \det(A) &= \sum_{i=1}^{n} (-1)^{i + 2} a_{i, 2} \det(A_{i, 2}) \\
+            &= (-1)^{1 + 2} \cdot a_{1, 2} \cdot \det(A_{1, 2}) + (-1)^{2 + 2} \cdot a_{2, 2} \cdot \det(A_{2,2})  + (-1)^{3 + 2} \cdot a_{3, 2} \cdot \det(A_{3, 2}) \\
+            &= (-1)^{1 + 2} \cdot 4 \cdot \begin{vmatrix} 2 & 8 \\ 3 & 6 \end{vmatrix} + (-1)^{2 + 2} \cdot 9 \cdot \begin{vmatrix} 1 & 5 \\ 3 & 6 \end{vmatrix}  + (-1)^{3 + 2} \cdot 7 \cdot \begin{vmatrix} 1 & 5 \\ 2 & 8 \end{vmatrix} \\
+            &= (-1) \cdot 4 \cdot (-12) + 1 \cdot 9 \cdot (-9) + (-1) \cdot 7 \cdot (-2)\\
+            &= 48 - 81 + 14\\
+            &= -19
+\end{align*}
+\end{eg}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: f4b26fcdf4543917f14e2cf52d749b0271fc2dc8bb0b6027681d08b4282b5745
+% --- CHUNK_METADATA_END ---
+\section{Визначник трикутної матриці}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 44856252dbfb6ceee7340f17415eebb3d42535506dbabb9775f83c6060f88709
+% --- CHUNK_METADATA_END ---
+\begin{corollary}
+   Визначник трикутної матриці є добутком її діагональних елементів. Тобто, нехай трикутна матриця
+   \[
+   A = \begin{bmatrix} 
+       a_{1, 1} & a_{1, 2} & \ldots & a_{1, n-1} & a_{1, n}\\
+       0        & a_{2, 2} & \ldots & a_{2, n-1} & a_{2, n}\\
+       \vdots   & \vdots   & \ddots & \vdots     & \vdots  \\
+       0        & 0        & \ldots & 0          & a_{n, n}
+   \end{bmatrix} 
+   \] 
+   тоді 
+   \[
+   \det(A) = a_{1,1} \cdot a_{2,2} \cdot \ldots \cdot a_{n,n}
+   \] 
+\end{corollary}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 4dd39100b7df7fcd5e70c875739e08ee76bdd9700d87de5f2c933454f9887834
+% --- CHUNK_METADATA_END ---
+\begin{eg}
+   Нехай  
+   \[
+   A = 
+   \begin{bmatrix} 
+       1 & 4 & 5\\
+       0 & 9 & 8\\
+       0 & 0 & 6
+   \end{bmatrix} \in \mathcal{M}_3(\R)
+   \] 
+Розгорнемо цей визначник відносно першого стовпця:
+\begin{align*}
+    \det(A) &= \sum_{i=1}^{n} (-1)^{i + 2} a_{i, 2} \det(A_{i, 2}) \\
+            &= (-1)^{1 + 1} \cdot a_{1, 1} \cdot \det(A_{1, 1}) + (-1)^{2 + 1} \cdot a_{2, 1} \cdot \det(A_{2,1})  + (-1)^{3 + 1} \cdot a_{3, 1} \cdot \det(A_{3, 1}) \\
+            &= (-1)^{2} \cdot 1 \cdot \begin{vmatrix} 9 & 8 \\ 0 & 6 \end{vmatrix} + \underbrace{(-1)^{3} \cdot 0 \cdot \begin{vmatrix} 4 & 5 \\ 0 & 6 \end{vmatrix}}_{= 0}  + \underbrace{(-1)^{4} \cdot 0 \cdot \begin{vmatrix} 4 & 5 \\ 9 & 8 \end{vmatrix}}_{= 0} \\
+            &= \underbrace{1}_{= a_{1,1}} \cdot \begin{vmatrix} 9 & 8 \\ 0 & 6 \end{vmatrix}\\
+            &= \det(\begin{bmatrix} 9 & 8 \\ 0 & 6 \end{bmatrix} =: B)\\
+            &= (-1)^{1 + 1} \cdot b_{1, 1} \cdot \det(B_{1,1}) + (-1)^{2 + 1} \cdot b_{2, 1} \cdot \det(B_{2, 1}) \quad \substack{\text{ розклад відносно}\\\text{першого стовпця}}\\
+            &= 1 \cdot \underbrace{9}_{a_{2,2}} \cdot \begin{vmatrix} 6 \end{vmatrix} + \underbrace{(-1) \cdot 0 \cdot \begin{vmatrix} 8 \end{vmatrix} }_{= 0}\\
+            &= \underbrace{1}_{= a_{1,1}} \cdot \underbrace{9}_{= a_{2,2}} \cdot \underbrace{6}_{= a_{3,3}}
+\end{align*}
+\end{eg}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: c27b3d908829112de64a3a67a93d6f30330c47cce4992bd31f5c9dac68c3faa6
+% --- CHUNK_METADATA_END ---
+\section{Коматриця та приєднана матриця}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 413434f893e612bb07bca4a2f9fe1e948945aba9293e6602125aa9af3722b737
+% --- CHUNK_METADATA_END ---
+Спочатку нагадаємо визначення $A_{i,j}$. Це квадратна матриця, де $i^{\text{та}}$ лінія та $j^{\text{тий}}$ стовпець видалено. (Див. визначення ~\ref{def:matrice-ligne-colonne-supprime}).% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 3578257d1d1eda496ea28707e5489e1b2bce8925bcbd7860c0f3b763534cd5d3
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Нехай квадратна матриця $A = (a_{i, j}) \in \mathcal{M}_n(\R)$. Позначимо
+    \[
+        b_{i, j} = (-1)^{i + j}\det(A_{i, j})
+    \] 
+    Потім, позначимо матрицю
+    \[
+        N = 
+        \begin{bmatrix} 
+            b_{1,1} & \ldots & b_{1, n}\\
+            \vdots  & \ddots & \vdots  \\
+            b_{n,1} & \ldots & b_{n, n}\\
+        \end{bmatrix} 
+        = \operatorname{Com}(A)
+    \] 
+    Матриця $N$ називається \textbf{коматрицею} матриці $A$.
+    Тоді, \textbf{спряжена матриця} матриці $A$ визначається як транспонована коматриця:
+    \[
+        A^{*} = N^{T} = 
+        \begin{bmatrix} 
+            b_{1,1} & \ldots & b_{n, 1}\\
+            \vdots  & \ddots & \vdots  \\
+            b_{1,n} & \ldots & b_{n, n}\\
+        \end{bmatrix} 
+    \] 
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: e1c9c5e64821fb669b1c2768bb38e5e27d8e52ab6dbd1a9fc7e394451be9b90b
+% --- CHUNK_METADATA_END ---
+\begin{theorem}
+    Нехай $A \in \mathcal{M}_n{\R}$ квадратна матриця та $A^{*}$ її спряжена матриця, тоді маємо:
+     \[
+         A^{*}A = A A^{*} = \det(A)I_n = 
+         \begin{bmatrix}  
+             \det(A) & 0        & 0      & \ldots & 0 & 0\\
+             0       & \det(A)  & 0      & \ldots & 0 & 0\\
+             \vdots  & \vdots   & \vdots & \ddots & \vdots & \vdots\\
+             0       & 0        & 0      & \ldots & 0      & \det(A)
+         \end{bmatrix}  
+    \] 
+\end{theorem}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 8574bbe214f303b01d7f945e465e835b78d4483271e8a881909f13ee74ebe2f0
+% --- CHUNK_METADATA_END ---
+Яка користь від такої матриці?% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: cb94f74bdbf5271023bb6e173c7c790b0894ff502fa5ec83ce97313b4b15ada3
+% --- CHUNK_METADATA_END ---
+\section{Обернена матриця}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 3a7f49ca3d7bad2c291d8c461dd8a16109d5a9bae01904aae168ef1a93183a5f
+% --- CHUNK_METADATA_END ---
+\begin{theorem}
+    Нехай $A \in \mathcal{M}_n(\R)$ квадратна матриця така що $\det(A) \neq 0$, тоді:
+    \[
+        A^{-1} = \frac{1}{\det(A)}\cdot A^{*}
+    \] 
+    є оберненою матрицею до $A$.
+\end{theorem}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 92fff81bf83bda92ed985aff8ef911672fa1ddf465d008f49d2d8f080c340f82
+% --- CHUNK_METADATA_END ---
+\begin{corollary}
+   Якщо $A \in \mathcal{M}_n(\R)$ оборотна квадратна матриця, тоді:
+   \[
+       \det(A^{-1}) = \frac{1}{\det(A)}
+   \] 
+\end{corollary}

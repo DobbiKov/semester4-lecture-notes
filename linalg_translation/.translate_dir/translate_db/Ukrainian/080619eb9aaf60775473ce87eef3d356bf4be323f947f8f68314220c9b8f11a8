@@ -1,0 +1,8 @@
+\begin{eg}
+    Знову розглянемо приклад з $b = \scalair{,}$ канонічний скалярний добуток в $\R^3$. Нехай $X = \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix}$ та $Y = \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix} $ в канонічному базисі $\R^3$. Отже:
+    \begin{align*}
+        \scalair{x, y} = X^{t}AY &= \overbrace{(1, 2, -1)}^{X^{t}} \times \overbrace{\begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1 \end{pmatrix}}^{A} \times \overbrace{ \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix} }^{Y} \\
+                                 &= \underbrace{(1, 2, -1)}_{X} \times \underbrace{ \begin{pmatrix} 2 \\ 3\\ 1 \end{pmatrix} }_{A \times Y} \\
+                                 &= 1 \cdot 2 + 2 \cdot 3 + (-1) \cdot 1 = 2 + 6 - 1 = 7
+    \end{align*}
+\end{eg}

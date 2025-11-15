@@ -1,0 +1,3 @@
+\begin{prop}
+    Нехай $\lambda_1, \ldots, \lambda_p$ — попарно різні скаляри. Тоді власні простори $E_{\lambda_1}, \ldots, E_{\lambda_p}$ знаходяться в прямій сумі. Інакше кажучи, якщо $\mathcal{B}_1, \ldots, \mathcal{B}_p$ є базисами $E_{\lambda_1}, \ldots, E_{\lambda_p}$, то сім'я $\{\mathcal{B}_1, \ldots, \mathcal{B}_p\}$ є лінійно незалежною (але не обов'язково породжуючою $E$).
+\end{prop}

@@ -1,0 +1,8 @@
+\begin{definition}[Open, Closed]
+    Let \((E, d)\) be a metric space.
+     \begin{enumerate}
+        \item \(U \subset E\) is \textbf{open} if \(\forall x_0 \in U, \exists r > 0\) such that \(B(x_0, r) \subset U\).
+        \item \(F \subset E\) is \textbf{closed} if its complement \(E \setminus F\) is open.
+    \end{enumerate}
+    \(\emptyset\) and \(E\) are both open and closed.
+\end{definition}

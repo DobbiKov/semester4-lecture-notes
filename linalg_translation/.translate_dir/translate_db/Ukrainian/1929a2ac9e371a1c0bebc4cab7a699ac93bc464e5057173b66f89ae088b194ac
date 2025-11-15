@@ -1,0 +1,13 @@
+\begin{definition} \textbf{Ортогональна група}:
+    Множина:
+    \[
+        O(n, \R) := \{A \in \mathcal{M}_{n}(\R) \mid A^TA = I\} = \{A \in \mathcal{M}_{n}(\R) \mid AA^T = I\}
+    \] 
+    задовольняє наступні властивості:
+    \begin{enumerate}
+        \item якщо $A, B \in O(n, \R)$, тоді $AB \in O(n, \R)$
+        \item $I \in O(n, \R)$
+        \item якщо $A \in O(n, \R)$ тоді $A^{-1} \in O(n, \R)$
+    \end{enumerate}
+    Зокрема, $O(n, \R)$ є підгрупою $GL(n, \R)$ (група оборотних матриць) (див. визначення \ref{def:general-linear-group}).
+\end{definition}

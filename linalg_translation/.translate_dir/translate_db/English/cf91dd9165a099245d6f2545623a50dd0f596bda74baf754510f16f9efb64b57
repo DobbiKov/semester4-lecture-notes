@@ -1,0 +1,7 @@
+\begin{prop}
+    Let $A = (a_{i, j}) \in \mathcal{M}_n(\R)$ be a square matrix and let $1 \le k \le n$
+    \[
+        \displaystyle \det(A) = \sum_{i=1}^{n} (-1)^{i + k} a_{k,i} \det(A_{k, i}) 
+    \] 
+    be the calculation of the determinant with respect to the $k^{\text{ième}}$ row.
+\end{prop}

@@ -1,0 +1,3 @@
+\begin{prop}
+   $Adh(A)$ est le plus petit fermé qui contient $A$ (l'intérsection de tous les fermés qui contiennent $A$)
+\end{prop}

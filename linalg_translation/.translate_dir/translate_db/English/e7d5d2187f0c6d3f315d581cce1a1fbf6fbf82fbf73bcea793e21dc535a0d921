@@ -1,0 +1,3 @@
+\begin{definition}
+    A Euclidean space is a pair $(E, < . >)$ where $E$ is a $\R$-vector space \underline{of finite dimension} and $< . >$ is an inner product on $E$.
+\end{definition}

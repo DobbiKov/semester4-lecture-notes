@@ -1,0 +1,4 @@
+\begin{definition}[Espace complet]
+    Un espace métrique \((E,d)\) est \textbf{complet} si toute suite de Cauchy dans \(E\) converge dans \(E\).
+    Un EVN complet est appelé \textbf{espace de Banach}.
+\end{definition}

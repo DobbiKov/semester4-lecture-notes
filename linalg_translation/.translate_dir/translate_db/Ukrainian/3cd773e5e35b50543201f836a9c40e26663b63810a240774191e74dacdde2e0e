@@ -1,0 +1,6 @@
+\begin{proposition}[Послідовні характеристики]
+   \begin{enumerate}
+       \item \textbf{Замикання :} \(x \in \operatorname{Adh}(A) \iff\) існує послідовність \((a_n)\) елементів з \(A\) така що \(a_n \to x\).
+       \item \textbf{Замкнена :} \(A\) є замкненою \(\iff\) для будь-якої послідовності \((a_n)\) елементів з \(A\) що сходиться до \(x \in E\), маємо \(x \in A\).
+   \end{enumerate}
+\end{proposition}

@@ -1,0 +1,6 @@
+\begin{remark}
+    Retenir la version suivante de l'inégalité triangulaire:
+    \[
+        |d(x, z) - d(y, z)| \le d(x, y)
+    \] 
+\end{remark}

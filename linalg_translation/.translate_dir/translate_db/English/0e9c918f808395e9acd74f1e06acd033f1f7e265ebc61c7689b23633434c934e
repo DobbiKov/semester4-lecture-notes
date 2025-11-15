@@ -1,0 +1,3 @@
+\begin{prop}
+   The roots of the minimal polynomial $m_f(X)$ are exactly the roots of the characteristic polynomial $P_f(X)$, i.e., the eigenvalues.
+\end{prop}

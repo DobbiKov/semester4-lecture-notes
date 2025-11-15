@@ -1,0 +1,3 @@
+\begin{preuve}
+   On sait que $P_f(X) = A(X)m_f(X)$ donc si  $\lambda$ est une racine de  $m_f(X)$,  alors elle est racine de  $P_f(X)$ aussi. Réciproquement, si $\lambda$ est une racine de  $P_f(X)$ alors elle une valeur propre, or  $m_f(X)$ annule  $f$, donc  $\lambda$ est aussi une racine de  $m_f(X)$.
+\end{preuve}

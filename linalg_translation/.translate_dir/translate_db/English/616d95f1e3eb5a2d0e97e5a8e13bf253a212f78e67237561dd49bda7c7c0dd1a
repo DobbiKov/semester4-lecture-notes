@@ -1,0 +1,14 @@
+\begin{theorem}
+   Let $f$ be an endomorphism in $E$ with $\dim E = n$. Then $f$ is diagonalizable if and only if:
+   \begin{enumerate}
+       \item $P_f(X)$ is \underline{split}, i.e:
+            \[
+                P_f(X) = (-1)^n (X - \lambda_1)^{\alpha_1} \cdot \ldots \cdot (X - \lambda_p)^{\alpha_p}
+           \]
+           ($\lambda_i$ are the roots, hence the eigenvalues) and $\alpha_1 + \ldots + \alpha_p = n$. Thus, if the sum of the multiplicities of the roots is equal to the dimension of the vector space.
+       \item The dimensions of the eigenspaces are \underline{maximal}, i.e $\forall i \in \{1, \ldots, p\}$
+           \[
+                \dim E_{\lambda_i} = \alpha_i 
+           \] 
+   \end{enumerate}
+\end{theorem}

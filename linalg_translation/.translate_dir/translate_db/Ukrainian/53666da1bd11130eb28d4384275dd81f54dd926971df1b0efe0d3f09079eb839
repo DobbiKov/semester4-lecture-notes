@@ -1,0 +1,6 @@
+\begin{prop}
+   Нехай $Q(X)$ є анулюючим многочленом для $f$, тоді власні значення $f$ знаходяться серед коренів $Q$, тобто:
+   \[
+       \operatorname{Sp}(f) \subset \operatorname{Rac}(Q)
+   \] 
+\end{prop}

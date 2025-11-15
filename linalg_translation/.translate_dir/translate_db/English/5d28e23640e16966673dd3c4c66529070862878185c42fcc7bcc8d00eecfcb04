@@ -1,0 +1,13 @@
+with $u_0 = 2$ and $v_n = 1$. Let $X_n = \begin{pmatrix} u_n \\ v_n \end{pmatrix} $, then the system \ref{eq:systeme-appli-diagonalisation} is written:
+\[
+    X_{n+1} = AX_n \quad \text{ with } \quad A = \begin{pmatrix} 1 & -1\\ 2 & 4 \end{pmatrix} 
+\] 
+by recurrence we obtain:
+\[
+X_n = A^nX_0 \quad \text{ with } X_0 = \begin{pmatrix} 2 \\ 1 \end{pmatrix} 
+\] 
+
+So, we are reduced to calculating the power of a matrix: $A^n$ which we saw in section ~\ref{subsec:calcule-de-la-puissance-diagonalisation}. You can check that there exists $P \in GL_2(\R)$ s.t.
+\[
+    P = \begin{pmatrix} -1 & 1 \\ 1 & -2 \end{pmatrix} \quad \text{ with } \quad A = P\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}P^{-1}
+\]

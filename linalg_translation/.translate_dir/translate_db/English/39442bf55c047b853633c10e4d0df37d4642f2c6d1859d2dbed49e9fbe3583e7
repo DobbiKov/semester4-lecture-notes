@@ -1,0 +1,6 @@
+\begin{eg}
+    Let an application $\phi: \N \to \N$ such that $\phi(n) = 2n$. Therefore  $(x_n)_{\phi(n)}$ is a subsequence of  $(x_n)_{n \in \N}$ and:
+    \[
+        (x_n)_{\phi(n)} = \{x_0, x_2, x_4, \ldots\}
+    \] 
+\end{eg}

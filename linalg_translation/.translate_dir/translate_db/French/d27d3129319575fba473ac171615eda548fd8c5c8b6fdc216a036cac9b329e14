@@ -1,0 +1,6 @@
+\begin{eg}
+    Soit une application $\phi: \N \to \N$ telle que $\phi(n) = 2n$. Donc  $(x_n)_{\phi(n)}$ est une sous-suite de  $(x_n)_{n \in \N}$ et:
+    \[
+        (x_n)_{\phi(n)} = \{x_0, x_2, x_4, \ldots\}
+    \] 
+\end{eg}

@@ -1,0 +1,19 @@
+\begin{definition}
+    The matrix $A$ is \textbf{triangulable} if there exists a similar triangular (upper/lower) matrix $A'$
+     \[
+         A' = 
+         \begin{bmatrix} 
+         a_{1,1} & a_{1,2} & \ldots & a_{1,n} \\
+         0 & a_{2,2} & \ddots & \vdots\\
+         \vdots & \ddots & \ddots & a_{n-1,n}\\
+         0 & \ldots & 0 & a_{n,n}
+        \end{bmatrix} \text{ or } 
+         A' = 
+         \begin{bmatrix} 
+         a_{1,1} & 0 & \ldots & 0 \\
+         a_{2, 1} & a_{2,2} & \ddots & \vdots\\
+         \vdots & \ddots & \ddots & 0\\
+         a_{n, 1} & \ldots & a_{n, n-1} & a_{n,n}
+        \end{bmatrix} 
+    \] 
+\end{definition}

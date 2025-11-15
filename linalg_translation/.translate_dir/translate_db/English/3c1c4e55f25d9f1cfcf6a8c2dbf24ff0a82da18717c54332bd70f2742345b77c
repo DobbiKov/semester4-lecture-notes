@@ -1,0 +1,3 @@
+\begin{theorem}
+    Let $F: \R^n \to \R$ continuous and $K \subset \R^n$ compact. Then $f$ is bounded on  $K$ and attains its bounds. That is, $Q := f(K)$ is bounded and attains the bounds.
+\end{theorem}

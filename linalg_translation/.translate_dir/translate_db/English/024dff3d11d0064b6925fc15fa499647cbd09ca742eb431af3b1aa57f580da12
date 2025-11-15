@@ -1,0 +1,4 @@
+\begin{definition}[Derivative along a vector (directional)]
+    Let \(u \in \R^n, u \neq 0\). \(f\) is differentiable at \(X_0 \in D\) in the direction \(u\) if the function \(\varphi(t) = f(X_0+tu)\) (defined for \(t\) in a neighborhood of 0) is differentiable at \(t=0\). The derivative is denoted \(D_u f(X_0) = \varphi'(0)\).
+    \[ D_u f(X_0) = \lim_{t \to 0} \frac{f(X_0+tu) - f(X_0)}{t} \]
+\end{definition}

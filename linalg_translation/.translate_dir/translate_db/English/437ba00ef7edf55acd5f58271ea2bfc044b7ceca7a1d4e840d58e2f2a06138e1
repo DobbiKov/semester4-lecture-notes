@@ -1,0 +1,6 @@
+\begin{propriete}
+    \begin{itemize}
+        \item Any convergent sequence is Cauchy.
+        \item Any Cauchy sequence is bounded.
+    \end{itemize}
+\end{propriete}

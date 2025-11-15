@@ -1,0 +1,6 @@
+\begin{lemma}
+   \[
+       \left( \mathcal{C}([0, 1], \R), \|.\|_1 \right) 
+   \]  
+   не є повним.
+\end{lemma}

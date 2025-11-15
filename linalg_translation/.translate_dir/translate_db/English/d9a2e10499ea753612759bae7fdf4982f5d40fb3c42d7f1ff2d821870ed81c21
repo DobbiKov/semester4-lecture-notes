@@ -1,0 +1,13 @@
+\begin{eg}
+\begin{figure}[H]
+    \centering
+    \incfig{recouvrement-ouvert}
+    \caption{open-cover}
+    \label{fig:recouvrement-ouvert}
+\end{figure}
+\begin{itemize}
+    \item $U_x = B(x, \frac{1}{2})$
+    \item $\bigcup_{x \in F} U_x$ contains $F$
+    \item  $(U_x)_{x \in F}$ open cover of $F$
+\end{itemize}
+\end{eg}

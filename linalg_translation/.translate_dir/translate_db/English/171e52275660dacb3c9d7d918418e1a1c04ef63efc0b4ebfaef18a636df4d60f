@@ -1,0 +1,6 @@
+\begin{prop}
+   Let $A \in B(E, F)$ and $\|A\| = \sup_{\|x\|_E \le 1} \|A\|_F$ a uniform norm. $\|A\| = $ smallest $c$ such that 
+    \[
+   \|Ax\|_F \le c \|x\|_E \quad \forall x \in E
+   \] 
+\end{prop}

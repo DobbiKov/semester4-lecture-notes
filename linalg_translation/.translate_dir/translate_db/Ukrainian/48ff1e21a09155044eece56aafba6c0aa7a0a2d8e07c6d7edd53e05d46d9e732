@@ -1,0 +1,4 @@
+\begin{definition}[Матриця Гессе (випадок \(m=1\))]
+    Якщо \(f: D \to \R\) є класом \(C^2\), \textbf{матриця Гессе} \(f\) в \(X_0 \in D\) — це симетрична матриця (за Шварцом):
+    \[ H_f(X_0) = \left( \frac{\partial^2 f}{\partial x_i \partial x_j}(X_0) \right)_{1 \le i,j \le n} \]
+\end{definition}

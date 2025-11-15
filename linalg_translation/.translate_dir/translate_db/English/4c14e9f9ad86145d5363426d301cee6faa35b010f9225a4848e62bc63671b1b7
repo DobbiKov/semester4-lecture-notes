@@ -1,0 +1,41 @@
+\begin{preuve}
+Let $E_{\lambda_1}, \ldots, E_{\lambda_p}$ be the eigenspaces associated with the eigenvalues $\lambda_1, \ldots, \lambda_p$ of an endomorphism $f$ of a vector space E. We must show that these subspaces are in direct sum, meaning that if a vector belongs to their intersection, then it is zero.
+
+Let's take an element v belonging to their sum, meaning it can be written in the form:
+\[
+    v = v_1 + v_2 + \cdots + v_p
+\]
+with $v_i \in E_{\lambda_i}$ for all $i$.
+
+Since each $v_i$ is an eigenvector for $f$ associated with $\lambda_i$, we have:
+\[
+    f(v_i) = \lambda_i v_i.
+\]
+Let's apply f to the sum:
+\[
+    f(v) = f(v_1 + v_2 + \cdots + v_p) = f(v_1) + f(v_2) + \cdots + f(v_p).
+\]
+Using the linearity of $f$, this gives:
+\[
+    f(v) = \lambda_1 v_1 + \lambda_2 v_2 + \cdots + \lambda_p v_p.
+\]
+However, $v$ is also a combination of these same vectors:
+\[
+    v = v_1 + v_2 + \cdots + v_p.
+\]
+Therefore, by rearranging:
+\[
+    (\lambda_1 v_1 + \lambda_2 v_2 + \cdots + \lambda_p v_p) - (v_1 + v_2 + \cdots + v_p) = 0.
+\]
+Which gives:
+\[
+    (\lambda_1 - 1) v_1 + (\lambda_2 - 1) v_2 + \cdots + (\lambda_p - 1) v_p = 0.
+\]
+Let's factor each term:
+\[
+    (\lambda_1 - \lambda) v_1 + (\lambda_2 - \lambda) v_2 + \cdots + (\lambda_p - \lambda) v_p = 0.
+\]
+However, the $\lambda_i$ are assumed to be distinct. We deduce that the coefficients are different, and that the sum is zero only if all $v_i$ are zero (since eigenspaces are generally in direct sum).
+
+Thus, $v = 0$, which proves that the eigenspaces are in direct sum.
+\end{preuve}

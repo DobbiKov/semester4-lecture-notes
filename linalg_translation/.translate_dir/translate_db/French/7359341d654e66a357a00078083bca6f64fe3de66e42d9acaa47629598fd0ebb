@@ -1,0 +1,4 @@
+\begin{definition}[Norme Euclidienne sur \(\R^d\)]
+       La \textbf{norme euclidienne} d'un vecteur \(X \in \R^d\) est :
+       \[ \|X\| = \|X\|_2 = \left( \sum_{i=1}^{d} x_i^2 \right)^{1/2} = (X \cdot X)^{1/2} \]
+   \end{definition}

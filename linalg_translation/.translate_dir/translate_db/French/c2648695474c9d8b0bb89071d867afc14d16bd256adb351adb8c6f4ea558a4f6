@@ -1,0 +1,9 @@
+\begin{theorem}\label{thm:nature-des-points-critiques}
+    (Nature des points critiques) \par
+    Soient $f \in \mathcal{C}^2(D)$,  $X_0 \in D$, $D$ ouvert et  $\vec{\nabla }f(X_0) = \vec{0}$
+    \begin{enumerate}
+        \item si toutes les valeurs propres de $H_f(X_0)$ sont $> 0$ (resp $< 0$) $X_0$ est minimum (resp. maximum) local.
+        \item si toutes les valeurs propres de $H_f(X_0)$ sont \underline{non nulles} mais pas de même signe, $X_0$ n'est pas un extremum local: $X_0$ est un point selle (un col).
+        \item si 0 valeurs propres de $H_f(X_0)$, pas de conclusion, ($X_0$ point critique dégénéré) i.e on ne peut rien conclure
+    \end{enumerate}
+\end{theorem}

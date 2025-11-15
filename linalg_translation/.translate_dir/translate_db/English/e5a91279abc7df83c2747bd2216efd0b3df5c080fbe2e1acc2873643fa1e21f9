@@ -1,0 +1,7 @@
+\begin{lemma}
+   If $E$ is of finite dimension, then
+   \[
+       \mathcal{L}(E, F) = B(E, F)
+   \] 
+   It is false if $\dim E = \infty$
+\end{lemma}

@@ -1,0 +1,6 @@
+\begin{definition}[Differentiability (case \(m=1\))]
+    \(f: D \to \R\) is \textbf{differentiable} at \(X_0 \in D\) if there exists a linear map \(L: \R^n \to \R\) such that for \(H \in \R^n\) with \(X_0+H \in D\):
+    \[ f(X_0+H) = f(X_0) + L(H) + o(\|H\|) \quad \text{i.e.} \quad f(X_0+H) = f(X_0) + L(H) + \|H\| \varepsilon(H), \text{where } \lim_{H \to 0} \varepsilon(H) = 0 \]
+    If \(f\) is differentiable at \(X_0\), then \(L(H) = \nabla f(X_0) \cdot H\), where \(\nabla f(X_0) = \left(\frac{\partial f}{\partial x_1}(X_0), \dots, \frac{\partial f}{\partial x_n}(X_0)\right)\) is the \textbf{gradient} of \(f\) at \(X_0\).
+    The linear map \(L\) is the \textbf{differential} of \(f\) at \(X_0\), denoted \(df_{X_0}\).
+\end{definition}

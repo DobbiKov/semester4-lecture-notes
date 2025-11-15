@@ -1,0 +1,3 @@
+\begin{proof}
+    On $A' \in \mathcal{M}_n(K')$ triangulaire semblable à $A$ (reappel: clôture $K'$ sur  $K$), donc les valeurs prorpes sont sur les diagonales de $A'$. Or les matrices semblables ont les même traces et détérminant, donc $\operatorname{Tr}(A) = \operatorname{Tr}(A') = \lambda_1 + \ldots + \lambda_n$ et $\det(A) = \det(A') = \lambda_1 \cdot \ldots \cdot \lambda_n$.
+\end{proof}

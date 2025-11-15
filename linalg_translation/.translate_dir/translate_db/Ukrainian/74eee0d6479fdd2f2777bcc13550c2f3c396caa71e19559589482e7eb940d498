@@ -1,0 +1,15 @@
+\begin{eg} дивно.\\
+    Нехай $E = \R$, $d(x, y) = |y - x|$,  $A = ]0, 1[$ відкритий, не замкнений в  $\R$.\\
+    \begin{center}
+       \begin{tikzpicture}
+          \draw (-2, 0) -- (2, 0); 
+          \node (x) at (0, 0){]};
+          \node (y) at (1, 0){[};
+          \node[below] (x) at (0, -0.2){$0$};
+          \node[below] (y) at (1, -0.2){$1$};
+          \draw[color=red] (-2, 0) -- (0, 0);
+          \draw[color=red] (1, 0) -- (2, 0);
+       \end{tikzpicture} 
+    \end{center}
+    Я розглядаю $A$ як частину $(A, d)$. Оскільки $A \setminus A = \O$ є відкритим, то $A$ є замкненим в $A$. Натомість, межі ніколи не досягаються, тому $A$ є відкритим в $(A, d)$.
+\end{eg}

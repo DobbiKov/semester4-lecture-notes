@@ -1,0 +1,3 @@
+\begin{definition}
+    $(E, \scalair{,})$ Euclidean space. A family $B = (e_1, \ldots, e_n)$ is an orthonormal basis (or ONB) if it is a basis and an orthonormal family.
+\end{definition}

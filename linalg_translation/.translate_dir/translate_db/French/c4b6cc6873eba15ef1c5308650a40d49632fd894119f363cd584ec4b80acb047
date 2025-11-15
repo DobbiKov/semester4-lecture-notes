@@ -1,0 +1,9 @@
+\begin{intuition}
+   Une suite de Cauchy c'est comme on mesure un point et on le localise, i.e:
+   \begin{enumerate}
+       \item On dit qu'il est entre $0$ et  $1$.
+       \item Ensuite, on precise plus et on dit qu'il est entre  $0.5$ et  $0.6$.
+       \item Puis, entre  $0.55$ et  $0.56$
+   \end{enumerate}
+   On peut infiniment augmenter le niveau de précision. C'est ça l'idée d'une suite de Cauchy.
+\end{intuition}

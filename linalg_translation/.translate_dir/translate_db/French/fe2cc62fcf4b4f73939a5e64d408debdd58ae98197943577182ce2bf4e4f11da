@@ -1,0 +1,5 @@
+\begin{definition}[Ensemble borné]
+    Une partie \(A \subset E\) est \textbf{bornée} si elle est contenue dans une boule, i.e., \(\exists x_0 \in E, \exists R > 0\) tel que \(A \subset B(x_0, R)\).
+    Cela est équivalent à : \(\forall x_0 \in E, \exists r > 0\) tel que \(A \subset B(x_0, r)\).
+    Ou encore : \(\operatorname{diam}(A) = \sup_{x,y \in A} d(x,y) < \infty\).
+\end{definition}

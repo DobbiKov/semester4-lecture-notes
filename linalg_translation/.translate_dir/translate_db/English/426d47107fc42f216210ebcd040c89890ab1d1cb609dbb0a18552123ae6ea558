@@ -1,0 +1,10 @@
+\begin{lemma}\label{lemma:lemme-des-noyaux} \textbf{of Kernels}
+   Let $f \in K^n$ be an endomorphism and 
+   \[
+   Q(X) = Q_1(X) \cdots Q_p(X)
+   \] 
+   a polynomial factored into a product of pairwise coprime polynomials. If $Q(f) = 0$ then:
+    \[
+        E = \operatorname{Ker} Q_1(f) \oplus \ldots \oplus \operatorname{Ker} Q_p(f)
+   \] 
+\end{lemma}

@@ -1,0 +1,7 @@
+\begin{definition}
+    Let $\lambda \in K$, we denote:
+    \[
+        E_{\lambda} := \{v \in E \mid f(v) = \lambda v \}
+    \] 
+    $E_{\lambda}$ is a vector space of $E$ called \textbf{eigen-space} corresponding to $\lambda$.
+\end{definition}

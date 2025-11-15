@@ -1,0 +1,4 @@
+\begin{align*}
+    f: \R &\longrightarrow \mathbb{C}^n \\
+    A &\longmapsto f(A) = \mathcal{M}_n(\mathbb{C})
+\end{align*}

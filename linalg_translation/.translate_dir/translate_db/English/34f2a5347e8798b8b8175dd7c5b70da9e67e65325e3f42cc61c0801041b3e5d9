@@ -1,0 +1,3 @@
+\begin{definition}[Compact set - Borel-Lebesgue Definition]
+    A part \(K \subset E\) is \textbf{compact} if from every open covering of \(K\), we can extract a \textbf{finite} sub-covering.
+\end{definition}

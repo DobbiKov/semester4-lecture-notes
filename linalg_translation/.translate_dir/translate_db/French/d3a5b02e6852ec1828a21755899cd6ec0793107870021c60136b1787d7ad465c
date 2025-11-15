@@ -1,0 +1,5 @@
+\begin{definition}[Dérivées partielles d'ordre \(k\)]
+    Les dérivées partielles d'ordre \(k\) sont obtenues en dérivant successivement \(k\) fois par rapport aux variables.
+    Exemple : \(\frac{\partial^2 f}{\partial x_j \partial x_i} = \frac{\partial}{\partial x_j} \left(\frac{\partial f}{\partial x_i}\right)\).
+    \(f\) est de \textbf{classe \(C^k\)} sur \(D\) si toutes ses dérivées partielles jusqu'à l'ordre \(k\) existent et sont continues sur \(D\).
+\end{definition}

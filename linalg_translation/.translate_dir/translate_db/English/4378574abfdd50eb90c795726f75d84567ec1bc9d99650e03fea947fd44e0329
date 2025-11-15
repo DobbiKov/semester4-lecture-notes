@@ -1,0 +1,4 @@
+\begin{definition}[Hessian Matrix (case \(m=1\))]
+    If \(f: D \to \R\) is of class \(C^2\), the \textbf{Hessian matrix} of \(f\) at \(X_0 \in D\) is the symmetric matrix (by Schwarz):
+    \[ H_f(X_0) = \left( \frac{\partial^2 f}{\partial x_i \partial x_j}(X_0) \right)_{1 \le i,j \le n} \]
+\end{definition}

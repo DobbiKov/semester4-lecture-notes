@@ -1,0 +1,5 @@
+\begin{definition}[Matrix Exponential]
+    For \(A \in M_n(\K)\), the exponential of \(A\) is defined by the series:
+    \[ e^A = \exp(A) = \sum_{k=0}^\infty \frac{A^k}{k!} = I + A + \frac{A^2}{2!} + \dots \]
+    This series always converges (normally in \(M_n(\K)\) equipped with any matrix norm, because \(M_n(\K)\) is complete).
+\end{definition}

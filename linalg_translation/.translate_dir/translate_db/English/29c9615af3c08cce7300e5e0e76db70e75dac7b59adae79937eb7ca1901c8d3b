@@ -1,0 +1,4 @@
+In the previous chapter, we studied the notion of an orthonormal basis, the utilities of which are: simplification of coordinate calculations in a basis and calculation of a projection. 
+This notion is one of the first steps towards the study of SVD\footnote{Singular Value Decomposition} which is applied in several fields, e.g.: the reduction of image sizes.
+\par
+In this chapter, we continue the study of bases in order to finally understand the SVD. We will study the reduction of endomorphisms, \textit{to be more precise} diagonalization and triangularization. To begin: a small exercise:

@@ -1,0 +1,9 @@
+\begin{theorem}\label{thm:nature-des-points-critiques}
+    (Nature of critical points) \par
+    Let $f \in \mathcal{C}^2(D)$,  $X_0 \in D$, $D$ open and  $\vec{\nabla }f(X_0) = \vec{0}$
+    \begin{enumerate}
+        \item if all eigenvalues of $H_f(X_0)$ are $> 0$ (respectively $< 0$) $X_0$ is a local minimum (respectively maximum) local.
+        \item if all eigenvalues of $H_f(X_0)$ are \underline{non-zero} but not of the same sign, $X_0$ is not a local extremum: $X_0$ is a saddle point (a pass).
+        \item if 0 is an eigenvalue of $H_f(X_0)$, no conclusion, ($X_0$ degenerate critical point) that is we cannot conclude anything
+    \end{enumerate}
+\end{theorem>

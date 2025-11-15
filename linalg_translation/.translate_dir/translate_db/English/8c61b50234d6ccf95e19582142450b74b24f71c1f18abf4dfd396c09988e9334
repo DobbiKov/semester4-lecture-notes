@@ -1,0 +1,10 @@
+\begin{prop}
+    Let $f$ be an endomorphism and 
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1} \cdots (X - \lambda_p)^{\alpha_p}
+    \] 
+    its characteristic polynomial. Then, if $f$ is diagonalizable, the radical $Q_1$ also annihilates $f$, i.e.
+     \[
+    Q_1(f) = (f - \lambda_1) \cdots (f - \lambda_r) = 0
+    \] 
+\end{prop}

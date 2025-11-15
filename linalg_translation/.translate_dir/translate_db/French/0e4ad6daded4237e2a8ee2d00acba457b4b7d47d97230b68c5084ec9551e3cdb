@@ -1,0 +1,3 @@
+\begin{lemma}[Dimension finie]
+    Si \(E\) est de dimension finie, toute application linéaire \(A: E \to F\) est continue.
+\end{lemma}

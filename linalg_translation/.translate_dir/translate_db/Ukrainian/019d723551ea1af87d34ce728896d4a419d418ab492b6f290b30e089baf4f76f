@@ -1,0 +1,8 @@
+\begin{preuve}
+    \[
+    \text{Якщо } X_n \xrightarrow[n \to \infty]{} X \text{ і } X_n \xrightarrow[n \to \infty]{} X'
+    \]  
+    \[
+        d(X, X') \le \underbrace{d(X, X_n)}_{\to 0} + \underbrace{d(X_n, X')}_{\to 0} \implies d(X, X') = 0 \implies X = X'
+    \] 
+ \end{preuve}

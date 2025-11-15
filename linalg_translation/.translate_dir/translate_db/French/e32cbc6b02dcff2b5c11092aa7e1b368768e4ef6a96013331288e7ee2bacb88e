@@ -1,0 +1,3 @@
+\begin{definition}
+   Soit $F \subset E$. Un recouvrement ouvert de $F$ est une collection  $(U_i)_{i \in I}$ où $U_i$ sont des ouverts et $F \subset \cup_{i \in I} U_i$ ("les $U_i$ recouvrent  $F$")
+\end{definition}

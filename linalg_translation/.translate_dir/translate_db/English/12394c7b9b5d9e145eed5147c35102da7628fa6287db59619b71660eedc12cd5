@@ -1,0 +1,3 @@
+\begin{lemma}[Finite Dimension]
+    If \(E\) is of finite dimension, any linear map \(A: E \to F\) is continuous.
+\end{lemma}

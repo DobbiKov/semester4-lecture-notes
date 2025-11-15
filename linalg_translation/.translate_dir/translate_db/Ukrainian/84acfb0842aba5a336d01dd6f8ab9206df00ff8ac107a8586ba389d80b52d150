@@ -1,0 +1,9 @@
+\begin{prop}
+    \begin{enumerate}
+        \item 
+            Якщо $A \subseteq E$ тоді $A^{\perp}$ є векторним підпростором $E$ 
+        \item Якщо $A \subseteq B$ тоді $B^{\perp} \subseteq A^{\perp}$
+        \item $A^{\perp} = Vect(A)^{\perp}$
+        \item $A \subset (A^{\perp})^{\perp}$ 
+    \end{enumerate}
+\end{prop}

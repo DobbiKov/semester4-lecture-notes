@@ -1,0 +1,7 @@
+c'est-à-dire:
+\[
+\begin{cases}
+   u_n = 5 \cdot 2^n - 3\cdot 3^n \\
+   v_n = -5 \cdot 2^n + 6\cdot 3^n
+\end{cases}
+\]

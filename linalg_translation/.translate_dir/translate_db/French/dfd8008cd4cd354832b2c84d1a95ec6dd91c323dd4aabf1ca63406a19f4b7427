@@ -1,0 +1,3 @@
+\begin{prop}
+   Les racines du polyôme minimal $m_f(X)$ sont exactement les racines du polynôme caractéristique  $P_f(X)$, c'est-à-dire les valeurs propres.
+\end{prop}

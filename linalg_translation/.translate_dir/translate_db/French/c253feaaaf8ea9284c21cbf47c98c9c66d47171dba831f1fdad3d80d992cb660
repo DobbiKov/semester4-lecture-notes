@@ -1,0 +1,7 @@
+\begin{prop}
+    Soit $(E, \scalar{}{})$ un espace euclidien et soit  $(e_1, \ldots, e_n)$ une BON de $E$. Si  $x \in E$, on a:
+   \[
+       x = \sum_{i=1}^{n} \scalar{x}{e_i}e_i
+   \] 
+Autrement dit, le réél $\scalar{x}{e_i}$ est la  $i^{\text{ème}}$ coordonnée de $x$ dans la base  $(e_1, \ldots, e_n)$.
+\end{prop}

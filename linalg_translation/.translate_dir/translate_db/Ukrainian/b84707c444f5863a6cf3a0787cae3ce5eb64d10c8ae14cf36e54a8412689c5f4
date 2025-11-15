@@ -1,0 +1,6 @@
+\begin{figure}[H]
+    \centering
+    \incfig{continuite-topologique}
+    \caption{топологічна неперервність}
+    \label{fig:continuite-topologique}
+\end{figure}

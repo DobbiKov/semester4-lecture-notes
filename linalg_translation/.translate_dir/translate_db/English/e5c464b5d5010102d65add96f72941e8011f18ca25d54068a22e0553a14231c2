@@ -1,0 +1,5 @@
+\begin{lemma}
+   \begin{align*}
+       \|X\| = \underset{\|Y\|\le 1}{sup|(X|Y)|}
+   \end{align*} 
+\end{lemma}

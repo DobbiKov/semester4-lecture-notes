@@ -1,0 +1,9 @@
+\begin{proposition}[Caractérisations de la continuité]
+   Soit \(f: (E_1, d_1) \to (E_2, d_2)\). Les assertions suivantes sont équivalentes :
+   \begin{enumerate}
+       \item \(f\) est continue sur \(E_1\).
+       \item Pour tout ouvert \(U_2 \subset E_2\), l'image réciproque \(f^{-1}(U_2)\) est un ouvert de \(E_1\).
+       \item Pour tout fermé \(F_2 \subset E_2\), l'image réciproque \(f^{-1}(F_2)\) est un fermé de \(E_1\).
+       \item Pour toute suite \((x_n)\) de \(E_1\) convergeant vers \(x \in E_1\), la suite \((f(x_n))\) converge vers \(f(x)\) dans \(E_2\).
+   \end{enumerate}
+\end{proposition}

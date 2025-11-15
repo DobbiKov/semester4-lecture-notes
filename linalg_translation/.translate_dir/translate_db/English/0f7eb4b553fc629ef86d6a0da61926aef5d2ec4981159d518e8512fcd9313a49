@@ -1,0 +1,5 @@
+\begin{definition}[Dense set]
+    Let \(A \subset B \subset E\). We say that \(A\) is \textbf{dense} in \(B\) if \(B \subset \operatorname{Adh}(A)\).
+    \(A\) is dense in \(E\) if \(\operatorname{Adh}(A) = E\).
+    Example: \(\Q\) is dense in \(\R\). \(\Q^d\) is dense in \(\R^d\).
+\end{definition}

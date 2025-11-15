@@ -1,0 +1,3 @@
+\begin{prop}
+    If $F$ is continuous $\iff$ every $U$ closed gives $F^{-1}(U)$ also closed
+\end{prop}

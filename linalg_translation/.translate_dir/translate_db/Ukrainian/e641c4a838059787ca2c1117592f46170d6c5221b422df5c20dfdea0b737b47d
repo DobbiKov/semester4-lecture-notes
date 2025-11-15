@@ -1,0 +1,23 @@
+\begin{figure}[H]
+   \centering 
+\begin{tikzpicture}
+
+% Draw the plane
+\fill[gray!20] (-2,-1) -- (2,-1) -- (3,1) -- (-1,1) -- cycle;
+
+% Draw the vectors
+\draw[->, thick, black] (0,0) -- (2,2.2) node[anchor=south east] {\large $\mathbf{x}$};
+
+\node[anchor=north, blue] (_) at ($(0,0)!0.5!(2,0)$) {\large $\text{proj}_\mathbf{F} \mathbf{x}$};
+\node[anchor=west, blue] (_) at ($(2,0)!0.5!(2,2.2)$) {\large $\text{proj}_\mathbf{F^{\perp}} \mathbf{x}$};
+% Add the labels for w and w perpendicular
+\draw[->, thick, blue] (0,0) -- (2,0) ;
+\draw[thick, black] (2,0) -- (2,3) node[anchor=west] {\large $\mathbf{F}^\perp$};
+\draw[->, thick, blue] (2,0) -- (2,2.2);
+\node[anchor=north west] (_) at (1.5, -0.5) {\large $\mathbf{F}$};
+% Add the right angle symbol
+
+\end{tikzpicture}
+\caption{Проекція}
+\label{pic:projection}
+\end{figure}

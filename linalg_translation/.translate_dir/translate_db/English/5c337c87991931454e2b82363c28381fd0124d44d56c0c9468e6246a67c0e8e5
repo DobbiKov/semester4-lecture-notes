@@ -1,0 +1,12 @@
+\begin{definition}
+    \[
+        D \subset \R^n \quad D \text{ open } \quad f: D \to \R \text{ is } \mathcal{C}^1 \text{ on } D
+    \] 
+    Let $D \subset \R^n$ be open, then the function $f: D \to \R$ is of class $\mathcal{C}^1$ on $D$ if 
+    $f$ is differentiable at every $X \in D$ and the function
+    \begin{align*}
+        : D &\longrightarrow \R^n \\
+        X &\longmapsto \vec{\nabla}f(X)
+    \end{align*}
+    is continuous.
+\end{definition}

@@ -1,0 +1,10 @@
+
+By differentiating this relation:
+\[
+\frac{dX'}{dt} = P^{-1} \frac{dX}{dt}
+\]
+(because \( A \) having constant coefficients, \( P \) will also have constant coefficients). Therefore:
+\[
+\frac{dX'}{dt} = P^{-1}AX = \left( P^{-1}AP \right) X' = A'X'
+\]
+The system 

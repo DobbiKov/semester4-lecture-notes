@@ -1,0 +1,20 @@
+\begin{itemize}
+    \item векторний простір $E$, $F$ і т.д.
+    \item вектори: $x, y, e$ і т.д.
+    \item нульовий вектор: позначається $0_E$ або просто $0$
+    \item скаляри: $\lambda, \mu \in \mathbb{K}$
+    \item $\mathbb{K} = \R \text{ або } \mathbb{C}$
+    \item $A \in \mathcal{L}(E, F)$ дія на $x$, позначається $Ax$ (а не $A(x)$)
+    \item розмірність: $E$ скінченновимірний, якщо $E$ допускає базу зі скінченною кількістю елементів, інакше $E$ називається нескінченновимірним $\iff$ $\forall N \in \N$, існує вільна сім'я з $N$ векторів. Розмірність залежить від $\mathbb{K}$!
+         \begin{itemize}
+             \item на $\mathbb{C}$ $\dim \mathbb{C} = 1$ база, утворена вектором $1 \in \mathbb{C}$
+             \item на $\R$ $\dim \mathbb{C} = 2$ база, утворена $1, i$
+        \end{itemize}
+        \begin{align*}
+            &z = z \cdot 1 \quad z \in \mathbb{C}\\
+            &z = x \cdot 1 + y \cdot i \quad x, y \in \R
+        \end{align*}
+        \[
+            \mathbb{C} \sim \R^2 \text{ як } \R \text{ векторний простір}
+        \] 
+\end{itemize}

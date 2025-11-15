@@ -1,0 +1,3 @@
+\begin{definition}
+    Let $D$, then $f: D \to \R$ is $\mathcal{C}^k$ if $f: D \to \R$ is $\mathcal{C}^1$ and $\partial_{x_i}f: D \to \R$ are $C^{k-1}$
+\end{definition}

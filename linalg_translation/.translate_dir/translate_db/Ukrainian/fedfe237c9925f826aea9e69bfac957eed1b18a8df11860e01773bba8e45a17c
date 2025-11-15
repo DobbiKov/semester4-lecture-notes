@@ -1,0 +1,26 @@
+\begin{intuition}
+    Цей добуток говорить нам \textit{how closely the vectors point in the same direction} (косинус прямує до 1, коли $\theta$ прямує до 0º, і косинус прямує до 0, коли $\theta$ прямує до 90º). І цей добуток дозволяє нам отримати проекцію $X$ на $Y$ за формулою:
+    \[
+    Proj(X) = \frac{X \cdot Y}{\|Y\|} \cdot \frac{Y}{\|Y\|}
+    \] 
+    $X \cdot Y$ дає longeur $X$ і $Y$ разом, поділивши цю longeur на $\|Y\|$ (longeur $Y$), ми отримуємо longeur $X$ на Y, нам залишається помножити цю longeur на одиничний вектор (longeur 1), який вказує в тому ж напрямку, що й $Y$, (ми отримуємо його за допомогою $\frac{Y}{\|Y\|}$)
+   \begin{center}
+      \begin{tikzpicture}
+         \coordinate (A) at (0, 0); 
+         \coordinate (B) at (2, 0.5);
+         \coordinate (C) at (1, 2);
+         \coordinate (newB) at (1.4117647059, 0.3529411765);
+         \coordinate (dotBC) at (2, 1);
+         \node[left] (_) at (A){A};
+         \node[right] (_) at (B){B};
+         \node[right] (_) at (C){C};
+         \draw[->] (A) -- (B);
+         \node[above left] (...) at ($(A)!0.5!(C)$) {$\vec{X}$};
+         \node[below] (...) at ($(A)!0.5!(B)$) {$\vec{Y}$};
+         \draw[->] (A) -- (C);
+         \draw[->, red, thin] (A) -- (newB);
+         \draw[dotted] (C) -- (newB);
+         \node[above, red] (_) at ($(A)!0.5!(newB)$){\small Proj(X)};
+      \end{tikzpicture} 
+   \end{center}
+\end{intuition}

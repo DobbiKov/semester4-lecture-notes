@@ -1,0 +1,65 @@
+\begin{preuve}
+    Побудуємо послідовність неперервних функцій $(f_n)_{n \in \mathbb{N}}$ на $[0,1]$, яка сходиться за нормою $\| \cdot \|_1$ до розривної функції $f$. Це покаже, що границя цієї послідовності за нормою $\| \cdot \|_1$ не належить до $\mathcal{C}([0,1], \mathbb{R})$, отже, цей простір не є повним.
+    
+\begin{figure}[H]
+    \centering
+    \incfig{lemma-n-est-pas-complet}
+    \caption{Лема з неповним простором}
+    \label{fig:lemma-n-est-pas-complet}
+\end{figure}
+
+\medskip
+
+\textbf{Визначення послідовності $(f_n)$ :} для кожного $n \in \mathbb{N}$ визначимо $f_n : [0,1] \to \mathbb{R}$ як
+\[
+f_n(x) = 
+\begin{cases}
+0 & \text{якщо } x \le \frac{1}{2} - \frac{1}{2n}, \\[4pt]
+2n\left(x - \frac{1}{2} + \frac{1}{2n}\right) & \text{якщо } \frac{1}{2} - \frac{1}{2n} &lt; x &lt; \frac{1}{2} + \frac{1}{2n}, \\[4pt]
+1 & \text{якщо } x \ge \frac{1}{2} + \frac{1}{2n}.
+\end{cases}
+\]
+Кожна $f_n$ є неперервною на $[0,1]$, оскільки вона є кусково-афінною з неперервними з’єднаннями.
+
+\medskip
+
+\textbf{Визначення граничної функції :} покладемо
+\[
+f(x) = 
+\begin{cases}
+0 & \text{якщо } x &lt; \frac{1}{2}, \\
+1 & \text{якщо } x > \frac{1}{2}, \\
+\text{довільне значення} & \text{якщо } x = \frac{1}{2}.
+\end{cases}
+\]
+Тоді $f$ є \textbf{розривною} в $x = \frac{1}{2}$, отже $f \notin \mathcal{C}([0,1], \mathbb{R})$.
+
+\medskip
+
+\textbf{Збіжність $(f_n)$ до $f$ за нормою $\| \cdot \|_1$ :}
+
+Маємо
+\[
+\|f_n - f\|_1 = \int_0^1 |f_n(x) - f(x)|\, dx.
+\]
+Але $f_n(x) = f(x)$ скрізь, крім інтервалу $\left[\frac{1}{2} - \frac{1}{2n}, \frac{1}{2} + \frac{1}{2n}\right]$ довжиною $\frac{1}{n}$, і на цьому інтервалі $|f_n(x) - f(x)| \le 1$, тому :
+\[
+\|f_n - f\|_1 \le \int_{\frac{1}{2} - \frac{1}{2n}}^{\frac{1}{2} + \frac{1}{2n}} 1\, dx = \frac{1}{n} \xrightarrow[n \to \infty]{} 0.
+\]
+
+Таким чином, $f_n \to f$ за нормою $\| \cdot \|_1$.
+
+\medskip
+
+\textbf{Наслідок :} послідовність $(f_n)$ є послідовністю Коші в $\left( \mathcal{C}([0,1], \mathbb{R}), \| \cdot \|_1 \right)$, оскільки :
+\[
+\|f_n - f_p\|_1 \le \|f_n - f\|_1 + \|f - f_p\|_1 \le \frac{1}{n} + \frac{1}{p} \xrightarrow[n,p \to \infty]{} 0.
+\]
+
+Однак, границя $f$ не є неперервною, отже $f \notin \mathcal{C}([0,1], \mathbb{R})$.
+
+\medskip
+
+\textbf{Висновок :} Існує послідовність Коші в $\left( \mathcal{C}([0,1], \mathbb{R}), \| \cdot \|_1 \right)$, яка не сходиться в цьому просторі. Отже, цей простір не є повним.
+
+\end{preuve}

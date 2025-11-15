@@ -1,0 +1,3 @@
+\begin{itemize}
+    \item Implies the theorem: Let $K$ be closed and bounded. $K$ bounded, therefore $K \subset B_f(0, r)$ with $r$ large, therefore $K = K \cap B_f(0, r)$. Therefore $K$ is compact.
+\end{itemize}

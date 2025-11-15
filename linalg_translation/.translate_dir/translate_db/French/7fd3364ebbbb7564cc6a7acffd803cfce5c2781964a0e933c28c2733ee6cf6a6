@@ -1,0 +1,9 @@
+\begin{propriete}[Propriétés des compacts dans un espace métrique]
+   \begin{enumerate}
+       \item Un compact est fermé et borné. (La réciproque est fausse en général, mais vraie dans \(\R^d\)).
+       \item Une partie fermée d'un compact est compacte.
+       \item Une intersection quelconque de compacts est compacte.
+       \item Une union finie de compacts est compacte.
+       \item Un compact est complet.
+   \end{enumerate}
+\end{propriete}

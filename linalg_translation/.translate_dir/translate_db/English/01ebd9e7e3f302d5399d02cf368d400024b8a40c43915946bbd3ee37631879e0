@@ -1,0 +1,3 @@
+\begin{definition}
+    The set of eigenvalues of $f$ is called the \textbf{spectrum} of $f$ and is denoted $\operatorname{Sp}_K(f)$ or $\operatorname{Sp}_K(A)$ if $A$ is a matrix of $f$.
+\end{definition}

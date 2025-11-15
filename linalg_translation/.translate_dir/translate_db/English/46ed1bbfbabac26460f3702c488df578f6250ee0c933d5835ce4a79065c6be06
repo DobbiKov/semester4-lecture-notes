@@ -1,0 +1,5 @@
+\begin{theorem}
+    (Borel-Lebesgue)
+    \par
+    in $\R^n$ with the usual distance $K$ is compact iff $K$ is closed and bounded
+\end{theorem}

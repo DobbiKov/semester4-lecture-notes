@@ -1,0 +1,6 @@
+\begin{lemma}
+   \begin{enumerate}
+       \item $B(x_0, r_0)$ є відкритою.
+       \item $B_f(x_0, r_0)$ є замкненою.
+   \end{enumerate} 
+\end{lemma}

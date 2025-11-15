@@ -1,0 +1,18 @@
+\begin{definition}
+Soit $f: \R^n \to \R$ une fonction continue est différentiable et des fonction $g_1: \R^p \to \R$, $\ldots$, $g_n: \R^p \to \R$ des fonctions dérivables 
+i.e 
+\begin{align*}
+    \forall i \in \{ 1, \ldots, n\}, \quad
+    g_i : \R^p &\longrightarrow \R \\
+    (t_1, \ldots, t_n)&\longmapsto g_i(t_1, \ldots, t_n) 
+\end{align*}
+et  
+\begin{align*}
+    h: \R^n &\longrightarrow \R \\
+    (x_1, \ldots, x_n) &\longmapsto h(g_1(t_1, \ldots, t_p), \ldots, g_n(t_1, \ldots, t_p)) 
+.\end{align*}
+donc 
+\[
+\frac{\partial h}{\partial t_i} = \frac{\partial h}{\partial x_1}\frac{\partial g_1}{\partial t_i} + \ldots + \frac{\partial h}{\partial x_n}\frac{\partial g_n}{\partial t_i}
+\] 
+\end{definition}

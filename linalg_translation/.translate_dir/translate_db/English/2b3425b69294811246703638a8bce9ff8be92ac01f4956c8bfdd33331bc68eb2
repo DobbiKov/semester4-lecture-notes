@@ -1,0 +1,2 @@
+\begin{prop} Let $\lambda_1, \ldots, \lambda_p$ be pairwise distinct scalars. Then the eigenspaces $E_{\lambda_1}, \ldots, E_{\lambda_p}$ form a direct sum. In other words, if $\mathcal{B}_1, \ldots, \mathcal{B}_p$ are bases for $E_{\lambda_1}, \ldots, E_{\lambda_p}$, the family $\{\mathcal{B}_1, \ldots, \mathcal{B}_p\}$ is linearly independent (but not necessarily a spanning set for $E$).
+\end{prop}

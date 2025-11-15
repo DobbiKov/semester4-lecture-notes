@@ -1,0 +1,6 @@
+\begin{prop}
+   Якщо $f$ є ортогональною проєкцією на $F \subset E$, тоді:
+   \[
+   f(f(x)) = f(x) \quad \forall x \in E
+   \] 
+\end{prop}

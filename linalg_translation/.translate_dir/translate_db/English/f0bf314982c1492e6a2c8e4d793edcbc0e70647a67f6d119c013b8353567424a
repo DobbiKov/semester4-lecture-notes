@@ -1,0 +1,12 @@
+% \begin{figure}[H]
+%     \centering
+%     \incfig{continuite-partielle}
+%     \caption{continuite-partielle}
+%     \label{fig:continuite-partielle}
+% \end{figure}
+Let $A = (a_1, \ldots, a_n) \in D$, there exist open intervals $I_1, \ldots, I_n$ with $a_i \in I_i$ such that $I_1 \times \ldots \times I_n \subset D$ 
+\par
+I can set 
+\[
+f_i(t) = f(a_1, \ldots, a_{i-1}, t, a_{i+1}, \ldots, a_n) \qquad t \in I_i
+\]

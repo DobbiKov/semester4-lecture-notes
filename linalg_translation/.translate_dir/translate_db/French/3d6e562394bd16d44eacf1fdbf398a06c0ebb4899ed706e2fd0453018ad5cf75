@@ -1,0 +1,7 @@
+La matrice d'un produit vectoriel est très utile dans l'algèbre linéaire. Avant donner une definition:
+\par
+Soit $E$ un espace vectoriel de dimension finie  $n$, un espace  $K$ et une forme bilinéaire  $b: E \times E \longrightarrow K$. Si $\{e_1, \ldots, e_n\}$ est une base de $E$, alors:  $x = \sum_{i=1}^{n} x_ie_i$ et $y = \sum_{j=1}^{n} y_je_j$, alors on a:
+\[
+b(x, y) = \sum_{i,j = 1}^{n} x_iy_jb(e_i, e_j)
+\] 
+$b$ est donc détérminé par la conaissance des valeurs  $b(e_i, e_j)$ sur une base.

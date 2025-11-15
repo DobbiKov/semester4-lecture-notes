@@ -1,0 +1,10 @@
+\begin{preuve}
+   Seek $x(t)$ in the form 
+   \[
+       x(t) = e^{tA}y(t)
+   \] 
+   I find that $y'(t) = e^{-tA}f(t)$
+    \[
+        y(t) = x_0 + \int_{{0}}^{{t}} {e^{-sA}f(s)} \: d{s}
+   \] 
+\end{preuve}

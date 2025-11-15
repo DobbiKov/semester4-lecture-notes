@@ -1,0 +1,2 @@
+Et c'est pas uniquement le cas du vecteur $\begin{pmatrix} -1 \\ 1 \end{pmatrix} $, en prennant n'importe quel vecteur engendré pas $v = \begin{pmatrix} -1 \\ 1 \end{pmatrix} $, on obtiendra $Av = 2v$.
+Tels vecteurs $v$ et les scalaire (ici: 2) sont appelés vecteurs propres et valeurs propres respectivement. Alors, on a la définition formelle:

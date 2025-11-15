@@ -1,0 +1,6 @@
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-bornee}
+    \caption{Exemple d'un enesemble borné}
+    \label{fig:exemple-bornee}
+\end{figure}

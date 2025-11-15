@@ -1,0 +1,10 @@
+is written:
+\[
+    X_{n+1} = AX_n \quad \text{ with } \quad A = \begin{pmatrix} 1 & -1\\ 2 & 4 \end{pmatrix} 
+\]
+by recurrence, we obtain:
+\[
+X_n = A^nX_0 \quad \text{ with } X_0 = \begin{pmatrix} 2 \\ 1 \end{pmatrix} 
+\]
+
+Therefore, we are brought back to calculating the power of a matrix: $A^n$ which we saw in section ~

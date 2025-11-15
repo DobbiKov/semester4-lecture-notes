@@ -1,0 +1,29 @@
+\begin{eg}
+   \begin{enumerate}
+       \item $E = \mathcal{C}^0([-1, 1], \R)$
+            \[
+                <f, g> := \int_{-1}^{1} f(t) \cdot g(t) \: d{t} 
+            \] 
+            \begin{center}
+       \begin{tikzpicture}
+           \begin{axis}[
+               axis lines = center,
+               xlabel = $x$,
+               ylabel = $y$,
+               samples = 100,
+               domain = -4:4,
+               xmin = -4, xmax = 4,
+               ymin = -2, ymax = 2,
+               width=10cm,
+               height=5cm
+               ]
+               \addplot[red, thick] {sin(deg(x))};
+           \end{axis}
+       \end{tikzpicture}
+   \end{center}
+   Alors, $f(t) = \cos(t)$, $g(t) = \sin(t)$ sont orthogonaux: $2\cos(t)\sin(t) = \sin(2t)$
+   \[
+       \int_{-1}^{1} \cos(t)\sin(t)\:d{t} = \frac{1}{2}\int_{-1}^{1} \sin(2t) \: d{t} = 0  
+   \] 
+   \end{enumerate} 
+\end{eg}

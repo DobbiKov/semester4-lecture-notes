@@ -1,0 +1,6 @@
+\begin{figure}[ht]
+    \centering
+    \incfig{interieur-exemple}
+    \caption{Example of an interior}
+    \label{fig:interieur-exemple}
+\end{figure}

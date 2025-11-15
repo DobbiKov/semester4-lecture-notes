@@ -1,0 +1,3 @@
+\begin{corollary}
+    An endomorphism $f$ is diagonalizable if and only if there exists an annihilating polynomial $Q$ of $f$ that is split and has only simple roots \footnote{scindé: $(X - \lambda_i)^{\alpha_i}$ - $X$ est à la puissance $1$! racines simples: si  $\alpha_i = 1$ aussi i.e les facteurs  $(X - \lambda)$ sont à la puissance 1!} 
+\end{corollary}

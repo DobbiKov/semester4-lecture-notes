@@ -1,0 +1,3 @@
+\begin{definition}
+    $u, v \in E$ sont \textbf{orthogonaux} si $\scalair{u, v} = 0$ et on les notes  $u \perp v$
+\end{definition}

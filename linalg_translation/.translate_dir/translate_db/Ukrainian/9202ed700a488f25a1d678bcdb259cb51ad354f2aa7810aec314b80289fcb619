@@ -1,0 +1,6 @@
+\begin{propriete}
+    \begin{itemize}
+        \item Кожна збіжна послідовність є послідовністю Коші.
+        \item Кожна послідовність Коші є обмеженою.
+    \end{itemize}
+\end{propriete}

@@ -1,0 +1,15 @@
+\begin{eg}
+   \begin{enumerate}
+       \item $E = \R^{n}$ muni du produit scalaire canonique. La base canonique $(e_1, \ldots, e_n)$ est orthogonale car 
+           \[
+           \scalair{e_i, e_j} = \begin{cases}
+               1 \text{ si } i = j\\
+               0 \text{ si } i \neq j
+           \end{cases}
+           \] 
+       \item Dans $E = \mathcal{C}^{0}([-1, 1], \R)$ muni de $\scalair{f,g} = \int_{-1}^{1} f(t)g(t)\,d{t}$. La famille $(\cos(t), \sin(t))$ est orthogonale. La famille $(1, t^2)$ n'est pas orthogonale:
+            \[
+                \scalair{1, t^2} = \int_{-1}^{1} 1 t^2 \, d{t} = \frac{2}{3} \neq  0 
+           \] 
+   \end{enumerate} 
+\end{eg}

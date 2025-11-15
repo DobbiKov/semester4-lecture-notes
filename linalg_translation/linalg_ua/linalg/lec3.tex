@@ -1,0 +1,304 @@
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: bf29d983a077cade6e7b79974dcab3a974510ec0274808acf85fb66ff370949b
+% --- CHUNK_METADATA_END ---
+\section{Ізометрії та Спряжені оператори}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 404e586606ba4465ff926abf10b88897e18e4ba1644bdf63730b802601b04887
+% --- CHUNK_METADATA_END ---
+\label{sec:isometrie-et-adjoints}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 73ae3e92ca1e7f1ec5cd7c60aa1e778221e2cc965369c246711a5e59f5873117
+% --- CHUNK_METADATA_END ---
+\subsection{Ізометрії}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: f31879de7b3b511f25e54c3b0a768b70124f485082f987bdef45c36e98912a7c
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    \textbf{Ізометрія} з $E$ (або \textbf{ортогональне перетворення}) є ендоморфізмом $f \in \mathcal{L}(E) := \mathcal{L}(E, E)$, що зберігає скалярний добуток, тобто:
+     \[
+         \scalair{f(x), f(y)} = \scalair{x, y} \quad \forall x, y \in E
+    \] 
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 226da0912aa6423aadeae262eeafcc3e84237ec5ceef3ec18cd9a1fd199371e6
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Нехай $x, y \in E$ — два ненульові вектори. Маємо, згідно з нерівністю Коші-Буняковського (див. лему \ref{lemma:inegalite-cauchy-schwarz}):
+    \[
+        \frac{| \scalair{x, y} |}{\|x\| \cdot \|y\|} \le 1
+    \] 
+    Тоді існує єдиний $\theta \in [0, \pi]$ такий, що:
+     \begin{equation}
+        \cos \theta = \frac{ \scalair{x, y}}{\|x\| \cdot \|y\|} 
+    \end{equation}
+    $\theta$ називається \textbf{кутом} (неорієнтованим) між векторами $x$ і $y$.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 93326741099c1f67d38123ac1c58cd30fafdaf5a9fc1c9d3bfd189ebe3f67d49
+% --- CHUNK_METADATA_END ---
+\begin{prop}\label{prop:isometrie-reserve-norme}
+   Якщо $f$ є ізометрією $E$, отже, маємо:
+   \[
+   \|f(x)\| = \|x\| \quad \forall x \in E
+   \] 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 8b6e25bd20ed73256f25ff5a38cadb126d0df5b8a1c53d50e83eb89da031c211
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+   Припустимо, що $f$ є ізометрією $E$. Нехай $x, y \in E$. За визначенням: $\scalair{f(x), f(y)} = \scalair{x, y}$, отже, покладемо $y := x$, тоді маємо:
+   \begin{align*}
+       &\underbrace{\scalair{f(x), f(x)}}_{\|f(x)\|^2} = \underbrace{\scalair{x, x}}_{\|x\|^2}\\
+       \iff &\|f(x)\|^2 = \|x\|^2\\
+       \iff &\|f(x)\| = \|x\|
+   \end{align*}
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 02574ca751b6786c0767e44130459fb748e40551d55dbd7c9519b9234f153150
+% --- CHUNK_METADATA_END ---
+\begin{prop}\label{prop:isometrie-bijective}
+   Нехай $f$ ізометрія в $E$, тоді:
+   \begin{enumerate}
+       \item $f$ є бієктивною 
+       \item  $f$ зберігає евклідову відстань та кути
+   \end{enumerate}
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: aa1693c4eb616c058387165d6c49b19bd90ddd4af5fb103c00d2ac8f14c38ffb
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+   Нехай $f$ — ізометрія в $E$ і два вектори $u, v \in E$
+   \begin{enumerate}
+       \item
+           \begin{align*}
+               \|f(u) - f(v)\| = \sqrt{\scalair{f(u), f(v)}} = \sqrt{\scalair{u, v}} = \|u - v\|
+           \end{align*}
+       \item Нехай $\theta_1$ — кут між $f(u)$ і $f(v)$, а $\theta_2$ — кут між $u$ і $v$, тому:
+            \[
+                \cos \theta_1 := \frac{\scalair{f(u), f(v)}}{\|f(u)\| \cdot \|f(v)\|}
+           \]
+           \[
+                \cos \theta_2 := \frac{\scalair{u, v}}{\|u\| \cdot \|v\|}
+           \]
+           За визначенням, $\scalair{f(u), f(v)} = \scalair{u, v}$, згідно з пропозицією \ref{prop:isometrie-reserve-norme}, $\forall x, \|f(x)\| = \|x\|$, тому:
+           \[
+                \cos \theta_1 := \frac{\scalair{f(u), f(v)}}{\|f(u)\| \cdot \|f(v)\|} = \frac{\scalair{u, v}}{\|u\| \cdot \|v\|} = \cos \theta_2
+           \]
+   \end{enumerate}
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: d385f4082b752467e8f8dbd40ae7f6e4d1b150aafef7f7a2d8753102cc334575
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Нехай $F$ — векторний підпростір $E$, отже $E = F \oplus F^{\perp}$ звідки $\forall v \in E, \exists v_1 \in F, v_2 \in F^{\perp}$ такий що $v = v_1 + v_2$. Покладемо:
+    \[
+    s_F(v) = v_1 - v_2
+    \] 
+    і $s_F$ називається ортогональною симетрією відносно осі F.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 9774560f06771548c2bdd5a9eba119bad3c3fa44773dcfdd9dc44513d1f26142
+% --- CHUNK_METADATA_END ---
+\begin{figure}[H]
+    \centering
+    \incfig{symetrie-orthogonale-axe-f}
+    \caption{Ортогональна симетрія відносно осі $F$}
+    \label{fig:symetrie-orthogonale-axe-f}
+\end{figure}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 414d6413494e32c606e09d080d0a277eca5d51f6763d4eb0e12e5c48f52250be
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Ортогональна симетрія є ізометрією. 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 4836b9ba505742a648a3ea5786960cd719583b2ed9db26f6fb6e59a300bacb55
+% --- CHUNK_METADATA_END ---
+\begin{proof}
+   ЗРОБИТИ або не потрібно 
+\end{proof}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 163b9655d4c6ee6b5ed32a9e945de845daf3e519b3d872480793b91dad96ff6b
+% --- CHUNK_METADATA_END ---
+\begin{prop}\label{prop:isometrie-ssi-transforme-bon-en-bon}
+   $f$ є ізометрією тоді і лише тоді, якщо вона перетворює будь-який ортонормований базис на ортонормований базис. 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 4ec95a52726e4981c90aca65978297d0557bf21f1532a54843088d610d510166
+% --- CHUNK_METADATA_END ---
+\begin{proof}
+    Нехай $f$ — ізометрія, тоді вона перетворює будь-який базис на базис, оскільки $f$ бієктивна за проп. \ref{prop:isometrie-bijective}. 
+    \begin{itemize}
+        \item ($\implies$) Припустимо, що $f$ — ізометрія. Нехай $\{e_i\}$ — ортонормований базис, тоді маємо:
+             \[
+                 \scalair{f(e_i), f(e_j)} = \scalair{e_i, e_j} = \delta_{i,j}
+            \] 
+            Отже, $\{f(e_i)\}$ — ортонормований базис.
+        \item ($\impliedby$) Припустимо, що існує ортонормований базис $\{e_i\}$ такий, що $\{f(e_i)\}$ також є ортонормованим базисом. Крім того, нехай $x = x_1e_1 + \ldots x_ne_n$ та $y = y_1e_1 + \ldots + y_ne_n$ з $x_i, y_i \in \R$
+            \par
+            Оскільки $\{e_i\}$ — ортонормований, то маємо:
+            \begin{equation}\label{eq:prod-scal-base-ortho}
+                \scalair{x, y} = x_1y_1 + \ldots + x_ny_n = \sum_{i=1}^{n} x_iy_i
+            \end{equation}
+            З іншого боку:
+            \begin{align*}
+                \scalair{f(x), f(y)} &= \scalair{\sum_{i=1}^{n} x_if(e_i), \sum_{i=1}^{n} y_if(e_i)} = \sum_{i,j = 1}^{n} x_iy_j\scalair{f(e_i), f(e_j)}\\
+                                     &= \sum_{i,j=1}^{n} x_iy_j\scalair{e_i, e_j} \underset{\text{оскільки } \{e_i\} \text{ ортонормований}}{=} = \sum_{i=1}^{n} x_iy_i \underset{\text{Згідно з } \ref{eq:prod-scal-base-ortho}}{=} \scalair{x, y}
+            \end{align*}
+            Отже $f$ — ізометрія.
+    \end{itemize}
+\end{proof}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 8d2950f635e9cffe3eefb6c7a9f8caceaf847f161b494f77e191990a45f5584a
+% --- CHUNK_METADATA_END ---
+\begin{prop}\label{prop:isometrie-ata-eg-i}
+    Якщо $\{e_i\}$ є ортонормованою базою, $f$ ізометрія та  $A = M(f)_{e_i}$, тоді  $A^{T}A = I = AA^{T}$.
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 308e1996bec46376938c161a3389b6a69e2a68a372ac948cc0ddb54f07aa1f27
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+    Щоб довести це, ми використаємо пропозицію \ref{prop:prod-scal-par-matrice}.
+    \par
+    За визначенням ізометрії, маємо:
+    \begin{align*}
+        &\scalair{f(x), f(y)} = \scalair{x, y} \quad \forall x, y \in E\\
+        \iff &\underbrace{ (AX)^{T}(AY) }_{\scalair{f(x), f(y)}} = X^TA^TAY = \underbrace{X^TY}_{\scalair{x, y}}\\
+        \iff &A^TA = I
+    \end{align*}
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 65746adebc98fdc96e5e56ec6d65df91030b03666332c9b11270d8eed9f46139
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Якщо $A$ є матрицею ізометрії в ортонормованому базисі, тоді $det(A) = \pm 1$ 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 23b9a2d19a5bed3852c398d91fb93c61fd03fadfdca45e33b28839618a75a043
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+    За пропозицією \ref{prop:isometrie-ata-eg-i}, маємо: $A^TA = I$, звідки:
+     \begin{align*}
+         det(A^TA) = det(I) = 1 \implies& det(A)^2 = 1 \quad \text{ (бо }  det(A^T) = det(A) \text{)}\\
+                                \implies& det(A) = \pm 1
+    \end{align*}
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 7c8be0f83e3ecdc7e2399c8f0a68e8f7d4306d5dbcf3cf9c373f63d87616a7fd
+% --- CHUNK_METADATA_END ---
+\begin{intuition}
+   Ізометрія виконує обертання або відображення, вона зберігає відстані, тому площа (або об'єм) фігури, яка побудована на основі цього перетворення, дорівнює $1$. 
+\end{intuition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 09c3327a6fca672cd2ff7bbc61249f10cf92ae3695cbf2ec363dbf5510fec4c2
+% --- CHUNK_METADATA_END ---
+\subsection{Спряжений ендоморфізм}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: f5a9abf46d1ad9c63bf6534aac796f8754fed2637a6ff0f5c45c6831dc66dfcb
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Нехай $E$ — евклідовий простір, а  $f \in End(E)$. Існує один і лише один ендоморфізм  $f^* \in E$ такий, що
+   \[
+       \scalair{f(x), y} = \scalair{x, f^*(y)}, \quad \forall x, y \in E
+   \] 
+   $f^*$ називається  \textbf{спряженим} до $f$.
+   \par
+   Якщо  $\{e_i\}$ є ортонормованим базисом, а  $A = M(f)_{e_i}$, тоді матриця $A^* = M(f^*)_{e_i}$ є транспонованою до $A$, тобто  $A^* = A^T$
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 5e40b99de63f8219b8e35fcf11ba61e30bfb1741076e801edd00e6e8b82c3a16
+% --- CHUNK_METADATA_END ---
+\begin{proof}
+    Знову ж таки, для доказу ми використаємо пропозицію \ref{prop:prod-scal-par-matrice}, яка є дуже корисною, тому я раджу вам опанувати цю концепцію.
+    \par
+    Нехай $\{e_i\}$ — ортонормований базис $E$, і позначимо
+     \[
+    A = M(f)_{e_i} \quad A^* = M(f^*)_{e_i} \quad X = M(x)_{e_i} \quad Y = M(y)_{e_i}
+    \] 
+    Оскільки ми знаходимося в ортонормованому базисі, твердження записується:
+    \[
+        \underbrace{(AX)^TY}_{\scalair{f(x),y}} = X^TA^TY = \underbrace{X^T(A^*Y)}_{\scalair{x, f^*(y)}} \quad \forall X, Y \in \mathcal{M}_{n, 1}(\R)
+    \] 
+    що означає, що $A^* = A$, і, крім того, демонструє єдиність такого спряженого.
+\end{proof}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 69e2e232a1cf77e5370bdc547dbbc03cf5a33e341123571f6f13ffa4a2a97849
+% --- CHUNK_METADATA_END ---
+\section{Ортогональні групи}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 30e9713b279ada9e4dc1ba4cf518680437c3f81a6bf4160c2fc7ddaa21f5608d
+% --- CHUNK_METADATA_END ---
+Нагадування:% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 7f5170f3039994d2267944bfacea33bab1b2b27457ae3c7c865342196546ad13
+% --- CHUNK_METADATA_END ---
+\begin{definition}\label{def:general-linear-group}
+    Загальна лінійна група:
+    \[
+        GL(n, \R) = \{A \in \mathcal{M}_{n}(\R) \mid det(A) \neq 0\}
+    \] 
+    це група всіх лінійних перетворень (квадратних матриць), які є оборотними (оскільки $det(A) \neq 0$).
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 69a067bb55ef45d25eea5e96ca06f9e04e1254a999ec2722830a3aab6f48df5b
+% --- CHUNK_METADATA_END ---
+\begin{definition} \textbf{Ортогональна група}:
+    Множина:
+    \[
+        O(n, \R) := \{A \in \mathcal{M}_{n}(\R) \mid A^TA = I\} = \{A \in \mathcal{M}_{n}(\R) \mid AA^T = I\}
+    \] 
+    задовольняє наступні властивості:
+    \begin{enumerate}
+        \item якщо $A, B \in O(n, \R)$, тоді $AB \in O(n, \R)$
+        \item $I \in O(n, \R)$
+        \item якщо $A \in O(n, \R)$ тоді $A^{-1} \in O(n, \R)$
+    \end{enumerate}
+    Зокрема, $O(n, \R)$ є підгрупою $GL(n, \R)$ (група оборотних матриць) (див. визначення \ref{def:general-linear-group}).
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 8ca4e70a0d8b16cb958e9eee5fa78577f55c9906dfd354069234ff3982a705a6
+% --- CHUNK_METADATA_END ---
+\begin{intuition}
+    Значення ортогональних матриць зрозуміле: вони представляють матриці ортогональних перетворень (ізометрії) в \textbf{ортонормованому базисі} (див. визн. \ref{def:orthogonal}). 
+\end{intuition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 884c53f8606bf123e9b18d510e42e1f06bef30774481997531dad56cbbfcc4e0
+% --- CHUNK_METADATA_END ---
+Можна помітити, що якщо $det(A) = 1$, то ця ізометрія представляє собою обертання, крім того, ми маємо наступне визначення:% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 7d8c7b2b1e0c5e074414c9ccb9842dc4f78ec36f618d7cd8ef79e023ceeb9160
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Множина прямих ортогональних матриць (тобто таких, що $det(A) = 1$)
+    \[
+    SO(n, \R) = \{A \in O(n, \R) \mid det(A) = 1 \}
+    \] 
+    є групою, що називається \textbf{спеціальною ортогональною групою}.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: c5dbacd3e34cbf5a2300990c8929db644508fb545359d81af28c2434e33b6972
+% --- CHUNK_METADATA_END ---
+\begin{eg}
+   Матриця
+   \[
+       A = \frac{1}{3} \begin{pmatrix} 2 & -1 & 2\\ 2 & 2 & -1\\ -1 & 2 & 2 \end{pmatrix} 
+   \] 
+   є ортогональною. Можна перевірити, що $A^TA = I$, або достатньо показати, що  $c_1, c_2, c_3$ є ортонормованою сім'єю, тобто:
+   \[
+       \|c_i\|^2 = 1 \quad \text{ та } \quad \scalair{c_i, c_j} = 0 \quad \text{ якщо } i \neq j
+   \] 
+   Можна інтерпретувати $A$ як матрицю перетворення $f$ у канонічному базисі $\{e_i\}$, отже маємо:  $c_i = f(e_i)$, згідно з пропозицією \ref{prop:isometrie-ssi-transforme-bon-en-bon} $f$ є ортогональним. Крім того, бачимо, що  $det(A) = +1$. Отже,  $f$ є прямим ортогональним перетворенням.
+\end{eg}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 135d781de4dc50b2a9c113785c40f142345ea9689665ffb66c938b3a10834f9e
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Матриця переходу від ортонормованого базису до ортонормованого базису є ортогональною матрицею. 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 0bec23217c28ab51a0c6e64cc22eb8834a44ebb9f3d2160385f659491a79a8b1
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+   Я даю інтуїцію. Матриця переходу перетворює один базис на інший, вона переводить вектори базису, отже, вона перетворює базис БОН на вектори базису БОН, тому, згідно з пропозицією \ref{prop:isometrie-ssi-transforme-bon-en-bon}, ця матриця є ортогональною.
+\end{preuve}

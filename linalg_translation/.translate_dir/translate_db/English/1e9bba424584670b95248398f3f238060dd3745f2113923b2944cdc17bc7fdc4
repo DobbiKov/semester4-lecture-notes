@@ -1,0 +1,7 @@
+\begin{property}
+   \begin{enumerate}
+       \item Every finite part is bounded
+       \item If $A$ bounded and $B \subset A$ then $B$ is bounded
+       \item The union of a \underline{finite} number of bounded sets is bounded
+   \end{enumerate} 
+\end{property}

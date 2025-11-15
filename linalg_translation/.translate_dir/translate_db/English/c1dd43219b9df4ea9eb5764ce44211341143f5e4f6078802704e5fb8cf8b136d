@@ -1,0 +1,9 @@
+Suppose \( A \) is diagonalizable. Then there exist \( A' \) a diagonal matrix and \( P \) an invertible matrix such that: 
+\[
+A' = P^{-1}AP.
+\]
+If \( A \) is considered as the matrix of an endomorphism in the canonical basis, then \( A' \) is the matrix of \( f \) in the basis of eigenvectors \( \{v_i\} \).\\
+Likewise, \( X \) is the matrix of a vector \( \vec{x} \) in the canonical basis and \( X' = M(\vec{x})_{v_i} \) is related to \( X \) by
+\[
+X' = P^{-1}X
+\]

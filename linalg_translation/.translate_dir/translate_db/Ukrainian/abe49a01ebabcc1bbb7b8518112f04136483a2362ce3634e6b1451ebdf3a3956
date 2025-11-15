@@ -1,0 +1,13 @@
+з $u_0 = 2$ і $v_n = 1$. Нехай $X_n = \begin{pmatrix} u_n \\ v_n \end{pmatrix} $, тоді система \ref{eq:systeme-appli-diagonalisation} записується:
+\[
+    X_{n+1} = AX_n \quad \text{ з } \quad A = \begin{pmatrix} 1 & -1\\ 2 & 4 \end{pmatrix} 
+\] 
+за рекурентністю отримуємо:
+\[
+X_n = A^nX_0 \quad \text{ з } X_0 = \begin{pmatrix} 2 \\ 1 \end{pmatrix} 
+\] 
+
+Отже, ми звели задачу до обчислення степеня матриці: $A^n$, що ми розглядали в розділі ~\ref{subsec:calcule-de-la-puissance-diagonalisation}. Ви можете перевірити, що існує $P \in GL_2(\R)$ такий, що
+\[
+    P = \begin{pmatrix} -1 & 1 \\ 1 & -2 \end{pmatrix} \quad \text{ з } \quad A = P\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}P^{-1}
+\]

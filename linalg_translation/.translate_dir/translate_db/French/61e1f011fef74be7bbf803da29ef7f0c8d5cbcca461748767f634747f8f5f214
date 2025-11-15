@@ -1,0 +1,4 @@
+\begin{theorem}[Continuité et convergence uniforme]
+    Soit \(M\) un espace métrique. Si les \(f_n: M \to E\) sont continues pour tout \(n\) et \((f_n)\) converge uniformément vers \(f: M \to E\), alors \(f\) est continue.
+    L'espace \(C_b(M,E)\) des fonctions continues bornées de \(M\) dans \(E\), muni de \(\|\cdot\|_\infty\), est un espace de Banach si \(E\) est un espace de Banach.
+\end{theorem}

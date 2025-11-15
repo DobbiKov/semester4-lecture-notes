@@ -1,0 +1,18 @@
+\begin{eg}
+   \[
+   f(x, y) = \frac{1}{2}(x^2 - y^2)
+   \]  
+   \[
+       H_f(0, 0) = \begin{pmatrix} 1 & 0\\ 0 & -1 \end{pmatrix} 
+   \] 
+   \[
+       I_f = \{(x, y, z): z = \frac{1}{2}(x^2 - y^2)\}
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-point-selle}
+    \caption{Приклад сідлової точки.}
+    \label{fig:exemple-point-selle}
+\end{figure}
+Червоні лінії представляють часткові похідні, і ми бачимо, що одні зростають, а інші спадають, тому ця точка не є ні мінімумом, ні максимумом
+\end{eg}

@@ -1,0 +1,95 @@
+\begin{appendices}
+    \chapter{Нагадування про концепції Лінійної Алгебри} 
+    \section{Матриці}
+    \subsection{Множення матриць}
+    \begin{definition}
+        Нехай $A \in \mathcal{M}_{p, n}(\R)$ та $B \in \mathcal{M}_{n, q}(\R)$ такі що $A = (a_{j, i})$ та $B = (b_{m, k})$, тоді:
+         \[
+        AB = C = (c_{j, k} = \sum_{i=1}^{n} a_{j, i}b_{i, k})
+        \] 
+    \end{definition}
+    \subsection{Слід}
+    \begin{definition}
+        Слід \( n \times n \) квадратної матриці \( A \), позначений \( \text{tr}(A) \), є сумою діагональних елементів
+
+        \[
+            \text{tr}(A) = a_{11} + a_{22} + \dots + a_{nn} = \sum_{i=1}^{n} a_{ii}
+        \]
+
+        де \( a_{ii} \) є діагональними елементами матриці \( A \). 
+    \end{definition}
+
+    \begin{property} сліду.
+       \begin{itemize}
+           \item Лінійність:
+               \[
+                   \text{tr}(A + B) = \text{tr}(A) + \text{tr}(B)
+               \]
+
+               \[
+                   \text{tr}(cA) = c \text{tr}(A), \quad c \in \mathbb{R} \text{ (або } \mathbb{C} \text{)}
+               \]
+            \item  Транспонування:
+                \[
+                    \text{tr}(A) = \text{tr}(A^T)
+                \] 
+            \item Множення матриць:
+                \[
+                    \text{tr}(AB) = \text{tr}(BA), \quad \text{(якщо } A \text{ та } B \text{ мають розмір } n \times n)
+                \]
+
+                Однак, слід не є дистрибутивним щодо множення:
+
+                \[
+                    \text{tr}(A B C) \neq \text{tr}(A) \text{tr}(B C)
+                \]
+            \item Власні значення:
+                \[
+                    \text{tr}(A) = \sum_{i=1}^{n} \lambda_i
+                \]
+
+                де \( \lambda_i \) є власними значеннями \( A \). Це робить слід важливим інструментом у спектральному аналізі.
+
+            \item Слід Одиничної Матриці
+
+                \[
+                    \text{tr}(I_n) = n
+                \]
+
+                оскільки всі діагональні елементи дорівнюють 1.
+       \end{itemize} 
+    \end{property}
+    \begin{eg}
+        Для
+        \[
+            A = \begin{bmatrix} 3 & 2 & 1 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}
+        \]
+
+        слід дорівнює:
+
+        \[
+            \text{tr}(A) = 3 + 5 + 9 = 17
+        \] 
+    \end{eg}
+    \begin{eg}
+        Якщо
+
+        \[
+            B = \begin{bmatrix} 2 & 1 \\ 0 & 3 \end{bmatrix}, \quad C = \begin{bmatrix} 4 & 2 \\ 1 & 5 \end{bmatrix}
+        \]
+
+        тоді
+
+        \[
+            \text{tr}(B + C) = \text{tr} \begin{bmatrix} 6 & 3 \\ 1 & 8 \end{bmatrix} = 6 + 8 = 14
+        \]
+
+        що відповідає 
+
+        \[
+            \text{tr}(B) + \text{tr}(C) = (2+3) + (4+5) = 14
+        \]
+
+        таким чином підтверджуючи лінійність. 
+    \end{eg}
+\end{appendices}

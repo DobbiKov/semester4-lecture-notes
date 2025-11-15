@@ -1,0 +1,6 @@
+\begin{theorem}
+    Множина $\operatorname{Sol}(H)$ розв'язків $(H)$ задається
+     \[
+         x(t) = e^{tA}x_0 \quad x_0 \in \mathbb{C}^{n}
+    \] 
+\end{theorem}

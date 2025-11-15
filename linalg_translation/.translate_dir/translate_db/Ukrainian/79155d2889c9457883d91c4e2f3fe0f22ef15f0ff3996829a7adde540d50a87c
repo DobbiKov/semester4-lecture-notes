@@ -1,0 +1,8 @@
+Припустимо, для $q \in \N^{*}$ ми вже знайшли $q$ власні значення матриці $\{ \lambda_1, \ldots, \lambda_q \}$, щоб знайти власні вектори, нам залишається знайти базис:
+\[
+    \ker(A - \lambda_iI) \quad \forall i \in \{1, \ldots, q\}
+\] 
+що еквівалентно:
+\[
+\left( A - \lambda_i I \right)v = 0 \quad \forall i \in \{1, \ldots, q\}
+\]

@@ -1,0 +1,3 @@
+\begin{preuve}
+    La preuve est identique à celui de la proposition \ref{def:continuite-topologique} quand on passe au complémentaire $E_2\setminus U$. 
+\end{preuve}

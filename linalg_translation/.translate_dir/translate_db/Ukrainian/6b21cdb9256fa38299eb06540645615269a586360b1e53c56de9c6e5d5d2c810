@@ -1,0 +1,8 @@
+\begin{definition}
+    Кажуть, що $N: E \to \R_+$ є нормою, якщо:
+    \begin{enumerate}
+        \item $N(\lambda u) = |\lambda| \cdot N(u)$ \quad  $\forall \lambda \in \R, \forall u \in E$
+        \item $N(u) = 0 \implies u = 0$
+        \item $N(u + v) \le N(u) + N(v)$ \quad $\forall u, v \in E$
+    \end{enumerate}
+\end{definition}

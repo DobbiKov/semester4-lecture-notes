@@ -1,0 +1,8 @@
+\begin{lemma}
+   Наступні властивості є еквівалентними:
+   \begin{enumerate}
+       \item $A$ є обмеженою
+       \item  $\forall x_0 \in E, \exists r > 0$ такий що $A \subset B(x_0, r)$
+       \item $\exists r > 0$ такий що $\forall x, y \in A$ виконується $d(x, y) < r$
+   \end{enumerate}
+\end{lemma}

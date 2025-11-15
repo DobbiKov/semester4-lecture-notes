@@ -1,0 +1,5 @@
+\begin{prop} Нехай $(E, \scalair{,})$ евклідовий простір та $\epsilon = (e_1, \ldots, e_n)$ ортонормований базис. Нехай $f \in \mathcal{L}(E, E)$ та $A = (a_{i,j})_{1 \le i,j \le n}$ матриця, що представляє $f$ у $\epsilon$, тобто, $A = Mat_{\epsilon}(f)$
+    \[
+        a_{i,j} = \scalair{f(e_i), e_j} \, \forall i,j = 1, \ldots, n
+    \] 
+\end{prop}

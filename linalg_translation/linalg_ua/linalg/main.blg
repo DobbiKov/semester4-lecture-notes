@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: main-blx.bib
+Database file #2: refs.bib
+Warning--entry type for "saclay-linalg-course" isn't style-file defined
+--line 1 of file refs.bib
+Biblatex version: 3.20
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 4 entries,
+            6402 wiz_defined-function locations,
+            1223 strings with 9299 characters,
+and the built_in function-call counts, 16026 in all, are:
+= -- 1056
+> -- 354
+< -- 123
++ -- 369
+- -- 104
+* -- 902
+:= -- 1621
+add.period$ -- 0
+call.type$ -- 4
+change.case$ -- 77
+chr.to.int$ -- 42
+cite$ -- 6
+duplicate$ -- 1680
+empty$ -- 1475
+format.name$ -- 144
+if$ -- 3447
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 0
+newline$ -- 96
+num.names$ -- 179
+pop$ -- 1045
+preamble$ -- 1
+purify$ -- 83
+quote$ -- 0
+skip$ -- 695
+stack$ -- 0
+substring$ -- 1557
+swap$ -- 417
+text.length$ -- 95
+text.prefix$ -- 3
+top$ -- 1
+type$ -- 123
+warning$ -- 0
+while$ -- 225
+width$ -- 0
+write$ -- 93
+(There was 1 warning)

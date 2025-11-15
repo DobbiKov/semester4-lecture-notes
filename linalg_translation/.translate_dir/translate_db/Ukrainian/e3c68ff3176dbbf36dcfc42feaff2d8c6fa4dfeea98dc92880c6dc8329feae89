@@ -1,0 +1,7 @@
+\begin{prop}
+    Нехай $A \in \mathcal{M}_n(\R)$ з його власними векторами: $\{\lambda_1, \ldots, \lambda_n\}$, тоді:
+    \begin{align*}
+        &\operatorname{Tr}(A) = \lambda_1 + \ldots + \lambda_n\\
+        &\operatorname{det}(A) = \lambda_1 \cdot  \ldots \cdot  \lambda_n\\
+    \end{align*}
+\end{prop}

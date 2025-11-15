@@ -1,0 +1,4 @@
+\[
+    \vec{X} \cdot A\vec{X} = \sum_{1\le i,j \le n}^{} x_ia_{i,j}x_j
+\] 
+Якщо $\vec{X} = \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix}$ $A = \begin{bmatrix} a_{i,j} \end{bmatrix}$ маємо: $X \mapsto X \cdot AX$ для вивчення. Якщо $A = A^T, A \in \mathcal{M}_n(\R)$

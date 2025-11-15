@@ -1,0 +1,5 @@
+\pdfsuppresswarningpagegroup=1
+
+\usetikzlibrary{calc, arrows.meta, positioning}
+
+\author{Єгор Коротенко}

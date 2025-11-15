@@ -1,0 +1,10 @@
+\begin{lemma}\label{lemma:lemme-des-noyaux} \textbf{des noyaux}
+   Soit $f \in K^n$ un endomorphisme et 
+   \[
+   Q(X) = Q_1(X) \cdots Q_p(X)
+   \] 
+   un polynôme factorisé en produit de polynômes deux à deux premiers entre eux. Si $Q(f) = 0$ alors:
+    \[
+        E = \operatorname{Ker} Q_1(f) \oplus \ldots \oplus \operatorname{Ker} Q_p(f)
+   \] 
+\end{lemma}

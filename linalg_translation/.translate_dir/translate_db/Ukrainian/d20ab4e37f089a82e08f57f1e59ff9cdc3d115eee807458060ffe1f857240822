@@ -1,0 +1,4 @@
+Нехай $(E, \scalair{,})$ - евклідів простір, $F \subseteq E$ - векторний підпростір. Тоді, $E = F \oplus F^{\perp}$. Отже, $\forall x \in E$ записується як
+\[
+x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
+\]

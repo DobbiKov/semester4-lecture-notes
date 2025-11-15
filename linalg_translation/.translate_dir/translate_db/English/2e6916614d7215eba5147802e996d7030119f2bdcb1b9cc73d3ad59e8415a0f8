@@ -1,0 +1,3 @@
+\begin{propriete}[Distance induced by a norm]
+       If \((E, \|\cdot\|)\) is a NVS, then \(d(X,Y) = \|X-Y\|\) defines a distance on \(E\).
+   \end{propriete}

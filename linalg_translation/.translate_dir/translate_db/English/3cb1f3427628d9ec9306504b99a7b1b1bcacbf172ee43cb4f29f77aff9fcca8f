@@ -1,0 +1,7 @@
+\begin{enumerate}
+    \item Every finite-dimensional normed vector space is complete (recall: proposition \ref{prop:rd-est-complet}) (see below)
+    \item If $E$ of finite dimension:
+         \[
+        K \text{ compact} \iff K \text{ closed and bounded }
+        \] 
+\end{enumerate}

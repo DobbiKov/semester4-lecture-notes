@@ -1,0 +1,8 @@
+\begin{preuve}
+   Supposons que $f$ est une isométrie de  $E$. Soit  $x, y \in E$. Par définition:  $\scalair{f(x), f(y)} = \scalair{x, y}$, donc, posons $y := x$, alors, on a:
+   \begin{align*}
+       &\underbrace{\scalair{f(x), f(x)}}_{\|f(x)\|^2} = \underbrace{\scalair{x, x}}_{\|x\|^2}\\
+       \iff &\|f(x)\|^2 = \|x\|^2\\
+       \iff &\|f(x)\| = \|x\|
+   \end{align*}
+\end{preuve}

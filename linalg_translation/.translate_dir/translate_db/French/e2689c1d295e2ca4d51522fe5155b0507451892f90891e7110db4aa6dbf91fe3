@@ -1,0 +1,9 @@
+\begin{eg}
+    $E = \mathbb{K}^n$ avec  $x = (x_1, \ldots, x_n) \in E$ 
+    \begin{itemize}
+        \item $\|x\|_1 = \sum_{i=1}^{n} |x_i|$
+        \item $\|x\|_2 = \left(\sum_{i=1}^{n} |x_i|^2\right)^{\frac{1}{2}}$
+        \item $\|x\|_{\infty} = \max_{1 \le i \le n} |x_i|$
+        \item $\|x\|_p = \left( \sum_{i=1}^{n} |x_i|^p \right)^{\frac{1}{p}}$ avec $1 \le p < \infty$
+    \end{itemize}
+\end{eg}

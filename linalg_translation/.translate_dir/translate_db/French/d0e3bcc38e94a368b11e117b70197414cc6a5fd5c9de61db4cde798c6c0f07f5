@@ -1,0 +1,3 @@
+\begin{theorem}[Condition nécessaire d'extremum local (Ordre 1)]
+    Si \(f\) admet un extremum local en \(X_0 \in \operatorname{Int}(D)\) et si \(f\) est différentiable en \(X_0\), alors \(X_0\) est un point critique (\(\nabla f(X_0)=0\)).
+\end{theorem}

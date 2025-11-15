@@ -1,0 +1,13 @@
+\begin{preuve}
+    Encore, pour la preuve, on va utiliser la proposition \ref{prop:prod-scal-par-matrice} qui est très utile, donc je vous conseil maîtriser ce concept.
+    \par
+    Soit $\{e_i\}$ une base orthonormée de $E$ et notons
+     \[
+    A = M(f)_{e_i} \quad A^* = M(f^*)_{e_i} \quad X = M(x)_{e_i} \quad Y = M(y)_{e_i}
+    \] 
+    Comme on est dans une base orthonormée, alors l'énoncé s'ecrit:
+    \[
+        \underbrace{(AX)^TY}_{\scalair{f(x),y}} = X^TA^TY = \underbrace{X^T(A^*Y)}_{\scalair{x, f^*(y)}} \quad \forall X, Y \in \mathcal{M}_{n, 1}(\R)
+    \] 
+    ce qui implique que $A^* = A$ et, de plus, démontre l'unicité de tel adjoint.
+\end{preuve}

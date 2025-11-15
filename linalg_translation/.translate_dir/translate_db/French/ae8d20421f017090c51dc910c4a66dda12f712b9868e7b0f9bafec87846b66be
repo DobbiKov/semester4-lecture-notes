@@ -1,0 +1,3 @@
+\begin{preuve}
+    $Y_n = (Y_{1,n}, \ldots, Y_{p, n})$  suite des $\R^p$. $Y_n \to Y$ ssi $Y_{i,n} \to Y_i$ ($1 \le i \le p$)
+\end{preuve}

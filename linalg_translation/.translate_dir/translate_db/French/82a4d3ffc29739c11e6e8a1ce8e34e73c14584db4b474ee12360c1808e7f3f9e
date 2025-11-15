@@ -1,0 +1,10 @@
+\begin{explanation}
+   Je suppose que $d(x_0, x_1) \le r$\\ 
+   Soit $x \in B(x_1, r_1)$ donc $d(x_1, x) < r_1$ à montrer: $x \in B(x_0, r)$ (i.e $d(x_0, x) < r$?)\\
+   L'inégalité triangulaire me dit:
+   \begin{align*}
+       d(x_0, x) &\le d(x_0, x_1) + d(x_1, x)\\
+                 &< d(x_0, x_1) + r_1 \le r\\
+                 &\implies x \in B(x_0, r)
+   \end{align*}
+\end{explanation}

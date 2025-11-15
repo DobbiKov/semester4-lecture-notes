@@ -1,0 +1,30 @@
+\begin{preuve}-
+    \begin{enumerate}
+        \item OK car $tA$ commute avec  $sA$
+        \item  $e^{tA}e^{-tA} = e^{-tA}e^{tA} = e^{0A} = \mathcal{I}$ donc  $(e^{tA})^{-1} = e^{-tA}$
+        \item À calculer: $\lim_{\varepsilon \to 0} \frac{e^{(t + \varepsilon)A} - e^{tA}}{\varepsilon} = ?$ 
+            \[
+            e^{tA}(\frac{e^{\varepsilon A }- \mathcal{I}}{\varepsilon})
+            \] 
+            \begin{align*}
+                e^{\varepsilon A} - \mathcal{I} &= \sum_{n=1}^{\infty} \frac{(\varepsilon A)^n}{n!} \quad n = 1 + p\\
+                                                &= \varepsilon A \times \sum_{p=0}^{\infty} \frac{(\varepsilon A)^p}{(p+1)!}\\
+                                                &= \varepsilon A \left( \mathcal{I} + \|\sum_{p=1}^{\infty} \frac{(\varepsilon A)^p}{(p+1)!}\| \right) \\
+                                                &= \varepsilon A \left( \mathcal{I} + R(\varepsilon) \right) 
+            \end{align*}
+            \[
+                \frac{e^{\varepsilon A} - \mathcal{I}}{\varepsilon} = A + AR(\varepsilon)
+            \] 
+            à voir: $\|AR(\varepsilon)\| \xrightarrow[\varepsilon \to 0]{} 0$ alors $\lim_{\varepsilon \to 0} \frac{e^{\varepsilon A} - \mathcal{I}}{\varepsilon} = A$
+            \[
+            \|AR(\varepsilon)\| \le c\varepsilon \xrightarrow[\varepsilon \to 0]{} 0
+            \] 
+            \begin{align*}
+                \|R(\varepsilon)\| \le \sum_{p=1}^{\infty} \frac{\varepsilon^p \|A\|^p}{(p+1)!} = \varepsilon \sum_{p=1}^{\infty} \frac{\varepsilon^{p-1}\|A\|^p}{(p+1)!} \le \varepsilon e^{\|A\|}
+            \end{align*}
+            Si $|\varepsilon| \le 1$
+            \[
+                \frac{\varepsilon^{p-1} \|A\|^p}{(p+1)!} \le \frac{\|A\|^p}{p!}
+            \] 
+    \end{enumerate}
+\end{preuve}

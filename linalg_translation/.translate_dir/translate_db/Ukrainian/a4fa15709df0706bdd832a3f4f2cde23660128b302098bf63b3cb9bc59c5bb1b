@@ -1,0 +1,12 @@
+\begin{theorem}
+    Нехай $A \in \mathcal{M}_n{\R}$ квадратна матриця та $A^{*}$ її спряжена матриця, тоді маємо:
+     \[
+         A^{*}A = A A^{*} = \det(A)I_n = 
+         \begin{bmatrix}  
+             \det(A) & 0        & 0      & \ldots & 0 & 0\\
+             0       & \det(A)  & 0      & \ldots & 0 & 0\\
+             \vdots  & \vdots   & \vdots & \ddots & \vdots & \vdots\\
+             0       & 0        & 0      & \ldots & 0      & \det(A)
+         \end{bmatrix}  
+    \] 
+\end{theorem}

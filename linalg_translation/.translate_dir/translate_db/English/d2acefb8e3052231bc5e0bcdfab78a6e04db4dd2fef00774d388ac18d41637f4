@@ -1,0 +1,13 @@
+\begin{eg}
+   The matrix of the canonical scalar product in $\R^3$ is:
+   \[
+       \scalair{X, Y} = x_1y_1 + x_2y_2 + x_3y_3 
+   \] 
+   \[
+       Mat(\scalair{,})_{e_i} = \begin{pmatrix} 
+            1 & 0 & 0\\
+            0 & 1 & 0\\
+            0 & 0 & 1
+       \end{pmatrix} 
+   \] 
+\end{eg}

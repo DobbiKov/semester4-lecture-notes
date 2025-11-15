@@ -1,0 +1,15 @@
+\pdfsuppresswarningpagegroup=1
+\pgfplotsset{compat=1.11}
+\usepackage{subcaption}
+
+\author{Yehor Korotenko}
+
+\newcommand{\scalar}[2]{\langle #1, #2 \rangle}
+\newcommand{\scalair}[1]{\left\langle #1 \right\rangle}
+
+%  fancy chapters
+\usepackage{lipsum}
+\usepackage[Lenny]{fncychap}
+\ChNameUpperCase
+\ChNumVar{\fontsize{40}{42}\fontfamily{ptm}\selectfont}
+\ChTitleVar{\Large\sc}

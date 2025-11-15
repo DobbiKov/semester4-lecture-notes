@@ -1,0 +1,3 @@
+\begin{prop}
+   $Int(A)$ is the largest open set included in $A$. Equivalently, $Int(A)$ is the union of all open sets included in $A$.
+\end{prop}

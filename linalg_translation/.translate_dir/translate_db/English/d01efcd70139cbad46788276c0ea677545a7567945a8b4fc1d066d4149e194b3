@@ -1,0 +1,8 @@
+\begin{theorem}
+    Let $f$ be an endomorphism in $E$ and $\lambda_1, \ldots, \lambda_p$ its eigenvalues, then the following properties are equivalent:
+    \begin{enumerate}
+        \item $f$ is diagonalizable
+        \item  $E$ is a direct sum of its eigenspaces: $E = E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p}$
+        \item $\dim E_{\lambda_1} + \ldots + \dim E_{\lambda_p} = \dim E$
+    \end{enumerate}
+\end{theorem}

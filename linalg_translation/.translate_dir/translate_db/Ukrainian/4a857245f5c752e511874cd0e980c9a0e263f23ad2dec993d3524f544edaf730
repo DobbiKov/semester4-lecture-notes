@@ -1,0 +1,9 @@
+\begin{remark}
+   \begin{enumerate}
+       \item Якщо $\lambda$ не є власним значенням $f$, тому $E_\lambda = \{0\}$
+       \item Якщо $\lambda$ є власним значенням, тоді:
+            \[
+                E_\lambda = \{ \text{ власні вектори, асоційовані з } \lambda \} \cup \{0\} \text{ та } \dim E_\lambda \ge 1
+           \] 
+   \end{enumerate} 
+\end{remark}

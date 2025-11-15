@@ -1,0 +1,65 @@
+\begin{preuve}
+    We construct a sequence of continuous functions $(f_n)_{n \in \mathbb{N}}$ on $[0,1]$ that converges in the norm $\| \cdot \|_1$ to a discontinuous function $f$. This will show that the limit of this sequence in the norm $\| \cdot \|_1$ does not belong to $\mathcal{C}([0,1], \mathbb{R})$, therefore this space is not complete.
+    
+\begin{figure}[H]
+    \centering
+    \incfig{lemma-n-est-pas-complet}
+    \caption{Lemma with a non-complete space}
+    \label{fig:lemma-n-est-pas-complet}
+\end{figure}
+
+\medskip
+
+\textbf{Definition of the sequence $(f_n)$ :} for each $n \in \mathbb{N}$, we define $f_n : [0,1] \to \mathbb{R}$ by
+\[
+f_n(x) = 
+\begin{cases}
+0 & \text{if } x \le \frac{1}{2} - \frac{1}{2n}, \\[4pt]
+2n\left(x - \frac{1}{2} + \frac{1}{2n}\right) & \text{if } \frac{1}{2} - \frac{1}{2n} < x < \frac{1}{2} + \frac{1}{2n}, \\[4pt]
+1 & \text{if } x \ge \frac{1}{2} + \frac{1}{2n}.
+\end{cases}
+\]
+Each $f_n$ is continuous on $[0,1]$ because it is piecewise affine with continuous connections.
+
+\medskip
+
+\textbf{Definition of the limit function :} let's set
+\[
+f(x) = 
+\begin{cases}
+0 & \text{if } x < \frac{1}{2}, \\
+1 & \text{if } x > \frac{1}{2}, \\
+\text{any value} & \text{if } x = \frac{1}{2}.
+\end{cases}
+\]
+Then $f$ is \textbf{discontinuous} at $x = \frac{1}{2}$, so $f \notin \mathcal{C}([0,1], \mathbb{R})$.
+
+\medskip
+
+\textbf{Convergence of $(f_n)$ to $f$ in $\| \cdot \|_1$ :}
+
+We have
+\[
+\|f_n - f\|_1 = \int_0^1 |f_n(x) - f(x)|\, dx.
+\]
+But $f_n(x) = f(x)$ except on the interval $\left[\frac{1}{2} - \frac{1}{2n}, \frac{1}{2} + \frac{1}{2n}\right]$ of length $\frac{1}{n}$, and on this interval, $|f_n(x) - f(x)| \le 1$, so :
+\[
+\|f_n - f\|_1 \le \int_{\frac{1}{2} - \frac{1}{2n}}^{\frac{1}{2} + \frac{1}{2n}} 1\, dx = \frac{1}{n} \xrightarrow[n \to \infty]{} 0.
+\]
+
+Thus, $f_n \to f$ in the norm $\| \cdot \|_1$.
+
+\medskip
+
+\textbf{Consequence :} the sequence $(f_n)$ is Cauchy in $\left( \mathcal{C}([0,1], \mathbb{R}), \| \cdot \|_1 \right)$, because :
+\[
+\|f_n - f_p\|_1 \le \|f_n - f\|_1 + \|f - f_p\|_1 \le \frac{1}{n} + \frac{1}{p} \xrightarrow[n,p \to \infty]{} 0.
+\]
+
+However, the limit $f$ is not continuous, so $f \notin \mathcal{C}([0,1], \mathbb{R})$.
+
+\medskip
+
+\textbf{Conclusion :} There exists a Cauchy sequence in $\left( \mathcal{C}([0,1], \mathbb{R}), \| \cdot \|_1 \right)$ that does not converge in this space. Therefore, this space is not complete.
+
+\end{preuve}

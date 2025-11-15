@@ -1,0 +1,10 @@
+\begin{theorem}
+     Нехай $A \in \mathcal{M}_n(\mathbb{C})$ ($A \in B(E)$ де $(E, \| \cdot \|)$ повний!)
+     \begin{enumerate}
+         \item Ряд $\sum_{n \in \N}^{} \frac{A^n}{n!}$ збігається в $(\mathcal{M}_n(\mathbb{C}), \| \cdot \|)$, її сума  $\sum_{n=0}^{\infty} \frac{A^n}{n!}$ позначається $e^A$ і називається експонентою $A$.
+         \item  $\|e^A\| \le e^{\|A\|}$
+         \item $\|e^A - \sum_{n=0}^{N} \frac{A^n}{n!}\| \le \frac{\|A\|^{N+1}}{(N+1)!}e^{\|A\|} (\le \frac{\|A\|_{HS}^{N+1}}{(N+1)!}e^{\|A\|_{HS}})$ 
+         \item $e^Ae^B = e^Be^A$ якщо $AB=BA$
+         \item  $Be^A = e^AB$ якщо $AB=BA$
+     \end{enumerate}
+\end{theorem}

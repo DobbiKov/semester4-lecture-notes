@@ -1,0 +1,43 @@
+\begin{eg} Distances
+   \begin{enumerate}
+       \item $d_2(X, Y) = \|X - Y\|_2$ (Euclidean distance on $\R^d$)
+       \item $d_1(X, Y) = \|X - Y\|_1$\\
+           $d_{\infty}(X, Y) = \|X - Y\|_{\infty}$
+       \item logarithmic distance on $\R_+$:  $d(a, b) = |b - a|$
+           \[
+               \log_{10}(a) = \frac{\log(a)}{\log(10)}
+           \] 
+           $x, y \in ]0, +\infty[$\\ 
+           $d_{\log}(x, y) = |\log_{10}(\frac{y}{x})|$ \\
+           $i$ is a distance on $]0, +\infty[$\\
+           $d_{\log}(100, 110) = \log_{10}(1,1)$
+       \item SNCF distance
+           \begin{center}
+               \begin{tikzpicture}
+                  \coordinate (X) at (0, 0); 
+                  \coordinate (Y) at (1.5, 0.2);
+                  \coordinate (Y2) at (1, 1);
+                  \coordinate (Y1) at ($(X)!0.5!(Y2)$);
+                  \draw (X)--(Y2);
+                  \draw (Y)--($(X)!0.7!(Y2)$);
+                  \draw[fill=black] (X) circle (0.4mm);
+                  \draw[fill=black] (Y) circle (0.4mm);
+                  \draw[fill=black] (Y2) circle (0.4mm);
+                  \draw[fill=black] (Y1) circle (0.4mm);
+                  \node[below] (_) at (X){X};
+                  \node[below] (_) at (Y){Y};
+                  \node[above left] (_) at (Y1){Y1};
+                  \node[above] (_) at (Y2){Y2};
+               \end{tikzpicture}
+               
+           \end{center}
+           $d(X, Y)$ usual distance in $\R^2$
+           we define:
+            \begin{align*}
+               \delta(X, Y) = \begin{cases}
+                   d(X, Y) \text{ if } X, 0, Y \text{ aligned}\\
+                   d(X, 0) + d(0, Y) \text{ otherwise }
+               \end{cases}
+           \end{align*}
+   \end{enumerate}
+\end{eg}

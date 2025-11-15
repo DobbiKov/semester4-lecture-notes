@@ -1,0 +1,3 @@
+\begin{prop}
+    Si $F$ est continue  $\iff$ tout $U$ fermé donne $F^{-1}(U)$ aussi fermé 
+\end{prop}

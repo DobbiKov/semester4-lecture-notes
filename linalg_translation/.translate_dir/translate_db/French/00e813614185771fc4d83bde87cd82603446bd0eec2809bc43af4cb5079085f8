@@ -1,0 +1,12 @@
+\begin{definition}\label{def:distance} Une distance est une application:
+    \begin{align*}
+        d: \R^d &\longrightarrow \R \\
+        (X, Y) &\longmapsto d((X, Y)) 
+    \end{align*}
+    qui suit ces propriétés:
+    \begin{enumerate}
+        \item $d(X, Y) = d(Y, X)$ (symétrie)
+        \item $d(X, Y) \le d(X, Z) + d(Z, Y)$ (inég. triangulaire) $\forall X, Y, Z$ 
+        \item $d(X, Y) \ge 0 \quad \forall X, Y$ et $d(X, Y) = 0 \iff X = Y$ 
+    \end{enumerate}
+\end{definition}

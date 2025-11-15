@@ -1,0 +1,9 @@
+\begin{propriete}[Properties of compact sets in a metric space]
+   \begin{enumerate}
+       \item A compact set is closed and bounded. (The converse is false in general, but true in \(\R^d\)).
+       \item A closed subset of a compact set is compact.
+       \item Any intersection of compact sets is compact.
+       \item A finite union of compact sets is compact.
+       \item A compact set is complete.
+   \end{enumerate}
+\end{propriete}

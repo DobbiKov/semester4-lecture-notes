@@ -1,0 +1,26 @@
+\begin{intuition}
+    This product tells us \textit{how closely the vectors point in the same direction} (cosine tends to 1 when $\theta$ tends to 0º, and cosine tends to 0 when $\theta$ tends to 90º). And this product allows us to have a projection of $X$ onto $Y$ by the formula:
+    \[
+    Proj(X) = \frac{X \cdot Y}{\|Y\|} \cdot \frac{Y}{\|Y\|}
+    \] 
+    $X \cdot Y$ gives the length of $X$ and $Y$ together, by dividing this length by $\|Y\|$ (the length of $Y$) we obtain the length of $X$ on Y, we still need to multiply this length by a unit vector (of length 1) that points in the same direction as $Y$, (we obtain it by $\frac{Y}{\|Y\|}$)
+   \begin{center}
+      \begin{tikzpicture}
+         \coordinate (A) at (0, 0); 
+         \coordinate (B) at (2, 0.5);
+         \coordinate (C) at (1, 2);
+         \coordinate (newB) at (1.4117647059, 0.3529411765);
+         \coordinate (dotBC) at (2, 1);
+         \node[left] (_) at (A){A};
+         \node[right] (_) at (B){B};
+         \node[right] (_) at (C){C};
+         \draw[->] (A) -- (B);
+         \node[above left] (...) at ($(A)!0.5!(C)$) {$\vec{X}$};
+         \node[below] (...) at ($(A)!0.5!(B)$) {$\vec{Y}$};
+         \draw[->] (A) -- (C);
+         \draw[->, red, thin] (A) -- (newB);
+         \draw[dotted] (C) -- (newB);
+         \node[above, red] (_) at ($(A)!0.5!(newB)$){\small Proj(X)};
+      \end{tikzpicture} 
+   \end{center}
+\end{intuition}

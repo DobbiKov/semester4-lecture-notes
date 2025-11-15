@@ -1,0 +1,6 @@
+
+Dans le cas $\R$ on a eu la définition de la dérivée:
+\[
+f'(x_0) = \lim_{t \to 0} \frac{f(x_0 + t) - f(x_0)}{t} 
+\] 
+La diréction était toujours la même (l'axe $x$), on peut voir ça comme prendre un vecteur $u = (1)$ et utiliser comme la direction seulement l'axe $x$ et on obtient  l'eq. (~

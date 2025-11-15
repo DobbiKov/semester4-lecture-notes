@@ -1,0 +1,41 @@
+\begin{eg} result of this proposition.
+    Let's take the function: $f(x) = x^2$.  $f^{-1}(]4, 9[) = \{x \in \R \mid 4 < x^2 < 9\} = ]-3, -2[ \cup ]2, 3[$. In other words, the continuity of $f$ (obvious) implies that if $U = ]4, 9[$ is open, then $f^{-1}(U)$ is also open.
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle,
+                xlabel = $x$,
+                ylabel = {$f(x) = x^2$},
+                xmin=-5, xmax=5,
+                ymin=0, ymax=10,
+                samples=100,
+                domain=-5:5,
+                xtick={-4,-3,-2,-1,0,1,2,3,4,5},  % Custom x-axis numbers
+                ytick={0,4,9},   % Custom y-axis numbers
+                thick
+                ]
+                \addplot[blue, thick] {x^2};
+                \coordinate (a) at (2, 0);
+                \node (_) at (a){$]$};
+                \coordinate (b) at (-2, 0);
+                \node (_) at (b){$[$};
+                \coordinate (c) at (3, 0);
+                \node (_) at (c){$[$};
+                \coordinate (d) at (-3, 0);
+                \node (_) at (d){$]$};
+
+                \coordinate (fa) at (2, 4);
+                \coordinate (fb) at (-2, 4);
+                \coordinate (fc) at (3, 9);
+                \coordinate (fd) at (-3, 9);
+                \draw[color=red] (a) -- (c);
+                \draw[color=red] (b) -- (d);
+
+                \draw[dashed] (a) -- (fa) -- (fb) -- (b);
+                \draw[dashed] (c) -- (fc) -- (fd) -- (d);
+            \end{axis}
+        \end{tikzpicture} 
+        \caption{Example with $f(x) = x^2$}
+    \end{figure}
+\end{eg}

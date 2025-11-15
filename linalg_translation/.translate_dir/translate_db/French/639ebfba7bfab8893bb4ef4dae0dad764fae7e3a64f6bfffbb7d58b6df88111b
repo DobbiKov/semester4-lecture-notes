@@ -1,0 +1,3 @@
+\begin{itemize}
+    \item Implique le théorème: Soit $K$ fermé et borné.  $K$ borné, donc  $K \subset B_f(0, r)$ avec $r$ grand, donc  $K = K \cap B_f(0, r)$. Donc  $K$ compact.
+\end{itemize}

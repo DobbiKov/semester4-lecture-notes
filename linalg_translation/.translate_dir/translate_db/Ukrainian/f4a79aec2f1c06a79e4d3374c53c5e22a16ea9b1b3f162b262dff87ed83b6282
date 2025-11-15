@@ -1,0 +1,15 @@
+\begin{definition}\label{def:orthogonal}
+     $u, v \in E$ називаються \underline{ортогональними} якщо $<u, v> = 0$. Позначають $u \perp v$
+      \begin{itemize}
+         \item Дві підмножини $A, B$ з $E$ є ортогональними якщо:
+              \[
+             \forall u \in A, \forall v \in B, \quad <u, v> = 0
+             \] 
+         \item Якщо $A \subseteq E$ називають \textbf{ортогональним до $A$}, що позначається $A^{\perp}$ множину
+              \[
+                  A^{\perp} = \{ u \in E \mid <u, v> = 0 \quad \forall v \in A \}
+             \] 
+             Також відомий як \textbf{ортогональне доповнення $A$}
+         \item Сімейство $(v_1, \ldots, v_n)$ векторів з $E$ називається ортогональним, якщо $\forall i \neq j, v_i \perp v_j$. Воно називається ортонормованим, якщо воно ортогональне, і крім того $\|v_i\| = 1 \quad \forall i \in \{ 1, \ldots, n \}$
+     \end{itemize}
+\end{definition}

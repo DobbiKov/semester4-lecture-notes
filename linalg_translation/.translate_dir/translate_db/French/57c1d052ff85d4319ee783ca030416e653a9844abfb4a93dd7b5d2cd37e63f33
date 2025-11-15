@@ -1,0 +1,5 @@
+
+De même \( X \) est la matrice d’un vecteur \( \vec{x} \) dans la base canonique et \( X' = M(\vec{x})_{v_i} \), est liée à \( X \) par
+\[
+X' = P^{-1}X
+\]

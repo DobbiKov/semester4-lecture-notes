@@ -1,0 +1,30 @@
+\begin{eg}
+     Маємо: $A = \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} $ у канонічному базисі $e_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix} $ та $e_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix} $. Нагадаємо, що ми знайшли два власні вектори:
+     \[
+     \begin{cases}
+         v_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+         v_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix} 
+     \end{cases}
+     \] 
+     Зауважимо, що ці два вектори є лінійно незалежними і, отже, утворюють базис для $\R^2$. Спробуємо змінити базис для $A$, маючи два способи:
+      \begin{enumerate}
+          \item Можна обчислити координати $f(v_1)$ та $f(v_2)$ у базисі $\{v_1, v_2\}$, маємо:
+              \begin{align*}
+                  &f(v_1) = 3v_1 = 3 \cdot v_1 + 0 \cdot v_2\\
+                  &f(v_2) = 2v_2 = 0 \cdot v_1 + 2 \cdot v_2
+              \end{align*}
+              І тоді $\operatorname{Mat}_{v_i}(f) = \|f(v_1), f(v_2)\|_{v_i} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} $ 
+          \item Можна обчислити матрицю $P = P_{e_i \to v_i}$ переходу від базису $\{e_i\}$ до базису $\{v_i\}$ та вивести з неї матрицю $f$ у новому базисі. Маємо:
+             \[
+            \begin{cases}
+                v_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix} = 1 \cdot e_1 + 0 \cdot e_2 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}_{e_i} \\
+                v_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix} = -1 \cdot e_1 + 1 \cdot e_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix}_{e_i} \\
+            \end{cases}
+            \] 
+              отже $P = \begin{bmatrix} 1 & -1\\ 0 & 1 \end{bmatrix} $ та $P^{-1} = \begin{bmatrix} 1 & 1 \\ 0 & 1  \end{bmatrix}$ (ви можете перевірити обчислення). І отже:
+              \[
+                  A' = P^{-1}AP = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \underbrace{\begin{bmatrix} 3 & -2 \\ 0 & 2 \end{bmatrix}}_{AP} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} 
+              \] 
+     \end{enumerate}
+     І ось, магія, ми знайшли діагональну матрицю.
+\end{eg}

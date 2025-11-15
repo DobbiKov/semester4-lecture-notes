@@ -1,0 +1,26 @@
+\begin{proof}
+   $1 \implies 2 \implies 3 \implies 4 \implies 1$ 
+   \begin{itemize}
+       \item[$1 \implies 2$:] Hyp: $F$ continuous and  $U_2 \subset E_2$ is open.
+           \par
+           Conclusion: $U_1 = F^{-1}(U_2)$ is open?
+           \par
+           I fix $x_0 \in U_1$ ($F(x_0) \in U_2$).
+           \begin{enumerate}
+               \item $U_2$ open $\implies$ $\exists \epsilon_0 > 0$ \text{ s.t. } $B_2(F(x_0), \epsilon_0) \subset U_2$
+               \item $F$ continuous at  $x_0$: 
+                   \[
+                   \forall \epsilon > 0, \, \exists \delta > 0 \text{ s.t. } d_1(x_0, x) < \delta \implies d_2(F(x_0), F(x)) < \epsilon
+                   \] 
+                   \[
+                   x \in B_1(x_0, \delta) \implies F(x) \in B_2(F(x_0), \epsilon)
+                   \] 
+                   $\delta_0 = $ the  $\delta$ that works for  $\epsilon_0$
+                    \[
+                   x \in B_1(x_0, \delta_0) \implies F(x) \in B_2(F(x_0), \epsilon_0)
+                   \] 
+                   Therefore $B_1(x_0, \delta_0) \subset F^{-1}(U_2)$. Therefore $F^{-1}(U_2)$ open.
+           \end{enumerate}
+       \item[$2 \implies 3$:]: $F^{-1}(U_2)^{c} = F^{-1}(U_2^c)$
+   \end{itemize}
+\end{proof}

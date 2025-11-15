@@ -1,0 +1,28 @@
+Що дуже корисно в діагональних матрицях, так це те, що степінь такої матриці дорівнює тій самій матриці з діагональними елементами, піднесеними до степеня, тобто:
+\[
+    A' = \begin{bmatrix} 
+        \lambda_1 & 0 & \ldots & 0\\ 
+        0 & \lambda_2 & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n
+    \end{bmatrix} \implies A'^{n} = \begin{bmatrix} 
+        \lambda_1 & 0 & \ldots & 0\\ 
+        0 & \lambda_2 & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n
+    \end{bmatrix}^{n} = \begin{bmatrix} 
+        \lambda_1^n & 0 & \ldots & 0\\ 
+        0 & \lambda_2^n & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n^n
+    \end{bmatrix}
+\] 
+Узагальнимо: Якщо $A \in \mathcal{M}_n(K)$ діагоналізована (тобто існують $P$ та $A'$ такі, що $A' = P^{-1}AP$), то:
+\[
+    A^{n} = P(A'^{n})P^{-1} = P\begin{bmatrix} 
+        \lambda_1^n & 0 & \ldots & 0\\ 
+        0 & \lambda_2^n & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n^n
+    \end{bmatrix}P^{-1}
+\]

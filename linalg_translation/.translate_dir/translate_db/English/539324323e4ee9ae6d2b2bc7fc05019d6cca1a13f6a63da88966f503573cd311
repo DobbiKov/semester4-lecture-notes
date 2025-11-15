@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\usepackage{inputenc}
+\usepackage{fontenc}
+\usepackage{textcomp}
+\usepackage{babel}
+\usepackage{amsmath, amssymb, amsthm}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\scalair}[1]{\left\langle #1 \right\rangle}
+
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{eg}{Exemple}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{property}{Propriété(s)}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{remark}{Remarque}
+
+\author{Yehor KOROTENKO}
+\title{CheatSheet pour l'Algèbre Linéaire}CheatSheet for Linear Algebra by Yehor KOROTENKO

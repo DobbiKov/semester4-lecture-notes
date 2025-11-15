@@ -1,0 +1,18 @@
+\begin{remark}
+   \begin{enumerate}
+       \item $p_F$ is linear
+       \item  $\forall x \in E \, p_{F}(x)$ is completely characterized by the following property:\\
+           Let $y \in E$, then
+            \[
+                y = p_F(x) \iff \left( \underset{\implies y = x_F}{y \in F \text{ et } x - y} \in F^{\perp} \right) 
+           \] 
+       In particular, $\scalair{p_F(x), x - p_F(x)} \,= 0$. Then, if $(v_1, \ldots, v_R)$ is an ONB of $F$, we have:
+            \[
+                \forall x \in E, \, p_F(x) = \sum_{i=1}^{k} \scalair{x, v_i}v_i
+           \] 
+           Indeed, it suffices to verify that the vector $y = \sum_{i=1}^{k} \scalair{x, v_i}v_i$ satisfies:
+           \[
+               y \in F \text{ and } x - y \in F^{\perp}
+           \] 
+   \end{enumerate} 
+\end{remark}

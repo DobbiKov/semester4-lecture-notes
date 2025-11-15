@@ -1,0 +1,18 @@
+\begin{eg}
+   \[
+   f(x, y) = \frac{1}{2}(x^2 - y^2)
+   \]  
+   \[
+       H_f(0, 0) = \begin{pmatrix} 1 & 0\\ 0 & -1 \end{pmatrix} 
+   \] 
+   \[
+       I_f = \{(x, y, z): z = \frac{1}{2}(x^2 - y^2)\}
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-point-selle}
+    \caption{Exemple de point selle.}
+    \label{fig:exemple-point-selle}
+\end{figure}
+Les lignes rouges représentent les dérivées partielles et on voit bien que les uns sont croissants et les autres décroissants, donc ce point n'est ni le minimum ni le maximum
+\end{eg}

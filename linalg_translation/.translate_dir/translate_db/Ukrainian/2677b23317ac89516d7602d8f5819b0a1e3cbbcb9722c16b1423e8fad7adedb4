@@ -1,0 +1,11 @@
+\begin{preuve}
+   $S_n = \sum_{k=0}^{n} u_k$ і $T_n = \sum_{k=0}^{n} \|u_k\|$ 
+   \begin{align*}
+       n > p \quad \|S_n - S_p\| = \|\sum_{k = p+1}^{n} u_k\| \le \sum_{k=p+1}^{n} \|u_k\| = T_n - T_p = |T_n - T_p|
+   \end{align*}
+    $(T_n)$ збігається в $\R$, тому $(T_n)$ є Коші:
+     \[
+    \forall \varepsilon > 0, \exists N \text{ така що } \forall n > p \ge N |T_n - T_p| \le \varepsilon
+    \] 
+    тому $(S_n)$ є Коші в $(E, \| \cdot \|)$.  \underline{$E$ повний:}  $(S_n)$ збігається до $S \in E$.
+\end{preuve}

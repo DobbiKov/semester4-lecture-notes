@@ -1,0 +1,3 @@
+\begin{proof}
+    Маємо $A' \in \mathcal{M}_n(K')$ трикутну, подібну до $A$ (нагадування: замикання $K'$ над $K$), отже власні значення знаходяться на діагоналях $A'$. Однак подібні матриці мають ті ж самі сліди та визначники, тому $\operatorname{Tr}(A) = \operatorname{Tr}(A') = \lambda_1 + \ldots + \lambda_n$ та $\det(A) = \det(A') = \lambda_1 \cdot \ldots \cdot \lambda_n$.
+\end{proof}

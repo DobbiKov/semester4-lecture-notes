@@ -1,0 +1,15 @@
+\begin{prop}\label{def:continuite-topologique}
+    definition of topological continuity.
+    \par
+    Let $(E_{1}, d_1)$ and $(E_2, d_2)$ be two metric spaces and the function $F: E_1 \to E_2$, we say that $F$ is continuous if and only if:
+     \[
+         \forall U \subset E_2 \text{ open}, F^{-1}(U) \text{ open}
+    \] 
+    where $F^{-1}(U) = \{ x \in E_1 \mid F(x) \in U\}$
+\begin{figure}[H]
+    \centering
+    \incfig{continuite-topologique}
+    \caption{topological continuity}
+    \label{fig:continuite-topologique}
+\end{figure}
+\end{prop}

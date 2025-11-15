@@ -1,0 +1,7 @@
+\begin{definition}\label{def:general-linear-group}
+    A general linear group:
+    \[
+        GL(n, \R) = \{A \in \mathcal{M}_{n}(\R) \mid det(A) \neq 0\}
+    \] 
+    is a group of all linear transformations (square matrices) that are invertible (because $det(A) \neq 0$).
+\end{definition}

@@ -1,0 +1,5 @@
+\begin{enumerate}
+    \item[a)] On diagonalise \( A \). Soit \( A' = P^{-1}AP \) une matrice diagonale semblable à \( A \);
+    \item[b)] on intègre le système \( \frac{dX'}{dt} = A'X' \);
+    \item[c)] on revient à \( X \) par \( X = PX' \).
+\end{enumerate}

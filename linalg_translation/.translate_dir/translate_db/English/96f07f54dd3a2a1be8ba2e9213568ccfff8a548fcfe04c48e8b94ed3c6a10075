@@ -1,0 +1,3 @@
+\begin{definition}
+    $(E, d)$ is \underline{complete} if every Cauchy sequence in $E$ is convergent.
+\end{definition}

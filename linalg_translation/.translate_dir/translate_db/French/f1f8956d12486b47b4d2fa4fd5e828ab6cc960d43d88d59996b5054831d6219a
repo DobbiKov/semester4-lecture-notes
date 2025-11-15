@@ -1,0 +1,7 @@
+\begin{eg}
+   \[
+       A = \{(x,y) \mid x > 0, y = \sin(\frac{1}{n}) \}
+   \]  
+   $Adh(A) = A \cup \{(0, y) \mid -1 \le y \le 1\}$
+   $Int(A) = $
+\end{eg}

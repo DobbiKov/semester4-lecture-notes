@@ -1,0 +1,8 @@
+\begin{definition}
+    Soit (E, d) espace métrique.
+    \begin{enumerate}
+        \item $U \subset E$ est ouvert si $\forall x_0 \in U, \, \exists r > 0 \: r(x_0)$ tel que $B(x_0, r) \subset U$
+        \item $F \subset E$ est fermé si $E \setminus F$ est ouvert
+    \end{enumerate}
+    $\O$ est ouvert et $E$ est ouvert.  $\O$ est fermé et $E$ est fermé.
+\end{definition}

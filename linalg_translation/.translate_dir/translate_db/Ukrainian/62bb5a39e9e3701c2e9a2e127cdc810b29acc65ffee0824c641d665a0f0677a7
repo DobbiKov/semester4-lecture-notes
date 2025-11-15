@@ -1,0 +1,7 @@
+\begin{definition}
+    Нехай $\lambda \in K$, позначимо:
+    \[
+        E_{\lambda} := \{v \in E \mid f(v) = \lambda v \}
+    \] 
+    $E_{\lambda}$ є векторним простором $E$, який називається \textbf{власним простором}, що відповідає $\lambda$.
+\end{definition}

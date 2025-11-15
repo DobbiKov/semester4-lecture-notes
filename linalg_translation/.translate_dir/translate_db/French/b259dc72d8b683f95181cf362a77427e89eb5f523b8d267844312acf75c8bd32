@@ -1,0 +1,4 @@
+Dans le chapitre précédent on a étudié une notion d'une base orthonormale dont les utilités sont: simplification des calculs des coordonnées dans une base et calcule d'une projection. 
+Cette notion est l'un des premiers pas vers l'étude de SVD\footnote{Singular Value Decomposition} qui est appliqué dans plusieurs domaines, e.g: la réduction des tailles d'images.
+\par
+Dans ce chapitre on continue l'étude des bases pour pouvoir finalement comprendre le SVD. On va étudier la réduction des endomorphismes, \textit{to be more precise} la diagonalisation et la triagonalisation. Pour commencer: un petit exo:

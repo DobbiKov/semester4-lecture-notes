@@ -1,0 +1,11 @@
+\begin{definition}
+    Let $A = [a_{i, j}] \in \mathcal{M}_{n}(\R)$ be a square matrix $n \times n$, then:
+    \[
+        \operatorname{det}(A) = \sum_{\sigma \in S_n}^{} \operatorname{signe}(\sigma) \cdot \prod_{i=1}^{n} a_{i, \sigma(i)} 
+    \] 
+    where 
+    \begin{itemize}
+        \item $S_n$ is a group of all permutations of $\{1, \ldots, n\}$
+        \item $\operatorname{signe}(\sigma)$ is a sign of permutation
+    \end{itemize}
+\end{definition}

@@ -1,0 +1,7 @@
+\begin{align*}
+            & y(t)  &&= e^{-tA}x(t)\\
+    \implies& y'(t) &&= -Ae^{-tA}x(t) + e^{-tA}x'(t)\\
+            &       &&= -Ae^{-tA}x(t) + e^{-tA}Ax(t)\\
+            &       &&= 0\\
+    \implies& y(t)  && = x_0 \implies x(t) = e^{tA}
+\end{align*}

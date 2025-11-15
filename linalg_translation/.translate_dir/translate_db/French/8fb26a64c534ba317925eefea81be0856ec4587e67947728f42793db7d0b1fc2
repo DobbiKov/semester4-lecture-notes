@@ -1,0 +1,7 @@
+\begin{propriete}
+    \begin{itemize}
+        \item Toute partie finie est bornée.
+        \item Toute sous-partie d'un borné est bornée.
+        \item Une union finie de bornés est bornée.
+    \end{itemize}
+\end{propriete}

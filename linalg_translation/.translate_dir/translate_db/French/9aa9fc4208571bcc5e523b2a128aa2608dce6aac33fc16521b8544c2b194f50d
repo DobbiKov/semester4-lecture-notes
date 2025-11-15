@@ -1,0 +1,3 @@
+\begin{definition}[Ensemble compact - Définition de Borel-Lebesgue]
+    Une partie \(K \subset E\) est \textbf{compacte} si de tout recouvrement ouvert de \(K\), on peut extraire un sous-recouvrement \textbf{fini}.
+\end{definition}

@@ -1,0 +1,6 @@
+\begin{prop}
+    Let $f$ be an endomorphism in $E$ and $\lambda$ an eigenvalue of order $\alpha$ (i.e., $\alpha$ is a root of $P_f(\lambda)$ of order $\alpha$, i.e., $P_f(\lambda) = (X - \lambda)^{\alpha}Q(X)$). Then:
+   \[
+   \dim E_{\lambda} \le \alpha
+   \] 
+\end{prop}

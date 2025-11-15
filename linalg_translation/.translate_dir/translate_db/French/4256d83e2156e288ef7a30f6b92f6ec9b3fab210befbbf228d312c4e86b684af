@@ -1,0 +1,6 @@
+\begin{proposition}[Caractérisations séquentielles]
+   \begin{enumerate}
+       \item \textbf{Adhérence :} \(x \in \operatorname{Adh}(A) \iff\) il existe une suite \((a_n)\) d'éléments de \(A\) telle que \(a_n \to x\).
+       \item \textbf{Fermé :} \(A\) est fermé \(\iff\) pour toute suite \((a_n)\) d'éléments de \(A\) qui converge vers \(x \in E\), on a \(x \in A\).
+   \end{enumerate}
+\end{proposition}

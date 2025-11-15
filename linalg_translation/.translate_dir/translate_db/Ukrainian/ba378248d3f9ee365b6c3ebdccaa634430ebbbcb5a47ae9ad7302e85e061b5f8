@@ -1,0 +1,10 @@
+\begin{prop}\label{prop:prod-scal-par-matrice} скалярний добуток, представлений матрицею.\par
+   Зазначимо:
+   \begin{align*}
+       \underbrace{A = M(b)_{e_i}}_{\text{матриця скалярного добутку}} && \underbrace{X = M(x)_{e_i}}_{\substack{\text{координати $x$}\\ \text{у базисі $e_i$}}} && \underbrace{Y = M(y)_{e_i}}_{\substack{\text{координати $y$}\\ \text{у базисі $e_i$}}} && (x, y \in E)
+   \end{align*}
+   Тоді маємо:
+   \[
+       b(x, y) = X^{t}AY
+   \] 
+\end{prop}

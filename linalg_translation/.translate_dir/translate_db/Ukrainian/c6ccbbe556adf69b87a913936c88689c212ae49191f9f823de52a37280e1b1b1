@@ -1,0 +1,11 @@
+\begin{explanation} леми
+   \begin{itemize}
+       \item $(1) \implies (2)$ :\\
+           \underline{Гіпотеза}: $\exists x_1 \in E, \exists r_1 \in E$ така що $A \subset B(x_1, r_1)$\\
+           Нехай $x_0 \in E$. Мета: знайти $r$ такий що  $A \subset B(x_0, r)$ якщо $x \in A$, маємо:  $d(x_1, x) < r_1$\\
+           \underline{Я хочу}: $d(x_0, x) <r$\\
+          \begin{align*}
+              d(x_0, x) \le d(x_0, x_1) + d(x_1, x) \le d(x_0, x_1) + r_1 < r \quad \text{ якщо } r > d(x_0, x_1) + r_1
+          \end{align*} 
+   \end{itemize} 
+\end{explanation}

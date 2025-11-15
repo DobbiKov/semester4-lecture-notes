@@ -1,0 +1,8 @@
+\begin{theorem}[Continuité et compacité]
+    \begin{enumerate}
+        \item L'image d'un compact par une application continue est compacte.
+        Si \(f: E_1 \to E_2\) est continue et \(K \subset E_1\) est compact, alors \(f(K)\) est compact dans \(E_2\).
+        \item (Théorème des bornes atteintes) Si \(f: K \to \R\) est continue et \(K \subset E_1\) est un compact non vide, alors \(f\) est bornée sur \(K\) et atteint ses bornes.
+        (i.e., \(\exists x_m, x_M \in K\) tels que \(f(x_m) = \inf_{x \in K} f(x)\) et \(f(x_M) = \sup_{x \in K} f(x)\)).
+    \end{enumerate}
+\end{theorem}

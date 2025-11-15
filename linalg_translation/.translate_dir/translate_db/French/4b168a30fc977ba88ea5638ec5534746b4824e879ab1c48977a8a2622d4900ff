@@ -1,0 +1,22 @@
+\begin{preuve}
+   $E_1$ c'est $(E, N_1)$, $E_2 = (E, N_2)$.
+   \par
+   $N_1$ et $N_2$ topologiquement équivalentes veut exactement dire:
+   \begin{enumerate}
+       \item $Id: E_1 \to E_2$ sont continue 
+       \item et $Id: E_2 \to E_1$
+   \end{enumerate}
+   Donc:
+   \begin{enumerate}
+       \item $\Omega$ ouvert  pour $N_2$ $\implies$ $\Omega$ ouvert  pour  $N_1$
+       \item $\Omega$ ouvert  pour $N_1$ $\implies$ $\Omega$ ouvert pour  $N_2$
+   \end{enumerate}
+
+   \begin{enumerate}
+       \item $\iff$ $N_2(Id \, u) (= N_2(u)) \le c_1N_1(u)$
+       \item $\iff$ $N_1(Id \, u) (= N_1(u)) \le c_2N_2(u)$
+   \end{enumerate}
+   car $Id$ continue et linéaire, donc bornée  $\exists c$ tq $\underbrace{Id \, u}_{\in E_2} \le c \underbrace{u}_{E_1}$ donc $N_2(Id \, u) \le c N_1(u)$
+   \par
+   $(1)$ et  $(2)$  $\iff$ $N_1$ et $N_2$ équivalentes.
+\end{preuve}

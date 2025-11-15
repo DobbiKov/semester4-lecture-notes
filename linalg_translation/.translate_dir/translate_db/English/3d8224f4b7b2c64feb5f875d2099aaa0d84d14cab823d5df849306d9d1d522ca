@@ -1,0 +1,9 @@
+\begin{definition}
+     $E$ a set. A sequence in $E$: denoted $(u_n)_{n \in \N}$ it is a function $u:  \N \to E$ where $u(n)$ is denoted  $u_n$ is the the  $\text{n}^{\text{th}}$ term of the sequence $(u_n)_{n \in \N}$.
+     \par
+     If $E = \R^d$
+     \[
+     \R^d \ni X_n = (x_{1,n}, \ldots, x_{d,n})
+     \] 
+ where $(x_{i,n})_{n \in \N}$ sequences in $\R$
+ \end{definition}

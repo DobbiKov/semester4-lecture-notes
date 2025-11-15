@@ -1,0 +1,4 @@
+\begin{theorem}
+    Characterization using sequences. \par
+    $K \subset E$ is compact iff every sequence of elements from $K$ has a subsequence that converges to an element of  $K$.
+\end{theorem}

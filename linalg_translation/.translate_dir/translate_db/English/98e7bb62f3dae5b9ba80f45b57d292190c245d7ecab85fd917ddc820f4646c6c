@@ -1,0 +1,5 @@
+
+Special case: \(n=1\), \(g(t) = (g_1(t), \dots, g_m(t))\), \(f: \R^m \to \R\). \(h(t) = f(g(t))\).
+\[ h'(t) = \sum_{j=1}^m \frac{\partial f}{\partial y_j}(g(t)) \cdot g_j'(t) = \nabla f(g(t)) \cdot g'(t) \]
+
+

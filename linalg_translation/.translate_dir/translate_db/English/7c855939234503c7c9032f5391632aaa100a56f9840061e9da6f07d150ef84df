@@ -1,0 +1,7 @@
+\begin{definition}
+    \textbf{Orthogonal of $A$}:
+    \[
+        A^{\perp} = \{ u \in E \mid \scalair{u, v} = 0 \quad \forall v \in A \}
+    \]
+    also known as \textbf{orthogonal complement}.
+\end{definition}

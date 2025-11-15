@@ -1,0 +1,61 @@
+\begin{eg}
+   \begin{enumerate}
+       \item $A = \begin{pmatrix} 
+            -1 & 1 & 1\\
+            1  & -1 & 1\\
+            1  & 1  & -1
+           \end{pmatrix} $. $P_A(X) = -(X - 1)(X + 2)^2$, отже, маємо дві можливості:
+           \begin{itemize}
+               \item $m_A(X) = (X - 1)(X + 2)$ - отже  $A$ діагоналізована
+               \item  $m_A(X) = (X - 1)(X + 2)^2$ - отже $A$ не діагоналізована
+           \end{itemize}
+           Обчислимо:
+           \[
+            (A - I)(A + 2I) = \begin{pmatrix} 
+                -2 & 1 & 1\\
+                1 & -2 & 1\\
+                1 & 1  & -2
+            \end{pmatrix}\begin{pmatrix} 
+                1 & 1 & 1\\
+                1 & 1 & 1\\
+                1 & 1 & 1
+            \end{pmatrix} = \begin{pmatrix} 
+                0 & 0 & 0\\
+                0 & 0 & 0\\
+                0 & 0 & 0
+            \end{pmatrix}   
+           \] 
+           Отже, $m_f(X) = (X - 1)(X + 2)$ і тому $A$ є діагоналізованою.
+        \item  $A = \begin{pmatrix} 
+                3 & -1 & 1\\
+                2 & 0  & 1\\
+                1 & -1 & 2
+            \end{pmatrix} $. Маємо: $P_A(X) = -(X - 1)(X - 2)^2$, отже:
+            \[
+            m_A(X) = \begin{cases}
+                (X-1)(X-2) \quad \text{ тобто $A$ діагоналізована}\\
+                (X-1)(X-2)^2 \quad \text{ тобто $A$ не діагоналізована}
+            \end{cases}
+            \] 
+            Обчислимо:
+            \[
+                (A - I)(A - 2I) = \begin{pmatrix} 
+                    2 & -1 & 1\\
+                    2 & -1 & 1\\
+                    1 & -1 & 1\\
+                \end{pmatrix} 
+                \begin{pmatrix} 
+                    1 & -1 & 1\\
+                    2 & -2 & 1\\
+                    1 & -1 & 0
+                \end{pmatrix} 
+                =
+            \begin{pmatrix}
+            1 & -2 & 1 \\
+            1 & -2 & 1 \\
+            0 & -2 & 2
+            \end{pmatrix} \neq \begin{pmatrix} 0 & 0 & 0\\  0 & 0 & 0\\ 0 & 0 & 0 \end{pmatrix} 
+            \] 
+            Звідси $m_A(X) \neq (X-1)(X-2)$ і тому $A$ не є діагоналізованою.
+   \end{enumerate} 
+\end{eg}

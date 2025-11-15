@@ -1,0 +1,9 @@
+\begin{prop}
+    \begin{enumerate}
+        \item $Int(A) \subset A \subset Adh(A)$
+        \item $E = Int(E \setminus A) \cup Fr(A) \cup Int(A)$ (union disjointe)
+        \item $E \setminus Int(A) = Adh(E \setminus A)$
+        \item $E \setminus Adh(A) = Int(E \setminus A)$
+        \item $Fr(A) = Adh(A) \setminus Int(A)$
+    \end{enumerate} 
+ \end{prop}

@@ -1,0 +1,9 @@
+\begin{explanation}
+   On rappelle que si $G, G'$ sont des sous-e.v de dimension finie dans le même e.v, alors:
+   \[
+   G = G' \iff G \subseteq G' \text{ et } dim(G) = dim(G')
+   \] 
+   $\implies$) $f$ injective  $\implies$ $Ker(f) = {0}$\\
+   $\impliedby$) Soit $Ker(f) = {0}$.\\
+   Alors, forcément  $dim(Ker(f)) = 0$ et par le théorème du rang on a  $dim(F) = dim(Im(f))$, donc  $Im(f) = F'$
+\end{explanation}

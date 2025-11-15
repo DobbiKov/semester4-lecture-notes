@@ -1,0 +1,3 @@
+\begin{prop}
+    \textbf{Induced norm}: If $F \subset E$ a vector subspace, I restrict $N$ to $F$, then $(F, N)$ is a normed vector space.
+\end{prop}

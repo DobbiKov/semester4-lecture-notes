@@ -1,0 +1,9 @@
+\begin{definition}
+    Нехай $E$ — $\mathbb{K}$-векторний простір і $\lambda \in \R$, \textbf{норма} на $E$ є відображенням $N: E \to \R_{+}$ з:
+    \begin{enumerate}
+        \item $N(\lambda u) = |\lambda|N(u) \quad u \in E$
+        \item $N(u + v) \le N(u) + N(v)$
+        \item $N(u) = 0 \iff u = 0_{E}$
+    \end{enumerate}
+    \textbf{напівнорма}: $1$ і $2$ тільки.
+\end{definition}

@@ -1,0 +1,9 @@
+\newcommand{\lesson}[3]{
+    \ifthenelse{\isempty{#3}}{%
+        \def\@lesson{Лекція #1}%
+    }{%
+        \def\@lesson{Лекція #1: #3}%
+    }%
+    \subsection*{\@lesson}
+    \testdateparts{#2}
+}

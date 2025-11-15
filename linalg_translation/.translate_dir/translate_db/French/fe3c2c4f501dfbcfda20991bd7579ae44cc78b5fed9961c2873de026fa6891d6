@@ -1,0 +1,10 @@
+\begin{intuition}
+    Comme $Q(f) = 0$, donc  $\forall v \in E, Q(f)(v) = 0$ donc
+    $\operatorname{Ker}(Q(f)) = E$. $\exists v_1, \ldots, v_p$ tq $v = v_1 +
+    \ldots + v_p$. Or tous les polynômes sont deux à deux premiers, alors c'est
+    seulement l'un qui annule $v_i$ donc  $v_i \in \operatorname{Ker}Q_i(f)$ et
+    cela reste vrai pour tous les $v_1, \ldots, v_p$. Et comme les polynômes
+    sont premiers, donc si $k \neq j$ et $Q_k(v_i) = 0$, donc  $Q_j(v_i) \neq
+    0$ car $Q_j$ et  $Q_k$ sont différents. Alors,  $\forall i, j \,
+    \operatorname{Ker}Q_i \cap \operatorname{Ker}Q_j = \{0\}$.
+\end{intuition}

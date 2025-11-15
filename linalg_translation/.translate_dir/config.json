@@ -1,0 +1,35 @@
+{
+  "name": "linalg",
+  "lang_dirs": [
+    {
+      "language": "Ukrainian",
+      "path": "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/linalg_ua"
+    },
+    {
+      "language": "English",
+      "path": "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/linalg_en"
+    }
+  ],
+  "src_dir": {
+    "language": "French",
+    "path": "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src"
+  },
+  "root_path": "/Users/dobbikov/Desktop/latex/semester2/linalg_translation",
+  "translatable_files": [
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/preamble.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/appendices.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/cheatsheet.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/lec1.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/lec2.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/lec3.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/lec4.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/lec5.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/lec6.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/macros.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/main.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/preamble.tex",
+    "/Users/dobbikov/Desktop/latex/semester2/linalg_translation/src/linalg/rappelle.tex"
+  ],
+  "llm_service": "google",
+  "llm_model": "gemini-2.0-flash"
+}

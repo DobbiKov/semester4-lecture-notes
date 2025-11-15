@@ -1,0 +1,3 @@
+\begin{definition}
+    alternative of density. Let $A \subset B$. $A$ is dense in B if every open ball in B contains at least one élémens of A.
+\end{definition}

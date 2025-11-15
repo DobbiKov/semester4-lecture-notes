@@ -1,0 +1,4 @@
+\begin{theorem}
+    Caractérisation à l'aide de suites. \par
+    $K \subset E$ est compact ssi toute suite d'éléments de $K$ admet une sous-suite qui converge vers un élément de  $K$.
+\end{theorem}

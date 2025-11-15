@@ -1,0 +1,13 @@
+\begin{eg}
+    
+\begin{figure}[H]
+    \centering
+    \incfig{suite-sans-sous-suite-convergente}
+    \caption{sequence-without-convergent-subsequence}
+    \label{fig:suite-sans-sous-suite-convergente}
+\end{figure}
+\[
+    F = \{(x, y): x \ge 0, -\frac{1}{x} \le y \le \frac{1}{x} \}
+\] 
+$u_n = (n, 0)$  $(u_n)$ sequence in $F$ without convergent subsequence.
+\end{eg}

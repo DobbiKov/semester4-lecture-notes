@@ -1,0 +1,7 @@
+\begin{definition}
+    Нехай $F$ — векторний підпростір $E$, отже $E = F \oplus F^{\perp}$ звідки $\forall v \in E, \exists v_1 \in F, v_2 \in F^{\perp}$ такий що $v = v_1 + v_2$. Покладемо:
+    \[
+    s_F(v) = v_1 - v_2
+    \] 
+    і $s_F$ називається ортогональною симетрією відносно осі F.
+\end{definition}

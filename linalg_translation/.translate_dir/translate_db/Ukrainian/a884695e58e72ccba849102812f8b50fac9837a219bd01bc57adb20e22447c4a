@@ -1,0 +1,9 @@
+\begin{prop}
+   Корисні формули: (для $X, Y \in E$)
+   \begin{enumerate}
+       \item $|\scalair{X, Y}| \le \|X\| \cdot \|Y\|$ (рівність якщо $X$ та $Y$ колінеарні)
+       \item $\|X + Y\|^2 = \|X\|^2 + 2\scalair{X, Y} + \|Y\|^2$ 
+       \item $\|X + Y\|^2 + \|X - Y\|^2 = 2\left( \|X\|^2 + \|Y\|^2 \right) $
+       \item $\scalair{X, Y} = \frac{1}{4}\left( \|X + Y\|^2 - \|X - Y\|^2 \right) $
+   \end{enumerate}
+\end{prop}

@@ -1,0 +1,21 @@
+\begin{preuve}
+   We must show that:
+   \begin{enumerate}
+       \item $F \cap F^{\perp} = \O$
+       \item $E = F + F^{\perp}$ i.e. $\forall x \in E, \exists x' \in F, \, x'' \in F^{\perp}$ such that $x = x' + x''$ 
+   \end{enumerate}
+   \begin{enumerate}
+       \item Let $x \in F \cap F^{\perp}$\\
+       $\implies$ $\scalair{X, Z} = 0 \, \forall Z \in F$ because $x \in F \implies \scalair{X, X} = 0 \implies x = 0 (\scalair{,} \text{ is defined})$ 
+        \item Let $x \in E$. Consider $f_x \in E^{*}$, i.e. $f_x: E \to \R, y \mapsto \scalair{x, y}$ and $f := f_{x|F}: F \to \R \implies f \in E^{*}$
+            Riesz Lemma $\implies$ $\exists! x' \in F$ such that $f = f_{x'}: F \to \R, z \mapsto \scalair{x', z}$\\
+            $\implies f_{x}(z) = f_{x'}(z) = f(z)\, \forall z \in F$ (Attention: not the equality for all $z$ in $E$)\\
+            Let $x'' := x - x'$, i.e. $x = x' + x'' \in F$. Let's show $x'' \in  F^{\perp}$.\\
+            If $z \in F$, $\scalair{x'', z} = \scalair{x - x', z} = \scalair{x, z} - \scalair{x', z} = 0$. Therefore, $x'' \in F^{\perp}$ and $E = F \oplus F^{\perp}$ ($dim(E) = dim(F) + dim(F^{\perp})$) \\
+            $F \subseteq (F^{\perp})^{\perp}$ because $\scalair{x, z} = 0 \, \forall x \in F \, \forall z \in F^{\perp}$
+            \[
+                dim(F) = dim(E) - dim(F^{\perp})
+            \]
+            because $E = G \oplus G^{\perp}$, therefore $dim(G) = dim(E) - dim(G^{\perp})$ for $G = F^{\perp}, \, dim(F^{\perp}) = dim(G)$
+   \end{enumerate}
+\end{preuve}

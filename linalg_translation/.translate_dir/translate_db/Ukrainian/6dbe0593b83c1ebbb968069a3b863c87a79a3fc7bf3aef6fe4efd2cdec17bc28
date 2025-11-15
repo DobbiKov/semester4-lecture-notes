@@ -1,0 +1,7 @@
+\begin{definition}
+    Нехай $E$ — векторний простір, оснащений скалярним добутком $\scalair{,}$
+     \begin{itemize}
+         \item Сім'я $(v_i)_{i \ge 0}$ векторів з $E$ називається \underline{ортогональною}, якщо для $i \neq j$ ми маємо $\scalair{v_i, v_j} = 0$, тобто $v_i \perp v_j$
+         \item Ортонормальна сім'я з $E$ — це ортогональна сім'я $(v_i)_{i \ge  0}$, така що до того ж $\|v_i\| = 1$ для $i \ge 0$
+    \end{itemize}
+\end{definition}

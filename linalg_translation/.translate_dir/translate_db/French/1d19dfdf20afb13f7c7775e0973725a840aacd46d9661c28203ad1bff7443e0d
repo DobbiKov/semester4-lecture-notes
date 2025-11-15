@@ -1,0 +1,6 @@
+\begin{theorem}
+    Soit $f: D \longrightarrow \R$ différentiable, $D$ ouvert et  $X_0 \in D$ (sinon, si $D$ pas ouvert, il faut  $X_0 \in \operatorname{Int}(D)$) alors:
+    \[
+        X_0 \text{ extremum local } \implies X_0 \text{ point critique} 
+    \] 
+\end{theorem}

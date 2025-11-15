@@ -1,0 +1,8 @@
+\begin{preuve}
+   Suppose that $f$ is an isometry of $E$. Let $x, y \in E$. By definition: $\scalair{f(x), f(y)} = \scalair{x, y}$, therefore, let $y := x$, then, we have:
+   \begin{align*}
+       &\underbrace{\scalair{f(x), f(x)}}_{\|f(x)\|^2} = \underbrace{\scalair{x, x}}_{\|x\|^2}\\
+       \iff &\|f(x)\|^2 = \|x\|^2\\
+       \iff &\|f(x)\| = \|x\|
+   \end{align*}
+\end{preuve}

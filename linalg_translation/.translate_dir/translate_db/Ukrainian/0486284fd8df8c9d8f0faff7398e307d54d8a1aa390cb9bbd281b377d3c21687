@@ -1,0 +1,54 @@
+\begin{prop} властивості визначника.
+    Для цієї пропозиції, ми позначаємо $\det(c_1, \ldots, c_n)$ визначник, де $\forall i, \, r_i$ і $\forall i, \, y_i$ представляють стовпець (або вектор-стовпець). І $\forall i, \lambda_i \in \R$.
+    \begin{enumerate}
+        \item \textbf{Визначник одиничної матриці дорівнює 1:}
+            \[
+            \det(I_n) = 1
+            \] 
+        \item \textbf{Визначник матриці рангу 1 є її єдиним елементом}:
+            \[
+                \det(\begin{bmatrix} a_{1,1} \end{bmatrix} ) = a_{1,1} \qquad \text{ де } a_{1,1} \in \R
+            \] 
+        \item \textbf{Лінійність 1}:
+            \[
+            \det(r_1, \ldots, r_i + y_i, \ldots, r_n) = \det(r_1, \ldots, r_i, \ldots, r_n) + \det(r_1, \ldots, y_i, \ldots, r_n)
+            \] 
+        \item \textbf{Лінійність 2}:
+            \[
+            \det(r_1, \ldots, \lambda_ir_i, \ldots, r_n) = \lambda_i\det(r_1, \ldots, r_i, \ldots, r_n) 
+            \] 
+            \begin{note}
+               Ось чому:
+               \[
+               \det(\lambda A) = \lambda^n\det(A)
+               \] 
+            \end{note}
+        \item \textbf{Однакові стовпці}: Припустимо, що $i \neq j$ і $c_i = c_j$ тоді:
+             \[
+            \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) = 0
+            \] 
+            Якщо є два однакових стовпці, тоді $\det$ дорівнює 0.
+        \item \textbf{Переміщення стовпців}:
+            
+\[
+    \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) 
+    = -\det(c_1, \ldots, 
+    \underbrace{c_j , \ldots, 
+    c_i}_{\text{permutation}}, \ldots, c_n)
+\]
+Інакше кажучи, перестановка стовпців змінює знак.
+
+\item \textbf{Визначник помножених матриць}: Нехай $A, B \in \mathcal{M}_n(\R)$
+    \[
+        \det(AB) = \det(A)\det(B) 
+    \] 
+
+\item \textbf{Визначник транспонованої матриці}: Нехай $A \in \mathcal{M}_n(\R)$
+    \[
+        \det(A^{T}) = \det(A)
+    \] 
+
+
+% Drawing the arc manually
+\end{enumerate}
+\end{prop}

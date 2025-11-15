@@ -1,0 +1,7 @@
+\begin{definition}
+    Soit $F$ un sous-espace vectoriel de  $E$, donc  $E = F \oplus F^{\perp}$ d'où  $\forall v \in E, \exists v_1 \in F, v_2 \in F^{\perp}$ tel que $v = v_1 + v_2$. On pose:
+    \[
+    s_F(v) = v_1 - v_2
+    \] 
+    et on appelle $s_F$ une symétrie orthogonale d'axe F.
+\end{definition}

@@ -1,0 +1,6 @@
+\begin{definition}
+    $K \subset E$ est compact si de tout recouvrement ouvert $(U_i)_{i \in I}$ de $F$ on peut extraire un sous-recouvrement fini: je peux choisir  $i_1, \ldots, i_n \in I$ tels que 
+    \[
+    F \subset U_{i_1} \cup U_{i_2} \cup \ldots \cup U_{i_n}
+    \] 
+\end{definition}

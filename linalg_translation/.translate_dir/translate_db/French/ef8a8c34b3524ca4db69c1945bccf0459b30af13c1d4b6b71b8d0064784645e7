@@ -1,0 +1,9 @@
+\begin{definition}
+    Soit $E$ un  $\mathbb{K}$-espace vectoriel et $\lambda \in \R$, la \textbf{norme} sur  $E$ est une application $N: E \to \R_{+}$ avec:
+    \begin{enumerate}
+        \item $N(\lambda u) = |\lambda|N(u) \quad u \in E$
+        \item $N(u + v) \le N(u) + N(v)$
+        \item $N(u) = 0 \iff u = 0_{E}$
+    \end{enumerate}
+    \textbf{semi-norme}: $1$ et  $2$ seulement.
+\end{definition}

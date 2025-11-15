@@ -1,0 +1,11 @@
+\begin{preuve}
+    Soit $Q(X) = a_n X^n + a_{n-1} X^{n-1} + \ldots + a_0$ un polynôme annulateur de $f$ et  $\lambda$ une valeur propre de  $f$. Donc  $\exists v \neq 0 \in E$ tq $f(v) = \lambda v$, de plus:
+    \[
+        Q(f) = a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id} = 0
+    \] 
+    Or $f(v) = \lambda v$, donc  $f^2(v) = f(\lambda v) = \lambda^2 v$, d'où  $f^k(v) = \lambda^k v$  $\forall k \in \N$, alors:
+    \[
+        Q(f(v)) = 0 = (a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id})v = (a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id})v = 0
+     \] 
+     Or $v \neq 0$, donc $a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id} = 0$ d'où  $\lambda$ est une racine de  $Q$.
+\end{preuve}

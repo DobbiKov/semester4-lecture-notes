@@ -1,0 +1,6 @@
+\begin{figure}[H]
+    \centering
+    \incfig{continuite-multidimensionelle}
+    \caption{Dérivée directionnelle}
+    \label{fig:continuite-multidimensionelle}
+\end{figure}

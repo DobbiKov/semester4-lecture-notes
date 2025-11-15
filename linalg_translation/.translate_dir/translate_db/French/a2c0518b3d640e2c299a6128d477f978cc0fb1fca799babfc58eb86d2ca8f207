@@ -1,0 +1,8 @@
+\begin{definition}
+    Soit $(E_{1}, d_1)$ et $(E_2, d_2)$ deux éspaces métriques, $x_0 \in E_1$, $l \in E_2$ et $F: E_1 \to E_2$ une application.
+    \begin{enumerate}
+        \item On dit que $\lim_{x \to x_0} F(x) = l$ si pour tout $\epsilon > 0, \, \exists \alpha > 0$ tel que pour tout $x \in E_1$ tel que  $d_1(x_0, x) \le \alpha$ on a $d_2(f(x), l) \le \epsilon$ 
+        \item On dit que $F$ est continue en  $x_0$ si $\lim_{x \to x_0} f(x) = f(x_0)$
+        \item On dit que $F$ est continue si  $F$ est continue en tout $x \in E_1$
+    \end{enumerate}
+\end{definition}

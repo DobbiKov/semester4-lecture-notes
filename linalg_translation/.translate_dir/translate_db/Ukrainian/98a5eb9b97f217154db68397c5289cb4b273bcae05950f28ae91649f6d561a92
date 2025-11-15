@@ -1,0 +1,5 @@
+\begin{definition}
+    Нехай $A \subset B$. Кажуть, що $A$ є \textbf{щільним} у $B$ якщо $B \subset Adh(A)$
+    \par
+    Нехай $x_0 \in B, \, \forall \epsilon > 0 \, \exists  x_{\epsilon} \in A$ такий що $d(x_0, x_{\epsilon}) < \epsilon$
+\end{definition}

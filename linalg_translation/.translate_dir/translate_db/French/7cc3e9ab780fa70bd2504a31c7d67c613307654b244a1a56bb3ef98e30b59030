@@ -1,0 +1,7 @@
+\begin{definition}
+    La distance entre un points $x$ et un ensemble  $B$ est:
+     \[
+         d(x, B) := \underset{y \in B}{inf}d(x, y)
+    \] 
+    La même intuition.
+\end{definition}

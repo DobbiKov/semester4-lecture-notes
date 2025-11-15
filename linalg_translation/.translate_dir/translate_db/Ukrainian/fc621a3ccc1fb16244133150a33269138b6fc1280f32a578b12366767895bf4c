@@ -1,0 +1,3 @@
+\begin{prop}\label{prop:boules-fermes-sont-compactes}
+   Замкнені кулі $B_f(x_0, r)$ є компактними в $\R^n$. 
+\end{prop}

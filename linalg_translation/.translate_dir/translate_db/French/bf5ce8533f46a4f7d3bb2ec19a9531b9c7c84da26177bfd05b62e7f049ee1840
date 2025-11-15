@@ -1,0 +1,7 @@
+\begin{prop}\label{prop:polynome-caracteristique}
+   Soit $f$ un endomorphisme dans un espace vectoriel  $E$ de dimension finie  $n$ et $A$ la matrice représentative de  $f$ dans une base de  $E$. Les valeurs propres de  $f$ sont les racine du polynôme:
+   \[
+   P_f(\lambda) = \det(A - \lambda I)
+   \] 
+   Ce polynôme est dit \textbf{polynôme caracteristique} de $f$.
+\end{prop}

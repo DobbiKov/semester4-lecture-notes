@@ -1,0 +1,34 @@
+\begin{preuve}
+    \underline{Weierstrass:} $f: \R \to \R$ $K = [a, b]$. \par
+    I take $(E, d)$ instead of $\R^n$. $f$ bounded on $K$: $\exists c_1, c_2$ such that 
+    \[
+    c_1 \le f(x) \le c_2, \forall x \in K \iff f(K) \subset [c_1, c_2] 
+\] 
+    It is clear because $f(K)$ is compact in $\R$, therefore bounded.
+    \par
+    \begin{align*}
+        &m = \underset{x \in K}{inf} f(x) = inf \: f(K) &M = \underset{x \in K}{sup} f(x) = sup \: f(K)
+    \end{align*}
+    To show: $\exists x \in K$ such that $f(x) = m$ and $\exists x' \in K$ such that $f(x') = M$
+    \par
+     $m = inf \: f(K)$, that means that 
+      \begin{enumerate}
+          \item $f(K) \subset [m, +\infty[$ ($m$ a lower bound for $f(K)$)
+          \item $\forall \epsilon > 0, \exists y \in f(K)$ such that $y \le m + \epsilon$
+     \end{enumerate}
+     $\epsilon = \frac{1}{n}$ gives a sequence $y_n \in f(K)$ such that $y_n \to m$
+     \begin{align*}
+         &y_n = f(x_n) &x_n \in K
+     \end{align*}
+     $K$ compact: $\exists$ subsequence $x_{\phi(n)}$ such that 
+      \[
+      x_{\phi(n)} \xrightarrow[n \to \infty]{} x \in K
+      \] 
+     $f: E \to \R$ continuous, therefore 
+     \[
+         f(x_{\phi(n)}) = y_{\phi(n)} \to f(x) 
+     \] 
+     But, $y_n \to m$, so $y_{\phi(n)} \to m$ and $y_{\phi(n)} \to f(x)$, so $m = f(x)$, $m$ is attained.
+     \par
+     To show that $M$ is attained the proof is identical.
+\end{preuve}

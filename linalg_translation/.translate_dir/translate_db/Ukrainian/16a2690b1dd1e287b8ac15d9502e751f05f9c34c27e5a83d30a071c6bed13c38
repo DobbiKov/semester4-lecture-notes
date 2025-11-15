@@ -1,0 +1,18 @@
+\begin{eg}.
+   \begin{enumerate}
+       \item $E = \R^n$,  $X = (x_1, \ldots, x_n), Y = (y_1, \ldots, y_n) \in E$\\
+           \[
+               <X, Y> := \sum_{n=1}^{n} x_iy_i
+           \] 
+           Його називають "канонічним скалярним добутком" (або звичайним)
+        \item $E = \R^2$ і  $<X, Y> = 2x_1y_1 + x_2y_2$
+        \item $E = \mathcal{C}^0([-1, 1], \R) \ni f, g$ (простір неперервних функцій)
+            \[
+                <f, g> := \int_{-1}^{1} f(t) \cdot g(t) \: d{t} 
+            \] 
+        \item $E = \mathcal{M}_n(\R) \ni A, B$
+             \[
+            <A, B> := Tr(A^tB)
+            \] 
+   \end{enumerate} 
+\end{eg}

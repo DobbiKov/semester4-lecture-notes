@@ -1,0 +1,35 @@
+\begin{intuition}
+    L'orthonormalité de la base nous simplifie la vie. Mais avant, petite introduction. Soit un e.v $E = \R^2$ et la base $(e_1, e_2) = (\begin{pmatrix} 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0\\ 1 \end{pmatrix})$. Soit un vecteur $\vec{v} = (2, 3)$ :
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                scale=1,
+                axis lines=middle,        % Draw axes in the middle
+                xmin=-2, xmax=4,          % X-axis range
+                ymin=-2, ymax=4,          % Y-axis range
+                xlabel={$x$},             % Label for X-axis
+                ylabel={$y$},             % Label for Y-axis
+                xtick={-2,-1,0,1,2,3,4},% X-axis ticks
+                ytick={-2,-1,0,1,2,3,4},% Y-axis ticks
+                ]
+            \draw[color=red, ->, thick] (0, 0) -- node[below]{$e_1$}(1, 0);
+            \draw[color=blue, ->, thick] (0, 0) -- node[left]{$e_2$}(0, 1);
+            \draw[color=green, ->] (0, 0) --node[above]{$\vec{v}$} (2, 3);
+
+            \draw[color=gray, ->, thick] (1, 0) -- node[below]{$e_1$}(2, 0);
+            \draw[color=gray, ->, thick] (2, 0) -- node[left]{$e_2$}(2, 1);
+            \draw[color=gray, ->, thick] (2, 1) -- node[left]{$e_2$}(2, 2);
+            \draw[color=gray, ->, thick] (2, 2) -- node[left]{$e_2$}(2, 3);
+
+            \node[right, above] (_) at (2, 3){$(2, 3)$};
+        \end{axis} 
+        \end{tikzpicture}
+    \end{center}
+    Donc, on peut écrire $\vec{v} = \vec{(2, 3)} = 2 \cdot \vec{e_1} + 3 \cdot \vec{e_2}$. Les $x$ et  $y$ (les coordonnées de $v$) nous donnes combien de parties de chaque vecteur de bases (le nombre peut être $\in \R$) et prendre leurs sommes, pour obtenir $\vec{v}$. (Le plus simple: combien on doit aller à gauche et en haut).
+    \par
+    Dans la base orthonormale $\scalair{v, e_i}$ nous donne combien on prend d'un vecteur $e_i$ pour faire le vecteur  $\vec{v}$ et  $\vec{e_i}$ donne la direction. D'où $\scalair{v, e_1}$ équivaut à $2$, et  $\scalair{v, e_2}$ à  $3$, puis: 
+   \[
+       \vec{v} = \underbrace{\scalair{v, e_1}}_{= 2} \cdot \vec{e_1} + \underbrace{\scalair{v, e_2}}_{= 3} \cdot \vec{e_2}
+   \]  
+   Habituelement, pour trouver les coordonnées dans une base, on devrait résoudre un système linéaire, tandis qu’une base orthonormale permet de les obtenir en calculant le produit scalaire avec chaque vecteur de la base, ce qui est beaucoup plus simple.
+\end{intuition}

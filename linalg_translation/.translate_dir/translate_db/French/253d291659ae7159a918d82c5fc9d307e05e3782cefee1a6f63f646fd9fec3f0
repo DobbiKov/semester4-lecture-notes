@@ -1,0 +1,95 @@
+\begin{appendices}
+    \chapter{Rappels des concepts d'Algèbre Linéaire} 
+    \section{Matrices}
+    \subsection{Multiplication des matrices}
+    \begin{definition}
+        Soit $A \in \mathcal{M}_{p, n}(\R)$ et $B \in \mathcal{M}_{n, q}(\R)$ tels que $A = (a_{j, i})$ et $B = (b_{m, k})$, alors:
+         \[
+        AB = C = (c_{j, k} = \sum_{i=1}^{n} a_{j, i}b_{i, k})
+        \] 
+    \end{definition}
+    \subsection{La trace}
+    \begin{definition}
+        La trace de la \( n \times n \) matrice carée \( A \), notée \( \text{tr}(A) \), est la somme des éléments diagonales
+
+        \[
+            \text{tr}(A) = a_{11} + a_{22} + \dots + a_{nn} = \sum_{i=1}^{n} a_{ii}
+        \]
+
+        où \( a_{ii} \) sont des éléments diagonales de la matrice \( A \). 
+    \end{definition}
+
+    \begin{property} de la trace.
+       \begin{itemize}
+           \item Linéarité:
+               \[
+                   \text{tr}(A + B) = \text{tr}(A) + \text{tr}(B)
+               \]
+
+               \[
+                   \text{tr}(cA) = c \text{tr}(A), \quad c \in \mathbb{R} \text{ (ou } \mathbb{C} \text{)}
+               \]
+            \item  Transposé:
+                \[
+                    \text{tr}(A) = \text{tr}(A^T)
+                \] 
+            \item Multiplication des matrices:
+                \[
+                    \text{tr}(AB) = \text{tr}(BA), \quad \text{(si } A \text{ et } B \text{ sont de taille } n \times n)
+                \]
+
+                Cependant, la trace n'est pas distributive sur la multiplication :
+
+                \[
+                    \text{tr}(A B C) \neq \text{tr}(A) \text{tr}(B C)
+                \]
+            \item Valeurs propres:
+                \[
+                    \text{tr}(A) = \sum_{i=1}^{n} \lambda_i
+                \]
+
+                où \( \lambda_i \) sont les valeurs propres de \( A \). Cela fait de la trace un outil important en analyse spectrale.
+
+            \item Trace de la Matrice Identité
+
+                \[
+                    \text{tr}(I_n) = n
+                \]
+
+                puisque tous les éléments diagonaux valent 1.
+       \end{itemize} 
+    \end{property}
+    \begin{eg}
+        Pour
+        \[
+            A = \begin{bmatrix} 3 & 2 & 1 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}
+        \]
+
+        la trace est :
+
+        \[
+            \text{tr}(A) = 3 + 5 + 9 = 17
+        \] 
+    \end{eg}
+    \begin{eg}
+        Si
+
+        \[
+            B = \begin{bmatrix} 2 & 1 \\ 0 & 3 \end{bmatrix}, \quad C = \begin{bmatrix} 4 & 2 \\ 1 & 5 \end{bmatrix}
+        \]
+
+        alors
+
+        \[
+            \text{tr}(B + C) = \text{tr} \begin{bmatrix} 6 & 3 \\ 1 & 8 \end{bmatrix} = 6 + 8 = 14
+        \]
+
+        ce qui correspond bien à 
+
+        \[
+            \text{tr}(B) + \text{tr}(C) = (2+3) + (4+5) = 14
+        \]
+
+        confirmant ainsi la linéarité. 
+    \end{eg}
+\end{appendices}

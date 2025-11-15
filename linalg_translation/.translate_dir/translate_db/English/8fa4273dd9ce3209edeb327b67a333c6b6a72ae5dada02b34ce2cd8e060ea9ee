@@ -1,0 +1,4 @@
+\begin{definition}[Boundary]
+    The \textbf{boundary} of \(A\), denoted \(\operatorname{Fr}(A)\) or \(\partial A\), is \(\operatorname{Adh}(A) \setminus \operatorname{Int}(A)\).
+    It is also \(\operatorname{Adh}(A) \cap \operatorname{Adh}(E \setminus A)\).
+\end{definition}

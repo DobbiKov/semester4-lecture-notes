@@ -1,0 +1,31 @@
+\begin{доказ}
+   \begin{enumerate}
+       \item Нехай $(x_n)$ з  $\lim x_n = x$
+            \[
+                \forall \epsilon > 0 \, \exists M(\epsilon) \text{ таке що якщо } n \ge N(\epsilon), d(x_n ,x) \le \epsilon 
+           \] 
+           Нехай $y_n = x_{\phi(n)}$ підпослідовність.
+           \begin{itemize}
+               \item \underline{Мета:} Нехай $\epsilon > 0$, знайти $N(\epsilon)$ таке що якщо  $n \ge  N(\epsilon), \, d(\underbrace{y_n}_{:= x_{\phi(n)}}, x) \le \epsilon$
+           \end{itemize}
+           Я обираю $N(\epsilon)$ таке що якщо  $n \ge N(\epsilon)$ тоді $\phi(n) \ge M(\epsilon)$, тому $d(y_n, x) d(x_{\phi(n)}, x) \le  \epsilon$. Це можливо, оскільки $\phi(n) \xrightarrow[n \to \infty]{} \infty$, $N(\epsilon) = M(\epsilon)$ 
+        \item 
+            \begin{itemize}
+                \item  \underline{Гіпотеза1:} $\forall \epsilon > 0 \, \exists M(\epsilon)$ таке що якщо $n, p \ge M(\epsilon)$ $d(x_n, x_p) \le \epsilon$
+                \item  \underline{Гіпотеза2:} $\forall \epsilon > 0 \, \exists P(\epsilon)$ таке що якщо $p \ge P(\epsilon), d(y_p, x) \le \epsilon$, $d(y_p, x) = d(x_{\phi(p)}, x)$
+            \end{itemize}
+            \begin{align*}
+                d(x_n, x) \le d(x_n, x_{\phi(p)}) + d(x_{\phi(p)}, x) \quad \text{за нерівністю трикутника}
+            \end{align*}
+            \begin{align*}
+                d(x_n, x_{\phi(p)}) \le \epsilon \text{ якщо } n \ge M(\epsilon) \text{ та } \phi(p) \ge M(\epsilon)
+            \end{align*}
+            \begin{align*}
+                d(x_{\phi(p)}, x) \le \epsilon \text{ якщо } p \ge P(\epsilon)
+            \end{align*}
+            Якщо $n \ge M(\epsilon)$, я обираю $p$ такий що  $\phi(p) \ge  M(\epsilon)$ та $p \ge P(\epsilon)$. Я фіксую це $p$!
+             \[
+            \text{якщо } n \ge M(\epsilon) \text{ тоді } d(x_n, x) \le 2\epsilon
+            \] 
+   \end{enumerate} 
+\end{preuve}

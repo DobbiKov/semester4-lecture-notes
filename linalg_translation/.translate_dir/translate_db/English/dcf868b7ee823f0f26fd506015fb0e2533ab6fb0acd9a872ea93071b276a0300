@@ -1,0 +1,7 @@
+\begin{prop}\label{prop:polynome-caracteristique}
+   Let $f$ be an endomorphism in a vector space $E$ of finite dimension $n$ and $A$ the representative matrix of $f$ in a basis of $E$. The eigenvalues of $f$ are the roots of the polynomial:
+   \[
+   P_f(\lambda) = \det(A - \lambda I)
+   \] 
+   This polynomial is called the \textbf{characteristic polynomial} of $f$.
+\end{prop}

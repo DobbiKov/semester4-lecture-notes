@@ -1,0 +1,6 @@
+\documentclass{report}
+\usepackage{biblatex}
+\usepackage{appendix}
+\addbibresource{refs.bib}
+\input{../preamble.tex}
+\title{Linear Algebra 2 Course Notes}

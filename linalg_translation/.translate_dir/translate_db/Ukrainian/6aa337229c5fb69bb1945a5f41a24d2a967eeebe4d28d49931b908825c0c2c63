@@ -1,0 +1,8 @@
+\begin{notation}
+   Для будь-якого $v \in E$ позначаємо через $f_v$ відображення:
+   \begin{align*}
+       f_v: E &\longrightarrow \R \\
+       x &\longmapsto f_v(x) = <v, x>
+   .\end{align*}
+   $f_v$ є лінійним $\forall v \in E$ тобто $E^*$
+\end{notation}

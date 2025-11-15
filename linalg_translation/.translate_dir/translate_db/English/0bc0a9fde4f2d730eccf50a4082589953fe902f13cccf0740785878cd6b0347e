@@ -1,0 +1,10 @@
+
+Suppose that for $q \in \N^{*}$ we have already found $q$ eigenvalues of a matrix $\{ \lambda_1, \ldots, \lambda_q \}$, to find the eigenvectors, we still need to find the basis of:
+\[
+    \ker(A - \lambda_iI) \quad \forall i \in \{1, \ldots, q\}
+\] 
+which is equivalent to:
+\[
+\left( A - \lambda_i I \right)v = 0 \quad \forall i \in \{1, \ldots, q\}
+\] 
+

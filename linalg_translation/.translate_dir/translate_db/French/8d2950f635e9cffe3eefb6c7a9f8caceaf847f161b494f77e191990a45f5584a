@@ -1,0 +1,3 @@
+\begin{prop}\label{prop:isometrie-ata-eg-i}
+    Si $\{e_i\}$ est une base orthonormée, $f$ une isométrie et  $A = M(f)_{e_i}$, alors  $A^{T}A = I = AA^{T}$.
+\end{prop}

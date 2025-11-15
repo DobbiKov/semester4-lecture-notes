@@ -1,0 +1,3 @@
+\begin{definition}
+     Нехай $(E, \| \cdot \|_{\infty})$ н.в.п.\footnote{нормований векторний простір}, $(u_n)_{n \in N}$ послідовність в $E$. Ряд $\sum u_n$ збігається в $(E, \| \cdot \|)$, якщо послідовність $S_N = \sum_{n=0}^{N} u_n$ збігається в $(E, \| \cdot \|)$. $\lim_{N \to \infty} S_N$, що позначається $\sum_{n=0}^{\infty} u_n (\in E)$
+\end{definition}

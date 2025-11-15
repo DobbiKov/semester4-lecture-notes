@@ -1,0 +1,6 @@
+\begin{lemma}
+   \[
+   F: D \to  \R^p \text{ continue ssi:}
+   \]  
+   chaque $F_i: D \to \R$ est continue
+\end{lemma}

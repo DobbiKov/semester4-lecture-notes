@@ -1,0 +1,7 @@
+\begin{preuve}
+   Comme $p_F(x) \in F$ il suffit de prouver que, si  $y \in F$, alors 
+   \[
+   \|x - p_F(x)\| \le \|x - y\|
+   \] 
+   Mais, $\underset{(x - p_F(x)) + (p_F(x) - y)}{\|x - y\|^2} = \|x - p_F(x)\|^2 + 2\overbrace{\scalair{\overset{\in F^{\perp}}{x - p_F(x)}, \overset{\in F}{p_F(x) - y}}}{= 0} + \underbrace{\|p_F(x) - y\|^2}_{\ge 0} \ge \|x - p_F(x)\|^2$
+\end{preuve}

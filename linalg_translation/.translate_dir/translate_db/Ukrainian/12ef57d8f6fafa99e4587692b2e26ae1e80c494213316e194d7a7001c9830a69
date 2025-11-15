@@ -1,0 +1,3 @@
+\begin{prop}
+      Ендоморфізм $f: E \to E$ інваріантний прапор (тобто $f(E_i) \subset E_i$) $\iff$ $Mat(f)$ верхня трикутна
+   \end{prop}

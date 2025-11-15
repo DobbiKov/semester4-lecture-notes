@@ -1,0 +1,4 @@
+$\{e_i\}$ vers la base  $\{e_i'\}$
+ \[
+     A' = M(f)_{e_i'} = P^{-1}AP = \|f(e_1'), \ldots, f(e_n')\|_{e_i'}
+\]

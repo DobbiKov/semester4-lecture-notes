@@ -1,0 +1,3 @@
+\begin{definition}
+    $(E, d)$ є \underline{повним}, якщо будь-яка послідовність Коші в $E$ є збіжною.
+\end{definition}

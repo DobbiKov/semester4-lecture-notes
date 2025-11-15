@@ -1,0 +1,14 @@
+\begin{theorem}
+   Soit $f$ un endomorphisme dans  $E$ avec $\dim E = n$. Alors  $f$ est diagonalisable si et seulement si: 
+   \begin{enumerate}
+       \item $P_f(X)$ est \underline{scindé}, i.e:
+            \[
+                P_f(X) = (-1)^n (X - \lambda_1)^{\alpha_1} \cdot \ldots \cdot (X - \lambda_p)^{\alpha_p}
+           \] 
+           ($\lambda_i$ sont les racines donc les valeurs propres) et $\alpha_1 + \ldots + \alpha_p = n$. Alors, si la somme des multiplicités des racines est égale à la dimension de l'éspace vectoriel.
+       \item Les dimensions des espaces propres sont \underline{maximales}, i.e $\forall i \in \{1, \ldots, p\}$
+           \[
+                \dim E_{\lambda_i} = \alpha_i 
+           \] 
+   \end{enumerate}
+\end{theorem}

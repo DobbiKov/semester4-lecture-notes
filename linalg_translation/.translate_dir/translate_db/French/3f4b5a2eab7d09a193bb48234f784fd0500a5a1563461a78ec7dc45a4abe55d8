@@ -1,0 +1,29 @@
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle, 
+        grid=major, 
+        xlabel={$x$}, 
+        ylabel={$y$}, 
+        ymin=-1, ymax=5,
+        xmin=-5, xmax=5
+    ]
+        % Define original vectors
+        \addplot[->, thick, red] coordinates {(0,0) (-1, 1)};
+        \node[above] at (axis cs:-1,1) {$v_2$};
+        
+        \addplot[->, thick, blue] coordinates {(0,0) (1,1)};
+        \node[right] at (axis cs:1,1) {$v_3$};
+
+        % Define transformed vectors
+        \addplot[->, thick, red, dashed] coordinates {(0,0) (-2,2)};
+        \node[above] at (axis cs:-2,2) {$A v_2$};
+        
+        \addplot[->, thick, blue, dashed] coordinates {(0,0) (4,2)};
+        \node[right] at (axis cs:4,2) {$A v_3$};
+
+        \addplot[->, thick, orange, dotted] coordinates {(0,0) (-4,4)};
+        \node[above] at (axis cs:-4,4) {$A A v_2$};
+    \end{axis}
+\end{tikzpicture}
+\end{center}

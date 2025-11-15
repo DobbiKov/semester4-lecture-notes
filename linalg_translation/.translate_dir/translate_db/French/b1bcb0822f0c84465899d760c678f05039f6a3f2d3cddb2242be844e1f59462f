@@ -1,0 +1,30 @@
+\begin{eg}
+     On a: $A = \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} $ dans la base canonique $e_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix} $ et $e_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix} $. On rappelle qu'on a trouvé deux vecteurs propres:
+     \[
+     \begin{cases}
+         v_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+         v_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix} 
+     \end{cases}
+     \] 
+     On remarque que ces deux vecteurs sont libres et donc forment une base  de $\R^2$. Essayons de changer la base de $A$ dont on a deux façon:
+      \begin{enumerate}
+          \item On peut calculer les coordonnées de $f(v_1)$ et $f(v_2)$ dans la base $\{v_1, v_2\}$, on a:
+              \begin{align*}
+                  &f(v_1) = 3v_1 = 3 \cdot v_1 + 0 \cdot v_2\\
+                  &f(v_2) = 2v_2 = 0 \cdot v_1 + 2 \cdot v_2
+              \end{align*}
+              Et alors $\operatorname{Mat}_{v_i}(f) = \|f(v_1), f(v_2)\|_{v_i} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} $ 
+          \item On peut calculer la matrice $P = P_{e_i \to v_i}$de passage d'une base $\{e_i\}$ vers la base  $\{v_i\}$ et en déduire la matrice de $f$ dans la nouvelle base. On a:
+             \[
+            \begin{cases}
+                v_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix} = 1 \cdot e_1 + 0 \cdot e_2 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}_{e_i} \\
+                v_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix} = -1 \cdot e_1 + 1 \cdot e_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix}_{e_i} \\
+            \end{cases}
+            \] 
+              donc $P = \begin{bmatrix} 1 & -1\\ 0 & 1 \end{bmatrix} $ et $P^{-1} = \begin{bmatrix} 1 & 1 \\ 0 & 1  \end{bmatrix}$ (vous pouvez vérifier le calcul). Et donc:
+              \[
+                  A' = P^{-1}AP = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \underbrace{\begin{bmatrix} 3 & -2 \\ 0 & 2 \end{bmatrix}}_{AP} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} 
+              \] 
+     \end{enumerate}
+     Et voilà, la magie, on a trouvé la matrice diagonale.
+\end{eg}

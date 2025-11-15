@@ -1,0 +1,6 @@
+\begin{definition}
+    Let $A \subset E$. $A$ is bounded if  $\exists R > 0$ and $\exists x_0 \in E$ such that 
+    \[
+    A \subset B(x_0, R)
+    \] 
+\end{definition}

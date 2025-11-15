@@ -1,0 +1,11 @@
+\begin{remark}
+    in $\R^d$ equipped with $d_2$ (Euclidean distance)
+
+    \begin{align*}
+        &X_n = (x_{1,n}, \ldots, x_{d,n})\\
+        &X = (x_1, \ldots, x_d)
+    \end{align*}
+    \[
+    \lim_{n \to \infty} X_n = X \iff \lim_{n \to \infty} x_{i,n} = x_i \quad (1 \le i \le d)
+    \] 
+ \end{remark}

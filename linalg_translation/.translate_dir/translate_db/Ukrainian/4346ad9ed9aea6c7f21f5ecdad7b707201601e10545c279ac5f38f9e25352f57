@@ -1,0 +1,13 @@
+\begin{definition}
+    Екстремум (локальний) $f$ — це мінімум або максимум (локальний) $f$
+    \begin{itemize}
+        \item $X_0$ є локальним максимумом $f$, якщо: $\exists \delta > 0$ таке що
+            \[
+            \forall X \in D, f(X) \le f(X_0) \text{ з } d(X, X_0) \le \delta
+            \] 
+        \item $X_0$ є локальним мінімумом $f$, якщо: $\exists \delta > 0$ таке що
+            \[
+            \forall X \in D, f(X) \ge f(X_0) \text{ з } d(X, X_0) \le \delta
+            \] 
+    \end{itemize}
+\end{definition}

@@ -1,0 +1,7 @@
+\begin{definition}[Point intérieur, Intérieur]
+    Soit \(A \subset E\). Un point \(x_0 \in E\) est \textbf{intérieur} à \(A\) s'il existe \(r > 0\) tel que \(B(x_0, r) \subset A\).
+    L'\textbf{intérieur} de \(A\), noté \(\operatorname{Int}(A)\) ou \(\mathring{A}\), est l'ensemble des points intérieurs à \(A\).
+    \begin{propriete}
+        \(\operatorname{Int}(A)\) est le plus grand ouvert inclus dans \(A\). \(A\) est ouvert \(\iff A = \operatorname{Int}(A)\).
+    \end{propriete}
+\end{definition}

@@ -1,0 +1,4 @@
+\begin{remark}
+    \underline{Distance induite:}\\
+    Si $(E, d)$ espace métrique et  $U \subset E$. Je peux restreidnre $d$ à  $U \times U$:  $(U, d)$ est aussi un éspace metrique.
+\end{remark}

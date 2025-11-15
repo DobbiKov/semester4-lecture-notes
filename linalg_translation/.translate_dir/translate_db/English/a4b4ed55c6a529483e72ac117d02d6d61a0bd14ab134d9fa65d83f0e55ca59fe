@@ -1,0 +1,4 @@
+Let $(E, \scalair{,})$ be a Euclidean space, $F \subseteq E$ a vector subspace. Then, $E = F \oplus F^{\perp}$. Therefore, $\forall x \in E$ can be written as
+\[
+x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
+\]

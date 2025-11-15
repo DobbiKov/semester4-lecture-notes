@@ -1,0 +1,30 @@
+
+So, we need to study the application $(A - \lambda I)$ and connect it to the notion of determinants. Remember: if the determinant of a matrix is non-zero, this matrix (i.e. endomorphism) is injective. In our case, if $\det(A - \lambda I)$ were zero, the only vector $v$ that would give $(A - \lambda I)v = 0$ was the zero vector $v = 0$ because $(A - \lambda I)$ is linear and (as we supposed) injective.
+\par
+On the other hand, according to the definition, the eigenvectors are not zero, so the injective case is not suitable, so to have eigenvectors the application $(A - \lambda I)$ must not be injective, which is equivalent to saying that $\det(A - \lambda I) = 0$. So, we are supposed to calculate the following determinant:
+\[
+\det(A - \lambda I) = \det \left(\begin{bmatrix} 
+    a_{1,1} & a_{1, 2} & \ldots & a_{1, n}\\
+    a_{2,1} & a_{2, 2} & \ldots & a_{2, n}\\
+    \ldots & \ldots & \ldots & \ldots\\
+    a_{n,1} & a_{n,2} & \ldots & a_{n,n}
+    \end{bmatrix}  - 
+    \begin{bmatrix} 
+        \lambda & 0 & \ldots & 0 \\
+        0 & \lambda & \ldots & 0 \\
+        \ldots & \ldots & \ldots & \ldots\\
+        0 & 0 & \ldots & \lambda
+    \end{bmatrix}\right) = 
+    \begin{vmatrix} 
+    a_{1,1} - \lambda & a_{1, 2} & \ldots & a_{1, n}\\
+    a_{2,1} & a_{2, 2} - \lambda & \ldots & a_{2, n}\\
+    \ldots & \ldots & \ldots & \ldots\\
+    a_{n,1} & a_{n,2} & \ldots & a_{n,n} - \lambda
+    \end{vmatrix}
+\] 
+By developing this determinant, we obtain an equation of the type:
+\[
+    (-1)^n\lambda^n + a_{n-1}\lambda^{n-1} + \ldots + a_1\lambda + a_0 = 0
+\] 
+whose roots are the eigenvalues of $f$ (remember: eigenvalue is a factor $\lambda$).
+Don't focus too much on this equation for now, we'll come back to it.

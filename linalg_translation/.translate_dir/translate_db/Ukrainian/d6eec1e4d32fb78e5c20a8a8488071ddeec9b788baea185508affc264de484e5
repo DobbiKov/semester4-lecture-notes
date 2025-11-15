@@ -1,0 +1,5 @@
+\begin{lemma}
+    \begin{align*}
+        \|A\| = \|A^*\| = \|A^*A\|^{\frac{1}{2}}
+    \end{align*} 
+ \end{lemma}

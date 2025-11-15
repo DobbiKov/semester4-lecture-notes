@@ -1,0 +1,7 @@
+\begin{proof}.
+    \begin{enumerate}
+        \item Let $x \in U := \bigcup\limits_{i \in I} U_i$. There exists an $i$ denoted $i_0$ such that $x \in U_{i_0}$, $U_{i_0}$ is open, so $\exists r > 0$ such that $B(x, r) \subset U_{i_0} \subset U := \bigcup\limits_{i \in I} U_i$.
+        \item Let $x \in U := \bigcap\limits_{1 \le i \le n} U_i$.\\
+            We fix $i$.  $x \in U_i$,  $U_i$ open, so  $\exists r_i > 0$ such that $B(x, r) \subset U_i$, $1 \le i \le n$, so $B(x, r) \subset U := \bigcap\limits_{1 \le i \le n} U_i$
+    \end{enumerate}
+\end{proof}

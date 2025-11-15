@@ -1,0 +1,7 @@
+\begin{intuition}
+   Eigenvectors are vectors that, under the action of $f$, do not change direction, only length (not even always). This simplifies the calculation of such vectors. Can you calculate $A^3v_3$? Not very easy, then the vector $A^3v_2$? 
+   \[
+    Av_2 = 2v_2 \implies A^2v_2 = 2\cdot 2v_2 = 4v_2 \implies A^3v_2 = 2 \cdot 4v_2 = 8v_2 = \begin{pmatrix} -8 \\ 8 \end{pmatrix} 
+   \] 
+   That's cool, isn't it?
+\end{intuition}

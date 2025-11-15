@@ -1,0 +1,22 @@
+The geometry of the trigonalizable endomorphism is similar yet still different. Let $A$ be a representative matrix of the endomorphism $f$ in $K^n$. It is trigonalizable if there exists a basis $\{v_1, \ldots, v_n\}$ of $K^n$, let's denote $F_1 = \operatorname{Vect}(v_1), F_2 = \operatorname{Vect}(v_1, v_2), \ldots, F_n = \operatorname{Vect}(v_1, v_2, \ldots, v_n)$ such that
+\[
+F_1 \subset F_2 \subset \ldots \subset F_n
+\] 
+and 
+\[
+    \forall i \in \{1, \ldots, n\}, f(F_i) \subset F_i
+\] 
+Do you see the similarity? The endomorphism is stable by the subspace! The vector applied to $f$ never leaves its subspace. Let's take the following matrix as an example:
+\[
+    A = \begin{bmatrix} 
+        1 & 1 & 0\\
+        0 & 2 & 1\\
+        0 & 0 & 3
+    \end{bmatrix} = \operatorname{Mat}(f)_{e_i}
+\] 
+% \[
+% \begin{cases}
+%     v_1 := \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \in F_1, f(\begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix}) = \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \in F_1\\
+%     v_2 = 
+% \end{cases}
+% \]

@@ -1,0 +1,6 @@
+\begin{intuition}
+   \begin{enumerate}
+       \item Si $(x_n)_{n \in \N}$ est d'éléments de  $A$ ($\forall n \in N, \, x_n \in A$), donc elle converge vers un éléments $x$ qui peut être soit dans  $A$, soit à la borne des éléments de  $A$, alors à la frontière. 
+       \item Si la limite de toute suite $(x_n)_{n \in \N}$ des éléments de  $A$ est aussi dans  $A$, alors la frontière de  $A$ est inclu dans  $A$. Car l'une des suites tend vers la borne.
+   \end{enumerate} 
+\end{intuition}

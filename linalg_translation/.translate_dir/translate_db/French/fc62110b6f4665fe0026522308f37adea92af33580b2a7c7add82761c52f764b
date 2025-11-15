@@ -1,0 +1,12 @@
+\begin{definition}\label{def:matrice-diagonalisable}
+    La matrice $A$ est \textbf{diagonalisable} s'il existe une matrice semblable\footnote{$A$ est semblable à  $A'$ s'il existe une matrice de passage  $P$ telle que  $A' = P^{-1}AP$}  $A'$ diagonale:
+     \[
+         A' = 
+         \begin{bmatrix} 
+         a_{1,1} & 0 & \ldots & 0 \\
+         0 & a_{2,2} & \ddots & \vdots\\
+         \vdots & \ddots & \ddots & 0\\
+         0 & \ldots & 0 & a_{n,n}
+        \end{bmatrix} 
+    \] 
+\end{definition}

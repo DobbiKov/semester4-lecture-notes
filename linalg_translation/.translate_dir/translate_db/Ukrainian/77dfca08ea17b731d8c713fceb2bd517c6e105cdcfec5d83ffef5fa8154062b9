@@ -1,0 +1,26 @@
+\begin{definition}
+    Нехай квадратна матриця $A = (a_{i, j}) \in \mathcal{M}_n(\R)$. Позначимо
+    \[
+        b_{i, j} = (-1)^{i + j}\det(A_{i, j})
+    \] 
+    Потім, позначимо матрицю
+    \[
+        N = 
+        \begin{bmatrix} 
+            b_{1,1} & \ldots & b_{1, n}\\
+            \vdots  & \ddots & \vdots  \\
+            b_{n,1} & \ldots & b_{n, n}\\
+        \end{bmatrix} 
+        = \operatorname{Com}(A)
+    \] 
+    Матриця $N$ називається \textbf{коматрицею} матриці $A$.
+    Тоді, \textbf{спряжена матриця} матриці $A$ визначається як транспонована коматриця:
+    \[
+        A^{*} = N^{T} = 
+        \begin{bmatrix} 
+            b_{1,1} & \ldots & b_{n, 1}\\
+            \vdots  & \ddots & \vdots  \\
+            b_{1,n} & \ldots & b_{n, n}\\
+        \end{bmatrix} 
+    \] 
+\end{definition}

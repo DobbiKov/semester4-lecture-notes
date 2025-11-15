@@ -1,0 +1,6 @@
+\begin{theorem}[Matrix norm for \(A \in M_n(\C)\) or \(L(\C^n)\)]
+    If the norm on \(\C^n\) is the Euclidean norm \(\|\cdot\|_2\), then the associated operator norm is:
+    \[ \|A\| = \sup_{\|x\|_2=1} \|Ax\|_2 = \sqrt{\lambda_{\max}(A^*A)} \]
+    where \(A^*\) is the adjoint of \(A\) (conjugate transpose) and \(\lambda_{\max}(A^*A)\) is the largest eigenvalue of the Hermitian positive semi-definite matrix \(A^*A\). (It is also the largest singular value of A).
+    We also have \(\|A\| = \|A^*\|\) and \(\|A\|^2 = \|A^*A\|\) (if the norm is induced by the scalar product).
+\end{theorem}

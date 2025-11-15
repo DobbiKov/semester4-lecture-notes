@@ -1,0 +1,4 @@
+\begin{definition}[Межа]
+    Межа \textbf{множини} \(A\), що позначається \(\operatorname{Fr}(A)\) або \(\partial A\), це \(\operatorname{Adh}(A) \setminus \operatorname{Int}(A)\).
+    Це також \(\operatorname{Adh}(A) \cap \operatorname{Adh}(E \setminus A)\).
+\end{definition}

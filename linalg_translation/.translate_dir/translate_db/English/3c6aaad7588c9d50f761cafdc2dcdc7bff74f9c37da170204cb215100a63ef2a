@@ -1,0 +1,3 @@
+\begin{theorem}
+    $f$ of class  $\mathcal{C}^1$ on  $D$ ssi  $f$ has continuous partial derivatives at every point of  $D$. 
+\end{theorem}

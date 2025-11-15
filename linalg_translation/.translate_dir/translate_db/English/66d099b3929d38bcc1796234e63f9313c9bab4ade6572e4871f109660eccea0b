@@ -1,0 +1,3 @@
+\begin{prop}\label{prop:isometrie-ssi-transforme-bon-en-bon}
+   $f$ is an isometry if and only if it transforms every orthonormal basis into an orthonormal basis.
+\end{prop}

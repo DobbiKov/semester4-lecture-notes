@@ -1,0 +1,3 @@
+\begin{definition}[Cauchy sequence]
+    A sequence \((x_n)\) in \(E\) is \textbf{Cauchy} if \(\forall \varepsilon > 0, \exists N \in \N\) such that \(\forall n, p \ge N, d(x_n, x_p) \le \varepsilon\).
+\end{definition}

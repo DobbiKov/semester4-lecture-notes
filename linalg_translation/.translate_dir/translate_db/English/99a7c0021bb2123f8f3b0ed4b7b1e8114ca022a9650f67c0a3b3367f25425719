@@ -1,0 +1,8 @@
+\begin{lemma}
+   The following properties are equivalent:
+   \begin{enumerate}
+       \item $A$ is bounded
+       \item  $\forall x_0 \in E, \exists r > 0$ such that $A \subset B(x_0, r)$
+       \item $\exists r > 0$ such that $\forall x, y \in A$ we have $d(x, y) < r$
+   \end{enumerate}
+\end{lemma>

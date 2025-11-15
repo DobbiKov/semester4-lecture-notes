@@ -1,0 +1,9 @@
+\begin{theorem}\label{thm:trigonalisable-si-scinde}
+    Un endomorphisme est trigonalisable dans $K$ si et seulement si son polyôme caractéristique est scindé dans  $K$. 
+    \par 
+    Ça veut dire que le polynôme caractéristique admet exactement $n$ racine où  $n = \dim(E)$ et dont s'écrit:
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1}\cdots(X - \lambda_p)^{\alpha_p}
+    \] 
+    avec $\alpha_1 + \ldots + \alpha_p = n$
+\end{theorem}

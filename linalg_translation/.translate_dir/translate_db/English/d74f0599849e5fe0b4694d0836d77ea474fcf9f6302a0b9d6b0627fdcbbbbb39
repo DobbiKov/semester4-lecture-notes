@@ -1,0 +1,9 @@
+$\vec{e_1}, \ldots, \vec{e_n}$ canonical basis of $\R^n$, $f$ has partial derivatives at $X_0$ if $f$ is differentiable at $X_0$ in the directions $\vec{e_1}, \ldots, \vec{e_n}$.
+\[
+    \frac{d}{dt} f(X_0 + t \vec{e_i}) \mid_{t = 0}
+\] 
+denoted
+\[
+\frac{\partial f}{\partial x_i}(X_0)
+\] 
+On the other hand, a function can be differentiable in

@@ -1,0 +1,6 @@
+\begin{definition}
+    \underline{Скалярний добуток:}
+    \[
+        (X|Y) = \sum_{n=1}^{d} \overline{x_i}y_i \in \C
+    \] 
+\end{definition}

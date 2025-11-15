@@ -1,0 +1,13 @@
+avec $u_0 = 2$ et $v_n = 1$. On pose $X_n = \begin{pmatrix} u_n \\ v_n \end{pmatrix} $, alors le système \ref{eq:systeme-appli-diagonalisation} s'écrit:
+\[
+    X_{n+1} = AX_n \quad \text{ avec } \quad A = \begin{pmatrix} 1 & -1\\ 2 & 4 \end{pmatrix} 
+\] 
+par récurrence on obtient:
+\[
+X_n = A^nX_0 \quad \text{ avec } X_0 = \begin{pmatrix} 2 \\ 1 \end{pmatrix} 
+\] 
+
+Alors, on est ramené au calcul de la puissance d'une matrice: $A^n$ ce qu'on a vu à la section ~\ref{subsec:calcule-de-la-puissance-diagonalisation}. Vous pouvez vérifiez qu'il existe $P \in GL_2(\R)$ tq 
+\[
+    P = \begin{pmatrix} -1 & 1 \\ 1 & -2 \end{pmatrix} \quad \text{ avec } \quad A = P\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}P^{-1}
+\]

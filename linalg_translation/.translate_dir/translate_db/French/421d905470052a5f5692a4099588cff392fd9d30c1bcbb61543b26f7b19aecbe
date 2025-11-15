@@ -1,0 +1,3 @@
+\begin{eg}
+   Un éspace $(\Q, d)$ n'est pas complet. Car on peut prendre une suite  $x_n$ tendant vers  $\sqrt{2} \not\in \Q$.
+\end{eg}

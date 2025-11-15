@@ -1,0 +1,9 @@
+\begin{definition}
+    The trace of the \( n \times n \) square matrix \( A \), denoted \( \text{tr}(A) \), is the sum of the diagonal elements
+
+    \[
+        \text{tr}(A) = a_{11} + a_{22} + \dots + a_{nn} = \sum_{i=1}^{n} a_{ii}
+    \]
+
+    where \( a_{ii} \) are the diagonal elements of the matrix \( A \). 
+\end{definition}

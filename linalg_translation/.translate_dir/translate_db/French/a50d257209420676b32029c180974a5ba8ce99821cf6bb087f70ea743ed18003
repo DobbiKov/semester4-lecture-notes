@@ -1,0 +1,15 @@
+\begin{definition}\label{def:orthogonal}
+     $u, v \in E$ sont dits \underline{orthogonaux} si  $<u, v> = 0$. On note  $u \perp v$
+      \begin{itemize}
+         \item Deux sous-ensembles $A, B$ de  $E$ sont orthogonaux si:
+              \[
+             \forall u \in A, \forall v \in B, \quad <u, v> = 0
+             \] 
+         \item Si $A \subseteq E$ on appelle \textbf{orthogonal de $A$}, noté  $A^{\perp}$ l'ensemble
+              \[
+                  A^{\perp} = \{ u \in E \mid <u, v> = 0 \quad \forall v \in A \}
+             \] 
+             Aussi connu comme \textbf{orthogonal complement of $A$}
+         \item Une famille $(v_1, \ldots, v_n)$ de vecteurs de $E$ est dite orthogonale si  $\forall i \neq j, v_i \perp v_j$. Elle est dite orthonomée si elle est orthogonale et de plus $\|v_i\| = 1 \quad \forall i \in \{ 1, \ldots, n \}$
+     \end{itemize}
+\end{definition}

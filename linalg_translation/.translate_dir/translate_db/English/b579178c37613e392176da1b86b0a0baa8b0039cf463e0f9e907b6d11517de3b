@@ -1,0 +1,48 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[french]{babel} % Changed to french
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools} % For \coloneqq
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+\usepackage{enumitem} % For better lists
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}} % Added C
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\K}{\mathbb{K}} % Added K for field
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{exemple}{Example}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section] % Added Lemma
+\newtheorem{propriete}{Property}[section] % Changed to singular
+\newtheorem*{notation}{Notation}
+\newtheorem*{remarque}{Remark}
+
+\title{Analysis and Geometry CheatSheet}
+\author{Yehor KOROTENKO}
+\date{Based on Christian Gérard's course} % Added date/source

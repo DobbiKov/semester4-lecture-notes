@@ -1,0 +1,7 @@
+\begin{definition}[Внутрішня точка, Внутрішність]
+    Нехай \(A \subset E\). Точка \(x_0 \in E\) є \textbf{внутрішньою} для \(A\), якщо існує \(r > 0\) таке що \(B(x_0, r) \subset A\).
+    \textbf{Внутрішність} \(A\), позначена \(\operatorname{Int}(A)\) або \(\mathring{A}\), — це множина точок, внутрішніх до \(A\).
+    \begin{propriete}
+        \(\operatorname{Int}(A)\) — це найбільша відкрита множина, що міститься в \(A\). \(A\) є відкритою \(\iff A = \operatorname{Int}(A)\).
+    \end{propriete}
+\end{definition}

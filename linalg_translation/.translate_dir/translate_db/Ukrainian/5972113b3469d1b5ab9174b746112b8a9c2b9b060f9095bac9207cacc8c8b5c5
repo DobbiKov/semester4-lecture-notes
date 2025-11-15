@@ -1,0 +1,5 @@
+\[
+    \frac{\partial}{\partial x_1}\frac{\partial}{\partial x_2}\frac{\partial}{\partial x_1} f \overset{?}{=}  \frac{\partial^2}{\partial x_1^2}\frac{\partial}{\partial x_2}f
+\] 
+
+

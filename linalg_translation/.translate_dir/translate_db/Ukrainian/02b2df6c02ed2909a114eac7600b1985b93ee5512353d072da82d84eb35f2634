@@ -1,0 +1,3 @@
+\begin{definition}
+    Рівномірна границя неперервних функцій: $X = [a, b]$,  $\mathcal{C}([a, b], \R) \subset B([a, b], \R)$(підпростори векторів). $\mathcal{C}([a, b], \R)$ є замкненим у $(B([a, b], \R), \| \cdot \|_{\infty})$
+\end{definition}

@@ -1,0 +1,13 @@
+\[
+    A = \begin{bmatrix} 
+        1 & 1 & 0\\
+        0 & 2 & 1\\
+        0 & 0 & 3
+    \end{bmatrix} = \operatorname{Mat}(f)_{e_i}
+\] 
+% \[
+% \begin{cases}
+%     v_1 := \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \in F_1, f(\begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix}) = \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \in F_1\\
+%     v_2 = 
+% \end{cases}
+% \]

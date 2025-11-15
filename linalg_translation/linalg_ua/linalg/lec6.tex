@@ -1,0 +1,275 @@
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 74d2bbf6d9ead8152362c6422ea0e12b99956aeff8fb5d19ced1481ede0d1fd6
+% --- CHUNK_METADATA_END ---
+\section{Анулюючі многочлени}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 388160a58d43eb5002bc29e27e78e2b0a5de5c8f76dc2dcdba11ae574192a3c9
+% --- CHUNK_METADATA_END ---
+У попередніх розділах ми дізналися, що для того, щоб з'ясувати, чи є матриця діагоналізованою, необхідно вивчити власні простори, що не завжди дуже легко і не є найшвидшим способом. Отже, в цьому розділі ми розглянемо один з інших методів вивчення діагоналізовності, одним з цих методів є вивчення анулюючих многочленів.% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 4f22b0eb38fef4a7f6b68aa62328910c678d684e80e4446e2fa7d4f580e723ba
+% --- CHUNK_METADATA_END ---
+\begin{remark}
+   У цьому розділі я не пишу більшість доказів, а скоріше інтуїцію, чому це правда і чому це працює. 
+\end{remark}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 7c070585845657f62897af4e2ffbadbc8a5167ad9d1b1527b19e195b640bb76d
+% --- CHUNK_METADATA_END ---
+\begin{definition}\label{def:polynome-annulateur}
+    Нехай $f \in \mathbb{K}^n$ ендоморфізм. Поліном $Q(X) \in K[X]$ є \textbf{анулюючим поліномом} для $f$ якщо $Q(f) = 0$.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 48dcdcf5adba02023072764f9fcd70860b6c2ad9d7180ac921fe7a3f5bf3ad0f
+% --- CHUNK_METADATA_END ---
+\begin{eg}
+   Нехай $f$ проєкція, тоді, ми знаємо, що $f^2 = f$, звідки $f^2 - f = 0$, тому $Q(X) = X^2 - X = X(X - 1)$ є анулюючим поліномом для $f$.
+\end{eg}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 03256e33031d32a446c95907fa9769fe691de26f127fe4c077e485c26abea50a
+% --- CHUNK_METADATA_END ---
+Важливо те, що анулюючі многочлени тісно пов'язані з власними значеннями:% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 9a77faa938f34b4f2e8edcc8dcd6e5b77140255c74309638229856c2cc93f3dc
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Нехай $Q(X)$ є анулюючим многочленом для $f$, тоді власні значення $f$ знаходяться серед коренів $Q$, тобто:
+   \[
+       \operatorname{Sp}(f) \subset \operatorname{Rac}(Q)
+   \] 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 833385c5bcc9e301f6931f1b5e1a7892bb0fcdf984f5f0ae5e735357fcfd7f26
+% --- CHUNK_METADATA_END ---
+\begin{proof}
+    Нехай $Q(X) = a_n X^n + a_{n-1} X^{n-1} + \ldots + a_0$ — анулюючий многочлен для $f$ і $\lambda$ — власне значення для $f$. Отже, $\exists v \neq 0 \in E$ така що $f(v) = \lambda v$, більше того:
+    \[
+        Q(f) = a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id} = 0
+    \] 
+    Але $f(v) = \lambda v$, тому $f^2(v) = f(\lambda v) = \lambda^2 v$, звідки $f^k(v) = \lambda^k v$ $\forall k \in \N$, тоді:
+    \[
+        Q(f(v)) = 0 = (a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id})v = (a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id})v = 0
+     \] 
+     Але $v \neq 0$, тому $a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id} = 0$, звідки $\lambda$ є коренем $Q$.
+\end{proof}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 12483be17214331a02678b687db0b149599401ac99fa148c4b90cab081705332
+% --- CHUNK_METADATA_END ---
+\begin{note}
+    Однак, рівність не є загалом вірною, наприклад $\operatorname{Id}^2 = \operatorname{Id}$, отже $Q(X) = X^2 - X = X(X - 1)$ обнуляє $\operatorname{Id}$ з коренями $0$ та $1$, але $0$ не є власним значенням для $\operatorname{Id}$.
+\end{note}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 0554600a2792f8f908c854bf1ca22807161de363016b32ab96ea1974f3eb92ae
+% --- CHUNK_METADATA_END ---
+\begin{theorem}\label{thm:cayley-hamilton} \textbf{Кайлі-Гамільтона}. Нехай $f \in K^n$ ендоморфізм та $P_f(X)$ його характеристичний поліном, тоді
+     \[
+    P_f(f) = 0
+    \] 
+    Іншими словами, характеристичний поліном ендоморфізму є його анулюючим поліномом.
+\end{theorem}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 19651c78378f539b9b35c4882f09c6e6970cbccd4bcf852752b98b7987e62c09
+% --- CHUNK_METADATA_END ---
+%  TODO: довести <15-04-25, dobbikov> %
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 26efee0238d78e545da285e09fcdde858c12ec8f95b7eeca9504301396c9f37d
+% --- CHUNK_METADATA_END ---
+\begin{intuition}
+   Характеристичний поліном описує нам структуру $f$, тобто які операції потрібно виконати, щоб втратити принаймні один вимір, якщо ми отримуємо множники вигляду $(X - \lambda)^n$, отже, потрібно застосувати $f(v) - \lambda v) = v_r$, а потім до результату $v_r$ знову, тобто $f(v_r) - \lambda v_r$, і повторюємо $n$ разів (це відбувається у випадках тригоналізованих матриць)
+
+   Теорема залишається вірною навіть у випадках, коли ендоморфізм не є тригоналізовним, оскільки ми можемо вибрати замикання $K'$ поля $K$, в якому знаходиться наш ендоморфізм, і він стає тригоналізовним (наприклад, $\mathbb{C}$ для $\mathbb{R}$).
+
+   Крім того, характеристичний поліном дає нам $\ker(P_f(X)) = E$, тобто вектори, які стають нульовими під дією $P_f(f)$, цікавий факт полягає в тому, що всі вектори з $E$ належать до цього ядра, і тому $\forall v \in E$, $p_f(f)v = 0$, звідки $p_f(f) = 0$.
+\end{intuition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: d88ea0e42078a13cb42b5707ac14746b75251ad291fdb416378807d11b627dd6
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Нехай $Q$ — розкладений поліном:
+     \[
+         Q(X) = (X - a_1)^{\alpha_1} \cdots (X - a_r)^{\alpha_r}
+    \] 
+    Поліном 
+    \[
+    Q_1 = (X - a_1) \cdots (X - a_r)
+    \] 
+    називається \textbf{радикалом} $Q$ (тобто розкладений поліном (той самий поліном, але без степенів біля дужок). 
+    \par Більше того, $Q_1 \mid Q$, тобто радикал полінома ділить сам поліном.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 3eda218f4e180ff0801bdb823ca755587104598cbc2e16cf834a81850705086a
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+    Нехай $f$ є ендоморфізмом і
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1} \cdots (X - \lambda_p)^{\alpha_p}
+    \]
+    є його характеристичним многочленом. Тоді, якщо $f$ є діагоналізовним, радикал $Q_1$ анулює $f$ також, тобто
+     \[
+    Q_1(f) = (f - \lambda_1) \cdots (f - \lambda_r) = 0
+    \]
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 4b4b0dbdc69c2b8816e01712982bae8a99770c9cbb0864f6a33505968b722423
+% --- CHUNK_METADATA_END ---
+\begin{intuition}
+   Я даю інтуїцію доведення. Якщо $f$ є діагоналізованою з характеристичним поліномом
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1} \cdots (X - \lambda_p)^{\alpha_p}
+    \] 
+    з $r := \alpha_i > 1$ це \underline{не означає}, що потрібно застосовувати $(f - \lambda_i \operatorname{Id})$ $r$ разів для зменшення розмірності як у випадку тригоналізованих матриць, але це означає, що $E_{\lambda_i}$ власний простір власного значення $\lambda_i$ має розмірність $\alpha_i = r$ і тому $\forall v \in E_{\lambda_i}, f(v) = \lambda_i v$. 
+
+    Оскільки $E = E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p}$, якщо $v \in E$, тоді $\exists i \in \{1, \ldots, p\}$ така що $v \in E_{\lambda_i}$ і тому $f(v) - \lambda_i v = 0$ тобто $(f - \lambda_i \operatorname{Id})(v) = 0$. Звідси радикал $P_f$ анулює $f$.
+\end{intuition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: b6670673bc3faad631505556abf072a29b10672fb6393278e6641d68428f127b
+% --- CHUNK_METADATA_END ---
+\section{Лема про ядра}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 20068f9667592f6e79b67c87d69fe214fed4ca81af52f565e9c8c839d07cb20f
+% --- CHUNK_METADATA_END ---
+\begin{lemma}\label{lemma:lemme-des-noyaux} \textbf{про ядра}
+   Нехай $f \in K^n$ ендоморфізм і 
+   \[
+   Q(X) = Q_1(X) \cdots Q_p(X)
+   \] 
+   многочлен, розкладений у добуток попарно взаємно простих многочленів. Якщо $Q(f) = 0$, то:
+    \[
+        E = \operatorname{Ker} Q_1(f) \oplus \ldots \oplus \operatorname{Ker} Q_p(f)
+   \] 
+\end{lemma}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: fe3c2c4f501dfbcfda20991bd7579ae44cc78b5fed9961c2873de026fa6891d6
+% --- CHUNK_METADATA_END ---
+\begin{intuition}
+    Оскільки $Q(f) = 0$, тому $\forall v \in E, Q(f)(v) = 0$ отже
+    $\operatorname{Ker}(Q(f)) = E$. $\exists v_1, \ldots, v_p$ такі що $v = v_1 +
+    \ldots + v_p$. Але усі поліноми попарно взаємно прості, тоді лише один з них анулює $v_i$ тому $v_i \in \operatorname{Ker}Q_i(f)$ і
+    це залишається правдою для всіх $v_1, \ldots, v_p$. І оскільки поліноми
+    взаємно прості, тож якщо $k \neq j$ і $Q_k(v_i) = 0$, тоді $Q_j(v_i) \neq
+    0$ бо $Q_j$ і $Q_k$ відрізняються. Тоді, $\forall i, j \,
+    \operatorname{Ker}Q_i \cap \operatorname{Ker}Q_j = \{0\}$.
+\end{intuition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 776749d74cb1979ac8d0d6380de9b0d40e671d9773a72e3a38896192822cd28f
+% --- CHUNK_METADATA_END ---
+\begin{remark}
+   Повернімося до прикладу $f$, яка є проєкцією, отже $f^2 - f = 0$ і $Q(X) = X^2 - X = X(X-1)$ анулює $f$. Проте $X$ і $X-1$ є взаємно простими, тоді 
+    \[
+        E = \operatorname{Ker}f \oplus \operatorname{Ker}(f - \operatorname{Id})
+   \] 
+    Щоб бути більш загальною, нехай $f$ є ендоморфізмом, і $Q(X) = (X - \lambda_1) \cdots (X - \lambda_p)$ така що $Q(f) = 0$, маємо:
+     \[
+         E = \underbrace{\operatorname{Ker}(f - \lambda_1 \operatorname{Id})}_{E_{\lambda_1}} \oplus \ldots \oplus \underbrace{\operatorname{Ker}(f - \lambda_p \operatorname{Id})}_{E_{\lambda_p}}
+    \] 
+    Звісно, $\lambda_i \neq \lambda_j$. І тоді $f$ є діагоналізованим, оскільки прямою сумою цих власних підпросторів.
+\end{remark}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 7d9db5623101af13df78a593fd54a7570398e179ea58cfb4076059a2c0479cc3
+% --- CHUNK_METADATA_END ---
+\begin{corollary}
+    Ендоморфізм $f$ є діагоналізованим тоді і тільки тоді, якщо існує анулюючий поліном $Q$ для $f$, який є розкладним і має лише прості корені \footnote{розкладний: $(X - \lambda_i)^{\alpha_i}$ - $X$ в степені $1$! прості корені: якщо $\alpha_i = 1$ також, тобто множники $(X - \lambda)$ в степені 1!} 
+\end{corollary}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: dcd9523065c4f0b772b8a2061f9f39ad63175ce452061c83e205f2b9c6f0953c
+% --- CHUNK_METADATA_END ---
+\section{Пошук анулюючих многочленів. Мінімальний многочлен}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: a4bcf6aa64911c5b2fc23192f1480c1669b97c09b90a90b7f1cac551142db332
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Називається \textbf{мінімальний многочлен} для $f$, позначений $m_f(X)$ - нормалізований многочлен \footnote{тобто з коефіцієнтом $1$ при члені найвищого степеня, тобто: $1*X^n + a_{n-1}X^{n-1} + \ldots + a_0$} який анулює $f$ найменшого степеня.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 3f3410373979f6d254b617ac467e93c977d12edbd837b37b0e1846f8a256dd43
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Анулюючі многочлени $f$ мають вигляд:
+   \[
+       Q(X) = A(X)m_f(X) \quad \text{ де } \quad A(X) \in K[X]
+   \] 
+   \text{ тобто } $m_f(X)$ \text{ ділить } $Q(X)$. 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: dfd8008cd4cd354832b2c84d1a95ec6dd91c323dd4aabf1ca63406a19f4b7427
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Корені мінімального полінома $m_f(X)$ є точно коренями характеристичного полінома $P_f(X)$, тобто власні значення.
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 9ae173893a86059f9cc9135a475e272f1f4917c32eaf8a7526a47e4a27bfe4dd
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+   Ми знаємо, що $P_f(X) = A(X)m_f(X)$ тому якщо $\lambda$ є коренем $m_f(X)$, тоді вона є коренем $P_f(X)$ також. Навпаки, якщо $\lambda$ є коренем $P_f(X)$ тоді вона є власним значенням, а $m_f(X)$ анулює $f$, отже $\lambda$ також є коренем $m_f(X)$.
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: ee5dbc1d494bec59b3ab46c90aa27756840120a6431779b000cedda40c958836
+% --- CHUNK_METADATA_END ---
+\begin{theorem}
+    Ендоморфізм $f$ є діагоналізовним тоді і тільки тоді, коли його мінімальний многочлен є розкладним і всі його корені прості.
+\end{theorem}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: a8de942faaeca497b14477980a0a02c0c1723833b56c4e22a9454495fe23aec2
+% --- CHUNK_METADATA_END ---
+\begin{eg}
+   \begin{enumerate}
+       \item $A = \begin{pmatrix} 
+            -1 & 1 & 1\\
+            1  & -1 & 1\\
+            1  & 1  & -1
+           \end{pmatrix} $. $P_A(X) = -(X - 1)(X + 2)^2$, отже, маємо дві можливості:
+           \begin{itemize}
+               \item $m_A(X) = (X - 1)(X + 2)$ - отже  $A$ діагоналізована
+               \item  $m_A(X) = (X - 1)(X + 2)^2$ - отже $A$ не діагоналізована
+           \end{itemize}
+           Обчислимо:
+           \[
+            (A - I)(A + 2I) = \begin{pmatrix} 
+                -2 & 1 & 1\\
+                1 & -2 & 1\\
+                1 & 1  & -2
+            \end{pmatrix}\begin{pmatrix} 
+                1 & 1 & 1\\
+                1 & 1 & 1\\
+                1 & 1 & 1
+            \end{pmatrix} = \begin{pmatrix} 
+                0 & 0 & 0\\
+                0 & 0 & 0\\
+                0 & 0 & 0
+            \end{pmatrix}   
+           \] 
+           Отже, $m_f(X) = (X - 1)(X + 2)$ і тому $A$ є діагоналізованою.
+        \item  $A = \begin{pmatrix} 
+                3 & -1 & 1\\
+                2 & 0  & 1\\
+                1 & -1 & 2
+            \end{pmatrix} $. Маємо: $P_A(X) = -(X - 1)(X - 2)^2$, отже:
+            \[
+            m_A(X) = \begin{cases}
+                (X-1)(X-2) \quad \text{ тобто $A$ діагоналізована}\\
+                (X-1)(X-2)^2 \quad \text{ тобто $A$ не діагоналізована}
+            \end{cases}
+            \] 
+            Обчислимо:
+            \[
+                (A - I)(A - 2I) = \begin{pmatrix} 
+                    2 & -1 & 1\\
+                    2 & -1 & 1\\
+                    1 & -1 & 1\\
+                \end{pmatrix} 
+                \begin{pmatrix} 
+                    1 & -1 & 1\\
+                    2 & -2 & 1\\
+                    1 & -1 & 0
+                \end{pmatrix} 
+                =
+            \begin{pmatrix}
+            1 & -2 & 1 \\
+            1 & -2 & 1 \\
+            0 & -2 & 2
+            \end{pmatrix} \neq \begin{pmatrix} 0 & 0 & 0\\  0 & 0 & 0\\ 0 & 0 & 0 \end{pmatrix} 
+            \] 
+            Звідси $m_A(X) \neq (X-1)(X-2)$ і тому $A$ не є діагоналізованою.
+   \end{enumerate} 
+\end{eg}

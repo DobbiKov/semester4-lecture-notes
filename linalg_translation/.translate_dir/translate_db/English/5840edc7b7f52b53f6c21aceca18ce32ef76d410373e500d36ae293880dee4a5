@@ -1,0 +1,6 @@
+\begin{definition}[Differentiability (general case \(f: D \to \R^m\))]
+    \(f=(f_1, \dots, f_m)\). \(f\) is differentiable at \(X_0\) if each component \(f_j: D \to \R\) is.
+    The differential \(df_{X_0}\) is a linear application from \(\R^n\) to \(\R^m\), whose matrix in the canonical bases is the \textbf{Jacobian matrix} \(J_f(X_0)\):
+    \[ (J_f(X_0))_{ji} = \frac{\partial f_j}{\partial x_i}(X_0) \]
+    Therefore \(df_{X_0}(H) = J_f(X_0) H\) (where H is a column vector).
+\end{definition}

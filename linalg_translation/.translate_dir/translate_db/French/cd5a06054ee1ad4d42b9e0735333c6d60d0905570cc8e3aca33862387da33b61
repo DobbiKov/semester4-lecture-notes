@@ -1,0 +1,7 @@
+\begin{prop}
+   Si $E$ est un espace euclidien et  $A \subset E$ son sous-espace vectoriel, alors:
+   \[
+       E = A \oplus A^{\perp}
+   \] 
+   i.e tout vecteur $x \in E$ peut s'écrit comme  $x = e + e'$ où  $e \in A$ et  $e' \in A'$.
+\end{prop}

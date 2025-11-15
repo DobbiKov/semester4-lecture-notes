@@ -1,0 +1,18 @@
+\begin{definition}
+    Білінійна форма на $E$ — це відображення  
+    \begin{align*}
+        B: E \times E &\longrightarrow \R \\
+        (u, v) &\longmapsto B((u, v))
+    \end{align*}
+    що задовольняє наступні умови $\forall u, v, w \in E$ $\forall \lambda \in \R$:
+    \begin{enumerate}
+        \item $B(u + \lambda v, w) = B(u, w) + \lambda B(v, w)$
+        \item  $B(u, v + \lambda w) = B(u, v) + \lambda B(v, w)$
+    \end{enumerate}
+    B називається 
+    \begin{enumerate}
+        \item симетрична якщо $B(u, v) = B(v, u)$  $\forall u, v \in E$
+        \item позитивна якщо $B(., u) \ge 0 \, \forall u \in E$
+        \item визначена якщо $B(u, u) = 0 \iff u = 0$
+    \end{enumerate}
+\end{definition}

@@ -1,0 +1,3 @@
+\begin{intuition}
+    If such a sequence $(x_n)_{n \in \N}$ exists without a convergent subsequence to an element of $K$, so the values are outside of $K$ and so there exists a set that covers $K$ only with an infinite number of sets.
+\end{intuition}

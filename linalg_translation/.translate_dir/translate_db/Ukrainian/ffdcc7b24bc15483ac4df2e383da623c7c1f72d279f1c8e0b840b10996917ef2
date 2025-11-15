@@ -1,0 +1,10 @@
+Існує базис $\vec{u_1}, \ldots, \vec{u_n}$ з $\R^n$ з $\vec{u_i} \cdot \vec{u_j} = \delta_{i, j}$ ($1$ якщо $i = j$ і $0$ в іншому випадку) та дійсні числа $\lambda_1, \ldots, \lambda_n$($\lambda_i = \lambda_j$ можливо) такі, що
+\[
+    A\vec{u_i} = \lambda_i\vec{u_i}
+\] 
+\[
+    \vec{X} = \sum_{j=1}^{n} y_j\vec{u_j}
+\] 
+\[
+    \vec{X} \cdot \vec{u_i} = \sum_{j=1}^{n} y_j\vec{u_j}\vec{u_i} = y_i
+\] 

@@ -1,0 +1,6 @@
+\begin{remark}-
+   \begin{enumerate}
+       \item Si $A$ est trigonalisable et  $A'$ triangulaire semblable à $A$, donc  $A'$ a des valeurs prorpes sur les diagonales.
+       \item Toute matrice $A \in \mathcal{M}_n(K)$ est trigonalisable sur la clôture $K'$ de  $K$. (e.g: $A \in \mathcal{M}_n(\R)$ est trigonalisable sur $\mathbb{C}$).
+   \end{enumerate} 
+\end{remark}

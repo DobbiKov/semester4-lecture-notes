@@ -1,0 +1,4 @@
+\begin{definition}[Frontière]
+    La \textbf{frontière} de \(A\), notée \(\operatorname{Fr}(A)\) ou \(\partial A\), est \(\operatorname{Adh}(A) \setminus \operatorname{Int}(A)\).
+    C'est aussi \(\operatorname{Adh}(A) \cap \operatorname{Adh}(E \setminus A)\).
+\end{definition}

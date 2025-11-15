@@ -1,0 +1,6 @@
+\begin{corollary}
+   If $A \in \mathcal{M}_n(\R)$ is an invertible square matrix, then:
+   \[
+       \det(A^{-1}) = \frac{1}{\det(A)}
+   \] 
+\end{corollary}

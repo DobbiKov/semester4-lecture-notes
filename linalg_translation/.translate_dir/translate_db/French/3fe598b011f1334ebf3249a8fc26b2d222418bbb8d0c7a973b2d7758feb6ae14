@@ -1,0 +1,6 @@
+\begin{definition}[Différentiabilité (cas \(m=1\))]
+    \(f: D \to \R\) est \textbf{différentiable} en \(X_0 \in D\) s'il existe une application linéaire \(L: \R^n \to \R\) telle que pour \(H \in \R^n\) avec \(X_0+H \in D\):
+    \[ f(X_0+H) = f(X_0) + L(H) + o(\|H\|) \quad \text{i.e.} \quad f(X_0+H) = f(X_0) + L(H) + \|H\| \varepsilon(H), \text{où } \lim_{H \to 0} \varepsilon(H) = 0 \]
+    Si \(f\) est différentiable en \(X_0\), alors \(L(H) = \nabla f(X_0) \cdot H\), où \(\nabla f(X_0) = \left(\frac{\partial f}{\partial x_1}(X_0), \dots, \frac{\partial f}{\partial x_n}(X_0)\right)\) est le \textbf{gradient} de \(f\) en \(X_0\).
+    L'application linéaire \(L\) est la \textbf{différentielle} de \(f\) en \(X_0\), notée \(df_{X_0}\).
+\end{definition}

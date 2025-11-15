@@ -1,0 +1,5 @@
+\begin{definition}[Dot Product on \(\R^d\)]
+        For \(X=(x_1, ..., x_d)\) and \(Y=(y_1, ..., y_d)\) in \(\R^d\), the \textbf{dot product} is:
+        \[ X \cdot Y = \sum_{i=1}^d x_i y_i = \|X\| \|Y\| \cos(\theta) \]
+        Properties: bilinearity, symmetry, positive definite (\(X \cdot X \ge 0\), and \(X \cdot X = 0 \iff X = 0_d\)).
+    \end{definition}

@@ -1,0 +1,3 @@
+\begin{definition}
+    Нехай $F \subset E$. \textbf{Відкрите покриття} множини $F$, це об'єднання відкритих множин:  $\bigcup_{i \in I} U_i$ таке що $F \subset \bigcup_{i \in I} U_i$
+\end{definition}

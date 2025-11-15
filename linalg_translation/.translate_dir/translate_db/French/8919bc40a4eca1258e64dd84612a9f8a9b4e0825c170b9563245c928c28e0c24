@@ -1,0 +1,3 @@
+\begin{theorem}[Caractérisation séquentielle de la compacité - Bolzano-Weierstrass]
+    Dans un espace métrique \((E,d)\), une partie \(K \subset E\) est compacte \(\iff\) de toute suite d'éléments de \(K\), on peut extraire une sous-suite qui converge \textbf{dans K}.
+\end{theorem}

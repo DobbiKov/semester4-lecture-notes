@@ -1,0 +1,6 @@
+\begin{definition}[Диференційовність (випадок \(m=1\))]
+    \(f: D \to \R\) є \textbf{диференційовною} в \(X_0 \in D\), якщо існує лінійне відображення \(L: \R^n \to \R\) таке, що для \(H \in \R^n\) з \(X_0+H \in D\):
+    \[ f(X_0+H) = f(X_0) + L(H) + o(\|H\|) \quad \text{тобто} \quad f(X_0+H) = f(X_0) + L(H) + \|H\| \varepsilon(H), \text{де } \lim_{H \to 0} \varepsilon(H) = 0 \]
+    Якщо \(f\) є диференційовною в \(X_0\), то \(L(H) = \nabla f(X_0) \cdot H\), де \(\nabla f(X_0) = \left(\frac{\partial f}{\partial x_1}(X_0), \dots, \frac{\partial f}{\partial x_n}(X_0)\right)\) є \textbf{градієнтом} \(f\) в \(X_0\).
+    Лінійне відображення \(L\) є \textbf{диференціалом} \(f\) в \(X_0\), що позначається \(df_{X_0}\).
+\end{definition}

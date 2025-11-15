@@ -1,0 +1,7 @@
+\begin{prop}
+    \begin{itemize}
+        \item Si $K \subset E$ est compact, alors $K$ est fermé et borné.
+        \item Si $K$ est compact et  $F$ est fermé, donc  $K \cap F$ est compact. Autrement dire, si $K$ est compact, alors tout fermé $F \subset K$ est compact.
+        \item Si $K$ est compact, donc  $K$ est complet.
+    \end{itemize}
+\end{prop}

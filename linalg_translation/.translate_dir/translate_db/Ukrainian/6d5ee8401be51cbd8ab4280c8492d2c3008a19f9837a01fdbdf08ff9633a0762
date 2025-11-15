@@ -1,0 +1,10 @@
+\begin{preuve}
+    Щоб довести це, ми використаємо пропозицію \ref{prop:prod-scal-par-matrice}.
+    \par
+    За визначенням ізометрії, маємо:
+    \begin{align*}
+        &\scalair{f(x), f(y)} = \scalair{x, y} \quad \forall x, y \in E\\
+        \iff &\underbrace{ (AX)^{T}(AY) }_{\scalair{f(x), f(y)}} = X^TA^TAY = \underbrace{X^TY}_{\scalair{x, y}}\\
+        \iff &A^TA = I
+    \end{align*}
+\end{preuve}

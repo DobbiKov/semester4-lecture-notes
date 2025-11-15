@@ -1,0 +1,3 @@
+\begin{prop}
+   Si $A$ est une matrice de l'isométrie dans une base orthonormée, alors  $det(A) = \pm 1$ 
+\end{prop}

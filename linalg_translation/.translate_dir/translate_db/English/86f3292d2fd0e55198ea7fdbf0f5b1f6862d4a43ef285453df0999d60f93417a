@@ -1,0 +1,4 @@
+\begin{remark}
+    \underline{Induced distance:}\\
+    If $(E, d)$ is a metric space and $U \subset E$. I can restreidnre $d$ to $U \times U$: $(U, d)$ is also a metric space.
+\end{remark}

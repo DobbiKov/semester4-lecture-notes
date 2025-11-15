@@ -1,0 +1,19 @@
+\begin{definition}
+    La matrice $A$ est \textbf{triagonalisable} s'il existe une matrice semblable  $A'$ triangulaire (supérieure/inférieure) 
+     \[
+         A' = 
+         \begin{bmatrix} 
+         a_{1,1} & a_{1,2} & \ldots & a_{1,n} \\
+         0 & a_{2,2} & \ddots & \vdots\\
+         \vdots & \ddots & \ddots & a_{n-1,n}\\
+         0 & \ldots & 0 & a_{n,n}
+        \end{bmatrix} \text{ ou } 
+         A' = 
+         \begin{bmatrix} 
+         a_{1,1} & 0 & \ldots & 0 \\
+         a_{2, 1} & a_{2,2} & \ddots & \vdots\\
+         \vdots & \ddots & \ddots & 0\\
+         a_{n, 1} & \ldots & a_{n, n-1} & a_{n,n}
+        \end{bmatrix} 
+    \] 
+\end{definition}

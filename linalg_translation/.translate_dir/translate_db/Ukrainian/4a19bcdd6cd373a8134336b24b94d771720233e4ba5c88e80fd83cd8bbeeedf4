@@ -1,0 +1,6 @@
+\begin{prop}
+    \underline{Коші-Шварца}:\\ 
+    \[
+        |X \cdot Y| \le (X \cdot X)^{\frac{1}{2}}(Y \cdot Y)^{\frac{1}{2}}
+    \] 
+\end{prop}

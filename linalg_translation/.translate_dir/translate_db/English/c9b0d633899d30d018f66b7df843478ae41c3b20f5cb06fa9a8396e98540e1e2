@@ -1,0 +1,9 @@
+\begin{prop}
+    \begin{enumerate}
+        \item 
+            If $A \subseteq E$ then $A^{\perp}$ is a vector subspace of $E$ 
+        \item If $A \subseteq B$ then $B^{\perp} \subseteq A^{\perp}$
+        \item $A^{\perp} = Vect(A)^{\perp}$
+        \item $A \subset (A^{\perp})^{\perp}$ 
+    \end{enumerate}
+\end{prop}

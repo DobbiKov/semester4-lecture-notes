@@ -1,0 +1,7 @@
+\begin{prop}\label{prop:suite-lien-avec-adherence}
+     (lien aven l'adhérence) 
+     \begin{enumerate}
+         \item $x \in Adh(A)$ si et seulement s'il existe une suite  $(x_n)$ d'éléments de  $A$ telle que  $\lim_{n \to \infty} x_n = x$
+         \item $A$ est fermé ssi pour toute suite  $(x_n)$ d'éléments de  $A$ qui converge vers $x \in E$ on a $x \in A$
+     \end{enumerate}
+ \end{prop}

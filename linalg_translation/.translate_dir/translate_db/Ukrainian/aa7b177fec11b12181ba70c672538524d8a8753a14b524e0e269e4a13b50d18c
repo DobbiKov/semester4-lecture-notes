@@ -1,0 +1,3 @@
+\begin{definition}
+    Множина власних значень $f$ називається \textbf{спектром} $f$ і позначається $\operatorname{Sp}_K(f)$ або $\operatorname{Sp}_K(A)$, якщо $A$ — матриця $f$.
+\end{definition}

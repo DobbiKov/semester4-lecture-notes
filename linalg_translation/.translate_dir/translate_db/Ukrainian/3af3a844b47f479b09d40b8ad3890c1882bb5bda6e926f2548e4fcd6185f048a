@@ -1,0 +1,23 @@
+\begin{preuve}
+   \begin{enumerate}
+       \item Нехай $(x_n)_{n \in \N}$ послідовність Коші. Тоді, за визначенням
+           \[
+           \forall \varepsilon > 0, \, \exists N \in \N \text{ така що } \forall n, p \ge N, d(x_n, x_p) < \varepsilon
+           \] 
+           Нехай $\varepsilon = 1$. Отже  $\exists N \in \N$ така що $\forall n, p \ge N, d(x_n, x_p) < 1$, отже $\forall n \ge N$, $d(x_n, x_N) < 1$. Тоді маємо:
+           \[
+               \forall n \in  N, d(x_n, x_N) < 1 + \overbrace{\sup_{1 \le i \le N}d(x_n, x_N)}^{=: r_0}
+           \] 
+           Тоді $\forall n \in \N, \, x_n \in B(x_N, 1 + r_0)$ отже $(x_n)_{n \in \N}$ обмежена.
+       \item Нехай $(x_n)$ послідовність з  $\lim_{n \to \infty} x_n = x$ з $x \in E$.
+           \begin{itemize}
+               \item 
+                   \underline{Гіпотеза:}  $\frac{\epsilon}{2} > 0 \, \exists N(\frac{\epsilon}{2}) \in \N \text{ така що } \forall n \ge N(\frac{\epsilon}{2}), d(x_n, x) \le \epsilon/2$
+                \item 
+                    \underline{Довести:} $\epsilon > 0 \, \exists M(\epsilon) \in \N \text{ така що } \forall n, p \ge M(\epsilon), d(x_n, x_p) \le \epsilon$
+           \end{itemize}
+           \[
+               d(x_n, x_p) < d(x_n, x) + d(x, x_p) \text{ якщо } n, p \ge  N(\frac{\epsilon}{2}) \, d(x_n, x_p) \le 2 \frac{\epsilon}{2} = \epsilon
+           \] 
+   \end{enumerate} 
+\end{preuve}

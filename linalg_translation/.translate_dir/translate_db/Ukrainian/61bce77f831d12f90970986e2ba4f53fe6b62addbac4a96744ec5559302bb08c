@@ -1,0 +1,3 @@
+\begin{definition}
+   $\sum u_n$ нормально збігається в  $(E, \| \cdot \|)$ якщо  $\sum \|u_n\|$ збігається в  $\R$. 
+\end{definition}

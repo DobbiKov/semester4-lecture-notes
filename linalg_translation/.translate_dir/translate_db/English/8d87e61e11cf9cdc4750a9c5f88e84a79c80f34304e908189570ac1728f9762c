@@ -1,0 +1,7 @@
+\begin{definition}
+    Let $f: D \to \R$ and $X_0 \in D$, then if
+     \[
+         \vec{\nabla}f(X_0) = \vec{0}
+    \] 
+    therefore $X_0$ is a \textbf{critical point}.
+\end{definition}

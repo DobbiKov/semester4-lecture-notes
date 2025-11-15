@@ -1,0 +1,8 @@
+\begin{propriete}[Властивості експоненти]
+    \begin{enumerate}
+        \item \(\|e^A\| \le e^{\|A\|}\) (для будь-якої матричної норми, підпорядкованої або Фробеніуса).
+        \item Якщо \(AB=BA\), тоді \(e^{A+B} = e^A e^B\).
+        \item \(e^0 = I\). \((e^A)^{-1} = e^{-A}\).
+        \item \(\frac{d}{dt} (e^{tA}) = A e^{tA} = e^{tA} A\).
+    \end{enumerate}
+\end{propriete}

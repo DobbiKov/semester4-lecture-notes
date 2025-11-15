@@ -1,0 +1,1 @@
+In the previous sections, we learned that to know if a matrix is diagonalizable, we must study the eigenspaces, which is not always very easy and is not the fastest way. So, in this section we will see one of the other methods of studying diagonalizability, one of these methods is the study of annihilating polynomials.

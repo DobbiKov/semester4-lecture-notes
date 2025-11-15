@@ -1,0 +1,6 @@
+\begin{definition}
+    Soit $A \subset E$. $A$ est bornée si  $\exists R > 0$ et $\exists x_0 \in E$ tel que 
+    \[
+    A \subset B(x_0, R)
+    \] 
+\end{definition}

@@ -1,0 +1,8 @@
+\begin{definition}
+    Let $f$ be an endomorphism in $E$ and a vector $v \in E$ is called an \textbf{eigenvector} of $f$ if:
+     \begin{enumerate}
+        \item $v \neq 0$
+        \item There exists a real number $\lambda$ such that $f(v) = \lambda v$
+    \end{enumerate}
+    The scalar $\lambda \in \R$ is called the \textbf{eigenvalue} corresponding to $v$.
+\end{definition}

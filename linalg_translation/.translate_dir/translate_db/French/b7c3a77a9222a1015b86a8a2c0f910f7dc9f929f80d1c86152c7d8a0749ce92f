@@ -1,0 +1,4 @@
+\begin{definition}[Série de fonctions, Convergence normale]
+    Une série de fonctions \(\sum u_n\) (où \(u_n: X \to E\)) converge \textbf{normalement} si la série numérique \(\sum \|u_n\|_\infty\) converge.
+    (i.e. \(\sum_{n=0}^\infty \sup_{x \in X} \|u_n(x)\|_E < \infty\)).
+\end{definition}

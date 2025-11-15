@@ -1,0 +1,21 @@
+\begin{eg}
+   \[
+       f(X) = f(X_0) + \vec{\nabla}f(X_0) \cdot (X - X_0) + \|X - X_0\| \epsilon(X - X_0)
+   \]  
+   лінійний
+   \par
+   У $\R^3$: $f(x, y, z)$
+    \[
+        S = \{(x, y, z): f(x, y, z) = 0 \}
+   \] 
+   $S$: поверхня в  $\R^3$, $X_0 \in S$ дотична площина до $S$ у  $X_0$, площина рівняння:
+   \[
+       f(X_0) + \vec{\nabla}f(X_0)\cdot X = 0
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{surface-s-differentiable}
+    \caption{Приклад диференційовної поверхні}
+    \label{fig:surface-s-differentiable}
+\end{figure}
+\end{eg}

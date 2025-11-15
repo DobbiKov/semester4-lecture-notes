@@ -1,0 +1,29 @@
+\begin{preuve} de Prop. \ref{prop:suite-lien-avec-adherence}
+    \begin{enumerate}
+        \item ($\impliedby$) Soit $(x_n)$ avec  $x_n \in A \quad \forall n \in \N$ et $\lim_{n \to \infty} x_n = x$.
+            \par
+            J'ai $d(x_n, x) \xrightarrow[n \to \infty]{} 0$ et $x_n \in A$, donc
+             \[
+                 inf_{y \in A}(d(x, y)) = 0 = d(x, A)
+            \] 
+            \[
+            d(x, A) = 0 \iff x \in Adh(A)
+            \] 
+            \par
+            ($\implies$) Soit $x \in Adh(A)$
+             \begin{align*}
+                 \iff& d(x, A) = 0\\
+                \iff& \forall \epsilon > 0, \, \exists x_{\epsilon} \in A \text{ tel que } d(x, x_{\epsilon}) < \epsilon
+            \end{align*}
+            Prendre $\epsilon = \frac{1}{n}$, je pose $u_n = x_{\frac{1}{n}}$. $u_n \in A$  $d(x, u_n) < \frac{1}{n}$, donc $\lim_{n \to \infty} u_n = x$ 
+        \item ($\implies$) Soit $A$ fermé, donc 
+             \[
+            A = Adh(A)
+            \] 
+            Si $(x_n)$ suite dans  $A$ qui converge vers  $x$.
+             \[
+            x \in Adh(A) = A
+            \] 
+            ($\impliedby$) On dit que $Adh(A) \subset A$. Comme $A \subset Adh(A)$, donc $A = Adh(A)$
+    \end{enumerate} 
+ \end{preuve}

@@ -1,0 +1,8 @@
+\begin{notation}
+   For any $v \in E$, we denote by $f_v$ the mapping:
+   \begin{align*}
+       f_v: E &\longrightarrow \R \\
+       x &\longmapsto f_v(x) = <v, x>
+   .\end{align*}
+   $f_v$ is linear $\forall v \in E$, i.e. $E^*$
+\end{notation}

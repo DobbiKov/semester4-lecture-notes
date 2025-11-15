@@ -1,0 +1,3 @@
+\begin{definition}
+    $R([a, b], \mathbb{K})$ = $\{$ les  $f: [a, b] \to \mathbb{K}$ intégrables au sens de Riemann\footnote{La fonction est Riemann intégrable (pas forcément continue) si on peut calculer l'air en utilisant l'intégration par les sommes de Riemann. Alors, si $f$ discontinue, elle est Riemann intégrable si la discontinuité est négligable.} $\}$
+\end{definition}

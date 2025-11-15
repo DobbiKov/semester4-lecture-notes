@@ -1,0 +1,23 @@
+\begin{proof}
+   \begin{enumerate}
+       \item Let $(x_n)_{n \in \N}$ be a Cauchy sequence. Then, by definition
+           \[
+           \forall \varepsilon > 0, \, \exists N \in \N \text{ such that } \forall n, p \ge N, d(x_n, x_p) < \varepsilon
+           \] 
+           Let $\varepsilon = 1$. So  $\exists N \in \N$ such that $\forall n, p \ge N, d(x_n, x_p) < 1$, so $\forall n \ge N$, $d(x_n, x_N) < 1$. We therefore have:
+           \[
+               \forall n \in  N, d(x_n, x_N) < 1 + \overbrace{\sup_{1 \le i \le N}d(x_n, x_N)}^{=: r_0}
+           \] 
+           Then $\forall n \in \N, \, x_n \in B(x_N, 1 + r_0)$ so $(x_n)_{n \in \N}$ is bounded.
+       \item Let $(x_n)$ be a sequence with  $\lim_{n \to \infty} x_n = x$ with $x \in E$.
+           \begin{itemize}
+               \item 
+                   \underline{Hypothesis:}  $\frac{\epsilon}{2} > 0 \, \exists N(\frac{\epsilon}{2}) \in \N \text{ such that } \forall n \ge N(\frac{\epsilon}{2}), d(x_n, x) \le \epsilon/2$
+                \item 
+                    \underline{To show:} $\epsilon > 0 \, \exists M(\epsilon) \in \N \text{ such that } \forall n, p \ge M(\epsilon), d(x_n, x_p) \le \epsilon$
+           \end{itemize}
+           \[
+               d(x_n, x_p) < d(x_n, x) + d(x, x_p) \text{ if } n, p \ge  N(\frac{\epsilon}{2}) \, d(x_n, x_p) \le 2 \frac{\epsilon}{2} = \epsilon
+           \] 
+   \end{enumerate} 
+\end{proof}

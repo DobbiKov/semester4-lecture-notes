@@ -1,0 +1,7 @@
+\begin{prop}
+    \begin{enumerate}
+        \item $K$ compact $\implies$ $K$ fermé et borné. (réciproque est fausse en général!)
+        \item Si $K$ compact et $F$ fermé, alors  $K \cap F$ est compact.
+        \item Si $K$ compact, toute suite de Cauchy dans  $K$ converge dans  $K$
+    \end{enumerate}
+\end{prop}

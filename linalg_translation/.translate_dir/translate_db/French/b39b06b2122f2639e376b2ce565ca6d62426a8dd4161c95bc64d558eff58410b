@@ -1,0 +1,7 @@
+\begin{definition}
+    Soit $f \in \mathcal{C}^2(D)$. Matrice hessienne: matrice  $n \times n$
+    \[
+    H_f(X_0) = \begin{bmatrix} \frac{\partial^2}{\partial x_i \partial x_j}(X_0) \end{bmatrix} 1\le i,j \le n
+    \] 
+    Le lemme \ref{thm:lemme-de-schwarz} nous donne que $H_f(X_0)$ est symmetrique si $f \in \mathcal{C}^2(D)$
+\end{definition}

@@ -1,0 +1,5 @@
+\begin{definition}
+     Soit $(x_n)$ une suite dans  $E$ et  $x \in E$. On dit que  $\lim_{n \to \infty} x_n = x$ si $\lim_{n \to \infty} d(x_n, x) = 0$.
+     \par
+     ($\forall \epsilon > 0, \, \exists N \in \N \, \text{ tq si } n \ge N, \, d(x_n, x) < \epsilon$)
+ \end{definition}

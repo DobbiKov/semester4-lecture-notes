@@ -1,0 +1,6 @@
+\begin{definition}[Norme d'opérateur]
+    Si \(A: E \to F\) est une application linéaire continue, sa \textbf{norme d'opérateur} (ou norme subordonnée) est :
+    \[ \|A\|_{\mathcal{L}(E,F)} = \sup_{x \in E, \|x\|_E \le 1} \|Ax\|_F = \sup_{x \in E, x \neq 0_E} \frac{\|Ax\|_F}{\|x\|_E} \]
+    C'est la plus petite constante \(C \ge 0\) telle que \(\|Ax\|_F \le C \|x\|_E\) pour tout \(x \in E\).
+    L'espace \(\mathcal{L}(E,F)\) (ou \(B(E,F)\)) des applications linéaires continues de \(E\) dans \(F\) est un EVN. Si \(F\) est un espace de Banach, alors \(\mathcal{L}(E,F)\) est un espace de Banach.
+\end{definition}

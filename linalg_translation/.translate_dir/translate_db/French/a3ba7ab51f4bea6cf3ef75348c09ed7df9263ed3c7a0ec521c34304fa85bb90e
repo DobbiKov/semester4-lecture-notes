@@ -1,0 +1,14 @@
+\begin{eg}
+   \[
+       f(]0, 1[) = [-1, 1]
+   \]  
+   \[
+   f(x) = \sin(2\pi x)
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-ouvert-nimplique-pas-image-ouvert}
+    \caption{Exemple qu'une image de l'ouvert n'est pas ouvert}
+    \label{fig:exemple-ouvert-nimplique-pas-image-ouvert}
+\end{figure}
+\end{eg}

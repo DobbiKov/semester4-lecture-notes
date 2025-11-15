@@ -1,0 +1,37 @@
+\begin{eg}
+   $d = 2$ polar coordinates:  
+   \begin{align*}
+      &x = r \cos \theta \\
+        & y = r \sin \theta\\
+        &0 \le r \le  \infty \quad \theta \in [0, 2\pi[
+   \end{align*}
+   \begin{center}
+       
+\begin{tikzpicture}
+    % Create the axis
+    \begin{axis}[
+        axis lines=middle,
+        xmin=-1, xmax=3,
+        ymin=-1, ymax=3,
+        xlabel={$x$},
+        ylabel={$y$},
+        axis equal,
+        height=6cm
+    ]
+        % Draw the vector
+        \addplot[->, thick, blue] coordinates {(0,0) (3,2)} node[right] {$\vec{v}$};
+
+        % Draw x-axis projection manually
+        \draw[thick] (axis cs: 0,0) -- (axis cs: 3,0);
+
+        % Use TikZ outside \addplot for \pic
+        \node (A) at (2, 0) {};
+        \node (C) at ($(0,0)!0.5!(3,2)$) {};
+        \node (B) at (0, 0) {};
+        \node[above] (_) at ($(0,0)!0.5!(3,2)$) {$r$};
+        
+        \pic [draw,-, black, angle eccentricity=1.2, angle radius=1cm,"$\theta$"] {angle = A--B--C};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\end{eg}

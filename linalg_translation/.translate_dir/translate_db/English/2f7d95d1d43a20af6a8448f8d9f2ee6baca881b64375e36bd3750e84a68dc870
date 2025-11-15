@@ -1,0 +1,9 @@
+\begin{prop}
+   The case of $B(E)$:
+   \par
+   If $A, B \in B(E)$, $A \circ B$ (denoted $AB$) $\in B(E)$ and 
+   \[
+   \|AB\| \le \|A\|\|B\|
+   \] 
+   (very useful)
+\end{prop}

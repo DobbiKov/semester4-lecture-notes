@@ -1,0 +1,6 @@
+\begin{property} Soit $(E, < . >)$ un espace euclidien. On pose:
+    \[
+    \|X\| := \sqrt{<X,X>} \qquad X \in E 
+    \] 
+    la norme (ou longeur) de $X$. (Il est bien définie car $<., .>$ est toujours positif)
+\end{property}

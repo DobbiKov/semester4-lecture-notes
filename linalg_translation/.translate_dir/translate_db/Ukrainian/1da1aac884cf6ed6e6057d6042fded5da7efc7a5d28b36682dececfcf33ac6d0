@@ -1,0 +1,7 @@
+\begin{definition}\label{def:norm_eucl}
+    \textbf{Евклідова норма} вектора $X$ позначається:
+   \[
+       \|X\| = \left(\sum_{n=1}^{d} x_i^2\right)^{\frac{1}{2}} = \sqrt{x_1^2 + \ldots + x_d^2} = (X \cdot X)^{\frac{1}{2}}
+   \] 
+   часто позначається $\|X\|_2$
+\end{definition}

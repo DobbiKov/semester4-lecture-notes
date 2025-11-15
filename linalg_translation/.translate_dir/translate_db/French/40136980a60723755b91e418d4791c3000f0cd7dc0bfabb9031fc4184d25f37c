@@ -1,0 +1,14 @@
+\begin{eg}
+    \begin{figure}[H]
+        \centering
+        \incfig{compactness-with-sequences}
+        \caption{Compacité avec les suites}
+        \label{fig:compactness-with-sequences}
+    \end{figure}
+    \begin{itemize}
+        \item $E = \R^2$
+        \item $F = B(x_0, r)$ pas compact
+        \item $x_n \in F$,  $x_n \to x$, $x \not\in F$
+        \item si $y_n = x_{\phi(n)}$, $y_n \to x$ mais $x \not\in F$
+    \end{itemize}
+\end{eg}

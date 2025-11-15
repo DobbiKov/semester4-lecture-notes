@@ -1,0 +1,34 @@
+\begin{eg}
+\[
+f(x_1, x_2) = \begin{cases}
+    \frac{x_1x_2}{x_1^2 + x_2^2} \text{ si } (x_1, x_2) \neq (0, 0)\\
+    0 \text{ si } (x_1, x_2)=(0, 0)
+\end{cases}
+\]     
+\begin{itemize}
+    \item continue sur $\R^2 \setminus \{(0, 0)\}$
+    \item partiellement continue en $(0, 0)$
+         \[
+        f(x_1, 0) = \begin{cases}
+            0 \text{ si } x_1 = 0\\
+            0 \text{ si } x_1 \neq 0
+        \end{cases}
+        \] 
+        \[
+        f(0, x_2) = 0 \, \forall x_2
+        \] 
+    \item pas continue en $(0, 0)$:
+         \[
+        x_1 = r \cos(\theta) \quad x_2 = r \sin(\theta)
+        \] 
+        \[
+        f(r\cos(\theta), r\sin(\theta)) = \begin{cases}
+            0 \text{ si } r = 0\\
+            \frac{r^2\cos(\theta)\sin(\theta)}{r^2} = \cos(\theta)\sin(\theta) \text{ si } r \neq 0
+        \end{cases}
+        \] 
+        \[
+        \lim_{r \to 0} f(r\cos(\theta), r\sin(\theta)) = \cos(\theta)\sin(\theta) \neq 0 \text{ si } \theta \neq 0, \pi, \frac{\pi}{2}, \ldots
+        \] 
+\end{itemize}
+\end{eg}

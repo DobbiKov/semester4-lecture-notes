@@ -1,0 +1,7 @@
+\begin{prop}
+   $f$ différentiable en  $X_0$ $\implies$ $f$ dérivable dans toutes les directions en  $X_0$, et alors: 
+   \[
+       \vec{\nabla}f(X_0) = \begin{pmatrix} \frac{\partial f}{\partial x_1}f(X_0)\\ \ldots \\  \frac{\partial f}{\partial x_n}f(X_0)\end{pmatrix} 
+   \] 
+   dans la base $\vec{e_1}, \ldots, \vec{e_n}$
+\end{prop}

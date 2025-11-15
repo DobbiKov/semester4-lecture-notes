@@ -1,0 +1,7 @@
+\begin{prop}
+   Анулюючі многочлени $f$ мають вигляд:
+   \[
+       Q(X) = A(X)m_f(X) \quad \text{ де } \quad A(X) \in K[X]
+   \] 
+   \text{ тобто } $m_f(X)$ \text{ ділить } $Q(X)$. 
+\end{prop}

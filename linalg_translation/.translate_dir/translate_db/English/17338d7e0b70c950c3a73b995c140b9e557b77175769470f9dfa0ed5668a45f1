@@ -1,0 +1,11 @@
+\begin{explanation} of lemma
+   \begin{itemize}
+       \item $(1) \implies (2)$ :\\
+           \underline{Hypothesis}: $\exists x_1 \in E, \exists r_1 \in E$ such that $A \subset B(x_1, r_1)$\\
+           Let $x_0 \in E$. Goal: to find $r$ such that  $A \subset B(x_0, r)$ if $x \in A$, we have:  $d(x_1, x) < r_1$\\
+           \underline{I want}: $d(x_0, x) <r$\\
+          \begin{align*}
+              d(x_0, x) \le d(x_0, x_1) + d(x_1, x) \le d(x_0, x_1) + r_1 < r \quad \text{ if } r > d(x_0, x_1) + r_1
+          \end{align*} 
+   \end{itemize} 
+\end{explanation}

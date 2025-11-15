@@ -1,0 +1,21 @@
+\begin{доказ}
+   Ми повинні показати, що:
+   \begin{enumerate}
+       \item $F \cap F^{\perp} = \O$
+       \item $E = F + F^{\perp}$ тобто  $\forall x \in E, \exists x' \in F, \, x'' \in F^{\perp}$ такий що $x = x' + x''$
+   \end{enumerate}
+   \begin{enumerate}
+       \item Нехай $x \in F \cap F^{\perp}$\\
+       $\implies$ $\scalair{X, Z} = 0 \, \forall Z \in F$ оскільки $x \in F \implies \scalair{X, X} = 0 \implies x = 0 (\scalair{,} \text{ визначено})$
+        \item Нехай $x \in E$. Розглянемо  $f_x \in E^{*}$, тобто  $f_x: E \to \R, y \mapsto \scalair{x, y}$ і $f := f_{x|F}: F \to \R \implies f \in E^{*}$
+            Лема Ріса $\implies$ $\exists! x' \in F$ такий що $f = f_{x'}: F \to \R, z \mapsto \scalair{x', z}\\$
+            $\implies f_{x}(z) = f_{x'}(z) = f(z)\, \forall z \in F$ (Увага: не рівність для всіх $z$ у  $E$)\\
+            Покладемо $x'' := x - x'$, тобто  $x = x' + x'' \in F$. Доведемо  $x'' \in  F^{\perp}$.\\
+            Якщо $z \in F$,  $\scalair{x'', z} = \scalair{x - x', z} = \scalair{x, z} - \scalair{x', z} = 0$. Отже $x'' \in F^{\perp}$ і  $E = F \oplus F^{\perp}$ ($dim(E) = dim(F) + dim(F^{\perp})$) \\
+            $F \subseteq (F^{\perp})^{\perp}$ оскільки $\scalair{x, z} = 0 \, \forall x \in F \, \forall z \in F^{\perp}$
+            \[
+                dim(F) = dim(E) - dim(F^{\perp})
+            \]
+            оскільки $E = G \oplus G^{\perp}$, отже  $dim(G) = dim(E) - dim(G^{\perp})$ для  $G = F^{\perp}, \, dim(F^{\perp}) = dim(G)$
+   \end{enumerate}
+\end{доказ}

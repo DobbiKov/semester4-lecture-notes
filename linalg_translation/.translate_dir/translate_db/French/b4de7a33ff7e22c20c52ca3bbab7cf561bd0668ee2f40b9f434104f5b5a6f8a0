@@ -1,0 +1,6 @@
+\begin{prop}
+   Si $f$ est une projection orthogonale sur  $F \subset E$, alors:
+   \[
+   f(f(x)) = f(x) \quad \forall x \in E
+   \] 
+\end{prop}

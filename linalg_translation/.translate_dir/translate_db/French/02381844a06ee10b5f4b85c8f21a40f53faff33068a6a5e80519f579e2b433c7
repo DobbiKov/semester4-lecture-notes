@@ -1,0 +1,3 @@
+\begin{prop}
+      Endomorphisme $f: E \to E$ un drapeau invariant (i.e $f(E_i) \subset E_i$) $\iff$ $Mat(f)$ triangulaire supérieure 
+   \end{prop}

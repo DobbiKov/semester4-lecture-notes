@@ -1,0 +1,7 @@
+\begin{property}
+    La différence entre \textit{compacité} et {complecité}:
+    \begin{itemize}
+        \item complecité nous assure qu'il n'y a pas de trou dans un espace
+        \item compacité nous assure qu'un ensemble est fermé et borné
+    \end{itemize}
+\end{property}

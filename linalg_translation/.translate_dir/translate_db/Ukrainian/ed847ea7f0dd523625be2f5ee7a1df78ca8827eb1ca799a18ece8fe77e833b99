@@ -1,0 +1,29 @@
+\begin{preuve} Доказ теореми ~\ref{thm:nature-des-points-critiques}
+   \[
+       f(X_0 + X) - f(X_0) = \frac{1}{2}X\cdot H_f(X_0)X + \|X\|^2\epsilon(X)
+   \]  
+   .
+   \begin{enumerate}
+       \item якщо $\lambda_i > 0$  $\frac{1}{2}X \cdot H_f(X_0)X \ge C\|X\|^2$ $C > 0$
+            \[
+           f(X_0 + X) - f(X_0) \ge \|X\|^2(C + \epsilon(X)) \ge \frac{C}{2}\|X\|^2 \text{ якщо } \|X\| \text{ досить малий }
+           \] 
+           \[
+           \implies X_0 \text{ локальний мінімум}
+           \] 
+        \item якщо $\lambda_1 < 0$ і  $\lambda_2 > 0$
+             \[
+                 H_f(X_0)\vec{u_i} = \lambda_i\vec{u_i}
+            \] 
+            \[
+                f(X_0 + t\vec{u_i}) = f(X_0) + \frac{1}{2} \lambda_it^2 + t^2\epsilon(t)
+            \] 
+            \[
+                \epsilon(t\vec{u_i}) = \epsilon(t)
+            \] 
+            \[
+                f(X_0 + t\vec{u_i}) - f(X_0) = t^2 (\frac{1}{2}\lambda_i + \epsilon(t))
+            \] 
+            якщо $i = 1$  $< 0$  $|t|$ малий,  $i = 2$  $> 0$  $|t|$ малий, тоді  $X_0$ не є локальним екстремумом
+   \end{enumerate}
+\end{preuve}

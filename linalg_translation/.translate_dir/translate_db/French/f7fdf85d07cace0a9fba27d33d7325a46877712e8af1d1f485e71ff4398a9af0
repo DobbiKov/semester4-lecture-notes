@@ -1,0 +1,3 @@
+\begin{intuition}
+   Adherent aide à completer des ensembles. Si $A$ est ouvert, alors ses bords n'appartiennent pas à  $A$, mais ils appartiennent à  $Adh(A)$ .
+\end{intuition}

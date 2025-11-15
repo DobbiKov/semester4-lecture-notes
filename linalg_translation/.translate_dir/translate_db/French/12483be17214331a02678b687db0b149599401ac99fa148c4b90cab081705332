@@ -1,0 +1,3 @@
+\begin{note}
+    Par contre, l'égalité n'est vrai en général, par exemple $\operatorname{Id}^2 = \operatorname{Id}$, donc  $Q(X) = X^2 - X = X(X - 1)$ annule $\operatorname{Id}$ avec les racines  $0$ et  $1$, mais  $0$ n'est pas une valeur propre de  $\operatorname{Id}$.
+\end{note}

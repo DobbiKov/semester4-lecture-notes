@@ -1,0 +1,20 @@
+\begin{eg}
+    $E = \mathbb{K}^{\N}$ un ensemble des suites $u$ à valeurs dans  $\mathbb{K}$ 
+    \[
+    u = (u_1, u_2, \ldots, u_n, \ldots )
+    \] 
+    pour $1 \le p < \infty$
+    \[
+        l^{p}(\N, \mathbb{K}) = \{(u_n): \sum_{n \in \N}^{} |u_n|^{p} \text{ est convergente } \}
+    \] 
+    \[
+        \|u\|_p = \left( \sum_{n=0}^{\infty} |u_n|^{p} \right)^{\frac{1}{p}}
+    \] 
+    est une norme sur $l^{p}(\N, \mathbb{K})$
+    \[
+        p = \infty \quad l^{\infty}(\N, \mathbb{K}) = \{u \text{ bornée } \}
+    \] 
+    \[
+        \|u\|_{\infty} = \sup_{n \in \N} |u_n|
+    \] 
+\end{eg}

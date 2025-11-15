@@ -1,0 +1,15 @@
+\begin{explanation}
+    $|(X|Y)| \le \|X\|\|Y\| \le \|X\|$ si $\|Y\| \le 1$
+    \[
+    \underset{\|Y\|\le 1}{sup|(X|Y)|}
+    \] 
+    \underline{Other meaning:} 
+    \begin{align*}
+        &X \neq 0 \quad Y =  \frac{X}{\|X\|} = \lambda X \quad \lambda = \frac{1}{\|X\|}\\
+        &\|Y\| = |\lambda|\|X\| = \frac{1}{\|X\|}\|X\| = 1\\
+        &(X|Y) = (X|\frac{X}{\|X\|}) = \frac{1}{\|X\|}(X|X) = \|X\|\\
+        &sup \{|(X|Y)|: \, \|Y\| \le  1\}\\
+        &\|X\| \le sup \{|(X|Y)|: \, \|Y\|\le 1\} \quad \text{(take }Y = \frac{X}{\|X\|}\text{)}
+    \end{align*}
+
+\end{explanation}

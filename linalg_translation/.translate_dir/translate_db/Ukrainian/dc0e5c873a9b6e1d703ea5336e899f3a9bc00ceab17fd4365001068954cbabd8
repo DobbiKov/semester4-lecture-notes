@@ -1,0 +1,3 @@
+\begin{definition}
+    Нехай $D$, тоді $f: D \to \R$ є $\mathcal{C}^k$ якщо $f: D \to \R$ є $\mathcal{C}^1$ і $\partial_{x_i}f: D \to \R$ є $C^{k-1}$
+\end{definition}

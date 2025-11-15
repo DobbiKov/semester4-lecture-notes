@@ -1,0 +1,13 @@
+\declaretheorem[sibling=definition, style=thmbluebox,  name=Example]{eg}
+\declaretheorem[sibling=definition, style=thmbluebox,  name=Nonexample]{noneg}
+\declaretheorem[sibling=definition, style=thmblueline, name=Remark]{remark}
+
+
+
+
+\declaretheorem[numbered=no, style=thmexplanationbox, name=Proof]{explanation}
+\declaretheorem[numbered=no, style=thmproofbox, name=Proof]{preuve}
+\declaretheorem[style=thmbluebox,  numbered=no, name=Exercise]{ex}
+\declaretheorem[style=thmblueline, numbered=no, name=Note]{note}
+
+%  \renewenvironment{proof}[1][\proofname]{\begin{replacementproof}}{\end{replacementproof}}

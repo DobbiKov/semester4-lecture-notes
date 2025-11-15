@@ -1,0 +1,7 @@
+\begin{definition}
+    \textbf{Ортогональна проєкція} на підпростір $A \subset E$ — це відображення:
+    \begin{align*}
+        p_F: E &\longrightarrow F \\
+        x &\longmapsto p_F(x = e + e') = e
+    \end{align*}
+\end{definition}

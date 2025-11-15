@@ -1,0 +1,27 @@
+\begin{eg}
+   \[
+       A = \{(x, y) \in \R^2 \mid x > 0, y = x^{-1}\}
+   \]  
+   $Int(A) = \O$? $C = \O$
+\begin{figure}[H]
+    \centering
+    \incfig{example-interieur-hyperbola}
+    \caption{Example of the interior of the hyperbola}
+    \label{fig:example-interieur-hyperbola}
+\end{figure}
+$\O$ open, therefore $C \subset Int(A)$
+\par
+Let $X \in A \quad X \not\in C$, therefore $X \in A$.
+ \[
+X_n := (x, y + \frac{1}{n}) \quad X_n \not\in A
+\] 
+\[
+x_ny_n = xy + \frac{x}{n} = 1 + \frac{x}{n} \neq 1
+\] 
+\[
+X_n \xrightarrow[n \to \infty]{} X \text{ therefore } X \not\in Int(A)
+\] 
+\[
+Int(A) = \O
+\] 
+\end{eg}

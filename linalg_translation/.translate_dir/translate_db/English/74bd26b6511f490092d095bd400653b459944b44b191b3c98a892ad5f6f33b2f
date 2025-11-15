@@ -1,0 +1,8 @@
+\begin{theorem}[Continuity of linear maps]
+    For a linear map \(A: E \to F\), the following properties are equivalent:
+    \begin{enumerate}
+        \item \(A\) is continuous (at every point of \(E\)).
+        \item \(A\) is continuous at \(0_E\).
+        \item \(A\) is bounded: \(\exists C \ge 0\) such that \(\forall x \in E, \|Ax\|_F \le C \|x\|_E\).
+    \end{enumerate}
+\end{theorem}

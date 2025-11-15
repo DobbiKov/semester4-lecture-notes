@@ -1,0 +1,7 @@
+\begin{property}
+   \begin{enumerate}
+       \item Toute partie finie est bornée
+       \item Si $A$ bornée et  $B \subset A$ alors $B$ bornée
+       \item L'union d'un nombre \underline{fini} de bornés est borné
+   \end{enumerate} 
+\end{property}

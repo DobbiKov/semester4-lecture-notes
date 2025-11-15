@@ -1,0 +1,8 @@
+\begin{intuition}
+   The link between extremums and the critical point: 
+   \begin{enumerate}
+       \item for the extremum to exist, there must be at least one critical point - it is a necessary \underline{but not sufficient} criterion.
+       \item every local extremum is a critical point
+   \end{enumerate}
+   Critical points facilitate the search for local extremums.
+\end{intuition}

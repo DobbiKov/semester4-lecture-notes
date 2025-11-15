@@ -1,0 +1,6 @@
+\begin{definition}\label{def:prod_scalaire}
+    Un \textbf{produit scalaire}:
+    \[
+    X \cdot Y = x_1y_1 + x_2y_2 + \ldots x_dy_d = \|X\|\|Y\|\cos(\theta) \text{ (où } \theta \text{ est une angle entre } X \text{ et } Y \text{)}
+    \] 
+\end{definition}

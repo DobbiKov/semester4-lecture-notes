@@ -1,0 +1,33 @@
+\begin{lemma}.
+   \begin{enumerate}
+       \item $B(x_0, 0) = \O$ (тому що неможливо мати точки, відстань до яких строго менша за 0)
+       \item $B_f(x_0, 0) = \{x_0\}$
+       \item $B(x_0, r_1) \subset B_f(x_0, r_1) \subset B(x_0, r_2)$ якщо $r_1 < r_2$
+       \item\label{lem:lem_boule_4} $B(x_1, r_1) \subset B(x_0, r)$ якщо $d(x_0, x_1) + r_1 \le r$
+   \end{enumerate} 
+   \begin{figure}[H]
+       \centering
+       \begin{tikzpicture}
+           \coordinate (x_0) at (0,0);
+           \def\r{2.0};
+
+           \node[right] (_) at (0, 0){$x_0$};
+           \filldraw[color=black] (x_0) circle (0.6mm);
+            \node[above] (_) at ($(x_0) + (0, \r)$){$r$};
+            \draw (x_0) circle (\r);
+            \draw (x_0) -- ($(x_0) + (0, \r)$);
+
+            \def\r_1{0.5};
+        \coordinate (x_1) at ($(x_0) - ({\r_1 * cos(45)}, {\r_1 * cos(45)})$);
+
+            \node[left] (_) at (x_1){$x_1$};
+            \filldraw[color=black] (x_1) circle (0.4mm);
+            \draw (x_1) circle (\r_1);
+
+            \coordinate (x_1r_1) at ($(x_1) - ({ \r_1 * cos(45) }, { \r_1 * cos(45) })$);
+            \node[below] (_) at (x_1r_1){$r_1$};
+            \draw (x_1) -- (x_1r_1);
+       \end{tikzpicture}
+       \caption{Лемa ~\ref{lem:lem_boule_4}}
+   \end{figure}
+\end{lemma}

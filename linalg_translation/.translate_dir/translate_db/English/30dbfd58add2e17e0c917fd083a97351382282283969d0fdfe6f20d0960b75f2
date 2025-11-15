@@ -1,0 +1,31 @@
+\begin{preuve}
+   \begin{enumerate}
+       \item Let $(x_n)$ with $\lim x_n = x$
+            \[
+                \forall \epsilon > 0 \, \exists M(\epsilon) \text{ such that if } n \ge N(\epsilon), d(x_n ,x) \le \epsilon 
+           \] 
+           Let $y_n = x_{\phi(n)}$ a subsequence.
+           \begin{itemize}
+               \item \underline{Goal:} Let $\epsilon > 0$, find $N(\epsilon)$ such that if $n \ge N(\epsilon), \, d(\underbrace{y_n}_{:= x_{\phi(n)}}, x) \le \epsilon$
+           \end{itemize}
+           I choose $N(\epsilon)$ such that if $n \ge N(\epsilon)$ then $\phi(n) \ge M(\epsilon)$, so $d(y_n, x) d(x_{\phi(n)}, x) \le \epsilon$. This is possible because $\phi(n) \xrightarrow[n \to \infty]{} \infty$, $N(\epsilon) = M(\epsilon)$ 
+        \item 
+            \begin{itemize}
+                \item  \underline{Hyp1:} $\forall \epsilon > 0 \, \exists M(\epsilon)$ such that if $n, p \ge M(\epsilon)$ $d(x_n, x_p) \le \epsilon$
+                \item  \underline{Hyp2:} $\forall \epsilon > 0 \, \exists P(\epsilon)$ such that if $p \ge P(\epsilon), d(y_p, x) \le \epsilon$, $d(y_p, x) = d(x_{\phi(p)}, x)$
+            \end{itemize}
+            \begin{align*}
+                d(x_n, x) \le d(x_n, x_{\phi(p)}) + d(x_{\phi(p)}, x) \quad \text{by the triangle inequality}
+            \end{align*}
+            \begin{align*}
+                d(x_n, x_{\phi(p)}) \le \epsilon \text{ if } n \ge M(\epsilon) \text{ and } \phi(p) \ge M(\epsilon)
+            \end{align*}
+            \begin{align*}
+                d(x_{\phi(p)}, x) \le \epsilon \text{ if } p \ge P(\epsilon)
+            \end{align*}
+            If $n \ge M(\epsilon)$, I choose $p$ such that $\phi(p) \ge M(\epsilon)$ and $p \ge P(\epsilon)$. I fix this $p$!
+             \[
+            \text{if } n \ge M(\epsilon) \text{ then } d(x_n, x) \le 2\epsilon
+            \] 
+   \end{enumerate} 
+\end{preuve}

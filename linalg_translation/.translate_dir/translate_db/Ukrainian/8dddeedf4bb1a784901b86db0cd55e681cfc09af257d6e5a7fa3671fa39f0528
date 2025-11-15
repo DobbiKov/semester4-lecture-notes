@@ -1,0 +1,8 @@
+\begin{definition}
+    $\R^d$ є векторним простором над $\R$ 
+    \begin{align*}
+        &\vec{X} + \vec{Y} = (x_1 + y_1, \ldots, x_d + y_d)\\
+        &\lambda X = (\lambda x_1, \ldots, \lambda x_d) \quad \lambda \in \R\\
+        &\vec{0}_d = \vec{0} = (0, \ldots, 0)
+    \end{align*}
+\end{definition}

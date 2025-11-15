@@ -1,0 +1,9 @@
+\begin{theorem}[Condition suffisante d'extremum local (Ordre 2)]
+    Soit \(f:D \to \R\) de classe \(C^2\) sur \(D\) et \(X_0 \in \operatorname{Int}(D)\) un point critique. Soit \(q(H) = H^T H_f(X_0) H\) la forme quadratique hessienne.
+    \begin{enumerate}
+        \item Si \(H_f(X_0)\) est \textbf{définie positive} (i.e., \(q(H)>0\) pour \(H \neq 0\), ou toutes ses valeurs propres sont \(>0\)), \(X_0\) est un minimum local strict.
+        \item Si \(H_f(X_0)\) est \textbf{définie négative} (i.e., \(q(H)<0\) pour \(H \neq 0\), ou toutes ses valeurs propres sont \(<0\)), \(X_0\) est un maximum local strict.
+        \item Si \(H_f(X_0)\) est \textbf{indéfinie} (i.e., \(q(H)\) prend des valeurs \(>0\) et \(<0\), ou elle a des valeurs propres de signes opposés non nulles), \(X_0\) est un \textbf{point selle} (ou col), pas un extremum.
+        \item Si \(H_f(X_0)\) est semi-définie (positive ou négative) mais pas définie (i.e., \(q(H) \ge 0\) (ou \(\le 0\)) et \(q(H)=0\) pour certains \(H \neq 0\), ou au moins une valeur propre est nulle et les autres de même signe ou nulles), on ne peut pas conclure avec ce critère seul (cas douteux).
+    \end{enumerate}
+\end{theorem}

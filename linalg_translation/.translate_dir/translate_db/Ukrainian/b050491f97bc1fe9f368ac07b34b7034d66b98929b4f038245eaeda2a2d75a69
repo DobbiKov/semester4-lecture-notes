@@ -1,0 +1,8 @@
+\begin{definition}
+    Нехай (E, d) метричний простір.
+    \begin{enumerate}
+        \item $U \subset E$ є відкритою, якщо $\forall x_0 \in U, \, \exists r > 0 \: r(x_0)$ такий, що $B(x_0, r) \subset U$
+        \item $F \subset E$ є замкненою, якщо $E \setminus F$ є відкритою
+    \end{enumerate}
+    $\O$ є відкритою і $E$ є відкритою.  $\O$ є замкненою і $E$ є замкненою.
+\end{definition}

@@ -1,0 +1,7 @@
+\begin{lemma}
+   L'application
+   \[
+   \sqrt{<.,.>} = \| . \|: E \to \R_+ 
+   \] 
+   est dite norme euclidienne.
+\end{lemma}

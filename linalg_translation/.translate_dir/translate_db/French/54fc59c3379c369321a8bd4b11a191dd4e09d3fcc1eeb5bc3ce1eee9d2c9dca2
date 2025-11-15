@@ -1,0 +1,3 @@
+Donc, on doit étudier l'application $(A - \lambda I)$ et la connecter à la notion des détérminants. Rappelle: si le détérminant d'une matrice n'est pas nul, cette matrice (i.e endomorphisme) est injective. Dans notre cas, si  $\det(A - \lambda I)$ était nul, le seul vecteur  $v$ qui donnerait  $(A - \lambda I)v = 0$ était le vecteur nul  $v = 0$ car  $(A - \lambda I)$ est linéaire et (comme on a suppoé) injective. 
+\par
+Par contre, d'après la définition, les vecteurs propres ne sont pas nul, alors le cas injectif ne convient pas, donc pour avoir des vecteurs propres l'application $(A - \lambda I)$

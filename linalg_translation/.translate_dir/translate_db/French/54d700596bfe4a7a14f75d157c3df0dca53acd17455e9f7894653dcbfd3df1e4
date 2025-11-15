@@ -1,0 +1,7 @@
+\begin{definition}
+    Soient $\alpha = (\alpha_1, \ldots, \alpha_n)$ \quad $\alpha_i \in \N$. On pose
+    \[
+        \partial_{x}^{\alpha}f = \frac{\partial^{\alpha_1}}{\partial x_1^{\alpha_1}} \cdot \ldots \cdot \frac{\partial^{\alpha_n}}{\partial x_n^{\alpha_n}}
+    \] 
+    est la notation pour la dérivée d'ordre supérieure.
+\end{definition}

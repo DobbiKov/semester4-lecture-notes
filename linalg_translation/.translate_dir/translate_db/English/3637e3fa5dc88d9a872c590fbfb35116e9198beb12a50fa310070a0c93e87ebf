@@ -1,0 +1,3 @@
+Therefore, we must study the application $(A - \lambda I)$ and connect it to the notion of determinants. Recall: if the determinant of a matrix is non-zero, then that matrix (i.e., endomorphism) is injective. In our case, if $\det(A - \lambda I)$ were zero, the only vector $v$ that would give $(A - \lambda I)v = 0$ was the zero vector $v = 0$ because $(A - \lambda I)$ is linear and (as we have supposed) injective.
+\par
+On the other hand, according to the definition, eigenvectors are not zero, so the injective case is not suitable; therefore, to have eigenvectors, the application $(A - \lambda I)$

@@ -1,0 +1,11 @@
+\begin{definition}
+    Soient $x, y \in E$ deux vecteurs non nuls. On a, d'après l'inégalité de Cauchy-Schwarz (voir lemma \ref{lemma:inegalite-cauchy-schwarz}):
+    \[
+        \frac{| \scalair{x, y} |}{\|x\| \cdot \|y\|} \le 1
+    \] 
+    Alors, il existe un et un seul $\theta \in [0, \pi]$ tel que:
+     \begin{equation}
+        \cos \theta = \frac{ \scalair{x, y}}{\|x\| \cdot \|y\|} 
+    \end{equation}
+    $\theta$ est dit \textbf{angle} (non-orienté) entre les vecteurs  $x$ et  $y$.
+\end{definition}

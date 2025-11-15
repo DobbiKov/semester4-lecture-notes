@@ -1,0 +1,13 @@
+\begin{preuve}
+   \begin{enumerate}
+       \item Нехай $K$ компакт.  $K$ замкнений якщо  $(u_n)$ послідовність в  $K$, яка збігається до  $u$, тоді  $u \in K$.
+           \par
+           \underline{зрозуміло:}  $(u_n)$ має підпослідовність  $v_n = u_{\phi(n)}$ з $v_n \to v \in K$, $u_n \to u$, тому $v_n \to u$ $\implies$ $u = v$  $\implies$ $u \in K$
+           \par
+           $K$ \underline{обмежений}:
+           \par
+              Нехай $U_x = \bigcup_{x \in K} B(x, 1)$ відкрите покриття $K$. Однак  $K$ компактний, тому існують  $x_1, \ldots, x_n \in K$, такі що $K \subset \bigcup_{i = 1, \ldots, n} B(x_i, 1) $, тому $K$ обмежений.
+        \item $K$ компактний і $F$ замкнений. $(u_n)$ послідовність в $K \cap F$. $u_n \in K$. $ \exists$ підпослідовність $v_n = u_{\phi(n)}$ з $v_n \to x \in K$. $v_n \in F, v_n \to x$, $F$ замкнений тому $x \in F$, $x \in K \cap F$.
+        \item Нехай $(u_n)$ послідовність Коші в $K$. $(u_n)$ має підпослідовність $v_n = u_ { \phi(n)}$, яка збігається до $x \in K$. $u_n \to x \in K$
+   \end{enumerate} 
+\end{preuve}

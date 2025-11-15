@@ -1,0 +1,31 @@
+\begin{definition}\label{def:matrice-ligne-colonne-supprime}
+    Soit $A = (a_{i, j}) \in \mathcal{M}_n(\R)$ une matrice carrée, i.e:
+    \[
+        A = 
+        \begin{bmatrix} 
+            a_{1, 1} & a_{1, 2} & \ldots & a_{1, i - 1} & a_{1, i} & a_{1, i+1} & \ldots & a_{1, n} \\
+            a_{2, 1} & a_{2, 2} & \ldots & a_{2, i - 1} & a_{2, i} & a_{2, i+1} & \ldots & a_{2, n} \\
+            \vdots   & \vdots   & \vdots & \vdots       & \vdots   & \vdots     & \vdots & \vdots \\
+            a_{j-1, 1} & a_{j-1, 2} & \ldots & a_{j-1, i - 1} & a_{j-1, i} & a_{j-1, i+1} & \ldots & a_{j-1, n} \\
+            a_{j, 1} & a_{j, 2} & \ldots & a_{j, i - 1} & a_{j, i} & a_{j, i+1} & \ldots & a_{j, n} \\
+            a_{j+1, 1} & a_{j+1, 2} & \ldots & a_{j+1, i - 1} & a_{j+1, i} & a_{j+1, i+1} & \ldots & a_{j+1, n} \\
+            \vdots   & \vdots   & \vdots & \vdots       & \vdots   & \vdots     & \vdots & \vdots \\
+            a_{n, 1} & a_{n, 2} & \ldots & a_{n, i - 1} & a_{n, i} & a_{n, i+1} & \ldots & a_{n, n} 
+        \end{bmatrix} 
+    \] 
+
+    Alors, $A_{j, i}$ est une matrice où la ligne $j$ et la colonne  $i$ sont supprimé, i.e:
+    \[
+        A_{j, i} = 
+        \begin{bmatrix} 
+            a_{1, 1} & a_{1, 2} & \ldots & a_{1, i - 1} & & a_{1, i+1} & \ldots & a_{1, n} \\
+            a_{2, 1} & a_{2, 2} & \ldots & a_{2, i - 1} & & a_{2, i+1} & \ldots & a_{2, n} \\
+            \vdots   & \vdots   & \vdots & \vdots       & & \vdots     & \vdots & \vdots \\
+           a_{j-1, 1} & a_{j-1, 2} & \ldots & a_{j-1, i - 1} & & a_{j-1, i+1} & \ldots & a_{j-1, n} \\
+             & & & & & & & \\
+            a_{j+1, 1} & a_{j+1, 2} & \ldots & a_{j+1, i - 1} & & a_{j+1, i+1} & \ldots & a_{j+1, n} \\
+            \vdots   & \vdots   & \vdots & \vdots       & \vdots   & & \vdots & \vdots \\
+            a_{n, 1} & a_{n, 2} & \ldots & a_{n, i - 1} & & a_{n, i+1} & \ldots & a_{n, n} 
+        \end{bmatrix} \in \mathcal{M}_{n-1}(\R)
+    \] 
+\end{definition}

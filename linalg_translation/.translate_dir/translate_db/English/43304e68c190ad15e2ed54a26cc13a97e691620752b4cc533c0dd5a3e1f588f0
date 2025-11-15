@@ -1,0 +1,4 @@
+\begin{propriete}[Majorization of the matrix norm]
+    Frobenius norm (Hilbert-Schmidt) : \(\|A\|_{HS} = \left( \sum_{i,j=1}^n |a_{i,j}|^2 \right)^{1/2} = \sqrt{\operatorname{Tr}(A^*A)}\).
+    We have \(\|A\| \le \|A\|_{HS}\) for the operator norm induced by \(\|\cdot\|_2\).
+\end{propriete}

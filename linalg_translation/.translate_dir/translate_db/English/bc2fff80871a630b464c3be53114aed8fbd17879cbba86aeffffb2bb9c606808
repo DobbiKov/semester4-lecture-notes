@@ -1,0 +1,7 @@
+\begin{prop}
+    Let $(E, \| . \|)$ be a normed vector space with 
+     \[
+    d(u, v) = \|u - v\|
+    \] 
+    a distance on $E$ (induced by $\| . \|$), then $(E, d)$ is a metric space.
+\end{prop}

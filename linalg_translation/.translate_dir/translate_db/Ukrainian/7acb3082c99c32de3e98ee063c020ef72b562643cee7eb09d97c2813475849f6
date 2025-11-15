@@ -1,0 +1,5 @@
+\begin{definition}[Щільна множина]
+    Нехай \(A \subset B \subset E\). Кажуть, що \(A\) є \textbf{щільною} в \(B\), якщо \(B \subset \operatorname{Adh}(A)\).
+    \(A\) є щільною в \(E\), якщо \(\operatorname{Adh}(A) = E\).
+    Приклад: \(\Q\) є щільною в \(\R\). \(\Q^d\) є щільною в \(\R^d\).
+\end{definition}

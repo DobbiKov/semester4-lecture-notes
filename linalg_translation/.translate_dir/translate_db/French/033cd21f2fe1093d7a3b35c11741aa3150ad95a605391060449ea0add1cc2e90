@@ -1,0 +1,7 @@
+\begin{align*}
+    && f(v) &= \lambda v\\
+    \iff&& Av &= \lambda v \quad \text{ en notation matricielle}\\
+    \iff&& Av &= \lambda (Iv) \quad \text{ où } I \text{ est une matrice identité}\\
+    \iff&& Av - \lambda Iv &= 0\\
+    \iff&& (A - \lambda I)v &= 0
+\end{align*}

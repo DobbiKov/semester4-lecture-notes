@@ -1,0 +1,291 @@
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: c989bfd3ebf41acd1af67154558c73f359661474e55820d188f711ad6f74328a
+% --- CHUNK_METADATA_END ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage{url}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={black},
+    citecolor={black},
+    urlcolor={blue!80!black}
+}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{listings}
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{gray},
+    showstringspaces=false,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    tabsize=4
+}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 35e274708155b50e1296725bef11ce565afd60f0203d9dfa979f19057f19cd55
+% --- CHUNK_METADATA_END ---
+%  \usepackage{cmbright}
+
+
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
+\usepackage{mathrsfs}
+\usepackage{cancel}
+
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+\renewcommand\O{\ensuremath{\emptyset}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+\newcommand\C{\ensuremath{\mathbb{C}}}
+\let\implies\Rightarrow
+\let\impliedby\Leftarrow
+\let\iff\Leftrightarrow
+\let\epsilon\varepsilon
+
+%  horizontal rule
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+
+\usepackage{tikz}
+%  \usepackage{tikzmark}
+\usepackage{pgfplots}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 6f630fe01a2fd793720b662f606ec5b9269304740b72d6ae4c92bd94dbc4cf37
+% --- CHUNK_METADATA_END ---
+\usepackage{tikz-cd}
+
+\usetikzlibrary{calc, arrows.meta, positioning, angles, quotes, patterns}
+
+%  theorems
+\usepackage{thmtools}
+\usepackage{thm-restate}
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfsetup{skipabove=1em,skipbelow=0em, innertopmargin=12pt, innerbottommargin=8pt}
+
+\theoremstyle{definition}
+
+\makeatletter
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
+    }
+]{thmgreenbox} %defines the theorem style 
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 95ac1cbed3de7c4059d6e7c798f0c79ccb5f329d1ced37cb03fd86807b2b50ac
+% --- CHUNK_METADATA_END ---
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+    }
+]{thmbluebox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue
+    }
+]{thmblueline}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 21247ef5cc586e85a1629d9070830990e59d62fa8adf694527922c776d6a4406
+% --- CHUNK_METADATA_END ---
+    , bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=RawSienna, backgroundcolor=RawSienna!5,
+    }
+]{thmredbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    numbered=no,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=RawSienna, backgroundcolor=RawSienna!1,
+    },
+    qed=\qedsymbol
+]{thmproofbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: cb48ecae9ffd2aea7668e1c099876d7ec238ed1c52f772495f3069585721f181
+% --- CHUNK_METADATA_END ---
+\normalfont,
+    numbered=no,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
+    },
+]{thmexplanationbox}
+
+\declaretheorem[numberwithin=chapter, style=thmgreenbox, name=Definition]{definition}
+\declaretheorem[sibling=definition, style=thmredbox, name=Corollary]{corollary}
+\declaretheorem[sibling=definition, style=thmredbox, name=Proposition]{prop}
+\declaretheorem[sibling=definition, style=thmredbox, name=Theorem]{theorem}
+\declaretheorem[sibling=definition, style=thmredbox, name=Lemma]{lemma}
+
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 133ec0a8c08cd33dfdd103df18f548a0bc889ed3e3af9f5aeaa294e7705e2cd8
+% --- CHUNK_METADATA_END ---
+\declaretheorem[sibling=definition, style=thmbluebox,  name=Example]{eg}
+\declaretheorem[sibling=definition, style=thmbluebox,  name=Nonexample]{noneg}
+\declaretheorem[sibling=definition, style=thmblueline, name=Remark]{remark}
+
+
+
+
+\declaretheorem[numbered=no, style=thmexplanationbox, name=Proof]{explanation}
+\declaretheorem[numbered=no, style=thmproofbox, name=Proof]{preuve}
+\declaretheorem[style=thmbluebox,  numbered=no, name=Exercise]{ex}
+\declaretheorem[style=thmblueline, numbered=no, name=Note]{note}
+
+%  \renewenvironment{proof}[1][\proofname]{\begin{replacementproof}}{\end{replacementproof}}
+
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: ee40156a4f68d7cba674746ec43032913865317fcc31679bbbd0032787911a63
+% --- CHUNK_METADATA_END ---
+%  \AtEndEnvironment{eg}{\null\hfill$\diamond$}%
+
+
+\newtheorem*{uovt}{UOVT}
+\newtheorem*{notation}{Notation}
+\newtheorem*{previouslyseen}{As previously seen}
+\newtheorem*{problem}{Problem}
+\newtheorem*{observe}{Observe}
+\newtheorem*{property}{Property}
+\newtheorem*{intuition}{Intuition}
+
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=RawSienna, backgroundcolor=RawSienna!5,
+    }
+]{todo}
+\declaretheorem[numbered=no, style=todo, name=TODO]
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 99fe31c94cf82c099d90ca98f2fe23181e39cd0b0d125335c7eccda8a49edf0f
+% --- CHUNK_METADATA_END ---
+{TODO}
+
+
+\usepackage{etoolbox}
+
+\AtEndEnvironment{vb}{\null\hfill$\diamond$}% 
+\AtEndEnvironment{intermezzo}{\null\hfill$\diamond$}% 
+
+
+
+
+
+%  http://tex.stackexchange.com/questions/22119/how-can-i-change-the-spacing-before-theorems-with-amsthm
+%  \def\thm@space@setup{%
+%    \thm@preskip=\parskip \thm@postskip=0pt
+%  }
+
+
+\usepackage{xifthen}
+
+\def\testdateparts#1{\dateparts#1\relax}
+\def\dateparts#1 #2 #3 #4 #5\relax{
+    \marginpar{\small\textsf{\mbox{#1 #2 #3 #5}}}
+}
+
+\def\@lesson{}% 
+\newcommand{\lesson}[3]{
+    \ifthenelse{\isempty{#3}}{%
+        \def\@lesson{Lecture #1}%
+    }{%
+        \def\@lesson{Lecture #1: #3}%
+    }%
+    \subsection*{\@lesson}
+    \testdateparts{#2}
+}
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 0c755ffa0ba0b6888a347f399f51c2323e130155e6b80a6ed99a3197969d1dc0
+% --- CHUNK_METADATA_END ---
+%  Fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%  \fancyhead[LE,RO]{Gilles Castel}
+\fancyhead[RO,LE]{\@lesson}
+\fancyhead[RE,LO]{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[C]{\leftmark}
+\renewcommand{\headrulewidth}{0pt}
+
+\makeatother
+
+%  Figure support (https://castel.dev/post/lecture-notes-2)
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage[margin=0.8in]{geometry}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+%  %http://tex.stackexchange.com/questions/76273/multiple-pdfs-with-page-group-included-in-a-single-page-warning
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 446f4d1f4015c7ba76adb15825ad69e5cfffc38fc5d825d0013371f876db7739
+% --- CHUNK_METADATA_END ---
+\pdfsuppresswarningpagegroup=1
+\pgfplotsset{compat=1.11}
+\usepackage{subcaption}
+
+\author{Yehor Korotenko}
+
+\newcommand{\scalar}[2]{\langle #1, #2 \rangle}
+\newcommand{\scalair}[1]{\left\langle #1 \right\rangle}
+
+%  fancy chapters
+\usepackage{lipsum}
+\usepackage[Lenny]{fncychap}
+\ChNameUpperCase
+\ChNumVar{\fontsize{40}{42}\usefont{OT1}{ptm}{m}{n}\selectfont}
+\ChTitleVar{\Large\sc}

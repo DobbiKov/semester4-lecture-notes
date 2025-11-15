@@ -1,0 +1,22 @@
+\begin{enumerate}
+    \item I draw $A$ on a sheet
+    \item I think that $Int(A) = C$ ($C$ is said to be included in $A$!)
+         \begin{enumerate}
+             \item I show that \underline{$C$ is open} (easy), therefore
+                 \[
+                 C \subset Int(A)
+                 \] 
+                 because $Int(A)$ is the largest open set included in $A$.
+            \item I show that $Int(A) \subset C$, i.e. I show that the points in $A$ but not in $C$ are not in $Int(A)$: I take $X \in A, X \not\in C$, I show that $X \not\in Int(A)$
+                I construct a sequence $(X_n)$ with $X_n \not\in A$ but $X_n \to X$.
+         \end{enumerate}
+    \item I think that $Adh(A) = B$ (it is necessary that $A \subset B$)
+        \begin{enumerate}
+            \item I show that $B$ is closed (easy)
+                \[
+                \text{therefore } Adh(A) \subset B
+                \] 
+            \item We show that $B \subset Adh(A)$: We fix $X \in B$, we look for a sequence $(X_n)$ with $X_n \in A$ and $X_n \xrightarrow[n \to \infty]{} X$. 
+                \underline{We only look at the} $X \in B, X \not\in A$
+        \end{enumerate}
+\end{enumerate}

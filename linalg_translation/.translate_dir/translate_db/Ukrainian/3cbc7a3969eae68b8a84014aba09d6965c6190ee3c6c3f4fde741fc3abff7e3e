@@ -1,0 +1,15 @@
+\begin{prop}
+   Нехай $f, g: D \to \R$ неперервні.
+   \begin{itemize}
+       \item $f + g, f \times g$ є неперервними на $D$
+       \item якщо  $g(X) \neq 0, \: \forall X \in D, \frac{f}{g}$ неперервна на $D$
+       \item якщо  $f(D) \subset I$ інтервал і $\phi: I \to \R$ неперервна, тоді $\phi \circ f: D \to \R$ є неперервною.
+       \item
+           \[
+               P: X \to \sum_{\alpha_1 + \ldots + \alpha_n \le d}^{} a_{\alpha_1, \ldots, \alpha_n}x^{\alpha_1} \ldots x^{\alpha_n}
+           \]
+           $a_{\alpha_1, \ldots, \alpha_n} \in \R, d = \text{ степінь } P$.
+           \par
+           $P: \R^n \to \R$ неперервна.
+   \end{itemize}
+\end{prop}

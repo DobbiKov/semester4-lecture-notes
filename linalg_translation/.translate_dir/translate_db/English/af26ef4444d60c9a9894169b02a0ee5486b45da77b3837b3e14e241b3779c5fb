@@ -1,0 +1,5 @@
+\begin{definition}
+    Let $A \subset B$. We say that $A$ is \textbf{dense} in $B$ if $B \subset Adh(A)$
+    \par
+    Let $x_0 \in B, \, \forall \epsilon > 0 \, \exists x_{\epsilon} \in A$ such that $d(x_0, x_{\epsilon}) < \epsilon$
+\end{definition}

@@ -1,0 +1,12 @@
+\begin{definition}
+     We call \textbf{the matrix of $b$} in the basis $\{e_i\}$ the matrix:
+      \[
+          M(b)_{e_i} = \begin{pmatrix} 
+              b(e_1, e_1) & b(e_1, e_2) & \ldots & b(e_1, e_n)\\
+              b(e_2, e_1) & b(e_2, e_2) & \ldots & b(e_2, e_n)\\
+              \ldots & \ldots & \ldots & \ldots\\
+              b(e_n, e_1) & \ldots & \ldots & b(e_n, e_n)
+          \end{pmatrix} 
+     \] 
+     Thus, the element of the $\text{i}^{\text{ème}}$ row and $\text{j}^{\text{ème}}$ column is the coefficient of $x_iy_j$.
+\end{definition}

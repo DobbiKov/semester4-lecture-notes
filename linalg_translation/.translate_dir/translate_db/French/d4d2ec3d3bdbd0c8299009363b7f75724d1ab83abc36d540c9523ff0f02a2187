@@ -1,0 +1,7 @@
+\begin{preuve}
+    Soit $(v_n)_{n \in \N}$ une suite dans $F(K)$. On a:  $v_n = F(u_n)$ où  $u_n \in K$.  $(u_n)_{n \in \N}$ suite dans $K$,  $K$ compact, donc:  $\exists$ sous suite $(u_{\phi(n)})_{n \in \N}$ avec 
+    \[
+        u_{\phi_n} \xrightarrow[n \to +\infty]{} u \in K
+    \] 
+    $F$ continue: donc  $F(u_{\phi(n)}) = v_{\phi(n)} \to F(u) \in K$. $(v_n)$ a une sous suite  $(v_{\phi(n)})$ qui converge vers $F(u) \in F(K)$, donc $F(K)$ compact!
+\end{preuve}

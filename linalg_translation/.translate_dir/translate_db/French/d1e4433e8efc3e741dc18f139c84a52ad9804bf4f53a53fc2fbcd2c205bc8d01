@@ -1,0 +1,7 @@
+\begin{definition}
+    Soit $(x_n)_{n \in \N}$ une suite dans $E$. Une suite  
+    \[
+        (y_n)_{n \in \N} \text{ avec } y_n = x_{\phi(n)}
+    \] 
+    où $\phi: \N \to \N$ est \underline{strictement croissante} est appelée \textbf{sous-suite} de la suite $(x_n)$.
+\end{definition}

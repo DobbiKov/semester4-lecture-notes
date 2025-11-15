@@ -1,0 +1,7 @@
+\begin{lemma}
+    In $E = l^{1}(\N, \R)$ equipped with
+    \[
+    \|u\|_1 = \sum_{n=0}^{\infty} |u_n|
+    \] 
+    $B_f(0, 1)$ is not compact.
+\end{lemma}

@@ -1,0 +1,94 @@
+\begin{eg}
+   Soit la matrice 
+   \[
+   A = \begin{pmatrix}
+       -4 & 0 & -2 \\
+       0 & 1 & 0\\
+       5 & 1 & 3
+   \end{pmatrix}
+   \] 
+   On a le polynôme caractéristique $P_A(X) = -(X - 1)^2(X + 2)$ qui est scindé dans $\R$, donc $A$ est trigonalisable (d'après le théorème \ref{thm:trigonalisable-si-scinde}), alors si on regarde $A$ comme un endomorphisme dans la base canonique, on sait qu'il existe une base  $\{v_i\}$ de  $\R^3$ telle que:
+   \[
+       M(f)_{v_i} = \begin{pmatrix} 
+           1 & a & b\\
+           0 & 1 & c\\
+           0 & 0 & -2
+       \end{pmatrix} 
+   \] 
+   je rappelle que cela signifie:
+   \begin{align}\label{eq:trigon-example-system}
+       \begin{cases}
+           f(v_1) = v_1\\
+           f(v_2) = a v_1 + v_2\\
+           f(v_3) = b v_1 + c v_2 - 2 v_3
+       \end{cases}
+    \end{align}
+
+   Commençons par la recherche de $v_1$. On sait que  $v_1$ est un vecteur propre correspondant à la valeur propre  $\lambda_1 = 1$, i.e  $(f - \operatorname{Id})v_1 = 0$, donc calculons $(A - I)v_1 = 0$ (autrement dire, on cherche $v_1$ qui engendre  $\ker(A - I)$) :
+   \begin{align*}
+       (A - I) \begin{pmatrix} x \\ y \\ z \end{pmatrix} \iff 
+       \begin{cases}
+           -5x    -2z & = 0\\
+            5x  +y +2z &=0
+       \end{cases}
+    \end{align*}
+    Alors, on peut prendre $v_1 = \begin{pmatrix} 2 \\ 0 \\ -5 \end{pmatrix} $ (autrement dire $\ker(A - I) = \operatorname{Vect}(\begin{pmatrix} 2 \\ 0 \\ -5 \end{pmatrix})$).
+
+    Ensuite, cherchons $v_2$, d'après \ref{eq:trigon-example-system}, 
+    \begin{align*}
+        &f(v_2) = av_1 + v_2 \\
+        \implies &f(v_2) - v_2 = av_1\\
+        \implies &(f - I)v_2 = a v_1\\
+        \implies &(A - I)v_2 = a v_1
+    \end{align*}
+    Donc on a:
+    \[
+        (A - I)\begin{pmatrix} x \\ y \\ z \end{pmatrix} = a \begin{pmatrix} 2 \\ 0 \\ -5 \end{pmatrix} \iff
+        \begin{cases}
+            -5x - 2z = 2a\\
+            5x + y + 2z = -5a
+        \end{cases}
+    \] 
+    Alors, en prennant $a = 1$, on a 
+    \[
+        \begin{cases}
+            -5x - 2z = 2\\
+            5x + y + 2z = -5
+        \end{cases}
+    \] 
+    donc $v_2 = \begin{pmatrix} -2 \\ -3 \\ 4 \end{pmatrix} $ (juste résolution du système).
+
+    Pour le $v_3$ on a deux choix:
+     \begin{enumerate}
+        \item soit procéder pareil avec la résolution du système
+        \item soit remarquer qu'il existe un vecteur propre de $A$ correspondant à la valeur propre  $-2$, i.e  $\exists v_3 \in \R^3$ tq $f(v_3) = -2 v_3$, alors on peut prendre ce vecteur  $v_3$ et donc mettre  $b = c = 0$.
+    \end{enumerate}
+    \begin{remark}
+       Pourquoi on peut faire comme ça? Parce que pour toute valeur propre de $f$ il existe toujours un espace propre de multiplicité au moins  $1$, donc pour  la valeur propre  $-2$ aussi. 
+    \end{remark}
+    Alors cherchons le $v_3$:
+     \[
+         (A + 2I)v_3 = 0 \iff \begin{cases}
+             -2x - 2z = 0\\
+             3y = 0
+         \end{cases}
+    \]
+    donc on peut prendre $v_3 = \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} $.
+    
+    Par conséquent, la matrice $A$ est semblable à 
+     \[
+    A' = M(f)_{v_i} = \begin{pmatrix} 
+        1 & 1 & 0\\
+        0 & 1 & 0\\
+        0 & 0 & -2
+    \end{pmatrix} 
+    \] 
+    avec la matrice de passage:
+    \[
+    P = \|v_1, v_2, v_3\| = \begin{pmatrix} 
+        2 & -2 & 1\\
+        0 & -3 & 0\\
+        -5 & 4 & -1
+    \end{pmatrix} 
+    \] 
+\end{eg}

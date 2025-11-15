@@ -1,0 +1,7 @@
+\begin{explanation}
+    We have Cauchy-Schwarz:
+    \begin{align*}
+        (X|Y) \le (X|X)^{\frac{1}{2}}(Y|Y)^{\frac{1}{2}}
+    \end{align*}
+    same proof as before
+\end{explanation}

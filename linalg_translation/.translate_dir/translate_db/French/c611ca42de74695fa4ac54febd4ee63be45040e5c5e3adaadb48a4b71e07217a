@@ -1,0 +1,13 @@
+\begin{itemize}
+    \item \textbf{Utiliser la définition :} \( E \setminus V \) est ouvert.
+    \item \textbf{Caractérisation séquentielle :} Toute suite \((x_n)\) d'éléments de \(V\) qui converge vers \(x \in E\), a sa limite \(x\) dans \(V\) (\(x \in V\)).
+    \item Montrer que \(V\) est l'image réciproque d'un fermé par une application continue \(f:E \to E'\) (i.e. \(V = f^{-1}(F)\) avec \(F\) fermé de \(E'\)).
+    \item Montrer que \(V = \operatorname{Adh}(V)\).
+    \item Écrire \(V\) comme :
+    \begin{itemize}
+        \item une intersection (quelconque) de fermés ;
+        \item une union finie de fermés.
+    \end{itemize}
+    \item Si l'espace ambiant est \(\R^d\), montrer que \(V\) est compact (car un compact dans \(\R^d\) est fermé et borné). Attention, cela prouve aussi qu'il est borné.
+    \item Si \(V \subset \R^N\), écrire \(V = I_1 \times \dots \times I_N\) où chaque \( I_i \subset \R\) est un intervalle fermé.
+\end{itemize}

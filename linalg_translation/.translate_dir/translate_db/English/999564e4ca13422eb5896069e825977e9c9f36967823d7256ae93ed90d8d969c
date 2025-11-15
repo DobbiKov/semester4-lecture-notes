@@ -1,0 +1,6 @@
+\begin{preuve}{of (3).}\\
+    $A_1, \ldots, A_n$ are bounded. \underline{I fix $x_0 \in E$}, $A_i$ bounded ($1 \le i \le n$), therefore $\exists r_i > 0$ such that $A_i \subset B(x_0, r_i)$ if $r = \underset{1 \le  i \le n}{max} r_i$ 
+    \[
+        A_i \subset B(x_0, r), \, \forall i \implies \bigcup\limits_{i=1}^{n} A_i \subset B(x_0, r)
+    \] 
+\end{preuve}

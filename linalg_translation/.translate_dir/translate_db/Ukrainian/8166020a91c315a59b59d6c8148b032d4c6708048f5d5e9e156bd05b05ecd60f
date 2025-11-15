@@ -1,0 +1,6 @@
+\begin{definition}
+     Нехай $A \subset E$. \textbf{Межа} $A$ (або край $A$), що позначається $Fr(A)$ або $\partial A$, це:
+      \[
+     Adh(A) \cap Adh(E \setminus A)
+     \] 
+ \end{definition}

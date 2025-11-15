@@ -1,0 +1,7 @@
+\begin{property}
+   \begin{enumerate}
+       \item Будь-яка скінченна частина є обмеженою
+       \item Якщо $A$ обмежена і  $B \subset A$ тоді $B$ обмежена
+       \item Об'єднання скінченного числа обмежених є обмеженим
+   \end{enumerate} 
+\end{property}

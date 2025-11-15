@@ -1,0 +1,7 @@
+\begin{theorem}
+   Rank Theorem: Let $f: E \to E'$ be a map with $E$ and  $E'$ being vector spaces, then: 
+   \[
+        dim(E) = dim(Ker(f)) + dim(Im(f)) 
+   \] 
+   This also means that $Ker(f) \oplus  Im(f) = E$ (image and kernel are in direct sum). 
+\end{theorem}

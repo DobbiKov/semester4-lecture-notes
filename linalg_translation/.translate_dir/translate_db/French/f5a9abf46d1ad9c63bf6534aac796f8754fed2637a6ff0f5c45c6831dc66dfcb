@@ -1,0 +1,9 @@
+\begin{prop}
+   Soit $E$ un espace euclidien et  $f \in End(E)$. Il existe un et un seul endomorphisme  $f^* \in E$ tel que
+   \[
+       \scalair{f(x), y} = \scalair{x, f^*(y)}, \quad \forall x, y \in E
+   \] 
+   $f^*$ est dit  \textbf{adjoint} de $f$.
+   \par
+   Si  $\{e_i\}$ est une base orthonormée et  $A = M(f)_{e_i}$, alors la matrice $A^* = M(f^*)_{e_i}$ est la transposée de $A$, i.e  $A^* = A^T$
+\end{prop}

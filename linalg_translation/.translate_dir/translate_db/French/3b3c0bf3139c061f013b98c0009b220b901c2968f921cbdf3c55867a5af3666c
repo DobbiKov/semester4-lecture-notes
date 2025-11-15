@@ -1,0 +1,3 @@
+
+Dans les sections précédentes, on a appris que pour savoir si une matrice est diagonalisable, il faut étudier les espaces propres, ce qui n'est pas toujours très facile et n'est pas la façon la plus vite. Alors, dans cette section on va voir une des autres méthodes d'études de diagonalisabilité, l'une de ces méthodes est l'étude des polynôme annulateurs.
+

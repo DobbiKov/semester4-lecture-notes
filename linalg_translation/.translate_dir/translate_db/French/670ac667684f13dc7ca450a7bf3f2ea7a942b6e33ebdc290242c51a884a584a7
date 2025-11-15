@@ -1,0 +1,6 @@
+\begin{theorem}[Norme matricielle pour \(A \in M_n(\C)\) ou \(L(\C^n)\)]
+    Si la norme sur \(\C^n\) est la norme euclidienne \(\|\cdot\|_2\), alors la norme d'opérateur associée est :
+    \[ \|A\| = \sup_{\|x\|_2=1} \|Ax\|_2 = \sqrt{\lambda_{\max}(A^*A)} \]
+    où \(A^*\) est l'adjointe de \(A\) (transposée conjuguée) et \(\lambda_{\max}(A^*A)\) est la plus grande valeur propre de la matrice hermitienne semi-définie positive \(A^*A\). (C'est aussi la plus grande valeur singulière de A).
+    On a aussi \(\|A\| = \|A^*\|\) et \(\|A\|^2 = \|A^*A\|\) (si la norme est induite par le produit scalaire).
+\end{theorem}

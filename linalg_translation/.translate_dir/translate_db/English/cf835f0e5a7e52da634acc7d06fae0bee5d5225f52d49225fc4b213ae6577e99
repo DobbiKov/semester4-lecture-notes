@@ -1,0 +1,3 @@
+\begin{definition}
+    $f$ is partially continuous at $A = (a_1, \ldots, a_n)$ if the $f_i(t)$ are continuous at $a_i$ $(1 \le i \le n)$
+\end{definition}

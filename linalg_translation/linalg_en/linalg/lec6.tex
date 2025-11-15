@@ -1,0 +1,276 @@
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 74d2bbf6d9ead8152362c6422ea0e12b99956aeff8fb5d19ced1481ede0d1fd6
+% --- CHUNK_METADATA_END ---
+\section{Annihilating Polynomials}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 388160a58d43eb5002bc29e27e78e2b0a5de5c8f76dc2dcdba11ae574192a3c9
+% --- CHUNK_METADATA_END ---
+In the previous sections, we learned that to know if a matrix is diagonalizable, we must study the eigenspaces, which is not always very easy and is not the fastest way. So, in this section we will see one of the other methods of studying diagonalizability, one of these methods is the study of annihilating polynomials.% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 4f22b0eb38fef4a7f6b68aa62328910c678d684e80e4446e2fa7d4f580e723ba
+% --- CHUNK_METADATA_END ---
+\begin{remark}
+   In this section, I will not write out most of the proofs, but rather the intuition behind why it is true and why it works.
+\end{remark}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 7c070585845657f62897af4e2ffbadbc8a5167ad9d1b1527b19e195b640bb76d
+% --- CHUNK_METADATA_END ---
+\begin{definition}\label{def:polynome-annulateur}
+    Let $f \in \mathbb{K}^n$ be an endomorphism. A polynomial $Q(X) \in K[X]$ is an \textbf{annihilating polynomial} of $f$ if $Q(f) = 0$.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 48dcdcf5adba02023072764f9fcd70860b6c2ad9d7180ac921fe7a3f5bf3ad0f
+% --- CHUNK_METADATA_END ---
+\begin{eg}
+   Let $f$ be a projection, then we know that $f^2 = f$, hence $f^2 - f = 0$, so $Q(X) = X^2 - X = X(X - 1)$ is an annihilating polynomial of $f$.
+\end{eg}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 03256e33031d32a446c95907fa9769fe691de26f127fe4c077e485c26abea50a
+% --- CHUNK_METADATA_END ---
+What is important is that the annihilating polynomials are closely related to the eigenvalues:% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 9a77faa938f34b4f2e8edcc8dcd6e5b77140255c74309638229856c2cc93f3dc
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Let $Q(X)$ be an annihilating polynomial of $f$, then the eigenvalues of $f$ appear among the roots of $Q$, i.e.:
+   \[
+       \operatorname{Sp}(f) \subset \operatorname{Rac}(Q)
+   \] 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 833385c5bcc9e301f6931f1b5e1a7892bb0fcdf984f5f0ae5e735357fcfd7f26
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+    Let $Q(X) = a_n X^n + a_{n-1} X^{n-1} + \ldots + a_0$ be an annihilating polynomial for $f$ and $\lambda$ an eigenvalue of $f$. Thus, $\exists v \neq 0 \in E$ such that $f(v) = \lambda v$, moreover:
+    \[
+        Q(f) = a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id} = 0
+    \] 
+    Since $f(v) = \lambda v$, it follows that $f^2(v) = f(\lambda v) = \lambda^2 v$, whence $f^k(v) = \lambda^k v$  $\forall k \in \N$. Then:
+    \[
+        Q(f(v)) = 0 = (a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id})v = (a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id})v = 0
+     \] 
+     Since $v \neq 0$, it follows that $a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id} = 0$, whence $\lambda$ is a root of $Q$.
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 12483be17214331a02678b687db0b149599401ac99fa148c4b90cab081705332
+% --- CHUNK_METADATA_END ---
+\begin{note}
+    However, the equality is not generally true; for example, $\operatorname{Id}^2 = \operatorname{Id}$, thus $Q(X) = X^2 - X = X(X - 1)$ annuls $\operatorname{Id}$ with roots $0$ and $1$, but $0$ is not an eigenvalue of $\operatorname{Id}$.
+\end{note}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 0554600a2792f8f908c854bf1ca22807161de363016b32ab96ea1974f3eb92ae
+% --- CHUNK_METADATA_END ---
+\begin{theorem}\label{thm:cayley-hamilton} \textbf{Cayley-Hamilton}. Let $f \in K^n$ be an endomorphism and $P_f(X)$ its characteristic polynomial, then
+     \[
+    P_f(f) = 0
+    \] 
+    In other words, the characteristic polynomial of an endomorphism is its annihilating polynomial.
+\end{theorem}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 19651c78378f539b9b35c4882f09c6e6970cbccd4bcf852752b98b7987e62c09
+% --- CHUNK_METADATA_END ---
+%  TODO: preuve <15-04-25, dobbikov> %
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 26efee0238d78e545da285e09fcdde858c12ec8f95b7eeca9504301396c9f37d
+% --- CHUNK_METADATA_END ---
+\begin{intuition}
+   The characteristic polynomial describes the structure of $f$, i.e., what operations must be performed to lose at least one dimension; if factors of the form $(X - \lambda)^n$ are obtained, then one must apply $f(v) - \lambda v) = v_r$, and then to the result $v_r$ again, i.e., $f(v_r) - \lambda v_r$, and we repeat $n$ times (this occurs in the case of trigonalizable matrices).
+
+   The theorem remains true even in cases where the endomorphism is not trigonalizable, because we can choose the closure $K'$ of the field $K$ in which our endomorphism is defined, and it becomes trigonalizable (e.g., $\mathbb{C}$ for $\mathbb{R}$).
+
+   Furthermore, the characteristic polynomial gives us $\ker(P_f(X)) = E$, i.e., the vectors that become null under the action of $P_f(f)$. The interesting fact is that all vectors in $E$ belong to this kernel, and thus $\forall v \in E$, $p_f(f)v = 0$, from which $p_f(f) = 0$.
+\end{intuition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: d88ea0e42078a13cb42b5707ac14746b75251ad291fdb416378807d11b627dd6
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Let $Q$ be a split polynomial:
+     \[
+         Q(X) = (X - a_1)^{\alpha_1} \cdots (X - a_r)^{\alpha_r}
+    \]
+    The polynomial
+    \[
+    Q_1 = (X - a_1) \cdots (X - a_r)
+    \]
+    is called the \textbf{radical} of $Q$ (i.e., a split polynomial (the same polynomial but without powers next to the parentheses)).
+    \par Furthermore, $Q_1 \mid Q$ i.e., the radical of a polynomial divides the polynomial itself.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 3eda218f4e180ff0801bdb823ca755587104598cbc2e16cf834a81850705086a
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+    Let $f$ be an endomorphism and 
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1} \cdots (X - \lambda_p)^{\alpha_p}
+    \] 
+    its characteristic polynomial. Then, if $f$ is diagonalizable, the radical $Q_1$ also annihilates $f$, i.e.
+     \[
+    Q_1(f) = (f - \lambda_1) \cdots (f - \lambda_r) = 0
+    \] 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 4b4b0dbdc69c2b8816e01712982bae8a99770c9cbb0864f6a33505968b722423
+% --- CHUNK_METADATA_END ---
+\begin{intuition}
+I will provide the intuition behind the proof. If $f$ is diagonalizable with a characteristic polynomial
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1} \cdots (X - \lambda_p)^{\alpha_p}
+    \] 
+    with $r := \alpha_i > 1$, this does \underline{not mean} that one must apply $(f - \lambda_i \operatorname{Id})$  $r$ times to reduce the dimension as in the case of trigonalizable matrices, but rather that $E_{\lambda_i}$, the eigenspace for the eigenvalue $\lambda_i$, has dimension $\alpha_i = r$, and therefore $\forall v \in E_{\lambda_i}, f(v) = \lambda_i v$. 
+
+    Since $E = E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p}$, if $v \in E$, then $\exists i \in \{1, \ldots, p\}$ such that $v \in E_{\lambda_i}$, and thus $f(v) - \lambda_i v = 0$, i.e., $(f - \lambda_i \operatorname{Id})(v) = 0$. Hence, the radical of $P_f$ annihilates $f$.
+\end{intuition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: b6670673bc3faad631505556abf072a29b10672fb6393278e6641d68428f127b
+% --- CHUNK_METADATA_END ---
+\section{The Kernel Lemma}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 20068f9667592f6e79b67c87d69fe214fed4ca81af52f565e9c8c839d07cb20f
+% --- CHUNK_METADATA_END ---
+\begin{lemma}\label{lemma:lemme-des-noyaux} \textbf{of Kernels}
+   Let $f \in K^n$ be an endomorphism and 
+   \[
+   Q(X) = Q_1(X) \cdots Q_p(X)
+   \] 
+   a polynomial factored into a product of pairwise coprime polynomials. If $Q(f) = 0$ then:
+    \[
+        E = \operatorname{Ker} Q_1(f) \oplus \ldots \oplus \operatorname{Ker} Q_p(f)
+   \] 
+\end{lemma}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: fe3c2c4f501dfbcfda20991bd7579ae44cc78b5fed9961c2873de026fa6891d6
+% --- CHUNK_METADATA_END ---
+\begin{intuition}
+    Since $Q(f) = 0$, therefore $\forall v \in E, Q(f)(v) = 0$ which means
+    $\operatorname{Ker}(Q(f)) = E$. $\exists v_1, \ldots, v_p$ such that $v = v_1 +
+    \ldots + v_p$. However, all polynomials are pairwise coprime, so
+    only one of them annihilates $v_i$, thus $v_i \in \operatorname{Ker}Q_i(f)$ and
+    this remains true for all $v_1, \ldots, v_p$. And since the polynomials
+    are coprime, if $k \neq j$ and $Q_k(v_i) = 0$, then $Q_j(v_i) \neq
+    0$ because $Q_j$ and $Q_k$ are different. Therefore, $\forall i, j \,
+    \operatorname{Ker}Q_i \cap \operatorname{Ker}Q_j = \{0\}$.
+\end{intuition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 776749d74cb1979ac8d0d6380de9b0d40e671d9773a72e3a38896192822cd28f
+% --- CHUNK_METADATA_END ---
+\begin{remark}
+   Let's revisit the example of $f$ which is a projection, thus $f^2 - f = 0$ and $Q(X) = X^2 - X = X(X-1)$ annihilates $f$. Now $X$ and $X-1$ are coprime, then 
+    \[
+        E = \operatorname{Ker}f \oplus \operatorname{Ker}(f - \operatorname{Id})
+   \] 
+    More generally, let $f$ be an endomorphism and $Q(X) = (X - \lambda_1) \cdots (X - \lambda_p)$ such that $Q(f) = 0$, we have:
+     \[
+         E = \underbrace{\operatorname{Ker}(f - \lambda_1 \operatorname{Id})}_{E_{\lambda_1}} \oplus \ldots \oplus \underbrace{\operatorname{Ker}(f - \lambda_p \operatorname{Id})}_{E_{\lambda_p}}
+    \] 
+    Of course, $\lambda_i \neq \lambda_j$. And thus $f$ is diagonalizable because it is a direct sum of these eigenspaces.
+\end{remark}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 7d9db5623101af13df78a593fd54a7570398e179ea58cfb4076059a2c0479cc3
+% --- CHUNK_METADATA_END ---
+\begin{corollary}
+    An endomorphism $f$ is diagonalizable if and only if there exists an annihilating polynomial $Q$ of $f$ that is split and has only simple roots \footnote{scindé: $(X - \lambda_i)^{\alpha_i}$ - $X$ est à la puissance $1$! racines simples: si  $\alpha_i = 1$ aussi i.e les facteurs  $(X - \lambda)$ sont à la puissance 1!} 
+\end{corollary}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: dcd9523065c4f0b772b8a2061f9f39ad63175ce452061c83e205f2b9c6f0953c
+% --- CHUNK_METADATA_END ---
+\section{Finding Annihilating Polynomials. Minimal Polynomial}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: a4bcf6aa64911c5b2fc23192f1480c1669b97c09b90a90b7f1cac551142db332
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    A \textbf{minimal polynomial} of $f$, denoted $m_f(X)$, is defined as the monic polynomial \footnote{i.e de coefficient $1$ du terme du plus haut degré, i.e:  $1*X^n + a_{n-1}X^{n-1} + \ldots + a_0$} that annihilates $f$ and has the smallest degree.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 3f3410373979f6d254b617ac467e93c977d12edbd837b37b0e1846f8a256dd43
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   The annihilating polynomials of $f$ are of the form:
+   \[
+       Q(X) = A(X)m_f(X) \quad \text{ with } \quad A(X) \in K[X]
+   \] 
+   i.e., $m_f(X)$ divides $Q(X)$. 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: dfd8008cd4cd354832b2c84d1a95ec6dd91c323dd4aabf1ca63406a19f4b7427
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   The roots of the minimal polynomial $m_f(X)$ are exactly the roots of the characteristic polynomial $P_f(X)$, i.e., the eigenvalues.
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 9ae173893a86059f9cc9135a475e272f1f4917c32eaf8a7526a47e4a27bfe4dd
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+   We know that $P_f(X) = A(X)m_f(X)$ so if $\lambda$ is a root of $m_f(X)$, then it is also a root of $P_f(X)$. Conversely, if $\lambda$ is a root of $P_f(X)$ then it is an eigenvalue, however $m_f(X)$ annihilates $f$, therefore $\lambda$ is also a root of $m_f(X)$.
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: ee5dbc1d494bec59b3ab46c90aa27756840120a6431779b000cedda40c958836
+% --- CHUNK_METADATA_END ---
+\begin{theorem}
+    An endomorphism $f$ is diagonalizable if and only if its minimal polynomial is split and all its roots are simple.
+\end{theorem}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: a8de942faaeca497b14477980a0a02c0c1723833b56c4e22a9454495fe23aec2
+% --- CHUNK_METADATA_END ---
+\begin{eg}
+   \begin{enumerate}
+       \item $A = \begin{pmatrix} 
+            -1 & 1 & 1\\
+            1  & -1 & 1\\
+            1  & 1  & -1
+           \end{pmatrix} $. $P_A(X) = -(X - 1)(X + 2)^2$, so we have two possibilities:
+           \begin{itemize}
+               \item $m_A(X) = (X - 1)(X + 2)$ - so $A$ is diagonalizable
+               \item  $m_A(X) = (X - 1)(X + 2)^2$ - so $A$ is not diagonalizable
+           \end{itemize}
+           Let's calculate:
+           \[
+            (A - I)(A + 2I) = \begin{pmatrix} 
+                -2 & 1 & 1\\
+                1 & -2 & 1\\
+                1 & 1  & -2
+            \end{pmatrix}\begin{pmatrix} 
+                1 & 1 & 1\\
+                1 & 1 & 1\\
+                1 & 1 & 1
+            \end{pmatrix} = \begin{pmatrix} 
+                0 & 0 & 0\\
+                0 & 0 & 0\\
+                0 & 0 & 0
+            \end{pmatrix}   
+           \] 
+           Therefore, $m_f(X) = (X - 1)(X + 2)$ and thus $A$ is diagonalizable.
+        \item  $A = \begin{pmatrix} 
+                3 & -1 & 1\\
+                2 & 0  & 1\\
+                1 & -1 & 2
+            \end{pmatrix} $. We have: $P_A(X) = -(X - 1)(X - 2)^2$, thus:
+            \[
+            m_A(X) = \begin{cases}
+                (X-1)(X-2) \quad \text{ i.e $A$ diagonalisable}\\
+                (X-1)(X-2)^2 \quad \text{ i.e $A$ pas diagonalisable}
+            \end{cases}
+            \] 
+            Let's calculate:
+            \[
+                (A - I)(A - 2I) = \begin{pmatrix} 
+                    2 & -1 & 1\\
+                    2 & -1 & 1\\
+                    1 & -1 & 1\\
+                \end{pmatrix} 
+                \begin{pmatrix} 
+                    1 & -1 & 1\\
+                    2 & -2 & 1\\
+                    1 & -1 & 0
+                \end{pmatrix} 
+                =
+            \begin{pmatrix}
+            1 & -2 & 1 \\
+            1 & -2 & 1 \\
+            0 & -2 & 2
+            \end{pmatrix} \neq \begin{pmatrix} 0 & 0 & 0\\  0 & 0 & 0\\ 0 & 0 & 0 \end{pmatrix} 
+            \] 
+            Hence $m_A(X) \neq (X-1)(X-2)$ and thus $A$ is not diagonalizable.
+   \end{enumerate} 
+\end{eg}

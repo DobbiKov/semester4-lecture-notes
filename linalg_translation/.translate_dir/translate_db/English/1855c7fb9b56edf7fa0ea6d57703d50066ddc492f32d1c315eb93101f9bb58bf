@@ -1,0 +1,7 @@
+\begin{prop}
+    Let $(E, \scalar{}{})$ be a Euclidean space and let $(e_1, \ldots, e_n)$ be an orthonormal basis of $E$. If $x \in E$, we have:
+   \[
+       x = \sum_{i=1}^{n} \scalar{x}{e_i}e_i
+   \] 
+In other words, the real number $\scalar{x}{e_i}$ is the $i^{\text{ème}}$ coordinate of $x$ in the basis $(e_1, \ldots, e_n)$.
+\end{prop}

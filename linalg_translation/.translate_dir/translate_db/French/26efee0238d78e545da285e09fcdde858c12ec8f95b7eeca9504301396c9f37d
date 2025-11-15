@@ -1,0 +1,7 @@
+\begin{intuition}
+   Le polynôme caractéristique nous décrit la structure de $f$, i.e quelles operations il faut faire pour perdre au moins une dimension, si on obtient des facteurs de la forme $(X - \lambda)^n$ donc il faut appliquer  $f(v) - \lambda v) = v_r$, et puis au résultat $v_r$ encore, i.e  $f(v_r) - \lambda v_r$, et on répéte  $n$ fois (ça arrive dans les cas des matrices trigonalisables) 
+
+   Le théorème reste vrai même dans les cas où l'endomorphisme n'est pas trigonalisables car on peut choisir la cloture $K'$ de corp  $K$ dans lequel est notre endomorphisme et il devient trigonalisables (e.g $\mathbb{C}$ pour  $\mathbb{R}$).
+
+   De plus, polynôme caractéristique nous donne  $\ker(P_f(X)) = E$, i.e les vecteurs qui deviennent nuls sous l'action de  $P_f(f)$, le fait intéressant, c'est que tous les vecteurs de  $E$ appartiennent à ce kernel, et donc  $\forall v \in E$, $p_f(f)v = 0$, d'où  $p_f(f) = 0$.
+\end{intuition}

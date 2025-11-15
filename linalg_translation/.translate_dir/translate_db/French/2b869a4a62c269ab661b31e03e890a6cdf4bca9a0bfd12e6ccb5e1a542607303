@@ -1,0 +1,11 @@
+\begin{property}
+   Un ensemble fini est compact. 
+   \[
+       F = \{a_1, \ldots, a_p\} \quad a_j \in E
+   \] 
+   $(U_i)_{i \in I}$ recouvre $F$.
+   Je choisit  $a_j$ (point de $F$), il existe un $i \in I$ noté  $i(j)$ tel que 
+    \[
+   a_j \in U_{i(j)} \quad F \subset U_{i(1)} \cup \ldots \cup U_{i(p)}
+   \] 
+\end{property}

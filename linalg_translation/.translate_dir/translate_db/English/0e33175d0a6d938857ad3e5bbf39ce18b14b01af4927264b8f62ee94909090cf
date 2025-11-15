@@ -1,0 +1,2 @@
+
+Let's recall diagonalization. The matrix $A$ representing the endomorphism $f$ in $K^n = \operatorname{Vect}(e_1, \ldots, e_n)$ is diagonalizable if there exist enough vector subspaces $\{F_1, \ldots, F_n\}$, each of dimension $1$, such that $K^n = F_1 \oplus \ldots \oplus F_n$ and $\forall i \in \{1, \ldots, n\}, f(F_i) \subset F_i$ (a vector remains in the space after applying $f$). What can be seen geometrically:

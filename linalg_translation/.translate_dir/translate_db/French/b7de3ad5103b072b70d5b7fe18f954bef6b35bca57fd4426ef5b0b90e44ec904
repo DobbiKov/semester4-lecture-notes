@@ -1,0 +1,4 @@
+\begin{enumerate}
+    \item $f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$
+    \item DL: $f(x) = f(x_0) + a_1(x - x_0) + (x - x_0)\epsilon(x)$ où $a_1 = f'(x_0)$
+\end{enumerate}

@@ -1,0 +1,5 @@
+\begin{definition} La distance euclidienne
+    \[
+        d(X, Y) = \|X - Y\| = \sqrt{\sum_{n=1}^{d} (x_i - y_i)^2} 
+    \] 
+\end{definition}

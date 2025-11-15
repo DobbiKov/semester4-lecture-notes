@@ -1,0 +1,15 @@
+\begin{prop}
+   Soit $f, g: D \to \R$ continue. 
+   \begin{itemize}
+       \item $f + g, f \times g$ sont continues sur $D$
+       \item si  $g(X) \neq 0, \: \forall X \in D, \frac{f}{g}$ continue sur $D$
+       \item si  $f(D) \subset I$ intervalle et $\phi: I \to \R$ continue, alors $\phi \circ f: D \to \R$ est continue.
+       \item 
+           \[
+               P: X \to \sum_{\alpha_1 + \ldots + \alpha_n \le d}^{} a_{\alpha_1, \ldots, \alpha_n}x^{\alpha_1} \ldots x^{\alpha_n}
+           \] 
+           $a_{\alpha_1, \ldots, \alpha_n} \in \R, d = \text{ degré de } P$. 
+           \par
+           $P: \R^n \to \R$ continue.
+   \end{itemize}
+\end{prop}

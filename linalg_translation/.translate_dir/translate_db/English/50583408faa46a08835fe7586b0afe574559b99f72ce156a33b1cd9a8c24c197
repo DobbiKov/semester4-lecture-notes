@@ -1,0 +1,46 @@
+\begin{center}
+    
+\begin{tabular}{c | c}
+    {\large \bf
+    Show that a set is open      } 
+ & 
+    {\large \bf
+    Show that a set is closed }
+ \\
+ \hline
+ \parbox[t]{8cm}{
+\begin{itemize}
+    \item \textbf{Use the definition :} 
+    \[
+    \forall x \in \mathcal{U}, \exists r > 0 \quad \text{such that} \quad B(x, r) \subset \mathcal{U}
+    \]
+    
+    \item Show that \( E \setminus \mathcal{U} \) is closed.
+    
+    \item Show that \(\mathcal{U}\) is the preimage of an open set by a continuous application.
+    
+    \item Express \(\mathcal{U}\) as an open ball.
+    
+    \item Write \(\mathcal{U}\) as :
+    \begin{itemize}
+        \item a union of open sets ;
+        \item a finite intersection of open sets.
+    \end{itemize}
+    
+    \item \(\mathcal{U} = \operatorname{Int}(U)\).
+    
+    \item Write \(\mathcal{U} = I_1 \times \dots \times I_n\) with \( I_i \) open.
+\end{itemize}
+} & \parbox[t]{8cm}{
+\begin{itemize}
+    \item \textbf{Use the definition :} \( E \setminus V \) is open.
+    
+    \item \textbf{Sequential characterization :} Any convergent sequence in \(V\), its limit is also in \(V\).
+    
+    \item Show that \(V\) is the preimage of a closed set by a continuous application.
+    
+    \item Show that \(V\) is compact.
+\end{itemize}
+}
+\end{tabular}
+\end{center}

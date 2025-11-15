@@ -1,0 +1,7 @@
+\begin{definition}\label{def:general-linear-group}
+    Un groupe linéaire général:
+    \[
+        GL(n, \R) = \{A \in \mathcal{M}_{n}(\R) \mid det(A) \neq 0\}
+    \] 
+    est un groupe de toutes transfomrations linéaires (matrices carrées) qui sont invérsibles (car $det(A) \neq 0$).
+\end{definition}

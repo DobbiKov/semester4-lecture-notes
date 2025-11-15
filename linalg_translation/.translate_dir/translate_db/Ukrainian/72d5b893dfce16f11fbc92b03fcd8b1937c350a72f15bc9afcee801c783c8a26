@@ -1,0 +1,41 @@
+, bodyfont=\normalfont,
+    numbered=no,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
+    },
+]{thmexplanationbox}
+
+\declaretheorem[numberwithin=chapter, style=thmgreenbox, name=Визначення]{definition}
+\declaretheorem[sibling=definition, style=thmredbox, name=Наслідок]{corollary}
+\declaretheorem[sibling=definition, style=thmredbox, name=Твердження]{prop}
+\declaretheorem[sibling=definition, style=thmredbox, name=Теорема]{theorem}
+\declaretheorem[sibling=definition, style=thmredbox, name=Лема]{lemma}
+\declaretheorem[sibling=definition, style=thmbluebox,  name=Приклад]{eg}
+\declaretheorem[sibling=definition, style=thmbluebox,  name=Контрприклад]{noneg}
+\declaretheorem[sibling=definition, style=thmblueline, name=Примітка]{remark}
+
+
+
+
+\declaretheorem[numbered=no, style=thmexplanationbox, name=Доведення]{explanation}
+\declaretheorem[numbered=no, style=thmproofbox, name=Доведення]{preuve}
+\declaretheorem[style=thmbluebox,  numbered=no, name=Вправа]{ex}
+\declaretheorem[style=thmblueline, numbered=no, name=Примітка]{note}
+
+% \renewenvironment{proof}[1][\proofname]{\begin{replacementproof}}{\end{replacementproof}}
+
+% \AtEndEnvironment{eg}{\null\hfill$\diamond$}%
+
+\newtheorem*{uovt}{UOVT}
+\newtheorem*{notation}{Позначення}
+\newtheorem*{previouslyseen}{Як було показано раніше}
+\newtheorem*{problem}{Задача}
+\newtheorem*{observe}{Зауваження}
+\newtheorem*{property}{Властивість}
+\newtheorem*{intuition}{Інтуїція}
+
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily

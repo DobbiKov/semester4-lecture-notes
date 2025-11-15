@@ -1,0 +1,6 @@
+\begin{itemize}
+    \item  \underline{Si $n=1$} $A = a \in  \mathbb{C}$. Solution de $(H)$:  $x(t) = e^{ta}x_0$ avec $x_0 \in \mathbb{C}$ 
+        \[
+            e^{a} = \sum_{n=0}^{\infty} \frac{a^n}{n!}
+        \] 
+\end{itemize}

@@ -1,0 +1,6 @@
+\begin{prop}
+    Soit $f$ un endomorphisme dans $E$ et  $\lambda$ une valeur propre d'ordre  $\alpha$ (i.e $\alpha$ est une racine de  $P_f(\lambda)$ d'ordre  $\alpha$, i.e  $P_f(\lambda) = (X - \lambda)^{\alpha}Q(X)$). Alors:
+   \[
+   \dim E_{\lambda} \le \alpha
+   \] 
+\end{prop}

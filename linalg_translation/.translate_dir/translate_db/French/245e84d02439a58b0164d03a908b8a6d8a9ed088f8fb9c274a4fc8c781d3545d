@@ -1,0 +1,11 @@
+\begin{explanation} de lemme
+   \begin{itemize}
+       \item $(1) \implies (2)$ :\\
+           \underline{Hyp}: $\exists x_1 \in E, \exists r_1 \in E$ tq $A \subset B(x_1, r_1)$\\
+           Soit $x_0 \in E$. But: trouver $r$ tel que  $A \subset B(x_0, r)$ si $x \in A$, on a:  $d(x_1, x) < r_1$\\
+           \underline{Je veux}: $d(x_0, x) <r$\\
+          \begin{align*}
+              d(x_0, x) \le d(x_0, x_1) + d(x_1, x) \le d(x_0, x_1) + r_1 < r \quad \text{ si } r > d(x_0, x_1) + r_1
+          \end{align*} 
+   \end{itemize} 
+\end{explanation}

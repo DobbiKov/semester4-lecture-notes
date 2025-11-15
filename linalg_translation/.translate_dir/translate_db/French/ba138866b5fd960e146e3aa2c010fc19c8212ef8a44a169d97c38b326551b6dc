@@ -1,0 +1,7 @@
+\begin{theorem}
+   du rang: Soit une application $f: E \to E'$ avec $E$ et  $E'$ des éspaces vectoriels, alors: 
+   \[
+        dim(E) = dim(Ker(f)) + dim(Im(f)) 
+   \] 
+   cela aussi signifie que $Ker(f) \oplus  Im(f) = E$ (image et kernel sont en somme directe). 
+\end{theorem}

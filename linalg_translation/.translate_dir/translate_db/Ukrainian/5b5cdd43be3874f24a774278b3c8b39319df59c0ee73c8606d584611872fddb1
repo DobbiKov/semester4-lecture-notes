@@ -1,0 +1,34 @@
+\begin{preuve}
+    \underline{Weierstrass:} $f: \R \to \R$ $K = [a, b]$. \par
+    Я беру $(E, d)$ замість $\R^n$. $f$ обмежена на $K$: $\exists c_1, c_2$ такі що 
+    \[
+    c_1 \le f(x) \le c_2, \forall x \in K \iff f(K) \subset [c_1, c_2] 
+\] 
+    Це зрозуміло, оскільки $f(K)$ є компактною в $\R$, тому обмежена.
+    \par
+    \begin{align*}
+        &m = \underset{x \in K}{inf} f(x) = inf \: f(K) &M = \underset{x \in K}{sup} f(x) = sup \: f(K)
+    \end{align*}
+    Потрібно показати: $\exists x \in K$ такий що $f(x) = m$ і $\exists x' \in K$ такий що $f(x') = M$
+    \par
+     $m = inf \: f(K)$, це означає, що 
+      \begin{enumerate}
+          \item $f(K) \subset [m, +\infty[$ ($m$ міноранта для $f(K)$)
+          \item $\forall \epsilon > 0, \exists y \in f(K)$ такий що $y \le m + \epsilon$
+     \end{enumerate}
+     $\epsilon = \frac{1}{n}$ дає послідовність $y_n \in f(K)$ таку що $y_n \to m$
+     \begin{align*}
+         &y_n = f(x_n) &x_n \in K
+     \end{align*}
+     $K$ компактна: $\exists$ підпослідовність $x_{\phi(n)}$ така що 
+      \[
+      x_{\phi(n)} \xrightarrow[n \to \infty]{} x \in K
+      \] 
+     $f: E \to \R$ неперервна, тому 
+     \[
+         f(x_{\phi(n)}) = y_{\phi(n)} \to f(x) 
+     \] 
+     Але, $y_n \to m$, тому $y_{\phi(n)} \to m$ і $y_{\phi(n)} \to f(x)$, тому $m = f(x)$, $m$ досягається.
+     \par
+     Щоб показати, що $M$ досягається, доказ ідентичний.
+\end{preuve}

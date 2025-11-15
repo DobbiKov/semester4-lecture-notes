@@ -1,0 +1,16 @@
+\begin{explanation}.
+   \begin{enumerate}
+       \item 
+           \begin{align*}
+               \|u + v\|^2 &= \scalair{u + v, u + v}\\
+                           &= \|u\|^2 + 2\scalair{u,v} + \|v\|^2
+           \end{align*}
+       \item $\|u - v\|^2 = \|u\|^2 - 2\scalair{u, v} + \|v\|^2$
+   \end{enumerate} 
+   On a:
+   \begin{itemize}
+       \item 
+           $(1) + (2)$:  $\|u + v\|^2 + \|u - v\|^2 = 2 (\|u\|^2 + \|v\|^2)$
+       \item $(1) - (2)$:  $\|u + v\|^2 - \|u - v\|^2 = 4\scalair{u, v}$ 
+   \end{itemize}
+\end{explanation}

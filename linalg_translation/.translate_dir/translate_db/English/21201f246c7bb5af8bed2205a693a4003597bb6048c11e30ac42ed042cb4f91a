@@ -1,0 +1,6 @@
+\begin{property} Let $(E, < . >)$ be a Euclidean space. We define:
+    \[
+    \|X\| := \sqrt{<X,X>} \qquad X \in E 
+    \] 
+    the norm (or length) of $X$. (It is well defined because $<., .>$ is always positive)
+\end{property}

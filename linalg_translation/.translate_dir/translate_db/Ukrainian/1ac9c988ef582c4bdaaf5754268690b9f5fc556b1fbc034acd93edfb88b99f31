@@ -1,0 +1,8 @@
+\begin{eg} Не кожна критична точка є локальним екстремумом
+\begin{figure}[H]
+    \centering
+    \incfig{point-critique-nestpas-extremum-local}
+    \caption{Критична точка, яка не є локальним екстремумом}
+    \label{fig:point-critique-nestpas-extremum-local}
+\end{figure}
+\end{eg}

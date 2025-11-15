@@ -1,0 +1,27 @@
+\begin{preuve}
+    On construit une suite d'éléments de $B_f(0, 1)$ \underline{sans sous-suite convergente}.
+    \[
+    u \in E \quad u: \N \to \R
+    \] 
+    Je note $u(p)$ au lieu de  $u_p$ suite dans  $E$ noté  $(u_n)$,  $u_n \in E$. $u_n(p)$ p-ième terme de  $u_n$. Je pose  
+    \[
+    u_n(p) = \delta_{n, p} = \begin{cases}
+        1 \text{ si } n = p\\
+        0 \text{ sinon}
+    \end{cases}
+    \] 
+    \[
+    \|u_n\|_1 = \sum_{p=0}^{\infty} |u_n(p)| = |u_n(n)| = 1
+    \] 
+    Donc $u_n \in B_f(0, 1) \forall n$.
+    \par
+    Si $v \in l^1(\N, \R)$
+    \[
+    |v(p)| \le \sum_{p=0}^{\infty} |v(p)| = \|v\|_1
+    \] 
+    si $\|v_n - v\|_1 \xrightarrow[n \to \infty]{} 0$ alors $\forall p, v_n(p) \to v(p)$. Supposons que $(v_n) = (u_{\phi(n)})$ est une sous-suite de $(u_n)$ qui converge vers  $v$ pour  $\| . \|$. Je fixe $p \in \N$, $v_n(p) = u_{\phi(n)}(p) \xrightarrow[n \to \infty]{} v(p)$, mais $v_n(p) \xrightarrow[n \to \infty]{} 0$, donc $v(p) = 0 \forall p$. $v$: suite nulle, aussi 
+     \[
+    \|v_n\|_1 = 1 \forall n \text{ et } \|v_n\|_1 \xrightarrow[n \to \infty]{} \|v\|_1
+    \] 
+    contradiction
+\end{preuve}

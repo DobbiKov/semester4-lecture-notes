@@ -1,0 +1,19 @@
+\begin{eg}
+   \[
+       A = \{(x, y) \in \R^2 \mid x > 0, y = x^{-1}\}
+   \]  
+   $Adh(A) = ?$
+   \par
+   Je pense que  $Adh(A) = A$ ($B = A$). Il suffit de montrer que $A$ \underline{est fermé}.
+    \[
+   x > 0 \quad y \le \frac{1}{x} \quad y \ge \frac{1}{x}
+   \] 
+   Si $X_n = (x_n, y_n)$  \quad $X_n \in A$ et  $X_n \to X$, alors $X \in A$
+    \[
+        X = (x, y) \quad \substack{x_n \to x \\ y_n \to y} \quad \substack{x_n \to x \\ \frac{1}{x_n} \to y} \quad (x_n > 0)
+   \] 
+   donc $x > 0$ et  $y = \frac{1}{x}$ donc $X \in A$
+    \[
+   A \text{ est fermé}
+   \] 
+\end{eg}

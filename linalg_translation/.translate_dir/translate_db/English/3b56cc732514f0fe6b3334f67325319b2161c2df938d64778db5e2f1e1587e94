@@ -1,0 +1,20 @@
+\begin{theorem}.
+    \begin{enumerate}
+        \item Let $U_i$,  $i \in I$ be a collection of open sets. Then,  $\cup_{i \in I} \,U_i$ is open.\\
+            Translate: Any union of open sets is open.
+        \item If $U_1, \ldots, U_n$ are open
+            \[
+                \bigcap\limits_{i=1}^{n} \, U_i \text{ is open.}
+            \] 
+            Translate: \underline{finite} intersection of open sets is open.
+    \end{enumerate}
+    \begin{enumerate}
+        \item Let $U_i$,  $i \in I$ be a collection of closed sets. Then,  $\cup_{i \in I} \,U_i$ is closed.\\
+            Translate: Any union of closed sets is closed.
+        \item If $U_1, \ldots, U_n$ are closed 
+            \[
+                \bigcap\limits_{i=1}^{n} \, U_i \text{ is closed.}
+            \] 
+            Translate: \underline{finite} intersection of closed sets is closed.
+    \end{enumerate}
+\end{theorem}

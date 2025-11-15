@@ -1,0 +1,8 @@
+\begin{theorem}[Continuity and compactness]
+    \begin{enumerate}
+        \item The image of a compact set by a continuous mapping is compact.
+        If \(f: E_1 \to E_2\) is continuous and \(K \subset E_1\) is compact, then \(f(K)\) is compact in \(E_2\).
+        \item (Theorem of attained bounds) If \(f: K \to \R\) is continuous and \(K \subset E_1\) is a non-empty compact set, then \(f\) is bounded on \(K\) and attains its bounds.
+        (i.e., \(\exists x_m, x_M \in K\) such that \(f(x_m) = \inf_{x \in K} f(x)\) and \(f(x_M) = \sup_{x \in K} f(x)\)).
+    \end{enumerate}
+\end{theorem}

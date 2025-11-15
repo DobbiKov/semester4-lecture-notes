@@ -1,0 +1,6 @@
+\begin{prop}\label{prop:isometrie-reserve-norme}
+   Si  $f$ est une isométrie de  $E$, donc, on a:
+   \[
+   \|f(x)\| = \|x\| \quad \forall x \in E
+   \] 
+\end{prop}

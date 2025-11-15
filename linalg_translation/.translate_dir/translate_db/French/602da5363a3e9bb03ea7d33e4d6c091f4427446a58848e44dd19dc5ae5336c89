@@ -1,0 +1,38 @@
+\begin{preuve}
+    \[
+        \|A\| = \|A^*A\|^{\frac{1}{2}}
+    \]  
+    À montrer: $\|A^*A\| = \max_{1 \le i \le n} \lambda_i$ ($\lambda_i \ge 0$)
+    \[
+        (AB)^* = B^*A^*
+    \] 
+    \[
+        (A^*A)^* = A^*A^{* *} = A^*A
+    \] 
+    Soit $B = A^*A$,  $B = B^*$ et  $(x|Bx) = (x|A^*Ax) = (Ax|Ax) = \|Ax\|^2 \ge 0$. Donc:
+    \[
+    \forall x, \quad (x|Bx) \ge 0
+    \] 
+    Il existe une b.o.n $(u_1, \ldots, u_n)$ de $\mathbb{C}^n$ et  $\lambda_1, \ldots, \lambda_n \in \R$ tels que 
+    \[
+    Bu_i = \lambda_iu_i \quad 1\le i \le n
+    \] 
+    \[
+        \lambda_i = (u_i|\lambda_iu_i) = (u_i|Bu_i) \ge 0 
+    \] 
+    Si $u = \sum_{i=1}^{n} x_iu_i$ $\|u\|^2 = \sum_{i=1}^{n} |x_i|^2$ 
+    \[
+    Bu = \sum_{i=1}^{n} x_iBu_i = \sum_{i=1}^{n} \lambda_ix_iu_i
+    \] 
+    \[
+    \|Bu\|^2 = \sum_{i=1}^{n} \lambda_i^2|x_i|^2 \le \max \lambda_i^2 \cdot \sum_{i=1}^{n} |x_i|^2 = \max \lambda_i^2 \|u\|^2
+    \] 
+    \[
+    \|B\| \le \max_{1 \le i \le n} \lambda_i
+    \] 
+    Si $\lambda_1 = \max_{1 \le i \le n} \lambda_i$
+    \[
+    \|Be_1\| = \|\lambda_1e_1\| = \lambda_1\|e_1\| \le \|B\|\|e_1\|
+    \] 
+    donc $\|B\| \ge \lambda_1$
+ \end{preuve}

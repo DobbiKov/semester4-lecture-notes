@@ -1,0 +1,9 @@
+\begin{definition}\label{def:fonction-differentiable}
+    Нехай $D \subset \R^n$ відкрита та $X_0 \in D$, функція
+    $f: D \to \R$
+    є \textbf{диференційовною} в $X_0$ якщо існує вектор $\vec{u} \in \R^n$ такий, що
+    \[
+        f(X_0 + \vec{X}) = f(X_0) + \vec{u} \cdot \vec{X} + \|\vec{X}\|\epsilon(\vec{X})
+    \]
+    де $\lim_{\vec{X} \to \vec{0}} \epsilon(\vec{X}) = 0$
+\end{definition}

@@ -1,0 +1,10 @@
+\begin{definition}
+    An \textbf{isometry} of $E$ is an endomorphism such that:
+     \[
+         \forall x, y \in E, \quad \scalair{f(x), f(y)} = \scalair{x, y}
+    \]
+    Furthermore,
+    \[
+    \forall x \in E, \quad \|f(x)\| = \|x\|
+    \] 
+\end{definition}

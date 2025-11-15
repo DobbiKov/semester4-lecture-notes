@@ -1,0 +1,8 @@
+\begin{prop}
+    $A \in \mathcal{M}_n(\mathbb{C})$ (або $B(E)$)
+    \begin{enumerate}
+        \item $e^{tA}e^{sA} = e^{(s + t)A} \qquad s,t \in \R$ 
+        \item $(e^{tA})^{-1} = e^{-tA} \qquad  t \in \R$
+        \item $\frac{d}{dt}(e^{tA}) = Ae^{tA} \qquad t \in \R$
+    \end{enumerate}
+\end{prop}

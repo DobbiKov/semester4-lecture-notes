@@ -1,0 +1,9 @@
+
+\pagestyle{fancy}
+
+% \fancyhead[LE,RO]{Gilles Castel}
+\fancyhead[RO,LE]{\@lesson}
+\fancyhead[RE,LO]{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[C]{\leftmark}
+

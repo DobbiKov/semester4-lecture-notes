@@ -1,0 +1,12 @@
+\begin{definition}
+     On appelle  \textbf{matrice de $b$} dans la base $\{e_i\}$ la matrice:
+      \[
+          M(b)_{e_i} = \begin{pmatrix} 
+              b(e_1, e_1) & b(e_1, e_2) & \ldots & b(e_1, e_n)\\
+              b(e_2, e_1) & b(e_2, e_2) & \ldots & b(e_2, e_n)\\
+              \ldots & \ldots & \ldots & \ldots\\
+              b(e_n, e_1) & \ldots & \ldots & b(e_n, e_n)
+          \end{pmatrix} 
+     \] 
+     Ainsi l'élément de la $\text{i}^{\text{ème}}$ ligne et $\text{j}^{\text{ème}}$ colonne est le coefficient de $x_iy_j$.
+\end{definition}

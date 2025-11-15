@@ -1,0 +1,6 @@
+\begin{definition}
+     Let $A \subset E$. The \textbf{boundary} of $A$ (or the boundary of $A$) denoted $Fr(A)$ or $\partial A$ is:
+      \[
+     Adh(A) \cap Adh(E \setminus A)
+     \] 
+ \end{definition}

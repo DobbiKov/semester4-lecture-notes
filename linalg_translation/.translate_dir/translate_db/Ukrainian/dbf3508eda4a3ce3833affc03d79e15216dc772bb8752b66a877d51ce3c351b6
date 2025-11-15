@@ -1,0 +1,5 @@
+\begin{align*}
+    \|\vec{X}\|^2 = \vec{X} \cdot \vec{X} &= \left( \sum_{j=1}^{n} y_j\vec{u_j} \right) \cdot \left( \sum_{i=1}^{n} y_i\vec{u_i} \right) \\
+                                          &= \sum_{j=1}^{n} \sum_{i=1}^{n} y_jy_i\vec{u_j}\cdot \vec{u_i}\\ 
+                                          &= \sum_{j=1}^{n} y_j^2
+\end{align*}

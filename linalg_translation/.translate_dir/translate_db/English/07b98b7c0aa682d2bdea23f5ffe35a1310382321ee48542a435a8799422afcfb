@@ -1,0 +1,3 @@
+
+Let's revisit the utility of eigenvectors. Let $f$ be an endomorphism of $E$ whose base is $\{e_1, \ldots, e_n\}$ and $\operatorname{Mat}_{e_i}(f) = A$ and the matrix of $f$ in this base. Let's take the following example again:
+ 

@@ -1,0 +1,9 @@
+\begin{remark}
+   \begin{enumerate}
+       \item Si $\lambda$ n'est pas valeur propre de $f$, donc  $E_\lambda = \{0\}$
+       \item Si  $\lambda$ est valeur propre, alors:
+            \[
+                E_\lambda = \{ \text{ vecteurs propres associés à } \lambda \} \cup \{0\} \text{ et } \dim E_\lambda \ge 1
+           \] 
+   \end{enumerate} 
+\end{remark}

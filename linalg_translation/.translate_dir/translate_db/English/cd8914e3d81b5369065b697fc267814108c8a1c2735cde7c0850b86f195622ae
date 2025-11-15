@@ -1,0 +1,9 @@
+\begin{theorem}\label{thm:trigonalisable-si-scinde}
+    An endomorphism is trigonalizable in $K$ if and only if its characteristic polynomial splits in $K$. 
+    \par 
+    This means that the characteristic polynomial has exactly $n$ roots, where $n = \dim(E)$, and can be written as:
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1}\cdots(X - \lambda_p)^{\alpha_p}
+    \] 
+    with $\alpha_1 + \ldots + \alpha_p = n$
+\end{theorem}

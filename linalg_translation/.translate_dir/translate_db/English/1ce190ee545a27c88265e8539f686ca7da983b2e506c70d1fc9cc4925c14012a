@@ -1,0 +1,6 @@
+\begin{theorem}
+    Let $f: D \longrightarrow \R$ differentiable, $D$ open and  $X_0 \in D$ (otherwise, if $D$ not open, it must be  $X_0 \in \operatorname{Int}(D)$) then:
+    \[
+        X_0 \text{ local extremum } \implies X_0 \text{ critical point} 
+    \] 
+\end{theorem}

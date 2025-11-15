@@ -1,0 +1,207 @@
+\section{Isométries et Adjoints}\label{sec:isometrie-et-adjoints}
+\subsection{Isométries}
+\begin{definition}
+    Une \textbf{isométrie} de $E$ (ou \textbf{transformation orthogonale}) est un endomorphisme  $f \in \mathcal{L}(E) := \mathcal{L}(E, E)$ préservant le produit vectoriel, i.e:
+     \[
+         \scalair{f(x), f(y)} = \scalair{x, y} \quad \forall x, y \in E
+    \] 
+\end{definition}
+\begin{definition}
+    Soient $x, y \in E$ deux vecteurs non nuls. On a, d'après l'inégalité de Cauchy-Schwarz (voir lemma \ref{lemma:inegalite-cauchy-schwarz}):
+    \[
+        \frac{| \scalair{x, y} |}{\|x\| \cdot \|y\|} \le 1
+    \] 
+    Alors, il existe un et un seul $\theta \in [0, \pi]$ tel que:
+     \begin{equation}
+        \cos \theta = \frac{ \scalair{x, y}}{\|x\| \cdot \|y\|} 
+    \end{equation}
+    $\theta$ est dit \textbf{angle} (non-orienté) entre les vecteurs  $x$ et  $y$.
+\end{definition}
+\begin{prop}\label{prop:isometrie-reserve-norme}
+   Si  $f$ est une isométrie de  $E$, donc, on a:
+   \[
+   \|f(x)\| = \|x\| \quad \forall x \in E
+   \] 
+\end{prop}
+\begin{preuve}
+   Supposons que $f$ est une isométrie de  $E$. Soit  $x, y \in E$. Par définition:  $\scalair{f(x), f(y)} = \scalair{x, y}$, donc, posons $y := x$, alors, on a:
+   \begin{align*}
+       &\underbrace{\scalair{f(x), f(x)}}_{\|f(x)\|^2} = \underbrace{\scalair{x, x}}_{\|x\|^2}\\
+       \iff &\|f(x)\|^2 = \|x\|^2\\
+       \iff &\|f(x)\| = \|x\|
+   \end{align*}
+\end{preuve}
+\begin{prop}\label{prop:isometrie-bijective}
+   Soit $f$ une isométrie dans  $E$, alors:
+   \begin{enumerate}
+       \item $f$ est bijective 
+       \item  $f$ présérve la distance euclidienne et les angles
+   \end{enumerate}
+\end{prop}
+\begin{preuve}
+   Soit $f$ une isométrie dans  $E$ et deux vecteurs  $u, v \in E$ 
+   \begin{enumerate}
+       \item  
+           \begin{align*}
+               \|f(u) - f(v)\| = \sqrt{\scalair{f(u), f(v)}} = \sqrt{\scalair{u, v}} = \|u - v\| 
+           \end{align*}
+       \item Soit $\theta_1$ angle entre  $f(u)$ et  $f(v)$ et $\theta_2$ angle entre  $u$ et  $v$, donc:
+            \[
+                \cos \theta_1 := \frac{\scalair{f(u), f(v)}}{\|f(u)\| \cdot \|f(v)\|}
+           \] 
+           \[
+                \cos \theta_2 := \frac{\scalair{u, v}}{\|u\| \cdot \|v\|}
+           \] 
+           Par définition, $\scalair{f(u), f(v)} = \scalair{u, v}$, d'après proposition \ref{prop:isometrie-reserve-norme},  $\forall x, \|f(x)\| = \|x\|$, donc:
+           \[
+                \cos \theta_1 := \frac{\scalair{f(u), f(v)}}{\|f(u)\| \cdot \|f(v)\|} = \frac{\scalair{u, v}}{\|u\| \cdot \|v\|} = \cos \theta_2
+           \] 
+   \end{enumerate}
+\end{preuve}
+\begin{definition}
+    Soit $F$ un sous-espace vectoriel de  $E$, donc  $E = F \oplus F^{\perp}$ d'où  $\forall v \in E, \exists v_1 \in F, v_2 \in F^{\perp}$ tel que $v = v_1 + v_2$. On pose:
+    \[
+    s_F(v) = v_1 - v_2
+    \] 
+    et on appelle $s_F$ une symétrie orthogonale d'axe F.
+\end{definition}
+\begin{figure}[H]
+    \centering
+    \incfig{symetrie-orthogonale-axe-f}
+    \caption{Symétrie orthogonale d'axe $F$}
+    \label{fig:symetrie-orthogonale-axe-f}
+\end{figure}
+\begin{prop}
+   La symétrie orthogonale est une isométrie. 
+\end{prop}
+\begin{proof}
+   TODO ou pas besoin 
+\end{proof}
+\begin{prop}\label{prop:isometrie-ssi-transforme-bon-en-bon}
+   $f$ est une isométrie si et seulement si elle transforme toute base orthonormée en une base orthonormée. 
+\end{prop}
+\begin{preuve}
+    Soit $f$ une isométrie, alors elle transforme toute base en une base car  $f$ est bijective par la prop. \ref{prop:isometrie-bijective}. 
+    \begin{itemize}
+        \item ($\implies$) Supposons que $f$ est une isométrie. Soit $\{e_i\}$ une base orthonormée, alors, on a:
+             \[
+                 \scalair{f(e_i), f(e_j)} = \scalair{e_i, e_j} = \delta_{i,j}
+            \] 
+            Donc, $\{f(e_i)\}$ est une base orthonormée.
+        \item ($\impliedby$) Supposons, qu'il existe une base orthonormée $\{e_i\}$ telle que  $\{f(e_i)\}$ est aussi une base orthonormée. De plus, soit  $x = x_1e_1 + \ldots x_ne_n$ et $y = y_1e_1 + \ldots + y_ne_n$ avec $x_i, y_i \in \R$
+            \par
+            Comme $\{e_i\}$ est orthonormée, alors on a:
+            \begin{equation}\label{eq:prod-scal-base-ortho}
+                \scalair{x, y} = x_1y_1 + \ldots + x_ny_n = \sum_{i=1}^{n} x_iy_i
+            \end{equation}
+            D'autre part:
+            \begin{align*}
+                \scalair{f(x), f(y)} &= \scalair{\sum_{i=1}^{n} x_if(e_i), \sum_{i=1}^{n} y_if(e_i)} = \sum_{i,j = 1}^{n} x_iy_j\scalair{f(e_i), f(e_j)}\\
+                                     &= \sum_{i,j=1}^{n} x_iy_j\scalair{e_i, e_j} \underset{\text{car } \{e_i\} \text{ orthonormée}}{=} = \sum_{i=1}^{n} x_iy_i \underset{\text{D'apres } \ref{eq:prod-scal-base-ortho}}{=} \scalair{x, y}
+            \end{align*}
+            Donc $f$ est une isométrie.
+    \end{itemize}
+\end{preuve}
+\begin{prop}\label{prop:isometrie-ata-eg-i}
+    Si $\{e_i\}$ est une base orthonormée, $f$ une isométrie et  $A = M(f)_{e_i}$, alors  $A^{T}A = I = AA^{T}$.
+\end{prop}
+\begin{preuve}
+    Pour prouver cela, on va utiliser la proposition \ref{prop:prod-scal-par-matrice}. 
+    \par
+    Par définition de l'isométrie, on a:
+    \begin{align*}
+        &\scalair{f(x), f(y)} = \scalair{x, y} \quad \forall x, y \in E\\
+        \iff &\underbrace{ (AX)^{T}(AY) }_{\scalair{f(x), f(y)}} = X^TA^TAY = \underbrace{X^TY}_{\scalair{x, y}}\\
+        \iff &A^TA = I
+    \end{align*}
+\end{preuve}
+\begin{prop}
+   Si $A$ est une matrice de l'isométrie dans une base orthonormée, alors  $det(A) = \pm 1$ 
+\end{prop}
+\begin{preuve}
+    Par la proposition \ref{prop:isometrie-ata-eg-i}, on a: $A^TA = I$, d'où:
+     \begin{align*}
+         det(A^TA) = det(I) = 1 \implies& det(A)^2 = 1 \quad \text{ (car }  det(A^T) = det(A) \text{)}\\
+                                \implies& det(A) = \pm 1
+    \end{align*}
+\end{preuve}
+\begin{intuition}
+   Une isométrie fait une rotation ou une réflexion, elle conserve les distance, donc l'air (ou volume) d'une figure qui est construit par la base de cette transfomation est égale à $1$. 
+\end{intuition}
+
+\subsection{Endomorphisme adjoint}
+\begin{prop}
+   Soit $E$ un espace euclidien et  $f \in End(E)$. Il existe un et un seul endomorphisme  $f^* \in E$ tel que
+   \[
+       \scalair{f(x), y} = \scalair{x, f^*(y)}, \quad \forall x, y \in E
+   \] 
+   $f^*$ est dit  \textbf{adjoint} de $f$.
+   \par
+   Si  $\{e_i\}$ est une base orthonormée et  $A = M(f)_{e_i}$, alors la matrice $A^* = M(f^*)_{e_i}$ est la transposée de $A$, i.e  $A^* = A^T$
+\end{prop}
+\begin{preuve}
+    Encore, pour la preuve, on va utiliser la proposition \ref{prop:prod-scal-par-matrice} qui est très utile, donc je vous conseil maîtriser ce concept.
+    \par
+    Soit $\{e_i\}$ une base orthonormée de $E$ et notons
+     \[
+    A = M(f)_{e_i} \quad A^* = M(f^*)_{e_i} \quad X = M(x)_{e_i} \quad Y = M(y)_{e_i}
+    \] 
+    Comme on est dans une base orthonormée, alors l'énoncé s'ecrit:
+    \[
+        \underbrace{(AX)^TY}_{\scalair{f(x),y}} = X^TA^TY = \underbrace{X^T(A^*Y)}_{\scalair{x, f^*(y)}} \quad \forall X, Y \in \mathcal{M}_{n, 1}(\R)
+    \] 
+    ce qui implique que $A^* = A$ et, de plus, démontre l'unicité de tel adjoint.
+\end{preuve}
+
+
+\section{Groupes orthogonaux}
+Rappel:
+\begin{definition}\label{def:general-linear-group}
+    Un groupe linéaire général:
+    \[
+        GL(n, \R) = \{A \in \mathcal{M}_{n}(\R) \mid det(A) \neq 0\}
+    \] 
+    est un groupe de toutes transfomrations linéaires (matrices carrées) qui sont invérsibles (car $det(A) \neq 0$).
+\end{definition}
+
+\begin{definition} \textbf{Groupe orthogonal}:
+    L'ensemble:
+    \[
+        O(n, \R) := \{A \in \mathcal{M}_{n}(\R) \mid A^TA = I\} = \{A \in \mathcal{M}_{n}(\R) \mid AA^T = I\}
+    \] 
+    vérifie les propriétés suivantes:
+    \begin{enumerate}
+        \item si $A, B \in O(n, \R)$, donc $AB \in O(n, \R)$
+        \item $I \in O(n, \R)$
+        \item si $A \in O(n, \R)$ alors $A^{-1} \in O(n, \R)$
+    \end{enumerate}
+    En particulier, $O(n, \R)$ est un sous-groupe de $GL(n, \R)$ (groupe des matrices inversibles) (voir la definition \ref{def:general-linear-group}).
+\end{definition}
+\begin{intuition}
+    La signification des matrices orthogonales est claire: elles représentent les matrices des transformations orthogonales (isométrie) dans \textbf{une base orthonormée} (voir defn \ref{def:orthogonal}). 
+\end{intuition}
+On peut remarquer que si $det(A) = 1$, cette isométrie représente une rotation, de plus, on a la définition suivante:
+ \begin{definition}
+    L'ensemble des matrices orthogonales directes (i.e telles que $det(A) = 1$)
+    \[
+    SO(n, \R) = \{A \in O(n, \R) \mid det(A) = 1 \}
+    \] 
+    est un groupe, dit  \textbf{groupe spécial orthogonal}.
+\end{definition}
+\begin{eg}
+   La matrice
+   \[
+       A = \frac{1}{3} \begin{pmatrix} 2 & -1 & 2\\ 2 & 2 & -1\\ -1 & 2 & 2 \end{pmatrix} 
+   \] 
+   est orthogonale. On peut vérifier que $A^TA = I$, ou, il suffit de montrer que  $c_1, c_2, c_3$ est une famille orthonormée, i.e:
+   \[
+       \|c_i\|^2 = 1 \quad \text{ et } \quad \scalair{c_i, c_j} = 0 \quad \text{ si } i \neq j
+   \] 
+   On peut interpreter $A$ comme une matrice d'une transformation $f$ dans la base canonique $\{e_i\}$, donc on a bien:  $c_i = f(e_i)$, d'après la proposition \ref{prop:isometrie-ssi-transforme-bon-en-bon} $f$ est orthogonale. De plus, on voit que  $det(A) = +1$. En conséquent,  $f$ est une transformation orthogonale directe.
+\end{eg}
+\begin{prop}
+   La matrice de passage d'une base orthonormée à une base orthonormée est une matrice orthogonale. 
+\end{prop}
+\begin{preuve}
+   Je donne de l'intuition. Matrice de passage transforme une base en autre base, elle passe les vecteurs de la base, alors elle transforme la base de la BON en vecteurs de la base de la BON, donc, d'après la proposition \ref{prop:isometrie-ssi-transforme-bon-en-bon}, cette matrice est orthogonale.
+\end{preuve}

@@ -1,0 +1,8 @@
+\begin{theorem}[Propriétés des ouverts et fermés]
+    \begin{enumerate}
+        \item Une \textbf{union quelconque} d'ouverts est un ouvert.
+        \item Une \textbf{intersection finie} d'ouverts est un ouvert.
+        \item Une \textbf{intersection quelconque} de fermés est un fermé.
+        \item Une \textbf{union finie} de fermés est un fermé.
+    \end{enumerate}
+\end{theorem}

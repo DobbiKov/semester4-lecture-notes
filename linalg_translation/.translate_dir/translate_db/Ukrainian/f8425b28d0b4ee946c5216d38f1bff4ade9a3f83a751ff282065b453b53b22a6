@@ -1,0 +1,6 @@
+\begin{prop}
+   \begin{enumerate}
+       \item Будь-яка послідовність Коші є обмеженою.
+        \item Будь-яка збіжна послідовність є послідовністю Коші
+   \end{enumerate} 
+\end{prop}

@@ -1,0 +1,6 @@
+\begin{definition}
+    $K \subset E$ is compact if from every open cover $(U_i)_{i \in I}$ of $F$ we can extract a finite subcover: I can choose $i_1, \ldots, i_n \in I$ such that 
+    \[
+    F \subset U_{i_1} \cup U_{i_2} \cup \ldots \cup U_{i_n}
+    \] 
+\end{definition}

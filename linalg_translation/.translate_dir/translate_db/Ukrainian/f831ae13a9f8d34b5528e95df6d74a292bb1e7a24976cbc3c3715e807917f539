@@ -1,0 +1,11 @@
+\begin{definition}.
+    \begin{enumerate}
+        \item Границя:
+            \[
+            \lim_{x \to x_0} F(x) = l
+            \] 
+            якщо $\forall \epsilon > 0, \exists \delta > 0$ така що якщо $d_1(x_0, x) < \delta$ тоді $d_2(l, F(x)) < \epsilon$
+        \item $F$ неперервна в $x_0$ якщо $\lim_{x \to x_0} F(x) = F(x_0)$
+        \item $F$ є неперервною (на $E$) якщо вона неперервна в кожній $x_0$ з $E$
+\end{enumerate}
+\end{definition}

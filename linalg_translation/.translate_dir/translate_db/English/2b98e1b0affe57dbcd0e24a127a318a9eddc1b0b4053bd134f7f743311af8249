@@ -1,0 +1,12 @@
+\begin{definition}
+    Let $Q$ be a split polynomial:
+     \[
+         Q(X) = (X - a_1)^{\alpha_1} \cdots (X - a_r)^{\alpha_r}
+    \]
+    The polynomial
+    \[
+    Q_1 = (X - a_1) \cdots (X - a_r)
+    \]
+    is called the \textbf{radical} of $Q$ (i.e., a split polynomial (the same polynomial but without powers next to the parentheses)).
+    \par Furthermore, $Q_1 \mid Q$ i.e., the radical of a polynomial divides the polynomial itself.
+\end{definition}

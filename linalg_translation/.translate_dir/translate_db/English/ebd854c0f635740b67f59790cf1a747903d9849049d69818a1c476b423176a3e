@@ -1,0 +1,4 @@
+\begin{definition}[Complete space]
+    A metric space \((E,d)\) is \textbf{complete} if every Cauchy sequence in \(E\) converges in \(E\).
+    A complete NVS is called a \textbf{Banach space}.
+\end{definition}

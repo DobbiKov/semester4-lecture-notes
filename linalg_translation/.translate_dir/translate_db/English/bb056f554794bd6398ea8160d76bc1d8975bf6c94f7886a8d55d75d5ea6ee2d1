@@ -1,0 +1,7 @@
+\begin{definition}
+    The set of direct orthogonal matrices (i.e. such that $det(A) = 1$)
+    \[
+    SO(n, \R) = \{A \in O(n, \R) \mid det(A) = 1 \}
+    \] 
+    is a group, called the \textbf{special orthogonal group}.
+\end{definition}

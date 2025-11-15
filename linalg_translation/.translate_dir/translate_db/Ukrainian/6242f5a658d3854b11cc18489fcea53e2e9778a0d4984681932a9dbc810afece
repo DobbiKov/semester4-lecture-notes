@@ -1,0 +1,16 @@
+\begin{preuve}
+    Покладемо $y := \sum_{i=1}^{n} \scalar{x}{e_i}e_i$ . Тоді, 
+   \begin{align*}
+       &\forall j = 1, \ldots, n,\\
+       &\scalar{x - y}{e_j}\\ 
+       = &\scalar{x}{e_j} - \scalar{y}{e_j}\\ 
+       = &\scalar{x}{e_j} - \scalar{\sum_{i=1}^{n} \scalar{x}{e_i}e_i}{e_j}\\ 
+       = &\scalar{x}{e_j} - \underbrace{ \sum_{i=1}^{n} \scalar{x}{e_i} }_{\substack{\text{винесено}\\ \text{як константу}}}\scalar{e_i}{e_j}\\ 
+       = &\scalar{x}{e_j}\\ 
+       -& \left(\scalar{x}{e_1}\underbrace{ \scalar{e_1}{e_j} }_{= 0} + \ldots + \scalar{x}{e_{j-1}}\underbrace{\scalar{e_{j-1}}{e_j}}_{= 0} + \scalar{x}{e_{j}}\underbrace{ \scalar{e_{j}}{e_j} }_{= 1} + \scalar{x}{e_{j+1}}\underbrace{ \scalar{e_{j+1}}{e_j} }_{= 0} + \ldots + \scalar{x}{e_{n}}\underbrace{ \scalar{e_{n}}{e_j} }_{= 0}\right)\\
+        &\text{(} \forall i \neq j, \, \scalar{e_i}{e_j} = 0 \text{ оскільки це скалярний добуток ортогональних векторів)}\\ 
+        &\text{(} \forall j \, \scalar{e_j}{e_j} = 1 \text{ оскільки це скалярний добуток того ж вектора)}\\
+       = &\scalar{x}{e_j} - \scalar{x}{e_j}\underset{= 1}{\scalar{e_j}{e_j}} = 0
+   \end{align*}
+   Отже, $x - y \in Vect(e_1, \ldots, e_n)^{\perp} = E^{\perp} = \{0\}$. Отже $x = y$
+\end{preuve}

@@ -1,0 +1,5 @@
+
+Soit $(E, \scalair{,})$ un espace euclidien,  $F \subseteq E$ un sous-espace vectoriel. Alors,  $E = F \oplus F^{\perp}$. Donc $\forall x \in E$ s'ecrit 
+\[
+x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
+\] 

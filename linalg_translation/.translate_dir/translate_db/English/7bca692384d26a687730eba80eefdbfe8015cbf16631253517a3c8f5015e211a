@@ -1,0 +1,61 @@
+\begin{preuve} of Theorem \ref{thm:gram-schmidt}
+    Let's construct the orthogonal basis: $\{w_1, \ldots, w_p\}$. First, let's set:
+    \[
+    \begin{cases}
+        w_1 = v_1\\
+        w_2 = v_2 + \lambda w_1, \qquad \text{avec } \lambda \text{ tel que } w_1 \perp w_2
+    \end{cases}
+    \] 
+    By imposing this condition, we find:
+    \[
+        0 = \scalair{v_2 + \lambda w_1, w_1} = \scalair{v_2, w_1} + \lambda \|w_1\|^2
+    \] 
+    Since $w_1 \neq 0$, we obtain $\lambda = - \frac{\scalair{v_2, w_1}}{\|w_1\|^2}$. We notice that:
+    \[
+    \begin{cases}
+        v_1 = w_1\\
+        v_2 = w_2 - \lambda w_1
+    \end{cases}
+    \] 
+    therefore $Vect\{v_1, v_2\} = Vect\{w_1, w_2\}$.
+    \par
+    Once $w_2$ is constructed, we construct $w_3$ by setting:
+    \begin{align*}
+        &w_3 = v_3 + \mu w_1 + \nu w_2\\
+        &\text{with } \mu \text{ and } \nu \text{ such that: } w_3 \perp w_1 \text{ and } w_3 \perp w_2
+    \end{align*}
+    We can see $w_3 = v_3 - \lambda' w_1 - \lambda'' w_2 $ as $w_3 = v_3 - proj_{F_2}v_3$ where $F_i = Vect\{w_1, \ldots, w_i\}$
+    \begin{figure}[H]
+        \centering
+        \incfig{projection-with-bon-thm}
+        \caption{Vecteur par projection}
+        \label{fig:projection-with-bon-thm}
+    \end{figure}
+    This gives
+    \begin{align*}
+        0 &= \scalair{v_3 + \mu w_1 + \nu w_2, w_1} = \scalair{v_3, w_1} + \mu \underset{= \|w_1\|^2}{\scalair{w_1, w_1}} + \nu \underset{= 0}{\scalair{w_2, w_1}}\\
+          &= \scalair{v_3, w_1} + \mu \|w_1\|^2 
+    \end{align*}
+    hence $\mu = - \frac{\scalair{v_3, w_1}}{\|w_1\|^2}$. Similarly, by imposing that $w_3 \perp w_2$, we find $\nu = - \frac{\scalair{v_3, w_2}}{\|w_2\|^2}$. As
+    \[
+    \begin{cases}
+        v_1 = w_1\\
+        v_2 = w_2 - \lambda w_1\\
+        v_3 = w_3 - \mu w_1 - \nu w_2
+    \end{cases}
+    \] 
+    we can see that $Vect\{w_1, w_2, w_3\} = Vect\{v_1, v_2, v_3\}$. That is, $\{w_1, w_2, w_3\}$ is an orthogonal basis of the space spanned by $v_1, v_2, v_3$. We can now clearly see the recurrence process.
+    \par
+    Suppose we have constructed $w_1, \ldots, w_{k-1}$ for $k \le p$. Let's set:
+    \begin{align*}
+        w_k &= v_k + \text{ combinaison linéaire des vecteurs déjà trouvés}\\
+            &= v_k + \lambda_1w_1 + \ldots + \lambda_{k-1}w_{k-1}
+    \end{align*}
+    The conditions $w_k \perp w_i$ (for $i \in \{1, \ldots, k-1\}$) are equivalent to:
+    \[
+        \lambda_i = - \frac{\scalair{v_k, w_i}}{\|w_i\|^2}
+    \] 
+    as can be verified immediately. Since $v_k = w_k - \lambda_1 - \ldots - \lambda_{k-1}w_{k-1}$, we see by recurrence that $Vect\{w_1, \ldots, w_k\} = Vect\{v_1, \ldots, v_k\}$ $\iff$ $\{w_1, \ldots, w_k\}$ is an orthogonal basis of $Vect\{v_1, \ldots, v_k\}$.
+    \par
+    What remains for us is to normalize it, i.e. $\forall i \in \{1, \ldots, k\}$ $e_i = \frac{w_i}{\|w_i\|}$, hence $\{e_1, \ldots, e_k\}$ is an orthonormal basis of $F = Vect\{v_1, \ldots, v_k\}$.
+\end{preuve}

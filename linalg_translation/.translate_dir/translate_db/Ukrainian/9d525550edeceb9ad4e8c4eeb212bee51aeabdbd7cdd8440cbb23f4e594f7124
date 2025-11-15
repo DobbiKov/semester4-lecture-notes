@@ -1,0 +1,7 @@
+\begin{preuve}.
+    \begin{enumerate}
+        \item Нехай $x \in U := \bigcup\limits_{i \in I} U_i$. Існує $i$ позначений $i_0$ такий, що $x \in U_{i_0}$, $U_{i_0}$ є відкритою, тому $\exists r > 0$ такий, що $B(x, r) \subset U_{i_0} \subset U := \bigcup\limits_{i \in I} U_i$.
+        \item Нехай $x \in U := \bigcap\limits_{1 \le i \le n} U_i$.\\
+            Зафіксуємо $i$.  $x \in U_i$,  $U_i$ відкритою, тому  $\exists r_i > 0$ такий, що $B(x, r) \subset U_i$, $1 \le i \le n$, тому $B(x, r) \subset U := \bigcap\limits_{1 \le i \le n} U_i$
+    \end{enumerate}
+\end{preuve}

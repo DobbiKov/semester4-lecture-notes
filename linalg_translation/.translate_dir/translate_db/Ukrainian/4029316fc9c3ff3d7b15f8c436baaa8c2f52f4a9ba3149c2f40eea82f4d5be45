@@ -1,0 +1,7 @@
+\begin{lemma}\label{lemma:inegalite-cauchy-schwarz} нерівність Коші-Шварца
+   Маємо
+   \[
+   |<u, v>| \le \|u\| \cdot \|v\| \qquad \forall u, v \in E
+   \] 
+   з рівністю тоді і тільки тоді, якщо $u$ та $v$ колінеарні, тобто $\exists \, t \in R$ такий, що $u = tv$ або $v = tu$
+\end{lemma}

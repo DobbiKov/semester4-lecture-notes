@@ -1,0 +1,3 @@
+\begin{equation}\label{eq:derivee-directionnelle}
+    D_{u}f(X_0) = \lim_{t \to 0} \frac{f(X_0 + t\vec{u}) - f(X_0)}{t}
+\end{equation}

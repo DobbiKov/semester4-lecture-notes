@@ -1,0 +1,22 @@
+\begin{eg}
+    $E = \mathcal{C}([a, b], \R)$, $\|f\|_{\infty} = \sup_{x \in [a, b]} |f(x)|$, $F = \R$, $u \in \mathcal{C}([a, b], \R)$
+    \begin{align*}
+        A: E &\longrightarrow F \\
+        f &\longmapsto A(f) = \int_{{a}}^{{b}} {f(x)u(x)} \: d{x} {}
+    .\end{align*}
+    \underline{$A$ est bornée}: à voir: $\exists C \ge 0$ telle que  
+    \[
+        \left| \int_{{a}}^{{b}} {f(x)u(x)} \: d{x} {} \right| \le C \sup_{x \in [a, b]} |f(x)|
+    \] 
+    ?
+    \begin{align*}
+        \left| \int_{{a}}^{{b}} {f(x)u(x)} \: d{x} {} \right| \le \int_{{a}}^{{b}} {|f(x)| |u(x)|} \: d{x} {} \le \int_{{a}}^{{b}} {\|f\|_{\infty}|u(x)|} \: d{x} {= \|f\|_{\infty} \int_{{a}}^{{b}} {|u(x)|} \: d{x} {}}
+    \end{align*}
+    \[
+    C = \int_{{a}}^{{b}} {|u(x)|} \: d{x} \text{ convient }
+    \] 
+    (En fait $\|A\| = \int_{{a}}^{{b}} {|u(x)|} \: d{x} {}$). $E = \mathcal{C}^1([0,1], \R)$ muni de $\|f\|_{\infty}$, $F = \R$, $Af = f'(0)$ linéaire mais pas continue. On construit une suite  $(f_n)$ dans  $E$ telle que  $\|f_n\|_E \xrightarrow[n \to  \infty]{} 0$ mais $\|Af_n\|_F \not\to 0$
+    \[
+    f_n(x) = \frac{1}{n}\sin(nx)
+    \] 
+\end{eg}

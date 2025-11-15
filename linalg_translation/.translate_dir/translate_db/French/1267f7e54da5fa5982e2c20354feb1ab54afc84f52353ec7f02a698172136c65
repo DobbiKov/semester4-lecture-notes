@@ -1,0 +1,3 @@
+\begin{prop}
+    Soient $\lambda_1, \ldots, \lambda_p$ des scalaires deux à deux distincts. Alors les espaces propres $E_{\lambda_1}, \ldots, E_{\lambda_p}$ sont en somme directe. Autrement dit, si $\mathcal{B}_1, \ldots, \mathcal{B}_p$ sont des bases de $E_{\lambda_1}, \ldots, E_{\lambda_p}$, la famille $\{\mathcal{B}_1, \ldots, \mathcal{B}_p\}$ est libre (mais pas nécessairement génératrice de $E$).
+\end{prop}

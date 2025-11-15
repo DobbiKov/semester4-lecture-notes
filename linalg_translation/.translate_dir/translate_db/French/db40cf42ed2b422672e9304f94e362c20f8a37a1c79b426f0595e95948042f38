@@ -1,0 +1,11 @@
+\begin{definition}
+    Deux normes $N_1$ et  $N_2$ sur  $E$ sont équivalentes ($N_1 \sim N_2$) si $\exists c_1, c_2 > 0$ telles que 
+    \begin{itemize}
+        \item $N_1(u) \le c_1N_2(u) \quad \forall u \in E$
+        \item $N_2(u) \le c_2N_1(u) \quad \forall u \in E$
+    \end{itemize}
+    $\exists c > 0$ telle que
+    \[
+    cN_1(u) \le N_2(u) \le cN_1(u)
+    \] 
+\end{definition}

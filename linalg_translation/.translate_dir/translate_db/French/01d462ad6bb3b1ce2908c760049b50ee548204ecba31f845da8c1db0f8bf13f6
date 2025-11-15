@@ -1,0 +1,7 @@
+\begin{lemma}\label{lemma:inegalite-cauchy-schwarz} inégalité de Cauchy-Schwarz
+   On a
+   \[
+   |<u, v>| \le \|u\| \cdot \|v\| \qquad \forall u, v \in E
+   \] 
+   avec égalité si et seulement si $u$ et  $v$ sont colinéaires, i.e  $\exists \, t \in R$ tel que $u = tv$ ou  $v = tu$
+\end{lemma}

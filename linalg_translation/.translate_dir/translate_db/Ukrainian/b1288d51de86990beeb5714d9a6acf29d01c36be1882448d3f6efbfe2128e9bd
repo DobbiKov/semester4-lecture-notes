@@ -1,0 +1,12 @@
+\begin{definition}
+    \[
+        D \subset \R^n \quad D \text{ відкрита } \quad f: D \to \R \text{ є } \mathcal{C}^1 \text{ на } D
+    \]
+    Нехай $D \subset \R^n$ відкрита, тоді функція $f: D \to \R$ є класу $\mathcal{C}^1$ на  $D$ якщо
+    $f$ є диференційовною в кожній  $X \in D$ і функція
+    \begin{align*}
+        : D &\longrightarrow \R^n \\
+        X &\longmapsto \vec{\nabla}f(X)
+    \end{align*}
+    є неперервною.
+\end{definition}

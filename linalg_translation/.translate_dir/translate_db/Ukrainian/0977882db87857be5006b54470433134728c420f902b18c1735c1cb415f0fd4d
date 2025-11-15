@@ -1,0 +1,6 @@
+\begin{corollary}
+   Якщо $A \in \mathcal{M}_n(\R)$ оборотна квадратна матриця, тоді:
+   \[
+       \det(A^{-1}) = \frac{1}{\det(A)}
+   \] 
+\end{corollary}

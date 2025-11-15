@@ -1,0 +1,6 @@
+\begin{figure}[ht]
+    \centering
+    \incfig{projection-with-bon}
+    \caption{Проєкція з ОНБ}
+    \label{fig:projection-with-bon}
+\end{figure}

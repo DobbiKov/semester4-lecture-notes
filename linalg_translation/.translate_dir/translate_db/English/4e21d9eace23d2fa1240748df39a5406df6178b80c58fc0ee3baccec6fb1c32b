@@ -1,0 +1,7 @@
+\begin{definition}[Adherent point, Adherence]
+    Let \(A \subset E\). A point \(x_0 \in E\) is \textbf{adherent} to \(A\) if every open ball centered at \(x_0\) meets \(A\), i.e., \(\forall r > 0, B(x_0, r) \cap A \neq \emptyset\). (Equivalent to \(d(x_0, A) = \inf_{y \in A} d(x_0,y) = 0\)).
+    The \textbf{adherence} of \(A\), denoted \(\operatorname{Adh}(A)\) or \(\bar{A}\), is the set of points adherent to \(A\).
+    \begin{propriete}
+        \(\operatorname{Adh}(A)\) is the smallest closed set containing \(A\). \(A\) is closed \(\iff A = \operatorname{Adh}(A)\).
+    \end{propriete}
+\end{definition}

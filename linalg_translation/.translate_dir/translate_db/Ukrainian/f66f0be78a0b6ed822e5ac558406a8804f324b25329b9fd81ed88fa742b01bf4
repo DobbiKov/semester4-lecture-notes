@@ -1,0 +1,24 @@
+ $\R^n, \R^p$ $D \subset \R^n$
+\[
+F:D \to \R^p
+\] 
+на $\R^n$, $\R^p$ звичайні відстані, на $D$ відстань успадкована від $\R^n$.
+% \begin{figure}[ht]
+%     \centering
+%     \incfig{d-distance-exemple}
+%     \caption{d-distance-exemple}
+%     \label{fig:d-distance-exemple}
+% \end{figure}
+
+з декартовими координатами
+\[
+F(x_1, \ldots, x_n) = (F_1(x_1, \ldots, x_n), F_2(x_1, \ldots, x_n), \ldots, F_p(x_1, \ldots, x_n))
+\] 
+де $F_i: D \to \R$
+
+\[
+F: D \to \R^p \text{ continue}
+\] 
+
+ми знаємо:
+

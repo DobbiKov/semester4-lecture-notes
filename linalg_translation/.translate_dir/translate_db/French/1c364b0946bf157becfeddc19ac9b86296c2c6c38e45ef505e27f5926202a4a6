@@ -1,0 +1,6 @@
+\begin{lemma}
+   \[
+       \left( \mathcal{C}([0, 1], \R), \|.\|_1 \right) 
+   \]  
+   n'est pas complet.
+\end{lemma}

@@ -1,0 +1,3 @@
+
+Consider the system \(X'(t) = A X(t) + F(t)\), where \(X(t) \in \R^n\) (or \(\C^n\)), \(A \in M_n(\K)\), \(F: I \to \K^n\).
+

@@ -1,0 +1,7 @@
+\begin{proof}
+    Let $(v_n)_{n \in \N}$ be a sequence in $F(K)$. We have:  $v_n = F(u_n)$ where  $u_n \in K$.  $(u_n)_{n \in \N}$ sequence in $K$,  $K$ compact, therefore:  $\exists$ subsequence $(u_{\phi(n)})_{n \in \N}$ with 
+    \[
+        u_{\phi_n} \xrightarrow[n \to +\infty]{} u \in K
+    \] 
+    $F$ continuous: therefore  $F(u_{\phi(n)}) = v_{\phi(n)} \to F(u) \in K$. $(v_n)$ has a subsequence  $(v_{\phi(n)})$ that converges to $F(u) \in F(K)$, therefore $F(K)$ compact!
+\end{proof}

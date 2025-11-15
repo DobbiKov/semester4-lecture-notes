@@ -1,0 +1,20 @@
+\begin{preuve} of the proposition-definition \ref{def:continuite-topologique}
+   \begin{enumerate}
+       \item Let's show that $F$ continuous  $\implies$ if $U$ open then $F^{-1}(U)$ open.
+           \par
+           Suppose that $F$ continuous. Let  $y \in U$, then  $\exists x_0 \in F^{-1}(U)$ such that $F(x_0) = y$, 
+           as  $F$ is continuous, then:  
+           \[
+               \forall \epsilon > 0, \exists \alpha > 0 \text{ such that } \forall x \in E_1 \text{ such that }  d(x_0, x) < \alpha \implies d(y = F(x_0), x) < \epsilon
+           \] 
+           Now $U$ is open, then for $y$, there exists  $\epsilon$ such that  $B(y, \epsilon) \subset U$, as $F$ continuous, there exists $\alpha$, such that $\forall x \in B(x_0, \alpha), \, y \in B(y, \epsilon) \subset U$. Then, we have shown that $\forall x \in F^{-1}(U), \, \exists \alpha$ such that $B(x, \alpha) \subset F^{-1}(U)$, then $F^{-1}(U)$ is open. 
+       \item Let's show that $F$ continuous  $\impliedby$ if $U$ open then $F^{-1}(U)$ open.
+           Suppose that $\forall U$ open $\subset E_2$, $F^{-1}(U)$ is open. 
+           \par
+           Let $y \in U$ and $\epsilon > 0$, let's set: $U := B(y, \epsilon)$ open  $\subset E_2$ then $F^{-1}(U)$ open, hence $\forall x \in F^{-1}(U) \, \exists \alpha > 0$ such that $B(x, \alpha) \subset F^{-1}(U)$. 
+           By the definition of the open ball, we have:
+           \[
+               \forall y := f(x_0), \forall \epsilon > 0, \exists \alpha > 0, \forall x \in E_1 \text{ such that } d(f(x), y = f(x_0)) < \epsilon
+           \] 
+   \end{enumerate} 
+\end{preuve}

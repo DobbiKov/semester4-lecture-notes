@@ -1,0 +1,20 @@
+\begin{preuve} пропозиції-визначення \ref{def:continuite-topologique}
+   \begin{enumerate}
+       \item Покажемо, що $F$ неперервна  $\implies$ якщо $U$ відкрита, то $F^{-1}(U)$ відкрита.
+           \par
+           Припустимо, що $F$ неперервна. Нехай  $y \in U$, тоді  $\exists x_0 \in F^{-1}(U)$ такий, що $F(x_0) = y$, 
+           оскільки  $F$ неперервна, то:  
+           \[
+               \forall \epsilon > 0, \exists \alpha > 0 \text{ така що } \forall x \in E_1 \text{ така що }  d(x_0, x) < \alpha \implies d(y = F(x_0), x) < \epsilon
+           \] 
+           Але $U$ відкрита, тоді для $y$, існує  $\epsilon$ така що  $B(y, \epsilon) \subset U$, оскільки $F$ неперервна, існує $\alpha$, така що $\forall x \in B(x_0, \alpha), \, y \in B(y, \epsilon) \subset U$. Отже, ми показали, що $\forall x \in F^{-1}(U), \, \exists \alpha$ така що $B(x, \alpha) \subset F^{-1}(U)$, тому $F^{-1}(U)$ є відкритою. 
+       \item Покажемо, що $F$ неперервна  $\impliedby$ якщо $U$ відкрита, то $F^{-1}(U)$ відкрита.
+           Припустимо, що $\forall U$ відкрита $\subset E_2$, $F^{-1}(U)$ є відкритою. 
+           \par
+           Нехай $y \in U$ і $\epsilon > 0$, покладемо: $U := B(y, \epsilon)$ відкрита  $\subset E_2$ тому $F^{-1}(U)$ відкрита, звідси $\forall x \in F^{-1}(U) \, \exists \alpha > 0$ така що $B(x, \alpha) \subset F^{-1}(U)$. 
+           За визначенням відкритої кулі, маємо:
+           \[
+               \forall y := f(x_0), \forall \epsilon > 0, \exists \alpha > 0, \forall x \in E_1 \text{ така що } d(x_0, x) < \alpha, d(f(x), y = f(x_0)) < \epsilon
+           \] 
+   \end{enumerate} 
+\end{preuve}

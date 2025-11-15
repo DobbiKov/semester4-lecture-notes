@@ -1,0 +1,42 @@
+\begin{proof}
+    Нехай $A$ верхня трикутна матриця та $f$ ендоморфізм $K^n$, який у базисі $\{e_1, \ldots, e_n\}$ представлений матрицею $A$, тоді:
+     \[
+    \begin{cases}
+        f(e_1) = a_{1, 1} e_1\\
+        f(e_2) = a_{1, 2} e_1 + a_{2, 2}e_2\\
+        \vdots \\
+        f(e_n) = a_{1, n} e_1 + a_{2, n}e_2 + \ldots + a_{n, n}e_n
+    \end{cases} 
+    \iff
+         A = 
+         \begin{bmatrix} 
+         a_{1,1} & a_{1,2} & \ldots & a_{1,n} \\
+         0 & a_{2,2} & \ddots & \vdots\\
+         \vdots & \ddots & \ddots & a_{n-1,n}\\
+         0 & \ldots & 0 & a_{n,n}
+        \end{bmatrix}
+    \] 
+    Розглянемо базис 
+    \[
+    \varepsilon_1 = e_n, \quad \varepsilon_2 = e_{n-1}, \quad \ldots, \quad \varepsilon_n = e_1
+    \] 
+    тоді маємо:
+    \[
+    \begin{cases}
+        f(\underbrace{\varepsilon_1}_{e_n}) = = a_{1, n}\underbrace{\varepsilon_n}_{e_1} + a_{2, n}\underbrace{\varepsilon_{n-1}}_{e_2} + \ldots + a_{n, n}\underbrace{\varepsilon_1}_{e_n} \\
+        f(\underbrace{\varepsilon_2}_{e_{n-1}}) = = a_{1, n-1}\underbrace{\varepsilon_n}_{e_1} + \ldots + a_{n-1, n-1}\underbrace{\varepsilon_2}_{e_{n-1}} \\
+        \vdots \\
+        f(\underbrace{\varepsilon_n}_{e_1}) = a_{1,1}\underbrace{\varepsilon_n}_{e_1}
+    \end{cases}
+    \] 
+    отже 
+    \[
+    A' = M(f)_{\varepsilon_{i}} = 
+    \begin{bmatrix} 
+        a_{n, n}   &              & \ldots & 0\\
+        a_{n-1, n} & a_{n-1, n-1} & \ldots & 0\\
+        \vdots     &              & \ddots & \\
+        a_{1, n}   & \ldots       &        & a_{1,1}
+    \end{bmatrix} 
+    \] 
+\end{proof}

@@ -1,0 +1,15 @@
+\[
+    (E) 
+    \begin{cases}
+        x_1'(t) = a_{1,1}x_1(t) + \ldots + a_{1,n}x_n(t) + f_1(t)\\
+        \vdots\\
+        x_n'(t) = a_{n,1}x_1(t) + \ldots + a_{n,n}x_n(t) + f_n(t)
+    \end{cases}
+\] 
+\[
+x(t) = (x_1, \ldots, x_n(t)) \text{ або } \begin{pmatrix} x_1(t) \\ \vdots \\ x_n(t) \end{pmatrix} 
+\] 
+
+\[
+    A = [a_{i,j}]_{1 \le i, j \le n} \quad f(t) = \begin{pmatrix} f_1(t) \\ \vdots \\ f_n(t) \end{pmatrix} 
+\]

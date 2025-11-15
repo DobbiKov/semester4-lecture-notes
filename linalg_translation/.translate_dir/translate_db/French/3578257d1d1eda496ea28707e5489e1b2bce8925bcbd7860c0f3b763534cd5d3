@@ -1,0 +1,26 @@
+\begin{definition}
+    Soit une matrice carrée $A = (a_{i, j}) \in \mathcal{M}_n(\R)$. On note
+    \[
+        b_{i, j} = (-1)^{i + j}\det(A_{i, j})
+    \] 
+    Ensuite, on note la matrice
+    \[
+        N = 
+        \begin{bmatrix} 
+            b_{1,1} & \ldots & b_{1, n}\\
+            \vdots  & \ddots & \vdots  \\
+            b_{n,1} & \ldots & b_{n, n}\\
+        \end{bmatrix} 
+        = \operatorname{Com}(A)
+    \] 
+    La matrice $N$ est appelée \textbf{la comatrice} de $A$.
+    Alors, la \textbf{matrice adjointe} de $A$ est définie comme la comatrice transposée:
+    \[
+        A^{*} = N^{T} = 
+        \begin{bmatrix} 
+            b_{1,1} & \ldots & b_{n, 1}\\
+            \vdots  & \ddots & \vdots  \\
+            b_{1,n} & \ldots & b_{n, n}\\
+        \end{bmatrix} 
+    \] 
+\end{definition}

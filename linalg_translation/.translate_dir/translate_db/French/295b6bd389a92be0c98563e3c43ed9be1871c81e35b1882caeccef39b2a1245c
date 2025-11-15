@@ -1,0 +1,3 @@
+\begin{definition}
+    $(E, \scalair{,})$ espace euclidien. Une famille  $B = (e_1, \ldots, e_n)$ est une base orthonormale (où BON) si elle est une base et famille orthonormale.
+\end{definition}

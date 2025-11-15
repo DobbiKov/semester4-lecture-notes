@@ -1,0 +1,6 @@
+\begin{definition}
+    Une \textbf{isométrie} de $E$ (ou \textbf{transformation orthogonale}) est un endomorphisme  $f \in \mathcal{L}(E) := \mathcal{L}(E, E)$ préservant le produit vectoriel, i.e:
+     \[
+         \scalair{f(x), f(y)} = \scalair{x, y} \quad \forall x, y \in E
+    \] 
+\end{definition}

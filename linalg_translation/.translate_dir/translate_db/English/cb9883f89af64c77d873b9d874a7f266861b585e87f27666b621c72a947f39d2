@@ -1,0 +1,3 @@
+\begin{corollary}
+   If $f$ is an endomorphism of $E$ with $\dim E = n$ and $f$ admits $n$ pairwise distinct eigenvalues, then $f$ is diagonalizable.
+\end{corollary}

@@ -1,0 +1,6 @@
+\begin{definition}[Continuity at a point]
+    Let \((E_1, d_1)\) and \((E_2, d_2)\) be two metric spaces, \(f: E_1 \to E_2\) an application, and \(x_0 \in E_1\).
+    \(f\) is \textbf{continuous at \(x_0\)} if
+    \[ \forall \varepsilon > 0, \exists \delta > 0 \text{ such that } \forall x \in E_1, (d_1(x,x_0) < \delta \implies d_2(f(x), f(x_0)) < \varepsilon) \]
+    \(f\) is \textbf{continuous on \(E_1\)} if it is continuous at every point of \(E_1\).
+\end{definition}

@@ -1,0 +1,5 @@
+\begin{theorem}[Формула Тейлора-Янга порядку 2 (випадок \(m=1\))]
+    Якщо \(f:D \to \R\) є класом \(C^2\) на \(D\), тоді для \(X_0 \in D\) і \(H \in \R^n\) такого, що \(X_0+H \in D\) :
+    \[ f(X_0+H) = f(X_0) + \nabla f(X_0) \cdot H + \frac{1}{2} H^T H_f(X_0) H + o(\|H\|^2) \]
+    де \(H^T H_f(X_0) H = \sum_{i,j=1}^n \frac{\partial^2 f}{\partial x_i \partial x_j}(X_0) H_i H_j\) — квадратична форма, пов’язана з гессіаном.
+\end{theorem}

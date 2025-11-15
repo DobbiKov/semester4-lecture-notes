@@ -1,0 +1,13 @@
+\begin{eg}
+    \begin{enumerate}
+        \item $E = \mathcal{C}([0, 1], \R)$
+        \item $\|f\|_{\infty} = \sup_{x \in [0, 1]}|f(x)|$
+        \item $\|f\|_1 = \int_{{0}}^{{1}} {|f(x)|} \: d{x}$
+    \end{enumerate}
+    Зауважимо, що $\|f\|_1 \le \|f\|_{\infty}$. Чи $\exists c > 0$ така що
+    \[
+    \|f\|_{\infty} \le c\|f_1\| \forall f \in E
+    \]
+    ?
+    Щоб це побачити, побудуємо послідовність $(f_n)$ в $E$ така що $\|f_n\|_1 \to 0$ але $\|f_n\|_{\infty} \not\to 0$
+\end{eg}

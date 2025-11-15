@@ -1,0 +1,28 @@
+\begin{eg}
+   \[
+       A = \{(x, y) \in \R^2 \mid 2x + 3y \le 4, x \neq y\}
+   \]  
+\begin{figure}[H]
+    \centering
+    \incfig{example-interieur}
+    \caption{Приклад інтер'єру}
+    \label{fig:example-interieur}
+\end{figure}
+.
+\begin{itemize}
+    \item 
+        Я припускаю, що $Int(A) = C = \{(x, y) \mid 2x + 3y < 4, x \neq y\}$
+    \item
+        Опукле: $\{(x, y) \mid 2x + 3y < 4, x < y\} \cup \{(x, y) \mid 2x + 3y < 4, x > y\}$
+\end{itemize}
+Я будую послідовність $(X_n)$ з  $X_n \not\in A$ але $X_n \to X$. Нехай $X \in A, X \not\in C$, $X = (x, y)$ отже:  $2x + 3y = 4 \quad x \neq y$
+\[
+X_n = (x, y + \frac{1}{n})
+\] 
+\[
+2x_n + 3y_n = 2x + 3y + \frac{3}{n} = 4 + \frac{3}{n} > 4
+\] 
+\[
+X_n \not\in A \text{ але } X_n \to X
+\] 
+\end{eg}

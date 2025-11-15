@@ -1,0 +1,3 @@
+\begin{propriete}
+    Si \(E\) est un espace de Banach : Convergence normale \(\implies\) Convergence uniforme (et absolue) \(\implies\) Convergence simple.
+\end{propriete}

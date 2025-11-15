@@ -1,0 +1,3 @@
+\begin{proof}
+    $A' \in \mathcal{M}_n(K')$ is triangular and similar to $A$ (recall: $K'$ is the closure of $K$), so the eigenvalues are on the diagonal of $A'$. Now, similar matrices have the same trace and determinant, so $\operatorname{Tr}(A) = \operatorname{Tr}(A') = \lambda_1 + \ldots + \lambda_n$ and $\det(A) = \det(A') = \lambda_1 \cdot \ldots \cdot \lambda_n$.
+\end{proof}

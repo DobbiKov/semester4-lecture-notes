@@ -1,0 +1,9 @@
+\begin{prop}
+    Si $F, F'$ sont deux e.v de dimension finie, on  $dim(L(F, F')) = dim(F)\cdot dim(F')$\\
+    En particulier,  $dim(F^*) = dim(F)$. En effet si  $n = (e_1, \ldots, e_p)$ est une base de $F$ est  $n' = (e'_1, \ldots, e'_q)$ est une base de $F'$, alors l'application
+    \begin{align*}
+        : L(F, F') &\longrightarrow Mat_{f\times p}(\R) \\
+        f &\longmapsto (f) = Mat_{n,n'}(f)
+    .\end{align*}
+    est un isomorphisme. Donc $dim(F, F) = qp$
+\end{prop}

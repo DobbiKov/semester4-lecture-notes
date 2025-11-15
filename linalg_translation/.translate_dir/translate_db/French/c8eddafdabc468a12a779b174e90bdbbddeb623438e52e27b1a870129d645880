@@ -1,0 +1,2 @@
+On remarque que le vecteur $Av_3$ n'est plus situé en même ligne que le vecteur $v_3$, ce qui est logique car si les vecteurs étaient en même lignes après une transformation, cela n'aurait pas de sens.
+Par contre, parfois il y'a des cas, quand le vecteur appliqué à la matrice reste en même ligne, par exemple le vecteur $v_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix} $, avec $Av_2 = \begin{pmatrix} -2 \\ 2 \end{pmatrix} = 2v_2 $

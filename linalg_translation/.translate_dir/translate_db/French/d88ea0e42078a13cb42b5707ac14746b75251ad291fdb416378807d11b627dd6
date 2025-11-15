@@ -1,0 +1,12 @@
+\begin{definition}
+    Soit $Q$ un polynôme scindé:
+     \[
+         Q(X) = (X - a_1)^{\alpha_1} \cdots (X - a_r)^{\alpha_r}
+    \] 
+    Le polynôme 
+    \[
+    Q_1 = (X - a_1) \cdots (X - a_r)
+    \] 
+    est appelé \textbf{radical} de $Q$ (i.e polynôme scindé (le même polynôme mais sans puissances à côté des paranthèses). 
+    \par De plus, $Q_1 \mid Q$ i.e radical d'un polynôme divise le polynôme lui-même.
+\end{definition}

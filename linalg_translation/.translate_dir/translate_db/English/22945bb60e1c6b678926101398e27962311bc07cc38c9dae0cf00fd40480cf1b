@@ -1,0 +1,3 @@
+\begin{eg}
+   $\sum u_n$ can converge without converging normally, like:  $u_n = \frac{(-1)^n}{n}$ 
+\end{eg}

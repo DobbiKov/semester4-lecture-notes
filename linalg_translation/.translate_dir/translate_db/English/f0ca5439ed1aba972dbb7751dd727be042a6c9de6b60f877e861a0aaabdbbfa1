@@ -1,0 +1,7 @@
+\begin{prop}\label{prop:isometrie-bijective}
+   Let $f$ be an isometry in $E$, then:
+   \begin{enumerate}
+       \item $f$ is bijective
+       \item  $f$ preserves the Euclidean distance and angles
+   \end{enumerate}
+\end{prop}

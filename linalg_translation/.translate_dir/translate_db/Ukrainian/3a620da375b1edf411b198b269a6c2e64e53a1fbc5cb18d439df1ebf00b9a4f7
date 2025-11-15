@@ -1,0 +1,6 @@
+\begin{definition}
+    \textbf{Ізометрія} з $E$ (або \textbf{ортогональне перетворення}) є ендоморфізмом $f \in \mathcal{L}(E) := \mathcal{L}(E, E)$, що зберігає скалярний добуток, тобто:
+     \[
+         \scalair{f(x), f(y)} = \scalair{x, y} \quad \forall x, y \in E
+    \] 
+\end{definition}

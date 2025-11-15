@@ -1,0 +1,18 @@
+\begin{eg}
+   \begin{enumerate}
+       \item $E = \R$, \quad  $d(x, y) = |x - y|$
+            \[
+                B(x_0, r) = ]x_0 -r, x_0 + r[
+           \] 
+       \item $E = \R^d$, \quad $d = 2,3$, \quad $X = (x_1, \ldots, x_d)$ 
+           \begin{align*}
+               &\|X\|_2 = \left( \sum_{i=1}^{d} x_i^2 \right)^{\frac{1}{2}} \\
+               &\|X\|_1 = \sum_{i=1}^{d} x_i\\
+               &\|X\|_{\infty} = \underset{1 \le i \le d}{\text{max}}|x_i|
+           \end{align*}
+           \begin{align*}
+              &d_2(X, Y) = \|Y - X\|_2 = \|\vec{XY}\|_2\\ 
+              &d_1(X, Y), d_{\infty}(X, Y)
+           \end{align*}
+   \end{enumerate} 
+\end{eg}

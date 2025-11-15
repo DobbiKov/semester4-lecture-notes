@@ -1,0 +1,10 @@
+\begin{explanation}
+   Я припускаю, що $d(x_0, x_1) \le r$\\ 
+   Нехай $x \in B(x_1, r_1)$ тому $d(x_1, x) < r_1$ показати: $x \in B(x_0, r)$ (тобто $d(x_0, x) < r$?)\\
+   Нерівність трикутника говорить мені:
+   \begin{align*}
+       d(x_0, x) &\le d(x_0, x_1) + d(x_1, x)\\
+                 &< d(x_0, x_1) + r_1 \le r\\
+                 &\implies x \in B(x_0, r)
+   \end{align*}
+\end{explanation}

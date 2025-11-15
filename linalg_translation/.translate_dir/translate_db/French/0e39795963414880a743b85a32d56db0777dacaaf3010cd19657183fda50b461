@@ -1,0 +1,5 @@
+\begin{theorem}
+    (Borel-Lebesgue)
+    \par
+    dans $\R^n$ avec la distance usuelle $K$ est compact ssi  $K$ est fermé et borné
+\end{theorem}

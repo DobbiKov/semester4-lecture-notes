@@ -1,0 +1,7 @@
+\begin{definition}
+    L'ensemble des matrices orthogonales directes (i.e telles que $det(A) = 1$)
+    \[
+    SO(n, \R) = \{A \in O(n, \R) \mid det(A) = 1 \}
+    \] 
+    est un groupe, dit  \textbf{groupe spécial orthogonal}.
+\end{definition}

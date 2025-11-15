@@ -1,0 +1,6 @@
+\begin{figure}[H]
+    \centering
+    \incfig{distance-entre-ensembles}
+    \caption{Distance entre ensembles}
+    \label{fig:distance-entre-ensembles}
+\end{figure}

@@ -1,0 +1,5 @@
+\begin{prop} Soient $(E, \scalair{,})$ un espace euclidien et $\epsilon = (e_1, \ldots, e_n)$ une BON. Soient $f \in \mathcal{L}(E, E)$ et $A = (a_{i,j})_{1 \le i,j \le n}$ la matrice représentative de $f$ dans  $\epsilon$, i.e,  $A = Mat_{\epsilon}(f)$ 
+    \[
+        a_{i,j} = \scalair{f(e_i), e_j} \, \forall i,j = 1, \ldots, n
+    \] 
+\end{prop}

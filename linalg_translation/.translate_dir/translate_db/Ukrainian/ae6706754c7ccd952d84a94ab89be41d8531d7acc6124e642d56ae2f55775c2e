@@ -1,0 +1,3 @@
+\begin{prop}
+     $(x_n)_{n \in \N}$ є обмеженою, якщо $\{x_n : n \in \N\} (\subset E)$ є обмеженою множиною. 
+ \end{prop}

@@ -1,0 +1,41 @@
+\begin{preuve} -
+   \begin{itemize}
+       \item[($\implies$)] Supposons l'endomorphisme $f$ est trigonalisable et soit une base  $\{e_1, \ldots, e_n\}$ telle que
+           \[
+               M(f)_{e_i} = \begin{pmatrix} 
+                   a_{1,1} &            & & *\\
+                   0       & a_{2, 2}   & & \\
+                   \vdots  &      & \ddots & \\
+                   0        & \ldots    & 0 & a_{n, n}
+               \end{pmatrix} 
+           \] 
+           On a:
+           \[
+            P_f(X) = \det \begin{pmatrix} 
+                   a_{1,1} - X &            & & *\\
+                   0       & a_{2, 2} - X   & & \\
+                   \vdots  &      & \ddots & \\
+                   0        & \ldots    & 0 & a_{n, n} - X
+               \end{pmatrix} = (a_{1,1} - X) \cdots (a_{n,n} - X)
+           \] 
+           Donc $P_f(X)$ est bien scindé (on peut remarquer que ses racines sont les valeurs propres de $f$).
+       \item[($\impliedby$)] Supposons $P_f(X)$ scindé et montrons par récurrence que  $f$ trigonalisable.
+            \par
+            Pour  $n=1$ triviale.
+            \par
+            Supposons que le résultat est vrai à l'ordre  $n-1$. Or  $P_f(X)$ est scindé il admet au moins une racine  $\lambda_1 \in K$ et donc un vecteur propre $\varepsilon_1 \in E_{\lambda_1}$. Complétons $\{\varepsilon_1\}$ en une base $\{\varepsilon_1, \ldots, \varepsilon_n\}$, donc on a:
+            \[
+            A = M(f)_{\varepsilon_i} = \begin{pmatrix} 
+                \lambda_1 & b_2 & \ldots & b_n\\
+                0         &     &        &    \\
+                \vdots    &     & B      &    \\
+                0         &     &        &
+            \end{pmatrix}, \quad \text{où:} B \in \mathcal{M}_{n-1}(K)
+            \] 
+            Soit $F = \operatorname{Vect}(\varepsilon_2, \ldots, \varepsilon_n)$ et $g: F \to F$ l'unique endomorphisme de $F$ tel que  $M(g)_{\varepsilon_2, \ldots, \varepsilon_n} = B$, on a:
+            \[
+            P_f(X) = \det(A - XI_n) = (\lambda_1 - X)\det(B - XI_{n-1}) = (\lambda_1 - X)P_g(X)
+            \] 
+            Or $P_f(X)$ est scindé,  $P_g(X)$ l'est aussi et d'après l'hypothèse de récurrence  $B$ est trigonalisable, donc il existe une base  $\{v_2, \ldots, v_n\}$ dans laquelle $M(g)_{v_2, \ldots, v_n}$ est triangulaire et donc la matrice de $f$ dans la base  $\{\varepsilon_1, v_2, \ldots, v_n\}$ est triangulaire donc $f$ est trigonalisable.
+   \end{itemize} 
+\end{preuve}

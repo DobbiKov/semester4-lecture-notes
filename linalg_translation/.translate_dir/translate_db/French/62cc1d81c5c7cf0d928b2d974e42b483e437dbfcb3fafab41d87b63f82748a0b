@@ -1,0 +1,3 @@
+\begin{propriete}
+    Si \(f\) est différentiable en \(X_0\), alors \(f\) est continue en \(X_0\) et toutes ses dérivées directionnelles (donc partielles) existent en \(X_0\), et \(D_u f(X_0) = df_{X_0}(u) = \nabla f(X_0) \cdot u\).
+\end{propriete}

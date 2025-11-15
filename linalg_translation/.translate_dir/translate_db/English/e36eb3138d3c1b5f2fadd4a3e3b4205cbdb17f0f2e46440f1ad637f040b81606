@@ -1,0 +1,13 @@
+Consider solving the differential system
+\[
+\left\{
+\begin{aligned}
+\frac{dx_1}{dt} &= a_{11}x_1 + \cdots + a_{1n}x_n \\
+&\vdots \\
+\frac{dx_n}{dt} &= a_{n1}x_1 + \cdots + a_{nn}x_n
+\end{aligned}
+\right.
+\]
+with \( a_{ij} \in \mathbb{R} \) and \( x_i : \mathbb{R} \rightarrow \mathbb{R} \) differentiable.\\
+
+In matrix form, the system is written as:

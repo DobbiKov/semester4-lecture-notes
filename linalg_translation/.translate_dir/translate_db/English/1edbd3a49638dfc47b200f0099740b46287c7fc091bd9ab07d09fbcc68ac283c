@@ -1,0 +1,6 @@
+\begin{theorem}
+    Let $N_1, N_2$ be two norms, then:
+    \[
+    N_1, N_2 \text{ topologically equivalent } \iff N_1, N_2 \text{ equivalent }
+    \] 
+\end{theorem}

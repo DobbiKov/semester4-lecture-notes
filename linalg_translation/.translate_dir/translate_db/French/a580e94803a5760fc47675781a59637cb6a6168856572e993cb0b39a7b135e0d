@@ -1,0 +1,6 @@
+\begin{theorem}
+    L'ensemble $\operatorname{Sol}(H)$ des solutions de  $(H)$ est donné par
+     \[
+         x(t) = e^{tA}x_0 \quad x_0 \in \mathbb{C}^{n}
+    \] 
+\end{theorem}

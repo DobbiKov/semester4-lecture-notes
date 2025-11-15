@@ -1,0 +1,3 @@
+\begin{exemple}
+    Les intervalles \([a,b]\) sont compacts dans \(\R\). Les boules fermées \(B_f(x_0, r)\) sont compactes dans \(\R^d\).
+\end{exemple}

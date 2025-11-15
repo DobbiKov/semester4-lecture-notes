@@ -1,0 +1,3 @@
+\begin{preuve}
+   Je donne de l'intuition. Matrice de passage transforme une base en autre base, elle passe les vecteurs de la base, alors elle transforme la base de la BON en vecteurs de la base de la BON, donc, d'après la proposition \ref{prop:isometrie-ssi-transforme-bon-en-bon}, cette matrice est orthogonale.
+\end{preuve}

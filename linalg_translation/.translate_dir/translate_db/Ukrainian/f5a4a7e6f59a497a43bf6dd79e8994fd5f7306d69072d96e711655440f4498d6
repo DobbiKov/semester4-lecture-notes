@@ -1,0 +1,4 @@
+\begin{proposition}[Нерівність Коші-Шварца]
+        Для \(X, Y \in \R^d\) :
+        \[ |X \cdot Y| \le (X \cdot X)^{1/2} (Y \cdot Y)^{1/2} \quad \text{тобто} \quad |X \cdot Y| \le \|X\| \|Y\| \]
+    \end{proposition}

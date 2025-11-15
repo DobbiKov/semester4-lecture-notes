@@ -1,0 +1,14 @@
+\begin{eg}
+   \[
+       f(]0, 1[) = [-1, 1]
+   \]  
+   \[
+   f(x) = \sin(2\pi x)
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-ouvert-nimplique-pas-image-ouvert}
+    \caption{Приклад, що образ відкритої множини не є відкритою}
+    \label{fig:exemple-ouvert-nimplique-pas-image-ouvert}
+\end{figure}
+\end{eg}

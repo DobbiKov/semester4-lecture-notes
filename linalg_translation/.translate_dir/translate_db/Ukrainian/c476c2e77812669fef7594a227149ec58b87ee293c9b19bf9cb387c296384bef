@@ -1,0 +1,29 @@
+\begin{eg} де функція має часткові похідні вищого порядку, але $\displaystyle \frac{\partial^2 f}{\partial x_i\partial x_j}(X) \neq  \frac{\partial^2 f}{\partial x_j\partial x_i}(X)$
+   \[
+   f(x_1, x_2) = \begin{cases}
+       x_1x_2 \frac{x_1^2 - x_2^2}{x_1^2 + x_2^2} \text{ якщо } (x_1, x_2) \neq (0, 0)\\
+       0 \text{ якщо } (x_1, x_2) = 0
+   \end{cases}
+   \]  
+   \[
+   r^2 \sin(\theta)\cos(\theta)\cos(2\theta) = \frac{1}{4}r^2\sin(4\theta)
+   \] 
+   Обчислимо $\displaystyle \frac{\partial^2f}{\partial_{x_1}\partial_{x_2}}(0, 0)?$
+       Це $\displaystyle \frac{\partial}{\partial x_1}g(x_1)$ у $x_1 = 0$ для $\displaystyle g(x_1) = \frac{\partial f}{\partial x_2}(x_1, x_2)|_{x_2 = 0}$. Обчислення $g(x_1)$:
+    \begin{enumerate}
+        \item якщо $x_1 \neq 0$ $\frac{\partial f}{\partial x_2}(x_1, x_2) = x_1 \frac{x_1 ^ 2 - x_2^2}{x_1^2 + x_2^2}$, отже якщо $x_1 \neq 0$ $\frac{\partial f}{\partial x_2}(x_1, 0) = x_1$ 
+        \item якщо $x_1 = 0$ $f(0, x_2) = 0$
+    \end{enumerate}
+    Висновок:
+    \[
+    \frac{\partial f}{\partial x_2}(x_1, 0) = x_1 \quad \forall x_1
+    \] 
+    отже: 
+    \[
+    \frac{\partial}{\partial x_1}\frac{\partial}{\partial x_2}f(0, 0) = 1
+    \] 
+    $\displaystyle \frac{\partial}{\partial x_2}\frac{\partial}{\partial x_1}f(0, 0) = ?$. Бачимо, що, $f(x_2, x_1) = -f(x_1, x_2)$ отже 
+    \[
+    \frac{\partial}{\partial x_2}\frac{\partial}{\partial x_1}f(0, 0) = - \frac{\partial}{\partial x_1}\frac{\partial}{\partial x_2}f(0, 0) = -1
+    \] 
+\end{eg}

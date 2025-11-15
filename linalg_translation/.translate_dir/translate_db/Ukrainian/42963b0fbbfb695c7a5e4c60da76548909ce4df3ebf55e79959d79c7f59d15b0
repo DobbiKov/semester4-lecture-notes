@@ -1,0 +1,9 @@
+\begin{definition}[Відстань на множині \(E\)]
+       \textbf{Відстань} на \(E\) — це відображення \(d: E \times E \to \R_+\) таке, що для всіх \(X,Y,Z \in E\):
+       \begin{enumerate}
+           \item \textbf{Роздільність :} \(d(X,Y) = 0 \iff X = Y\)
+           \item \textbf{Симетрія :} \(d(X, Y) = d(Y, X)\)
+           \item \textbf{Нерівність трикутника :} \(d(X, Y) \le d(X, Z) + d(Z, Y)\)
+       \end{enumerate}
+       Множина, наділена відстанню, є \textbf{метричним простором}.
+   \end{definition}

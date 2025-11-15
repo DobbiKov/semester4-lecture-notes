@@ -1,0 +1,6 @@
+We can interpret $2$ as:
+ \[
+\left| N(u) - N(v) \right| \le N(u - v)
+\] 
+
+

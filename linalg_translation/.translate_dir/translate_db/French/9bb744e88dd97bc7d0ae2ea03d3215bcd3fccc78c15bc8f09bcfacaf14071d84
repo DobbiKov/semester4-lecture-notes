@@ -1,0 +1,3 @@
+\begin{corollary}
+    Toute matrice $A \in \mathcal{M}_n(\mathbb{C})$  est semblable à une matrice triangulaire de $\mathcal{M}_n(\mathbb{C})$.
+\end{corollary}

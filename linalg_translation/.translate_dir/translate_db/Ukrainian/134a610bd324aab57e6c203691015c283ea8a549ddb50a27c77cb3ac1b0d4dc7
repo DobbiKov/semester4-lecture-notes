@@ -1,0 +1,4 @@
+\begin{definition}[Відкрите покриття, Підпокриття]
+    Нехай \(K \subset E\). Сімейство \((U_i)_{i \in I}\) відкритих множин \(E\) є \textbf{відкритим покриттям} \(K\), якщо \(K \subset \bigcup_{i \in I} U_i\).
+    Підсімейство \((U_j)_{j \in J}\) (де \(J \subset I\)) є \textbf{підпокриттям}, якщо \(K \subset \bigcup_{j \in J} U_j\).
+\end{definition}

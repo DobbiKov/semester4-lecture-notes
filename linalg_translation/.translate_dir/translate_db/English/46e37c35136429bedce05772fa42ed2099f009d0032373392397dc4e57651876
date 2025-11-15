@@ -1,0 +1,7 @@
+\begin{definition}
+    The \textbf{orthogonal projection} of $E$ into $F$ is the projection $p_F$ of $E$ onto $F$ parallel to $F^{\perp}$, i.e.
+    \begin{align*}
+        p_F: E = F \oplus F^{\perp} &\longrightarrow F \\
+        x = x_F + x_{F^{\perp}} &\longmapsto p_F(x = x_F + x_{F^{\perp}}) = x_F
+    .\end{align*}
+\end{definition}

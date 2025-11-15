@@ -1,0 +1,11 @@
+\begin{property}
+   A finite set is compact. 
+   \[
+       F = \{a_1, \ldots, a_p\} \quad a_j \in E
+   \] 
+   $(U_i)_{i \in I}$ covers $F$.
+   I choose $a_j$ (point of $F$), there exists an $i \in I$ denoted $i(j)$ such that 
+    \[
+   a_j \in U_{i(j)} \quad F \subset U_{i(1)} \cup \ldots \cup U_{i(p)}
+   \] 
+\end{property}

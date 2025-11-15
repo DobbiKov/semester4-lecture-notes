@@ -1,0 +1,3 @@
+\begin{definition}
+    On appelle un  \textbf{polynôme minimal} de $f$ noté  $m_f(X)$ - le polynôme normalisé \footnote{i.e de coefficient $1$ du terme du plus haut degré, i.e:  $1*X^n + a_{n-1}X^{n-1} + \ldots + a_0$} qui annule $f$ de degré le plus petit.
+\end{definition}

@@ -1,0 +1,40 @@
+\begin{remark}
+   \[
+        A = \begin{pmatrix} 
+            0 & 1\\
+            0 & 0
+        \end{pmatrix}  
+        \quad
+        B = \begin{pmatrix} 
+            0 & 0 \\
+            1 & 0
+        \end{pmatrix} 
+   \]  
+   \[
+       AB = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} 
+       \quad 
+       BA = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} 
+   \] 
+   \[
+       A^2 = 0 \quad e^A = \mathcal{I} + A \quad e^B = \mathcal{I} + B \text{ where } \mathcal{I} \text{ identity}
+   \] 
+   \[
+       e^A = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} 
+       \quad 
+       e^B = \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix} 
+       \quad 
+       e^Ae^B = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix} 
+   \] 
+   \[
+       e^{A+B} = ? \quad A + B = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \quad (A + B)^2 = \mathcal{I}
+   \] 
+   \[
+       C = A+B \quad C^{2p} = \mathcal{I} \quad C^{2p + 1} = C
+   \] 
+   \[
+       e^C = \sum_{p=0}^{\infty} \frac{C^{2p}}{2p!} + \sum_{p=0}^{\infty} \frac{C^{2p + 1}}{(2p + 1)!} = \mathcal{I}\underbrace{\sum_{p=0}^{\infty} \frac{1}{2p!}}_{= \operatorname{ch}(1)} + C\underbrace{\sum_{p=0}^{\infty} \frac{1}{(2p + 1)!}}_{= \operatorname{sh}(1)}
+   \] 
+   \[
+       e^{A + B} = \operatorname{ch}(1) \mathcal{I} + \operatorname{sh}(1)C = \begin{pmatrix} \operatorname{ch}(1) & \operatorname{sh}(1) \\ \operatorname{sh}(1) & \operatorname{ch}(1) \end{pmatrix} \neq e^A \times e^B
+   \] 
+\end{remark}

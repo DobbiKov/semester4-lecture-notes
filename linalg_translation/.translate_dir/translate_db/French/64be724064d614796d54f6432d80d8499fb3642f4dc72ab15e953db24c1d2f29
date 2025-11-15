@@ -1,0 +1,30 @@
+
+Ce qui est très utile dans les matrices diagonales, c'est que la puissance de telle matrice égale à la même matrice avec les éléments diagonaux pris à la puissance, i.e:
+\[
+    A' = \begin{bmatrix} 
+        \lambda_1 & 0 & \ldots & 0\\ 
+        0 & \lambda_2 & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n
+    \end{bmatrix} \implies A'^{n} = \begin{bmatrix} 
+        \lambda_1 & 0 & \ldots & 0\\ 
+        0 & \lambda_2 & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n
+    \end{bmatrix}^{n} = \begin{bmatrix} 
+        \lambda_1^n & 0 & \ldots & 0\\ 
+        0 & \lambda_2^n & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n^n
+    \end{bmatrix}
+\] 
+Généralisons: Si $A \in \mathcal{M}_n(K)$ est diagonalisable (i.e  il existe $P$ et  $A'$ telles que  $A' = P^{-1}AP$), alors:
+\[
+    A^{n} = P(A'^{n})P^{-1} = P\begin{bmatrix} 
+        \lambda_1^n & 0 & \ldots & 0\\ 
+        0 & \lambda_2^n & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n^n
+    \end{bmatrix}P^{-1}
+\] 
+

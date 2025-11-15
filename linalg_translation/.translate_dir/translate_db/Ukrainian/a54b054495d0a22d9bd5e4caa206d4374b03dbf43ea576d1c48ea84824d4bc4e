@@ -1,0 +1,14 @@
+\begin{theorem}
+    Нехай $A \in \mathcal{L}(E, F)$. Наступні властивості є еквівалентними:
+    \begin{enumerate}
+        \item $A: E \to F$ є неперервною
+        \item $A$ є неперервною в  $0_E$
+        \item  $\exists C \ge 0$ таке що 
+            \[
+            \|Ax\|_F \le C\|x\|_E \quad \forall x \in E
+            \] 
+            це називається, що $A$ є обмеженою
+        \item $A$ є обмеженою на  $B_E(0, R)$ $\forall R > 0$
+    \end{enumerate}
+    Кажуть, що $A$ є обмеженою (якщо $A$ є неперервною та лінійною)
+\end{theorem}

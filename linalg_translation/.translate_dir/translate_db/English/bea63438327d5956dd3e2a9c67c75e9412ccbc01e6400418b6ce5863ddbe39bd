@@ -1,0 +1,5 @@
+\begin{definition}[Equivalent distances]
+       Two distances \(d_1, d_2\) on \(E\) are \textbf{equivalent} if there exist \(a,b > 0\) such that \(\forall x,y \in E\),
+       \[ a \cdot d_1(x,y) \le d_2(x,y) \le b \cdot d_1(x,y) \]
+       They then define the same open sets (the same topology).
+   \end{definition}

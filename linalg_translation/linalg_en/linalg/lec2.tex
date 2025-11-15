@@ -1,0 +1,493 @@
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 73ccb62af63a937a6d3cefeabad6c5a7d3cb68369db6989cb6a2d3dc188473b7
+% --- CHUNK_METADATA_END ---
+\section{Orthonormal bases}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 48af4b80a9de6ca29bdbace6d0944a33fd8c9c15b77cb1e7025dd95b7fca5e7c
+% --- CHUNK_METADATA_END ---
+Let $(E, \scalair{,})$ be a Euclidean space and $F \subset E$ a vector subspace ($dim(F) < \infty$) because $dim(E) < \infty$.% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 1cf6ab4654a737c18a935159f01dc60a50331e445ab0fbb27d17129b05c48e8c
+% --- CHUNK_METADATA_END ---
+\begin{note}
+    \[
+        F^{\perp} := \{x \in E \mid \scalair{X, Z} = 0 \, \forall z \in F\} 
+    \]
+    the orthogonal of $F$.
+\end{note}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: c3a10a7268a935140dd832d42c2e16a56f122abbeb4749bea75affc54b3c9bde
+% --- CHUNK_METADATA_END ---
+\begin{theorem}
+    On a $E = F \oplus F^{\perp}$.\\
+    In particular, $dim(F^{\perp}) = dim(E) - dim(F)$ and $F = (F^{\perp})^{\perp}$
+\end{theorem}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: e86a1a6bea99ae019ad5cbd5c5d91c61a4dff3c6b217fb2f6aa9c3b347b40c36
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+   We must show that:
+   \begin{enumerate}
+       \item $F \cap F^{\perp} = \O$
+       \item $E = F + F^{\perp}$ i.e. $\forall x \in E, \exists x' \in F, \, x'' \in F^{\perp}$ such that $x = x' + x''$ 
+   \end{enumerate}
+   \begin{enumerate}
+       \item Let $x \in F \cap F^{\perp}$\\
+       $\implies$ $\scalair{X, Z} = 0 \, \forall Z \in F$ because $x \in F \implies \scalair{X, X} = 0 \implies x = 0 (\scalair{,} \text{ is defined})$ 
+        \item Let $x \in E$. Consider $f_x \in E^{*}$, i.e. $f_x: E \to \R, y \mapsto \scalair{x, y}$ and $f := f_{x|F}: F \to \R \implies f \in E^{*}$
+            Riesz Lemma $\implies$ $\exists! x' \in F$ such that $f = f_{x'}: F \to \R, z \mapsto \scalair{x', z}$\\
+            $\implies f_{x}(z) = f_{x'}(z) = f(z)\, \forall z \in F$ (Attention: not the equality for all $z$ in $E$)\\
+            Let $x'' := x - x'$, i.e. $x = x' + x'' \in F$. Let's show $x'' \in  F^{\perp}$.\\
+            If $z \in F$, $\scalair{x'', z} = \scalair{x - x', z} = \scalair{x, z} - \scalair{x', z} = 0$. Therefore, $x'' \in F^{\perp}$ and $E = F \oplus F^{\perp}$ ($dim(E) = dim(F) + dim(F^{\perp})$) \\
+            $F \subseteq (F^{\perp})^{\perp}$ because $\scalair{x, z} = 0 \, \forall x \in F \, \forall z \in F^{\perp}$
+            \[
+                dim(F) = dim(E) - dim(F^{\perp})
+            \]
+            because $E = G \oplus G^{\perp}$, therefore $dim(G) = dim(E) - dim(G^{\perp})$ for $G = F^{\perp}, \, dim(F^{\perp}) = dim(G)$
+   \end{enumerate}
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 27851f8b7925d124fd18b2554233f86afbf8232d6432f79cac746f2904377647
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Let $E$ be a vector space equipped with a scalar product $\scalair{,}$
+     \begin{itemize}
+         \item A family $(v_i)_{i \ge 0}$ of vectors in $E$ is said to be \underline{orthogonal} if for $i \neq j$ we have $\scalair{v_i, v_j} = 0$ i.e. $v_i \perp v_j$
+         \item An orthonormal family of $E$ is an orthogonal family $(v_i)_{i \ge  0}$ such that, furthermore, $\|v_i\| = 1$ for $i \ge 0$
+    \end{itemize}
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 0d2505dfb8639405790b38b3457ed812bf61a68b5c0e75296f1fa02e779ce15c
+% --- CHUNK_METADATA_END ---
+\begin{eg}
+   \begin{enumerate}
+       \item $E = \R^{n}$ equipped with the standard dot product. The standard basis $(e_1, \ldots, e_n)$ is orthogonal because
+           \[
+           \scalair{e_i, e_j} = \begin{cases}
+               1 \text{ si } i = j\\
+               0 \text{ si } i \neq j
+           \end{cases}
+           \] 
+       \item In $E = \mathcal{C}^{0}([-1, 1], \R)$ equipped with $\scalair{f,g} = \int_{-1}^{1} f(t)g(t)\,d{t}$. The family $(\cos(t), \sin(t))$ is orthogonal. The family $(1, t^2)$ is not orthogonal:
+            \[
+                \scalair{1, t^2} = \int_{-1}^{1} 1 t^2 \, d{t} = \frac{2}{3} \neq  0 
+           \] 
+   \end{enumerate} 
+\end{eg}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: af5bd0f71063b14b9ef145dbe3af0af69158d553f33bee3c0be990eee7d22802
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+    An orthogonal family consisting of \underline{non-zero} vectors is linearly independent. In particular, an orthonormal family is linearly independent.
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 956a44f4ea8ed6a9bcd2cb11b5ea44ada4fdbb810014826686bfa90c5a387053
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+    Suppose $(v_1, \ldots, v_n)$ is orthogonal with $v_i \neq 0 \, \forall i = 1, \ldots, n$\\
+    if $\sum_{j=1}^{n} \underset{\in \R}{\alpha_iv_i} = 0$, then
+    \[
+        \forall i \in \{1, \ldots, n\} 0 = \scalair{v_i, \sum_{j=1}^{n} \alpha_jv_j} = \sum_{j=1}^{n}\alpha_j \scalair{v_i, v_j} = \alpha_i \underset{\neq 0}{\|v_i\|^2}
+    \]
+    Therefore, $\alpha_i = 0 \, \forall i = 1, \ldots, n$.\\
+    If $(v_1, \ldots, v_n)$ is orthonormal, then $\|v_i\| = 1$. Therefore, $v_i \neq 0, \, \forall i = 1, \ldots, n$.
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 87c48cf174cbeb60915f4f20a06e6f50a5f4ce984ed03c19114b2a5a1c37a705
+% --- CHUNK_METADATA_END ---
+\begin{intuition}
+   Orthogonal (perpendicular) vectors are never contained within each other (i.e. $e_i = \lambda e_j$ is not possible). If the vectors are related, then the angle is $< 90º$ (thus the vectors are not orthogonal, absurd), (they are contained within each other, they are not orthogonal, absurd). Therefore, they are indeed linearly independent.
+\end{intuition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 295b6bd389a92be0c98563e3c43ed9be1871c81e35b1882caeccef39b2a1245c
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    $(E, \scalair{,})$ Euclidean space. A family $B = (e_1, \ldots, e_n)$ is an orthonormal basis (or ONB) if it is a basis and an orthonormal family.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 5a8279067605c9c96f64e94f3a7c9f05a2800934a6a8a80be35d1aaaf2a73cd5
+% --- CHUNK_METADATA_END ---
+\begin{theorem}
+    $(E, \scalair{,})$ Euclidean space. Then, it admits an ONB.
+\end{theorem}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: e318537d26b99537acadb714f5cb06e6ea5ba9583d68b020578679227f59bf2c
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+   Let $n := dim(E)$. Let $(e_1, \ldots, e_p)$ be an orthogonal family (from the point of view of the cardinal $p$) such that $e_i \neq 0 \, \forall i = 1, \ldots, p$.\\
+Suppose, for the sake of contradiction, that $p < n$. Let $F = Vect(e_1, \ldots, e_p)$. Then, $E = F \oplus F^{\perp}$ and $dim(F) \le p < n$. Therefore, $F^{\perp} \neq  \{0\}$. Let $x \in F^{\perp}, \, x \neq 0$. Then, $(e_1, \ldots, e_p, x)$ is orthogonal of cardinal $> p$. Therefore, $p = n$ and $(e_1, \ldots, e_n)$ is a basis of $E$. To have an orthonormal family $(e_1', \ldots, e_n')$ it suffices to take $e_i' = \frac{1}{\|e_i\|}e_i \, \forall i = \{1, \ldots, n\}$.
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: c253feaaaf8ea9284c21cbf47c98c9c66d47171dba831f1fdad3d80d992cb660
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+    Let $(E, \scalar{}{})$ be a Euclidean space and let $(e_1, \ldots, e_n)$ be an orthonormal basis of $E$. If $x \in E$, we have:
+   \[
+       x = \sum_{i=1}^{n} \scalar{x}{e_i}e_i
+   \] 
+In other words, the real number $\scalar{x}{e_i}$ is the $i^{\text{ème}}$ coordinate of $x$ in the basis $(e_1, \ldots, e_n)$.
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: fc668c016669972f30b88cd5e9b2991340c3210e8aa83e0c514c9afe3127ded3
+% --- CHUNK_METADATA_END ---
+\begin{intuition}
+    The orthonormality of the base simplifies our lives. But first, a small introduction. Let an e.v $E = \R^2$ and the base $(e_1, e_2) = (\begin{pmatrix} 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0\\ 1 \end{pmatrix})$. Let a vector $\vec{v} = (2, 3)$:
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                scale=1,
+                axis lines=middle,        % Draw axes in the middle
+                xmin=-2, xmax=4,          % X-axis range
+                ymin=-2, ymax=4,          % Y-axis range
+                xlabel={$x$},             % Label for X-axis
+                ylabel={$y$},             % Label for Y-axis
+                xtick={-2,-1,0,1,2,3,4},% X-axis ticks
+                ytick={-2,-1,0,1,2,3,4},% Y-axis ticks
+                ]
+            \draw[color=red, ->, thick] (0, 0) -- node[below]{$e_1$}(1, 0);
+            \draw[color=blue, ->, thick] (0, 0) -- node[left]{$e_2$}(0, 1);
+            \draw[color=green, ->] (0, 0) --node[above]{$\vec{v}$} (2, 3);
+
+            \draw[color=gray, ->, thick] (1, 0) -- node[below]{$e_1$}(2, 0);
+            \draw[color=gray, ->, thick] (2, 0) -- node[left]{$e_2$}(2, 1);
+            \draw[color=gray, ->, thick] (2, 1) -- node[left]{$e_2$}(2, 2);
+            \draw[color=gray, ->, thick] (2, 2) -- node[left]{$e_2$}(2, 3);
+
+            \node[right, above] (_) at (2, 3){$(2, 3)$};
+        \end{axis} 
+        \end{tikzpicture}
+    \end{center}
+    So, we can write $\vec{v} = \vec{(2, 3)} = 2 \cdot \vec{e_1} + 3 \cdot \vec{e_2}$. The $x$ and $y$ (the coordinates of $v$) give us how many parts of each base vector (the number can be $\in \R$) and take their sums, to obtain $\vec{v}$. (The simplest: how much we have to go left and up).
+    \par
+    In the orthonormal base $\scalair{v, e_i}$ gives us how much we take of a vector $e_i$ to make the vector $\vec{v}$ and $\vec{e_i}$ gives the direction. Hence $\scalair{v, e_1}$ is equivalent to $2$, and $\scalair{v, e_2}$ to $3$, then:
+   \[
+       \vec{v} = \underbrace{\scalair{v, e_1}}_{= 2} \cdot \vec{e_1} + \underbrace{\scalair{v, e_2}}_{= 3} \cdot \vec{e_2}
+   \]  
+   Usually, to find the coordinates in a base, we would have to solve a linear system, while an orthonormal base allows us to obtain them by calculating the scalar product with each vector of the base, which is much simpler.
+\end{intuition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: aea3e28cd57e20ec69577d68fb9b0a1782d005d58409320b6f31ec98254394c3
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+    Let $y := \sum_{i=1}^{n} \scalar{x}{e_i}e_i$ . Then, 
+   \begin{align*}
+       &\forall j = 1, \ldots, n,\\
+       &\scalar{x - y}{e_j}\\ 
+       = &\scalar{x}{e_j} - \scalar{y}{e_j}\\ 
+       = &\scalar{x}{e_j} - \scalar{\sum_{i=1}^{n} \scalar{x}{e_i}e_i}{e_j}\\ 
+       = &\scalar{x}{e_j} - \underbrace{ \sum_{i=1}^{n} \scalar{x}{e_i} }_{\substack{\text{moved out}\\ \text{like constant}}}\scalar{e_i}{e_j}\\ 
+       = &\scalar{x}{e_j}\\ 
+       -& \left(\scalar{x}{e_1}\underbrace{ \scalar{e_1}{e_j} }_{= 0} + \ldots + \scalar{x}{e_{j-1}}\underbrace{\scalar{e_{j-1}}{e_j}}_{= 0} + \scalar{x}{e_{j}}\underbrace{ \scalar{e_{j}}{e_j} }_{= 1} + \scalar{x}{e_{j+1}}\underbrace{ \scalar{e_{j+1}}{e_j} }_{= 0} + \ldots + \scalar{x}{e_{n}}\underbrace{ \scalar{e_{n}}{e_j} }_{= 0}\right)\\
+        &\text{(} \forall i \neq j, \, \scalar{e_i}{e_j} = 0 \text{ because a scalar product of orthogonal vectors)}\\ 
+        &\text{(} \forall j \, \scalar{e_j}{e_j} = 1 \text{ because a scalar product of the same vector)}\\
+       = &\scalar{x}{e_j} - \scalar{x}{e_j}\underset{= 1}{\scalar{e_j}{e_j}} = 0
+   \end{align*}
+   Therefore, $x - y \in Vect(e_1, \ldots, e_n)^{\perp} = E^{\perp} = \{0\}$. Thus $x = y$
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 62f3efa5a94162d7abae77eaecb8119b2fe1c6b32a0943293c1aae43e7e31e74
+% --- CHUNK_METADATA_END ---
+\begin{corollary}
+    $\forall x \in E, \, \|x\|^2 = \sum_{i=1}^{n} \scalar{x}{e_i}^2$ 
+\end{corollary}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 9bfc133359e84b6700396f72b13466a8e04d0343cb89d0a7ed122d2a24ff1511
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+    If $x = \sum_{i=1}^{n} \scalar{x}{e_i}e_i = \sum_{i=1}^{n} x_ie_i$ then
+    \[
+        \|x\|^2 = \scalar{\sum_{i=1}^{n} x_ie_i}{\sum_{j=1}^{n} x_je_j} = \sum_{i,j=1}^{n} x_ix_j\scalar{e_i}{e_j} = \sum_{i=1}^{n} x_i^2
+    \] 
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: a6214a94d4e043fe5be223adf1ed2f11683d8677a04d2b0fc4052e2e34dd25c6
+% --- CHUNK_METADATA_END ---
+\section{Matrices and scalar products}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 093eb312b5bef7229d54b74b2ee759bfaca5736436a22ee873986782bc80f654
+% --- CHUNK_METADATA_END ---
+\begin{prop} Let $(E, \scalair{,})$ be a Euclidean space and $\epsilon = (e_1, \ldots, e_n)$ an orthonormal basis. Let $f \in \mathcal{L}(E, E)$ and $A = (a_{i,j})_{1 \le i,j \le n}$ be the representative matrix of $f$ in $\epsilon$, i.e., $A = Mat_{\epsilon}(f)$ 
+    \[
+        a_{i,j} = \scalair{f(e_i), e_j} \, \forall i,j = 1, \ldots, n
+    \] 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: dd44d42745a798aeb93703353ab8f513f389f43e7fe08fd4c6af0b3ed3b29b9c
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+   $A$ is the matrix whose columns are the vectors $f(e_j)$ written in the basis $\epsilon$:
+    \[
+        A = (f(e_1) | \ldots | f(e_n))\quad f(e_j) = \begin{pmatrix} a_{1,j}\\ \ldots\\ a_{n, j} \end{pmatrix} 
+   \]
+   Because $\forall v \in E, \, v = c_1e_1 + \ldots c_ne_n$ then $f(v) = c_1f(e_1) + \ldots c_nf(e_n)$ by linearity, so we only have to study each $f(e_j)$
+   \begin{align*}
+       f(e_j) = a_{1, j}e_1 + \ldots a_{n, j}e_n \implies\\
+       \langle f(e_j), e_i \rangle = \left\langle \sum_{k=1}^n a_{k,j} e_k, e_i \right\rangle = \sum_{k=1}^{n} a_{k,j}\scalar{e_k}{e_i} = a_{k, j}
+   \end{align*}
+   because $\scalar{e_k}{e_j} = \begin{cases}
+       0 \text{ si } k \neq j\\
+       1 \text{ si } k = j
+   \end{cases}$
+   Therefore:
+   \[
+       a_{i, j} = \scalair{f(e_j), e_i}
+   \] 
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 3d6e562394bd16d44eacf1fdbf398a06c0ebb4899ed706e2fd0453018ad5cf75
+% --- CHUNK_METADATA_END ---
+The matrix of a cross product is very useful in linear algebra. Before giving a definition:
+\par
+Let $E$ be a vector space of finite dimension $n$, a space $K$ and a bilinear form $b: E \times E \longrightarrow K$. If $\{e_1, \ldots, e_n\}$ is a basis of $E$, then: $x = \sum_{i=1}^{n} x_ie_i$ and $y = \sum_{j=1}^{n} y_je_j$, then we have:
+\[
+b(x, y) = \sum_{i,j = 1}^{n} x_iy_jb(e_i, e_j)
+\] 
+$b$ is therefore determined by the knowledge of the values $b(e_i, e_j)$ on a basis.% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 48094a454bf8ba48c06e4394c13f6784cf74f6f5ae372abcf1d103d24a3d40fa
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+     We call \textbf{the matrix of $b$} in the basis $\{e_i\}$ the matrix:
+      \[
+          M(b)_{e_i} = \begin{pmatrix} 
+              b(e_1, e_1) & b(e_1, e_2) & \ldots & b(e_1, e_n)\\
+              b(e_2, e_1) & b(e_2, e_2) & \ldots & b(e_2, e_n)\\
+              \ldots & \ldots & \ldots & \ldots\\
+              b(e_n, e_1) & \ldots & \ldots & b(e_n, e_n)
+          \end{pmatrix} 
+     \] 
+     Thus, the element of the $\text{i}^{\text{ème}}$ row and $\text{j}^{\text{ème}}$ column is the coefficient of $x_iy_j$.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 62c294d50e70f069edb118954d1062019befc9fb23a60d3d2fae64b860280b3b
+% --- CHUNK_METADATA_END ---
+\begin{eg}
+   The matrix of the canonical scalar product in $\R^3$ is:
+   \[
+       \scalair{X, Y} = x_1y_1 + x_2y_2 + x_3y_3 
+   \] 
+   \[
+       Mat(\scalair{,})_{e_i} = \begin{pmatrix} 
+            1 & 0 & 0\\
+            0 & 1 & 0\\
+            0 & 0 & 1
+       \end{pmatrix} 
+   \] 
+\end{eg}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: b0c83a2f49748ae4e903bde7a5deb981b49ddbea840f17eddb5300625781a59c
+% --- CHUNK_METADATA_END ---
+\begin{prop}\label{prop:prod-scal-par-matrice} Scalar product represented by a matrix.\par
+   Let us note:
+   \begin{align*}
+       \underbrace{A = M(b)_{e_i}}_{\text{matrice de produit scalair}} && \underbrace{X = M(x)_{e_i}}_{\substack{\text{coordonnées de $x$}\\ \text{dans la base  $e_i$}}} && \underbrace{Y = M(y)_{e_i}}_{\substack{\text{coordonnées de $y$}\\ \text{dans la base $e_i$}}} && (x, y \in E)
+   \end{align*}
+   Then, we have:
+   \[
+       b(x, y) = X^{t}AY
+   \] 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 9d0901364708fc729bba61d8e31be5464c242130c9e13ca350ba448dda5a614a
+% --- CHUNK_METADATA_END ---
+\begin{eg}
+    Let's take the example with $b = \scalair{,}$ the canonical scalar product in $\R^3$. Let $X = \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix}$ and $Y = \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix} $ be in the canonical basis of $\R^3$. Therefore:
+    \begin{align*}
+        \scalair{x, y} = X^{t}AY &= \overbrace{(1, 2, -1)}^{X^{t}} \times \overbrace{\begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1 \end{pmatrix}}^{A} \times \overbrace{ \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix} }^{Y} \\
+                                 &= \underbrace{(1, 2, -1)}_{X} \times \underbrace{ \begin{pmatrix} 2 \\ 3\\ 1 \end{pmatrix} }_{A \times Y} \\
+                                 &= 1 \cdot 2 + 2 \cdot 3 + (-1) \cdot 1 = 2 + 6 - 1 = 7
+    \end{align*}
+\end{eg}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 54a4cd7b54b5866d578d31539dfc2487344f6e00176ef1f50e52b853fd2b6e6a
+% --- CHUNK_METADATA_END ---
+\begin{TODO}
+   change of basis of the matrix of a bilinear form
+\end{TODO}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: f02c7be5d857b5eed9458f065ffbe0b92fabe4a86739c6e6b8f844815fbed1b9
+% --- CHUNK_METADATA_END ---
+\section{Orthogonal Projections}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 3cf8ef01da181c9899c2c7ef308c301ce20ec3f321d9dc0adeb31fc8b92fac39
+% --- CHUNK_METADATA_END ---
+Let $(E, \scalair{,})$ be a Euclidean space, $F \subseteq E$ a vector subspace. Then, $E = F \oplus F^{\perp}$. Therefore, $\forall x \in E$ can be written as
+\[
+x = \underset{\in F}{x_F} + \underset{\in F^{\perp}}{x_{F^{\perp}}}
+\]% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 7ee17c23574b5c31f16245c762feb1689038b4764a68cdc48f11abebfaf21d0c
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    The \textbf{orthogonal projection} of $E$ into $F$ is the projection $p_F$ of $E$ onto $F$ parallel to $F^{\perp}$, i.e.
+    \begin{align*}
+        p_F: E = F \oplus F^{\perp} &\longrightarrow F \\
+        x = x_F + x_{F^{\perp}} &\longmapsto p_F(x = x_F + x_{F^{\perp}}) = x_F
+    .\end{align*}
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: bdcdf0f2c368d93b2f418fae1ea96b243f406c45c822c89d9f5056e59d4f5329
+% --- CHUNK_METADATA_END ---
+\begin{remark}
+   \begin{enumerate}
+       \item $p_F$ is linear
+       \item  $\forall x \in E \, p_{F}(x)$ is completely characterized by the following property:\\
+           Let $y \in E$, then
+            \[
+                y = p_F(x) \iff \left( \underset{\implies y = x_F}{y \in F \text{ et } x - y} \in F^{\perp} \right) 
+           \] 
+       In particular, $\scalair{p_F(x), x - p_F(x)} \,= 0$. Then, if $(v_1, \ldots, v_R)$ is an ONB of $F$, we have:
+            \[
+                \forall x \in E, \, p_F(x) = \sum_{i=1}^{k} \scalair{x, v_i}v_i
+           \] 
+           Indeed, it suffices to verify that the vector $y = \sum_{i=1}^{k} \scalair{x, v_i}v_i$ satisfies:
+           \[
+               y \in F \text{ and } x - y \in F^{\perp}
+           \] 
+   \end{enumerate} 
+\end{remark}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 3aa6469e224aa9391b7275942ad2ee83ef12453991db092e8687d27715531a0e
+% --- CHUNK_METADATA_END ---
+\begin{figure}[H]
+   \centering 
+\begin{tikzpicture}
+
+% Draw the plane
+\fill[gray!20] (-2,-1) -- (2,-1) -- (3,1) -- (-1,1) -- cycle;
+
+% Draw the vectors
+\draw[->, thick, black] (0,0) -- (2,2.2) node[anchor=south east] {\large $\mathbf{x}$};
+
+\node[anchor=north, blue] (_) at ($(0,0)!0.5!(2,0)$) {\large $\text{proj}_\mathbf{F} \mathbf{x}$};
+\node[anchor=west, blue] (_) at ($(2,0)!0.5!(2,2.2)$) {\large $\text{proj}_\mathbf{F^{\perp}} \mathbf{x}$};
+% Add the labels for w and w perpendicular
+\draw[->, thick, blue] (0,0) -- (2,0) ;
+\draw[thick, black] (2,0) -- (2,3) node[anchor=west] {\large $\mathbf{F}^\perp$};
+\draw[->, thick, blue] (2,0) -- (2,2.2);
+\node[anchor=north west] (_) at (1.5, -0.5) {\large $\mathbf{F}$};
+% Add the right angle symbol
+
+\end{tikzpicture}
+\caption{Projection}
+\label{pic:projection}
+\end{figure}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: fef2202683aa574defaf64635f8d48a8974d78d79ccc9dc70debe12602180d44
+% --- CHUNK_METADATA_END ---
+\begin{figure}[ht]
+    \centering
+    \incfig{projection-with-bon}
+    \caption{Projection with BON}
+    \label{fig:projection-with-bon}
+\end{figure}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 39fd6b59580833a0b7891f464b5fe02810e005f144922030608790b87c8ffebe
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Let $x \in E$. Then,
+   \[
+       \|x - p_F(x)\| = inf\{\|x - y\| \mid y \in F\}
+   \] 
+   i.e. $\|x - p_F(x)\|$ is the distance from $x$ to $F$.\\
+   See Figure~\ref{pic:projection}
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: eaf28919b4717902ddaef3d4356df8d73f7d2e7f52cbe116e05394d2c107ed56
+% --- CHUNK_METADATA_END ---
+\begin{preuve}
+   Since $p_F(x) \in F$ it suffices to prove that, if $y \in F$, then
+   \[
+   \|x - p_F(x)\| \le \|x - y\|
+   \]
+   But, $\underset{(x - p_F(x)) + (p_F(x) - y)}{\|x - y\|^2} = \|x - p_F(x)\|^2 + 2\overbrace{\scalair{\overset{\in F^{\perp}}{x - p_F(x)}, \overset{\in F}{p_F(x) - y}}}{= 0} + \underbrace{\|p_F(x) - y\|^2}_{\ge 0} \ge \|x - p_F(x)\|^2$
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 58448e126f08a50a09fc0715ad54230783e07f1dcf3d3cf5d1e964c99ddb6752
+% --- CHUNK_METADATA_END ---
+\begin{theorem}\label{thm:gram-schmidt}Gram-Schmidt\\
+    Let $E$ be a vector space equipped with a scalar product $\scalair{,}$. Let $(v_1, \ldots, v_n)$ be a free family of elements $\in E$. Then, there exists an orthogonal family $(w_1, \ldots, w_n)$ such that
+    \[
+        \forall i = 1, \ldots, n \quad Vect(v_1, \ldots, v_i) = Vect(w_1, \ldots, w_i)
+    \] 
+    Moreover, this theorem gives us a method for constructing an orthonormal basis from an arbitrary basis.
+\end{theorem}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 330b4b7f1bdcbebbdd214c06eebd87c11d27badb990601b0996dd8b25cbb96d7
+% --- CHUNK_METADATA_END ---
+\begin{preuve} of Theorem \ref{thm:gram-schmidt}
+    Let's construct the orthogonal basis: $\{w_1, \ldots, w_p\}$. First, let's set:
+    \[
+    \begin{cases}
+        w_1 = v_1\\
+        w_2 = v_2 + \lambda w_1, \qquad \text{avec } \lambda \text{ tel que } w_1 \perp w_2
+    \end{cases}
+    \] 
+    By imposing this condition, we find:
+    \[
+        0 = \scalair{v_2 + \lambda w_1, w_1} = \scalair{v_2, w_1} + \lambda \|w_1\|^2
+    \] 
+    Since $w_1 \neq 0$, we obtain $\lambda = - \frac{\scalair{v_2, w_1}}{\|w_1\|^2}$. We notice that:
+    \[
+    \begin{cases}
+        v_1 = w_1\\
+        v_2 = w_2 - \lambda w_1
+    \end{cases}
+    \] 
+    therefore $Vect\{v_1, v_2\} = Vect\{w_1, w_2\}$.
+    \par
+    Once $w_2$ is constructed, we construct $w_3$ by setting:
+    \begin{align*}
+        &w_3 = v_3 + \mu w_1 + \nu w_2\\
+        &\text{with } \mu \text{ and } \nu \text{ such that: } w_3 \perp w_1 \text{ and } w_3 \perp w_2
+    \end{align*}
+    We can see $w_3 = v_3 - \lambda' w_1 - \lambda'' w_2 $ as $w_3 = v_3 - proj_{F_2}v_3$ where $F_i = Vect\{w_1, \ldots, w_i\}$
+    \begin{figure}[H]
+        \centering
+        \incfig{projection-with-bon-thm}
+        \caption{Vecteur par projection}
+        \label{fig:projection-with-bon-thm}
+    \end{figure}
+    This gives
+    \begin{align*}
+        0 &= \scalair{v_3 + \mu w_1 + \nu w_2, w_1} = \scalair{v_3, w_1} + \mu \underset{= \|w_1\|^2}{\scalair{w_1, w_1}} + \nu \underset{= 0}{\scalair{w_2, w_1}}\\
+          &= \scalair{v_3, w_1} + \mu \|w_1\|^2 
+    \end{align*}
+    hence $\mu = - \frac{\scalair{v_3, w_1}}{\|w_1\|^2}$. Similarly, by imposing that $w_3 \perp w_2$, we find $\nu = - \frac{\scalair{v_3, w_2}}{\|w_2\|^2}$. As
+    \[
+    \begin{cases}
+        v_1 = w_1\\
+        v_2 = w_2 - \lambda w_1\\
+        v_3 = w_3 - \mu w_1 - \nu w_2
+    \end{cases}
+    \] 
+    we can see that $Vect\{w_1, w_2, w_3\} = Vect\{v_1, v_2, v_3\}$. That is, $\{w_1, w_2, w_3\}$ is an orthogonal basis of the space spanned by $v_1, v_2, v_3$. We can now clearly see the recurrence process.
+    \par
+    Suppose we have constructed $w_1, \ldots, w_{k-1}$ for $k \le p$. Let's set:
+    \begin{align*}
+        w_k &= v_k + \text{ combinaison linéaire des vecteurs déjà trouvés}\\
+            &= v_k + \lambda_1w_1 + \ldots + \lambda_{k-1}w_{k-1}
+    \end{align*}
+    The conditions $w_k \perp w_i$ (for $i \in \{1, \ldots, k-1\}$) are equivalent to:
+    \[
+        \lambda_i = - \frac{\scalair{v_k, w_i}}{\|w_i\|^2}
+    \] 
+    as can be verified immediately. Since $v_k = w_k - \lambda_1 - \ldots - \lambda_{k-1}w_{k-1}$, we see by recurrence that $Vect\{w_1, \ldots, w_k\} = Vect\{v_1, \ldots, v_k\}$ $\iff$ $\{w_1, \ldots, w_k\}$ is an orthogonal basis of $Vect\{v_1, \ldots, v_k\}$.
+    \par
+    What remains for us is to normalize it, i.e. $\forall i \in \{1, \ldots, k\}$ $e_i = \frac{w_i}{\|w_i\|}$, hence $\{e_1, \ldots, e_k\}$ is an orthonormal basis of $F = Vect\{v_1, \ldots, v_k\}$.
+\end{preuve}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 751a5f3f1ef8a135bcd0fe7e3da6b01ade6279ba3c8727b2968a2107f53aa410
+% --- CHUNK_METADATA_END ---
+\begin{prop} To understand this proposition, I advise you to read section \ref{sec:isometrie-et-adjoints}
+    \par
+   Every orthogonal projection is self-adjoint, i.e. if $p$ is an orthogonal projection, then:
+   \[
+   p^* = p
+   \] 
+   In matrix notation: let $A$ be a matrix of the projection $p$, then:
+    \[
+   A^T = A
+   \] 
+\end{prop}

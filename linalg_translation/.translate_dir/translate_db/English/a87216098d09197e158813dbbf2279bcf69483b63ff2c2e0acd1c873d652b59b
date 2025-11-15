@@ -1,0 +1,3 @@
+\begin{preuve}
+   We know that $P_f(X) = A(X)m_f(X)$ so if $\lambda$ is a root of $m_f(X)$, then it is also a root of $P_f(X)$. Conversely, if $\lambda$ is a root of $P_f(X)$ then it is an eigenvalue, however $m_f(X)$ annihilates $f$, therefore $\lambda$ is also a root of $m_f(X)$.
+\end{preuve}

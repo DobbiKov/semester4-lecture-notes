@@ -1,0 +1,19 @@
+Дуже корисним у діагональних матрицях є те, що степінь такої матриці дорівнює тій самій матриці, але з діагональними елементами, зведеними до степеня, тобто:
+\[
+    A' = \begin{bmatrix} 
+        \lambda_1 & 0 & \ldots & 0\\ 
+        0 & \lambda_2 & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n
+    \end{bmatrix} \implies A'^{n} = \begin{bmatrix} 
+        \lambda_1 & 0 & \ldots & 0\\ 
+        0 & \lambda_2 & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n
+    \end{bmatrix}^{n} = \begin{bmatrix} 
+        \lambda_1^n & 0 & \ldots & 0\\ 
+        0 & \lambda_2^n & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n^n
+    \end{bmatrix}
+\]

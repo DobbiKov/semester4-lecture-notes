@@ -1,0 +1,9 @@
+\begin{theorem}
+    Soit $A \in B(E, F)$, on pose $\displaystyle \|A\| = \sup_{x \in E, \|x\|_E \le 1} \|Ax\|_F = \sup_{x \in B_E(0, 1)} \|Ax\|_{F}$
+
+    \begin{enumerate}
+        \item $\| \cdot \|$ est une norme sur  $B(E, F)$ appelée norme uniforme.
+        \item On a:  $\|Ax\|_F \le \|A\|\|x\|_{E} \quad \forall x \in E$
+        \item $\|A\| = $ la plus petite constante  $C$ telle que  $\|Ax\|_{F} \le C\|x\|_{E} \quad \forall x \in E$
+    \end{enumerate}
+\end{theorem}

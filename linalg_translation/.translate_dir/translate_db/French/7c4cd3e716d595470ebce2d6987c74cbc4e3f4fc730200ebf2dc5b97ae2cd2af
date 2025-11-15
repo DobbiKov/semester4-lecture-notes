@@ -1,0 +1,10 @@
+
+Supposons pour $q \in \N^{*}$ on a déjà trouvé $q$ valeurs propres d'une matrice $\{ \lambda_1, \ldots, \lambda_q \}$, pour trouver les vecteurs propres, il nous reste à trouver la base de:
+\[
+    \ker(A - \lambda_iI) \quad \forall i \in \{1, \ldots, q\}
+\] 
+ce qui équivaut à:
+\[
+\left( A - \lambda_i I \right)v = 0 \quad \forall i \in \{1, \ldots, q\}
+\] 
+

@@ -1,0 +1,7 @@
+\begin{definition}
+    Soit $A \subset E$. 
+    \begin{enumerate}
+        \item $x_0 \in E$ est \underline{adhérent} à $A$, si  $\forall \delta > 0, \, B(x_0, \delta)$ intérsecte $A$. (équivalent à $d(x_0, A) = 0$)
+        \item $Adh(A)$ (adhérence ou fermeture de $A$) = ensemble des points adhérents à $A$ (aussi noté $\overline{A}$)
+    \end{enumerate}
+\end{definition}

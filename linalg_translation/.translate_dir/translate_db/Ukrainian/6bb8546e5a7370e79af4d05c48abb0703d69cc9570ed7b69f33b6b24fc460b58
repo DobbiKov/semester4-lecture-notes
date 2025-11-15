@@ -1,0 +1,6 @@
+\begin{prop}
+    Нехай $f$ ендоморфізм у $E$ та $\lambda$ власне значення порядку $\alpha$ (тобто $\alpha$ є коренем $P_f(\lambda)$ порядку $\alpha$, тобто $P_f(\lambda) = (X - \lambda)^{\alpha}Q(X)$). Тоді:
+   \[
+   \dim E_{\lambda} \le \alpha
+   \] 
+\end{prop}

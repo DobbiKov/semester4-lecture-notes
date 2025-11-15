@@ -1,0 +1,6 @@
+\begin{definition}
+    Let $A \in \mathcal{M}_{p, n}(\R)$ and $B \in \mathcal{M}_{n, q}(\R)$ such that $A = (a_{j, i})$ and $B = (b_{m, k})$, then:
+    \[
+        AB = C = (c_{j, k} = \sum_{i=1}^{n} a_{j, i}b_{i, k})
+    \] 
+\end{definition}

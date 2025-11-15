@@ -1,0 +1,11 @@
+\begin{remark}
+   Let's revisit the example of $f$ which is a projection, thus $f^2 - f = 0$ and $Q(X) = X^2 - X = X(X-1)$ annihilates $f$. Now $X$ and $X-1$ are coprime, then 
+    \[
+        E = \operatorname{Ker}f \oplus \operatorname{Ker}(f - \operatorname{Id})
+   \] 
+    More generally, let $f$ be an endomorphism and $Q(X) = (X - \lambda_1) \cdots (X - \lambda_p)$ such that $Q(f) = 0$, we have:
+     \[
+         E = \underbrace{\operatorname{Ker}(f - \lambda_1 \operatorname{Id})}_{E_{\lambda_1}} \oplus \ldots \oplus \underbrace{\operatorname{Ker}(f - \lambda_p \operatorname{Id})}_{E_{\lambda_p}}
+    \] 
+    Of course, $\lambda_i \neq \lambda_j$. And thus $f$ is diagonalizable because it is a direct sum of these eigenspaces.
+\end{remark}

@@ -1,0 +1,13 @@
+\begin{intuition}
+   It's not always easy to understand the idea through characteristic polynomials, so another way to look at it is:
+   \begin{enumerate}
+       \item We find the eigenvalues: $\lambda_1, \ldots, \lambda_p$
+       \item Then we find the eigenspaces: $E_{\lambda_i} = \ker(f - \lambda_i I)$
+       \item We sum the dimensions: $\dim E_{\lambda_1} + \ldots + \dim E_{\lambda_p} =: d$.  
+           \begin{itemize}
+               \item 
+                   If $d = \dim E$ i.e., if the sum of the dimensions is equal to the dimension of the space  $E$, the eigenspaces span  $E$ and thus  $f$ is diagonalizable (because its matrix can be written in the basis of these eigenvectors).
+              \item Otherwise, the number of linearly independent eigenvectors is not sufficient to span  $E$.
+           \end{itemize}
+   \end{enumerate}
+\end{intuition}

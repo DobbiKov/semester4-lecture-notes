@@ -1,0 +1,8 @@
+\begin{prop}
+   Soit $x \in E$. Alors,
+   \[
+       \|x - p_F(x)\| = inf\{\|x - y\| \mid y \in F\}
+   \] 
+   i.e $\|x - p_F(x)\|$ est la distance de  $x$ à  $F$.\\
+   Voir Figure~\ref{pic:projection}
+\end{prop}

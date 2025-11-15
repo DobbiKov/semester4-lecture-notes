@@ -1,0 +1,9 @@
+\begin{prop}
+    If $F, F'$ are two finite-dimensional vector spaces, then $dim(L(F, F')) = dim(F)\cdot dim(F')$\\
+    In particular, $dim(F^*) = dim(F)$. Indeed, if $n = (e_1, \ldots, e_p)$ is a basis of $F$ and $n' = (e'_1, \ldots, e'_q)$ is a basis of $F'$, then the mapping
+    \begin{align*}
+        : L(F, F') &\longrightarrow Mat_{f\times p}(\R) \\
+        f &\longmapsto (f) = Mat_{n,n'}(f)
+    .\end{align*}
+    is an isomorphism. Therefore $dim(F, F) = qp$
+\end{prop}

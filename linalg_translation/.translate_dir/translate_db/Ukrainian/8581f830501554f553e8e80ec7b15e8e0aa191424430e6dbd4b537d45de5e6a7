@@ -1,0 +1,8 @@
+Таким чином, власні простори завжди знаходяться в прямій сумі, але не обов'язково дорівнюють $E$:
+ \[
+     E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p} \underset{\neq}{\subset} E
+\] 
+що ми маємо, якщо:
+\[
+\dim E_{\lambda_1} + \ldots + \dim E_{\lambda_p} < \dim E
+\]

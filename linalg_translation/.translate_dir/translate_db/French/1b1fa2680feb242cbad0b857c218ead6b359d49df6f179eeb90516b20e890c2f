@@ -1,0 +1,3 @@
+\begin{propriete}[Distance induite par une norme]
+       Si \((E, \|\cdot\|)\) est un EVN, alors \(d(X,Y) = \|X-Y\|\) définit une distance sur \(E\).
+   \end{propriete}

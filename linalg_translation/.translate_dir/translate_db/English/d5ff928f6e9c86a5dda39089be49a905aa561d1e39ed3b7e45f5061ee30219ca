@@ -1,0 +1,7 @@
+\begin{property}
+    The difference between \textit{compactness} and {completeness}:
+    \begin{itemize}
+        \item completeness ensures that there are no holes in a space
+        \item compactness ensures that a set is closed and bounded
+    \end{itemize}
+\end{property}

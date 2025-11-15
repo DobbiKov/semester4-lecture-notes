@@ -1,0 +1,7 @@
+\begin{definition}
+    \textbf{Ортогонал $A$}:
+    \[
+        A^{\perp} = \{ u \in E \mid \scalair{u, v} = 0 \quad \forall v \in A \}
+    \] 
+    також відомий як  \textbf{ортогональне доповнення}.
+\end{definition}

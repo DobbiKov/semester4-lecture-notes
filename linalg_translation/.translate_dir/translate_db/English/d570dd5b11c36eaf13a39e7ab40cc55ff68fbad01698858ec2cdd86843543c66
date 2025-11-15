@@ -1,0 +1,6 @@
+\begin{remark}-
+   \begin{enumerate}
+       \item If $A$ is trigonalizable and $A'$ is triangularly similar to $A$, then $A'$ has its eigenvalues on the diagonals.
+       \item Any matrix $A \in \mathcal{M}_n(K)$ is trigonalizable over the closure $K'$ of $K$. (e.g.: $A \in \mathcal{M}_n(\R)$ is trigonalizable over $\mathbb{C}$).
+   \end{enumerate} 
+\end{remark}

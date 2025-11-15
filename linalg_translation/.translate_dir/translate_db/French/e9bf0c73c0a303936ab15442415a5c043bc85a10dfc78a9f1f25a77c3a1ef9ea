@@ -1,0 +1,7 @@
+\begin{corollary}
+    Soit $A \in \mathcal{M}_n(K)$ est $\{\lambda_1, \ldots, \lambda_n\}$ ses valeurs propres, donc
+    \begin{align*}
+        \operatorname{Tr}(A) = \lambda_1 + \ldots + \lambda_n\\
+        \det(A) = \lambda_1 \cdot \ldots \cdot  \lambda_n
+    \end{align*}
+\end{corollary}

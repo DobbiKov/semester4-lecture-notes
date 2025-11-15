@@ -1,0 +1,13 @@
+\begin{prop}
+   We have the following identities $\forall u, v \in E$ 
+   \begin{enumerate}
+       \item Parallelogram identity:
+           \[
+           \|u + v\|^2 + \|u - v\|^2 = 2(\|u^2\| + \|v\|^2)
+           \] 
+       \item Polarization identity:
+           \[
+               \scalair{u, v} = \frac{1}{4}(\|u + v\|^2 - \|u - v\|^2)
+           \] 
+   \end{enumerate}
+\end{prop}

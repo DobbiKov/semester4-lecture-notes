@@ -1,0 +1,12 @@
+\begin{prop}\label{prop:continuité-de-fonctions}
+   Les propriétés suivantes sont équivalentes: 
+   \begin{enumerate}
+       \item $F: (E_1, d_1) \to  (E_2, d_2)$ est continue.
+       \item $\forall U_2 \subset  E_2$ ouvert, $F^{-1}(U_2)$ est ouvert dans $E_1$.
+       \item $\forall F_2 \subset E_2$ fermé, $F^{-1}(F_2) \subset E_1$ est fermé.
+        \item $\forall (x_n)$ suite dans $E_1$ avec $\lim_{n \to \infty} x_n = x$ on a:
+            \[
+            \lim_{n \to \infty} F(x_n) = F(x)
+            \] 
+   \end{enumerate}
+\end{prop}

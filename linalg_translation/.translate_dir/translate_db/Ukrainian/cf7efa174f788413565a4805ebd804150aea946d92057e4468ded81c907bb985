@@ -1,0 +1,6 @@
+\begin{prop}\label{prop:isometrie-reserve-norme}
+   Якщо $f$ є ізометрією $E$, отже, маємо:
+   \[
+   \|f(x)\| = \|x\| \quad \forall x \in E
+   \] 
+\end{prop}

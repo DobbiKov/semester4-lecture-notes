@@ -1,0 +1,18 @@
+\begin{remark}
+   \begin{enumerate}
+       \item $p_F$ є лінійним
+       \item  $\forall x \in E \, p_{F}(x)$ повністю характеризується наступною властивістю:\\
+           Нехай $y \in E$, тоді
+            \[
+                y = p_F(x) \iff \left( \underset{\implies y = x_F}{y \in F \text{ та } x - y} \in F^{\perp} \right) 
+           \] 
+       Зокрема $\scalair{p_F(x), x - p_F(x)} \,= 0$. Тоді, якщо $(v_1, \ldots, v_R)$ є ортонормованим базисом $F$, маємо:
+            \[
+                \forall x \in E, \, p_F(x) = \sum_{i=1}^{k} \scalair{x, v_i}v_i
+           \] 
+           Дійсно, достатньо перевірити, що вектор $y = \sum_{i=1}^{k} \scalair{x, v_i}v_i$ задовольняє:
+           \[
+               y \in F \text{ та } x - y \in F^{\perp}
+           \] 
+   \end{enumerate} 
+\end{remark}

@@ -1,0 +1,14 @@
+\begin{доведення}
+   \begin{enumerate}
+       \item $A \subset Adh(A)$ очевидно
+       \item $Adh(A)$ є замкненою?
+           \par Покажемо, що  $E \setminus Adh(A)$ є відкритою. \par 
+           $x_0 \in Adh(A)$ $\iff$ $\forall \delta > 0, \, B(x_0, \delta) \cap A \neq \O$ \par
+           $x_0 \not\in Adh(A)$ $\iff$ $\exists \delta_0 > 0$ така що $B(x_0, \delta_0) \cap A = \O$ $\iff$ $\exists \delta_0>0$ така що $B(x_0, \delta_0) \subset E\setminus A$ $\iff$ $x_0 \in Int(E\setminus A)$ 
+           \par Тоді:
+           \begin{align*}
+               &E \setminus Adh(A) = Int(E \setminus A)\\
+               &Adh(A) = (Int(\underbrace{A^{c}}_{= E \setminus A}))^{c}
+           \end{align*}
+   \end{enumerate} 
+\end{доведення}

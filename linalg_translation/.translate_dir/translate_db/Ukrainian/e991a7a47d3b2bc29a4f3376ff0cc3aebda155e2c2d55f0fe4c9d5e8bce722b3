@@ -1,0 +1,6 @@
+\begin{prop}
+    Трикутна нерівність для $p > 2$ називається \textbf{нерівність Мінковського}:
+    \[
+        \left( \sum_{i=1}^{n} |x_i + y_i|^p \right)^{\frac{1}{p}} \le  \left( \sum_{i=1}^{n} |x_i |^p \right)^{\frac{1}{p}} + \left( \sum_{i=1}^{n} |y_i|^p \right)^{\frac{1}{p}}
+    \] 
+\end{prop}

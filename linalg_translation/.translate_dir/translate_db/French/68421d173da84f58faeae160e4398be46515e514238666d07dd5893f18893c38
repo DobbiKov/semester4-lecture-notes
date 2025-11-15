@@ -1,0 +1,8 @@
+\begin{intuition}
+   Je propose de réflechir sur ce que cette définition signifie. 
+   Rappelons ce que signifie intuitivement la dérivée au cas $\R^n = \R$ ($n = 1$). 
+   Intuitivement, si on zoom la fonction qu'on dérive elle se comporte et a l'air d'être une ligne. 
+   Dans le cas $R^n = \R^2$, si on zoom la fonction elle a l'air d'être un plan. 
+   En effet, c'est ça l'idée de la dérivée, que si on fait un petit petit pas d'un fourmit, le deplacement et aussi petit et uniforme. 
+   En augmentant $n$, la dérivée donne des scalaire pour contruire un sous-éspace de dimension $n-1$ de l'espace $\R^n$. 
+\end{intuition}

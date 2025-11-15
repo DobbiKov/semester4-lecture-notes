@@ -1,0 +1,8 @@
+\begin{definition}
+    Нехай $(E_{1}, d_1)$ та $(E_2, d_2)$ два метричні простори, $x_0 \in E_1$, $l \in E_2$ та $F: E_1 \to E_2$ відображення.
+    \begin{enumerate}
+        \item Кажуть, що $\lim_{x \to x_0} F(x) = l$ якщо для будь-якого $\epsilon > 0, \, \exists \alpha > 0$ такий, що для будь-якого $x \in E_1$ такого, що $d_1(x_0, x) \le \alpha$ маємо $d_2(f(x), l) \le \epsilon$
+        \item Кажуть, що $F$ є неперервною в $x_0$ якщо $\lim_{x \to x_0} f(x) = f(x_0)$
+        \item Кажуть, що $F$ є неперервною, якщо $F$ є неперервною в кожній $x \in E_1$
+    \end{enumerate}
+\end{definition}

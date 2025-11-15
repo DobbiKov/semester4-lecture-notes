@@ -1,0 +1,3 @@
+\begin{definition}
+    L'ensemble des valeurs propres de $f$ est dit  \textbf{spectre} de $f$ et est noté  $\operatorname{Sp}_K(f)$ ou  $\operatorname{Sp}_K(A)$ si $A$ une matrice de  $f$.
+\end{definition}

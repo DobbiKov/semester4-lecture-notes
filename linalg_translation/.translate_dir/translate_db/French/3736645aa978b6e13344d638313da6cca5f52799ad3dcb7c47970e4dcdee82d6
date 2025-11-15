@@ -1,0 +1,4 @@
+\begin{definition}[Dérivée selon un vecteur (directionnelle)]
+    Soit \(u \in \R^n, u \neq 0\). \(f\) est dérivable en \(X_0 \in D\) dans la direction \(u\) si la fonction \(\varphi(t) = f(X_0+tu)\) (définie pour \(t\) dans un voisinage de 0) est dérivable en \(t=0\). La dérivée est notée \(D_u f(X_0) = \varphi'(0)\).
+    \[ D_u f(X_0) = \lim_{t \to 0} \frac{f(X_0+tu) - f(X_0)}{t} \]
+\end{definition}

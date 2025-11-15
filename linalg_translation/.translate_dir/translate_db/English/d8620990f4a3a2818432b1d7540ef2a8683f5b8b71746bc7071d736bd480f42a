@@ -1,0 +1,9 @@
+\begin{proposition}[Characterizations of continuity]
+   Let \(f: (E_1, d_1) \to (E_2, d_2)\). The following assertions are equivalent:
+   \begin{enumerate}
+       \item \(f\) is continuous on \(E_1\).
+       \item For any open set \(U_2 \subset E_2\), the preimage \(f^{-1}(U_2)\) is an open set of \(E_1\).
+       \item For any closed set \(F_2 \subset E_2\), the preimage \(f^{-1}(F_2)\) is a closed set of \(E_1\).
+       \item For any sequence \((x_n)\) of \(E_1\) converging to \(x \in E_1\), the sequence \((f(x_n))\) converges to \(f(x)\) in \(E_2\).
+   \end{enumerate}
+\end{proposition}

@@ -1,0 +1,8 @@
+\begin{notation}
+   Pour tout $v \in E$ on note par  $f_v$ l'application:
+   \begin{align*}
+       f_v: E &\longrightarrow \R \\
+       x &\longmapsto f_v(x) = <v, x>
+   .\end{align*}
+   $f_v$ est linéaire  $\forall v \in E$ i.e $E^*$
+\end{notation}

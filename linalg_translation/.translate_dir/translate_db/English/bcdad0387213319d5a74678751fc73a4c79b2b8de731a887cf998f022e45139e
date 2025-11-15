@@ -1,0 +1,9 @@
+\begin{preuve}
+    Suppose $(v_1, \ldots, v_n)$ is orthogonal with $v_i \neq 0 \, \forall i = 1, \ldots, n$\\
+    if $\sum_{j=1}^{n} \underset{\in \R}{\alpha_iv_i} = 0$, then
+    \[
+        \forall i \in \{1, \ldots, n\} 0 = \scalair{v_i, \sum_{j=1}^{n} \alpha_jv_j} = \sum_{j=1}^{n}\alpha_j \scalair{v_i, v_j} = \alpha_i \underset{\neq 0}{\|v_i\|^2}
+    \]
+    Therefore, $\alpha_i = 0 \, \forall i = 1, \ldots, n$.\\
+    If $(v_1, \ldots, v_n)$ is orthonormal, then $\|v_i\| = 1$. Therefore, $v_i \neq 0, \, \forall i = 1, \ldots, n$.
+\end{preuve}

@@ -1,0 +1,6 @@
+\begin{prop}
+    \textbf{The distance} from a vector $x$ to a subspace $F$ is:
+    \[
+    \|x - p_F(x)\|
+    \] 
+\end{prop}

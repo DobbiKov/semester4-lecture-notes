@@ -1,0 +1,21 @@
+\begin{eg}
+   \[
+       f(X) = f(X_0) + \vec{\nabla}f(X_0) \cdot (X - X_0) + \|X - X_0\| \epsilon(X - X_0)
+   \]  
+   linéaire
+   \par
+   Dans $\R^3$: $f(x, y, z)$
+    \[
+        S = \{(x, y, z): f(x, y, z) = 0 \}
+   \] 
+   $S$: surface dans  $\R^3$, $X_0 \in S$ plan tangent à $S$ en  $X_0$, plan d'équation:
+   \[
+       f(X_0) + \vec{\nabla}f(X_0)\cdot X = 0
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{surface-s-differentiable}
+    \caption{Exemple d'une surface differentiable}
+    \label{fig:surface-s-differentiable}
+\end{figure}
+\end{eg}

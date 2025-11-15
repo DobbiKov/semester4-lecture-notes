@@ -1,0 +1,7 @@
+\begin{prop}
+   The annihilating polynomials of $f$ are of the form:
+   \[
+       Q(X) = A(X)m_f(X) \quad \text{ with } \quad A(X) \in K[X]
+   \] 
+   i.e., $m_f(X)$ divides $Q(X)$. 
+\end{prop}

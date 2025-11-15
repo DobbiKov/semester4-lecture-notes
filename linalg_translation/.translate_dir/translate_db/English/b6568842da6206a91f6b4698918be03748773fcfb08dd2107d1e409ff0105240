@@ -1,0 +1,9 @@
+\begin{preuve}
+   \[
+   X_n = (x_{1,n}, \ldots, x_{d,n})
+   \]  
+   \[
+   |x_i - y_i| \le d(X, Y) = \|X - Y\|_2 \quad \forall 1 \le i \le d
+   \] 
+   the real sequences $(x_{i,n})_{n \in \N}$ are Cauchy if $(X_n)$ is Cauchy.
+\end{preuve}

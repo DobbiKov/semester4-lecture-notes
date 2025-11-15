@@ -1,0 +1,8 @@
+\begin{definition}
+    Let (E, d) be a metric space.
+    \begin{enumerate}
+        \item $U \subset E$ is open if $\forall x_0 \in U, \, \exists r > 0 \: r(x_0)$ such that $B(x_0, r) \subset U$
+        \item $F \subset E$ is closed if $E \setminus F$ is open
+    \end{enumerate}
+    $\O$ is open and $E$ is open.  $\O$ is closed and $E$ is closed.
+\end{definition}

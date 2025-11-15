@@ -1,0 +1,6 @@
+\begin{lemma}
+   \begin{enumerate}
+       \item $B(x_0, r_0)$ est ouvert.
+       \item $B_f(x_0, r_0)$ est fermé.
+   \end{enumerate} 
+\end{lemma}

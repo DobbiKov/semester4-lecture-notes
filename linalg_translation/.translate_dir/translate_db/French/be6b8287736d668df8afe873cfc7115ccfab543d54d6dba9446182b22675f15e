@@ -1,0 +1,25 @@
+\begin{eg}
+   Encore la matrice  
+   \[
+       A = \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} 
+   \] 
+   dans la base canonique de $\R^2$. On a déjà trouvé ses vecteurs propres: $\lambda_1 = 3$ et $\lambda_2 = 2$. Alors, cherchons les vecteurs:
+   \[
+       \begin{bmatrix} 3 - \lambda_1 & 1 \\ 0 & 2 - \lambda_1 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 3 - 3 & 1 \\ 0 & 2 - 3 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ 0 & -1 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = 0 
+       \implies \begin{cases}
+           y = 0\\
+           -y = 0\\
+           x \in \R
+       \end{cases}
+   \] 
+   Donc $\ker(A - 3I) = \begin{pmatrix} x \\ 0 \end{pmatrix} =  \operatorname{Vect}(\begin{pmatrix} 1 \\ 0 \end{pmatrix} )$. Voilà, notre premier vecteur propre: $\begin{pmatrix} 1 \\ 0 \end{pmatrix} $. Pour le deuxième:
+   \[
+       \begin{bmatrix} 3 - \lambda_2 & 1 \\ 0 & 2 - \lambda_2 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 3 - 2 & 1 \\ 0 & 2 - 2 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = 0 
+       \implies \begin{cases}
+           x + y = 0
+       \end{cases} \implies \begin{cases}
+           x = -y
+       \end{cases}
+   \] 
+   Donc $\ker(A - 2I) = \begin{pmatrix} -y \\ y \end{pmatrix} = y \begin{pmatrix} -1 \\ 1 \end{pmatrix} = \operatorname{Vect}(\begin{pmatrix} -1 \\ 1 \end{pmatrix} )  $ et voilà le deuxieme vecteur propre: $\begin{pmatrix} -1 \\ 1 \end{pmatrix} $ (c'était notre vecteur $v_2$ au début du chapitre).
+\end{eg}

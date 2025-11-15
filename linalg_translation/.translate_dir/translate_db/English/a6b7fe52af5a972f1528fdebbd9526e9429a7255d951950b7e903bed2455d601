@@ -1,0 +1,13 @@
+\begin{definition}
+    Extremum (local) of $f$ is a minimum or a maximum (local) of $f$
+    \begin{itemize}
+        \item $X_0$ is a local maximum of $f$ if: $\exists \delta > 0$ such that
+            \[
+            \forall X \in D, f(X) \le f(X_0) \text{ with } d(X, X_0) \le \delta
+            \] 
+        \item $X_0$ is a local minimum of $f$ if: $\exists \delta > 0$ such that
+            \[
+            \forall X \in D, f(X) \ge f(X_0) \text{ with } d(X, X_0) \le \delta
+            \] 
+    \end{itemize}
+\end{definition}

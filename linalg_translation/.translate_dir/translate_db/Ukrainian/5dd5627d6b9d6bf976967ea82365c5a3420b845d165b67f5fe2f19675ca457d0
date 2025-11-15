@@ -1,0 +1,9 @@
+\begin{preuve}
+   \[
+   X_n = (x_{1,n}, \ldots, x_{d,n})
+   \]  
+   \[
+   |x_i - y_i| \le d(X, Y) = \|X - Y\|_2 \quad \forall 1 \le i \le d
+   \] 
+   дійсні послідовності $(x_{i,n})_{n \in \N}$ є Коші якщо $(X_n)$ є Коші.
+\end{preuve}

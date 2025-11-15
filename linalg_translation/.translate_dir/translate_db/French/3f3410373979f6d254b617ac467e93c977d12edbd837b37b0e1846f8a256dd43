@@ -1,0 +1,7 @@
+\begin{prop}
+   Les polynômes annulateurs de $f$ sont le polynômes de la forme:
+   \[
+       Q(X) = A(X)m_f(X) \quad \text{ avec } \quad A(X) \in K[X]
+   \] 
+   i.e $m_f(X)$ divise  $Q(X)$. 
+\end{prop}

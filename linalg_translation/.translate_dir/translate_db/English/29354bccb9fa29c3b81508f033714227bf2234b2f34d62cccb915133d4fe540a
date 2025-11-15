@@ -1,0 +1,9 @@
+\begin{definition}
+    Let $E$ be a $\mathbb{K}$-vector space and $\lambda \in \R$, the \textbf{norm} on $E$ is a map $N: E \to \R_{+}$ with:
+    \begin{enumerate}
+        \item $N(\lambda u) = |\lambda|N(u) \quad u \in E$
+        \item $N(u + v) \le N(u) + N(v)$
+        \item $N(u) = 0 \iff u = 0_{E}$
+    \end{enumerate}
+    \textbf{semi-norm}: $1$ and $2$ only.
+\end{definition}

@@ -1,0 +1,13 @@
+\begin{eg}
+    \begin{enumerate}
+        \item $E = \mathcal{C}([0, 1], \R)$
+        \item $\|f\|_{\infty} = \sup_{x \in [0, 1]}|f(x)|$
+        \item $\|f\|_1 = \int_{{0}}^{{1}} {|f(x)|} \: d{x}$
+    \end{enumerate}
+    We notice that $\|f\|_1 \le \|f\|_{\infty}$. Is there $\exists c > 0$ such that 
+    \[
+    \|f\|_{\infty} \le c\|f_1\| \forall f \in E
+    \] 
+    ?
+    To see this, construct a sequence $(f_n)$ in $E$ such that $\|f_n\|_1 \to 0$ but $\|f_n\|_{\infty} \not\to 0$
+\end{eg}

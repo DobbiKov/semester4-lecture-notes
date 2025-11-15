@@ -1,0 +1,35 @@
+. Ви можете перевірити, що існує $P \in GL_2(\R)$ така що
+\[
+    P = \begin{pmatrix} -1 & 1 \\ 1 & -2 \end{pmatrix} \quad \text{ з } \quad A = P\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}P^{-1}
+\]
+і тоді
+\[
+    A^n = P\begin{pmatrix} 2^n & 0 \\ 0 & 3^n \end{pmatrix}P^{-1} = \begin{pmatrix} -1 & 1 \\ 1 & -2 \end{pmatrix}  \begin{pmatrix} 2^n & 0 \\ 0 & 3^n \end{pmatrix}  \begin{pmatrix} -2 & -1 \\ -1 & -1 \end{pmatrix}  =
+    \begin{pmatrix}
+        2 \cdot 2^n - 3^n & 2^n - 3^n \\
+        -2 \cdot 2^n + 2 \cdot 3^n & -2^n + 2 \cdot 3^n
+    \end{pmatrix}
+\]
+Звідси
+\[
+\begin{pmatrix} u_n \\ v_n \end{pmatrix} =
+    \begin{pmatrix}
+        2 \cdot 2^n - 3^n & 2^n - 3^n \\
+        -2 \cdot 2^n + 2 \cdot 3^n & -2^n + 2 \cdot 3^n
+    \end{pmatrix}
+    \begin{pmatrix} 2 \\ 1 \end{pmatrix}
+    =
+    \begin{pmatrix}
+        4 \cdot 2^n - 2 \cdot 3^n + 2^n - 3^n \\
+        -4 \cdot 2^n + 4 \cdot 3^n -2^n + 2 \cdot 3^n
+    \end{pmatrix}
+\]
+тобто:
+\[
+\begin{cases}
+   u_n = 5 \cdot 2^n - 3\cdot 3^n \\
+   v_n = -5 \cdot 2^n + 6\cdot 3^n
+\end{cases}
+\]
+
+

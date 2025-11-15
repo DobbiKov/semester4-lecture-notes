@@ -1,0 +1,4 @@
+\begin{propriete}[Majoration de la norme matricielle]
+    Norme de Frobenius (Hilbert-Schmidt) : \(\|A\|_{HS} = \left( \sum_{i,j=1}^n |a_{i,j}|^2 \right)^{1/2} = \sqrt{\operatorname{Tr}(A^*A)}\).
+    On a \(\|A\| \le \|A\|_{HS}\) pour la norme d'opérateur induite par \(\|\cdot\|_2\).
+\end{propriete}

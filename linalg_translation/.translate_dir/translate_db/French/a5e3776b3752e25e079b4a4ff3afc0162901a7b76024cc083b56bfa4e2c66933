@@ -1,0 +1,17 @@
+\begin{eg}
+   Soit $f$ un endomorphisme dans  $\R^2$ dont la matrice représentative dans la base canonique est:
+   \[
+       \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} 
+   \] 
+   Calculons ses valeurs propres:
+   \begin{align*}
+       && \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} v &= \lambda v \\
+       \iff && \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} v - \lambda I v &= 0\\
+       \iff && \left(\begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix}  - \lambda I\right)v  &= 0\\
+       \implies && \det \left( \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix}  - \lambda I \right) &= 0\\
+       \implies && \det \left( \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix}  - \lambda \begin{bmatrix} \lambda & 0\\ 0 & \lambda \end{bmatrix}  \right) &= 0\\
+       \implies && \det \left( \begin{bmatrix} 3 - \lambda & 1\\ 0 & 2 - \lambda \end{bmatrix}\right) &= 0\\
+                && &= (3-\lambda)(2 - \lambda) = 0
+   \end{align*}
+   On voit bien, que les solutions sont: $\lambda_1 = 3$ et  $\lambda_2 = 2$
+\end{eg}

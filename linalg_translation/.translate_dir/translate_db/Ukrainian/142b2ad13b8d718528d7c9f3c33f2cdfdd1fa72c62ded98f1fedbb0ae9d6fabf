@@ -1,0 +1,7 @@
+\begin{exemple}[Інші норми на \(\R^d\) або \(\C^d\)] Нехай \(X = (x_1, \ldots, x_d)\)
+      \begin{enumerate}
+          \item Норма 1 : \(\|X\|_1 = \sum_{i=1}^{d} |x_i|\)
+          \item Нескінченна норма : \(\|X\|_\infty = \max_{1 \le i \le d} |x_i|\)
+          \item Норма p (\(p \ge 1\)) : \(\|X\|_p = \left( \sum_{i=1}^{d} |x_i|^p \right)^{1/p}\)
+      \end{enumerate}
+   \end{exemple}

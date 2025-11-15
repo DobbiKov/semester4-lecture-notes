@@ -1,0 +1,41 @@
+\begin{preuve} -
+   \begin{itemize}
+       \item[($\implies$)] Припустимо, ендоморфізм $f$ тригонізується, і нехай буде базис $\{e_1, \ldots, e_n\}$ такий що
+           \[
+               M(f)_{e_i} = \begin{pmatrix} 
+                   a_{1,1} &            & & *\\
+                   0       & a_{2, 2}   & & \\
+                   \vdots  &      & \ddots & \\
+                   0        & \ldots    & 0 & a_{n, n}
+               \end{pmatrix} 
+           \] 
+           Маємо:
+           \[
+            P_f(X) = \det \begin{pmatrix} 
+                   a_{1,1} - X &            & & *\\
+                   0       & a_{2, 2} - X   & & \\
+                   \vdots  &      & \ddots & \\
+                   0        & \ldots    & 0 & a_{n, n} - X
+               \end{pmatrix} = (a_{1,1} - X) \cdots (a_{n,n} - X)
+           \] 
+           Отже, $P_f(X)$ добре розщеплюється (можна помітити, що його корені — це власні значення $f$).
+       \item[($\impliedby$)] Припустимо, $P_f(X)$ розщеплюється, і доведемо за індукцією, що $f$ тригонізується.
+            \par
+            Для $n=1$ тривіально.
+            \par
+            Припустимо, що результат вірний для порядку $n-1$. Але $P_f(X)$ розщеплюється, він має принаймні один корінь $\lambda_1 \in K$ і отже власний вектор $\varepsilon_1 \in E_{\lambda_1}$. Доповнимо $\{\varepsilon_1\}$ до базису $\{\varepsilon_1, \ldots, \varepsilon_n\}$, отже маємо:
+            \[
+            A = M(f)_{\varepsilon_i} = \begin{pmatrix} 
+                \lambda_1 & b_2 & \ldots & b_n\\
+                0         &     &        &    \\
+                \vdots    &     & B      &    \\
+                0         &     &        &
+            \end{pmatrix}, \quad \text{де:} B \in \mathcal{M}_{n-1}(K)
+            \] 
+            Нехай $F = \operatorname{Vect}(\varepsilon_2, \ldots, \varepsilon_n)$ і $g: F \to F$ єдиний ендоморфізм $F$ такий що $M(g)_{\varepsilon_2, \ldots, \varepsilon_n} = B$, маємо:
+            \[
+            P_f(X) = \det(A - XI_n) = (\lambda_1 - X)\det(B - XI_{n-1}) = (\lambda_1 - X)P_g(X)
+            \] 
+            Але $P_f(X)$ розщеплюється, $P_g(X)$ також, і згідно з індуктивним припущенням $B$ тригонізується, отже існує базис $\{v_2, \ldots, v_n\}$ в якому $M(g)_{v_2, \ldots, v_n}$ є трикутною, і отже матриця $f$ у базисі $\{\varepsilon_1, v_2, \ldots, v_n\}$ є трикутною, отже $f$ тригонізується.
+   \end{itemize} 
+\end{preuve}

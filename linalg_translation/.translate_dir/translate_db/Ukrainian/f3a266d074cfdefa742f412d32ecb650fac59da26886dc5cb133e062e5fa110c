@@ -1,0 +1,8 @@
+\begin{definition}[Відкритий, Замкнений]
+    Нехай \((E, d)\) метричний простір.
+     \begin{enumerate}
+        \item \(U \subset E\) є \textbf{відкритим} якщо \(\forall x_0 \in U, \exists r > 0\) такий що \(B(x_0, r) \subset U\).
+        \item \(F \subset E\) є \textbf{замкненим} якщо його доповнення \(E \setminus F\) є відкритим.
+    \end{enumerate}
+    \(\emptyset\) і \(E\) є одночасно відкритими і замкненими.
+\end{definition}

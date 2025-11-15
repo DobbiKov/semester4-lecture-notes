@@ -1,0 +1,8 @@
+\begin{definition}
+    Нехай $f$ — ендоморфізм у $E$, а вектор $v \in E$ називається \textbf{власним вектором} для $f$, якщо:
+     \begin{enumerate}
+        \item $v \neq 0$
+        \item Існує дійсне число $\lambda$ таке, що  $f(v) = \lambda v$
+    \end{enumerate}
+    Скаляр $\lambda \in \R$ називається \textbf{власним значенням} що відповідає $v$.
+\end{definition}

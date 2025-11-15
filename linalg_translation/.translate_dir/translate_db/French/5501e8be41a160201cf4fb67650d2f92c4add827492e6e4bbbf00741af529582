@@ -1,0 +1,4 @@
+\begin{definition}[Recouvrement ouvert, Sous-recouvrement]
+    Soit \(K \subset E\). Une famille \((U_i)_{i \in I}\) d'ouverts de \(E\) est un \textbf{recouvrement ouvert} de \(K\) si \(K \subset \bigcup_{i \in I} U_i\).
+    Une sous-famille \((U_j)_{j \in J}\) (où \(J \subset I\)) est un \textbf{sous-recouvrement} si \(K \subset \bigcup_{j \in J} U_j\).
+\end{definition}

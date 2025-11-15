@@ -1,0 +1,3 @@
+\begin{intuition}
+   Closure helps complete sets. If $A$ is open, then its boundaries do not belong to $A$, but they belong to $Adh(A)$ .
+\end{intuition}

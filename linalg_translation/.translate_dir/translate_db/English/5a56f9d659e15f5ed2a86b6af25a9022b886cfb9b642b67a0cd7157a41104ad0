@@ -1,0 +1,3 @@
+\begin{definition}
+    A \textbf{minimal polynomial} of $f$, denoted $m_f(X)$, is defined as the monic polynomial \footnote{i.e de coefficient $1$ du terme du plus haut degré, i.e:  $1*X^n + a_{n-1}X^{n-1} + \ldots + a_0$} that annihilates $f$ and has the smallest degree.
+\end{definition}

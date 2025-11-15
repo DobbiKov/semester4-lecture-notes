@@ -1,0 +1,3 @@
+\begin{prop}\label{prop:isometrie-ata-eg-i}
+    If $\{e_i\}$ is an orthonormal basis, $f$ an isometry and $A = M(f)_{e_i}$, then $A^{T}A = I = AA^{T}$.
+\end{prop}

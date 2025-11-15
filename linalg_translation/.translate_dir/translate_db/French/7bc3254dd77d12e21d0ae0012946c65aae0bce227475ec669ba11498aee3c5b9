@@ -1,0 +1,13 @@
+\begin{intuition}
+   Ce n'est pas toujours facile de comprendre l'idée par les polynômes caracteristiques, alors une autre façon de voir ça est:
+   \begin{enumerate}
+       \item On trouve les valeurs propres: $\lambda_1, \ldots, \lambda_p$
+       \item Puis on trouve les espaces propres: $E_{\lambda_i} = \ker(f - \lambda_i I)$
+       \item On somme les dimension: $\dim E_{\lambda_1} + \ldots + \dim E_{\lambda_p} =: d$.  
+           \begin{itemize}
+               \item 
+                   Si $d = \dim E$ i.e si la somme des dimension est égale à la dimension de l'espace  $E$, les espaces propres engendrent  $E$ et donc  $f$ est diagonalisable (car sa matrice peut s'écrire dans la base de ces vecteurs propres).
+              \item Sinon le nombre de vecteurs propres libres ne suffit pas pour engendrer  $E$.
+           \end{itemize}
+   \end{enumerate}
+\end{intuition}

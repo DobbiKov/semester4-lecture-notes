@@ -1,0 +1,11 @@
+\begin{prop}
+   \begin{enumerate}
+       \item Будь-яка підпослідовність збіжної послідовності збігається до границі цієї послідовності.
+           \par
+           Це означає, що, $\forall (x_n)_{n \in \N}$ така що $\exists x \in E, \lim_{n \to \infty} x_n = x$
+           \[
+               \forall \phi: \N \to \N \text{ строго зростаюча}, \lim_{n \to \infty} x_{\phi(n)} = x
+           \] 
+        \item Якщо $(x_n)$ є послідовністю Коші і має підпослідовність, яка збігається до $X$, то $(x_n)$ збігається до $x$.
+   \end{enumerate} 
+\end{prop}

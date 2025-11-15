@@ -1,0 +1,95 @@
+\begin{appendices}
+    \chapter{Reminders of Linear Algebra concepts} 
+    \section{Matrices}
+    \subsection{Multiplication of matrices}
+    \begin{definition}
+        Let $A \in \mathcal{M}_{p, n}(\R)$ and $B \in \mathcal{M}_{n, q}(\R)$ such that $A = (a_{j, i})$ and $B = (b_{m, k})$, then:
+         \[
+        AB = C = (c_{j, k} = \sum_{i=1}^{n} a_{j, i}b_{i, k})
+        \] 
+    \end{definition}
+    \subsection{The trace}
+    \begin{definition}
+        The trace of the \( n \times n \) square matrix \( A \), denoted \( \text{tr}(A) \), is the sum of the diagonal elements
+
+        \[
+            \text{tr}(A) = a_{11} + a_{22} + \dots + a_{nn} = \sum_{i=1}^{n} a_{ii}
+        \]
+
+        where \( a_{ii} \) are diagonal elements of the matrix \( A \). 
+    \end{definition}
+
+    \begin{property} of the trace.
+       \begin{itemize}
+           \item Linearity:
+               \[
+                   \text{tr}(A + B) = \text{tr}(A) + \text{tr}(B)
+               \]
+
+               \[
+                   \text{tr}(cA) = c \text{tr}(A), \quad c \in \mathbb{R} \text{ (ou } \mathbb{C} \text{)}
+               \]
+            \item  Transposed:
+                \[
+                    \text{tr}(A) = \text{tr}(A^T)
+                \] 
+            \item Multiplication of matrices:
+                \[
+                    \text{tr}(AB) = \text{tr}(BA), \quad \text{(si } A \text{ et } B \text{ are of size } n \times n)
+                \]
+
+                However, the trace is not distributive over multiplication:
+
+                \[
+                    \text{tr}(A B C) \neq \text{tr}(A) \text{tr}(B C)
+                \]
+            \item Eigenvalues:
+                \[
+                    \text{tr}(A) = \sum_{i=1}^{n} \lambda_i
+                \]
+
+                where \( \lambda_i \) are the eigenvalues of \( A \). This makes the trace an important tool in spectral analysis.
+
+            \item Trace of the Identity Matrix
+
+                \[
+                    \text{tr}(I_n) = n
+                \]
+
+                since all the diagonal elements are equal to 1.
+       \end{itemize} 
+    \end{property}
+    \begin{eg}
+        For
+        \[
+            A = \begin{bmatrix} 3 & 2 & 1 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}
+        \]
+
+        the trace is:
+
+        \[
+            \text{tr}(A) = 3 + 5 + 9 = 17
+        \] 
+    \end{eg}
+    \begin{eg}
+        If
+
+        \[
+            B = \begin{bmatrix} 2 & 1 \\ 0 & 3 \end{bmatrix}, \quad C = \begin{bmatrix} 4 & 2 \\ 1 & 5 \end{bmatrix}
+        \]
+
+        then
+
+        \[
+            \text{tr}(B + C) = \text{tr} \begin{bmatrix} 6 & 3 \\ 1 & 8 \end{bmatrix} = 6 + 8 = 14
+        \]
+
+        which corresponds well to
+
+        \[
+            \text{tr}(B) + \text{tr}(C) = (2+3) + (4+5) = 14
+        \]
+
+        thus confirming linearity. 
+    \end{eg}
+\end{appendices}

@@ -1,0 +1,10 @@
+\begin{theorem} Taylor of order 2 \par
+    Let $f \in \mathcal{C}^2(D)$, $X_0 \in D$. Then 
+    \begin{align*}
+        f(X_0 + \vec{X}) = f(X_0) + \vec{\nabla }f(X_0) \cdot \vec{X} + \frac{1}{2}\vec{X} \cdot H_f(X_0)\vec{X}
+    \end{align*}
+    example in $\R^1$
+    \[
+    f(x_0 + x) = f(x_0) + f'(x_0)x + \frac{1}{2}f''(x_0)x^2 + \ldots
+    \] 
+\end{theorem}

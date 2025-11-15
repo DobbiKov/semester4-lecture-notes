@@ -1,0 +1,22 @@
+\begin{доказ}
+    Нехай $f$ — ізометрія, тоді вона перетворює будь-який базис на базис, оскільки $f$ бієктивна за проп. \ref{prop:isometrie-bijective}. 
+    \begin{itemize}
+        \item ($\implies$) Припустимо, що $f$ — ізометрія. Нехай $\{e_i\}$ — ортонормований базис, тоді маємо:
+             \[
+                 \scalair{f(e_i), f(e_j)} = \scalair{e_i, e_j} = \delta_{i,j}
+            \] 
+            Отже, $\{f(e_i)\}$ — ортонормований базис.
+        \item ($\impliedby$) Припустимо, що існує ортонормований базис $\{e_i\}$ такий, що $\{f(e_i)\}$ також є ортонормованим базисом. Крім того, нехай $x = x_1e_1 + \ldots x_ne_n$ та $y = y_1e_1 + \ldots + y_ne_n$ з $x_i, y_i \in \R$
+            \par
+            Оскільки $\{e_i\}$ — ортонормований, то маємо:
+            \begin{equation}\label{eq:prod-scal-base-ortho}
+                \scalair{x, y} = x_1y_1 + \ldots + x_ny_n = \sum_{i=1}^{n} x_iy_i
+            \end{equation}
+            З іншого боку:
+            \begin{align*}
+                \scalair{f(x), f(y)} &= \scalair{\sum_{i=1}^{n} x_if(e_i), \sum_{i=1}^{n} y_if(e_i)} = \sum_{i,j = 1}^{n} x_iy_j\scalair{f(e_i), f(e_j)}\\
+                                     &= \sum_{i,j=1}^{n} x_iy_j\scalair{e_i, e_j} \underset{\text{оскільки } \{e_i\} \text{ ортонормований}}{=} = \sum_{i=1}^{n} x_iy_i \underset{\text{Згідно з } \ref{eq:prod-scal-base-ortho}}{=} \scalair{x, y}
+            \end{align*}
+            Отже $f$ — ізометрія.
+    \end{itemize}
+\end{доказ}

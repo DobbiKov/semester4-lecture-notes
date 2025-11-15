@@ -1,0 +1,7 @@
+\begin{theorem}
+    Let $A \in \mathcal{M}_n(\R)$ be a square matrix such that $\det(A) \neq 0$, then:
+    \[
+        A^{-1} = \frac{1}{\det(A)}\cdot A^{*}
+    \] 
+    is the inverse matrix of $A$.
+\end{theorem}

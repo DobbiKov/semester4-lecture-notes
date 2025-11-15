@@ -1,0 +1,9 @@
+\begin{theorem}[Sufficient condition for local extremum (Order 2)]
+    Let \(f:D \to \R\) be of class \(C^2\) on \(D\) and \(X_0 \in \operatorname{Int}(D)\) a critical point. Let \(q(H) = H^T H_f(X_0) H\) be the Hessian quadratic form.
+    \begin{enumerate}
+        \item If \(H_f(X_0)\) is \textbf{positive definite} (i.e., \(q(H)>0\) for \(H \neq 0\), or all its eigenvalues are \(>0\)), \(X_0\) is a strict local minimum.
+        \item If \(H_f(X_0)\) is \textbf{negative definite} (i.e., \(q(H)<0\) for \(H \neq 0\), or all its eigenvalues are \(<0\)), \(X_0\) is a strict local maximum.
+        \item If \(H_f(X_0)\) is \textbf{indefinite} (i.e., \(q(H)\) takes values \(>0\) and \(<0\), or it has eigenvalues of opposite non-zero signs), \(X_0\) is a \textbf{saddle point} (or col), not an extremum.
+        \item If \(H_f(X_0)\) is semi-definite (positive or negative) but not defined (i.e., \(q(H) \ge 0\) (or \(\le 0\)) and \(q(H)=0\) for some \(H \neq 0\), or at least one eigenvalue is zero and the others of the same sign or zero), we cannot conclude with this criterion alone (doubtful case).
+    \end{enumerate}
+\end{theorem}

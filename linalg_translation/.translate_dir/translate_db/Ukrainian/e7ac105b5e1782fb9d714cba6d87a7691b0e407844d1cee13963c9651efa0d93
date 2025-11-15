@@ -1,0 +1,6 @@
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-bornee}
+    \caption{Приклад обмеженої множини}
+    \label{fig:exemple-bornee}
+\end{figure}

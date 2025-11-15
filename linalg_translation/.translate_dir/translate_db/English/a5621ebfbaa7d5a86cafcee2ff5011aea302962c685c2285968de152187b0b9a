@@ -1,0 +1,8 @@
+\begin{itemize}
+    \item 
+\underline{continuity:} $f(x_1, x_2) \xrightarrow[(x_1, x_2) \to (a_1, a_2)]{}  f(a_1, a_1)$  
+    \item 
+\underline{partial:} $f(x_1, a_2) \xrightarrow[x_1 \to a_1]{}   f(a_1, a_2)$ et $f(a_1, x_2) \xrightarrow[x_2 \to a_2]{}  f(a_1, a_2)$
+    \item 
+\underline{Good notion:} continuity implies partial continuity (converse false)
+\end{itemize}

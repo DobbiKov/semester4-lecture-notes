@@ -1,0 +1,10 @@
+\begin{lemma}\label{lemma:lemme-des-noyaux} \textbf{про ядра}
+   Нехай $f \in K^n$ ендоморфізм і 
+   \[
+   Q(X) = Q_1(X) \cdots Q_p(X)
+   \] 
+   многочлен, розкладений у добуток попарно взаємно простих многочленів. Якщо $Q(f) = 0$, то:
+    \[
+        E = \operatorname{Ker} Q_1(f) \oplus \ldots \oplus \operatorname{Ker} Q_p(f)
+   \] 
+\end{lemma}

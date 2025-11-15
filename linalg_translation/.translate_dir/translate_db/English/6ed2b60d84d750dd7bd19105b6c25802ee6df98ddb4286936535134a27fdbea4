@@ -1,0 +1,7 @@
+\begin{intuition}
+   The characteristic polynomial describes the structure of $f$, i.e., what operations must be performed to lose at least one dimension; if factors of the form $(X - \lambda)^n$ are obtained, then one must apply $f(v) - \lambda v) = v_r$, and then to the result $v_r$ again, i.e., $f(v_r) - \lambda v_r$, and we repeat $n$ times (this occurs in the case of trigonalizable matrices).
+
+   The theorem remains true even in cases where the endomorphism is not trigonalizable, because we can choose the closure $K'$ of the field $K$ in which our endomorphism is defined, and it becomes trigonalizable (e.g., $\mathbb{C}$ for $\mathbb{R}$).
+
+   Furthermore, the characteristic polynomial gives us $\ker(P_f(X)) = E$, i.e., the vectors that become null under the action of $P_f(f)$. The interesting fact is that all vectors in $E$ belong to this kernel, and thus $\forall v \in E$, $p_f(f)v = 0$, from which $p_f(f) = 0$.
+\end{intuition}

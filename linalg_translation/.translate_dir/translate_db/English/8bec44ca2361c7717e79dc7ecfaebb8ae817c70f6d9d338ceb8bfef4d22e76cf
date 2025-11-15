@@ -1,0 +1,4 @@
+\begin{align*}
+    \|X\| & \text{(or }\|X\|_2\text{)}\\
+          &= (X|X)^{\frac{1}{2}} = \left( \sum_{n=1}^{d} |x_i|^2 \right)^{\frac{1}{2}}
+\end{align*}

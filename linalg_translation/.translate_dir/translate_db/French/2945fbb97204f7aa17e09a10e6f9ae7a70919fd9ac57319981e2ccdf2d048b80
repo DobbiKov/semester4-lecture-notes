@@ -1,0 +1,9 @@
+\begin{definition}[Distance sur un ensemble \(E\)]
+       Une \textbf{distance} sur \(E\) est une application \(d: E \times E \to \R_+\) telle que pour tous \(X,Y,Z \in E\):
+       \begin{enumerate}
+           \item \textbf{Séparation :} \(d(X,Y) = 0 \iff X = Y\)
+           \item \textbf{Symétrie :} \(d(X, Y) = d(Y, X)\)
+           \item \textbf{Inégalité triangulaire :} \(d(X, Y) \le d(X, Z) + d(Z, Y)\)
+       \end{enumerate}
+       Un ensemble muni d'une distance est un \textbf{espace métrique}.
+   \end{definition}

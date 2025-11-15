@@ -1,0 +1,26 @@
+\begin{eg}
+   \[
+   f(x_1, x_2) = \begin{cases}
+       1  \text{ si } x_2 = x_1^2 \text{ et } (x_1, x_2) \neq (0, 0)\\
+       0 \text{ sinon}
+   \end{cases}
+   \]  
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-dervie-partielle}
+    \caption{Exemple dérivable mais pas continue}
+    \label{fig:exemple-dervie-partielle}
+\end{figure}
+\[
+    f((0, 0) + t \vec{u}) = f(t \vec{u}) = 0
+\] 
+si $t\neq 0$ et $t$ petit, on a $f$ dérivable dans toutes les directions.
+\par
+Mais, $f$ n'est pas continue en  $(0, 0)$:
+ \[
+X_n = (\frac{1}{n}, \frac{1}{n^2}) \quad X_n \to (0, 0)
+\] 
+\[
+\forall n, f(X_n) = 1 \quad f(X_n) \not\xrightarrow[n \to \infty]{} f(0, 0)
+\] 
+\end{eg}

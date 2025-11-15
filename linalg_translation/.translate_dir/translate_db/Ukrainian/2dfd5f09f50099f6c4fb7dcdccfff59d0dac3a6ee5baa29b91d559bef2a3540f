@@ -1,0 +1,11 @@
+\begin{property}
+   Скінченна множина є компактною. 
+   \[
+       F = \{a_1, \ldots, a_p\} \quad a_j \in E
+   \] 
+   $(U_i)_{i \in I}$ покриває $F$.
+   Я обираю $a_j$ (точка з $F$), існує $i \in I$ позначений як $i(j)$ такий, що 
+    \[
+   a_j \in U_{i(j)} \quad F \subset U_{i(1)} \cup \ldots \cup U_{i(p)}
+   \] 
+\end{property}

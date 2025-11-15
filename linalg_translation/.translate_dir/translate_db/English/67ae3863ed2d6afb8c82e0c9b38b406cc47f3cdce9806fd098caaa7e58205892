@@ -1,0 +1,11 @@
+\begin{prop}
+   \begin{enumerate}
+       \item Every subsequence of a convergent sequence converges to the limit of that sequence.
+           \par
+           This means that, $\forall (x_n)_{n \in \N}$ such that $\exists x \in E, \lim_{n \to \infty} x_n = x$
+           \[
+               \forall \phi: \N \to \N \text{ strictly increasing}, \lim_{n \to \infty} x_{\phi(n)} = x
+           \] 
+        \item If $(x_n)$ is Cauchy and has a subsequence that converges to $X$, then $(x_n)$ converges to $x$.
+   \end{enumerate} 
+\end{prop}

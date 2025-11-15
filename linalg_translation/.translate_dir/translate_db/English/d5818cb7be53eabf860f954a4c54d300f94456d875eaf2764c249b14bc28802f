@@ -1,0 +1,7 @@
+\begin{definition}
+    The distance between a point $x$ and a set $B$ is:
+     \[
+         d(x, B) := \underset{y \in B}{inf}d(x, y)
+    \] 
+    The same intuition.
+\end{definition}

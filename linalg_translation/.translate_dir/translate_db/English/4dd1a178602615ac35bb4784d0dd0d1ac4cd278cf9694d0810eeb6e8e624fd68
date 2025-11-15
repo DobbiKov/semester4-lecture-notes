@@ -1,0 +1,11 @@
+\begin{prop} To understand this proposition, I advise you to read section \ref{sec:isometrie-et-adjoints}
+    \par
+   Every orthogonal projection is self-adjoint, i.e. if $p$ is an orthogonal projection, then:
+   \[
+   p^* = p
+   \] 
+   In matrix notation: let $A$ be a matrix of the projection $p$, then:
+    \[
+   A^T = A
+   \] 
+\end{prop}

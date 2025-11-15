@@ -1,0 +1,9 @@
+\begin{preuve}
+    (Follows from the property of the supremum) 
+    \par
+    There exists $x_i \in \R$ with $1 \le i \le d$ such that $|x_{i,n} - x_{i}| \xrightarrow[n \to \infty]{} 0$
+    \[
+        d(X, Y) \le \sqrt{d} \underset{1 \le i \le d}{max} |x_i - y_i| 
+    \] 
+    therefore $X_n \xrightarrow[n \to \infty]{} X$, $X = (x_1, \ldots, x_d)$
+\end{preuve}

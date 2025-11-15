@@ -1,0 +1,3 @@
+\begin{prop}
+   $Adh(A)$ is the smallest closed set that contains $A$ (the intersection of all closed sets that contain $A$)
+\end{prop}

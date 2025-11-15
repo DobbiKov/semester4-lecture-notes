@@ -1,0 +1,5 @@
+In the case $\R$ we had the definition of the derivative:
+\[
+f'(x_0) = \lim_{t \to 0} \frac{f(x_0 + t) - f(x_0)}{t} 
+\] 
+The direction was always the same (the $x$-axis), we can see this as taking a vector $u = (1)$ and using only the $x$-axis as the direction and we obtain eq. (~

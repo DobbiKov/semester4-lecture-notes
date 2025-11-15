@@ -1,0 +1,26 @@
+\begin{eg}
+   Нехай  
+   \[
+   A = 
+   \begin{bmatrix} 
+       1 & 4 & 5\\
+       2 & 9 & 8\\
+       3 & 7 & 6
+   \end{bmatrix} \in \mathcal{M}_3(\R)
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{mat-ligne-1-colonne-3}
+    \caption{Розклад по другому рядку}
+    \label{fig:mat-ligne-1-colonne-3}
+\end{figure}
+Тому:
+\begin{align*}
+    \det(A) &= \sum_{i=1}^{n} (-1)^{i + 2} a_{2, i} \det(A_{2, i}) \\
+            &= (-1)^{1 + 2} \cdot a_{2, 1} \cdot \det(A_{2, 1}) + (-1)^{2 + 2} \cdot a_{2, 2} \cdot \det(A_{2,2})  + (-1)^{3 + 2} \cdot a_{2, 3} \cdot \det(A_{2, 3}) \\
+            &= (-1)^{1 + 2} \cdot 2 \cdot \begin{vmatrix} 4 & 5 \\ 7 & 6 \end{vmatrix} + (-1)^{2 + 2} \cdot 9 \cdot \begin{vmatrix} 1 & 5 \\ 3 & 6 \end{vmatrix}  + (-1)^{3 + 2} \cdot 8 \cdot \begin{vmatrix} 1 & 4 \\ 3 & 7 \end{vmatrix} \\
+            &= (-1) \cdot 2 \cdot (-11) + 1 \cdot 9 \cdot (-9) + (-1) \cdot 8 \cdot (-5)\\
+            &= 22 - 81 + 40\\
+            &= -19
+\end{align*}
+\end{eg}

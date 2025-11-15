@@ -1,0 +1,4 @@
+\begin{definition}[Partial derivatives (case \(m=1\))]
+    The \(i\)-th partial derivative of \(f: D \to \R\) at \(X_0\) is \(D_{e_i} f(X_0)\), where \((e_i)\) is the canonical basis of \(\R^n\).
+    Notation : \(\frac{\partial f}{\partial x_i}(X_0)\) or \(\partial_i f(X_0)\).
+\end{definition}

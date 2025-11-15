@@ -1,0 +1,3 @@
+\begin{definition}[Extremum local]
+    Soit \(f: D \to \R\). \(X_0 \in D\) est un \textbf{minimum local} (resp. \textbf{maximum local}) s'il existe un voisinage \(V\) de \(X_0\) tel que \(f(X_0) \le f(X)\) (resp. \(f(X_0) \ge f(X)\)) pour tout \(X \in V \cap D\). Un extremum est dit \textbf{strict} si l'inégalité est stricte pour \(X \neq X_0\).
+\end{definition}

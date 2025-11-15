@@ -1,0 +1,6 @@
+\begin{definition}\label{def:prod_scalaire}
+    Скалярний \textbf{добуток}:
+    \[
+    X \cdot Y = x_1y_1 + x_2y_2 + \ldots x_dy_d = \|X\|\|Y\|\cos(\theta) \text{ (де } \theta \text{ є кут між } X \text{ та } Y \text{)}
+    \] 
+\end{definition}

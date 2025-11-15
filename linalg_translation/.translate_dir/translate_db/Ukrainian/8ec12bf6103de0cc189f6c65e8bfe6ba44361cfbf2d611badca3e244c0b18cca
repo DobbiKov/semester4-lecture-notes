@@ -1,0 +1,29 @@
+\begin{preuve} -
+    \begin{enumerate}
+        \item 
+            $\|AB\| \le \|A\|\|B\|$ (бо $\| \cdot \|$ рівномірна норма!) тому $\|A^n\| \le \|A\|^n$. $\sum_{n \in \N}^{} \frac{\|A\|^n}{n!}$ (числовий ряд!) збігається до $e^{\|A\|}$ тому $\sum_{n \in \N}^{} \frac{A^n}{n!}$ збігається \underline{нормально} в $\mathcal{M}_n(\mathbb{C})$. 
+            \par
+            $\mathcal{M}_n(\mathbb{C})$ є повним (як $B(E)$ якщо  $E$ є повним) тому $\sum_{n \in \N}^{} \frac{A^n}{n!}$ збігається в $\mathcal{M}_n(\mathbb{C})$.
+        \item Також ОК
+        \item \[
+            \|e^A - \sum_{n=0}^{N} \frac{A^n}{n!}\| = \|\sum_{n=N+1}^{\infty} \frac{A^n}{n!}\| \le \sum_{n = N+1}^{\infty} \frac{\|A\|^n}{n!}
+            \] 
+            Позначимо $f(x) = e^x$
+             \[
+                 f(x) = \sum_{n=0}^{N} f^{(n)}(0) \frac{x^n}{n!} + \frac{x^{N+1}}{(N+1)!}f^{(N+1)}(y) \quad (y \text{ між } 0 \text{ та } x)
+            \] 
+            $x = \|A\|$
+        \item  
+            \[
+                e^Ae^B = e^{A + B} \text{ якщо } AB = BA
+            \] 
+            \begin{align*}
+                (A + B)^2 = A^2 + AB + BA + B^2 = A^2 + 2AB + B^2 \quad (\text{ якщо } AB = BA)
+            \end{align*}
+            \[
+                (A+B)^n = \sum_{p=0}^{n} C_n^p A^{n-p}B^p
+            \] 
+            Такий самий доказ якщо $A = a, B = b$ з  $a,b \in \R$
+        \item вправа
+    \end{enumerate}
+\end{preuve}

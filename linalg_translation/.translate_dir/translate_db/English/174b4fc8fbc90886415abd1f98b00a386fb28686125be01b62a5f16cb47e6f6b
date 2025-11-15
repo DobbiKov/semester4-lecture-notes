@@ -1,0 +1,6 @@
+\begin{proposition}[Sequential Characterizations]
+   \begin{enumerate}
+       \item \textbf{Adherence :} \(x \in \operatorname{Adh}(A) \iff\) there exists a sequence \((a_n)\) of elements of \(A\) such that \(a_n \to x\).
+       \item \textbf{Closed :} \(A\) is closed \(\iff\) for any sequence \((a_n)\) of elements of \(A\) that converges to \(x \in E\), we have \(x \in A\).
+   \end{enumerate}
+\end{proposition}

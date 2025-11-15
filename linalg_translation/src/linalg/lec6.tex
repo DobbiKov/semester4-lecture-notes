@@ -1,0 +1,199 @@
+\section{Polynômes annulateurs}
+Dans les sections précédentes, on a appris que pour savoir si une matrice est diagonalisable, il faut étudier les espaces propres, ce qui n'est pas toujours très facile et n'est pas la façon la plus vite. Alors, dans cette section on va voir une des autres méthodes d'études de diagonalisabilité, l'une de ces méthodes est l'étude des polynôme annulateurs.
+
+\begin{remark}
+   Dans cette section j'écris pas la plupart des preuves mais plutôt l'intuition pourquoi c'est vrai et pourquoi ça marche. 
+\end{remark}
+
+\begin{definition}\label{def:polynome-annulateur}
+    Soit $f \in \mathbb{K}^n$ un endomorphisme. Un polynôme $Q(X) \in K[X]$ est un \textbf{polynôme annulateur} de $f$ si  $Q(f) = 0$.
+\end{definition}
+\begin{eg}
+   Soit $f$ une projection, alors, on sait que $f^2 = f$, d'où $f^2 - f = 0$, donc  $Q(X) = X^2 - X = X(X - 1)$ est un polynôme annulateur de  $f$.
+\end{eg}
+
+Ce qui est important, c'est que les polynômes annulateurs sont très liés aux valeurs propres:
+\begin{prop}
+   Soit $Q(X)$ est un polynôme annulateur de  $f$, alors les valeurs propres de  $f$ figurent parmis les racines de  $Q$, i.e:
+   \[
+       \operatorname{Sp}(f) \subset \operatorname{Rac}(Q)
+   \] 
+\end{prop}
+\begin{preuve}
+    Soit $Q(X) = a_n X^n + a_{n-1} X^{n-1} + \ldots + a_0$ un polynôme annulateur de $f$ et  $\lambda$ une valeur propre de  $f$. Donc  $\exists v \neq 0 \in E$ tq $f(v) = \lambda v$, de plus:
+    \[
+        Q(f) = a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id} = 0
+    \] 
+    Or $f(v) = \lambda v$, donc  $f^2(v) = f(\lambda v) = \lambda^2 v$, d'où  $f^k(v) = \lambda^k v$  $\forall k \in \N$, alors:
+    \[
+        Q(f(v)) = 0 = (a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id})v = (a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id})v = 0
+     \] 
+     Or $v \neq 0$, donc $a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id} = 0$ d'où  $\lambda$ est une racine de  $Q$.
+\end{preuve}
+\begin{note}
+    Par contre, l'égalité n'est vrai en général, par exemple $\operatorname{Id}^2 = \operatorname{Id}$, donc  $Q(X) = X^2 - X = X(X - 1)$ annule $\operatorname{Id}$ avec les racines  $0$ et  $1$, mais  $0$ n'est pas une valeur propre de  $\operatorname{Id}$.
+\end{note}
+
+\begin{theorem}\label{thm:cayley-hamilton} \textbf{de Cayley-Hamilton}. Soit $f \in K^n$ un endomorphisme et $P_f(X)$ son polynôme caractéristique, alors
+     \[
+    P_f(f) = 0
+    \] 
+    Autrement dit, le polynôme caractéristique d'un endomorphisme est son polynôme annulateur.
+\end{theorem}
+% TODO: preuve <15-04-25, dobbikov> %
+\begin{intuition}
+   Le polynôme caractéristique nous décrit la structure de $f$, i.e quelles operations il faut faire pour perdre au moins une dimension, si on obtient des facteurs de la forme $(X - \lambda)^n$ donc il faut appliquer  $f(v) - \lambda v) = v_r$, et puis au résultat $v_r$ encore, i.e  $f(v_r) - \lambda v_r$, et on répéte  $n$ fois (ça arrive dans les cas des matrices trigonalisables) 
+
+   Le théorème reste vrai même dans les cas où l'endomorphisme n'est pas trigonalisables car on peut choisir la cloture $K'$ de corp  $K$ dans lequel est notre endomorphisme et il devient trigonalisables (e.g $\mathbb{C}$ pour  $\mathbb{R}$).
+
+   De plus, polynôme caractéristique nous donne  $\ker(P_f(X)) = E$, i.e les vecteurs qui deviennent nuls sous l'action de  $P_f(f)$, le fait intéressant, c'est que tous les vecteurs de  $E$ appartiennent à ce kernel, et donc  $\forall v \in E$, $p_f(f)v = 0$, d'où  $p_f(f) = 0$.
+\end{intuition}
+
+\begin{definition}
+    Soit $Q$ un polynôme scindé:
+     \[
+         Q(X) = (X - a_1)^{\alpha_1} \cdots (X - a_r)^{\alpha_r}
+    \] 
+    Le polynôme 
+    \[
+    Q_1 = (X - a_1) \cdots (X - a_r)
+    \] 
+    est appelé \textbf{radical} de $Q$ (i.e polynôme scindé (le même polynôme mais sans puissances à côté des paranthèses). 
+    \par De plus, $Q_1 \mid Q$ i.e radical d'un polynôme divise le polynôme lui-même.
+\end{definition}
+\begin{prop}
+    Soit $f$ est un endomorphisme et 
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1} \cdots (X - \lambda_p)^{\alpha_p}
+    \] 
+    est son polynôme caractéristique. Alors, si $f$ est diagonalisable, le radical  $Q_1$ annule  $f$ aussi, i.e
+     \[
+    Q_1(f) = (f - \lambda_1) \cdots (f - \lambda_r) = 0
+    \] 
+\end{prop}
+\begin{intuition}
+   Je donne l'intuition de la preuve. Si $f$ est diagonalisable avec un polynôme caractéristique
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1} \cdots (X - \lambda_p)^{\alpha_p}
+    \] 
+    avec $r := \alpha_i > 1$ cela \underline{ne signifie pas} qu'il faut appliquer $(f - \lambda_i \operatorname{Id})$  $r$ fois pour réduire la dimesion comme dans le cas des matrices trigonalisables, mais cela signifie que  $E_{\lambda_i}$ l'espace propre de valeur propre  $\lambda_i$ est de dimension  $\alpha_i = r$ et donc $\forall v \in E_{\lambda_i}, f(v) = \lambda_i v$. 
+
+    Comme $E = E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p}$, si $v \in E$, donc $\exists i \in \{1, \ldots, p\}$ tq $v \in E_{\lambda_i}$ et donc $f(v) - \lambda_i v = 0$ i.e  $(f - \lambda_i \operatorname{Id})(v) = 0$. D'où le radical de $P_f$ annule  $f$.
+\end{intuition}
+\section{Le Lemme des noyaux}
+\begin{lemma}\label{lemma:lemme-des-noyaux} \textbf{des noyaux}
+   Soit $f \in K^n$ un endomorphisme et 
+   \[
+   Q(X) = Q_1(X) \cdots Q_p(X)
+   \] 
+   un polynôme factorisé en produit de polynômes deux à deux premiers entre eux. Si $Q(f) = 0$ alors:
+    \[
+        E = \operatorname{Ker} Q_1(f) \oplus \ldots \oplus \operatorname{Ker} Q_p(f)
+   \] 
+\end{lemma}
+\begin{intuition}
+    Comme $Q(f) = 0$, donc  $\forall v \in E, Q(f)(v) = 0$ donc
+    $\operatorname{Ker}(Q(f)) = E$. $\exists v_1, \ldots, v_p$ tq $v = v_1 +
+    \ldots + v_p$. Or tous les polynômes sont deux à deux premiers, alors c'est
+    seulement l'un qui annule $v_i$ donc  $v_i \in \operatorname{Ker}Q_i(f)$ et
+    cela reste vrai pour tous les $v_1, \ldots, v_p$. Et comme les polynômes
+    sont premiers, donc si $k \neq j$ et $Q_k(v_i) = 0$, donc  $Q_j(v_i) \neq
+    0$ car $Q_j$ et  $Q_k$ sont différents. Alors,  $\forall i, j \,
+    \operatorname{Ker}Q_i \cap \operatorname{Ker}Q_j = \{0\}$.
+\end{intuition}
+\begin{remark}
+   Revenons sur l'exemple de $f$ qui est une projection, donc  $f^2 - f = 0$ et  $Q(X) = X^2 - X = X(X-1)$ annule $f$. Or  $X$ et  $X-1$ sont premiers entre eux, alors 
+    \[
+        E = \operatorname{Ker}f \oplus \operatorname{Ker}(f - \operatorname{Id})
+   \] 
+    Pour être plus générale, soit $f$ un endomorphisme et $Q(X) = (X - \lambda_1) \cdots (X - \lambda_p)$ tq $Q(f) = 0$, on a:
+     \[
+         E = \underbrace{\operatorname{Ker}(f - \lambda_1 \operatorname{Id})}_{E_{\lambda_1}} \oplus \ldots \oplus \underbrace{\operatorname{Ker}(f - \lambda_p \operatorname{Id})}_{E_{\lambda_p}}
+    \] 
+    Bien sur, $\lambda_i \neq \lambda_j$. Et alors $f$ est diagonalisable car somme directe de ces espaces propres.
+\end{remark}
+\begin{corollary}
+    Un endomorphisme $f$ est diagonalisable si et seulement s'il existe un polynôme annulateur  $Q$ de  $f$ scindé et n'ayant que des racines simples \footnote{scindé: $(X - \lambda_i)^{\alpha_i}$ - $X$ est à la puissance  $1$! racines simples: si  $\alpha_i = 1$ aussi i.e les facteurs  $(X - \lambda)$ sont à la puissance 1!} 
+\end{corollary}
+
+\section{Recherche des polynômes annulateurs. Polynôme minimal}
+\begin{definition}
+    On appelle un  \textbf{polynôme minimal} de $f$ noté  $m_f(X)$ - le polynôme normalisé \footnote{i.e de coefficient $1$ du terme du plus haut degré, i.e:  $1*X^n + a_{n-1}X^{n-1} + \ldots + a_0$} qui annule $f$ de degré le plus petit.
+\end{definition}
+\begin{prop}
+   Les polynômes annulateurs de $f$ sont le polynômes de la forme:
+   \[
+       Q(X) = A(X)m_f(X) \quad \text{ avec } \quad A(X) \in K[X]
+   \] 
+   i.e $m_f(X)$ divise  $Q(X)$. 
+\end{prop}
+\begin{prop}
+   Les racines du polyôme minimal $m_f(X)$ sont exactement les racines du polynôme caractéristique  $P_f(X)$, c'est-à-dire les valeurs propres.
+\end{prop}
+\begin{preuve}
+   On sait que $P_f(X) = A(X)m_f(X)$ donc si  $\lambda$ est une racine de  $m_f(X)$,  alors elle est racine de  $P_f(X)$ aussi. Réciproquement, si $\lambda$ est une racine de  $P_f(X)$ alors elle une valeur propre, or  $m_f(X)$ annule  $f$, donc  $\lambda$ est aussi une racine de  $m_f(X)$.
+\end{preuve}
+\begin{theorem}
+    Un endomorphisme $f$ est diagonalisable si et seulement si son polynôme minimal est scindé et il a toutes ses racines simples.
+\end{theorem}
+\begin{eg}
+   \begin{enumerate}
+       \item $A = \begin{pmatrix} 
+            -1 & 1 & 1\\
+            1  & -1 & 1\\
+            1  & 1  & -1
+           \end{pmatrix} $. $P_A(X) = -(X - 1)(X + 2)^2$, donc on a deux possibilité:
+           \begin{itemize}
+               \item $m_A(X) = (X - 1)(X + 2)$ - donc  $A$ diagonalisable
+               \item  $m_A(X) = (X - 1)(X + 2)^2$ - donc $A$ pas diagonalisable
+           \end{itemize}
+           Calculons:
+           \[
+            (A - I)(A + 2I) = \begin{pmatrix} 
+                -2 & 1 & 1\\
+                1 & -2 & 1\\
+                1 & 1  & -2
+            \end{pmatrix}\begin{pmatrix} 
+                1 & 1 & 1\\
+                1 & 1 & 1\\
+                1 & 1 & 1
+            \end{pmatrix} = \begin{pmatrix} 
+                0 & 0 & 0\\
+                0 & 0 & 0\\
+                0 & 0 & 0
+            \end{pmatrix}   
+           \] 
+           Donc, $m_f(X) = (X - 1)(X + 2)$ et donc  $A$ est diagonalisable.
+        \item  $A = \begin{pmatrix} 
+                3 & -1 & 1\\
+                2 & 0  & 1\\
+                1 & -1 & 2
+            \end{pmatrix} $. On a: $P_A(X) = -(X - 1)(X - 2)^2$, donc:
+            \[
+            m_A(X) = \begin{cases}
+                (X-1)(X-2) \quad \text{ i.e $A$ diagonalisable}\\
+                (X-1)(X-2)^2 \quad \text{ i.e $A$ pas diagonalisable}
+            \end{cases}
+            \] 
+            Calculons:
+            \[
+                (A - I)(A - 2I) = \begin{pmatrix} 
+                    2 & -1 & 1\\
+                    2 & -1 & 1\\
+                    1 & -1 & 1\\
+                \end{pmatrix} 
+                \begin{pmatrix} 
+                    1 & -1 & 1\\
+                    2 & -2 & 1\\
+                    1 & -1 & 0
+                \end{pmatrix} 
+                =
+            \begin{pmatrix}
+            1 & -2 & 1 \\
+            1 & -2 & 1 \\
+            0 & -2 & 2
+            \end{pmatrix} \neq \begin{pmatrix} 0 & 0 & 0\\  0 & 0 & 0\\ 0 & 0 & 0 \end{pmatrix} 
+            \] 
+            D'où $m_A(X) \neq (X-1)(X-2)$ et donc $A$ n'est pas diagonalisable.
+   \end{enumerate} 
+\end{eg}

@@ -1,0 +1,20 @@
+A matrix $A \in \mathcal{M}_n(K)$ is called upper triangular if it is of the form:
+\[
+         A = 
+         \begin{bmatrix} 
+         a_{1,1} & a_{1,2} & \ldots & a_{1,n} \\
+         0 & a_{2,2} & \ddots & \vdots\\
+         \vdots & \ddots & \ddots & a_{n-1,n}\\
+         0 & \ldots & 0 & a_{n,n}
+        \end{bmatrix}
+\] 
+respectively lower triangular:
+\[
+         A = 
+         \begin{bmatrix} 
+         a_{1,1} & 0 & \ldots & 0 \\
+         a_{2, 1} & a_{2,2} & \ddots & \vdots\\
+         \vdots & \ddots & \ddots & 0\\
+         a_{n, 1} & \ldots & a_{n, n-1} & a_{n,n}
+        \end{bmatrix} 
+\]

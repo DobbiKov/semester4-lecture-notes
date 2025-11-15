@@ -1,0 +1,5 @@
+\begin{definition}[Partial derivatives of order \(k\)]
+    The partial derivatives of order \(k\) are obtained by successively differentiating \(k\) times with respect to the variables.
+    Example : \(\frac{\partial^2 f}{\partial x_j \partial x_i} = \frac{\partial}{\partial x_j} \left(\frac{\partial f}{\partial x_i}\right)\).
+    \(f\) is of \textbf{class \(C^k\)} on \(D\) if all its partial derivatives up to order \(k\) exist and are continuous on \(D\).
+\end{definition}

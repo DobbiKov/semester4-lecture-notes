@@ -1,0 +1,9 @@
+\begin{intuition}
+   A Cauchy sequence is like measuring a point and localizing it, i.e:
+   \begin{enumerate}
+       \item We say it is between $0$ and $1$.
+       \item Then, we specify more and say it is between $0.5$ and $0.6$.
+       \item Then, between $0.55$ and $0.56$
+   \end{enumerate}
+   We can infinitely increase the level of precision. That's the idea of a Cauchy sequence.
+\end{intuition}

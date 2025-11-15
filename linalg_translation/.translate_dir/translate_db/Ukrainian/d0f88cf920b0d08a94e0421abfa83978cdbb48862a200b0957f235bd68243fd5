@@ -1,0 +1,12 @@
+\begin{prop}\label{prop:continuité-de-fonctions}
+   Наступні властивості є еквівалентними: 
+   \begin{enumerate}
+       \item $F: (E_1, d_1) \to  (E_2, d_2)$ є неперервною.
+       \item $\forall U_2 \subset  E_2$ відкритою, $F^{-1}(U_2)$ є відкритою в $E_1$.
+       \item $\forall F_2 \subset E_2$ замкненою, $F^{-1}(F_2) \subset E_1$ є замкненою.
+        \item $\forall (x_n)$ послідовність в $E_1$ з $\lim_{n \to \infty} x_n = x$ маємо:
+            \[
+            \lim_{n \to \infty} F(x_n) = F(x)
+            \] 
+   \end{enumerate}
+\end{prop}

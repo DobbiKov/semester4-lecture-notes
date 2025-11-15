@@ -1,0 +1,6 @@
+By expanding this determinant, we obtain an equation of the type:
+\[
+    (-1)^n\lambda^n + a_{n-1}\lambda^{n-1} + \ldots + a_1\lambda + a_0 = 0
+\] 
+whose roots are the eigenvalues of $f$ (remember: an eigenvalue is a factor $\lambda$).
+Don't focus too much on this equation for now, we'll come back to it.

@@ -1,0 +1,6 @@
+\begin{definition}
+    Soit $U$ un ensemble et $E = \{f: U \to \mathbb{K} \text{ bornée} \}$ 
+    \[
+        \|f\|_{\infty} = \sup_{x \in U} |f(x)| \text{ norme sur E}
+    \] 
+\end{definition}

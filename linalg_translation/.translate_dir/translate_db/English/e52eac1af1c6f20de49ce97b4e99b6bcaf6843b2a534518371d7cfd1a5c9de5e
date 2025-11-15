@@ -1,0 +1,16 @@
+\begin{enumerate}
+    \item if $\lambda_i > 0$ ($1 \le i \le n$)
+        \[
+        C = \min \lambda_i > 0
+        \] 
+        \[
+        X \cdot AX \ge C \sum_{i=1}^{n} y_i^2 = C \|X\|^2
+        \] 
+    \item if $\lambda_i < 0$ ($1 \le i \le n$)
+        \[
+        -C = \max \lambda_i < 0
+        \] 
+        \[
+        X \cdot AX \le -C\|X\|^2
+        \] 
+\end{enumerate}

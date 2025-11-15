@@ -1,0 +1,3 @@
+\begin{theorem}[Sequential characterization of compactness - Bolzano-Weierstrass]
+    In a metric space \((E,d)\), a part \(K \subset E\) is compact \(\iff\) from any sequence of elements of \(K\), we can extract a subsequence that converges \textbf{in K}.
+\end{theorem}

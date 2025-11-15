@@ -1,0 +1,9 @@
+\begin{explanation}
+   Recall that if $G, G'$ are finite-dimensional subspaces in the same vector space, then:
+   \[
+   G = G' \iff G \subseteq G' \text{ and } dim(G) = dim(G')
+   \] 
+   $\implies$) $f$ is injective  $\implies$ $Ker(f) = {0}$\\
+   $\impliedby$) Let $Ker(f) = {0}$.\\
+   Then, necessarily  $dim(Ker(f)) = 0$ and by the rank theorem, we have  $dim(F) = dim(Im(f))$, so  $Im(f) = F'$
+\end{explanation}

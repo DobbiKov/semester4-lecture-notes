@@ -1,0 +1,7 @@
+\begin{prop}
+    Soit $A = (a_{i, j}) \in \mathcal{M}_n(\R)$ une matrice carrée et soit $1 \le k \le n$
+    \[
+        \displaystyle \det(A) = \sum_{i=1}^{n} (-1)^{i + k} a_{k,i} \det(A_{k, i}) 
+    \] 
+    est le calcul de détérminant par rapport à $k^{\text{ième}}$ ligne.
+\end{prop}

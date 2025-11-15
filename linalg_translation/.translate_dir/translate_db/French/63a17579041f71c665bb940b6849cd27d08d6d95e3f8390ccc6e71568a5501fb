@@ -1,0 +1,6 @@
+\begin{definition}[Continuité en un point]
+    Soient \((E_1, d_1)\) et \((E_2, d_2)\) deux espaces métriques, \(f: E_1 \to E_2\) une application, et \(x_0 \in E_1\).
+    \(f\) est \textbf{continue en \(x_0\)} si
+    \[ \forall \varepsilon > 0, \exists \delta > 0 \text{ tel que } \forall x \in E_1, (d_1(x,x_0) < \delta \implies d_2(f(x), f(x_0)) < \varepsilon) \]
+    \(f\) est \textbf{continue sur \(E_1\)} si elle est continue en tout point de \(E_1\).
+\end{definition}

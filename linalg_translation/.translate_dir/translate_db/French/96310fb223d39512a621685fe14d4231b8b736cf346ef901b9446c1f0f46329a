@@ -1,0 +1,3 @@
+\begin{lemma} du Riesz:\\
+    Soit $(E, \scalair{.,.})$ un espace euclidien de  dimension finie et $f \in E^*$. Alors, $\exists! u \in E$ tel que $f(x) = \scalair{u, x} \quad \forall x \in E$. La forme linéaire $f$ est donné par un produit scalaire avec un vecteur. 
+\end{lemma}

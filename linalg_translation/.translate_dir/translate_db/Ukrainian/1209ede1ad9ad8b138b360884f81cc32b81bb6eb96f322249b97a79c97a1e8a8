@@ -1,0 +1,16 @@
+\begin{itemize}
+    \item \textbf{Використовуйте визначення:}
+    \[
+    \forall x \in \mathcal{U}, \exists r > 0 \quad \text{такий, що} \quad B(x, r) \subset \mathcal{U}
+    \]
+    \item Показати, що \( E \setminus \mathcal{U} \) є замкнутим.
+    \item Показати, що \(\mathcal{U}\) є прообразом відкритої множини через неперервне відображення \(f:E \to E'\) (тобто \(\mathcal{U} = f^{-1}(O)\) з \(O\) відкритою множиною в \(E'\)).
+    \item Виразіть \(\mathcal{U}\) як відкриту кулю (яка завжди є відкритою множиною).
+    \item Запишіть \(\mathcal{U}\) як:
+    \begin{itemize}
+        \item об’єднання (будь-яке) відкритих множин;
+        \item скінченний перетин відкритих множин.
+    \end{itemize}
+    \item Покажіть, що \(\mathcal{U} = \operatorname{Int}(\mathcal{U})\).
+    \item Якщо \(\mathcal{U} \subset \R^N\), запишіть \(\mathcal{U} = I_1 \times \dots \times I_N\), де кожен \( I_i \subset \R\) є відкритим інтервалом.
+\end{itemize}

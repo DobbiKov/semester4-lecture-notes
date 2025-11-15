@@ -1,0 +1,20 @@
+\begin{itemize}
+    \item espace vectoriel $E$,  $F$, etc
+    \item vecteurs:  $x, y, e$, etc.
+    \item vecteur nul: noté  $0_E$ ou simplement  $0$
+    \item scalaires:  $\lambda, \mu \in \mathbb{K}$
+    \item  $\mathbb{K} = \R \text{ ou } \mathbb{C}$
+    \item $A \in \mathcal{L}(E, F)$ action sur $x$, notée  $Ax$ (plutôt que $A(x)$)
+    \item dimension: $E$ de dimension finie si  $E$ admet une base avec un nombre fini d'éléments, sinon  $E$ est dit de dimension infinie  $\iff$ $\forall N \in \N$, il existe une famille libre de $N$ vecteurs. La dimension dépend de  $\mathbb{K}$!
+         \begin{itemize}
+             \item sur $\mathbb{C}$  $\dim \mathbb{C} = 1$ base formée du vecteur  $1 \in \mathbb{C}$
+             \item sur  $\R$ $\dim \mathbb{C} = 2$ base formée de $1, i$
+        \end{itemize}
+        \begin{align*}
+            &z = z \cdot 1 \quad z \in \mathbb{C}\\
+            &z = x \cdot 1 + y \cdot i \quad x, y \in \R
+        \end{align*}
+        \[
+            \mathbb{C} \sim \R^2 \text{ comme } \R \text{ espace vectoriel}
+        \] 
+\end{itemize}

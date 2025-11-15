@@ -1,0 +1,9 @@
+\begin{definition}[Distance on a set \(E\)]
+       A \textbf{distance} on \(E\) is a map \(d: E \times E \to \R_+\) such that for all \(X,Y,Z \in E\):
+       \begin{enumerate}
+           \item \textbf{Separation :} \(d(X,Y) = 0 \iff X = Y\)
+           \item \textbf{Symmetry :} \(d(X, Y) = d(Y, X)\)
+           \item \textbf{Triangle inequality :} \(d(X, Y) \le d(X, Z) + d(Z, Y)\)
+       \end{enumerate}
+       A set equipped with a distance is a \textbf{metric space}.
+   \end{definition}

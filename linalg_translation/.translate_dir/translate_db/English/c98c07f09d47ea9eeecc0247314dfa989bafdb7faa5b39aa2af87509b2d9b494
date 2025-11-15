@@ -1,0 +1,3 @@
+\begin{theorem}
+    Let $F: \R^n \to \R^p$ be continuous and $K \subset \R^n$ compact. Then, $F(K)$ is compact in  $\R^p$
+\end{theorem}

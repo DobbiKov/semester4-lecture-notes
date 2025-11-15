@@ -1,0 +1,94 @@
+\begin{eg}
+   Нехай матриця 
+   \[
+   A = \begin{pmatrix}
+       -4 & 0 & -2 \\
+       0 & 1 & 0\\
+       5 & 1 & 3
+   \end{pmatrix}
+   \] 
+   Маємо характеристичний многочлен $P_A(X) = -(X - 1)^2(X + 2)$, який розщеплюється в $\R$, тому $A$ є тригоналізованою (згідно з теоремою \ref{thm:trigonalisable-si-scinde}), отже, якщо розглядати $A$ як ендоморфізм у канонічному базисі, ми знаємо, що існує базис  $\{v_i\}$ з  $\R^3$ такий що:
+   \[
+       M(f)_{v_i} = \begin{pmatrix} 
+           1 & a & b\\
+           0 & 1 & c\\
+           0 & 0 & -2
+       \end{pmatrix} 
+   \] 
+   я нагадую, що це означає:
+   \begin{align}\label{eq:trigon-example-system}
+       \begin{cases}
+           f(v_1) = v_1\\
+           f(v_2) = a v_1 + v_2\\
+           f(v_3) = b v_1 + c v_2 - 2 v_3
+       \end{cases}
+    \end{align}
+
+   Почнемо з пошуку $v_1$. Ми знаємо, що  $v_1$ є власним вектором, що відповідає власному значенню  $\lambda_1 = 1$, тобто  $(f - \operatorname{Id})v_1 = 0$, тому обчислимо $(A - I)v_1 = 0$ (іншими словами, ми шукаємо $v_1$, який породжує  $\ker(A - I)$) :
+   \begin{align*}
+       (A - I) \begin{pmatrix} x \\ y \\ z \end{pmatrix} \iff 
+       \begin{cases}
+           -5x    -2z & = 0\\
+            5x  +y +2z &=0
+       \end{cases}
+    \end{align*}
+    Тоді ми можемо взяти $v_1 = \begin{pmatrix} 2 \\ 0 \\ -5 \end{pmatrix} $ (іншими словами $\ker(A - I) = \operatorname{Vect}(\begin{pmatrix} 2 \\ 0 \\ -5 \end{pmatrix})$).
+
+    Далі, шукаємо $v_2$, згідно з \ref{eq:trigon-example-system}, 
+    \begin{align*}
+        &f(v_2) = av_1 + v_2 \\
+        \implies &f(v_2) - v_2 = av_1\\
+        \implies &(f - I)v_2 = a v_1\\
+        \implies &(A - I)v_2 = a v_1
+    \end{align*}
+    Отже, маємо:
+    \[
+        (A - I)\begin{pmatrix} x \\ y \\ z \end{pmatrix} = a \begin{pmatrix} 2 \\ 0 \\ -5 \end{pmatrix} \iff
+        \begin{cases}
+            -5x - 2z = 2a\\
+            5x + y + 2z = -5a
+        \end{cases}
+    \] 
+    Тоді, взявши $a = 1$, маємо 
+    \[
+        \begin{cases}
+            -5x - 2z = 2\\
+            5x + y + 2z = -5
+        \end{cases}
+    \] 
+    тому $v_2 = \begin{pmatrix} -2 \\ -3 \\ 4 \end{pmatrix} $ (просто розв'язання системи).
+
+    Для $v_3$ маємо два варіанти:
+     \begin{enumerate}
+        \item або діяти так само з розв'язанням системи
+        \item або зауважити, що існує власний вектор $A$, що відповідає власному значенню  $-2$, тобто  $\exists v_3 \in \R^3$ такий що $f(v_3) = -2 v_3$, тоді ми можемо взяти цей вектор  $v_3$ і, отже, покласти  $b = c = 0$.
+    \end{enumerate}
+    \begin{remark}
+       Чому ми можемо так робити? Тому що для кожного власного значення $f$ завжди існує власний простір кратності принаймні  $1$, отже, і для власного значення  $-2$ теж. 
+    \end{remark}
+    Тоді шукаємо $v_3$:
+     \[
+         (A + 2I)v_3 = 0 \iff \begin{cases}
+             -2x - 2z = 0\\
+             3y = 0
+         \end{cases}
+    \]
+    тому ми можемо взяти $v_3 = \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} $.
+    
+    Отже, матриця $A$ подібна до 
+     \[
+    A' = M(f)_{v_i} = \begin{pmatrix} 
+        1 & 1 & 0\\
+        0 & 1 & 0\\
+        0 & 0 & -2
+    \end{pmatrix} 
+    \] 
+    з матрицею переходу:
+    \[
+    P = \|v_1, v_2, v_3\| = \begin{pmatrix} 
+        2 & -2 & 1\\
+        0 & -3 & 0\\
+        -5 & 4 & -1
+    \end{pmatrix} 
+    \] 
+\end{eg}

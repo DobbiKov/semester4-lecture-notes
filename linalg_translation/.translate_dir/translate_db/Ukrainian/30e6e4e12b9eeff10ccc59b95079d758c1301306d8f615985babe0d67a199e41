@@ -1,0 +1,21 @@
+\begin{ex}
+   Обчислити
+   \[
+   \begin{bmatrix}
+       3 & 1\\
+       0 & 2
+   \end{bmatrix}^{15} = \underbrace{
+       \begin{bmatrix}
+       3 & 1\\
+       0 & 2
+       \end{bmatrix}
+       \cdot
+       \ldots
+       \cdot
+       \begin{bmatrix}
+       3 & 1\\
+       0 & 2
+       \end{bmatrix}
+   }_{15 \text{ разів}}
+   \]
+\end{ex}

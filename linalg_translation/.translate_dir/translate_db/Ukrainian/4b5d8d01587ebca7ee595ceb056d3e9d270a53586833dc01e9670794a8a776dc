@@ -1,0 +1,48 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[french]{babel} % Changed to french
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools} % For \coloneqq
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+\usepackage{enumitem} % Для кращих списків
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}} % Added C
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\K}{\mathbb{K}} % Added K for field
+
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{definition}{Визначення}[section]
+\newtheorem{exemple}{Приклад}[section]
+\newtheorem{proposition}{Пропозиція}[section]
+\newtheorem{lemma}{Лема}[section] % Added Lemma
+\newtheorem{propriete}{Властивість}[section] % Changed to singular
+\newtheorem*{notation}{Позначення}
+\newtheorem*{remarque}{Примітка}
+
+\title{Шпаргалка з аналізу та геометрії}
+\author{Yehor KOROTENKO}
+\date{За матеріалами курсу Крістіана Жерара} % Added date/source

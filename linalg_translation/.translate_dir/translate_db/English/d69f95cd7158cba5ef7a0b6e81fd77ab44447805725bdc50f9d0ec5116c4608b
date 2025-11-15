@@ -1,0 +1,3 @@
+\begin{definition}
+    $R([a, b], \mathbb{K})$ = $\{$ the $f: [a, b] \to \mathbb{K}$ Riemann integrable\footnote{The function is Riemann integrable (not necessarily continuous) if one can calculate the area using integration by Riemann sums. Then, if $f$ is discontinuous, it is Riemann integrable if the discontinuity is negligible.} $\}$
+\end{definition}

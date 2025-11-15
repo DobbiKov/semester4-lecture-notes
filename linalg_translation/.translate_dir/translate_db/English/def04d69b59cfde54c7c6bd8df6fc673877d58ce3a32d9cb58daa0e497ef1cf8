@@ -1,0 +1,5 @@
+\begin{prop} Let $(E, \scalair{,})$ be a Euclidean space and $\epsilon = (e_1, \ldots, e_n)$ an orthonormal basis. Let $f \in \mathcal{L}(E, E)$ and $A = (a_{i,j})_{1 \le i,j \le n}$ be the representative matrix of $f$ in $\epsilon$, i.e., $A = Mat_{\epsilon}(f)$ 
+    \[
+        a_{i,j} = \scalair{f(e_i), e_j} \, \forall i,j = 1, \ldots, n
+    \] 
+\end{prop}

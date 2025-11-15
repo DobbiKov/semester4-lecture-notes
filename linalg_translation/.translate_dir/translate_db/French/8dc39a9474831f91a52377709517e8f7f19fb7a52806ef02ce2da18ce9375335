@@ -1,0 +1,14 @@
+\begin{prop}
+    Produit scalaire respecte ces propriétés:
+    \begin{enumerate}
+        \item bilinaiarité $\quad \lambda \in \R$
+            \begin{enumerate}
+                \item $(X + Y) \cdot Z = X \cdot Z + Y \cdot Z$
+                \item $(\lambda X) \cdot Z = \lambda (X \cdot Z)$
+                \item $Z \cdot (X + Y) = Z \cdot X + Z \cdot Y$ 
+                \item $Z \cdot (\lambda X) = \lambda (Z \cdot X)$
+            \end{enumerate}
+        \item symétrie $X \cdot Y = Y \cdot X$
+        \item défini positif:  $X \cdot X \ge 0$ et $X \cdot X = 0 \iff X = 0_d$
+    \end{enumerate}
+\end{prop}

@@ -1,0 +1,18 @@
+\begin{eg}
+   \[
+   f(x, y) = \frac{1}{2}(x^2 - y^2)
+   \]  
+   \[
+       H_f(0, 0) = \begin{pmatrix} 1 & 0\\ 0 & -1 \end{pmatrix} 
+   \] 
+   \[
+       I_f = \{(x, y, z): z = \frac{1}{2}(x^2 - y^2)\}
+   \] 
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-point-selle}
+    \caption{Example of saddle point.}
+    \label{fig:exemple-point-selle}
+\end{figure}
+The red lines represent the partial derivatives and we can clearly see that some are increasing and others decreasing, so this point is neither the minimum nor the maximum
+\end{eg}

@@ -1,0 +1,5 @@
+гільбертова норма
+\[
+    \underset{\in \C^d}{\|X\|^2} = \underset{\in \R^d}{\|Re\,X\|^2} + i\underset{\in \R^d}{\:\|Im\,X\|^2}\\
+\] 
+

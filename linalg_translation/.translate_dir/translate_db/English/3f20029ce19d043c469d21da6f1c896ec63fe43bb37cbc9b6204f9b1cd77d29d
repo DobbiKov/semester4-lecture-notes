@@ -1,0 +1,16 @@
+\begin{preuve}
+    Let $y := \sum_{i=1}^{n} \scalar{x}{e_i}e_i$ . Then, 
+   \begin{align*}
+       &\forall j = 1, \ldots, n,\\
+       &\scalar{x - y}{e_j}\\ 
+       = &\scalar{x}{e_j} - \scalar{y}{e_j}\\ 
+       = &\scalar{x}{e_j} - \scalar{\sum_{i=1}^{n} \scalar{x}{e_i}e_i}{e_j}\\ 
+       = &\scalar{x}{e_j} - \underbrace{ \sum_{i=1}^{n} \scalar{x}{e_i} }_{\substack{\text{moved out}\\ \text{like constant}}}\scalar{e_i}{e_j}\\ 
+       = &\scalar{x}{e_j}\\ 
+       -& \left(\scalar{x}{e_1}\underbrace{ \scalar{e_1}{e_j} }_{= 0} + \ldots + \scalar{x}{e_{j-1}}\underbrace{\scalar{e_{j-1}}{e_j}}_{= 0} + \scalar{x}{e_{j}}\underbrace{ \scalar{e_{j}}{e_j} }_{= 1} + \scalar{x}{e_{j+1}}\underbrace{ \scalar{e_{j+1}}{e_j} }_{= 0} + \ldots + \scalar{x}{e_{n}}\underbrace{ \scalar{e_{n}}{e_j} }_{= 0}\right)\\
+        &\text{(} \forall i \neq j, \, \scalar{e_i}{e_j} = 0 \text{ because a scalar product of orthogonal vectors)}\\ 
+        &\text{(} \forall j \, \scalar{e_j}{e_j} = 1 \text{ because a scalar product of the same vector)}\\
+       = &\scalar{x}{e_j} - \scalar{x}{e_j}\underset{= 1}{\scalar{e_j}{e_j}} = 0
+   \end{align*}
+   Therefore, $x - y \in Vect(e_1, \ldots, e_n)^{\perp} = E^{\perp} = \{0\}$. Thus $x = y$
+\end{preuve}

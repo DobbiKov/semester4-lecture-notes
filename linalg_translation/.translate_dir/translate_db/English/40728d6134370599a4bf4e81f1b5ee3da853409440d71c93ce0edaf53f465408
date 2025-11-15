@@ -1,0 +1,27 @@
+\begin{preuve}
+    We construct a sequence of elements from $B_f(0, 1)$ \underline{without a convergent subsequence}.
+    \[
+    u \in E \quad u: \N \to \R
+    \] 
+    I denote $u(p)$ instead of $u_p$ sequence in $E$ denoted $(u_n)$, $u_n \in E$. $u_n(p)$ p-th term of $u_n$. I set 
+    \[
+    u_n(p) = \delta_{n, p} = \begin{cases}
+        1 \text{ if } n = p\\
+        0 \text{ otherwise}
+    \end{cases}
+    \] 
+    \[
+    \|u_n\|_1 = \sum_{p=0}^{\infty} |u_n(p)| = |u_n(n)| = 1
+    \] 
+    Thus $u_n \in B_f(0, 1) \forall n$.
+    \par
+    If $v \in l^1(\N, \R)$
+    \[
+    |v(p)| \le \sum_{p=0}^{\infty} |v(p)| = \|v\|_1
+    \] 
+    if $\|v_n - v\|_1 \xrightarrow[n \to \infty]{} 0$ then $\forall p, v_n(p) \to v(p)$. Assume that $(v_n) = (u_{\phi(n)})$ is a subsequence of $(u_n)$ that converges to $v$ for $\| . \|$. I fix $p \in \N$, $v_n(p) = u_{\phi(n)}(p) \xrightarrow[n \to \infty]{} v(p)$, but $v_n(p) \xrightarrow[n \to \infty]{} 0$, so $v(p) = 0 \forall p$. $v$: null sequence, also 
+     \[
+    \|v_n\|_1 = 1 \forall n \text{ and } \|v_n\|_1 \xrightarrow[n \to \infty]{} \|v\|_1
+    \] 
+    contradiction
+\end{preuve}

@@ -1,0 +1,3 @@
+\begin{corollary}
+    Un endomorphisme $f$ est diagonalisable si et seulement s'il existe un polynôme annulateur  $Q$ de  $f$ scindé et n'ayant que des racines simples \footnote{scindé: $(X - \lambda_i)^{\alpha_i}$ - $X$ est à la puissance  $1$! racines simples: si  $\alpha_i = 1$ aussi i.e les facteurs  $(X - \lambda)$ sont à la puissance 1!} 
+\end{corollary}

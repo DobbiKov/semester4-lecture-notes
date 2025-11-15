@@ -1,0 +1,3 @@
+\begin{property}
+   $\forall x \in A, \, y \in B, \, d(x, y) \ge d(A, B)$ et $\forall \epsilon > 0, \exists x \in A, \, y \in B$ tq $d(x, y) \le d(A, B) + \epsilon$
+\end{property}

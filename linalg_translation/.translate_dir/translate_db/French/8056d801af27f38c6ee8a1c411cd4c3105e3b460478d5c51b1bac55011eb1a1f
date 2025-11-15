@@ -1,0 +1,5 @@
+\begin{intuition}
+   Ce n'est pas très correcte à dire, mais, on peut dire qu'une suite de Cauchy $(x_n)_{n \in \N}$ converge toujours car il existe un moment $N \in \N$ après lequel les éléments sont très proches mais la limite n'appartient pas toujours à l'ensemble dans lequel cette suite est de Cauchy. 
+
+   Par exemple, une suite $(u_n)_{n \in \N}$ à valeur dans $\Q$ qui converge vers $\sqrt{2} $ dans $\R$. Dans $\R$ elle est convergente et de Cauchy, mais dans $\Q$ elle est de Cauchy mais \underline{pas convergente} car la limite $\sqrt{2} \not\in \Q $.
+\end{intuition}

@@ -1,0 +1,3 @@
+\begin{definition}[Suite de Cauchy]
+    Une suite \((x_n)\) dans \(E\) est de \textbf{Cauchy} si \(\forall \varepsilon > 0, \exists N \in \N\) tel que \(\forall n, p \ge N, d(x_n, x_p) \le \varepsilon\).
+\end{definition}

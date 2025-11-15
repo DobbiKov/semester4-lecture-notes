@@ -1,0 +1,3 @@
+\begin{theorem}
+    Soit $F: \R^n \to \R$ continue et $K \subset \R^n$ compact. Alors $f$ est bornée sur  $K$ et atteint ses bornes. I.e, $Q := f(K)$ est bornée et atteint les bornes.
+\end{theorem}

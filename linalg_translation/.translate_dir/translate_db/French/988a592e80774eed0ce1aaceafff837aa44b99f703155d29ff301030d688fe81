@@ -1,0 +1,23 @@
+ $\R^n, \R^p$ $D \subset \R^n$
+\[
+F:D \to \R^p
+\] 
+sur $\R^n$, $\R^p$ distances usuelles, sur $D$ la distance héritée de  $\R^n$.
+% \begin{figure}[ht]
+%     \centering
+%     \incfig{d-distance-exemple}
+%     \caption{d-distance-exemple}
+%     \label{fig:d-distance-exemple}
+% \end{figure}
+
+avec des coordonnées cartésiennes
+\[
+F(x_1, \ldots, x_n) = (F_1(x_1, \ldots, x_n), F_2(x_1, \ldots, x_n), \ldots, F_p(x_1, \ldots, x_n))
+\] 
+où $F_i: D \to \R$
+
+\[
+F: D \to \R^p \text{ continue}
+\] 
+
+on connaît:

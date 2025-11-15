@@ -1,0 +1,12 @@
+\begin{theorem}
+    Soit $A \in \mathcal{M}_n{\R}$ une matrice carrée et $A^{*}$ sa matrice adjointe, alors on a:
+     \[
+         A^{*}A = A A^{*} = \det(A)I_n = 
+         \begin{bmatrix}  
+             \det(A) & 0        & 0      & \ldots & 0 & 0\\
+             0       & \det(A)  & 0      & \ldots & 0 & 0\\
+             \vdots  & \vdots   & \vdots & \ddots & \vdots & \vdots\\
+             0       & 0        & 0      & \ldots & 0      & \det(A)
+         \end{bmatrix}  
+    \] 
+\end{theorem}

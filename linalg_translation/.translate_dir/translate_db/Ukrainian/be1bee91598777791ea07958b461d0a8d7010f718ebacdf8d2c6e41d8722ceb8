@@ -1,0 +1,3 @@
+\begin{theorem}
+    Нехай $F: \R^n \to \R^p$ неперервна і $K \subset \R^n$ компактна. Тоді, $F(K)$ є компактним у  $\R^p$
+\end{theorem}

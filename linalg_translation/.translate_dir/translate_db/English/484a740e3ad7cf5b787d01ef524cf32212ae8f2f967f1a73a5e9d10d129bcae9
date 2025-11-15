@@ -1,0 +1,10 @@
+\begin{prop}\label{prop:prod-scal-par-matrice} Scalar product represented by a matrix.\par
+   Let us note:
+   \begin{align*}
+       \underbrace{A = M(b)_{e_i}}_{\text{matrice de produit scalair}} && \underbrace{X = M(x)_{e_i}}_{\substack{\text{coordonnées de $x$}\\ \text{dans la base  $e_i$}}} && \underbrace{Y = M(y)_{e_i}}_{\substack{\text{coordonnées de $y$}\\ \text{dans la base $e_i$}}} && (x, y \in E)
+   \end{align*}
+   Then, we have:
+   \[
+       b(x, y) = X^{t}AY
+   \] 
+\end{prop}

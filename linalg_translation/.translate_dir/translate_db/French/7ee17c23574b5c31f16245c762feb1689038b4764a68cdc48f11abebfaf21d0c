@@ -1,0 +1,7 @@
+\begin{definition}
+    La \textbf{projection orthogonale} de $E$ dans  $F$ est la projection  $p_F$ de  $E$ sur  $F$ parallèlement  à $F^{\perp}$, i.e
+    \begin{align*}
+        p_F: E = F \oplus F^{\perp} &\longrightarrow F \\
+        x = x_F + x_{F^{\perp}} &\longmapsto p_F(x = x_F + x_{F^{\perp}}) = x_F
+    .\end{align*}
+\end{definition}

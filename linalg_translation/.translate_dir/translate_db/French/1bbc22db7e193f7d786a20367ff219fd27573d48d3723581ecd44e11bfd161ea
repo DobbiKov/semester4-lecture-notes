@@ -1,0 +1,7 @@
+\begin{definition}
+    \textbf{Orthogonale de $A$}:
+    \[
+        A^{\perp} = \{ u \in E \mid \scalair{u, v} = 0 \quad \forall v \in A \}
+    \] 
+    aussi connu comme  \textbf{complement orthogonale}.
+\end{definition}

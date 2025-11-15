@@ -1,0 +1,19 @@
+\begin{eg}
+   \[
+       A = \{(x, y) \in \R^2 \mid x > 0, y = x^{-1}\}
+   \]  
+   $Adh(A) = ?$
+   \par
+   Я думаю, що  $Adh(A) = A$ ($B = A$). Достатньо показати, що $A$ \underline{є замкненою}.
+    \[
+   x > 0 \quad y \le \frac{1}{x} \quad y \ge \frac{1}{x}
+   \] 
+   Якщо $X_n = (x_n, y_n)$  \quad $X_n \in A$ і  $X_n \to X$, тоді $X \in A$
+    \[
+        X = (x, y) \quad \substack{x_n \to x \\ y_n \to y} \quad \substack{x_n \to x \\ \frac{1}{x_n} \to y} \quad (x_n > 0)
+   \] 
+   тому $x > 0$ і  $y = \frac{1}{x}$ тому $X \in A$
+    \[
+   A \text{ є замкненою}
+   \] 
+\end{eg}

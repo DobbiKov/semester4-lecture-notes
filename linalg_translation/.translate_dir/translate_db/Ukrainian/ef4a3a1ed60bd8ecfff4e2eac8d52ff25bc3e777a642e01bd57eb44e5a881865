@@ -1,0 +1,4 @@
+\begin{definition}[Евклідова норма на \(\R^d\)]
+       \textbf{Евклідова норма} вектора \(X \in \R^d\) дорівнює:
+       \[ \|X\| = \|X\|_2 = \left( \sum_{i=1}^{d} x_i^2 \right)^{1/2} = (X \cdot X)^{1/2} \]
+   \end{definition}

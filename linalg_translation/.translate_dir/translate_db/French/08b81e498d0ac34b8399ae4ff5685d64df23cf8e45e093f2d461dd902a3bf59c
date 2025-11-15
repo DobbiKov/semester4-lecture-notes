@@ -1,0 +1,10 @@
+
+$\vec{e_1}, \ldots, \vec{e_n}$ base canonique de $\R^n$, $f$ admet des dérivées partielles en  $X_0$ si $f$ dérivable en  $X_0$ dans les directions $\vec{e_1}, \ldots, \vec{e_n}$.
+\[
+    \frac{d}{dt} f(X_0 + t \vec{e_i}) \mid_{t = 0}
+\] 
+noté
+\[
+\frac{\partial f}{\partial x_i}(X_0)
+\] 
+Par contre, une fonction peut être dérivable dans 

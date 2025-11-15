@@ -1,0 +1,6 @@
+\begin{definition}
+    An \textbf{isometry} of $E$ (or \textbf{orthogonal transformation}) is an endomorphism $f \in \mathcal{L}(E) := \mathcal{L}(E, E)$ preserving the dot product, i.e.:
+     \[
+         \scalair{f(x), f(y)} = \scalair{x, y} \quad \forall x, y \in E
+    \] 
+\end{definition}

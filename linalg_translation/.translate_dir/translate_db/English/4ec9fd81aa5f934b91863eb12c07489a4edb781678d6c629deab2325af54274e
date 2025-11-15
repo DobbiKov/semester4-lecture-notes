@@ -1,0 +1,11 @@
+\begin{definition}.
+    \begin{enumerate}
+        \item Limit:
+            \[
+            \lim_{x \to x_0} F(x) = l
+            \] 
+            if $\forall \epsilon > 0, \exists \delta > 0$ such that if $d_1(x_0, x) < \delta$ then $d_2(l, F(x)) < \epsilon$
+        \item $F$ continuous at $x_0$ if $\lim_{x \to x_0} F(x) = F(x_0)$
+        \item $F$ is continuous (on $E$) if it is continuous at every $x_0$ in $E$
+\end{enumerate}
+\end{definition}

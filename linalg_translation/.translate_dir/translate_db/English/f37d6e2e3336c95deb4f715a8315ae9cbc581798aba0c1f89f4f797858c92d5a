@@ -1,0 +1,3 @@
+\begin{exemple}
+    The intervals \([a,b]\) are compact in \(\R\). The closed balls \(B_f(x_0, r)\) are compact in \(\R^d\).
+\end{exemple}

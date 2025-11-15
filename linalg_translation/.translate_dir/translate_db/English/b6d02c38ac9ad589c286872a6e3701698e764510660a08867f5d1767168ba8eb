@@ -1,0 +1,7 @@
+\begin{definition}
+    If $E$ is a Euclidean space, the set
+    \[
+        L(E, \R) = \{ f: E \to \R \mid f \text{ is linear}\}
+    \] is called the "dual of $E$".
+    It is denoted $E^*$. An element $f \in E^*$ is called a linear form.
+\end{definition}

@@ -1,0 +1,7 @@
+\begin{prop}
+    \begin{itemize}
+        \item If $K \subset E$ is compact, then $K$ is closed and bounded.
+        \item If $K$ is compact and $F$ is closed, so $K \cap F$ is compact. In other words, if $K$ is compact, then every closed set $F \subset K$ is compact.
+        \item If $K$ is compact, so $K$ is complete.
+    \end{itemize}
+\end{prop}

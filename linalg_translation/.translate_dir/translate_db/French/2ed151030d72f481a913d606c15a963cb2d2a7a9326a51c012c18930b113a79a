@@ -1,0 +1,9 @@
+\begin{eg}
+   \[
+       D = \{(x_1, x_2): \frac{e^{x_1 - 2x_2^2}}{x_1^2 + 3x_2^4} \ge 1 \}
+   \]  
+   \begin{align*}
+       &D = f^{-1}([1, +\infty[) &f(x) = \frac{e^{x_1 - 2x_2^2}}{x_1^2 + 3x_2^4}
+   \end{align*}
+   $[1, +\infty[$ est fermé dans $\R$, alors D est aussi fermé car $f$ continue sur  $[1, +\infty[$
+\end{eg}

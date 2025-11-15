@@ -1,0 +1,3 @@
+\begin{definition}
+    $E$ muni d'une application de distance $d$ (voir Definition \ref{def:distance}) se note  $(E, d)$: \underline{espace métrique}
+\end{definition}

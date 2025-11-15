@@ -1,0 +1,10 @@
+\begin{theorem}
+     Let $A \in \mathcal{M}_n(\mathbb{C})$ ($A \in B(E)$ where $(E, \| \cdot \|)$ complete!)
+     \begin{enumerate}
+         \item The series $\sum_{n \in \N}^{} \frac{A^n}{n!}$ converges in $(\mathcal{M}_n(\mathbb{C}), \| \cdot \|)$, its sum  $\sum_{n=0}^{\infty} \frac{A^n}{n!}$ denoted $e^A$ is called the exponential of  $A$.
+         \item  $\|e^A\| \le e^{\|A\|}$
+         \item $\|e^A - \sum_{n=0}^{N} \frac{A^n}{n!}\| \le \frac{\|A\|^{N+1}}{(N+1)!}e^{\|A\|} (\le \frac{\|A\|_{HS}^{N+1}}{(N+1)!}e^{\|A\|_{HS}})$ 
+         \item $e^Ae^B = e^Be^A$ if  $AB=BA$
+         \item  $Be^A = e^AB$ if  $AB=BA$
+     \end{enumerate}
+\end{theorem}

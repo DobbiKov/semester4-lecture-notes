@@ -1,0 +1,3 @@
+\begin{definition}[Послідовність Коші]
+    Послідовність \((x_n)\) в \(E\) є \textbf{Коші} якщо \(\forall \varepsilon > 0, \exists N \in \N\) такий що \(\forall n, p \ge N, d(x_n, x_p) \le \varepsilon\).
+\end{definition}

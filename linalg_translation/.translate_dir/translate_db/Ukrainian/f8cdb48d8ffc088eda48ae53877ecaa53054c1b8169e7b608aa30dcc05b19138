@@ -1,0 +1,22 @@
+\begin{figure}[H]
+   \centering 
+    \begin{tikzpicture}
+            \definecolor{lightgray}{RGB}{200, 200, 200}
+        \filldraw[color=lightgray] (0,0) circle (1cm); 
+        \coordinate (x) at (1, 0);
+        \filldraw[color=black] (x) circle (0.4mm);
+        \node[right] (_) at (x){\small $x$};
+        \node (_) at (0.5, 0.5){A};
+
+        \draw (x) circle (0.2cm);
+        \draw (x) circle (0.3cm);
+        \draw (x) circle (0.1cm);
+        \node[below] (_) at (1.3, -0.3){\small $B(x, r)$};
+
+        \draw (-0.5, 0.3) circle (0.2cm);
+        \filldraw[color=black] (-0.5, 0.3) circle (0.4mm);
+        \node[left](_) at (-0.6, 0.3){\small $x_1$};
+        \node[below] (_) at (-0.3, 0.2){\small $B(x_1, r)$};
+    \end{tikzpicture} 
+    \caption{Дотична точка}
+\end{figure}

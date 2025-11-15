@@ -1,0 +1,7 @@
+\begin{definition}
+    Відстань між точкою $x$ та множиною $B$ становить:
+     \[
+         d(x, B) := \underset{y \in B}{inf}d(x, y)
+    \] 
+    Та сама інтуїція.
+\end{definition}

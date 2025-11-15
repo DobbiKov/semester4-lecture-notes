@@ -1,0 +1,7 @@
+\begin{definition}
+    \textbf{Ортогональна проєкція} з $E$ в $F$ — це проєкція $p_F$ з $E$ на $F$ паралельно до $F^{\perp}$, тобто
+    \begin{align*}
+        p_F: E = F \oplus F^{\perp} &\longrightarrow F \\
+        x = x_F + x_{F^{\perp}} &\longmapsto p_F(x = x_F + x_{F^{\perp}}) = x_F
+    .\end{align*}
+\end{definition}

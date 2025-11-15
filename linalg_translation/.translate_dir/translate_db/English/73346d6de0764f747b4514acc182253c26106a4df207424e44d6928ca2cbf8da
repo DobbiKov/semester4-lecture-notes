@@ -1,0 +1,10 @@
+\begin{explanation}
+   I assume that $d(x_0, x_1) \le r$\\ 
+   Let $x \in B(x_1, r_1)$ therefore $d(x_1, x) < r_1$ to show: $x \in B(x_0, r)$ (i.e $d(x_0, x) < r$?)\\
+   The triangle inequality states:
+   \begin{align*}
+       d(x_0, x) &\le d(x_0, x_1) + d(x_1, x)\\
+                 &< d(x_0, x_1) + r_1 \le r\\
+                 &\implies x \in B(x_0, r)
+   \end{align*}
+\end{explanation}

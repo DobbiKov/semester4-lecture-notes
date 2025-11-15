@@ -1,0 +1,7 @@
+\begin{definition}
+    La distance entre deux ensembles $A, B$ est:
+     \[
+         d(A, B) := \underset{x \in A, y \in B}{inf}d(x, y)
+    \] 
+    Intuitivement, on cherche deux points $x$ et  $y$ tel que la distance est la plus petite possible.
+\end{definition}

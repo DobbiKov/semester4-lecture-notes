@@ -1,0 +1,8 @@
+\begin{prop}
+     \begin{enumerate}
+         \item $A$ open  $\iff$ $A = Int(A)$
+         \item  $A$ closed  $\iff$ $A = Adh(A)$
+         \item  $x \in Adh(A)$  $\iff$ $d(x, A) = 0$
+         \item  $x \in Int(A)$  $\iff$ $d(x, E \setminus A) > 0$
+     \end{enumerate}
+ \end{prop}

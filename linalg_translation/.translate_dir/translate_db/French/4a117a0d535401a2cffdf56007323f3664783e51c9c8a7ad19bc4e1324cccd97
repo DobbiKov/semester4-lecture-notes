@@ -1,0 +1,9 @@
+\begin{definition}
+     $E$ un ensemble. Une suite dans $E$: notée $(u_n)_{n \in \N}$ c'est une fonction $u:  \N \to E$ où $u(n)$ est noté  $u_n$ est le le  $\text{n}^{\text{ième}}$ terme de la suite $(u_n)_{n \in \N}$.
+     \par
+     Si $E = \R^d$
+     \[
+     \R^d \ni X_n = (x_{1,n}, \ldots, x_{d,n})
+     \] 
+ où $(x_{i,n})_{n \in \N}$ suites dans $\R$
+ \end{definition}

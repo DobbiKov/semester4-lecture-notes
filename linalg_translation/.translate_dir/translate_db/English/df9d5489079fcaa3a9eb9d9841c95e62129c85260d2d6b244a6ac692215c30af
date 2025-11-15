@@ -1,0 +1,7 @@
+\begin{definition}
+    The distance between two sets $A, B$ is:
+     \[
+         d(A, B) := \underset{x \in A, y \in B}{inf}d(x, y)
+    \] 
+    Intuitively, we are looking for two points $x$ and $y$ such that the distance is as small as possible.
+\end{definition}

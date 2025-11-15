@@ -1,0 +1,10 @@
+\begin{definition}
+    Нехай $A \subset E$.
+    \begin{enumerate}
+        \item $x_0 \in E$ є внутрішньою до $A$ якщо $\exists \, \delta > 0$ таке що:
+            \[
+            B(x_0, \delta) \subset A
+            \] 
+        \item $Int(A)$ (внутрішність A) = усі внутрішні точки A. (також позначається A)
+    \end{enumerate}
+\end{definition}

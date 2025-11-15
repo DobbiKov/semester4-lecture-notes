@@ -1,0 +1,9 @@
+\begin{definition}[Norm on a \(\K\)-vector space \(E\)]
+       A \textbf{norm} on \(E\) (where \(\K = \R\) or \(\C\)) is a map \(N: E \to \R_+\) (denoted \(\|\cdot\|\)) such that:
+       \begin{enumerate}
+           \item \textbf{Separation:} \(\|X\| = 0 \iff X = 0_E\)
+           \item \textbf{Homogeneity:} \(\|\lambda X\| = |\lambda| \|X\|\) for all \(\lambda \in \K, X \in E\)
+           \item \textbf{Triangle inequality:} \(\|X + Y\| \le \|X\| + \|Y\|\) for all \(X, Y \in E\)
+       \end{enumerate}
+       A vector space equipped with a norm is a \textbf{normed vector space} (NVS).
+   \end{definition}

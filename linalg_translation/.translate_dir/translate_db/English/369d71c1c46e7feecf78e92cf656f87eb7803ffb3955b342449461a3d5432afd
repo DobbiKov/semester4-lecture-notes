@@ -1,0 +1,4 @@
+\begin{definition}[Equivalent Norms]
+       Two norms \(N_1, N_2\) on a normed vector space \(E\) are \textbf{equivalent} if there exist \(a,b > 0\) such that \(\forall X \in E\),
+       \[ a \cdot N_1(X) \le N_2(X) \le b \cdot N_1(X) \]
+   \end{definition}

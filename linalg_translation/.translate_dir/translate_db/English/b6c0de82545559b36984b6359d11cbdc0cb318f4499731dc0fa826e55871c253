@@ -1,0 +1,41 @@
+\begin{preuve} -
+   \begin{itemize}
+       \item Suppose the endomorphism $f$ is trigonalizable and let $\{e_1, \ldots, e_n\}$ be a basis such that
+           \[
+               M(f)_{e_i} = \begin{pmatrix} 
+                   a_{1,1} &            & & *\\
+                   0       & a_{2, 2}   & & \\
+                   \vdots  &      & \ddots & \\
+                   0        & \ldots    & 0 & a_{n, n}
+               \end{pmatrix} 
+           \]
+           We have:
+           \[
+            P_f(X) = \det \begin{pmatrix} 
+                   a_{1,1} - X &            & & *\\
+                   0       & a_{2, 2} - X   & & \\
+                   \vdots  &      & \ddots & \\
+                   0        & \ldots    & 0 & a_{n, n} - X
+               \end{pmatrix} = (a_{1,1} - X) \cdots (a_{n,n} - X)
+           \]
+           Thus, $P_f(X)$ is split (we can note that its roots are the eigenvalues of $f$).
+       \item Suppose $P_f(X)$ is split and let us show by induction that $f$ is trigonalizable.
+            \par
+            For $n=1$, it is trivial.
+            \par
+            Suppose that the result holds for order $n-1$. Since $P_f(X)$ is split, it admits at least one root $\lambda_1 \in K$ and thus an eigenvector $\varepsilon_1 \in E_{\lambda_1}$. Let's complete $\{\varepsilon_1\}$ to a basis $\{\varepsilon_1, \ldots, \varepsilon_n\}$, so we have:
+            \[
+            A = M(f)_{\varepsilon_i} = \begin{pmatrix} 
+                \lambda_1 & b_2 & \ldots & b_n\\
+                0         &     &        &    \\
+                \vdots    &     & B      &    \\
+                0         &     &        &
+            \end{pmatrix}, \quad \text{where: } B \in \mathcal{M}_{n-1}(K)
+            \]
+            Let $F = \operatorname{Vect}(\varepsilon_2, \ldots, \varepsilon_n)$ and $g: F \to F$ be the unique endomorphism of $F$ such that $M(g)_{\varepsilon_2, \ldots, \varepsilon_n} = B$, we have:
+            \[
+            P_f(X) = \det(A - XI_n) = (\lambda_1 - X)\det(B - XI_{n-1}) = (\lambda_1 - X)P_g(X)
+            \]
+            Since $P_f(X)$ is split, $P_g(X)$ is also split, and by the induction hypothesis, $B$ is trigonalizable, so there exists a basis $\{v_2, \ldots, v_n\}$ in which $M(g)_{v_2, \ldots, v_n}$ is triangular, and thus the matrix of $f$ in the basis $\{\varepsilon_1, v_2, \ldots, v_n\}$ is triangular, so $f$ is trigonalizable.
+   \end{itemize} 
+\end{preuve}

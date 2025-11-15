@@ -1,0 +1,35 @@
+\begin{intuition}
+    Ортогональність базису спрощує нам життя. Але спочатку невеликий вступ. Нехай векторний простір $E = \R^2$ і базис $(e_1, e_2) = (\begin{pmatrix} 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0\\ 1 \end{pmatrix})$. Нехай вектор $\vec{v} = (2, 3)$ :
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                scale=1,
+                axis lines=middle,        % Draw axes in the middle
+                xmin=-2, xmax=4,          % X-axis range
+                ymin=-2, ymax=4,          % Y-axis range
+                xlabel={$x$},             % Label for X-axis
+                ylabel={$y$},             % Label for Y-axis
+                xtick={-2,-1,0,1,2,3,4},% X-axis ticks
+                ytick={-2,-1,0,1,2,3,4},% Y-axis ticks
+                ]
+            \draw[color=red, ->, thick] (0, 0) -- node[below]{$e_1$}(1, 0);
+            \draw[color=blue, ->, thick] (0, 0) -- node[left]{$e_2$}(0, 1);
+            \draw[color=green, ->] (0, 0) --node[above]{$\vec{v}$} (2, 3);
+
+            \draw[color=gray, ->, thick] (1, 0) -- node[below]{$e_1$}(2, 0);
+            \draw[color=gray, ->, thick] (2, 0) -- node[left]{$e_2$}(2, 1);
+            \draw[color=gray, ->, thick] (2, 1) -- node[left]{$e_2$}(2, 2);
+            \draw[color=gray, ->, thick] (2, 2) -- node[left]{$e_2$}(2, 3);
+
+            \node[right, above] (_) at (2, 3){$(2, 3)$};
+        \end{axis} 
+        \end{tikzpicture}
+    \end{center}
+    Отже, ми можемо записати $\vec{v} = \vec{(2, 3)} = 2 \cdot \vec{e_1} + 3 \cdot \vec{e_2}$. Значення $x$ та $y$ (координати $v$) показують, скільки частин кожного базисного вектора (число може бути $\in \R$) потрібно взяти і просумувати, щоб отримати $\vec{v}$. (Простіше кажучи: наскільки далеко ми повинні піти вліво і вгору).
+    \par
+    У ортонормальному базисі $\scalair{v, e_i}$ вказує, скільки потрібно взяти вектора $e_i$, щоб утворити вектор  $\vec{v}$, а  $\vec{e_i}$ задає напрямок. Звідси $\scalair{v, e_1}$ еквівалентно $2$, і  $\scalair{v, e_2}$ до  $3$, потім: 
+   \[
+       \vec{v} = \underbrace{\scalair{v, e_1}}_{= 2} \cdot \vec{e_1} + \underbrace{\scalair{v, e_2}}_{= 3} \cdot \vec{e_2}
+   \]  
+   Зазвичай, щоб знайти координати в базисі, слід розв'язувати лінійну систему, тоді як ортонормальний базис дозволяє отримати їх шляхом обчислення скалярного добутку з кожним вектором базису, що значно простіше.
+\end{intuition}

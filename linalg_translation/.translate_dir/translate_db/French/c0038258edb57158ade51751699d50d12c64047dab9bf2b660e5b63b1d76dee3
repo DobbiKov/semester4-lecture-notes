@@ -1,0 +1,24 @@
+
+La géométrie de l'endomorphisme trigonalisable est similaire mais quand même différente. Soit $A$ une matrice représentative de l'endomorphisme  $f$ dans  $K^n$. Il est trigonalisable s'il existe une base  $\{v_1, \ldots, v_n\}$ de $K^n$, notons  $F_1 = \operatorname{Vect}(v_1), F_2 = \operatorname{Vect}(v_1, v_2), \ldots, F_n = \operatorname{Vect}(v_1, v_2, \ldots, v_n)$ tels que
+\[
+F_1 \subset F_2 \subset \ldots \subset F_n
+\] 
+et 
+\[
+    \forall i \in \{1, \ldots, n\}, f(F_i) \subset F_i
+\] 
+Voyez-vous la similarité? L'endomorphisme est stable par le sous-espace! Le vecteur appliqué à $f$ ne quite jamais son sous-espace. Prennons pour l'exemple la matrice suivante:
+\[
+    A = \begin{bmatrix} 
+        1 & 1 & 0\\
+        0 & 2 & 1\\
+        0 & 0 & 3
+    \end{bmatrix} = \operatorname{Mat}(f)_{e_i}
+\] 
+% \[
+% \begin{cases}
+%     v_1 := \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \in F_1, f(\begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix}) = \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \in F_1\\
+%     v_2 = 
+% \end{cases}
+% \] 
+

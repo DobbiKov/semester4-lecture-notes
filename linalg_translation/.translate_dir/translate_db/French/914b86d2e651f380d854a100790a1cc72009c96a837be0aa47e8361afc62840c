@@ -1,0 +1,3 @@
+\begin{definition}
+    alternative de densité. Soit $A \subset B$. $A$ est dense dans  $B$ si toute boule ouverte de  $B$ contient au moins un élémens de  $A$.
+\end{definition}

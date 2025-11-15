@@ -1,0 +1,8 @@
+\begin{proof}
+   \begin{align*}
+       \|X + Y\|^2 = \sqrt{\scalair{X + Y, X + Y}}^2 &= \scalair{X + Y, X + Y} \\ 
+                                                     &= \scalair{X, X + Y} + \scalair{Y, X + Y}  \\
+                                                     &= \scalair{X, X} + \scalair{X, Y} + \scalair{Y, X} + \scalair{Y, Y}\\
+                                                     &= \|X\|^2 + 2\scalair{X, Y} + \|Y\|
+   \end{align*} 
+\end{proof}

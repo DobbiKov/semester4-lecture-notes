@@ -1,0 +1,4 @@
+\begin{theorem}
+    Маємо $E = F \oplus F^{\perp}$.\\
+    Зокрема, $dim(F^{\perp}) = dim(E) - dim(F)$ і $F = (F^{\perp})^{\perp}$
+\end{theorem}

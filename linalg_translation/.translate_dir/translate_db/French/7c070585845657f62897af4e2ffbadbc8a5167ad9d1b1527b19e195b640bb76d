@@ -1,0 +1,3 @@
+\begin{definition}\label{def:polynome-annulateur}
+    Soit $f \in \mathbb{K}^n$ un endomorphisme. Un polynôme $Q(X) \in K[X]$ est un \textbf{polynôme annulateur} de $f$ si  $Q(f) = 0$.
+\end{definition}

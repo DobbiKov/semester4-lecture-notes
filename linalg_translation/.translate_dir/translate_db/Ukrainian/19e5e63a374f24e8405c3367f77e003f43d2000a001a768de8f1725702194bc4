@@ -1,0 +1,8 @@
+\begin{preuve}
+   Припустимо, що $f$ є ізометрією $E$. Нехай $x, y \in E$. За визначенням: $\scalair{f(x), f(y)} = \scalair{x, y}$, отже, покладемо $y := x$, тоді маємо:
+   \begin{align*}
+       &\underbrace{\scalair{f(x), f(x)}}_{\|f(x)\|^2} = \underbrace{\scalair{x, x}}_{\|x\|^2}\\
+       \iff &\|f(x)\|^2 = \|x\|^2\\
+       \iff &\|f(x)\| = \|x\|
+   \end{align*}
+\end{preuve}

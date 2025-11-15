@@ -1,0 +1,8 @@
+\begin{theorem}[Composition Theorem]
+    Let \(U \subset \R^n\) and \(V \subset \R^m\) be open sets.
+    If \(g: U \to V\) is differentiable at \(X_0 \in U\), and \(f: V \to \R^p\) is differentiable at \(Y_0 = g(X_0) \in V\).
+    Then \(h = f \circ g : U \to \R^p\) is differentiable at \(X_0\), and its differential is:
+    \[ dh_{X_0} = df_{g(X_0)} \circ dg_{X_0} \]
+    In terms of Jacobian matrices:
+    \[ J_h(X_0) = J_f(g(X_0)) \cdot J_g(X_0) \]
+\end{theorem}

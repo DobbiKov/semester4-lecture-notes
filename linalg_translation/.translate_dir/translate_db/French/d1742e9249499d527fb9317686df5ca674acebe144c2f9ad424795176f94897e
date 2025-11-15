@@ -1,0 +1,4 @@
+\begin{definition}[Dérivées partielles (cas \(m=1\))]
+    La \(i\)-ème dérivée partielle de \(f: D \to \R\) en \(X_0\) est \(D_{e_i} f(X_0)\), où \((e_i)\) est la base canonique de \(\R^n\).
+    Notation : \(\frac{\partial f}{\partial x_i}(X_0)\) ou \(\partial_i f(X_0)\).
+\end{definition}

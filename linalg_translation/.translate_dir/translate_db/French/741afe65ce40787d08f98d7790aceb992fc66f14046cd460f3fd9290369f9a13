@@ -1,0 +1,11 @@
+\begin{eg}
+    \[
+        \|f\|_{p} = \left( \int_{{a}}^{{b}} {|f(x)|^{p}} \: d{x} {} \right)^{\frac{1}{p}} \text{ avec } 1 \le p < \infty
+    \] 
+    $\| . \|_{p}$ est une semi-norme sur $R([a, b], \mathbb{K})$ (inégalité de Minkowski). $\|f\|_{p} = 0$ n'entraine pas que $f = 0$ (e.g: $[a, b] = [-1, 1]$,  $f(x) = x$, $p = 3$). 
+    \[
+        \|u + v\|_{p} \le \|u\|_p + \|v\|_p
+    \] 
+    Sur $E = \mathcal{C}([a, b], \mathbb{K})$,  $\| . \|_{p}$ est une norme:
+    si $f: [a, b] \to \mathbb{K}$ continue et $\int_{{a}}^{{b}} {|f(x)|^p} \: d{x} = 0$ alors $f(x) = 0 \forall x \in [a, b]$
+\end{eg}

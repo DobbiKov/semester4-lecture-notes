@@ -1,0 +1,7 @@
+\begin{exemple}[Autres normes sur \(\R^d\) ou \(\C^d\)] Soit \(X = (x_1, \ldots, x_d)\)
+      \begin{enumerate}
+          \item Norme 1 : \(\|X\|_1 = \sum_{i=1}^{d} |x_i|\)
+          \item Norme infinie : \(\|X\|_\infty = \max_{1 \le i \le d} |x_i|\)
+          \item Norme p (\(p \ge 1\)) : \(\|X\|_p = \left( \sum_{i=1}^{d} |x_i|^p \right)^{1/p}\)
+      \end{enumerate}
+   \end{exemple}

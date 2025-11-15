@@ -1,0 +1,7 @@
+\begin{lemma}\label{lemma:inegalite-cauchy-schwarz} Cauchy-Schwarz inequality
+   We have
+   \[
+   |<u, v>| \le \|u\| \cdot \|v\| \qquad \forall u, v \in E
+   \] 
+   with equality if and only if $u$ and  $v$ are collinear, i.e  $\exists \, t \in R$ such that $u = tv$ or  $v = tu$
+\end{lemma}

@@ -1,0 +1,12 @@
+% \begin{figure}[H]
+%     \centering
+%     \incfig{continuite-partielle}
+%     \caption{continuite-partielle}
+%     \label{fig:continuite-partielle}
+% \end{figure}
+Нехай  $A = (a_1, \ldots, a_n) \in D$, існують відкриті інтервали $I_1, \ldots, I_n$ з $a_i \in I_i$ такі що $I_1 \times \ldots \times I_n \subset D$ 
+\par
+Я можу покласти 
+\[
+f_i(t) = f(a_1, \ldots, a_{i-1}, t, a_{i+1}, \ldots, a_n) \qquad t \in I_i
+\] 

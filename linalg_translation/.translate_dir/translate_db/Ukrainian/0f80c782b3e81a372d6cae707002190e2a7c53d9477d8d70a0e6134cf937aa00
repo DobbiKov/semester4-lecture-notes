@@ -1,0 +1,11 @@
+\begin{proof}
+    Нехай $Q(X) = a_n X^n + a_{n-1} X^{n-1} + \ldots + a_0$ — анулюючий многочлен для $f$ і $\lambda$ — власне значення для $f$. Отже, $\exists v \neq 0 \in E$ така що $f(v) = \lambda v$, більше того:
+    \[
+        Q(f) = a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id} = 0
+    \] 
+    Але $f(v) = \lambda v$, тому $f^2(v) = f(\lambda v) = \lambda^2 v$, звідки $f^k(v) = \lambda^k v$ $\forall k \in \N$, тоді:
+    \[
+        Q(f(v)) = 0 = (a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id})v = (a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id})v = 0
+     \] 
+     Але $v \neq 0$, тому $a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id} = 0$, звідки $\lambda$ є коренем $Q$.
+\end{proof}

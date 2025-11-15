@@ -1,0 +1,7 @@
+\begin{definition}
+    La \textbf{projection orthogonale} sur un sous-espace $A \subset E$ est une application:
+    \begin{align*}
+        p_F: E &\longrightarrow F \\
+        x &\longmapsto p_F(x = e + e') = e
+    \end{align*}
+\end{definition}

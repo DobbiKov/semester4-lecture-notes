@@ -1,0 +1,6 @@
+\begin{prop}
+   Soit $Q(X)$ est un polynôme annulateur de  $f$, alors les valeurs propres de  $f$ figurent parmis les racines de  $Q$, i.e:
+   \[
+       \operatorname{Sp}(f) \subset \operatorname{Rac}(Q)
+   \] 
+\end{prop}

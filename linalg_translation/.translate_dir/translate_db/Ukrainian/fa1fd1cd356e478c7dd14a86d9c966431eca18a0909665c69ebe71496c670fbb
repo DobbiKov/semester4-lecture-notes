@@ -1,0 +1,6 @@
+\begin{definition}
+    $K \subset E$ є компактною, якщо з будь-якого відкритого покриття $(U_i)_{i \in I}$ множини $F$ можна виділити скінченне підпокриття: я можу вибрати $i_1, \ldots, i_n \in I$ такі що 
+    \[
+    F \subset U_{i_1} \cup U_{i_2} \cup \ldots \cup U_{i_n}
+    \] 
+\end{definition}

@@ -1,0 +1,3 @@
+\begin{definition}
+    Let $F \subset E$. An \textbf{open cover} of $F$, is a union of open sets: $\bigcup_{i \in I} U_i$ such that $F \subset \bigcup_{i \in I} U_i$
+\end{definition}

@@ -1,0 +1,6 @@
+\begin{prop}
+   \begin{enumerate}
+       \item Every Cauchy sequence is bounded.
+        \item Every convergent sequence is Cauchy
+   \end{enumerate} 
+\end{prop}

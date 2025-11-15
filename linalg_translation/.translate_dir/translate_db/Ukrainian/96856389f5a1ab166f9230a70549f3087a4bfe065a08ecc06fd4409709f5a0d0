@@ -1,0 +1,6 @@
+\begin{prop}
+   Нехай $A \in B(E, F)$ та $\|A\| = \sup_{\|x\|_E \le 1} \|A\|_F$  рівномірна норма. $\|A\| = $ найменший $c$ такий що
+    \[
+   \|Ax\|_F \le c \|x\|_E \quad \forall x \in E
+   \]
+\end{prop}

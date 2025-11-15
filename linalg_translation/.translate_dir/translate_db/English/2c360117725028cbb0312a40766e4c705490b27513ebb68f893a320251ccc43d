@@ -1,0 +1,3 @@
+\begin{eg}
+   A space $(\Q, d)$ is not complete. Because we can take a sequence $x_n$ tending towards $\sqrt{2} \not\in \Q$.
+\end{eg}

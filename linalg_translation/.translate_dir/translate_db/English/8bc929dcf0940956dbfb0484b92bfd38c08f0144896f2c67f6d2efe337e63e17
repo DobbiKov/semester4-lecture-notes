@@ -1,0 +1,14 @@
+\begin{theorem}
+    Let $A \in \mathcal{L}(E, F)$. The following properties are equivalent:
+    \begin{enumerate}
+        \item $A: E \to F$ is continuous
+        \item $A$ is continuous at $0_E$
+        \item $\exists C \ge 0$ such that
+            \[
+            \|Ax\|_F \le C\|x\|_E \quad \forall x \in E
+            \] 
+            this is called that $A$ is bounded
+        \item $A$ is bounded on $B_E(0, R)$ $\forall R > 0$
+    \end{enumerate}
+    We say that $A$ is bounded (if $A$ is continuous and linear)
+\end{theorem}

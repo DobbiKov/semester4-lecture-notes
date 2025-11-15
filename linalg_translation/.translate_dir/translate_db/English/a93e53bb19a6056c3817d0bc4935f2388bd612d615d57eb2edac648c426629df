@@ -1,0 +1,3 @@
+\begin{propriete}
+    If \(E\) is a Banach space: Normal convergence \(\implies\) Uniform convergence (and absolute) \(\implies\) Simple convergence.
+\end{propriete}

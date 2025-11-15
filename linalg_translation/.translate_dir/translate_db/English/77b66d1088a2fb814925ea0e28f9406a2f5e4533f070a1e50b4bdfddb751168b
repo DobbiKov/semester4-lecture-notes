@@ -1,0 +1,29 @@
+\begin{eg} We have: $A = \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} $ in the canonical basis $e_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix} $ and $e_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix} $. We recall that we found two eigenvectors:
+     \[
+     \begin{cases}
+         v_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+         v_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix} 
+     \end{cases}
+     \] 
+     We notice that these two vectors are linearly independent and thus form a basis for $\R^2$. Let's try to change the basis of $A$ using two methods:
+      \begin{enumerate}
+          \item We can calculate the coordinates of $f(v_1)$ and $f(v_2)$ in the basis $\{v_1, v_2\}$, we have:
+              \begin{align*}
+                  &f(v_1) = 3v_1 = 3 \cdot v_1 + 0 \cdot v_2\\
+                  &f(v_2) = 2v_2 = 0 \cdot v_1 + 2 \cdot v_2
+              \end{align*}
+              And thus $\operatorname{Mat}_{v_i}(f) = \|f(v_1), f(v_2)\|_{v_i} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} $ 
+          \item We can calculate the change-of-basis matrix $P = P_{e_i \to v_i}$ from the basis $\{e_i\}$ to the basis $\{v_i\}$ and deduce the matrix of $f$ in the new basis. We have:
+             \[
+            \begin{cases}
+                v_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix} = 1 \cdot e_1 + 0 \cdot e_2 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}_{e_i} \\
+                v_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix} = -1 \cdot e_1 + 1 \cdot e_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix}_{e_i} \\
+            \end{cases}
+            \] 
+              thus $P = \begin{bmatrix} 1 & -1\\ 0 & 1 \end{bmatrix} $ and $P^{-1} = \begin{bmatrix} 1 & 1 \\ 0 & 1  \end{bmatrix}$ (you can verify the calculation). And so:
+              \[
+                  A' = P^{-1}AP = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \underbrace{\begin{bmatrix} 3 & -2 \\ 0 & 2 \end{bmatrix}}_{AP} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} 
+              \] 
+     \end{enumerate}
+     And there you have it, the magic: we found the diagonal matrix.
+\end{eg}

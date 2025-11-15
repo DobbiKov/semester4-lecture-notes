@@ -1,0 +1,23 @@
+ $\R^n, \R^p$ $D \subset \R^n$
+\[
+F:D \to \R^p
+\]
+on $\R^n$, $\R^p$ usual distances, on $D$ the distance inherited from $\R^n$.
+% \begin{figure}[ht]
+%     \centering
+%     \incfig{d-distance-exemple}
+%     \caption{d-distance-exemple}
+%     \label{fig:d-distance-exemple}
+% \end{figure}
+
+with Cartesian coordinates
+\[
+F(x_1, \ldots, x_n) = (F_1(x_1, \ldots, x_n), F_2(x_1, \ldots, x_n), \ldots, F_p(x_1, \ldots, x_n))
+\]
+where $F_i: D \to \R$
+
+\[
+F: D \to \R^p \text{ continuous}
+\]
+
+we know:

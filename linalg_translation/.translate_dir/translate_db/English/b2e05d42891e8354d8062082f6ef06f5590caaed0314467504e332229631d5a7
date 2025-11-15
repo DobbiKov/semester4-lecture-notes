@@ -1,0 +1,7 @@
+\begin{definition}
+    Let $(x_n)_{n \in \N}$ a sequence in $E$. A sequence  
+    \[
+        (y_n)_{n \in \N} \text{ with } y_n = x_{\phi(n)}
+    \] 
+    where $\phi: \N \to \N$ is \underline{strictly increasing} is called a \textbf{subsequence} of the sequence $(x_n)$.
+\end{definition}

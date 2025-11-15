@@ -1,0 +1,6 @@
+\begin{itemize}
+    \item $A \in \mathcal{L}(E, F)$
+    \item $\lambda A \in \mathcal{L}(E, F)$ і $\lambda Ax = \lambda(Ax)$
+    \item  $A + B \in \mathcal{L}(E, F)$ і $(A + B)x = Ax + Bx$
+    \item  $0x = 0_F$  $\forall x \in E$
+\end{itemize}

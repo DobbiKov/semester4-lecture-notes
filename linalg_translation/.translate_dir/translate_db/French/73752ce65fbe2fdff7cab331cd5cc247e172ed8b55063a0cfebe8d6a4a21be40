@@ -1,0 +1,3 @@
+\begin{definition}
+    Un espace euclidien est un couple $(E, < . >)$ où $E$ est un  $\R$-espace vectoriel \underline{de dimension finie} et  $< . >$ est un produit scalaire sur  $E$.
+\end{definition}

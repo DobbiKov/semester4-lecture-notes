@@ -1,0 +1,18 @@
+\begin{preuve}
+   \begin{enumerate}
+       \item $Int(A) \subset A$: зрозуміло
+       \item \underline{$Int(A)$ є відкритою:} \\
+           Нехай $x_0 \in Int(A)$. 
+           \par
+           \textbf{Мета:} знайти $\delta_0$ таке що  $B(x_0, \delta_0) \subset Int(A)$. Знайти $\delta_0$ таке що якщо $d(x_0, x) < \delta_0$ тоді $x \in Int(A)$ ?
+           \par
+           \textbf{Гіпотеза:}  $x_0 \in Int(A)$. $\exists \delta_1 > 0$ таке що $B(x_0, \delta_1) \subset A$. Ми бачили, що $B(x_0, \delta_1)$ є відкритою.
+           Я стверджую, що $B(x_0, \delta_1) \subset Int(A)$.
+           \par
+           \textbf{Доведення}: Нехай $x \in B(x_0, \delta_1)$. $B(x_0, \delta_1)$ відкрита, отже $\exists \delta_2 > 0$ таке що $B(x, \delta_2) \subset B(x_0, \delta_1) \subset A$. Отже $x \in Int(A)$, отже  $B(x_0, \delta_1) \subset Int(A)$.\par
+           $Int(A)$ є відкритою.
+       \item Якщо $U$ є відкритою і  $U \subset A$ тоді $U \subset Int(A)$?
+           \par
+           $x_0 \in U$. $U$ відкрита  $\implies$ $\exists \delta$ таке що $B(x_0, \delta) \subset U \subset A$ $\implies$ $x_0 \in Int(A)$
+   \end{enumerate} 
+\end{preuve}

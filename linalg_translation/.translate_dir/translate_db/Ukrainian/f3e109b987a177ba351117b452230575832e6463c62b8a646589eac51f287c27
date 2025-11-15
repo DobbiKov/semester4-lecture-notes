@@ -1,0 +1,9 @@
+\begin{explanation}
+   Нагадаємо, що якщо $G, G'$ є скінченновимірними підпросторами в тому ж векторному просторі, тоді:
+   \[
+   G = G' \iff G \subseteq G' \text{ і } dim(G) = dim(G')
+   \] 
+   $\implies$) $f$ ін'єктивне $\implies$ $Ker(f) = {0}\\$
+   $\impliedby$) Нехай $Ker(f) = {0}$.\\
+   Тоді, обов'язково $dim(Ker(f)) = 0$ і за теоремою про ранг ми маємо $dim(F) = dim(Im(f))$, тому $Im(f) = F'$
+\end{explanation}

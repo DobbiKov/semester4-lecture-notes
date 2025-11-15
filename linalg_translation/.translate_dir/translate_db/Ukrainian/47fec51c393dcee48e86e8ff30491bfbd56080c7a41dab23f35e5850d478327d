@@ -1,0 +1,13 @@
+\begin{prop}
+   Маємо наступні тотожності $\forall u, v \in E$ 
+   \begin{enumerate}
+       \item Тотожність паралелограма:
+           \[
+           \|u + v\|^2 + \|u - v\|^2 = 2(\|u^2\| + \|v\|^2)
+           \] 
+       \item Тотожність поляризації:
+           \[
+               \scalair{u, v} = \frac{1}{4}(\|u + v\|^2 - \|u - v\|^2)
+           \] 
+   \end{enumerate}
+\end{prop}

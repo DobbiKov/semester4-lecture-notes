@@ -1,0 +1,15 @@
+\begin{eg} bizarre.\\
+    Let $E = \R$, $d(x, y) = |y - x|$,  $A = ]0, 1[$ open, not closed in  $\R$.\\
+    \begin{center}
+       \begin{tikzpicture}
+          \draw (-2, 0) -- (2, 0); 
+          \node (x) at (0, 0){]};
+          \node (y) at (1, 0){[};
+          \node[below] (x) at (0, -0.2){$0$};
+          \node[below] (y) at (1, -0.2){$1$};
+          \draw[color=red] (-2, 0) -- (0, 0);
+          \draw[color=red] (1, 0) -- (2, 0);
+       \end{tikzpicture} 
+    \end{center}
+    I consider $A$ as a part of  $(A, d)$. As  $A \setminus A = \O$ which is open, therefore $A$ is closed in $A$. However, the bounds are never reached, so $A$ is open in  $(A, d)$.
+\end{eg}

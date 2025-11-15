@@ -1,0 +1,13 @@
+\begin{definition}
+    \[
+        \C^d = \{ X = (x_1, \ldots, x_d): \: x_i \in \C\}
+    \] 
+    \begin{align*}
+    &z \in \C \quad \overline{z} = a - ib \quad \overline{z}z = a^2 + b^2 \quad |z| = \sqrt{\overline{z}z} = \sqrt{a^2 + b^2}  \\
+    &z = a + ib \qquad a = Re\,z,\,b = Im\,z\\
+    &Re\,X = (Re\,x_1, \ldots, Re\,x_d) \in \R^d\\
+    &Im\,X = (Im\,x_1, \ldots, Im\,x_d) \in \R^d\\
+    &\underset{\in \C^d}{X} = \underset{\in \R^d}{Re\,X} + i\underset{\in \R^d}{\:Im\,X}\\
+    \end{align*}
+    $\C^d$ is a vector space over $\C$ (same formulas with $\lambda \in \C$ field of scalars)
+\end{definition}

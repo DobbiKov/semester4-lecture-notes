@@ -1,0 +1,6 @@
+\begin{definition}
+    Let $U$ be a set and $E = \{f: U \to \mathbb{K} \text{ bounded} \}$ 
+    \[
+        \|f\|_{\infty} = \sup_{x \in U} |f(x)| \text{ norm on E}
+    \] 
+\end{definition}

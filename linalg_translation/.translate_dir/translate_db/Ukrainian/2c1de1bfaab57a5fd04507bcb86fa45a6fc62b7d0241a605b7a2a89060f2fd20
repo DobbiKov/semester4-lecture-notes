@@ -1,0 +1,11 @@
+\begin{definition}
+    Нехай $x, y \in E$ — два ненульові вектори. Маємо, згідно з нерівністю Коші-Буняковського (див. лему \ref{lemma:inegalite-cauchy-schwarz}):
+    \[
+        \frac{| \scalair{x, y} |}{\|x\| \cdot \|y\|} \le 1
+    \] 
+    Тоді існує єдиний $\theta \in [0, \pi]$ такий, що:
+     \begin{equation}
+        \cos \theta = \frac{ \scalair{x, y}}{\|x\| \cdot \|y\|} 
+    \end{equation}
+    $\theta$ називається \textbf{кутом} (неорієнтованим) між векторами $x$ і $y$.
+\end{definition}

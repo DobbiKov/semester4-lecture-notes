@@ -1,0 +1,6 @@
+\begin{definition}
+    \[
+        \R^d = \{ X = (x_1, \ldots, x_d), x_i \in \R\}
+    \] 
+    $x_1, \ldots, x_d$ декартові координати X
+\end{definition}

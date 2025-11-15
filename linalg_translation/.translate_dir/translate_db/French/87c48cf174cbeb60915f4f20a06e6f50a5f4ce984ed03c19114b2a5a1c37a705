@@ -1,0 +1,3 @@
+\begin{intuition}
+   Les vecteurs orthogonales (perpendiculaires) ne sont jamais dans l'un l'autre (i.e $e_i = \lambda e_j$ n'est pas possible) si les vecteurs sont liés, soit l'angle est $< 90º$ (donc les vecteurs ne sont pas orthogonales, absurd), (ils sont dans l'un l'autre, ils ne sont pas orthogonales, absurd). Donc ils sont bien libres.
+\end{intuition}

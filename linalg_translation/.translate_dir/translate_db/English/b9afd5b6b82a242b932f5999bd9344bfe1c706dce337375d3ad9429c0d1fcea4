@@ -1,0 +1,54 @@
+\begin{prop} the properties of the determinant.
+    For this proposition, we denote $\det(c_1, \ldots, c_n)$ a determinant where $\forall i, \, r_i$ and $\forall i, \, y_i$ represent a column (or a column vector). And $\forall i, \lambda_i \in \R$.
+    \begin{enumerate}
+        \item \textbf{Determinant of the identity matrix is 1:}
+            \[
+            \det(I_n) = 1
+            \] 
+        \item \textbf{Determinant of the rank 1 matrix is its only element}:
+            \[
+                \det(\begin{bmatrix} a_{1,1} \end{bmatrix} ) = a_{1,1} \qquad \text{ où } a_{1,1} \in \R
+            \] 
+        \item \textbf{Linearity 1}:
+            \[
+            \det(r_1, \ldots, r_i + y_i, \ldots, r_n) = \det(r_1, \ldots, r_i, \ldots, r_n) + \det(r_1, \ldots, y_i, \ldots, r_n)
+            \] 
+        \item \textbf{Linearity 2}:
+            \[
+            \det(r_1, \ldots, \lambda_ir_i, \ldots, r_n) = \lambda_i\det(r_1, \ldots, r_i, \ldots, r_n) 
+            \] 
+            \begin{note}
+               That's why:
+               \[
+               \det(\lambda A) = \lambda^n\det(A)
+               \] 
+            \end{note}
+        \item \textbf{Same columns}: Suppose that $i \neq j$ and $c_i = c_j$ then:
+             \[
+            \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) = 0
+            \] 
+            If there are two identical columns, then $\det$ is equal to 0.
+        \item \textbf{Column swaps}:
+            
+\[
+    \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) 
+    = -\det(c_1, \ldots, 
+    \underbrace{c_j , \ldots, 
+    c_i}_{\text{permutation}}, \ldots, c_n)
+\]
+In other words, a column permutation changes the sign.
+
+\item \textbf{Determinant of multiplied matrices}: Let $A, B \in \mathcal{M}_n(\R)$
+    \[
+        \det(AB) = \det(A)\det(B) 
+    \] 
+
+\item \textbf{Determinant of a transposed matrix}: Let $A \in \mathcal{M}_n(\R)$
+    \[
+        \det(A^{T}) = \det(A)
+    \] 
+
+
+% Drawing the arc manually
+\end{enumerate}
+\end{prop}

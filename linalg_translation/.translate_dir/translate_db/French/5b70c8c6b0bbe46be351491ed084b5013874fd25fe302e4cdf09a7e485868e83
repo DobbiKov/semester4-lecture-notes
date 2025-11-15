@@ -1,0 +1,5 @@
+\begin{definition}[Produit Scalaire sur \(\R^d\)]
+        Pour \(X=(x_1, ..., x_d)\) et \(Y=(y_1, ..., y_d)\) dans \(\R^d\), le \textbf{produit scalaire} est :
+        \[ X \cdot Y = \sum_{i=1}^d x_i y_i = \|X\| \|Y\| \cos(\theta) \]
+        Propriétés : bilinéarité, symétrie, défini positif (\(X \cdot X \ge 0\), et \(X \cdot X = 0 \iff X = 0_d\)).
+    \end{definition}

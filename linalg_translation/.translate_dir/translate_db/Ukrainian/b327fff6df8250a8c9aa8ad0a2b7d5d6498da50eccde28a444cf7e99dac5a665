@@ -1,0 +1,7 @@
+\begin{theorem}
+    Нехай $A \in \mathcal{M}_n(\R)$ квадратна матриця така що $\det(A) \neq 0$, тоді:
+    \[
+        A^{-1} = \frac{1}{\det(A)}\cdot A^{*}
+    \] 
+    є оберненою матрицею до $A$.
+\end{theorem}

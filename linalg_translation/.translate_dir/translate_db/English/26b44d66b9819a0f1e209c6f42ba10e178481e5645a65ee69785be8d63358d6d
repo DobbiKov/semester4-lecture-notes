@@ -1,0 +1,6 @@
+\begin{note}
+    \[
+        F^{\perp} := \{x \in E \mid \scalair{X, Z} = 0 \, \forall z \in F\} 
+    \]
+    the orthogonal of $F$.
+\end{note}

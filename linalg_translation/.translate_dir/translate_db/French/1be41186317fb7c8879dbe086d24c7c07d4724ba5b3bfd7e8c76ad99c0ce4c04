@@ -1,0 +1,8 @@
+\begin{definition}[Boules]
+    Soit \((E, d)\) un espace métrique, \(x_0 \in E\) et \(r > 0\).
+    \begin{enumerate}
+        \item \textbf{Boule ouverte} : \(B(x_0, r) = \{ x \in E : d(x_0, x) < r \}\)
+        \item \textbf{Boule fermée} : \(B_f(x_0, r) = \{ x \in E : d(x_0, x) \le r \}\)
+        \item \textbf{Sphère} : \(S(x_0, r) = \{ x \in E : d(x_0, x) = r \}\)
+    \end{enumerate}
+\end{definition}

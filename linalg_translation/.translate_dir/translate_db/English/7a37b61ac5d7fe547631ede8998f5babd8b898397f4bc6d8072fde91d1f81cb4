@@ -1,0 +1,6 @@
+ is therefore equivalent to the system
+\[
+\frac{dX'}{dt} = A'X'
+\]
+
+This system is easily integrated, because \( A' \) is diagonal.

@@ -1,0 +1,20 @@
+\begin{itemize}
+    \item vector space $E$, $F$, etc
+    \item vectors: $x, y, e$, etc.
+    \item zero vector: denoted $0_E$ or simply $0$
+    \item scalars: $\lambda, \mu \in \mathbb{K}$
+    \item $\mathbb{K} = \R \text{ or } \mathbb{C}$
+    \item $A \in \mathcal{L}(E, F)$ action on $x$, denoted $Ax$ (rather than $A(x)$)
+    \item dimension: $E$ of finite dimension if $E$ admits a base with a finite number of elements, otherwise $E$ is said to be of infinite dimension $\iff$ $\forall N \in \N$, there exists a free family of $N$ vectors. The dimension depends on $\mathbb{K}$!
+         \begin{itemize}
+             \item on $\mathbb{C}$ $\dim \mathbb{C} = 1$ base formed from the vector $1 \in \mathbb{C}$
+             \item on $\R$ $\dim \mathbb{C} = 2$ base formed from $1, i$
+        \end{itemize}
+        \begin{align*}
+            &z = z \cdot 1 \quad z \in \mathbb{C}\\
+            &z = x \cdot 1 + y \cdot i \quad x, y \in \R
+        \end{align*}
+        \[
+            \mathbb{C} \sim \R^2 \text{ as } \R \text{ vector space}
+        \] 
+\end{itemize}

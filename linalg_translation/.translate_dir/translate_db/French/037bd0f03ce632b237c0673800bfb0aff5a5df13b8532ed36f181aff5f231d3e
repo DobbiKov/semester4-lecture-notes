@@ -1,0 +1,15 @@
+\begin{prop}\label{def:continuite-topologique}
+    definition de la continuité topologique.
+    \par
+    Soit $(E_{1}, d_1)$ et $(E_2, d_2)$ deux éspaces métriques et la fonction $F: E_1 \to E_2$, on dit que  $F$ est continue si et seulement si:
+     \[
+         \forall U \subset E_2 \text{ ouvert},  F^{-1}(U) \text{ ouvert}
+    \] 
+    où $F^{-1}(U) = \{ x \in E_1 \mid F(x) \in U\}$
+\begin{figure}[H]
+    \centering
+    \incfig{continuite-topologique}
+    \caption{continuite-topologique}
+    \label{fig:continuite-topologique}
+\end{figure}
+\end{prop}

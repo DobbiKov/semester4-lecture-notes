@@ -1,0 +1,11 @@
+\begin{definition}.
+    \begin{enumerate}
+        \item Limite:
+            \[
+            \lim_{x \to x_0} F(x) = l
+            \] 
+            si $\forall \epsilon > 0, \exists \delta > 0$ tq si $d_1(x_0, x) < \delta$ alors $d_2(l, F(x)) < \epsilon$
+        \item $F$ continue en  $x_0$ si $\lim_{x \to x_0} F(x) = F(x_0)$
+        \item $F$ est continue (sur $E$) si elle est continue en tout $x_0$ de $E$
+\end{enumerate}
+\end{definition}

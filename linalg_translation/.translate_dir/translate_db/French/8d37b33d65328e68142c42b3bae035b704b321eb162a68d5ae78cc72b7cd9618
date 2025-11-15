@@ -1,0 +1,25 @@
+\begin{preuve} de la prop. \ref{prop:boules-fermes-sont-compactes}
+   \begin{enumerate}
+       \item $n = 1$.  À montrer: $[a, b]$ est compact.
+           \par
+           Soit  $(U_i)_{i \in I}$ un recouvrement ouvert de $[a, b]$. Soit  $F$: les  $x \in [a, b]$ tels que  $[a, x]$ est récouvert par un nombre fini de  $U_i$.
+           \par
+           \underline{But:} montrer que  $b \in F$! (si $x \in F$, et  $x' \le x$ $x' \in F$)
+            \begin{enumerate}
+                \item $F \neq \O$: $a \in F$  $[a, a] = \{ a \}$
+                \item  $c = sup(F)$. \underline{On montre que $c = b$} \par
+                    Supposons que $c < b$.
+                     \begin{itemize}
+                        \item $c$ appartient à un des  $U_i$ noté  $U_{i_0}$
+                        \item $U_{i_0}$ est ouvert, $c \in U_{i_0}$ donc $\exists \delta_0 > 0$ tel que $]c - \delta_0, c + \delta_0[ \subset U_{i_0}$
+                        \item $c = sup(F)$:  $\forall \delta > 0, \, \exists x_{\delta} \in F$ avec $c - \delta < x_{\delta} \le c$
+                            \[
+                            \delta = \delta_{0,2} \quad \exists x_{\delta_0} \in F, c - \delta_{0,2} < x_{\delta_0}
+                            \] 
+                            $[a, x_{\delta_0}]$ reouvert par $U_{i_1} \cup \ldots \cup U_{i_n}$ et $]c - \delta_0, c + \delta_0[ \subset U_{i_0}$ donc $[a, c + \delta_{0,2}]$ est reouvert par $U_{i_0} \cup U_{i_1} \cup \ldots \cup U_{i_n}$, donc $c + \delta_{0, 2} \in F$ contredit que $c = sup(F)$. Donc  $c = b$.
+                            \par
+                            $F$ c'est  $[a, b[$ ou $[a, b]$.  $b \in F$  $\exists U_{i_1}, \ldots, U_{i_n}$ tq $[a, b] \subset U_{i_1} \cup \ldots \cup U_{i_n}$, $[a, b]$ compact.
+                    \end{itemize}
+            \end{enumerate}
+   \end{enumerate}
+\end{preuve}

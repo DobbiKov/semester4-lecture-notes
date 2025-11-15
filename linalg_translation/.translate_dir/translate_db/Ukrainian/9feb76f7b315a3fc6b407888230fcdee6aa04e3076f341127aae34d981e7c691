@@ -1,0 +1,9 @@
+\begin{intuition}
+    Оскільки $Q(f) = 0$, тому $\forall v \in E, Q(f)(v) = 0$ отже
+    $\operatorname{Ker}(Q(f)) = E$. $\exists v_1, \ldots, v_p$ такі що $v = v_1 +
+    \ldots + v_p$. Але усі поліноми попарно взаємно прості, тоді лише один з них анулює $v_i$ тому $v_i \in \operatorname{Ker}Q_i(f)$ і
+    це залишається правдою для всіх $v_1, \ldots, v_p$. І оскільки поліноми
+    взаємно прості, тож якщо $k \neq j$ і $Q_k(v_i) = 0$, тоді $Q_j(v_i) \neq
+    0$ бо $Q_j$ і $Q_k$ відрізняються. Тоді, $\forall i, j \,
+    \operatorname{Ker}Q_i \cap \operatorname{Ker}Q_j = \{0\}$.
+\end{intuition}

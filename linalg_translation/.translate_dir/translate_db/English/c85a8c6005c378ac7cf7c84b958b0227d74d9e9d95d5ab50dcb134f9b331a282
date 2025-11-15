@@ -1,0 +1,59 @@
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                axis equal, % Ensures the circle appears round
+                axis lines=middle,
+                xlabel={$x$},
+                ylabel={$y$},
+                xmin=-1.5, xmax=1.5,
+                ymin=-1.5, ymax=1.5
+                ]
+                % Plot a circle with radius 1
+                \addplot [
+                    domain=0:360,       % Angle range
+                    samples=200,        % Smoothness
+                    fill=none,          % No solid fill color
+                    pattern=north east lines, % Hatch pattern
+                    pattern color=blue,
+                    draw=none           % No outline
+                    ] ({cos(x)}, {sin(x)}); 
+                \node[above left] (_) at (0, 0){$x_0$};
+                \draw[fill=black] (0, 0) circle (0.4mm);
+                \draw[thick] (0,0)--(1,0);
+                \node[above] (r) at ($(0,0)!0.5!(1,0)$){\Large$r$};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{open balls (i.e $d(x_0, x) < r$)}
+    \end{subfigure}
+    \hfill
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \begin{tikzpicture}
+            \begin{axis}[
+                axis equal, % Ensures the circle appears round
+                axis lines=middle,
+                xlabel={$x$},
+                ylabel={$y$},
+                xmin=-1.5, xmax=1.5,
+                ymin=-1.5, ymax=1.5
+                ]
+                % Plot a circle with radius 1
+                \addplot [
+                    domain=0:360,       % Angle range
+                    samples=200,        % Smoothness
+                    fill=none,          % No solid fill color
+                    pattern=north east lines, % Hatch pattern
+                    pattern color=blue,
+                    ] ({cos(x)}, {sin(x)}); 
+                \node[above left] (_) at (0, 0){$x_0$};
+                \draw[fill=black] (0, 0) circle (0.4mm);
+                \draw[thick] (0,0)--(1,0);
+                \node[above] (r) at ($(0,0)!0.5!(1,0)$){\Large$r$};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{closed balls (i.e $d(x_0, x) \le r$)}
+    \end{subfigure}
+\end{figure}

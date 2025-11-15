@@ -1,0 +1,9 @@
+\begin{prop}
+   Let $E$ be a Euclidean space and $f \in End(E)$. There exists one and only one endomorphism $f^* \in E$ such that
+   \[
+       \scalair{f(x), y} = \scalair{x, f^*(y)}, \quad \forall x, y \in E
+   \] 
+   $f^*$ is called the \textbf{adjoint} of $f$.
+   \par
+   If $\{e_i\}$ is an orthonormal basis and $A = M(f)_{e_i}$, then the matrix $A^* = M(f^*)_{e_i}$ is the transpose of $A$, i.e. $A^* = A^T$
+\end{prop}

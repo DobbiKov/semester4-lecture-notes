@@ -1,0 +1,6 @@
+\begin{prop}
+    Маємо: $\|A\| \le \|A\|_{HS}$ де
+    \[
+    \|A\|_{HS}^2 = \sum_{1\le i,j\le n}^{} |a_{i,j}|^2
+    \] 
+ \end{prop}

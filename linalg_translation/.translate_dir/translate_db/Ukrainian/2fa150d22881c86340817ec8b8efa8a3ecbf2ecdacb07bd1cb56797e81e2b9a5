@@ -1,0 +1,19 @@
+\begin{preuve}
+   $A$ є матрицею, стовпцями якої є вектори $f(e_j)$, записані в базисі $\epsilon$:
+    \[
+        A = (f(e_1) | \ldots | f(e_n))\quad f(e_j) = \begin{pmatrix} a_{1,j}\\ \ldots\\ a_{n, j} \end{pmatrix} 
+   \] 
+   Оскільки $\forall v \in E, \, v = c_1e_1 + \ldots c_ne_n$ тому $f(v) = c_1f(e_1) + \ldots c_nf(e_n)$ за лінійністю, отже нам залишається дослідити кожен $f(e_j)$
+   \begin{align*}
+       f(e_j) = a_{1, j}e_1 + \ldots a_{n, j}e_n \implies\\
+       \langle f(e_j), e_i \rangle = \left\langle \sum_{k=1}^n a_{k,j} e_k, e_i \right\rangle = \sum_{k=1}^{n} a_{k,j}\scalar{e_k}{e_i} = a_{k, j}
+   \end{align*}
+   car $\scalar{e_k}{e_j} = \begin{cases}
+       0 \text{ якщо } k \neq j\\
+       1 \text{ якщо } k = j
+   \end{cases}$
+   Отже:
+   \[
+       a_{i, j} = \scalair{f(e_j), e_i}
+   \] 
+\end{preuve}

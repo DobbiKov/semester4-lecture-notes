@@ -1,0 +1,9 @@
+\begin{theorem}
+    Нехай $A \in B(E, F)$, покладемо $\displaystyle \|A\| = \sup_{x \in E, \|x\|_E \le 1} \|Ax\|_F = \sup_{x \in B_E(0, 1)} \|Ax\|_{F}$
+
+    \begin{enumerate}
+        \item $\| \cdot \|$ є нормою на $B(E, F)$ називається рівномірною нормою.
+        \item Маємо: $\|Ax\|_F \le \|A\|\|x\|_{E} \quad \forall x \in E$
+        \item $\|A\| = $ найменша константа $C$ така що $\|Ax\|_{F} \le C\|x\|_{E} \quad \forall x \in E$
+    \end{enumerate}
+\end{theorem}

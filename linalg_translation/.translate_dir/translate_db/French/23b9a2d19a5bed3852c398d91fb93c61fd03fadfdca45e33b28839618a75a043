@@ -1,0 +1,7 @@
+\begin{preuve}
+    Par la proposition \ref{prop:isometrie-ata-eg-i}, on a: $A^TA = I$, d'où:
+     \begin{align*}
+         det(A^TA) = det(I) = 1 \implies& det(A)^2 = 1 \quad \text{ (car }  det(A^T) = det(A) \text{)}\\
+                                \implies& det(A) = \pm 1
+    \end{align*}
+\end{preuve}

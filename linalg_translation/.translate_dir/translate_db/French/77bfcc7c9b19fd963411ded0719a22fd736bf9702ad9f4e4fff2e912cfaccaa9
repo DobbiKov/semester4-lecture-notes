@@ -1,0 +1,65 @@
+\begin{preuve}
+    On construit une suite de fonctions continues $(f_n)_{n \in \mathbb{N}}$ sur $[0,1]$ qui converge en norme $\| \cdot \|_1$ vers une fonction $f$ discontinue. Cela montrera que la limite de cette suite dans la norme $\| \cdot \|_1$ n’appartient pas à $\mathcal{C}([0,1], \mathbb{R})$, donc que cet espace n’est pas complet.
+    
+\begin{figure}[H]
+    \centering
+    \incfig{lemma-n-est-pas-complet}
+    \caption{Lemma avec un espace pas complet}
+    \label{fig:lemma-n-est-pas-complet}
+\end{figure}
+
+\medskip
+
+\textbf{Définition de la suite $(f_n)$ :} pour chaque $n \in \mathbb{N}$, on définit $f_n : [0,1] \to \mathbb{R}$ par
+\[
+f_n(x) = 
+\begin{cases}
+0 & \text{si } x \le \frac{1}{2} - \frac{1}{2n}, \\[4pt]
+2n\left(x - \frac{1}{2} + \frac{1}{2n}\right) & \text{si } \frac{1}{2} - \frac{1}{2n} < x < \frac{1}{2} + \frac{1}{2n}, \\[4pt]
+1 & \text{si } x \ge \frac{1}{2} + \frac{1}{2n}.
+\end{cases}
+\]
+Chaque $f_n$ est continue sur $[0,1]$ car elle est affine par morceaux avec raccords continus.
+
+\medskip
+
+\textbf{Définition de la fonction limite :} posons
+\[
+f(x) = 
+\begin{cases}
+0 & \text{si } x < \frac{1}{2}, \\
+1 & \text{si } x > \frac{1}{2}, \\
+\text{valeur quelconque} & \text{si } x = \frac{1}{2}.
+\end{cases}
+\]
+Alors $f$ est \textbf{discontinue} en $x = \frac{1}{2}$, donc $f \notin \mathcal{C}([0,1], \mathbb{R})$.
+
+\medskip
+
+\textbf{Convergence de $(f_n)$ vers $f$ dans $\| \cdot \|_1$ :}
+
+On a
+\[
+\|f_n - f\|_1 = \int_0^1 |f_n(x) - f(x)|\, dx.
+\]
+Mais $f_n(x) = f(x)$ sauf sur l’intervalle $\left[\frac{1}{2} - \frac{1}{2n}, \frac{1}{2} + \frac{1}{2n}\right]$ de longueur $\frac{1}{n}$, et sur cet intervalle, $|f_n(x) - f(x)| \le 1$, donc :
+\[
+\|f_n - f\|_1 \le \int_{\frac{1}{2} - \frac{1}{2n}}^{\frac{1}{2} + \frac{1}{2n}} 1\, dx = \frac{1}{n} \xrightarrow[n \to \infty]{} 0.
+\]
+
+Ainsi, $f_n \to f$ dans la norme $\| \cdot \|_1$.
+
+\medskip
+
+\textbf{Conséquence :} la suite $(f_n)$ est de Cauchy dans $\left( \mathcal{C}([0,1], \mathbb{R}), \| \cdot \|_1 \right)$, car :
+\[
+\|f_n - f_p\|_1 \le \|f_n - f\|_1 + \|f - f_p\|_1 \le \frac{1}{n} + \frac{1}{p} \xrightarrow[n,p \to \infty]{} 0.
+\]
+
+Cependant, la limite $f$ n’est pas continue, donc $f \notin \mathcal{C}([0,1], \mathbb{R})$.
+
+\medskip
+
+\textbf{Conclusion :} Il existe une suite de Cauchy dans $\left( \mathcal{C}([0,1], \mathbb{R}), \| \cdot \|_1 \right)$ qui ne converge pas dans cet espace. Par conséquent, cet espace n’est pas complet.
+
+\end{preuve}

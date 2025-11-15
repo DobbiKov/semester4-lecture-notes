@@ -1,0 +1,18 @@
+\begin{preuve}
+   \begin{enumerate}
+       \item $Int(A) \subset A$: clair
+       \item \underline{$Int(A)$ est ouvert:} \\
+           Soit $x_0 \in Int(A)$. 
+           \par
+           \textbf{But:} trouver $\delta_0$ tel que  $B(x_0, \delta_0) \subset Int(A)$. Trouver $\delta_0$ tel que si $d(x_0, x) < \delta_0$ alors $x \in Int(A)$ ?
+           \par
+           \textbf{Hyp:}  $x_0 \in Int(A)$. $\exists \delta_1 > 0$ tel que $B(x_0, \delta_1) \subset A$. On a vu que $B(x_0, \delta_1)$ est ouvert.
+           Je dis que $B(x_0, \delta_1) \subset Int(A)$.
+           \par
+           \textbf{Preuve}: Soit $x \in B(x_0, \delta_1)$. $B(x_0, \delta_1)$ ouvert, donc $\exists \delta_2 > 0$ tel que $B(x, \delta_2) \subset B(x_0, \delta_1) \subset A$. Donc $x \in Int(A)$, donc  $B(x_0, \delta_1) \subset Int(A)$.\par
+           $Int(A)$ est ouvert.
+       \item Si $U$ est ouvert et  $U \subset A$ alors $U \subset Int(A)$?
+           \par
+           $x_0 \in U$. $U$ ouvert  $\implies$ $\exists \delta$ tel que $B(x_0, \delta) \subset U \subset A$ $\implies$ $x_0 \in Int(A)$
+   \end{enumerate} 
+\end{preuve}

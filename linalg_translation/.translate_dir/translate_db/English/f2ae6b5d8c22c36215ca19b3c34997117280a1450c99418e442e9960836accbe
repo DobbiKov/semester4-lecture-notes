@@ -1,0 +1,6 @@
+\begin{eg}
+   \begin{align*}
+       &\|X\|_1 = \sum_{n=1}^{d} |x_i|\\
+       &\|X\|_{\infty} = \underset{1\le i \le n}{max} |x_i|
+   \end{align*} 
+\end{eg}

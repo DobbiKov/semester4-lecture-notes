@@ -1,0 +1,3 @@
+\begin{theorem}
+    Un ensemble $K \subset E$ est compact, si toute suite $(x_n)_{n \in \N}$ des éléments de $K$, possede une sous-suite qui converge  vers un éléments $x \in K$.
+\end{theorem}

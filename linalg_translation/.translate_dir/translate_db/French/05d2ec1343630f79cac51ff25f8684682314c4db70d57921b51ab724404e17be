@@ -1,0 +1,34 @@
+\begin{preuve}
+    \underline{Weierstrass:} $f: \R \to \R$ $K = [a, b]$. \par
+    Je prends  $(E, d)$ à la place de  $\R^n$. $f$ bornée sur  $K$:  $\exists c_1, c_2$ telles que 
+    \[
+    c_1 \le f(x) \le c_2, \forall x \in K \iff f(K) \subset [c_1, c_2] 
+\] 
+    C'est clair car $f(K)$ est compact dans  $\R$, donc  bornée.
+    \par
+    \begin{align*}
+        &m = \underset{x \in K}{inf} f(x) = inf \: f(K) &M = \underset{x \in K}{sup} f(x) = sup \: f(K)
+    \end{align*}
+    À montrer: $\exists x \in K$ tel que $f(x) = m$ et  $\exists x' \in K$ tel que $f(x') = M$
+    \par
+     $m = inf \: f(K)$, ça veut dire que 
+      \begin{enumerate}
+          \item $f(K) \subset [m, +\infty[$ ($m$ minorant de  $f(K)$)
+          \item $\forall \epsilon > 0, \exists y \in f(K)$ tel que $y \le m + \epsilon$
+     \end{enumerate}
+     $\epsilon = \frac{1}{n}$ donne une suite $y_n \in f(K)$ telle que $y_n \to m$
+     \begin{align*}
+         &y_n = f(x_n) &x_n \in K
+     \end{align*}
+     $K$ compact:   $\exists$ sous suite     $x_{\phi(n)}$ telle que 
+      \[
+      x_{\phi(n)} \xrightarrow[n \to \infty]{} x \in K
+      \] 
+     $f: E \to \R$ continue, donc 
+     \[
+         f(x_{\phi(n)}) = y_{\phi(n)} \to f(x) 
+     \] 
+     Mais, $y_n \to m$, donc $y_{\phi(n)} \to m$ et $y_{\phi(n)} \to f(x)$, donc $m = f(x)$,  $m$ est atteint.
+     \par
+     Pour montrer que $M$ est atteint la preuve est identique.
+\end{preuve}

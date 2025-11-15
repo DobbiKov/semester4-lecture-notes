@@ -1,0 +1,18 @@
+\begin{definition}
+    Білінійна форма на $E$ (\textbf{скалярний добуток}) евклідовому просторі — це відображення:
+    \begin{align*}
+        f: E \times E &\longrightarrow \R \\
+        (u, v) &\longmapsto f(u, v) 
+    \end{align*}
+    що задовольняє наступні властивості:
+    \begin{enumerate}
+        \item \textbf{Білінійність}:
+            \begin{enumerate}
+                \item $f(u + \lambda v, w) = B(u, w) + \lambda B(v, w)$ де $u, v, w \in E$ та  $\lambda \in \R$
+                \item $f(u, v + \lambda w) = B(u, v) + \lambda B(v, w)$ де $u, v, w \in E$ та $\lambda \in \R$
+            \end{enumerate}
+        \item \textbf{Симетричність}: $B(u, v) = B(v, u) \qquad \forall u, v \in E$ 
+        \item \textbf{Додатна визначеність}: $\forall u \in E, B(u, u) \ge 0$
+        \item \textbf{Визначеність}: $B(u, u) = 0 \iff u = 0$
+    \end{enumerate}
+\end{definition}

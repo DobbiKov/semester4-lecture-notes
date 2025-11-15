@@ -1,0 +1,3 @@
+“Classical” linear algebra deals with vector spaces, where we only talk about linear combinations, subspaces, bases, matrices, etc. At some point, this is no longer sufficient. To be able to explore stronger, more complex, and useful notions, we will need to calculate the length of a vector, the angles between two vectors, the relative positioning between vectors, etc. To be able to study these concepts, we introduce the notion of a dot product (bilinear form) and then the vector spaces equipped with this product.
+
+This chapter is devoted to the study of the two main notions:

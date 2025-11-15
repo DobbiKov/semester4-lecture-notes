@@ -1,0 +1,6 @@
+\begin{theorem}
+    Soientt $N_1, N_2$ deux normes, alors:
+    \[
+    N_1, N_2 \text{ topologiquement équivalentes } \iff N_1, N_2 \text{ équivalentes }
+    \] 
+\end{theorem}

@@ -1,0 +1,15 @@
+\begin{prop}
+   Let $f, g: D \to \R$ be continuous.
+   \begin{itemize}
+       \item $f + g, f \times g$ are continuous on $D$
+       \item if  $g(X) \neq 0, \: \forall X \in D, \frac{f}{g}$ is continuous on $D$
+       \item if  $f(D) \subset I$ interval and $\phi: I \to \R$ is continuous, then $\phi \circ f: D \to \R$ is continuous.
+       \item
+           \[
+               P: X \to \sum_{\alpha_1 + \ldots + \alpha_n \le d}^{} a_{\alpha_1, \ldots, \alpha_n}x^{\alpha_1} \ldots x^{\alpha_n}
+           \]
+           $a_{\alpha_1, \ldots, \alpha_n} \in \R, d = \text{ degree of } P$.
+           \par
+           $P: \R^n \to \R$ is continuous.
+   \end{itemize}
+\end{prop}

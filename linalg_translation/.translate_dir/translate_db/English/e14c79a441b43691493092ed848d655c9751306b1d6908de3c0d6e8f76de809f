@@ -1,0 +1,16 @@
+\begin{itemize}
+    \item \textbf{Use the definition:}
+    \[
+    \forall x \in \mathcal{U}, \exists r > 0 \quad \text{such that} \quad B(x, r) \subset \mathcal{U}
+    \]
+    \item Show that \( E \setminus \mathcal{U} \) is closed.
+    \item Show that \(\mathcal{U}\) is the inverse image of an open set by a continuous map \(f:E \to E'\) (i.e. \(\mathcal{U} = f^{-1}(O)\) with \(O\) open in \(E'\)).
+    \item Express \(\mathcal{U}\) as an open ball (which is always open).
+    \item Write \(\mathcal{U}\) as :
+    \begin{itemize}
+        \item any union of open sets;
+        \item a finite intersection of open sets.
+    \end{itemize}
+    \item Show that \(\mathcal{U} = \operatorname{Int}(\mathcal{U})\).
+    \item If \(\mathcal{U} \subset \R^N\), write \(\mathcal{U} = I_1 \times \dots \times I_N\) where each \( I_i \subset \R\) is an open interval.
+\end{itemize}

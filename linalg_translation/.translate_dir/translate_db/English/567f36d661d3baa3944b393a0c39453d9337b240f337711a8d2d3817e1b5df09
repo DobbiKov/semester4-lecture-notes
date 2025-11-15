@@ -1,0 +1,11 @@
+\begin{preuve}
+    Let $Q(X) = a_n X^n + a_{n-1} X^{n-1} + \ldots + a_0$ be an annihilating polynomial for $f$ and $\lambda$ an eigenvalue of $f$. Thus, $\exists v \neq 0 \in E$ such that $f(v) = \lambda v$, moreover:
+    \[
+        Q(f) = a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id} = 0
+    \] 
+    Since $f(v) = \lambda v$, it follows that $f^2(v) = f(\lambda v) = \lambda^2 v$, whence $f^k(v) = \lambda^k v$  $\forall k \in \N$. Then:
+    \[
+        Q(f(v)) = 0 = (a_n f^n + a_{n-1} f^{n-1} + \ldots + a_0 \operatorname{Id})v = (a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id})v = 0
+     \] 
+     Since $v \neq 0$, it follows that $a_n \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_0 \operatorname{Id} = 0$, whence $\lambda$ is a root of $Q$.
+\end{preuve}

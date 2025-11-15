@@ -1,0 +1,3 @@
+\begin{definition}
+    A set $F \subset E$ is \textbf{compact} if \underline{for any} open cover, i.e. \underline{for any} union of open sets $\bigcup_{i \in I} U_i$ that covers $F$, one can take a \underline{finite} number of the $U_i$ and cover $F$.
+\end{definition}

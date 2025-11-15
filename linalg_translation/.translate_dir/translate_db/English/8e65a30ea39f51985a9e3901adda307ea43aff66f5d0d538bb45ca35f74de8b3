@@ -1,0 +1,4 @@
+\begin{theorem}[Compactness in \(\R^d\)]
+    A part \(K \subset \R^d\) (or \(\C^d\)) is compact \(\iff\) \(K\) is closed and bounded.
+    (Borel-Lebesgue theorem).
+\end{theorem}

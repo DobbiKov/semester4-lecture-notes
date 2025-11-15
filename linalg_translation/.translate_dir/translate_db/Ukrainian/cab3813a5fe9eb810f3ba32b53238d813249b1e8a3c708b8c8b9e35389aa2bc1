@@ -1,0 +1,3 @@
+\begin{definition}
+    $f$ є частково неперервною в  $A = (a_1, \ldots, a_n)$ якщо $f_i(t)$ є неперервними в  $a_i$ $(1 \le i \le n)$
+\end{definition}

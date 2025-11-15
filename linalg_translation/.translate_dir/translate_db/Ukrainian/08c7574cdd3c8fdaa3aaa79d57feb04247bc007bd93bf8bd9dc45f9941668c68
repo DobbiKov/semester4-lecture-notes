@@ -1,0 +1,9 @@
+\begin{prop}
+    Якщо $F, F'$ — два скінченновимірні в.п., то $dim(L(F, F')) = dim(F)\cdot dim(F')$\\
+    Зокрема, $dim(F^*) = dim(F)$. Справді, якщо $n = (e_1, \ldots, e_p)$ є базисом $F$ є $n' = (e'_1, \ldots, e'_q)$ є базисом $F'$, то відображення
+    \begin{align*}
+        : L(F, F') &\longrightarrow Mat_{f\times p}(\R) \\
+        f &\longmapsto (f) = Mat_{n,n'}(f)
+    .\end{align*}
+    є ізоморфізмом. Отже $dim(F, F) = qp$
+\end{prop}

@@ -1,0 +1,7 @@
+\begin{definition}
+    Нехай $f \in \mathcal{C}^2(D)$. Гессіанна матриця: матриця  $n \times n$
+    \[
+    H_f(X_0) = \begin{bmatrix} \frac{\partial^2}{\partial x_i \partial x_j}(X_0) \end{bmatrix} 1\le i,j \le n
+    \] 
+    Лема \ref{thm:lemme-de-schwarz} дає нам, що $H_f(X_0)$ є симетричною якщо $f \in \mathcal{C}^2(D)$
+\end{definition}

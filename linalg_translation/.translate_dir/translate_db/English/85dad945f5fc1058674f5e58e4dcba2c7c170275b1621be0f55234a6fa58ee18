@@ -1,0 +1,4 @@
+\begin{theorem}[Schwarz/Clairaut]
+    If \(f:D \to \R\) is of class \(C^2\) on \(D\) (i.e., all second partial derivatives exist and are continuous), then the order of differentiation does not matter:
+    \[ \frac{\partial^2 f}{\partial x_j \partial x_i}(X) = \frac{\partial^2 f}{\partial x_i \partial x_j}(X) \quad \forall X \in D, \forall i,j \]
+\end{theorem}

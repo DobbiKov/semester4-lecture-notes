@@ -1,0 +1,8 @@
+\begin{prop}
+    Норма має такі властивості:
+   \begin{enumerate}
+       \item $\|\lambda X\| = |\lambda|\|X\| \, X \in \R^d, \, \lambda \in \R$
+       \item $\|X + Y\| \le \|X\| + \|Y\| \text{ (нерівність трикутника)}$
+       \item $\|X\| \ge 0$ et $\|X\| = 0 \iff X = 0_d$
+   \end{enumerate}
+\end{prop}

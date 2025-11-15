@@ -1,0 +1,3 @@
+\begin{prop}\label{prop:isometrie-ata-eg-i}
+    Якщо $\{e_i\}$ є ортонормованою базою, $f$ ізометрія та  $A = M(f)_{e_i}$, тоді  $A^{T}A = I = AA^{T}$.
+\end{prop}

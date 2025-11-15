@@ -1,0 +1,4 @@
+\begin{definition}[Euclidean Norm on \(\R^d\)]
+       The \textbf{Euclidean norm} of a vector \(X \in \R^d\) is:
+       \[ \|X\| = \|X\|_2 = \left( \sum_{i=1}^{d} x_i^2 \right)^{1/2} = (X \cdot X)^{1/2} \]
+   \end{definition}

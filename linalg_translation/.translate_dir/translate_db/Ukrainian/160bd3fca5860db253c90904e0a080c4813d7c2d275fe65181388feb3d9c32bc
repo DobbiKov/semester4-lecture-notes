@@ -1,0 +1,7 @@
+\begin{definition}
+    $(E, d)$ метричний простір. Нехай $x_0 \in E$ та $r \ge 0$
+    \begin{enumerate}
+        \item $B(x_0, r) = \{ x \in E: d(x_0, x) < r$ \} відкрита куля з центром $x_0$, радіусом $r$
+        \item $B_f(x_0, r) = \{ x \in E: d(x_0, x) \le r$\} замкнена куля з центром $x_0$, радіусом $r$
+    \end{enumerate}
+\end{definition}

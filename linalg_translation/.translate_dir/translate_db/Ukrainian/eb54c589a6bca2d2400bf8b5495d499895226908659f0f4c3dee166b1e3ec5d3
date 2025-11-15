@@ -1,0 +1,7 @@
+\begin{prop}\label{prop:suite-lien-avec-adherence}
+     (зв'язок із замиканням) 
+     \begin{enumerate}
+         \item $x \in Adh(A)$ тоді й лише тоді, якщо існує послідовність $(x_n)$ елементів з $A$ така що $\lim_{n \to \infty} x_n = x$
+         \item $A$ є замкненою тоді й лише тоді, якщо для будь-якої послідовності $(x_n)$ елементів з $A$, що збігається до $x \in E$, ми маємо $x \in A$
+     \end{enumerate}
+ \end{prop}

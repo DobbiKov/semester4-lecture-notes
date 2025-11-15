@@ -1,0 +1,13 @@
+\begin{preuve}
+    Again, for the proof, we will use proposition \ref{prop:prod-scal-par-matrice} which is very useful, so I advise you to master this concept.
+    \par
+    Let $\{e_i\}$ be an orthonormal basis of $E$ and let us denote
+     \[
+    A = M(f)_{e_i} \quad A^* = M(f^*)_{e_i} \quad X = M(x)_{e_i} \quad Y = M(y)_{e_i}
+    \] 
+    Since we are in an orthonormal basis, the statement is written:
+    \[
+        \underbrace{(AX)^TY}_{\scalair{f(x),y}} = X^TA^TY = \underbrace{X^T(A^*Y)}_{\scalair{x, f^*(y)}} \quad \forall X, Y \in \mathcal{M}_{n, 1}(\R)
+    \] 
+    which implies that $A^* = A$ and, furthermore, demonstrates the uniqueness of such adjoint.
+\end{preuve}

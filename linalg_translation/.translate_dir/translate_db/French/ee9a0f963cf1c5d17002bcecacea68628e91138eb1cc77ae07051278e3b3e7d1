@@ -1,0 +1,6 @@
+\begin{property} Dans $\R^n$
+   \begin{itemize}
+       \item $d_{\infty}(X, Y) \le d_1(X, Y) \le n d_{\infty}(X, Y)$
+       \item $d_{\infty}(X, Y) \le d_2(X, Y) \le \sqrt{n} d_{\infty}(X, Y)$
+   \end{itemize} 
+\end{property}

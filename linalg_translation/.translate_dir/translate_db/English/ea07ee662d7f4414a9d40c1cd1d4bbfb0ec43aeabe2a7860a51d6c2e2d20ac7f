@@ -1,0 +1,9 @@
+\begin{definition}\label{def:fonction-differentiable}
+    Let $D \subset \R^n$ be open and $X_0 \in D$, the function
+    $f: D \to \R$
+    is \textbf{differentiable} at $X_0$ if there exists a vector $\vec{u} \in \R^n$ such that 
+    \[
+        f(X_0 + \vec{X}) = f(X_0) + \vec{u} \cdot \vec{X} + \|\vec{X}\|\epsilon(\vec{X})
+    \] 
+    where $\lim_{\vec{X} \to \vec{0}} \epsilon(\vec{X}) = 0$
+\end{definition}

@@ -1,0 +1,3 @@
+\begin{intuition}
+   Orthogonal (perpendicular) vectors are never contained within each other (i.e. $e_i = \lambda e_j$ is not possible). If the vectors are related, then the angle is $< 90º$ (thus the vectors are not orthogonal, absurd), (they are contained within each other, they are not orthogonal, absurd). Therefore, they are indeed linearly independent.
+\end{intuition}

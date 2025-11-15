@@ -1,0 +1,5 @@
+\begin{intuition}
+   It's not quite correct to say, but, we can say that a Cauchy sequence $(x_n)_{n \in \N}$ always converges because there is a moment $N \in \N$ after which the elements are very close but the limit does not always belong to the set in which this sequence is Cauchy. 
+
+   For example, a sequence $(u_n)_{n \in \N}$ with values in $\Q$ that converges to $\sqrt{2} $ in $\R$. In $\R$ it is convergent and Cauchy, but in $\Q$ it is Cauchy but \underline{not convergent} because the limit $\sqrt{2} \not\in \Q $.
+\end{intuition}

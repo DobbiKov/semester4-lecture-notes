@@ -1,0 +1,3 @@
+\begin{definition}[Point critique]
+    Si \(f\) est différentiable sur \(D\), \(X_0 \in D\) est un \textbf{point critique} (ou stationnaire) si \(\nabla f(X_0) = 0\).
+\end{definition}

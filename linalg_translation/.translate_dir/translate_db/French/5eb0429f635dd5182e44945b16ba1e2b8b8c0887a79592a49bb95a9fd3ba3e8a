@@ -1,0 +1,8 @@
+\begin{remark}
+   Si $\sum u_n$ et  $\sum v_n$ convergent, alors  
+   \begin{itemize}
+       \item $\sum u_n + v_n$ converge et  $\sum \lambda u_n$ converge
+       \item $\sum_{n=0}^{\infty} u_n + v_n = \sum_{n=0}^{\infty} u_n + \sum_{n=0}^{\infty} v_n$ 
+       \item $\sum_{n=0}^{\infty} \lambda u_n = \lambda \sum_{n=0}^{\infty} u_n$
+   \end{itemize}
+\end{remark}

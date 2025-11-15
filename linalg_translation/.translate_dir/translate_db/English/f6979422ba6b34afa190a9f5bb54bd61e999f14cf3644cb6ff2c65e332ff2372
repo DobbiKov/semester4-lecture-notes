@@ -1,0 +1,8 @@
+\begin{theorem}[Properties of open and closed sets]
+    \begin{enumerate}
+        \item An \textbf{arbitrary union} of open sets is an open set.
+        \item A \textbf{finite intersection} of open sets is an open set.
+        \item An \textbf{arbitrary intersection} of closed sets is a closed set.
+        \item A \textbf{finite union} of closed sets is a closed set.
+    \end{enumerate}
+\end{theorem}

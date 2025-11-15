@@ -1,0 +1,7 @@
+\begin{corollary}
+    Let $A \in \mathcal{M}_n(K)$ have $\{\lambda_1, \ldots, \lambda_n\}$ as its eigenvalues, then
+    \begin{align*}
+        \operatorname{Tr}(A) = \lambda_1 + \ldots + \lambda_n\\
+        \det(A) = \lambda_1 \cdot \ldots \cdot  \lambda_n
+    \end{align*}
+\end{corollary}

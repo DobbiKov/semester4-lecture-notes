@@ -1,0 +1,42 @@
+\begin{preuve}
+   \begin{enumerate}
+       \item $A \in B(E, F) \iff \sup_{x \in B_{E}(0, 1)} \|Ax\|_{F} < \infty \iff \|A\|$ well defined.
+           \begin{align*}
+               \|(A + B)x\|_F = \|Ax + Bx\|_F \le \|Ax\|_F + \|Bx\|_F\\ \implies \sup_{x \in B_E(0, 1)} \|(A + B)x\|_F \le \sup_{x \in B_E(0, 1)} \|Ax\|_F + \sup_{x \in B_E(0, 1)} \|Bx\|_F
+           \end{align*}
+           \[
+               \|A + B\| \le \|A\| + \|B\| \text{ and } A, B \in B(E, F) \implies A + B \text{ also }
+           \]
+           \[
+           \|\lambda A\| = |\lambda|\|A\| \text{ and } A \in B(E, F) \implies \lambda A \text{ also }
+           \]
+           Si $\|A\| = 0$, alors  $\|Ax\|_F = 0 \forall x \in B_E(0, 1) \implies Ax = 0_F \forall x \in B_E(0, 1)$
+           \[
+           Ax = \|x\|_E A \frac{x}{\|x\|_E}
+           \]
+           \[
+           Ax = 0_F \forall x \in E \implies A = 0_{L(E, F)}
+           \]
+           \[
+           C \in I^+ \text{ if } \|Ax\|_F \le C\|x\|_E \quad \forall x \in E
+           \]
+           \[
+           \|A\| \in I^+ \implies \|Ax\|_F \le \|A\|\|x\|_E \forall x
+           \]
+           \begin{itemize}
+               \item Clear if $x = 0_E$.
+               \item Si  $x \neq 0_E$, $y = \frac{x}{\|x\|_E} \in B_E(0, 1)$ donc
+                   \[
+                       \|Ay\|_F = \frac{1}{\|x\|_E}\|Ax\|_F \le \|A\| \implies \|Ax\|_F \le \|A\|\|x\|_E
+                   \]
+                   Soit $C \in I^+$ donc
+                   \[
+                   \|Ax\|_F \le C\|x\|_E
+                   \]
+                   donc $\|Ax\|_F \le C \quad \forall x \in B_E(0,1)$, donc $\|A\| \le C$, alors
+                   \[
+                       \|A\| = \min I^+ = \text{ "best constant $C$"}
+                   \]
+           \end{itemize}
+   \end{enumerate}
+\end{preuve}

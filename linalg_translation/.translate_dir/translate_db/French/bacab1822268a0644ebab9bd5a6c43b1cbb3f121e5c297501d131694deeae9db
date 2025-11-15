@@ -1,0 +1,15 @@
+\begin{preuve}
+    $(e_1, \ldots, e_n)$ base de $E$. Sur  $E$ toutes les normes sont équivalentes.  
+    \begin{itemize}
+        \item $\|x\|_E$ norme donnée.        
+        \item $\|x\|_{\infty} = \max_{1 \le i \le n} |x_i|$ 
+    \end{itemize}
+    où $x = \sum_{i=1}^{n} x_ie_i$ 
+    \[
+    \|Ax\|_F = \|\sum_{i=1}^{n} x_iAe_i\| = \sum_{i=1}^{n} |x_i|\|Ae_i\|_F
+    \] 
+    \[
+    \|Ax\|_F \le \|x\|_{\infty} \times \sum_{i=1}^{n} \|Ae_i\|_F = C\|x\|_{\infty}
+    \] 
+    ($\|x\|_{\infty}\| \le C'\|x\|_{E}$). Donc: $\|Ax\|_{F} \le CC'\|x\|_E$. Alors: $A \in B(E, F)$
+\end{preuve}

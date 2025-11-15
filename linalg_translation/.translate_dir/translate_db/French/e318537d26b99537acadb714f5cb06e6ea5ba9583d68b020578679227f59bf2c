@@ -1,0 +1,4 @@
+\begin{preuve}
+   Soit $n := dim(E)$. Soit  $(e_1, \ldots, e_p)$ une famille orthogonale (du point de vue du cardinal $p$) tq  $e_i \neq 0 \, \forall i = 1, \ldots, p$.\\
+Supposons par l'absurde que $p < n$. Posons  $F = Vect(e_1, \ldots, e_p)$. Alors, $E = F \oplus F^{\perp}$ et  $dim(F) \le p < n$. Donc $F^{\perp} \neq  \{0\}$. Soit $x \in F^{\perp}, \, x \neq 0$. Alors, $(e_1, \ldots, e_p, x)$ est orthogonale de cardinale $> p$. Donc,  $p = n$ et  $(e_1, \ldots, e_n)$ est une base de $E$. Pour avoir une famille orthonormale  $(e_1', \ldots, e_n')$ il suffit de prendre $e_i' = \frac{1}{\|e_i\|}e_i \, \forall i = \{1, \ldots, n\}$.
+\end{preuve}

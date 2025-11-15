@@ -1,0 +1,5 @@
+Adjoint matrix $A^*$  $(A^*)_{i,j} = \overline{(A)_{j,i}}$
+ \[
+     (x|Ay) = (A^*x|y) \quad \forall x,y
+ \] 
+ 

@@ -1,0 +1,11 @@
+\begin{remark}
+    \begin{enumerate}
+        \item We can write $\|A\|_{B(E, F)}$ instead of $\|A\|$ 
+        \item Sometimes we find $|||A|||$ for $\|A\|$ 
+        \item Let $I^+ = $ the set of $C \ge 0$ such that $\|Ax\|_{F} \le C\|x\|_{E} \quad \forall x \in E$. \\
+            $I^+ \neq \O$ (because $A \in B(E, F)$) and $I^+ \subset [0, +\infty[$. $(2)$ and $(3)$ say that $\|A\|$ is the smallest element of $I^+$
+             \[
+            \inf I^+ = \min I^+ = \|A\|
+            \] 
+    \end{enumerate}
+\end{remark}

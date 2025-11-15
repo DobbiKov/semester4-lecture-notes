@@ -1,0 +1,4 @@
+\begin{definition}[Ряд функцій, Нормальна збіжність]
+    Ряд функцій \(\sum u_n\) (де \(u_n: X \to E\)) збігається \textbf{нормально}, якщо числовий ряд \(\sum \|u_n\|_\infty\) збігається.
+    (тобто \(\sum_{n=0}^\infty \sup_{x \in X} \|u_n(x)\|_E < \infty\)).
+\end{definition}

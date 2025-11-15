@@ -1,0 +1,8 @@
+\begin{definition}
+    $f$ диференційовна в $X_0$ у напрямку $\vec{u}$ $(\neq \vec{0})$ якщо функція
+    \begin{align*}
+        g: \R &\longrightarrow \R \\
+        t &\longmapsto g(t) = f(X_0 + t\vec{u})
+    .\end{align*}
+    диференційовна в $t = 0$
+\end{definition}

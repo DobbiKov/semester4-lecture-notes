@@ -1,0 +1,3 @@
+\begin{intuition}
+    The meaning of orthogonal matrices is clear: they represent the matrices of orthogonal transformations (isometries) in \textbf{an orthonormal basis} (see defn \ref{def:orthogonal}).
+\end{intuition}

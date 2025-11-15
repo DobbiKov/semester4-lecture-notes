@@ -1,0 +1,3 @@
+\begin{definition}
+    Нехай $B$ — множина. Функція $F: B \to E$ є обмеженою якщо $F(B) = \{ F(b): b \in B\} \subset E$ є обмеженим.
+\end{definition}

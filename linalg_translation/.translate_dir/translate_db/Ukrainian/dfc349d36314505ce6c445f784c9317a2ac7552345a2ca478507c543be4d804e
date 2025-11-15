@@ -1,0 +1,5 @@
+\begin{definition}[Обмежена множина]
+    Частина \(A \subset E\) є \textbf{обмеженою}, якщо вона міститься в кулі, тобто, \(\exists x_0 \in E, \exists R > 0\) таке що \(A \subset B(x_0, R)\).
+    Це еквівалентно: \(\forall x_0 \in E, \exists r > 0\) таке що \(A \subset B(x_0, r)\).
+    Або інакше: \(\operatorname{diam}(A) = \sup_{x,y \in A} d(x,y) < \infty\).
+\end{definition}

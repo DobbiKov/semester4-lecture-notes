@@ -1,0 +1,8 @@
+\begin{definition}[Кулі]
+    Нехай \((E, d)\) — метричний простір, \(x_0 \in E\) та \(r > 0\).
+    \begin{enumerate}
+        \item \textbf{Відкрита куля} : \(B(x_0, r) = \{ x \in E : d(x_0, x) < r \}\)
+        \item \textbf{Замкнена куля} : \(B_f(x_0, r) = \{ x \in E : d(x_0, x) \le r \}\)
+        \item \textbf{Сфера} : \(S(x_0, r) = \{ x \in E : d(x_0, x) = r \}\)
+    \end{enumerate}
+\end{definition}

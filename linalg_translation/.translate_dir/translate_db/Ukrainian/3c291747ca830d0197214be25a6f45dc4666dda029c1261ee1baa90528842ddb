@@ -1,0 +1,27 @@
+\begin{preuve}
+    Побудуємо послідовність елементів з $B_f(0, 1)$ \underline{без збіжної підпослідовності}.
+    \[
+    u \in E \quad u: \N \to \R
+    \] 
+    Я позначаю $u(p)$ замість $u_p$ послідовність у $E$ позначена $(u_n)$, $u_n \in E$. $u_n(p)$ p-й член $u_n$. Я покладаю  
+    \[
+    u_n(p) = \delta_{n, p} = \begin{cases}
+        1 \text{ якщо } n = p\\
+        0 \text{ інакше}
+    \end{cases}
+    \] 
+    \[
+    \|u_n\|_1 = \sum_{p=0}^{\infty} |u_n(p)| = |u_n(n)| = 1
+    \] 
+    Отже $u_n \in B_f(0, 1) \forall n$.
+    \par
+    Якщо $v \in l^1(\N, \R)$
+    \[
+    |v(p)| \le \sum_{p=0}^{\infty} |v(p)| = \|v\|_1
+    \] 
+    якщо $\|v_n - v\|_1 \xrightarrow[n \to \infty]{} 0$ тоді $\forall p, v_n(p) \to v(p)$. Припустимо, що $(v_n) = (u_{\phi(n)})$ є підпослідовністю $(u_n)$, яка збігається до $v$ для $\| . \|$. Я фіксую $p \in \N$, $v_n(p) = u_{\phi(n)}(p) \xrightarrow[n \to \infty]{} v(p)$, але $v_n(p) \xrightarrow[n \to \infty]{} 0$, отже $v(p) = 0 \forall p$. $v$: нульова послідовність, також 
+     \[
+    \|v_n\|_1 = 1 \forall n \text{ та } \|v_n\|_1 \xrightarrow[n \to \infty]{} \|v\|_1
+    \] 
+    протиріччя
+\end{preuve}

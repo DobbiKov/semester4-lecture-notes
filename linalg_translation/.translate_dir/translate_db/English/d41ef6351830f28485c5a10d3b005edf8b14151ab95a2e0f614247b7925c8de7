@@ -1,0 +1,9 @@
+\begin{explanation}
+    1) and 2) are done\\
+    \begin{itemize}
+        \item $\| u + v \|^2 = \|u\|^2 + 2<u,v> + \|v\|^2 \le \|u\|^2 + 2\|u\|\|v\| + \|v\|^2 = (\|u\| + \|v\|)^2$
+            \[
+            \implies \|u + v\|^2 \le \|u\|^2 + \|v\|^2
+            \] 
+    \end{itemize}
+\end{explanation}

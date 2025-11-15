@@ -1,0 +1,3 @@
+\begin{preuve}
+   I'm providing intuition. A transition matrix transforms one basis into another; it transforms the vectors of the basis, so it transforms the basis of the O.N.B. into vectors of the basis of the O.N.B. Therefore, according to proposition \ref{prop:isometrie-ssi-transforme-bon-en-bon}, this matrix is orthogonal.
+\end{preuve}

@@ -1,0 +1,20 @@
+\begin{eg}
+    $E = \mathbb{K}^{\N}$ a set of sequences $u$ with values in  $\mathbb{K}$
+    \[
+    u = (u_1, u_2, \ldots, u_n, \ldots )
+    \] 
+    for $1 \le p < \infty$
+    \[
+        l^{p}(\N, \mathbb{K}) = \{(u_n): \sum_{n \in \N}^{} |u_n|^{p} \text{ is convergent } \}
+    \] 
+    \[
+        \|u\|_p = \left( \sum_{n=0}^{\infty} |u_n|^{p} \right)^{\frac{1}{p}}
+    \] 
+    is a norm on $l^{p}(\N, \mathbb{K})$
+    \[
+        p = \infty \quad l^{\infty}(\N, \mathbb{K}) = \{u \text{ bounded } \}
+    \] 
+    \[
+        \|u\|_{\infty} = \sup_{n \in \N} |u_n|
+    \] 
+\end{eg}

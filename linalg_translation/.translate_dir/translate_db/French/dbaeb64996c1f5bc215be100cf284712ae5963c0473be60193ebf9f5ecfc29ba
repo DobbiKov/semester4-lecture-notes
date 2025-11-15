@@ -1,0 +1,31 @@
+\begin{preuve}
+   \begin{enumerate}
+       \item Soit $(x_n)$ avec  $\lim x_n = x$
+            \[
+                \forall \epsilon > 0 \, \exists M(\epsilon) \text{ tq si } n \ge N(\epsilon), d(x_n ,x) \le \epsilon 
+           \] 
+           Soit $y_n = x_{\phi(n)}$ une sous-suite.
+           \begin{itemize}
+               \item \underline{But:} Soit $\epsilon > 0$, trouver $N(\epsilon)$ tq si  $n \ge  N(\epsilon), \, d(\underbrace{y_n}_{:= x_{\phi(n)}}, x) \le \epsilon$
+           \end{itemize}
+           Je choisis $N(\epsilon)$ tel que si  $n \ge N(\epsilon)$ alors $\phi(n) \ge M(\epsilon)$, donc $d(y_n, x) d(x_{\phi(n)}, x) \le  \epsilon$. C'est possible car $\phi(n) \xrightarrow[n \to \infty]{} \infty$, $N(\epsilon) = M(\epsilon)$ 
+        \item 
+            \begin{itemize}
+                \item  \underline{Hyp1:} $\forall \epsilon > 0 \, \exists M(\epsilon)$ tq si $n, p \ge M(\epsilon)$ $d(x_n, x_p) \le \epsilon$
+                \item  \underline{Hyp2:} $\forall \epsilon > 0 \, \exists P(\epsilon)$ tq si $p \ge P(\epsilon), d(y_p, x) \le \epsilon$, $d(y_p, x) = d(x_{\phi(p)}, x)$
+            \end{itemize}
+            \begin{align*}
+                d(x_n, x) \le d(x_n, x_{\phi(p)}) + d(x_{\phi(p)}, x) \quad \text{par l'inégalité triangulaire}
+            \end{align*}
+            \begin{align*}
+                d(x_n, x_{\phi(p)}) \le \epsilon \text{ si } n \ge M(\epsilon) \text{ et } \phi(p) \ge M(\epsilon)
+            \end{align*}
+            \begin{align*}
+                d(x_{\phi(p)}, x) \le \epsilon \text{ si } p \ge P(\epsilon)
+            \end{align*}
+            Si $n \ge M(\epsilon)$, je choisis $p$ tel que  $\phi(p) \ge  M(\epsilon)$ et $p \ge P(\epsilon)$. Je fixe ce $p$!
+             \[
+            \text{si } n \ge M(\epsilon) \text{ alors } d(x_n, x) \le 2\epsilon
+            \] 
+   \end{enumerate} 
+\end{preuve}

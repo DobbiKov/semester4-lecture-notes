@@ -1,0 +1,21 @@
+\begin{preuve}
+    \begin{itemize}
+        \item $1) \implies 2)$ : очевидно
+        \item $2) \implies 3)$ : 
+            \begin{itemize}
+                \item 
+                    \underline{Гіпотеза:} $\forall \varepsilon >0, \exists \delta > 0$ таке що $\|x - 0_E\|_E \le \delta \implies \|Ax - A0_E\|_F \le \varepsilon$ $\|x\|_E \le \delta \implies \|Ax\|_F \le \varepsilon$
+                \item $\varepsilon = 1 \exists \delta > 0$ таке що $\|x\|_E \le \delta \implies \|Ax\|_F \le 1$
+                \item Нехай $ x \in E$ і $x \neq 0_E$
+                \item $y = \frac{\delta}{\|x\|_E}x$ тому $\|y\|_E = \delta$  $\implies\|Ay\|_F \le 1$
+                \item $Ay = \frac{\delta}{\|x\|_{E}}Ax$ і $A$ лінійне
+                \item  $\|Ay\|_{F} = \frac{\delta}{\|x\|_E}\|Ax\|_F \le 1 \implies \|Ax\|_F \le \frac{1}{\delta}\|x\|_E$
+            \end{itemize}
+        \item $3) \implies 1)$ 
+            \begin{itemize}
+                \item Я фіксую $x_0 \in E$. потрібно перевірити: $A$ неперервне в $x_0$?
+                \item $\|Ax - Ax_0\|_F = \|A(x - x_0)\|_F \le C\|x - x_0\|_E$
+                \item Отже, якщо $\|x - x_0\|_E \le \frac{\varepsilon}{c} = \delta(\varepsilon)$, $\|Ax - Ax_0\|_F \le \varepsilon$
+            \end{itemize}
+    \end{itemize}
+\end{preuve}

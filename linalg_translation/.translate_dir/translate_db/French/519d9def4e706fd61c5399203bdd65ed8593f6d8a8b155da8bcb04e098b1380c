@@ -1,0 +1,8 @@
+\begin{definition}
+    $f$ est dérivable en  $X_0$ dans la direction $\vec{u}$ $(\neq \vec{0})$ si la fonction
+    \begin{align*}
+        g: \R &\longrightarrow \R \\
+        t &\longmapsto g(t) = f(X_0 + t\vec{u})
+    .\end{align*}
+    est dérivable en $t = 0$
+\end{definition}

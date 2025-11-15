@@ -1,0 +1,8 @@
+\begin{theorem}[Continuité des applications linéaires]
+    Pour une application linéaire \(A: E \to F\), les propriétés suivantes sont équivalentes :
+    \begin{enumerate}
+        \item \(A\) est continue (en tout point de \(E\)).
+        \item \(A\) est continue en \(0_E\).
+        \item \(A\) est bornée : \(\exists C \ge 0\) tel que \(\forall x \in E, \|Ax\|_F \le C \|x\|_E\).
+    \end{enumerate}
+\end{theorem}

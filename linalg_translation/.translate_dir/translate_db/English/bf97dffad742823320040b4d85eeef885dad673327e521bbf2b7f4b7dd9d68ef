@@ -1,0 +1,7 @@
+\begin{prop}
+    If $X \in E$ and $(e_1, \ldots, e_n)$ is an orthonormal basis of $E$, then:
+     \[
+         X =  \scalair{X, e_1}e_1 + \ldots + \scalair{X, e_n}e_n
+    \] 
+    Where $\scalair{X, e_i}$ are the coordinates in the basis $(e_1, \ldots, e_n)$
+\end{prop}

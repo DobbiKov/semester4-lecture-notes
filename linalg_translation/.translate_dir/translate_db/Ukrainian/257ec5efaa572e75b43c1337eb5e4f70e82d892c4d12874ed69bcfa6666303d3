@@ -1,0 +1,8 @@
+\begin{equation}\label{eq:equation-differentielle-diagonalisation}
+\frac{dX}{dt} = AX, \quad \text{де} \quad A = (a_{ij}), \quad X = 
+\begin{pmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{pmatrix}
+\end{equation}

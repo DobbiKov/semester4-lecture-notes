@@ -1,0 +1,17 @@
+\begin{preuve}
+   \begin{enumerate}
+       \item Нехай $x_1 \in B(x_0, r_0)$ ($d(x_0, x_1) < r_0$).\\
+           Мета: знайти $r_1 > 0$ таке що $B(x_1, r_1) \subset B(x_0, r_0)$?\\
+           \begin{align*}
+               &x \in B(x_1, r_1): \: d(x_1, x) < r_1\\
+               &x \in B(x_0, r_0) \text{ якщо } d(x_0, x) < r_0
+           \end{align*}
+           легко:
+           \begin{align*}
+               d(x_0, x) &\le d(x_0, x_1) + d(x_1, x)\\
+                         &\le d(x_0, x_1) + r_1\\
+                         &< r_0 \text{ якщо}
+           \end{align*}
+           $r_1 < r_0 - d(x_0, x_1) > 0$
+   \end{enumerate} 
+\end{preuve}

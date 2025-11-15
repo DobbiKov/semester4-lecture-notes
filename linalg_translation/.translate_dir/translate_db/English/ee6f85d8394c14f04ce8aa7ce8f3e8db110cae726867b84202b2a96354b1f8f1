@@ -1,0 +1,42 @@
+\begin{proof}
+
+   Since \( E \) is finite-dimensional, there exists a basis for \( E \) and thus a linear isomorphism between \( E \) and \(\mathbb{R}^n\) (or \(\mathbb{C}^n\)). Consequently, we can reduce the problem to the study of norms on \(\mathbb{R}^n\).
+
+
+   Consider the norm \(\|\cdot\|_1\) on \( E \) and define the associated unit sphere:
+   \[
+   S = \{ x \in E : \|x\|_1 = 1 \}.
+   \]
+   In a finite-dimensional space, the unit sphere \( S \) is compact (this relies on the fact that in \(\mathbb{R}^n\), closed and bounded sets are compact).
+
+
+   The function
+   \[
+   f : S \to \mathbb{R}, \quad f(x) = \|x\|_2
+   \]
+   is continuous because \(\|\cdot\|_2\) is a norm (and thus a continuous function). By Weierstrass's theorem, \( f \) attains its bounds on \( S \). Therefore, there exist:
+   \begin{itemize}
+       \item A minimum \( m = \min_{x \in S} f(x) > 0 \) (the strict inequality \( m > 0 \) is explained by the fact that \( x \neq 0 \) for \( x \in S \)).
+       \item A maximum \( M = \max_{x \in S} f(x) \).
+   \end{itemize}
+
+
+   Let \( x \in E \) be arbitrary, \( x \neq 0 \). We write \( x = \|x\|_1 \, y \) with \( y = \frac{x}{\|x\|_1} \) which belongs to \( S \). Then,
+   \[
+   \|x\|_2 = \|x\|_1\,\|y\|_2.
+   \]
+   However, since \( y \in S \), we have
+   \[
+   m \le \|y\|_2 \le M.
+   \]
+   Thus,
+   \[
+   m\,\|x\|_1 \le \|x\|_2 \le M\,\|x\|_1.
+   \]
+   By setting \( c = m \) and \( C = M \), we obtain exactly the equivalence of norms.
+
+
+   For \( x = 0 \), the inequality is trivial because \( \|0\|_1 = \|0\|_2 = 0 \).
+
+
+\end{proof}

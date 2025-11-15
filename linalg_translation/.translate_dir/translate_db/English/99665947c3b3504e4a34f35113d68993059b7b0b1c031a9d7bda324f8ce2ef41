@@ -1,0 +1,15 @@
+By deriving this relation:
+\[
+\frac{dX'}{dt} = P^{-1} \frac{dX}{dt}
+\]
+(because \( A \) having constant coefficients, \( P \) will also have constant coefficients). Therefore:
+\[
+\frac{dX'}{dt} = P^{-1}AX = \left( P^{-1}AP \right) X' = A'X'
+\]
+The system \ref{eq:equation-differentielle-diagonalisation} is therefore equivalent to the system
+\[
+\frac{dX'}{dt} = A'X'
+\]
+
+This system is easily integrated, because \( A' \) is diagonal.\\
+Thus, we can solve the system \( \frac{dX}{dt} = AX \) in the following way:

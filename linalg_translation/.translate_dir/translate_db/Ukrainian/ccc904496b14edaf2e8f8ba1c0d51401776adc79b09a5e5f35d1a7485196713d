@@ -1,0 +1,13 @@
+\begin{eg}
+   \[
+       U = \{(x, y) \in \R^2: x \sin(y) - e^x > 1\}
+   \]  
+   \begin{align*}
+       F: \R^2 &\longrightarrow \R \\
+       (x, y) &\longmapsto F((x, y)) = x \sin(y) - e^x
+   \end{align*}
+   очевидно неперервна.
+   \[
+       U = F^{-1}(\underbrace{]1, +\infty[}_{\text{відкрита множина в } \R})
+   \] 
+\end{eg}

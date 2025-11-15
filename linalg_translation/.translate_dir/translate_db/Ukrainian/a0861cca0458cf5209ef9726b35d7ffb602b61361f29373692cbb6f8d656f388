@@ -1,0 +1,6 @@
+\begin{prop}
+    Нехай $E$ метричний простір і дві метрики $d_1$ та $d_2$. Метрики називаються \textbf{еквівалентними} якщо $\exists a, b \in \R$ такими, що:
+    \[
+    \forall x, y \in E, \quad a\cdot d_1(x, y) \le d_2(x, y) \le b\cdot  d_1(x, y)
+    \] 
+\end{prop}

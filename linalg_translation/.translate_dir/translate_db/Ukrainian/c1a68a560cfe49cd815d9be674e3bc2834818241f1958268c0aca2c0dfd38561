@@ -1,0 +1,15 @@
+\begin{prop}\label{def:continuite-topologique}
+    визначення топологічної неперервності.
+    \par
+    Нехай $(E_{1}, d_1)$ та $(E_2, d_2)$ два метричні простори та функція $F: E_1 \to E_2$, кажуть, що $F$ є неперервною тоді й лише тоді:
+     \[
+         \forall U \subset E_2 \text{ відкрита},  F^{-1}(U) \text{ відкрита}
+    \] 
+    де $F^{-1}(U) = \{ x \in E_1 \mid F(x) \in U\}$
+\begin{figure}[H]
+    \centering
+    \incfig{continuite-topologique}
+    \caption{топологічна неперервність}
+    \label{fig:continuite-topologique}
+\end{figure}
+\end{prop}

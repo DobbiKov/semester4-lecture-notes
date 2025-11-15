@@ -1,0 +1,6 @@
+\begin{definition}
+    $(x_n)_{n \in \N}$ sequence in $E$ is \underline{Cauchy} if:
+     \[
+    \forall \epsilon > 0 \, \exists N(\epsilon) \in \N \text{ such that } \forall n, p \ge N(\epsilon), d(x_n, x_p) \le \epsilon
+    \] 
+\end{definition}

@@ -1,0 +1,7 @@
+\begin{definition}[Прилегла точка, Замикання]
+    Нехай \(A \subset E\). Точка \(x_0 \in E\) є \textbf{прилеглою} до \(A\), якщо будь-яка відкрита куля з центром у \(x_0\) перетинає \(A\), тобто, \(\forall r > 0, B(x_0, r) \cap A \neq \emptyset\). (Еквівалентно \(d(x_0, A) = \inf_{y \in A} d(x_0,y) = 0\)).
+    \textbf{Замикання} \(A\), що позначається \(\operatorname{Adh}(A)\) або \(\bar{A}\), є множиною точок, прилеглих до \(A\).
+    \begin{propriete}
+        \(\operatorname{Adh}(A)\) є найменшою замкненою множиною, що містить \(A\). \(A\) є замкненою \(\iff A = \operatorname{Adh}(A)\).
+    \end{propriete}
+\end{definition}

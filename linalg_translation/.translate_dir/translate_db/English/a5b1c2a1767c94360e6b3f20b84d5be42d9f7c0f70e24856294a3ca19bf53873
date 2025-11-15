@@ -1,0 +1,6 @@
+\begin{intuition}
+   \begin{enumerate}
+       \item If $(x_n)_{n \in \N}$ consists of elements of $A$ ($\forall n \in N, \, x_n \in A$), then it converges to an element $x$ which can be either in $A$, or at the boundary of the elements of $A$, so at the frontier.
+       \item If the limit of any sequence $(x_n)_{n \in \N}$ of elements of $A$ is also in $A$, then the boundary of $A$ is included in $A$. Because one of the sequences tends towards the boundary.
+   \end{enumerate}
+\end{intuition}

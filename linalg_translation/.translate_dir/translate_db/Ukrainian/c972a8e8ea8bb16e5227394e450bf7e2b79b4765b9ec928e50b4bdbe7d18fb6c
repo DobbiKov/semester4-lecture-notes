@@ -1,0 +1,7 @@
+\begin{prop}\label{prop:isometrie-bijective}
+   Нехай $f$ ізометрія в $E$, тоді:
+   \begin{enumerate}
+       \item $f$ є бієктивною 
+       \item  $f$ зберігає евклідову відстань та кути
+   \end{enumerate}
+\end{prop}

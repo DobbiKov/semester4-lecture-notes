@@ -1,0 +1,22 @@
+\begin{enumerate}
+    \item Je dessine $A$ sur une feuille
+    \item Je pense que  $Int(A) = C$ ($C$ dit être inclu dans  $A$!)
+         \begin{enumerate}
+             \item Je montre que \underline{$C$ est ouvert} (facile), donc
+                 \[
+                 C \subset Int(A)
+                 \] 
+                 car $Int(A)$ est le plus grand ouvert inclu dans  $A$.
+            \item Je montre que $Int(A) \subset C$, i.e je montre que les points dans $A$ mais pas dans  $C$ ne sont pas dans  $Int(A)$: je prends $X \in A, X \not\in C$, je montre que $X \not\in Int(A)$
+                Je construit une suite $(X_n)$ avec  $X_n \not\in A$ mais  $X_n \to X$.
+         \end{enumerate}
+    \item Je pense que $Adh(A) = B$ (il faut que $A \subset B$)
+        \begin{enumerate}
+            \item Je montre que $B$ est fermé (facile)
+                \[
+                \text{donc } Adh(A) \subset B
+                \] 
+            \item  On montre que $B \subset Adh(A)$: On fixe $X \in B$, on cherche une suite  $(X_n)$ avec  $X_n \in A$ et  $X_n \xrightarrow[n \to \infty]{} X$. 
+                \underline{On regarde seulement les} $X \in B, X \not\in A$
+        \end{enumerate}
+\end{enumerate}

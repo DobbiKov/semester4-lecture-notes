@@ -1,0 +1,7 @@
+\begin{explanation}
+    Маємо Коші-Шварц:
+    \begin{align*}
+        (X|Y) \le (X|X)^{\frac{1}{2}}(Y|Y)^{\frac{1}{2}}
+    \end{align*}
+    те саме доведення, що й раніше
+\end{explanation}

@@ -1,0 +1,4 @@
+\begin{remark}
+    \underline{Індуктована відстань:}\\
+    Якщо $(E, d)$ метричний простір і  $U \subset E$. Я можу restreidnre $d$ на  $U \times U$:  $(U, d)$ також є éspace metrique.
+\end{remark}

@@ -1,0 +1,11 @@
+\begin{preuve}
+   $S_n = \sum_{k=0}^{n} u_k$ and $T_n = \sum_{k=0}^{n} \|u_k\|$ 
+   \begin{align*}
+       n > p \quad \|S_n - S_p\| = \|\sum_{k = p+1}^{n} u_k\| \le \sum_{k=p+1}^{n} \|u_k\| = T_n - T_p = |T_n - T_p|
+   \end{align*}
+    $(T_n)$ converges in  $\R$, therefore $(T_n)$ is Cauchy:
+     \[
+    \forall \varepsilon > 0, \exists N \text{ such that } \forall n > p \ge N |T_n - T_p| \le \varepsilon
+    \] 
+    therefore $(S_n)$ is Cauchy in  $(E, \| \cdot \|)$.  \underline{$E$ complete:}  $(S_n)$ converges to  $S \in E$.
+\end{preuve}

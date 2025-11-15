@@ -1,0 +1,6 @@
+\begin{figure}[H]
+    \centering
+    \incfig{q_not_complete}
+    \caption{$\Q$ неповний}
+    \label{fig:q_not_complete}
+\end{figure}

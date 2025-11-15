@@ -1,0 +1,43 @@
+\begin{eg}
+$n = 2$
+ \[
+A = \begin{pmatrix} 
+    a_{1,1} & a_{1, 2}\\
+    a_{2, 1} & a_{2, 2}
+\end{pmatrix} 
+\] 
+$(a_{1,2} = a_{2, 1})$
+\par
+Власні значення: корені характеристичного пол.:  
+\[
+    P(\lambda) = \det(A - \lambda I) = \begin{vmatrix} a_{1,1} - \lambda & a_{1, 2} \\ a_{2, 1} & a_{2,2} - \lambda \end{vmatrix} = (\lambda - a_{1,1})(\lambda - a_{2,2}) -  a_{1,2}a_{2,1}
+\] 
+\[
+    \lambda^2 - (a_{1,1} + a_{2,2})\lambda + a_{1,1}a_{2,2} - a_{2,1}a_{1,2}
+\] 
+\[
+    a_{1,1} + a_{2,2} = Tr(A)
+\] 
+\[
+    a_{1,1}a_{2,2} - a_{2,1}a_{1,2} = \det(A)
+\] 
+\[
+    x^2 - Sx + P = x^2 - (\lambda_1 + \lambda_2)x + \lambda_1\lambda_2
+\] 
+\begin{align*}
+    &\det(A) = \text{ добуток власних значень}\\
+    &Tr(A) = \text{ сума власних значень}
+\end{align*}
+\[
+A = H_f(X_0)
+\] 
+\begin{enumerate}
+    \item якщо $\det(A) < 0$, $X_0$ сідлова точка
+    \item якщо $\det(A) > 0$
+         \begin{enumerate}
+            \item $Tr(A) > 0$, $X_0$ мінімум
+            \item $Tr(A) < 0$, $X_0$ максимум
+        \end{enumerate}
+    \item $\det(A) = 0$, $X_0$ вироджена критична точка
+\end{enumerate}
+\end{eg}

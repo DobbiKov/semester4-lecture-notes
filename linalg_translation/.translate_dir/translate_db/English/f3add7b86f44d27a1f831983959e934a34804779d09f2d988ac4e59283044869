@@ -1,0 +1,3 @@
+\begin{prop}
+    If $F, F'$ are two finite-dimensional vector spaces \underline{such that} $dim(F) = dim(F')$ and $f: F \to F'$ is linear, then $f$ is an isomorphism $\iff Ker(f) = {0}$
+\end{prop}

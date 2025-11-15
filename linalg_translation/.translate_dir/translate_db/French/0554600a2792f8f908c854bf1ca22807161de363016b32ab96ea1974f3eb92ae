@@ -1,0 +1,6 @@
+\begin{theorem}\label{thm:cayley-hamilton} \textbf{de Cayley-Hamilton}. Soit $f \in K^n$ un endomorphisme et $P_f(X)$ son polynôme caractéristique, alors
+     \[
+    P_f(f) = 0
+    \] 
+    Autrement dit, le polynôme caractéristique d'un endomorphisme est son polynôme annulateur.
+\end{theorem}

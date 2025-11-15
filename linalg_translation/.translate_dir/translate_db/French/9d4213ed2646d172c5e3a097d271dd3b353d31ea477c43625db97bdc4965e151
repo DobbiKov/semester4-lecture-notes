@@ -1,0 +1,4 @@
+\begin{theorem}[Compacité dans \(\R^d\)]
+    Une partie \(K \subset \R^d\) (ou \(\C^d\)) est compacte \(\iff\) \(K\) est fermée et bornée.
+    (Théorème de Borel-Lebesgue).
+\end{theorem}

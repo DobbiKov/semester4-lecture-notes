@@ -1,0 +1,14 @@
+\begin{theorem}
+   Нехай $f$ — ендоморфізм у $E$ з $\dim E = n$. Тоді $f$ є діагоналізованим тоді й лише тоді, якщо: 
+   \begin{enumerate}
+       \item $P_f(X)$ є \underline{розщеплюваним}, тобто:
+            \[
+                P_f(X) = (-1)^n (X - \lambda_1)^{\alpha_1} \cdot \ldots \cdot (X - \lambda_p)^{\alpha_p}
+           \] 
+           ($\lambda_i$ є коренями, отже, власними значеннями) і $\alpha_1 + \ldots + \alpha_p = n$. Тоді, якщо сума кратностей коренів дорівнює розмірності векторного простору.
+       \item Розмірності власних просторів є \underline{максимальними}, тобто $\forall i \in \{1, \ldots, p\}$
+           \[
+                \dim E_{\lambda_i} = \alpha_i 
+           \] 
+   \end{enumerate}
+\end{theorem}

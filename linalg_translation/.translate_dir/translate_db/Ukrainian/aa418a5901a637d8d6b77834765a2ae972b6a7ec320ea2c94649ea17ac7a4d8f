@@ -1,0 +1,8 @@
+\begin{theorem}
+    Нехай $f$ ендоморфізм в $E$ і $\lambda_1, \ldots, \lambda_p$ його власні значення, тоді наступні властивості є еквівалентними:
+    \begin{enumerate}
+        \item $f$ діагоналізовний
+        \item  $E$ є прямою сумою своїх власних просторів:  $E = E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p}$
+        \item $\dim E_{\lambda_1} + \ldots + \dim E_{\lambda_p} = \dim E$
+    \end{enumerate}
+\end{theorem}

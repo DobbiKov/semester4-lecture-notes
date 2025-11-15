@@ -1,0 +1,13 @@
+\begin{itemize}
+    \item \textbf{Use the definition:} \( E \setminus V \) is open.
+    \item \textbf{Sequential characterization:} Any sequence \((x_n)\) of elements of \(V\) that converges to \(x \in E\), has its limit \(x\) in \(V\) (\(x \in V\)).
+    \item Show that \(V\) is the inverse image of a closed set by a continuous map \(f:E \to E'\) (i.e. \(V = f^{-1}(F)\) with \(F\) closed in \(E'\)).
+    \item Show that \(V = \operatorname{Adh}(V)\).
+    \item Write \(V\) as:
+    \begin{itemize}
+        \item an (arbitrary) intersection of closed sets;
+        \item a finite union of closed sets.
+    \end{itemize}
+    \item If the ambient space is \(\R^d\), show that \(V\) is compact (because a compact set in \(\R^d\) is closed and bounded). Be careful, this also proves that it is bounded.
+    \item If \(V \subset \R^N\), write \(V = I_1 \times \dots \times I_N\) where each \( I_i \subset \R\) is a closed interval.
+\end{itemize}

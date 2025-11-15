@@ -1,0 +1,17 @@
+\begin{eg}
+   Нехай $f$ ендоморфізм в $\R^2$ матриця представлення якого в канонічному базисі є:
+   \[
+       \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} 
+   \] 
+   Обчислимо його власні значення:
+   \begin{align*}
+       && \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} v &= \lambda v \\
+       \iff && \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} v - \lambda I v &= 0\\
+       \iff && \left(\begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix}  - \lambda I\right)v  &= 0\\
+       \implies && \det \left( \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix}  - \lambda I \right) &= 0\\
+       \implies && \det \left( \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix}  - \lambda \begin{bmatrix} \lambda & 0\\ 0 & \lambda \end{bmatrix}  \right) &= 0\\
+       \implies && \det \left( \begin{bmatrix} 3 - \lambda & 1\\ 0 & 2 - \lambda \end{bmatrix}\right) &= 0\\
+                && &= (3-\lambda)(2 - \lambda) = 0
+   \end{align*}
+   Добре видно, що розв'язки: $\lambda_1 = 3$ та $\lambda_2 = 2$
+\end{eg}

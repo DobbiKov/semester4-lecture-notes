@@ -1,0 +1,18 @@
+\begin{remark}
+   \begin{enumerate}
+       \item $p_F$ est linéaire
+       \item  $\forall x \in E \, p_{F}(x)$ est complétement caractérisé par la propriété suivante:\\
+           Soit $y \in E$, alors
+            \[
+                y = p_F(x) \iff \left( \underset{\implies y = x_F}{y \in F \text{ et } x - y} \in F^{\perp} \right) 
+           \] 
+       En particulier $\scalair{p_F(x), x - p_F(x)} \,= 0$. Alors, si $(v_1, \ldots, v_R)$ est une BON de $F$, on a:
+            \[
+                \forall x \in E, \, p_F(x) = \sum_{i=1}^{k} \scalair{x, v_i}v_i
+           \] 
+           En effet, il suffit de vérfier que le vecteur $y = \sum_{i=1}^{k} \scalair{x, v_i}v_i$ vérfie:
+           \[
+               y \in F \text{ et } x - y \in F^{\perp}
+           \] 
+   \end{enumerate} 
+\end{remark}

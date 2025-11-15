@@ -1,0 +1,7 @@
+\begin{prop}\label{prop:suite-lien-avec-adherence}
+     (link with adherence) 
+     \begin{enumerate}
+         \item $x \in Adh(A)$ if and only if there exists a sequence $(x_n)$ of elements from $A$ such that $\lim_{n \to \infty} x_n = x$
+         \item $A$ is closed iff for every sequence $(x_n)$ of elements from $A$ that converges to $x \in E$ we have $x \in A$
+     \end{enumerate}
+ \end{prop}

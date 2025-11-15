@@ -1,0 +1,8 @@
+\begin{eg} Pas tout point critique est un extremum local
+\begin{figure}[H]
+    \centering
+    \incfig{point-critique-nestpas-extremum-local}
+    \caption{Point critique qui n'est pas un extremum local}
+    \label{fig:point-critique-nestpas-extremum-local}
+\end{figure}
+\end{eg}

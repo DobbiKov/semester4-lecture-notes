@@ -1,0 +1,9 @@
+\begin{definition}
+    La trace de la \( n \times n \) matrice carée \( A \), notée \( \text{tr}(A) \), est la somme des éléments diagonales
+
+    \[
+        \text{tr}(A) = a_{11} + a_{22} + \dots + a_{nn} = \sum_{i=1}^{n} a_{ii}
+    \]
+
+    où \( a_{ii} \) sont des éléments diagonales de la matrice \( A \). 
+\end{definition}

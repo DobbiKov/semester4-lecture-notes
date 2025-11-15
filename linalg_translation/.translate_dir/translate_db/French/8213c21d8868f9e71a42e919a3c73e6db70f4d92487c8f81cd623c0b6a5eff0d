@@ -1,0 +1,8 @@
+\begin{theorem}
+    Soit $f$ un endomorphisme dans  $E$ et  $\lambda_1, \ldots, \lambda_p$ ses valeurs propres, alors les propriétés suivantes sont équivalentes:
+    \begin{enumerate}
+        \item $f$ est diagonalisable
+        \item  $E$ est somme directe de ses espaces propres:  $E = E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p}$
+        \item $\dim E_{\lambda_1} + \ldots + \dim E_{\lambda_p} = \dim E$
+    \end{enumerate}
+\end{theorem}

@@ -1,0 +1,10 @@
+\begin{definition}
+    Soit $A \subset E$.
+    \begin{enumerate}
+        \item $x_0 \in E$ est intérieur à $A$ si  $\exists \, \delta > 0$ tel que:
+            \[
+            B(x_0, \delta) \subset A
+            \] 
+        \item $Int(A)$ (intérieur de A) = tous les points intériers à  $A$. (aussi noté $A$)
+    \end{enumerate}
+\end{definition}

@@ -1,0 +1,3 @@
+\begin{definition}
+    Limite uniforme de fonctions continues: $X = [a, b]$,  $\mathcal{C}([a, b], \R) \subset B([a, b], \R)$(sous espaces vectoriels). $\mathcal{C}([a, b], \R)$ est fermé dans $(B([a, b], \R), \| \cdot \|_{\infty})$
+\end{definition}

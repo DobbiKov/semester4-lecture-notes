@@ -1,0 +1,22 @@
+\begin{eg}
+   Let 
+   \[
+   A = 
+   \begin{bmatrix} 
+       1 & 4 & 5\\
+       0 & 9 & 8\\
+       0 & 0 & 6
+   \end{bmatrix} \in \mathcal{M}_3(\R)
+   \] 
+Let's expand this determinant with respect to the first column:
+\begin{align*}
+    \det(A) &= \sum_{i=1}^{n} (-1)^{i + 2} a_{i, 2} \det(A_{i, 2}) \\
+            &= (-1)^{1 + 1} \cdot a_{1, 1} \cdot \det(A_{1, 1}) + (-1)^{2 + 1} \cdot a_{2, 1} \cdot \det(A_{2,1})  + (-1)^{3 + 1} \cdot a_{3, 1} \cdot \det(A_{3, 1}) \\
+            &= (-1)^{2} \cdot 1 \cdot \begin{vmatrix} 9 & 8 \\ 0 & 6 \end{vmatrix} + \underbrace{(-1)^{3} \cdot 0 \cdot \begin{vmatrix} 4 & 5 \\ 0 & 6 \end{vmatrix}}_{= 0}  + \underbrace{(-1)^{4} \cdot 0 \cdot \begin{vmatrix} 4 & 5 \\ 9 & 8 \end{vmatrix}}_{= 0} \\
+            &= \underbrace{1}_{= a_{1,1}} \cdot \begin{vmatrix} 9 & 8 \\ 0 & 6 \end{vmatrix}\\
+            &= \det(\begin{bmatrix} 9 & 8 \\ 0 & 6 \end{bmatrix} =: B)\\
+            &= (-1)^{1 + 1} \cdot b_{1, 1} \cdot \det(B_{1,1}) + (-1)^{2 + 1} \cdot b_{2, 1} \cdot \det(B_{2, 1}) \quad \substack{\text{ développement par rapport}\\\text{à la premiere colonne}}\\
+            &= 1 \cdot \underbrace{9}_{a_{2,2}} \cdot \begin{vmatrix} 6 \end{vmatrix} + \underbrace{(-1) \cdot 0 \cdot \begin{vmatrix} 8 \end{vmatrix} }_{= 0}\\
+            &= \underbrace{1}_{= a_{1,1}} \cdot \underbrace{9}_{= a_{2,2}} \cdot \underbrace{6}_{= a_{3,3}}
+\end{align*}
+\end{eg}

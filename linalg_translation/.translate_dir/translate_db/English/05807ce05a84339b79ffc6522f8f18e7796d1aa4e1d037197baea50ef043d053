@@ -1,0 +1,21 @@
+\begin{preuve}
+    \begin{itemize}
+        \item $1) \implies 2)$ : obvious
+        \item $2) \implies 3)$ : 
+            \begin{itemize}
+                \item 
+                    \underline{Hyp:} $\forall \varepsilon >0, \exists \delta > 0$ tq $\|x - 0_E\|_E \le \delta \implies \|Ax - A0_E\|_F \le \varepsilon$ $\|x\|_E \le \delta \implies \|Ax\|_F \le \varepsilon$
+                \item $\varepsilon = 1 \exists \delta > 0$ tq $\|x\|_E \le \delta \implies \|Ax\|_F \le 1$
+                \item Let $ x \in E$ and $x \neq 0_E$
+                \item $y = \frac{\delta}{\|x\|_E}x$ therefore $\|y\|_E = \delta$  $\implies\|Ay\|_F \le 1$
+                \item $Ay = \frac{\delta}{\|x\|_{E}}Ax$ and $A$ linear
+                \item  $\|Ay\|_{F} = \frac{\delta}{\|x\|_E}\|Ax\|_F \le 1 \implies \|Ax\|_F \le \frac{1}{\delta}\|x\|_E$
+            \end{itemize}
+        \item $3) \implies 1)$ 
+            \begin{itemize}
+                \item I fix $x_0 \in E$. to see: $A$ continuous at $x_0$?
+                \item $\|Ax - Ax_0\|_F = \|A(x - x_0)\|_F \le C\|x - x_0\|_E$
+                \item Therefore if $\|x - x_0\|_E \le \frac{\varepsilon}{c} = \delta(\varepsilon)$, $\|Ax - Ax_0\|_F \le \varepsilon$
+            \end{itemize}
+    \end{itemize}
+\end{preuve}

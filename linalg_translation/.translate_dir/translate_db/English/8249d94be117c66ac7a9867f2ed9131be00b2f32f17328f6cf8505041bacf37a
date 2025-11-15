@@ -1,0 +1,11 @@
+\begin{definition}
+    Two norms $N_1$ and $N_2$ on $E$ are equivalent ($N_1 \sim N_2$) if $\exists c_1, c_2 > 0$ such that
+    \begin{itemize}
+        \item $N_1(u) \le c_1N_2(u) \quad \forall u \in E$
+        \item $N_2(u) \le c_2N_1(u) \quad \forall u \in E$
+    \end{itemize}
+    $\exists c > 0$ such that
+    \[
+    cN_1(u) \le N_2(u) \le cN_1(u)
+    \]
+\end{definition}

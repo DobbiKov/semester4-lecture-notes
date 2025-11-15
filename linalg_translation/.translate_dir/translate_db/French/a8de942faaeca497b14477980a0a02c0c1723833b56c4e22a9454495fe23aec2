@@ -1,0 +1,61 @@
+\begin{eg}
+   \begin{enumerate}
+       \item $A = \begin{pmatrix} 
+            -1 & 1 & 1\\
+            1  & -1 & 1\\
+            1  & 1  & -1
+           \end{pmatrix} $. $P_A(X) = -(X - 1)(X + 2)^2$, donc on a deux possibilité:
+           \begin{itemize}
+               \item $m_A(X) = (X - 1)(X + 2)$ - donc  $A$ diagonalisable
+               \item  $m_A(X) = (X - 1)(X + 2)^2$ - donc $A$ pas diagonalisable
+           \end{itemize}
+           Calculons:
+           \[
+            (A - I)(A + 2I) = \begin{pmatrix} 
+                -2 & 1 & 1\\
+                1 & -2 & 1\\
+                1 & 1  & -2
+            \end{pmatrix}\begin{pmatrix} 
+                1 & 1 & 1\\
+                1 & 1 & 1\\
+                1 & 1 & 1
+            \end{pmatrix} = \begin{pmatrix} 
+                0 & 0 & 0\\
+                0 & 0 & 0\\
+                0 & 0 & 0
+            \end{pmatrix}   
+           \] 
+           Donc, $m_f(X) = (X - 1)(X + 2)$ et donc  $A$ est diagonalisable.
+        \item  $A = \begin{pmatrix} 
+                3 & -1 & 1\\
+                2 & 0  & 1\\
+                1 & -1 & 2
+            \end{pmatrix} $. On a: $P_A(X) = -(X - 1)(X - 2)^2$, donc:
+            \[
+            m_A(X) = \begin{cases}
+                (X-1)(X-2) \quad \text{ i.e $A$ diagonalisable}\\
+                (X-1)(X-2)^2 \quad \text{ i.e $A$ pas diagonalisable}
+            \end{cases}
+            \] 
+            Calculons:
+            \[
+                (A - I)(A - 2I) = \begin{pmatrix} 
+                    2 & -1 & 1\\
+                    2 & -1 & 1\\
+                    1 & -1 & 1\\
+                \end{pmatrix} 
+                \begin{pmatrix} 
+                    1 & -1 & 1\\
+                    2 & -2 & 1\\
+                    1 & -1 & 0
+                \end{pmatrix} 
+                =
+            \begin{pmatrix}
+            1 & -2 & 1 \\
+            1 & -2 & 1 \\
+            0 & -2 & 2
+            \end{pmatrix} \neq \begin{pmatrix} 0 & 0 & 0\\  0 & 0 & 0\\ 0 & 0 & 0 \end{pmatrix} 
+            \] 
+            D'où $m_A(X) \neq (X-1)(X-2)$ et donc $A$ n'est pas diagonalisable.
+   \end{enumerate} 
+\end{eg}

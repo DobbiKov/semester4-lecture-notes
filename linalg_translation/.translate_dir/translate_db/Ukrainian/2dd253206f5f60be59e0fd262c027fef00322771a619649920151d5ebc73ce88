@@ -1,0 +1,61 @@
+\begin{preuve} Теореми \ref{thm:gram-schmidt}
+    Побудуємо ортогональний базис: $\{w_1, \ldots, w_p\}$. Спершу покладемо:
+    \[
+    \begin{cases}
+        w_1 = v_1\\
+        w_2 = v_2 + \lambda w_1, \qquad \text{де } \lambda \text{ такий, що } w_1 \perp w_2
+    \end{cases}
+    \] 
+    Накладаючи цю умову, знаходимо:
+    \[
+        0 = \scalair{v_2 + \lambda w_1, w_1} = \scalair{v_2, w_1} + \lambda \|w_1\|^2
+    \] 
+    Оскільки $w_1 \neq 0$, отримуємо $\lambda = - \frac{\scalair{v_2, w_1}}{\|w_1\|^2}$. Зауважимо, що:
+    \[
+    \begin{cases}
+        v_1 = w_1\\
+        v_2 = w_2 - \lambda w_1
+    \end{cases}
+    \] 
+    отже $Vect\{v_1, v_2\} = Vect\{w_1, w_2\}$.
+    \par
+    Після побудови $w_2$, будуємо $w_3$, поклавши:
+    \begin{align*}
+        &w_3 = v_3 + \mu w_1 + \nu w_2\\
+        &\text{де } \mu \text{ та } \nu \text{ такі, що: } w_3 \perp w_1 \text{ та } w_3 \perp w_2
+    \end{align*}
+    Можна розглядати $w_3 = v_3 - \lambda' w_1 - \lambda'' w_2 $ як $w_3 = v_3 - proj_{F_2}v_3$ де $F_i = Vect\{w_1, \ldots, w_i\}$
+    \begin{figure}[H]
+        \centering
+        \incfig{projection-with-bon-thm}
+        \caption{Вектор за допомогою проекції}
+        \label{fig:projection-with-bon-thm}
+    \end{figure}
+    Це дає
+    \begin{align*}
+        0 &= \scalair{v_3 + \mu w_1 + \nu w_2, w_1} = \scalair{v_3, w_1} + \mu \underset{= \|w_1\|^2}{\scalair{w_1, w_1}} + \nu \underset{= 0}{\scalair{w_2, w_1}}\\
+          &= \scalair{v_3, w_1} + \mu \|w_1\|^2 
+    \end{align*}
+    звідки $\mu = - \frac{\scalair{v_3, w_1}}{\|w_1\|^2}$. Аналогічно, накладаючи умову, що $w_3 \perp w_2$, знаходимо $\nu = - \frac{\scalair{v_3, w_2}}{\|w_2\|^2}$. Оскільки
+    \[
+    \begin{cases}
+        v_1 = w_1\\
+        v_2 = w_2 - \lambda w_1\\
+        v_3 = w_3 - \mu w_1 - \nu w_2
+    \end{cases}
+    \] 
+    добре видно, що $Vect\{w_1, w_2, w_3\} = Vect\{v_1, v_2, v_3\}$. Тобто, $\{w_1, w_2, w_3\}$ є ортогональним базисом простору, породженого $v_1, v_2, v_3$. Тепер добре видно процес рекурсії.
+    \par
+    Припустимо, що ми побудували $w_1, \ldots, w_{k-1}$ для $k \le p$. Покладемо:
+    \begin{align*}
+        w_k &= v_k + \text{ лінійна комбінація вже знайдених векторів}\\
+            &= v_k + \lambda_1w_1 + \ldots + \lambda_{k-1}w_{k-1}
+    \end{align*}
+    Умови $w_k \perp w_i$ (для $i \in \{1, \ldots, k-1\}$) еквівалентні:
+    \[
+        \lambda_i = - \frac{\scalair{v_k, w_i}}{\|w_i\|^2}
+    \] 
+    як це негайно перевіряється. Оскільки $v_k = w_k - \lambda_1 - \ldots - \lambda_{k-1}w_{k-1}$, за індукцією бачимо, що $Vect\{w_1, \ldots, w_k\} = Vect\{v_1, \ldots, v_k\}$ $\iff$ $\{w_1, \ldots, w_k\}$ є ортогональним базисом $Vect\{v_1, \ldots, v_k\}$.
+    \par
+    Нам залишається лише нормувати її, тобто  $\forall i \in \{1, \ldots, k\}$ $e_i = \frac{w_i}{\|w_i\|}$, звідки $\{e_1, \ldots, e_k\}$ є ортонормальним базисом $F = Vect\{v_1, \ldots, v_k\}$.
+\end{preuve}

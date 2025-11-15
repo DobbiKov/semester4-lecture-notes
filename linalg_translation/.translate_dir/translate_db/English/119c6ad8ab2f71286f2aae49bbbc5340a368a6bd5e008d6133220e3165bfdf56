@@ -1,0 +1,6 @@
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-bornee}
+    \caption{Example of a bounded set}
+    \label{fig:exemple-bornee}
+\end{figure}

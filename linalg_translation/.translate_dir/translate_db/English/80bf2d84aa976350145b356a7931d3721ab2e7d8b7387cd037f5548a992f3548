@@ -1,0 +1,7 @@
+\begin{lemma}
+   The application
+   \[
+   \sqrt{<.,.>} = \| . \|: E \to \R_+ 
+   \] 
+   is called a Euclidean norm.
+\end{lemma}

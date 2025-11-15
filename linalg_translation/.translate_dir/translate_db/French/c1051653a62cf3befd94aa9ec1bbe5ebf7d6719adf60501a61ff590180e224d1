@@ -1,0 +1,42 @@
+\begin{preuve}
+
+   Puisque \( E \) est de dimension finie, il existe une base de \( E \) et donc un isomorphisme linéaire entre \( E \) et \(\mathbb{R}^n\) (ou \(\mathbb{C}^n\)). En conséquence, on peut se ramener à l'étude de normes sur \(\mathbb{R}^n\).
+
+
+   Considérons la norme \(\|\cdot\|_1\) sur \( E \) et définissons la sphère unité associée :
+   \[
+   S = \{ x \in E : \|x\|_1 = 1 \}.
+   \]
+   Dans un espace de dimension finie, la sphère unité \( S \) est compacte (cela repose sur le fait que dans \(\mathbb{R}^n\), les ensembles fermés et bornés sont compacts).
+
+
+   La fonction
+   \[
+   f : S \to \mathbb{R}, \quad f(x) = \|x\|_2
+   \]
+   est continue car \(\|\cdot\|_2\) est une norme (et donc une fonction continue). Par le théorème de Weierstrass, \( f \) atteint ses bornes sur \( S \). Il existe donc :
+   \begin{itemize}
+       \item Un minimum \( m = \min_{x \in S} f(x) > 0 \) (la stricteté de \( m > 0 \) s’explique par le fait que \( x \neq 0 \) pour \( x \in S \)).
+       \item Un maximum \( M = \max_{x \in S} f(x) \).
+   \end{itemize}
+
+
+   Soit \( x \in E \) quelconque, \( x \neq 0 \). On écrit \( x = \|x\|_1 \, y \) avec \( y = \frac{x}{\|x\|_1} \) qui appartient à \( S \). Alors,
+   \[
+   \|x\|_2 = \|x\|_1\,\|y\|_2.
+   \]
+   Or, puisque \( y \in S \), on a
+   \[
+   m \le \|y\|_2 \le M.
+   \]
+   Ainsi,
+   \[
+   m\,\|x\|_1 \le \|x\|_2 \le M\,\|x\|_1.
+   \]
+   En posant \( c = m \) et \( C = M \), nous obtenons exactement l'équivalence des normes.
+
+
+   Pour \( x = 0 \), l'inégalité est triviale car \( \|0\|_1 = \|0\|_2 = 0 \).
+
+
+\end{preuve}

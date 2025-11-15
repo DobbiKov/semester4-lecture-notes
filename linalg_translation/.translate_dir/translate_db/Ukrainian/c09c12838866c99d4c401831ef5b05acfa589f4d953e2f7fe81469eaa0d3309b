@@ -1,0 +1,6 @@
+\begin{definition}
+    Нехай $A \in \mathcal{M}_{p, n}(\R)$ та $B \in \mathcal{M}_{n, q}(\R)$ такі що $A = (a_{j, i})$ та $B = (b_{m, k})$, тоді:
+    \[
+        AB = C = (c_{j, k} = \sum_{i=1}^{n} a_{j, i}b_{i, k})
+    \] 
+\end{definition}

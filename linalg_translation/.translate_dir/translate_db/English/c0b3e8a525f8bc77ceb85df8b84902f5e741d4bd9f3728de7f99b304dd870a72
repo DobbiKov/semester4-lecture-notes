@@ -1,0 +1,7 @@
+
+\begin{theorem}\label{thm:cayley-hamilton} \textbf{Cayley-Hamilton}. Let $f \in K^n$ be an endomorphism and $P_f(X)$ its characteristic polynomial, then
+     \[
+    P_f(f) = 0
+    \] 
+    In other words, the characteristic polynomial of an endomorphism is its annihilating polynomial.
+\end{theorem}

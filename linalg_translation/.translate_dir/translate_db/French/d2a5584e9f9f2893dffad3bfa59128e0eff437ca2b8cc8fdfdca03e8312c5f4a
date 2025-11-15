@@ -1,0 +1,3 @@
+\begin{prop}
+    Si $F, F'$ sont deux e.v \underline{de dimension finie} tq $dim(F) = dim(F')$ et  $f: F \to F'$ linéaire, alors $f$ est un isomorphisme $\iff Ker(f) = {0}$
+\end{prop}

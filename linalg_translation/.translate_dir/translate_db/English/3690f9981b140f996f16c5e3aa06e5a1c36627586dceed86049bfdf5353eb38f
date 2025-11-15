@@ -1,0 +1,25 @@
+\begin{eg}
+   Again, the matrix  
+   \[
+       A = \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} 
+   \] 
+   in the canonical basis of $\R^2$. We have already found its eigenvalues: $\lambda_1 = 3$ and $\lambda_2 = 2$. So, let's find the vectors:
+   \[
+       \begin{bmatrix} 3 - \lambda_1 & 1 \\ 0 & 2 - \lambda_1 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 3 - 3 & 1 \\ 0 & 2 - 3 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ 0 & -1 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = 0 
+       \implies \begin{cases}
+           y = 0\\
+           -y = 0\\
+           x \in \R
+       \end{cases}
+   \] 
+   Therefore, $\ker(A - 3I) = \begin{pmatrix} x \\ 0 \end{pmatrix} =  \operatorname{Vect}(\begin{pmatrix} 1 \\ 0 \end{pmatrix} )$. Here is our first eigenvector: $\begin{pmatrix} 1 \\ 0 \end{pmatrix} $. For the second one:
+   \[
+       \begin{bmatrix} 3 - \lambda_2 & 1 \\ 0 & 2 - \lambda_2 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 3 - 2 & 1 \\ 0 & 2 - 2 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = 0 
+       \implies \begin{cases}
+           x + y = 0
+       \end{cases} \implies \begin{cases}
+           x = -y
+       \end{cases}
+   \] 
+   Therefore, $\ker(A - 2I) = \begin{pmatrix} -y \\ y \end{pmatrix} = y \begin{pmatrix} -1 \\ 1 \end{pmatrix} = \operatorname{Vect}(\begin{pmatrix} -1 \\ 1 \end{pmatrix} )  $ and here is the second eigenvector: $\begin{pmatrix} -1 \\ 1 \end{pmatrix} $ (it was our vector $v_2$ at the beginning of the chapter).
+\end{eg}

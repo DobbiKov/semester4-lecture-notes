@@ -1,0 +1,9 @@
+\begin{definition}[Norme sur un \(\K\)-espace vectoriel \(E\)]
+       Une \textbf{norme} sur \(E\) (où \(\K = \R\) ou \(\C\)) est une application \(N: E \to \R_+\) (notée \(\|\cdot\|\)) telle que :
+       \begin{enumerate}
+           \item \textbf{Séparation :} \(\|X\| = 0 \iff X = 0_E\)
+           \item \textbf{Homogénéité :} \(\|\lambda X\| = |\lambda| \|X\|\) pour tout \(\lambda \in \K, X \in E\)
+           \item \textbf{Inégalité triangulaire :} \(\|X + Y\| \le \|X\| + \|Y\|\) pour tout \(X, Y \in E\)
+       \end{enumerate}
+       Un espace vectoriel muni d'une norme est un \textbf{espace vectoriel normé} (EVN).
+   \end{definition}

@@ -1,0 +1,4 @@
+\begin{enumerate}
+    \item Determine whether an endomorphism $f$ is diagonalizable/triangulable, i.e., if there exists such a matrix $A'$.
+    \item Determine the change-of-basis matrix $P$ and the matrix $A'$.
+\end{enumerate}

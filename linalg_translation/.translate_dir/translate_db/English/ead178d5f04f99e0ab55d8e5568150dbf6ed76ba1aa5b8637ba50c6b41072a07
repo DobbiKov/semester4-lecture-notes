@@ -1,0 +1,9 @@
+\begin{itemize}
+    \item $(AB)x = A(Bx)$ where $AB = A \circ B$
+    \item $(\lambda A)B = \lambda (AB)$
+    \item $A(B + C) = AB + AC$
+    \item $(A + B)C = AC + BC$
+    \item $0A = 0$
+    \item $AB \neq BA$ (in general)
+    \item $A(BC) = (AB)C$
+\end{itemize}

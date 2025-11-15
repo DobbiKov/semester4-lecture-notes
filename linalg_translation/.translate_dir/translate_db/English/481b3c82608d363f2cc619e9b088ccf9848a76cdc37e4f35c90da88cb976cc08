@@ -1,0 +1,6 @@
+\documentclass[a4paper]{report}
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{refs.bib}
+\input{../preamble.tex}
+\title{Notes from the Analysis and Geometry course\\\vspace{1cm}
+\Large Professor: Christian Gérard \normalsize}

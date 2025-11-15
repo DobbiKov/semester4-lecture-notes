@@ -1,0 +1,3 @@
+\begin{theorem}
+    Théorème du rang: Si  $F$ est un e.v de dimension finie et  $f: F \to F'$ linéaire, alors $dim(F) = dim(Ker(f)) + dim(Im(f))$
+\end{theorem}

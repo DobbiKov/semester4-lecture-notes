@@ -1,0 +1,6 @@
+\begin{remark}
+    Remember the following version of the triangle inequality:
+    \[
+        |d(x, z) - d(y, z)| \le d(x, y)
+    \] 
+\end{remark}

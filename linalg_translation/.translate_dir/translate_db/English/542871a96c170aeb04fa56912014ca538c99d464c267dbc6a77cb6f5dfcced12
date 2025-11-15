@@ -1,0 +1,7 @@
+\begin{prop}
+    Let $A \in \mathcal{M}_n(\R)$ be a matrix with its eigenvectors: $\{\lambda_1, \ldots, \lambda_n\}$, then:
+    \begin{align*}
+        &\operatorname{Tr}(A) = \lambda_1 + \ldots + \lambda_n\\
+        &\operatorname{det}(A) = \lambda_1 \cdot  \ldots \cdot  \lambda_n\\
+    \end{align*}
+\end{prop}

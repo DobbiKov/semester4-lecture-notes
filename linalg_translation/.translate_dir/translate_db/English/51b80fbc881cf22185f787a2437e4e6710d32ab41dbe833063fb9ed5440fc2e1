@@ -1,0 +1,7 @@
+\begin{definition}[Interior Point, Interior]
+    Let \(A \subset E\). A point \(x_0 \in E\) is \textbf{interior} to \(A\) if there exists \(r > 0\) such that \(B(x_0, r) \subset A\).
+    The \textbf{interior} of \(A\), denoted \(\operatorname{Int}(A)\) or \(\mathring{A}\), is the set of interior points to \(A\).
+    \begin{propriete}
+        \(\operatorname{Int}(A)\) is the largest open set included in \(A\). \(A\) is open \(\iff A = \operatorname{Int}(A)\).
+    \end{propriete}
+\end{definition}

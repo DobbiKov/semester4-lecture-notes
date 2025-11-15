@@ -1,0 +1,6 @@
+\begin{theorem}
+    If $(E, \| \cdot \|)$ is complete, every normally convergent series is convergent and
+     \[
+    \|\sum_{n=0}^{\infty} u_n\| \le \sum_{n=0}^{\infty} \|u_n\|
+    \] 
+\end{theorem}

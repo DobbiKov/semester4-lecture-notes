@@ -1,0 +1,6 @@
+\begin{definition}[Différentiabilité (cas général \(f: D \to \R^m\))]
+    \(f=(f_1, \dots, f_m)\). \(f\) est différentiable en \(X_0\) si chaque composante \(f_j: D \to \R\) l'est.
+    La différentielle \(df_{X_0}\) est une application linéaire de \(\R^n\) dans \(\R^m\), dont la matrice dans les bases canoniques est la \textbf{matrice Jacobienne} \(J_f(X_0)\):
+    \[ (J_f(X_0))_{ji} = \frac{\partial f_j}{\partial x_i}(X_0) \]
+    Donc \(df_{X_0}(H) = J_f(X_0) H\) (où H est un vecteur colonne).
+\end{definition}

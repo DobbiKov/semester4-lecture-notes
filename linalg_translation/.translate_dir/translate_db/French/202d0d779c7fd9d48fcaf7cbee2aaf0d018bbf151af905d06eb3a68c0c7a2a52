@@ -1,0 +1,6 @@
+En développant ce détérminant on obtient une équiation du type:
+\[
+    (-1)^n\lambda^n + a_{n-1}\lambda^{n-1} + \ldots + a_1\lambda + a_0 = 0
+\] 
+dont les racines sont les valeurs propres de $f$ (rappelle: valeur propre est un facteur $\lambda$).
+Ne vous concentrez pas trop sur cette équation pour l'instant, on va y revenir.

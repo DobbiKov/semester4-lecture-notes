@@ -1,0 +1,9 @@
+\begin{eg}
+   \begin{align*}
+       f: \R &\longrightarrow \R \\
+       x &\longmapsto f(x) = \arctan x
+   .\end{align*} 
+   \[
+       f(\underbrace{]-\frac{\pi}{2}, \frac{\pi}{2}[}_{\text{pas compact}}) = \underbrace{\R}_{\text{pas compact}}
+   \] 
+\end{eg}

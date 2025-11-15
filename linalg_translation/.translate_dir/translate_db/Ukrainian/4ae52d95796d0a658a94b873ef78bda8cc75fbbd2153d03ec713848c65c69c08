@@ -1,0 +1,7 @@
+\begin{align*}
+    && f(v) &= \lambda v\\
+    \iff&& Av &= \lambda v \quad \text{ у матричній нотації}\\
+    \iff&& Av &= \lambda (Iv) \quad \text{ де } I \text{ є одиничною матрицею}\\
+    \iff&& Av - \lambda Iv &= 0\\
+    \iff&& (A - \lambda I)v &= 0
+\end{align*}

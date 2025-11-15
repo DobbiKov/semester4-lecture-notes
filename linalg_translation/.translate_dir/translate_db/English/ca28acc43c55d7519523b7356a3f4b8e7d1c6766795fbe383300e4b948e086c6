@@ -1,0 +1,9 @@
+\begin{eg}
+   \begin{align*}
+       f: \R &\longrightarrow \R \\
+       x &\longmapsto f(x) = \arctan x
+   .\end{align*} 
+   \[
+       f(\underbrace{]-\frac{\pi}{2}, \frac{\pi}{2}[}_{\text{not compact}}) = \underbrace{\R}_{\text{not compact}}
+   \] 
+\end{eg}

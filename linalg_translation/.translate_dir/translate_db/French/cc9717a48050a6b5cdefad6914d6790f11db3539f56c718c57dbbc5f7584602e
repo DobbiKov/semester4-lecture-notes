@@ -1,0 +1,4 @@
+\begin{theorem}[Condition suffisante de différentiabilité]
+    Si toutes les dérivées partielles \(\frac{\partial f}{\partial x_i}\) existent sur un voisinage ouvert de \(X_0\) et sont continues en \(X_0\), alors \(f\) est différentiable en \(X_0\).
+    Si elles sont continues sur \(D\), \(f\) est dite de \textbf{classe \(C^1\)} sur \(D\).
+\end{theorem}

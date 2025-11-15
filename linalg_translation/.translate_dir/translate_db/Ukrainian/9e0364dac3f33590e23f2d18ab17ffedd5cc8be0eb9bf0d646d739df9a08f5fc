@@ -1,0 +1,5 @@
+\begin{definition}[Часткові похідні порядку \(k\)]
+    Часткові похідні порядку \(k\) отримуються шляхом послідовного диференціювання \(k\) разів за змінними.
+    Приклад: \(\frac{\partial^2 f}{\partial x_j \partial x_i} = \frac{\partial}{\partial x_j} \left(\frac{\partial f}{\partial x_i}\right)\).
+    \(f\) є \textbf{класу \(C^k\)} на \(D\), якщо всі її часткові похідні до порядку \(k\) існують і є неперервними на \(D\).
+\end{definition}

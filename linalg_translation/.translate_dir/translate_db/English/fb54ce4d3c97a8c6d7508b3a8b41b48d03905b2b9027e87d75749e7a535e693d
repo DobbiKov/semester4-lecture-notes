@@ -1,0 +1,17 @@
+\begin{eg}
+   Let $f$ be an endomorphism in $\R^2$ whose representative matrix in the canonical basis is:
+   \[
+       \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} 
+   \] 
+   Let's calculate its eigenvalues:
+   \begin{align*}
+       && \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} v &= \lambda v \\
+       \iff && \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix} v - \lambda I v &= 0\\
+       \iff && \left(\begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix}  - \lambda I\right)v  &= 0\\
+       \implies && \det \left( \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix}  - \lambda I \right) &= 0\\
+       \implies && \det \left( \begin{bmatrix} 3 & 1\\ 0 & 2 \end{bmatrix}  - \lambda \begin{bmatrix} \lambda & 0\\ 0 & \lambda \end{bmatrix}  \right) &= 0\\
+       \implies && \det \left( \begin{bmatrix} 3 - \lambda & 1\\ 0 & 2 - \lambda \end{bmatrix}\right) &= 0\\
+                && &= (3-\lambda)(2 - \lambda) = 0
+   \end{align*}
+   We can clearly see that the solutions are: $\lambda_1 = 3$ and $\lambda_2 = 2$
+\end{eg}

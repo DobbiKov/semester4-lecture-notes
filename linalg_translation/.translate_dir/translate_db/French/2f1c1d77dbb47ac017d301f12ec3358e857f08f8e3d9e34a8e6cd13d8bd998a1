@@ -1,0 +1,3 @@
+\begin{definition}
+    $(E, d)$ est \underline{complet} si toute suite de cauchy dans  $E$ est convergente.
+\end{definition}

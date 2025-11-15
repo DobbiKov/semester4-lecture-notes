@@ -1,0 +1,12 @@
+\begin{definition}
+    \[
+        D \subset \R^n \quad D \text{ ouvert } \quad f: D \to \R \text{ est } \mathcal{C}^1 \text{ sur } D
+    \] 
+    Soit $D \subset \R^n$ ouvert, alors la fonction $f: D \to \R$ est de classe $\mathcal{C}^1$ sur  $D$ si 
+    $f$ est différentiable en tout  $X \in D$ et la fonction
+    \begin{align*}
+        : D &\longrightarrow \R^n \\
+        X &\longmapsto \vec{\nabla}f(X)
+    \end{align*}
+    est continue.
+\end{definition}

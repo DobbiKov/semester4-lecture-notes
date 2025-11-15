@@ -1,0 +1,7 @@
+\begin{theorem}\label{thm:gram-schmidt}Gram-Shmidt\\
+    Soit $E$ un espace vectoriel muni d'un produit scalaire  $\scalair{,}$. Soit  $(v_1, \ldots, v_n)$ une famille libre d'élement $\in E$. Alors,  il existe une famille $(w_1, \ldots, w_n)$ orthogonale tq 
+    \[
+        \forall i = 1, \ldots, n \quad Vect(v_1, \ldots, v_i) = Vect(w_1, \ldots, w_i)
+    \] 
+    De plus, ce théorème nous donne un procédé de construction d'une base orthonormée à partir d'une base quelconque.
+\end{theorem}

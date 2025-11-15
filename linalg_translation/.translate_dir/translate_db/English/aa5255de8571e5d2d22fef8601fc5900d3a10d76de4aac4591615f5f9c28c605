@@ -1,0 +1,22 @@
+\begin{proof}
+$f$ is continuous at $X_0$ $|\vec{u} \cdot X| \le |\vec{u}| |X|$
+\begin{enumerate}
+    \item continuity
+        \begin{align*}
+            |f(X_0 + X) - f(X_0)| &\le |\vec{u} \cdot X| + \|X\| |\epsilon(X)|\\
+                                  &\le \|X\|\left( \|\vec{u}\| + |\epsilon(x)|  \right) \le c\|X\|
+        \end{align*}
+        therefore: $f(X_0 + X) \xrightarrow[X \to \vec{0}]{} f(X_0)$
+    \item .
+        \begin{align*}
+            g(t) = f(X_0 + t \vec{v}) &= f(X_0) + \vec{\nabla}f(X_0) \cdot t \vec{v} + \|t \vec{v}\| \cdot \epsilon(t \vec{v})\\
+                                      &= f(X_0) + t\vec{\nabla}f(X_0) \cdot \vec{v} + |t|\|\vec{v}\|\epsilon_1(t)\\
+                                      &= f(X_0) + t\vec{\nabla }f(X_0)\cdot \vec{v}
+        \end{align*}
+        therefore:
+        \[
+            \frac{d}{dt} f(X_0 + t\vec{v})\mid_{t = 0} = \vec{\nabla}f(X_0)\cdot \vec{v}
+        \] 
+        (take $\vec{v} = \vec{e_1}, \ldots, \vec{e_n}$ for the coordinates of $\vec{\nabla}f(X_0)$)
+\end{enumerate}
+\end{proof}

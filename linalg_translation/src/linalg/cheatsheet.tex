@@ -1,0 +1,218 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\scalair}[1]{\left\langle #1 \right\rangle}
+
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{eg}{Exemple}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{property}{Propriété(s)}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{remark}{Remarque}
+
+\author{Yehor KOROTENKO}
+\title{CheatSheet pour l'Algèbre Linéaire}
+
+\begin{document}
+\maketitle
+\section{Éspaces euclidiens}
+   \begin{prop}
+      Endomorphisme $f: E \to E$ un drapeau invariant (i.e $f(E_i) \subset E_i$) $\iff$ $Mat(f)$ triangulaire supérieure 
+   \end{prop} 
+\subsection{Produits scalairs et normes}
+\begin{definition}
+    Une forme bilinéaire sur $E$ (\textbf{produit scalair}) un espace euclidien est une application:
+    \begin{align*}
+        f: E \times E &\longrightarrow \R \\
+        (u, v) &\longmapsto f(u, v) 
+    \end{align*}
+    qui vérifie ces propriétés:
+    \begin{enumerate}
+        \item \textbf{Bilinéarité}:
+            \begin{enumerate}
+                \item $f(u + \lambda v, w) = B(u, w) + \lambda B(v, w)$ avec $u, v, w \in E$ et  $\lambda \in \R$
+                \item $f(u, v + \lambda w) = B(u, v) + \lambda B(v, w)$ avec $u, v, w \in E$ et $\lambda \in \R$
+            \end{enumerate}
+        \item \textbf{Symétrie}: $B(u, v) = B(v, u) \qquad \forall u, v \in E$ 
+        \item \textbf{Définie positive}: $\forall u \in E, B(u, u) \ge 0$
+        \item \textbf{Définie}: $B(u, u) = 0 \iff u = 0$
+    \end{enumerate}
+\end{definition}
+\begin{remark}
+    Le produit vectoriel est noté: $\scalair{., .}$ 
+\end{remark}
+\begin{definition}
+    La norme $\forall X \in E$:
+    \[
+        \|X\| = \sqrt{\scalair{X, X}} 
+    \] 
+\end{definition}
+\begin{prop}
+   Les formules utiles: (pour $X, Y \in E$)
+   \begin{enumerate}
+       \item $|\scalair{X, Y}| \le \|X\| \cdot \|Y\|$ (égalité si $X$ et  $Y$ sont colinéaires)
+       \item $\|X + Y\|^2 = \|X\|^2 + 2\scalair{X, Y} + \|Y\|^2$ 
+       \item $\|X + Y\|^2 + \|X - Y\|^2 = 2\left( \|X\|^2 + \|Y\|^2 \right) $
+       \item $\scalair{X, Y} = \frac{1}{4}\left( \|X + Y\|^2 - \|X - Y\|^2 \right) $
+   \end{enumerate}
+\end{prop}
+\subsection{Orthogonalité}
+\begin{definition}
+    $u, v \in E$ sont \textbf{orthogonaux} si $\scalair{u, v} = 0$ et on les notes  $u \perp v$
+\end{definition}
+\begin{definition}
+    \textbf{Orthogonale de $A$}:
+    \[
+        A^{\perp} = \{ u \in E \mid \scalair{u, v} = 0 \quad \forall v \in A \}
+    \] 
+    aussi connu comme  \textbf{complement orthogonale}.
+\end{definition}
+\begin{prop}
+   Si $E$ est un espace euclidien et  $A \subset E$ son sous-espace vectoriel, alors:
+   \[
+       E = A \oplus A^{\perp}
+   \] 
+   i.e tout vecteur $x \in E$ peut s'écrit comme  $x = e + e'$ où  $e \in A$ et  $e' \in A'$.
+\end{prop}
+\begin{prop}
+   Si $f$ est une projection orthogonale sur  $F \subset E$, alors:
+   \[
+   f(f(x)) = f(x) \quad \forall x \in E
+   \] 
+\end{prop}
+\begin{definition}
+    La \textbf{projection orthogonale} sur un sous-espace $A \subset E$ est une application:
+    \begin{align*}
+        p_F: E &\longrightarrow F \\
+        x &\longmapsto p_F(x = e + e') = e
+    \end{align*}
+\end{definition}
+\begin{prop}
+    \textbf{La distance} d'un vecteur $x$ à un sous-espace  $F$ est:
+    \[
+    \|x - p_F(x)\|
+    \] 
+\end{prop}
+\begin{definition}
+    Une \textbf{isométrie} de $E$ est un endomorphisme tel que:
+     \[
+         \forall x, y \in E, \quad \scalair{f(x), f(y)} = \scalair{x, y}
+    \]
+    de plus,
+    \[
+    \forall x \in E, \quad \|f(x)\| = \|x\|
+    \] 
+\end{definition}
+\begin{prop}
+    Si $X \in E$ et $(e_1, \ldots, e_n)$  est une base orthonormale de $E$, donc:
+     \[
+         X =  \scalair{X, e_1}e_1 + \ldots + \scalair{X, e_n}e_n
+    \] 
+    Où $\scalair{X, e_i}$ sont les coordonées dans la base  $(e_1, \ldots, e_n)$
+\end{prop}
+
+\section{Détérminants}
+\subsection{Propriétés les plus improtants}
+\begin{prop} les propriétés de déterminant.
+    Pour cette proposition, on note $\det(c_1, \ldots, c_n)$ un déterminant où $\forall i, \, r_i$ et $\forall i, \, y_i$ représentent une colonne (ou un vecteur colonne). Et $\forall i, \lambda_i \in \R$.
+    \begin{enumerate}
+        \item \textbf{Déterminant de la matrice identité est 1:}
+            \[
+            \det(I_n) = 1
+            \] 
+        \item \textbf{Déterminant de la matrice du rang 1 est son seul élément}:
+            \[
+                \det(\begin{bmatrix} a_{1,1} \end{bmatrix} ) = a_{1,1} \qquad \text{ où } a_{1,1} \in \R
+            \] 
+        \item \textbf{Linéarité 1}:
+            \[
+            \det(r_1, \ldots, r_i + y_i, \ldots, r_n) = \det(r_1, \ldots, r_i, \ldots, r_n) + \det(r_1, \ldots, y_i, \ldots, r_n)
+            \] 
+        \item \textbf{Linéarité 2}:
+            \[
+            \det(r_1, \ldots, \lambda_ir_i, \ldots, r_n) = \lambda_i\det(r_1, \ldots, r_i, \ldots, r_n) 
+            \] 
+               C'est pourquoi:
+               \[
+               \det(\lambda A) = \lambda^n\det(A)
+               \] 
+        \item \textbf{Mêmes colonnes}: Supposons que $i \neq j$ et $c_i = c_j$ alors:
+             \[
+            \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) = 0
+            \] 
+            S'il y a deux colonnes identiques, alors $\det$ est égale à 0.
+        \item \textbf{Déplacements des colonnes}:
+            
+\[
+    \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) 
+    = -\det(c_1, \ldots, 
+    \underbrace{c_j , \ldots, 
+    c_i}_{\text{permutation}}, \ldots, c_n)
+\]
+Autrement dire, une permutation des colonnes change la signe.
+
+\item \textbf{Détérminant des matrices multipliées}: Soient $A, B \in \mathcal{M}_n(\R)$
+    \[
+        \det(AB) = \det(A)\det(B) 
+    \] 
+
+\item \textbf{Détérminant d'une matrice transposé}: Soit $A \in \mathcal{M}_n(\R)$
+    \[
+        \det(A^{T}) = \det(A)
+    \] 
+
+
+% Drawing the arc manually
+\end{enumerate}
+\end{prop}
+
+\section{Utile}
+\subsection{Multiplication des matrices}
+\begin{definition}
+    Soit $A \in \mathcal{M}_{p, n}(\R)$ et $B \in \mathcal{M}_{n, q}(\R)$ tels que $A = (a_{j, i})$ et $B = (b_{m, k})$, alors:
+    \[
+        AB = C = (c_{j, k} = \sum_{i=1}^{n} a_{j, i}b_{i, k})
+    \] 
+\end{definition}
+\subsection{La trace}
+\begin{definition}
+    La trace de la \( n \times n \) matrice carée \( A \), notée \( \text{tr}(A) \), est la somme des éléments diagonales
+
+    \[
+        \text{tr}(A) = a_{11} + a_{22} + \dots + a_{nn} = \sum_{i=1}^{n} a_{ii}
+    \]
+
+    où \( a_{ii} \) sont des éléments diagonales de la matrice \( A \). 
+\end{definition}
+
+\end{document}

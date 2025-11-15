@@ -1,0 +1,16 @@
+
+Commençons par clarification d'une notion de l'application linéaire et sa matrice. Preonons pour ça la matrice de l'exercice du début du chapitre:
+\[
+A = \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+   \end{bmatrix}
+\] 
+Cetter matrice transforme l'espace vectoriel qu'on le donne, ou en simplifiant, elle transforme chaque vecteur de l'espace vectoriel. Prennons un vecteur $v_3 = \begin{pmatrix} 1 \\ 1 \end{pmatrix} $, en appliquant $A$ on obtient:
+ \[
+Av_3 = \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+   \end{bmatrix}\begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 3 \\ 0 \end{bmatrix} + \begin{pmatrix} 1 \\ 2 \end{pmatrix} = \begin{bmatrix} 4 \\ 2 \end{bmatrix} 
+\] 
+

@@ -1,0 +1,7 @@
+\begin{definition}
+    Нехай $(x_n)_{n \in \N}$ послідовність у $E$. Послідовність  
+    \[
+        (y_n)_{n \in \N} \text{ з } y_n = x_{\phi(n)}
+    \] 
+    де $\phi: \N \to \N$ є \underline{строго зростаючою} називається \textbf{підпослідовністю} послідовності $(x_n)$.
+\end{definition}

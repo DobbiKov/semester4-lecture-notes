@@ -1,0 +1,7 @@
+\begin{definition}
+    Нехай $A \subset E$. 
+    \begin{enumerate}
+        \item $x_0 \in E$ є \underline{прилягаючою точкою} до $A$, якщо $\forall \delta > 0, \, B(x_0, \delta)$ перетинає $A$. (еквівалентно $d(x_0, A) = 0$)
+        \item $Adh(A)$ (замикання або замикання $A$) = множина точок, прилягаючих до $A$ (також позначається $\overline{A}$)
+    \end{enumerate}
+\end{definition}

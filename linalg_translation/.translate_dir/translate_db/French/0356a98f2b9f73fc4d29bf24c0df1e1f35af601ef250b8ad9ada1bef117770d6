@@ -1,0 +1,4 @@
+\begin{definition}[Convergence d'une suite]
+    Une suite \((x_n)_{n \in \N}\) d'éléments de \(E\) \textbf{converge} vers \(x \in E\) si \(\lim_{n \to \infty} d(x_n, x) = 0\).
+    On note \(\lim_{n \to \infty} x_n = x\) ou \(x_n \to x\). La limite, si elle existe, est unique.
+\end{definition}

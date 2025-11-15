@@ -1,0 +1,3 @@
+\begin{theorem}
+    Un endomorphisme $f$ est diagonalisable si et seulement si son polynôme minimal est scindé et il a toutes ses racines simples.
+\end{theorem}

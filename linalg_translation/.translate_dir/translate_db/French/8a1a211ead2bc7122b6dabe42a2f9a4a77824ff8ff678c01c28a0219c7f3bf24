@@ -1,0 +1,9 @@
+Généralisons: Si $A \in \mathcal{M}_n(K)$ est diagonalisable (i.e  il existe $P$ et  $A'$ telles que  $A' = P^{-1}AP$), alors:
+\[
+    A^{n} = P(A'^{n})P^{-1} = P\begin{bmatrix} 
+        \lambda_1^n & 0 & \ldots & 0\\ 
+        0 & \lambda_2^n & \ldots & 0\\
+        \vdots & \ddots & \ddots & \vdots\\
+        0 & 0 & \ldots & \lambda_n^n
+    \end{bmatrix}P^{-1}
+\]

@@ -1,0 +1,4 @@
+\begin{itemize}
+    \item $\|X\|_1 = \sum_{n=1}^{d} |x_i| \quad X \in \C^d$
+    \item $\|X\|_{\infty} = \underset{1\le i \le d}{sup} |x_i|$
+\end{itemize}

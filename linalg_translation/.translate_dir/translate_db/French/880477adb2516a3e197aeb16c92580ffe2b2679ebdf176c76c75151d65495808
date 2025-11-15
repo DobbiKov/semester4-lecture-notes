@@ -1,0 +1,6 @@
+\begin{prop}
+   Soit $A \in B(E, F)$ et $\|A\| = \sup_{\|x\|_E \le 1} \|A\|_F$  une norme uniforme. $\|A\| = $ plus petit  $c$ tel que 
+    \[
+   \|Ax\|_F \le c \|x\|_E \quad \forall x \in E
+   \] 
+\end{prop}

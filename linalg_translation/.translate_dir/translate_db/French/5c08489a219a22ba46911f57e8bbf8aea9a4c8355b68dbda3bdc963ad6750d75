@@ -1,0 +1,6 @@
+\begin{propriete}
+    \begin{itemize}
+        \item Toute suite convergente est de Cauchy.
+        \item Toute suite de Cauchy est bornée.
+    \end{itemize}
+\end{propriete}

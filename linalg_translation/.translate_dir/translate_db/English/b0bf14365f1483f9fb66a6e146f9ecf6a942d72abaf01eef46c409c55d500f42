@@ -1,0 +1,7 @@
+\begin{prop}
+    \begin{enumerate}
+        \item $K$ compact $\implies$ $K$ closed and bounded. (converse is false in general!)
+        \item If $K$ compact and $F$ closed, then $K \cap F$ is compact.
+        \item If $K$ compact, every Cauchy sequence in $K$ converges in $K$
+    \end{enumerate}
+\end{prop}

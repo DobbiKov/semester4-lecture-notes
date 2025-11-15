@@ -1,0 +1,6 @@
+\begin{figure}[H]
+    \centering
+    \incfig{continuite-topologique}
+    \caption{continuite-topologique}
+    \label{fig:continuite-topologique}
+\end{figure}

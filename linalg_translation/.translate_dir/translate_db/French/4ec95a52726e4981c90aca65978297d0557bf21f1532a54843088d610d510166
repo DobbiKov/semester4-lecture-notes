@@ -1,0 +1,22 @@
+\begin{preuve}
+    Soit $f$ une isométrie, alors elle transforme toute base en une base car  $f$ est bijective par la prop. \ref{prop:isometrie-bijective}. 
+    \begin{itemize}
+        \item ($\implies$) Supposons que $f$ est une isométrie. Soit $\{e_i\}$ une base orthonormée, alors, on a:
+             \[
+                 \scalair{f(e_i), f(e_j)} = \scalair{e_i, e_j} = \delta_{i,j}
+            \] 
+            Donc, $\{f(e_i)\}$ est une base orthonormée.
+        \item ($\impliedby$) Supposons, qu'il existe une base orthonormée $\{e_i\}$ telle que  $\{f(e_i)\}$ est aussi une base orthonormée. De plus, soit  $x = x_1e_1 + \ldots x_ne_n$ et $y = y_1e_1 + \ldots + y_ne_n$ avec $x_i, y_i \in \R$
+            \par
+            Comme $\{e_i\}$ est orthonormée, alors on a:
+            \begin{equation}\label{eq:prod-scal-base-ortho}
+                \scalair{x, y} = x_1y_1 + \ldots + x_ny_n = \sum_{i=1}^{n} x_iy_i
+            \end{equation}
+            D'autre part:
+            \begin{align*}
+                \scalair{f(x), f(y)} &= \scalair{\sum_{i=1}^{n} x_if(e_i), \sum_{i=1}^{n} y_if(e_i)} = \sum_{i,j = 1}^{n} x_iy_j\scalair{f(e_i), f(e_j)}\\
+                                     &= \sum_{i,j=1}^{n} x_iy_j\scalair{e_i, e_j} \underset{\text{car } \{e_i\} \text{ orthonormée}}{=} = \sum_{i=1}^{n} x_iy_i \underset{\text{D'apres } \ref{eq:prod-scal-base-ortho}}{=} \scalair{x, y}
+            \end{align*}
+            Donc $f$ est une isométrie.
+    \end{itemize}
+\end{preuve}

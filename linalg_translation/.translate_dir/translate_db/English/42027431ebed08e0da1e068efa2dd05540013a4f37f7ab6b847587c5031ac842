@@ -1,0 +1,5 @@
+
+Similarly \( X \) is the matrix of a vector \( \vec{x} \) in the canonical basis and \( X' = M(\vec{x})_{v_i} \), is related to \( X \) by
+\[
+X' = P^{-1}X
+\]

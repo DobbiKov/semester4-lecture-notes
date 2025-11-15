@@ -1,0 +1,6 @@
+\begin{definition}
+    $(x_n)_{n \in \N}$ suite dans $E$ est de \underline{Cauchy} si:
+     \[
+    \forall \epsilon > 0 \, \exists N(\epsilon) \in \N \text{ tel que } \forall n, p \ge N(\epsilon), d(x_n, x_p) \le \epsilon
+    \] 
+\end{definition}

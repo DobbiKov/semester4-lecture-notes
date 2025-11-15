@@ -1,0 +1,6 @@
+\begin{lemma}
+   \[
+   F: D \to  \R^p \text{ continuous if and only if:}
+   \]  
+   each $F_i: D \to \R$ is continuous
+\end{lemma}

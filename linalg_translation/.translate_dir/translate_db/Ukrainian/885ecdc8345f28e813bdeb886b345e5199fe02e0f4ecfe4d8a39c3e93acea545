@@ -1,0 +1,26 @@
+\begin{eg}
+   \[
+   f(x_1, x_2) = \begin{cases}
+       1  \text{ якщо } x_2 = x_1^2 \text{ і } (x_1, x_2) \neq (0, 0)\\
+       0 \text{ інакше}
+   \end{cases}
+   \]  
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-dervie-partielle}
+    \caption{Приклад диференційовної, але не неперервної функції}
+    \label{fig:exemple-dervie-partielle}
+\end{figure}
+\[
+    f((0, 0) + t \vec{u}) = f(t \vec{u}) = 0
+\] 
+якщо $t\neq 0$ і $t$ малий, маємо, що $f$ диференційовна в усіх напрямках.
+\par
+Але, $f$ не є неперервною в $(0, 0)$:
+ \[
+X_n = (\frac{1}{n}, \frac{1}{n^2}) \quad X_n \to (0, 0)
+\] 
+\[
+\forall n, f(X_n) = 1 \quad f(X_n) \not\xrightarrow[n \to \infty]{} f(0, 0)
+\] 
+\end{eg}

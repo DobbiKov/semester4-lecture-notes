@@ -1,0 +1,7 @@
+\begin{prop}
+   If $E$ is a Euclidean space and $A \subset E$ its vector subspace, then:
+   \[
+       E = A \oplus A^{\perp}
+   \] 
+   i.e. any vector $x \in E$ can be written as $x = e + e'$ where $e \in A$ and $e' \in A'$.
+\end{prop}

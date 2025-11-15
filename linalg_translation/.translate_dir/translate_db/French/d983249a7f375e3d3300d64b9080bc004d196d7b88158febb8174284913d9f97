@@ -1,0 +1,8 @@
+\begin{definition}
+    Une \underline{norme} sur $\R^d$ est une application  $N: \: \R^d \to \R$ tell que:
+    \begin{enumerate}
+        \item $N(\lambda X) = |\lambda|N(X)$
+        \item  $N(X + Y) \le N(X) + N(Y)$
+        \item $N(X) \ge 0$ et $N(X) = 0 \iff X = 0_d$
+    \end{enumerate}
+\end{definition}

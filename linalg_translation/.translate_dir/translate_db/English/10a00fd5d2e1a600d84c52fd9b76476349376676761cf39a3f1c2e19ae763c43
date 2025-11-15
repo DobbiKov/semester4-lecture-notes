@@ -1,0 +1,6 @@
+\begin{property}
+   Let $X, Y \in E$ be, then:
+   \[
+       \|X + Y\|^2 = \|X\|^2 + 2\scalair{X, Y} + \|Y\|^2
+   \] 
+\end{property}

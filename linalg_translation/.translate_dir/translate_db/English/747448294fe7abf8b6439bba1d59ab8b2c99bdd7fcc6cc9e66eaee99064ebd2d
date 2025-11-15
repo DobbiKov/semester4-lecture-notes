@@ -1,0 +1,8 @@
+\begin{intuition}
+   I propose to reflect on what this definition means. 
+   Let's recall what the derivative intuitively means in the case $\R^n = \R$ ($n = 1$). 
+   Intuitively, if we zoom in on the function we are deriving, it behaves and looks like a line. 
+   In the case $R^n = \R^2$, if we zoom in on the function, it looks like a plane. 
+   Indeed, that's the idea of the derivative: if we take a tiny step of an ant, the displacement is also small and uniform. 
+   By increasing $n$, the derivative gives scalars to construct a subspace of dimension $n-1$ of the space $\R^n$. 
+\end{intuition}

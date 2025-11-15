@@ -1,0 +1,13 @@
+\begin{proof}
+   \begin{enumerate}
+       \item Let $K$ be compact. $K$ is closed if $(u_n)$ is a sequence in $K$ that converges to $u$, then $u \in K$.
+           \par
+           \underline{clear:} $(u_n)$ has a subsequence $v_n = u_{\phi(n)}$ with $v_n \to v \in K$, $u_n \to u$, so $v_n \to u$ $\implies$ $u = v$  $\implies$ $u \in K$
+           \par
+           $K$ \underline{is bounded}:
+           \par
+              Let $U_x = \bigcup_{x \in K} B(x, 1)$ be an open cover of $K$. Now $K$ is compact, so there exist $x_1, \ldots, x_n \in K$, such that $K \subset \bigcup_{i = 1, \ldots, n} B(x_i, 1) $, so $K$ is bounded.
+        \item $K$ compact and $F$ closed. $(u_n)$ a sequence in $K \cap F$. $u_n \in K$. $ \exists$ subsequence $v_n = u_{\phi(n)}$ with $v_n \to x \in K$. $v_n \in F, v_n \to x$, $F$ closed so $x \in F$, $x \in K \cap F$.
+        \item Let $(u_n)$ be a Cauchy sequence in $K$. $(u_n)$ has a subsequence $v_n = u_ { \phi(n)}$ that converges to $x \in K$. $u_n \to x \in K$
+   \end{enumerate} 
+\end{proof}

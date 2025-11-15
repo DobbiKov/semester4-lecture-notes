@@ -1,0 +1,11 @@
+\begin{prop} Pour comprendre cette proposition, je vous conseil de lire la section \ref{sec:isometrie-et-adjoints}
+    \par
+   Toute projection orthogonale est autoadjoint, i.e si $p$ est une projection orthogonale, donc:
+   \[
+   p^* = p
+   \] 
+   En notation matricielle: soit $A$ une matrice de la projection  $p$, donc:
+    \[
+   A^T = A
+   \] 
+\end{prop}

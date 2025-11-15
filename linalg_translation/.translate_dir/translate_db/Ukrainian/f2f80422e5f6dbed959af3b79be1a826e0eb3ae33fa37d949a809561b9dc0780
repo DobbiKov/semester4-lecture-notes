@@ -1,0 +1,40 @@
+\begin{explanation}
+   Якщо $v = 0$, зрозуміло\\
+   Якщо $v \neq 0$ розглянемо $\forall t \in \R$
+   \begin{align*}
+       \|u + tv\|^2 &= <u + tv, u + tv>\\ 
+                    &= <u, u + tv> + t<v, u + tv>\\
+                    &= <u, u> + t<u, v> + t<v, u> + t^2<v, v>\\
+                    &= \|u\|^2 + 2t<u, v> + t^2 \|v\|^2 = f(t)
+   \end{align*}
+   \begin{center}
+       \begin{tikzpicture}
+           \begin{axis}[
+               axis lines = center,
+               xlabel = $x$,
+               ylabel = $y$,
+               samples = 100,
+               domain = -3:6,
+               xmin = -3, xmax = 6,
+               ymin = -3, ymax = 6,
+               width=5cm,
+               height=5cm
+               ]
+               \addplot[red, thick] {(x - 3)^2 + 2};
+               \addplot[blue, thick] {(x + 1)^2};
+           \end{axis}
+       \end{tikzpicture}
+   \end{center}
+Випадок 1: $f(t)$ не має різних коренів
+\begin{align*}
+    &\Delta = 4<u, v>^2 = 4\|u\|^2\|v\|^2 \le 0\\
+    \implies & <u, v>^2 \le \|u\|^2 \cdot \|v\|^2\\
+    \implies & |<u, v>| \le \|u\|\|v\|
+\end{align*}
+Випадок 2: $f(t)$ має лише один корінь:
+\begin{align*}
+    &\Delta = 0\\
+    \implies & \exists t \in \R \text{ така що } \|u + tv\|^2 = 0\\
+    \implies &u + tv = 0 \implies u = -tv
+\end{align*}
+\end{explanation}

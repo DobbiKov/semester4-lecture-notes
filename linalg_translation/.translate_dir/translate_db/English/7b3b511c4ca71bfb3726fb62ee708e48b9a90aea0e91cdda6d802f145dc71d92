@@ -1,0 +1,7 @@
+\begin{definition}
+    Let $f \in \mathcal{C}^2(D)$. Hessian matrix: $n \times n$ matrix
+    \[
+    H_f(X_0) = \begin{bmatrix} \frac{\partial^2}{\partial x_i \partial x_j}(X_0) \end{bmatrix} 1\le i,j \le n
+    \] 
+    The lemma \ref{thm:lemme-de-schwarz} tells us that $H_f(X_0)$ is symmetric if $f \in \mathcal{C}^2(D)$
+\end{definition}

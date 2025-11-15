@@ -1,0 +1,29 @@
+\begin{proof} -
+    \begin{enumerate}
+        \item 
+            $\|AB\| \le \|A\|\|B\|$ (because $\| \cdot \|$ uniform norm!) therefore $\|A^n\| \le \|A\|^n$. $\sum_{n \in \N}^{} \frac{\|A\|^n}{n!}$ (numerical series!) converges to $e^{\|A\|}$ therefore $\sum_{n \in \N}^{} \frac{A^n}{n!}$ converges \underline{normally} in $\mathcal{M}_n(\mathbb{C})$. 
+            \par
+            $\mathcal{M}_n(\mathbb{C})$ is complete (like $B(E)$ if $E$ is complete) therefore $\sum_{n \in \N}^{} \frac{A^n}{n!}$ converges in $\mathcal{M}_n(\mathbb{C})$.
+        \item OK also
+        \item \[
+            \|e^A - \sum_{n=0}^{N} \frac{A^n}{n!}\| = \|\sum_{n=N+1}^{\infty} \frac{A^n}{n!}\| \le \sum_{n = N+1}^{\infty} \frac{\|A\|^n}{n!}
+            \] 
+            We denote $f(x) = e^x$
+             \[
+                 f(x) = \sum_{n=0}^{N} f^{(n)}(0) \frac{x^n}{n!} + \frac{x^{N+1}}{(N+1)!}f^{(N+1)}(y) \quad (y \text{ between } 0 \text{ and } x)
+            \] 
+            $x = \|A\|$
+        \item  
+            \[
+                e^Ae^B = e^{A + B} \text{ if } AB = BA
+            \] 
+            \begin{align*}
+                (A + B)^2 = A^2 + AB + BA + B^2 = A^2 + 2AB + B^2 \quad (\text{ if } AB = BA)
+            \end{align*}
+            \[
+                (A+B)^n = \sum_{p=0}^{n} C_n^p A^{n-p}B^p
+            \] 
+            Same proof if $A = a, B = b$ with  $a,b \in \R$
+        \item exercise
+    \end{enumerate}
+\end{proof}

@@ -1,0 +1,7 @@
+\begin{enumerate}
+    \item Tout espace vectoriel normé de dimension finie est complet (rappel: proposition \ref{prop:rd-est-complet}) (voir plus bas)
+    \item Si $E$ de dim finie:
+         \[
+        K \text{ compact} \iff K \text{ fermé et borné }
+        \] 
+\end{enumerate}

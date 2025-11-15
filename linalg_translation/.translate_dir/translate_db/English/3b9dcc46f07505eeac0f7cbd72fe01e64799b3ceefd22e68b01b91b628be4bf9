@@ -1,0 +1,26 @@
+\begin{definition}
+    Let $A = (a_{i, j}) \in \mathcal{M}_n(\R)$ be a square matrix. We denote
+    \[
+        b_{i, j} = (-1)^{i + j}\det(A_{i, j})
+    \] 
+    Next, we denote the matrix
+    \[
+        N = 
+        \begin{bmatrix} 
+            b_{1,1} & \ldots & b_{1, n}\\
+            \vdots  & \ddots & \vdots  \\
+            b_{n,1} & \ldots & b_{n, n}\\
+        \end{bmatrix} 
+        = \operatorname{Com}(A)
+    \] 
+    The matrix $N$ is called the \textbf{cofactor matrix} of $A$.
+    Then, the \textbf{adjoint matrix} of $A$ is defined as the transposed cofactor matrix:
+    \[
+        A^{*} = N^{T} = 
+        \begin{bmatrix} 
+            b_{1,1} & \ldots & b_{n, 1}\\
+            \vdots  & \ddots & \vdots  \\
+            b_{1,n} & \ldots & b_{n, n}\\
+        \end{bmatrix} 
+    \] 
+\end{definition}

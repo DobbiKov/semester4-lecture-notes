@@ -1,0 +1,11 @@
+\begin{definition}
+    Нехай $A = [a_{i, j}] \in \mathcal{M}_{n}(\R)$ квадратна матриця $n \times n$, тоді:
+    \[
+        \operatorname{det}(A) = \sum_{\sigma \in S_n}^{} \operatorname{signe}(\sigma) \cdot \prod_{i=1}^{n} a_{i, \sigma(i)} 
+    \] 
+    де 
+    \begin{itemize}
+        \item $S_n$ це група всіх перестановок $\{1, \ldots, n\}$
+        \item $\operatorname{signe}(\sigma)$ це знак перестановки
+    \end{itemize}
+\end{definition}

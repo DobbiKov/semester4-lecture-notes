@@ -1,0 +1,10 @@
+\begin{eg} в $\R$
+    \begin{enumerate}
+        \item $Int(\Q) = \O$
+        \item $Int(\R \setminus \Q) = \O$
+        \item $Adh(\Q) = \R$
+        \item $Adh(\R \setminus \Q) = \R$
+        \item $Fr(\Q) = \R$
+        \item $Fr(\R \setminus \Q) = \R$
+    \end{enumerate} 
+ \end{eg}

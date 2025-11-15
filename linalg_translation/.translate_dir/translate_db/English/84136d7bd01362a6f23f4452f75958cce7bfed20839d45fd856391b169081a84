@@ -1,0 +1,4 @@
+\begin{theorem}[Continuity and uniform convergence]
+    Let \(M\) be a metric space. If the \(f_n: M \to E\) are continuous for all \(n\) and \((f_n)\) converges uniformly to \(f: M \to E\), then \(f\) is continuous.
+    The space \(C_b(M,E)\) of the bounded continuous functions of \(M\) in \(E\), equipped with \(\|\cdot\|_\infty\), is a Banach space if \(E\) is a Banach space.
+\end{theorem}

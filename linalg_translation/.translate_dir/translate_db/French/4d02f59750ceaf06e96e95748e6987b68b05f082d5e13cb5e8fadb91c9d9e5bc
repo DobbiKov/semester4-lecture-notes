@@ -1,0 +1,20 @@
+\begin{preuve} de la proposition-définition \ref{def:continuite-topologique}
+   \begin{enumerate}
+       \item Montrons que $F$ continue  $\implies$ si $U$ ouvert donc $F^{-1}(U)$ ouvert.
+           \par
+           Supposons que $F$ continue. Soit  $y \in U$, alors  $\exists x_0 \in F^{-1}(U)$ tel que $F(x_0) = y$, 
+           comme  $F$ est continue, donc:  
+           \[
+               \forall \epsilon > 0, \exists \alpha > 0 \text{ tq } \forall x \in E_1 \text{ tq }  d(x_0, x) < \alpha \implies d(y = F(x_0), x) < \epsilon
+           \] 
+           Or $U$ est ouvert, alors pour $y$, il existe  $\epsilon$ tq  $B(y, \epsilon) \subset U$, comme $F$ continue, il existe $\alpha$, tq $\forall x \in B(x_0, \alpha), \, y \in B(y, \epsilon) \subset U$. Alors, on a montré que $\forall x \in F^{-1}(U), \, \exists \alpha$ tq $B(x, \alpha) \subset F^{-1}(U)$, donc $F^{-1}(U)$ est ouvert. 
+       \item Montrons que $F$ continue  $\impliedby$ si $U$ ouvert donc $F^{-1}(U)$ ouvert.
+           Supposons que $\forall U$ ouvert $\subset E_2$, $F^{-1}(U)$ est ouvert. 
+           \par
+           Soit $y \in U$ et $\epsilon > 0$, posons: $U := B(y, \epsilon)$ ouvert  $\subset E_2$ donc $F^{-1}(U)$ ouvert, d'où $\forall x \in F^{-1}(U) \, \exists \alpha > 0$ tq $B(x, \alpha) \subset F^{-1}(U)$. 
+           Par la définition de la boule ouverte, on a:
+           \[
+               \forall y := f(x_0), \forall \epsilon > 0, \exists \alpha > 0, \forall x \in E_1 \text{ tq } d(x_0, x) < \alpha, d(f(x), y = f(x_0)) < \epsilon
+           \] 
+   \end{enumerate} 
+\end{preuve}

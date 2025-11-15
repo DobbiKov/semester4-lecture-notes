@@ -1,0 +1,40 @@
+\begin{ex} Calculate \[
+   \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+   \end{bmatrix}^{15} = \underbrace{
+       \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+       \end{bmatrix}
+       \cdot
+       \ldots
+       \cdot
+       \begin{bmatrix} 
+       3 & 1\\
+       0 & 2
+       \end{bmatrix}
+   }_{15 \text{ fois}}
+   \] Recall that the eigenvectors of $A$ are: \[
+v_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \text{ and } v_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix} 
+\] which are linearly independent and span $\R^2$, thus forming a basis for $\R^2$. Therefore, we can express $A$ in this new basis, and as we have already found:
+
+\[
+    A' = P^{-1}AP = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix} 
+\] in the basis $(v_1, v_2)$ with the change-of-basis matrix:
+\[
+    P = \begin{bmatrix} 1 & -1\\ 0 & 1 \end{bmatrix} \text{ and } P^{-1} = \begin{bmatrix} 1 & 1 \\ 0 & 1  \end{bmatrix}
+\] Furthermore, by multiplying $A'$ by $A'$, we get:  
+\[
+    A' \cdot A' = (P^{-1}AP)(P^{-1}AP) = P^{-1}A^2P = A'^2
+\] hence
+\[
+    A'^n = P^{-1}A^{n}P \implies PA'^nP^{-1} = PP^{-1}A^{n}PP^{-1} = A^{n}
+\] This allows us to first calculate the power of $A'$:
+ \[
+     A'^{15} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}^{15} = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}^{13} = \begin{bmatrix} 3^2 & 0 \\ 0 & 2^2 \end{bmatrix}\begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}^{13} = \begin{bmatrix} 3^{15} & 0 \\ 0 & 2^{15} \end{bmatrix}
+\] This is much easier than calculating $A^15$ directly, so now we just need to convert back to the canonical basis:
+ \[
+     P \begin{bmatrix} 3^{15} & 0 \\ 0 & 2^{15} \end{bmatrix} P^{-1} = \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 3^{15} & 0 \\ 0 & 2^{15} \end{bmatrix}\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 3^{15} & 3^{15} - 2^{15} \\ 0 & 2^{15}\end{bmatrix} 
+\] 
+\end{ex}

@@ -1,0 +1,6 @@
+\begin{theorem}
+    Нехай $f: D \longrightarrow \R$ диференційовна, $D$ відкрита і  $X_0 \in D$ (інакше, якщо $D$ не відкрита, потрібно  $X_0 \in \operatorname{Int}(D)$) тоді:
+    \[
+        X_0 \text{ локальний екстремум } \implies X_0 \text{ критична точка} 
+    \] 
+\end{theorem}

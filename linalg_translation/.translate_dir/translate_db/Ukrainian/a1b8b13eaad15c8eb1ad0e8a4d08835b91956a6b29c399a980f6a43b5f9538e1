@@ -1,0 +1,3 @@
+\begin{prop}\label{prop:isometrie-ssi-transforme-bon-en-bon}
+   $f$ є ізометрією тоді і лише тоді, якщо вона перетворює будь-який ортонормований базис на ортонормований базис. 
+\end{prop}

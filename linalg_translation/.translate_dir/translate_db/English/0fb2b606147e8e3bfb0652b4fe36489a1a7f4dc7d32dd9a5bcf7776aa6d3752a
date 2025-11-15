@@ -1,0 +1,8 @@
+\begin{definition}[Balls]
+    Let \((E, d)\) be a metric space, \(x_0 \in E\) and \(r > 0\).
+    \begin{enumerate}
+        \item \textbf{Open ball} : \(B(x_0, r) = \{ x \in E : d(x_0, x) < r \}\)
+        \item \textbf{Closed ball} : \(B_f(x_0, r) = \{ x \in E : d(x_0, x) \le r \}\)
+        \item \textbf{Sphere} : \(S(x_0, r) = \{ x \in E : d(x_0, x) = r \}\)
+    \end{enumerate}
+\end{definition}

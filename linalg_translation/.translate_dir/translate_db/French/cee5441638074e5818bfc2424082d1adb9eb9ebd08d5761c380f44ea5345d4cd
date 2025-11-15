@@ -1,0 +1,6 @@
+\begin{definition}
+    La norme $\forall X \in E$:
+    \[
+        \|X\| = \sqrt{\scalair{X, X}} 
+    \] 
+\end{definition}

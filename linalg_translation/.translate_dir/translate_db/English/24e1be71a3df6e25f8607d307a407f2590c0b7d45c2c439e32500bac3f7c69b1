@@ -1,0 +1,13 @@
+\begin{eg}
+   $E = \R^n$, $< , >$ canonical scalar product
+   \[
+       v_i = (0, \ldots, 0, \underbrace{1}_{i}, 0, \ldots, 0)
+   \] 
+   \[
+   <v_i, v_j> = \begin{cases}
+       1 \text{ si } i = j\\  
+       0 \text{ si } i \neq  j
+   \end{cases}
+   \] 
+   $(v_1, \ldots, v_n)$ is a canonical basis
+\end{eg}

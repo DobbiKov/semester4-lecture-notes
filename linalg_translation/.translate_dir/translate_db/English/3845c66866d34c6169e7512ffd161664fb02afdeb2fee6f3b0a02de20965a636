@@ -1,0 +1,22 @@
+\begin{preuve}
+    Let $f$ be an isometry, then it transforms any basis into a basis because $f$ is bijective by prop. \ref{prop:isometrie-bijective}.
+    \begin{itemize}
+        \item ($\implies$) Suppose that $f$ is an isometry. Let $\{e_i\}$ be an orthonormal basis, then we have:
+             \[
+                 \scalair{f(e_i), f(e_j)} = \scalair{e_i, e_j} = \delta_{i,j}
+            \]
+            Therefore, $\{f(e_i)\}$ is an orthonormal basis.
+        \item ($\impliedby$) Suppose that there exists an orthonormal basis $\{e_i\}$ such that $\{f(e_i)\}$ is also an orthonormal basis. Moreover, let $x = x_1e_1 + \ldots x_ne_n$ and $y = y_1e_1 + \ldots + y_ne_n$ with $x_i, y_i \in \R$
+            \par
+            Since $\{e_i\}$ is orthonormal, then we have:
+            \begin{equation}\label{eq:prod-scal-base-ortho}
+                \scalair{x, y} = x_1y_1 + \ldots + x_ny_n = \sum_{i=1}^{n} x_iy_i
+            \end{equation}
+            On the other hand:
+            \begin{align*}
+                \scalair{f(x), f(y)} &= \scalair{\sum_{i=1}^{n} x_if(e_i), \sum_{i=1}^{n} y_if(e_i)} = \sum_{i,j = 1}^{n} x_iy_j\scalair{f(e_i), f(e_j)}\\
+                                     &= \sum_{i,j=1}^{n} x_iy_j\scalair{e_i, e_j} \underset{\text{car } \{e_i\} \text{ orthonormée}}{=} = \sum_{i=1}^{n} x_iy_i \underset{\text{D'apres } \ref{eq:prod-scal-base-ortho}}{=} \scalair{x, y}
+            \end{align*}
+            Therefore $f$ is an isometry.
+    \end{itemize}
+\end{preuve}

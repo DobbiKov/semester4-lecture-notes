@@ -1,0 +1,6 @@
+\begin{lemma}
+   \[
+   F: D \to  \R^p {\foreignlanguage{ukrainian}{неперервна тоді і тільки тоді, коли:}}   
+    \]  
+   кожне $F_i: D \to \R$ є неперервним
+\end{lemma}

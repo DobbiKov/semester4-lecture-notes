@@ -1,0 +1,22 @@
+\begin{enumerate}
+    \item Я малюю $A$ на аркуші
+    \item Я думаю, що  $Int(A) = C$ ($C$ має бути включеним в  $A$!)
+         \begin{enumerate}
+             \item Я показую, що \underline{$C$ є відкритою} (легко), тому
+                 \[
+                 C \subset Int(A)
+                 \] 
+                 бо $Int(A)$ є найбільшою відкритою множиною, включеною в  $A$.
+            \item Я показую, що $Int(A) \subset C$, тобто я показую, що точки в $A$, але не в  $C$, не належать $Int(A)$: я беру $X \in A, X \not\in C$, я показую, що $X \not\in Int(A)$
+                Я будую послідовність $(X_n)$ з  $X_n \not\in A$ але  $X_n \to X$.
+         \end{enumerate}
+    \item Я думаю, що $Adh(A) = B$ (потрібно, щоб $A \subset B$)
+        \begin{enumerate}
+            \item Я показую, що $B$ є замкненою (легко)
+                \[
+                \text{тому } Adh(A) \subset B
+                \] 
+            \item  Ми показуємо, що $B \subset Adh(A)$: Ми фіксуємо $X \in B$, ми шукаємо послідовність  $(X_n)$ з  $X_n \in A$ і  $X_n \xrightarrow[n \to \infty]{} X$. 
+                \underline{Ми розглядаємо лише} $X \in B, X \not\in A$
+        \end{enumerate}
+\end{enumerate}

@@ -1,0 +1,7 @@
+\begin{definition}
+    Si $E$ est un espace euclidien, on appelle "dual de $E$" l'ensemble
+    \[
+        L(E, \R) = \{ f: E \to \R \mid f \text{ est linéaire}\}
+    \] 
+    On le note $E^*$. Un élément  $f \in E^*$ s'appelle une forme linéaire.
+\end{definition}

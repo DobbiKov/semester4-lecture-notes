@@ -1,0 +1,5 @@
+\begin{definition}[Exponentielle de matrice]
+    Pour \(A \in M_n(\K)\), l'exponentielle de \(A\) est définie par la série :
+    \[ e^A = \exp(A) = \sum_{k=0}^\infty \frac{A^k}{k!} = I + A + \frac{A^2}{2!} + \dots \]
+    Cette série converge toujours (normalement dans \(M_n(\K)\) muni de n'importe quelle norme matricielle, car \(M_n(\K)\) est complet).
+\end{definition}

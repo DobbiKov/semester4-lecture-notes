@@ -1,0 +1,22 @@
+\begin{preuve}
+   $E_1$ це $(E, N_1)$, $E_2 = (E, N_2)$.
+   \par
+   $N_1$ і $N_2$ топологічно еквівалентні означає саме:
+   \begin{enumerate}
+       \item $Id: E_1 \to E_2$ є неперервними
+       \item і $Id: E_2 \to E_1$
+   \end{enumerate}
+   Отже:
+   \begin{enumerate}
+       \item $\Omega$ відкрита щодо $N_2$ $\implies$ $\Omega$ відкрита щодо $N_1$
+       \item $\Omega$ відкрита щодо $N_1$ $\implies$ $\Omega$ відкрита щодо $N_2$
+   \end{enumerate}
+
+   \begin{enumerate}
+       \item $\iff$ $N_2(Id \, u) (= N_2(u)) \le c_1N_1(u)$
+       \item $\iff$ $N_1(Id \, u) (= N_1(u)) \le c_2N_2(u)$
+   \end{enumerate}
+   оскільки $Id$ неперервне і лінійне, тому обмежене $\exists c$ таке що $\underbrace{Id \, u}_{\in E_2} \le c \underbrace{u}_{E_1}$ отже $N_2(Id \, u) \le c N_1(u)$
+   \par
+   $(1)$ і  $(2)$  $\iff$ $N_1$ і $N_2$ еквівалентні.
+\end{preuve}

@@ -1,0 +1,8 @@
+\begin{definition}
+    $f$ is differentiable at  $X_0$ in the direction $\vec{u}$ $(\neq \vec{0})$ if the function
+    \begin{align*}
+        g: \R &\longrightarrow \R \\
+        t &\longmapsto g(t) = f(X_0 + t\vec{u})
+    .\end{align*}
+    is differentiable at $t = 0$
+\end{definition}

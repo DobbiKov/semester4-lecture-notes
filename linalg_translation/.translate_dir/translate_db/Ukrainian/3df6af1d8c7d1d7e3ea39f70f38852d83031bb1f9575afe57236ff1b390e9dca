@@ -1,0 +1,8 @@
+\begin{notation}
+   \[
+       B(E, F) = \{ A \in \mathcal{L}(E, F): A \text{ неперервна } \}
+   \]  
+   \[
+   B(E, E) = B(E)
+   \] 
+\end{notation}

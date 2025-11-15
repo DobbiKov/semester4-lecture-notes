@@ -1,0 +1,4 @@
+\begin{theorem}[Sufficient condition for differentiability]
+    If all the partial derivatives \(\frac{\partial f}{\partial x_i}\) exist on an open neighborhood of \(X_0\) and are continuous at \(X_0\), then \(f\) is differentiable at \(X_0\).
+    If they are continuous on \(D\), \(f\) is said to be of \textbf{class \(C^1\)} on \(D\).
+\end{theorem}

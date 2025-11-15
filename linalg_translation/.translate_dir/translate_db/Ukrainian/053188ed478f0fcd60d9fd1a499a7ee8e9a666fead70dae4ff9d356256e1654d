@@ -1,0 +1,7 @@
+\begin{prop}
+    Нехай $A = (a_{i, j}) \in \mathcal{M}_n(\R)$ квадратна матриця і нехай $1 \le k \le n$
+    \[
+        \displaystyle \det(A) = \sum_{i=1}^{n} (-1)^{i + k} a_{k,i} \det(A_{k, i}) 
+    \] 
+    є обчисленням детермінанта відносно $k^{\text{го}}$ рядка.
+\end{prop}

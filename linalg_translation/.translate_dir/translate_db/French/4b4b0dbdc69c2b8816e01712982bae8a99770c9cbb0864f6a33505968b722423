@@ -1,0 +1,9 @@
+\begin{intuition}
+   Je donne l'intuition de la preuve. Si $f$ est diagonalisable avec un polynôme caractéristique
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1} \cdots (X - \lambda_p)^{\alpha_p}
+    \] 
+    avec $r := \alpha_i > 1$ cela \underline{ne signifie pas} qu'il faut appliquer $(f - \lambda_i \operatorname{Id})$  $r$ fois pour réduire la dimesion comme dans le cas des matrices trigonalisables, mais cela signifie que  $E_{\lambda_i}$ l'espace propre de valeur propre  $\lambda_i$ est de dimension  $\alpha_i = r$ et donc $\forall v \in E_{\lambda_i}, f(v) = \lambda_i v$. 
+
+    Comme $E = E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p}$, si $v \in E$, donc $\exists i \in \{1, \ldots, p\}$ tq $v \in E_{\lambda_i}$ et donc $f(v) - \lambda_i v = 0$ i.e  $(f - \lambda_i \operatorname{Id})(v) = 0$. D'où le radical de $P_f$ annule  $f$.
+\end{intuition}

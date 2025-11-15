@@ -1,0 +1,15 @@
+\begin{corollary}
+   Визначник трикутної матриці є добутком її діагональних елементів. Тобто, нехай трикутна матриця
+   \[
+   A = \begin{bmatrix} 
+       a_{1, 1} & a_{1, 2} & \ldots & a_{1, n-1} & a_{1, n}\\
+       0        & a_{2, 2} & \ldots & a_{2, n-1} & a_{2, n}\\
+       \vdots   & \vdots   & \ddots & \vdots     & \vdots  \\
+       0        & 0        & \ldots & 0          & a_{n, n}
+   \end{bmatrix} 
+   \] 
+   тоді 
+   \[
+   \det(A) = a_{1,1} \cdot a_{2,2} \cdot \ldots \cdot a_{n,n}
+   \] 
+\end{corollary}

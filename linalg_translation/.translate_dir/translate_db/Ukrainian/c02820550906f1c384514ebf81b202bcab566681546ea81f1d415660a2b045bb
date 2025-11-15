@@ -1,0 +1,9 @@
+\begin{intuition}
+   Я даю інтуїцію доведення. Якщо $f$ є діагоналізованою з характеристичним поліномом
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1} \cdots (X - \lambda_p)^{\alpha_p}
+    \] 
+    з $r := \alpha_i > 1$ це \underline{не означає}, що потрібно застосовувати $(f - \lambda_i \operatorname{Id})$ $r$ разів для зменшення розмірності як у випадку тригоналізованих матриць, але це означає, що $E_{\lambda_i}$ власний простір власного значення $\lambda_i$ має розмірність $\alpha_i = r$ і тому $\forall v \in E_{\lambda_i}, f(v) = \lambda_i v$. 
+
+    Оскільки $E = E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p}$, якщо $v \in E$, тоді $\exists i \in \{1, \ldots, p\}$ така що $v \in E_{\lambda_i}$ і тому $f(v) - \lambda_i v = 0$ тобто $(f - \lambda_i \operatorname{Id})(v) = 0$. Звідси радикал $P_f$ анулює $f$.
+\end{intuition}

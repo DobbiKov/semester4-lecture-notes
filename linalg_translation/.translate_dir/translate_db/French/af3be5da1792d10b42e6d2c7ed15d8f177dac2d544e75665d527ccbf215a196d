@@ -1,0 +1,7 @@
+\begin{definition}[Point adhérent, Adhérence]
+    Soit \(A \subset E\). Un point \(x_0 \in E\) est \textbf{adhérent} à \(A\) si toute boule ouverte centrée en \(x_0\) rencontre \(A\), i.e., \(\forall r > 0, B(x_0, r) \cap A \neq \emptyset\). (Équivalent à \(d(x_0, A) = \inf_{y \in A} d(x_0,y) = 0\)).
+    L'\textbf{adhérence} de \(A\), notée \(\operatorname{Adh}(A)\) ou \(\bar{A}\), est l'ensemble des points adhérents à \(A\).
+    \begin{propriete}
+        \(\operatorname{Adh}(A)\) est le plus petit fermé contenant \(A\). \(A\) est fermé \(\iff A = \operatorname{Adh}(A)\).
+    \end{propriete}
+\end{definition}

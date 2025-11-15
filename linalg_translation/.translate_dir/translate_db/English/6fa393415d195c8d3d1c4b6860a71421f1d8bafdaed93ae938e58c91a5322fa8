@@ -1,0 +1,13 @@
+\begin{definition} \textbf{Orthogonal Group}:
+    The set:
+    \[
+        O(n, \R) := \{A \in \mathcal{M}_{n}(\R) \mid A^TA = I\} = \{A \in \mathcal{M}_{n}(\R) \mid AA^T = I\}
+    \] 
+    satisfies the following properties:
+    \begin{enumerate}
+        \item if $A, B \in O(n, \R)$, then $AB \in O(n, \R)$
+        \item $I \in O(n, \R)$
+        \item if $A \in O(n, \R)$ then $A^{-1} \in O(n, \R)$
+    \end{enumerate}
+    In particular, $O(n, \R)$ is a subgroup of $GL(n, \R)$ (group of invertible matrices) (see definition \ref{def:general-linear-group}).
+\end{definition}

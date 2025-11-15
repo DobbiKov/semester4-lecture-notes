@@ -1,0 +1,7 @@
+\begin{definition}
+    Let $E$ be a vector space equipped with a scalar product $\scalair{,}$
+     \begin{itemize}
+         \item A family $(v_i)_{i \ge 0}$ of vectors in $E$ is said to be \underline{orthogonal} if for $i \neq j$ we have $\scalair{v_i, v_j} = 0$ i.e. $v_i \perp v_j$
+         \item An orthonormal family of $E$ is an orthogonal family $(v_i)_{i \ge  0}$ such that, furthermore, $\|v_i\| = 1$ for $i \ge 0$
+    \end{itemize}
+\end{definition}

@@ -1,0 +1,6 @@
+\begin{prop}
+   Let $Q(X)$ be an annihilating polynomial of $f$, then the eigenvalues of $f$ appear among the roots of $Q$, i.e.:
+   \[
+       \operatorname{Sp}(f) \subset \operatorname{Rac}(Q)
+   \] 
+\end{prop}

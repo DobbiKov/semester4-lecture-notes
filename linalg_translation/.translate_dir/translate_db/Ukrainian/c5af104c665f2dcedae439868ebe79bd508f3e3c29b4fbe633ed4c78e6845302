@@ -1,0 +1,5 @@
+$A \in \mathcal{M}_n(\mathbb{C})$ ототожнений з $A \in L(\mathbb{C}^n)$
+\[
+    \left( (Ax)_{i} = \sum_{j=1}^{n} a_{i, j}x_j \right) \quad x = (x_1, \ldots, x_n) \in \mathbb{C}^n
+\] 
+

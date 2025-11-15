@@ -1,0 +1,6 @@
+\begin{доказ}
+   \begin{align*}
+       \|A\underbrace{Bx}_{Y}\|_{E} \le \|A\|\|Bx\|_{E} \le \overbrace{\|A\|\|B\|}^{c} \cdot \|x\|_{E}
+   \end{align*} 
+    отже $\|AB\| \le \|A\| \|B\|$
+\end{доказ}

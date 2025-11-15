@@ -1,0 +1,3 @@
+\begin{preuve}
+    The proof is identical to that of proposition \ref{def:continuite-topologique} when passing to the complement $E_2\setminus U$. 
+\end{preuve}

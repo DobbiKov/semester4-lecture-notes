@@ -1,0 +1,6 @@
+\begin{figure}[H]
+    \centering
+    \incfig{symetrie-orthogonale-axe-f}
+    \caption{Ортогональна симетрія відносно осі $F$}
+    \label{fig:symetrie-orthogonale-axe-f}
+\end{figure}

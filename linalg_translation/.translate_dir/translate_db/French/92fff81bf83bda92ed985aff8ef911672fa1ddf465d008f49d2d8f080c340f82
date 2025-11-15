@@ -1,0 +1,6 @@
+\begin{corollary}
+   Si $A \in \mathcal{M}_n(\R)$ une matrice carrée inversible, alors:
+   \[
+       \det(A^{-1}) = \frac{1}{\det(A)}
+   \] 
+\end{corollary}

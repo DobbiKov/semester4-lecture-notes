@@ -1,0 +1,11 @@
+
+Il existe une base $\vec{u_1}, \ldots, \vec{u_n}$ de $\R^n$ avec $\vec{u_i} \cdot \vec{u_j} = \delta_{i, j}$ ($1$ si  $i = j$ et  $0$ sinon) et des réels $\lambda_1, \ldots, \lambda_n$($\lambda_i = \lambda_j$ possible) tels que
+\[
+    A\vec{u_i} = \lambda_i\vec{u_i}
+\] 
+\[
+    \vec{X} = \sum_{j=1}^{n} y_j\vec{u_j}
+\] 
+\[
+    \vec{X} \cdot \vec{u_i} = \sum_{j=1}^{n} y_j\vec{u_j}\vec{u_i} = y_i
+\] 

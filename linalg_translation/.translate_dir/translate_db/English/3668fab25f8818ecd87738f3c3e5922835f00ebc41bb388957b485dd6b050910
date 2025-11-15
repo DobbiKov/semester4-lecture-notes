@@ -1,0 +1,6 @@
+\begin{definition}[Operator norm]
+    If \(A: E \to F\) is a continuous linear map, its \textbf{operator norm} (or subordinate norm) is:
+    \[ \|A\|_{\mathcal{L}(E,F)} = \sup_{x \in E, \|x\|_E \le 1} \|Ax\|_F = \sup_{x \in E, x \neq 0_E} \frac{\|Ax\|_F}{\|x\|_E} \]
+    It is the smallest constant \(C \ge 0\) such that \(\|Ax\|_F \le C \|x\|_E\) for all \(x \in E\).
+    The space \(\mathcal{L}(E,F)\) (or \(B(E,F)\)) of continuous linear maps from \(E\) to \(F\) is a NVS. If \(F\) is a Banach space, then \(\mathcal{L}(E,F)\) is a Banach space.
+\end{definition}

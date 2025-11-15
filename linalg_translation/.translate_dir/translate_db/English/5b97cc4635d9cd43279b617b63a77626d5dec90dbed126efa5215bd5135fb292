@@ -1,0 +1,9 @@
+\begin{intuition}
+I will provide the intuition behind the proof. If $f$ is diagonalizable with a characteristic polynomial
+     \[
+         P_f(X) = (-1)^n(X - \lambda_1)^{\alpha_1} \cdots (X - \lambda_p)^{\alpha_p}
+    \] 
+    with $r := \alpha_i > 1$, this does \underline{not mean} that one must apply $(f - \lambda_i \operatorname{Id})$  $r$ times to reduce the dimension as in the case of trigonalizable matrices, but rather that $E_{\lambda_i}$, the eigenspace for the eigenvalue $\lambda_i$, has dimension $\alpha_i = r$, and therefore $\forall v \in E_{\lambda_i}, f(v) = \lambda_i v$. 
+
+    Since $E = E_{\lambda_1} \oplus \ldots \oplus E_{\lambda_p}$, if $v \in E$, then $\exists i \in \{1, \ldots, p\}$ such that $v \in E_{\lambda_i}$, and thus $f(v) - \lambda_i v = 0$, i.e., $(f - \lambda_i \operatorname{Id})(v) = 0$. Hence, the radical of $P_f$ annihilates $f$.
+\end{intuition}

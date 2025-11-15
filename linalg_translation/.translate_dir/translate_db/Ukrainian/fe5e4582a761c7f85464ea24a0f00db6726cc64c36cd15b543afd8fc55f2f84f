@@ -1,0 +1,21 @@
+має бути неін'єктивним, що еквівалентно твердженню, що $\det(A - \lambda I) = 0$. Отже, ми повинні обчислити наступний детермінант:
+\[
+\det(A - \lambda I) = \det \left(\begin{bmatrix} 
+    a_{1,1} & a_{1, 2} & \ldots & a_{1, n}\\
+    a_{2,1} & a_{2, 2} & \ldots & a_{2, n}\\
+    \ldots & \ldots & \ldots & \ldots\\
+    a_{n,1} & a_{n,2} & \ldots & a_{n,n}
+    \end{bmatrix}  - 
+    \begin{bmatrix} 
+        \lambda & 0 & \ldots & 0 \\
+        0 & \lambda & \ldots & 0 \\
+        \ldots & \ldots & \ldots & \ldots\\
+        0 & 0 & \ldots & \lambda
+    \end{bmatrix}\right) = 
+    \begin{vmatrix} 
+    a_{1,1} - \lambda & a_{1, 2} & \ldots & a_{1, n}\\
+    a_{2,1} & a_{2, 2} - \lambda & \ldots & a_{2, n}\\
+    \ldots & \ldots & \ldots & \ldots\\
+    a_{n,1} & a_{n,2} & \ldots & a_{n,n} - \lambda
+    \end{vmatrix}
+\]

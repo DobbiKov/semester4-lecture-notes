@@ -1,0 +1,7 @@
+\begin{lemma}
+   Якщо $E$ є скінченновимірним, то
+   \[
+       \mathcal{L}(E, F) = B(E, F)
+   \] 
+   Це неправда, якщо $\dim E = \infty$
+\end{lemma}

@@ -1,0 +1,11 @@
+\begin{remark}
+    \begin{enumerate}
+        \item Можна записати $\|A\|_{B(E, F)}$ замість $\|A\|$ 
+        \item Іноді зустрічається $|||A|||$ для $\|A\|$ 
+        \item Нехай $I^+ = $ множина $C \ge 0$ така що $\|Ax\|_{F} \le C\|x\|_{E} \quad \forall x \in E$. \\
+            $I^+ \neq \O$ (оскільки $A \in B(E, F)$) та $I^+ \subset [0, +\infty[$. $(2)$ та $(3)$ говорять, що $\|A\|$ є найменшим елементом $I^+$
+             \[
+            \inf I^+ = \min I^+ = \|A\|
+            \] 
+    \end{enumerate}
+\end{remark}

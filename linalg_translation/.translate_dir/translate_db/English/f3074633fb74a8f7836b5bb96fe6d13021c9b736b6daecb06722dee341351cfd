@@ -1,0 +1,15 @@
+\begin{eg}
+   \begin{enumerate}
+       \item $E = \R^{n}$ equipped with the standard dot product. The standard basis $(e_1, \ldots, e_n)$ is orthogonal because
+           \[
+           \scalair{e_i, e_j} = \begin{cases}
+               1 \text{ si } i = j\\
+               0 \text{ si } i \neq j
+           \end{cases}
+           \] 
+       \item In $E = \mathcal{C}^{0}([-1, 1], \R)$ equipped with $\scalair{f,g} = \int_{-1}^{1} f(t)g(t)\,d{t}$. The family $(\cos(t), \sin(t))$ is orthogonal. The family $(1, t^2)$ is not orthogonal:
+            \[
+                \scalair{1, t^2} = \int_{-1}^{1} 1 t^2 \, d{t} = \frac{2}{3} \neq  0 
+           \] 
+   \end{enumerate} 
+\end{eg}

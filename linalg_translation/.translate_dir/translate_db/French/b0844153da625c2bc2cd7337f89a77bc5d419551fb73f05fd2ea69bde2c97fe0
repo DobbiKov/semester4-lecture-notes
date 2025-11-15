@@ -1,0 +1,16 @@
+\begin{itemize}
+    \item \textbf{Utiliser la définition :}
+    \[
+    \forall x \in \mathcal{U}, \exists r > 0 \quad \text{tel que} \quad B(x, r) \subset \mathcal{U}
+    \]
+    \item Montrer que \( E \setminus \mathcal{U} \) est fermé.
+    \item Montrer que \(\mathcal{U}\) est l'image réciproque d'un ouvert par une application continue \(f:E \to E'\) (i.e. \(\mathcal{U} = f^{-1}(O)\) avec \(O\) ouvert de \(E'\)).
+    \item Exprimer \(\mathcal{U}\) comme une boule ouverte (qui est toujours un ouvert).
+    \item Écrire \(\mathcal{U}\) comme :
+    \begin{itemize}
+        \item une réunion (quelconque) d'ouverts ;
+        \item une intersection finie d'ouverts.
+    \end{itemize}
+    \item Montrer que \(\mathcal{U} = \operatorname{Int}(\mathcal{U})\).
+    \item Si \(\mathcal{U} \subset \R^N\), écrire \(\mathcal{U} = I_1 \times \dots \times I_N\) où chaque \( I_i \subset \R\) est un intervalle ouvert.
+\end{itemize}

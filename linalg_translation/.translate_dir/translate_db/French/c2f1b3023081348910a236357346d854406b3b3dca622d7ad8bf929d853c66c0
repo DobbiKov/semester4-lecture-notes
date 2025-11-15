@@ -1,0 +1,5 @@
+\begin{definition}[Convergence uniforme]
+    \((f_n)\) converge \textbf{uniformément} vers \(f: X \to E\) si
+    \[ \lim_{n \to \infty} \sup_{x \in X} \|f_n(x) - f(x)\|_E = 0 \]
+    Ceci est la convergence dans l'espace \(B(X,E)\) des fonctions bornées de \(X\) dans \(E\), muni de la norme sup \(\|g\|_\infty = \sup_{x \in X} \|g(x)\|_E\).
+\end{definition}

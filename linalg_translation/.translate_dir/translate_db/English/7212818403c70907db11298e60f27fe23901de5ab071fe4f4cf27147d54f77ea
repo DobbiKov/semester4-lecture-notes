@@ -1,0 +1,7 @@
+The matrix of a cross product is very useful in linear algebra. Before giving a definition:
+\par
+Let $E$ be a vector space of finite dimension $n$, a space $K$ and a bilinear form $b: E \times E \longrightarrow K$. If $\{e_1, \ldots, e_n\}$ is a basis of $E$, then: $x = \sum_{i=1}^{n} x_ie_i$ and $y = \sum_{j=1}^{n} y_je_j$, then we have:
+\[
+b(x, y) = \sum_{i,j = 1}^{n} x_iy_jb(e_i, e_j)
+\] 
+$b$ is therefore determined by the knowledge of the values $b(e_i, e_j)$ on a basis.

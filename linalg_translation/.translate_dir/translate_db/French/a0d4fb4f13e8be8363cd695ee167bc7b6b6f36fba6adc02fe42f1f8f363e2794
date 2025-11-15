@@ -1,0 +1,7 @@
+\begin{prop}
+    Soit $(E, \| . \|)$ un espace vectoriel normé avec 
+     \[
+    d(u, v) = \|u - v\|
+    \] 
+    une distance sur $E$ (induite par $\| . \|$), alors  $(E, d)$ est un espace métrique.
+\end{prop}

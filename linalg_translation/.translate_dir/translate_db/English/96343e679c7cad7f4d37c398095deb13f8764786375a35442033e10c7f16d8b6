@@ -1,0 +1,7 @@
+\begin{definition}
+    The \textbf{orthogonal projection} onto a subspace $A \subset E$ is a mapping:
+    \begin{align*}
+        p_F: E &\longrightarrow F \\
+        x &\longmapsto p_F(x = e + e') = e
+    \end{align*}
+\end{definition}

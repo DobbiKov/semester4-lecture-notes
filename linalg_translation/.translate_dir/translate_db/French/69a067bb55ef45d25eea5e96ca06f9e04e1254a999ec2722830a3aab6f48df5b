@@ -1,0 +1,13 @@
+\begin{definition} \textbf{Groupe orthogonal}:
+    L'ensemble:
+    \[
+        O(n, \R) := \{A \in \mathcal{M}_{n}(\R) \mid A^TA = I\} = \{A \in \mathcal{M}_{n}(\R) \mid AA^T = I\}
+    \] 
+    vérifie les propriétés suivantes:
+    \begin{enumerate}
+        \item si $A, B \in O(n, \R)$, donc $AB \in O(n, \R)$
+        \item $I \in O(n, \R)$
+        \item si $A \in O(n, \R)$ alors $A^{-1} \in O(n, \R)$
+    \end{enumerate}
+    En particulier, $O(n, \R)$ est un sous-groupe de $GL(n, \R)$ (groupe des matrices inversibles) (voir la definition \ref{def:general-linear-group}).
+\end{definition}

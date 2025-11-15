@@ -1,0 +1,7 @@
+\begin{theorem}\label{thm:gram-schmidt}Gram-Schmidt\\
+    Let $E$ be a vector space equipped with a scalar product $\scalair{,}$. Let $(v_1, \ldots, v_n)$ be a free family of elements $\in E$. Then, there exists an orthogonal family $(w_1, \ldots, w_n)$ such that
+    \[
+        \forall i = 1, \ldots, n \quad Vect(v_1, \ldots, v_i) = Vect(w_1, \ldots, w_i)
+    \] 
+    Moreover, this theorem gives us a method for constructing an orthonormal basis from an arbitrary basis.
+\end{theorem}

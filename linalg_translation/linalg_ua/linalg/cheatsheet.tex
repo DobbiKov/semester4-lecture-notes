@@ -1,0 +1,299 @@
+% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 89a2894b21dad32c8d04ba11ec1420f8e8badff5170419e3f38e97dd47406636
+% --- CHUNK_METADATA_END ---
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{hyperref}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\scalair}[1]{\left\langle #1 \right\rangle}
+
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{definition}{Визначення}[section]
+\newtheorem{eg}{Приклад}[section]
+\newtheorem{prop}{Пропозиція}[section]
+\newtheorem{property}{Властивість(ності)}[section]
+\newtheorem*{notation}{Позначення}
+\newtheorem*{remark}{Примітка}
+
+\author{Yehor KOROTENKO}
+\title{Шпаргалка з Лінійної Алгебри}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 49d34b0366eb0a68eb35c75d6d8aeb1d60be3c49779501a7e1cdf4941acdab46
+% --- CHUNK_METADATA_END ---
+\begin{document}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 66cd782567cea37bd98f32fc53f26630d55f24107cbb50d091ef757c8931466d
+% --- CHUNK_METADATA_END ---
+\maketitle% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 518973cfd1c6898411a3dbee9bb469d2dcbf0a082a5d97a852d4c05ecac92bbc
+% --- CHUNK_METADATA_END ---
+\section{Евклідові простори}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 02381844a06ee10b5f4b85c8f21a40f53faff33068a6a5e80519f579e2b433c7
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+      Ендоморфізм $f: E \to E$ інваріантний прапор (тобто $f(E_i) \subset E_i$) $\iff$ $Mat(f)$ верхня трикутна
+   \end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 5f79ff8622f856607f84562801400c46b8ed9f79e56be1fbc39ee7b2ca6f1181
+% --- CHUNK_METADATA_END ---
+\subsection{Скалярні добутки і норми}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 9c6a37c7881466745e04f1460fcc2343042afd55c7305a18c809869d8bbf2c60
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Білінійна форма на $E$ (\textbf{скалярний добуток}) евклідовому просторі — це відображення:
+    \begin{align*}
+        f: E \times E &\longrightarrow \R \\
+        (u, v) &\longmapsto f(u, v) 
+    \end{align*}
+    що задовольняє наступні властивості:
+    \begin{enumerate}
+        \item \textbf{Білінійність}:
+            \begin{enumerate}
+                \item $f(u + \lambda v, w) = B(u, w) + \lambda B(v, w)$ де $u, v, w \in E$ та  $\lambda \in \R$
+                \item $f(u, v + \lambda w) = B(u, v) + \lambda B(v, w)$ де $u, v, w \in E$ та $\lambda \in \R$
+            \end{enumerate}
+        \item \textbf{Симетричність}: $B(u, v) = B(v, u) \qquad \forall u, v \in E$ 
+        \item \textbf{Додатна визначеність}: $\forall u \in E, B(u, u) \ge 0$
+        \item \textbf{Визначеність}: $B(u, u) = 0 \iff u = 0$
+    \end{enumerate}
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: d7360c2eaaf46ab23e089b334a10acf684903a45cd82c5da3dcf54808774736d
+% --- CHUNK_METADATA_END ---
+\begin{remark}
+    Векторний добуток позначається: $\scalair{., .}$ 
+\end{remark}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: cee5441638074e5818bfc2424082d1adb9eb9ebd08d5761c380f44ea5345d4cd
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Норма $\forall X \in E$:
+    \[
+        \|X\| = \sqrt{\scalair{X, X}} 
+    \] 
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: f21d992c61ed4cd946ef4f0a31f332ede36e9f6f79f6d4286a1a76a50ddf4f27
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Корисні формули: (для $X, Y \in E$)
+   \begin{enumerate}
+       \item $|\scalair{X, Y}| \le \|X\| \cdot \|Y\|$ (рівність якщо $X$ та $Y$ колінеарні)
+       \item $\|X + Y\|^2 = \|X\|^2 + 2\scalair{X, Y} + \|Y\|^2$ 
+       \item $\|X + Y\|^2 + \|X - Y\|^2 = 2\left( \|X\|^2 + \|Y\|^2 \right) $
+       \item $\scalair{X, Y} = \frac{1}{4}\left( \|X + Y\|^2 - \|X - Y\|^2 \right) $
+   \end{enumerate}
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 6a19fbc8874ee78f77b52ae18114580ccc724e2be991f64a8bd1a752a110b6e5
+% --- CHUNK_METADATA_END ---
+\subsection{Ортогональність}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 48f5b7acd7efe1711b5140d26b0ce64ee7765c1ada40ddd51b13e58280f2ebd8
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    $u, v \in E$ є \textbf{ортогональні} якщо $\scalair{u, v} = 0$ і позначають їх  $u \perp v$
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 1bbc22db7e193f7d786a20367ff219fd27573d48d3723581ecd44e11bfd161ea
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    \textbf{Ортогонал $A$}:
+    \[
+        A^{\perp} = \{ u \in E \mid \scalair{u, v} = 0 \quad \forall v \in A \}
+    \] 
+    також відомий як  \textbf{ортогональне доповнення}.
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: cd5a06054ee1ad4d42b9e0735333c6d60d0905570cc8e3aca33862387da33b61
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Якщо $E$ є евклідовим простором і $A \subset E$ його векторним підпростором, тоді:
+   \[
+       E = A \oplus A^{\perp}
+   \] 
+   тобто будь-який вектор $x \in E$ може бути записаний як $x = e + e'$ де $e \in A$ та $e' \in A'$.
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: b4de7a33ff7e22c20c52ca3bbab7cf561bd0668ee2f40b9f434104f5b5a6f8a0
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+   Якщо $f$ є ортогональною проєкцією на $F \subset E$, тоді:
+   \[
+   f(f(x)) = f(x) \quad \forall x \in E
+   \] 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: be808dc0e88fe4457fe72ff46eb1a3bfffc14a19182305c3fe11f594b9bce8c1
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    \textbf{Ортогональна проєкція} на підпростір $A \subset E$ — це відображення:
+    \begin{align*}
+        p_F: E &\longrightarrow F \\
+        x &\longmapsto p_F(x = e + e') = e
+    \end{align*}
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 3ad2a1fabdebc09f3f1f0105b492193a63c04d22046f09e1cfb44910a203372e
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+    \textbf{Відстань} вектора $x$ до підпростору $F$ становить:
+    \[
+    \|x - p_F(x)\|
+    \] 
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: fc8d338fc70a7238977db6134ed038567f46a17a6083a3ea44a885b3c367905e
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    \textbf{Ізометрія} простору $E$ — це ендоморфізм такий, що:
+     \[
+         \forall x, y \in E, \quad \scalair{f(x), f(y)} = \scalair{x, y}
+    \]
+    Крім того,
+    \[
+    \forall x \in E, \quad \|f(x)\| = \|x\|
+    \] 
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: dfce24defed2f04882aa65d4a9302685e70244a4ea3a95090b57bf6ab07aa501
+% --- CHUNK_METADATA_END ---
+\begin{prop}
+    Якщо $X \in E$ і $(e_1, \ldots, e_n)$  є ортонормальним базисом $E$, тоді:
+     \[
+         X =  \scalair{X, e_1}e_1 + \ldots + \scalair{X, e_n}e_n
+    \] 
+    Де $\scalair{X, e_i}$ є координатами в базисі  $(e_1, \ldots, e_n)$
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 9af546ea758039ee929f285092f584242a92b3bfbf24742f2d86d98def6618da
+% --- CHUNK_METADATA_END ---
+\section{Визначники}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 5c88d9e59de36123075781cbfaba0eb4e63f27377f4c60bf48c71a2e64fb69cb
+% --- CHUNK_METADATA_END ---
+\subsection{Найважливіші властивості}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: dd80047d2e22f3370cc0166bcb95dd0a4768191e0a7075e77b9f842b5cf40dea
+% --- CHUNK_METADATA_END ---
+\begin{prop} Властивості визначника.
+    Для цієї пропозиції позначимо $\det(c_1, \ldots, c_n)$ визначник, де $\forall i, \, r_i$ і $\forall i, \, y_i$ представляють стовпець (або вектор-стовпець). І $\forall i, \lambda_i \in \R$.
+    \begin{enumerate}
+        \item \textbf{Визначник одиничної матриці дорівнює 1:}
+            \[
+            \det(I_n) = 1
+            \] 
+        \item \textbf{Визначник матриці рангу 1 є її єдиним елементом}:
+            \[
+                \det(\begin{bmatrix} a_{1,1} \end{bmatrix} ) = a_{1,1} \qquad \text{ де } a_{1,1} \in \R
+            \] 
+        \item \textbf{Лінійність 1}:
+            \[
+            \det(r_1, \ldots, r_i + y_i, \ldots, r_n) = \det(r_1, \ldots, r_i, \ldots, r_n) + \det(r_1, \ldots, y_i, \ldots, r_n)
+            \] 
+        \item \textbf{Лінійність 2}:
+            \[
+            \det(r_1, \ldots, \lambda_ir_i, \ldots, r_n) = \lambda_i\det(r_1, \ldots, r_i, \ldots, r_n) 
+            \] 
+               Ось чому:
+               \[
+               \det(\lambda A) = \lambda^n\det(A)
+               \] 
+        \item \textbf{Однакові стовпці}: Припустимо, що $i \neq j$ і $c_i = c_j$ тоді:
+             \[
+            \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) = 0
+            \] 
+            Якщо є два однакові стовпці, то $\det$ дорівнює 0.
+        \item \textbf{Перестановки стовпців}:
+            
+\[
+    \det(c_1, \ldots, c_i, \ldots, c_j, \ldots, c_n) 
+    = -\det(c_1, \ldots, 
+    \underbrace{c_j , \ldots, 
+    c_i}_{\text{перестановка}}, \ldots, c_n)
+\]
+Інакше кажучи, перестановка стовпців змінює знак.
+
+\item \textbf{Визначник добутку матриць}: Нехай $A, B \in \mathcal{M}_n(\R)$
+    \[
+        \det(AB) = \det(A)\det(B) 
+    \] 
+
+\item \textbf{Визначник транспонованої матриці}: Нехай $A \in \mathcal{M}_n(\R)$
+    \[
+        \det(A^{T}) = \det(A)
+    \] 
+
+
+% Drawing the arc manually
+\end{enumerate}
+\end{prop}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: b6453276024851be6d7c5cfd6dd7603088313241f7c642151636bc78f4063973
+% --- CHUNK_METADATA_END ---
+\section{Корисно}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: f1ab87be11e4456d9caaa3a6d238b3fec8ced867f2c99a4918a0e0ad6c5f3f63
+% --- CHUNK_METADATA_END ---
+\subsection{Множення матриць}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: d5d50cc4947dc0d0237ff820bc9eb741e34d7f751bd6f94bbf3199e9bfda39b8
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Нехай $A \in \mathcal{M}_{p, n}(\R)$ та $B \in \mathcal{M}_{n, q}(\R)$ такі що $A = (a_{j, i})$ та $B = (b_{m, k})$, тоді:
+    \[
+        AB = C = (c_{j, k} = \sum_{i=1}^{n} a_{j, i}b_{i, k})
+    \] 
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 26539796e874ed795975778634e896dab97dce074656f868864424c5cbed5125
+% --- CHUNK_METADATA_END ---
+\subsection{Слід}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 01f8727a7beeeab3f101aac08de6bda9d9b100a3fc75182991032e6c0c7d3fb1
+% --- CHUNK_METADATA_END ---
+\begin{definition}
+    Слід \( n \times n \) квадратної матриці \( A \), що позначається \( \text{tr}(A) \), є сумою діагональних елементів
+
+    \[
+        \text{tr}(A) = a_{11} + a_{22} + \dots + a_{nn} = \sum_{i=1}^{n} a_{ii}
+    \]
+
+    де \( a_{ii} \) є діагональними елементами матриці \( A \). 
+\end{definition}% --- CHUNK_METADATA_START ---
+% needs_review: True
+% src_checksum: 2dc670e7ffe1f12aa0326631b39a0b6d72da153425c7f5f9aed627a71c1487d6
+% --- CHUNK_METADATA_END ---
+\end{document}

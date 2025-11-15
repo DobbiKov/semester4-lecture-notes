@@ -1,0 +1,90 @@
+\begin{proof}
+    $E = \mathcal{C}([a, b], \R)$ and $\|f\|_1 = \int_{{a}}^{{b}} {|f(x)|} \: d{x}$ norm on $\mathcal{C}([a, b], \R)$. I fix $m \in \mathcal{C}([a, b], \R)$ and $A: f \to mf$. $Af(x) = m(x)f(x)$. 
+    \begin{itemize}
+        \item $A \in L(E)$ obvious
+        \item $A \in B(E)$?
+    \end{itemize}
+    Find $c \ge 0$ such that 
+    \[
+    \|Af\|_{1} \le c \|f\|_1 \quad \forall f \in E
+    \] 
+    \begin{align*}
+        \|Af\|_1 = \int_{{a}}^{{b}} {|m(x)f(x)|} \: d{x}
+    \end{align*}
+    \begin{align*}
+        |m(x)f(x)| \le |m(x)| |f(x)| \le \|m\|_{\infty} |f(x)|
+    \end{align*}
+    \[
+        \|m\|_{\infty} = \sup_{x \in [a, b]}|m(x)|
+    \] 
+    \begin{align*}
+        \int_{{a}}^{{b}} {|m(x)f(x)|} \: d{x} \le \|m\|_{\infty}\int_{{a}}^{{b}} {|f(x)|} \: d{x} = \|m\|_{\infty}\|f\|_1
+    \end{align*}
+    \[
+    c = \|m\|_{\infty}
+    \] 
+    We have: $A \in B(E)$ and $\|A\| \le \|m\|_{\infty}$. Let's show that $\|A\| = \|m\|_{\infty}$
+    \[
+        \|A\| = \sup_{\|f\|_1 \le 1} \|Af\|_{1} \overset{?}{=} \|m\|_{\infty} = \sup I \text{ with } I = \{ \|Af\|_{1} : \|f\|_{1} \le 1 \}
+    \] 
+    Let's denote $\alpha = \sup I$
+     \begin{enumerate}
+        \item $\alpha$ upper bound of $I$
+        \item  $\exists (a_n) \, a_n \in I$ with $a_n \xrightarrow[n \to \infty]{} \alpha$
+    \end{enumerate}
+    In our case:
+    \begin{itemize}
+        \item Goal: find a sequence $f_n \in E$ $\|f_n\|_1 \le 1$ and $\|Af_n\|_{1} \to \|m\|_{\infty}$
+    \end{itemize}
+    $a_n = \|Af_n\|_{1}$ $\|m\|_{\infty} = \sup$ of the function $|m|$ on $[a, b]$.
+     \begin{itemize}
+         \item $|m|$ continuous: $\exists x_0 \in [a, b]$ such that $\|m\|_{\infty} = |m|(x_0)$
+    \end{itemize}
+    \[
+    |m|(x) = |m(x)|
+    \] 
+\begin{figure}[H]
+    \centering
+    \incfig{preuve-prop-line-cont-borne}
+    \caption{$f_n$}
+    \label{fig:preuve-prop-line-cont-borne}
+\end{figure}
+\[
+|m(x)f_n(x)| = |Af(x)| \text{ close to } |m(x_0)| |f_n(x)|
+\] 
+$\|f_n\|_{1} = 1$ if $c_n \le 2n$
+\[
+f_n(x) = \begin{cases}
+    0 \text{ if } a \le x \le x_0 - \frac{1}{2n}\\
+    2n(1 - n|x - x_0|) \text{ if } |x - x_0| \le \frac{1}{2n}\\
+    0 \text{ if } x_0 + \frac{1}{2n} \le x \le b
+\end{cases}
+\] 
+\begin{figure}[H]
+    \centering
+    \incfig{preuve-lin-cont-bornee-2}
+    \caption{$f_n$}
+    \label{fig:preuve-lin-cont-bornee-2}
+\end{figure}
+\[
+|m(x)f_n(x) - m(x_0)f_n(x)| \le |m(x) - m(x_0)| |f_n(x)| \le \varepsilon_n|f_n(x)|
+\] 
+Where $f_n(x) \neq 0$ $|x - x_0| \le \frac{1}{n}$ so 
+\[
+|m(x) - m(x_0)| \le \varepsilon_n \quad \varepsilon_n \xrightarrow[n \to \infty]{} 0
+\] 
+then $m$ continuous at $x_0$.
+ \begin{align*}
+    \|Af_n\|_{1} = \int_{{a}}^{{b}} {|m(x)f_n(x)|} \: d{x} \le \int_{{a}}^{{b}} {|m(x) - m(x_0)| |f_n(x)|} \: d{x} + \int_{{a}}^{{b}} {|m(x_0)| |f_n(x)|} \: d{x} 
+\end{align*}
+\begin{itemize}
+    \item $1^{st}$ term: $\le \varepsilon_n\|f_n\|_{1} = \varepsilon_n$
+    \item $2^{nd}$ term: $:= \|m\|_{\infty}\|f_n\|_{1} = \|m\|_{\infty}$
+\end{itemize}
+Then:
+\begin{align*}
+    &\|f_n\|_{1} = 1\\
+    &\|Af_n\|_{1} \to \|m\|_{\infty}\\
+    &\text{so } \|A\| = \|m\|_{\infty}
+\end{align*}
+\end{proof}

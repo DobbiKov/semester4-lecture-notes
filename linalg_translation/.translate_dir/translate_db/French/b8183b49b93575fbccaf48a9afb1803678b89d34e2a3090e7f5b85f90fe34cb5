@@ -1,0 +1,14 @@
+\begin{eg} $E = \{a, b, c\}$
+    On pose:
+    \begin{itemize}
+        \item $d(a,a) = d(b,b) = d(c,c) = 0$
+        \item  $d(a,b) = d(b,a) = d(b,c) = d(b,c) = 1$
+        \item  $d(a,c) = d(c, a) = 2$
+    \end{itemize}
+    \[
+        B(a,2) = \{a, b\} = Adh(B(a, 2))
+    \] 
+    \[
+        B_f(a, 2) = \{a, b, c\}
+    \] 
+ \end{eg}

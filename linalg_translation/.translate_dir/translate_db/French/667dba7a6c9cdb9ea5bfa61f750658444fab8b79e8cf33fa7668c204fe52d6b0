@@ -1,0 +1,11 @@
+
+Cela ne semble pas très facile, n'est-ce pas? Au bout de ce chapitre, on va trouver une façon à simplifier le calcule et à la fin on résoudra cet exercice.
+\par
+On sait d'algèbre linéaire qu'on peut représenter une matrice d'une application dans des bases différentes, i.e soit une base $\{e_i\}$ de $E$ et  $f$ une application. Alors cette aplication dans la base  $\{e_i\}$ est représentée:
+ \[
+A = M(f)_{e_i} = \|f(e_1), \ldots, f(e_n)\|
+\] 
+Soit $\{e_i'\}$ une autre base de  $E$, alors on peut représenter l'application  $f$ dans cette base aussi, notons:  $P = P_{e_i \to e_i'}$ une matrice de passage de la base $\{e_i\}$ vers la base  $\{e_i'\}$
+ \[
+     A' = M(f)_{e_i'} = P^{-1}AP = \|f(e_1'), \ldots, f(e_n')\|_{e_i'}
+\] 

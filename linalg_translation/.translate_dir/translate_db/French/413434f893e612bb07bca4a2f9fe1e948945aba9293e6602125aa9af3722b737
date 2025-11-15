@@ -1,0 +1,1 @@
+D'abord, rappelons la définition de $A_{i,j}$. C'est une matrice carrée où $i^{\text{ième}}$ ligne et $j^{\text{ième}}$ colonne sont supprimé. (Voir la définition ~\ref{def:matrice-ligne-colonne-supprime}).

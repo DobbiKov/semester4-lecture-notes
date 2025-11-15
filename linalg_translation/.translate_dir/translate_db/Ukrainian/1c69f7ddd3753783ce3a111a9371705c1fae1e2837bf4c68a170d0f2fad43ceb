@@ -1,0 +1,7 @@
+\begin{definition}\label{def:general-linear-group}
+    Загальна лінійна група:
+    \[
+        GL(n, \R) = \{A \in \mathcal{M}_{n}(\R) \mid det(A) \neq 0\}
+    \] 
+    це група всіх лінійних перетворень (квадратних матриць), які є оборотними (оскільки $det(A) \neq 0$).
+\end{definition}

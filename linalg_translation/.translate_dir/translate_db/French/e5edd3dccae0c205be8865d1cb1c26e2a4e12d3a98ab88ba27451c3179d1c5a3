@@ -1,0 +1,14 @@
+\begin{figure}[h]
+   \centering 
+   \begin{tikzpicture}
+       \draw[->] (-1, 0) -- (2, 0); 
+       \node[below] (_) at (2,0){$x$};
+
+       \node (_) at (0,0){]};
+       \node[below] (_) at (0,-0.3){$0$};
+       \node (_) at (1,0){]};
+       \node[below] (_) at (1,-0.3){$1$};
+       \draw[color=red] (0,0)--(1,0);
+   \end{tikzpicture}
+   \caption{$(]0, 1], d)$ n'est pas complet}
+\end{figure}

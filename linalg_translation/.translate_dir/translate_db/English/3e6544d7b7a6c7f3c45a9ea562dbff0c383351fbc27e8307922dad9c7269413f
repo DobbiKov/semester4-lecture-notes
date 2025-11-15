@@ -1,0 +1,22 @@
+\begin{proof}
+   $E_1$ is $(E, N_1)$, $E_2 = (E, N_2)$.
+   \par
+   $N_1$ and $N_2$ topologically equivalent means exactly:
+   \begin{enumerate}
+       \item $Id: E_1 \to E_2$ are continuous 
+       \item and $Id: E_2 \to E_1$
+   \end{enumerate}
+   Therefore:
+   \begin{enumerate}
+       \item $\Omega$ open for $N_2$ $\implies$ $\Omega$ open for $N_1$
+       \item $\Omega$ open for $N_1$ $\implies$ $\Omega$ open for $N_2$
+   \end{enumerate}
+
+   \begin{enumerate}
+       \item $\iff$ $N_2(Id \, u) (= N_2(u)) \le c_1N_1(u)$
+       \item $\iff$ $N_1(Id \, u) (= N_1(u)) \le c_2N_2(u)$
+   \end{enumerate}
+   because $Id$ continuous and linear, therefore bounded $\exists c$ such that $\underbrace{Id \, u}_{\in E_2} \le c \underbrace{u}_{E_1}$ therefore $N_2(Id \, u) \le c N_1(u)$
+   \par
+   $(1)$ and $(2)$ $\iff$ $N_1$ and $N_2$ equivalent.
+\end{proof}

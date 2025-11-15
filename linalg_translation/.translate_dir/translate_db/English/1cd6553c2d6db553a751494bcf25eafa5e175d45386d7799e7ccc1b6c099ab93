@@ -1,0 +1,7 @@
+\begin{definition}
+    Let $F$ be a vector subspace of $E$, therefore $E = F \oplus F^{\perp}$ where $\forall v \in E, \exists v_1 \in F, v_2 \in F^{\perp}$ such that $v = v_1 + v_2$. We set:
+    \[
+    s_F(v) = v_1 - v_2
+    \] 
+    and we call $s_F$ an orthogonal symmetry with axis F.
+\end{definition}

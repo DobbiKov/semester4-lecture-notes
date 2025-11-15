@@ -1,0 +1,6 @@
+\begin{equation}\label{eq:systeme-appli-diagonalisation}
+    \begin{cases}
+        u_{n+1} = u_n - v_n\\
+        v_{n+1} = 2u_n + 4v_n
+    \end{cases}
+\end{equation}

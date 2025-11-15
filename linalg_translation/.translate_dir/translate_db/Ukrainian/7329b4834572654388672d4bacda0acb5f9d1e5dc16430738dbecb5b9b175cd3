@@ -1,0 +1,11 @@
+\begin{eg}
+   \[
+   n = 2 \quad f_1(t) = f(t, a_2) \quad f_2(t) = f(a_1, t)
+   \]  
+\begin{figure}[H]
+    \centering
+    \incfig{n-est-2-continuite-partielle}
+    \caption{$f$ є неперервною в  $A = (a_1, a_2)$}
+    \label{fig:n-est-2-continuite-partielle}
+\end{figure}
+\end{eg}

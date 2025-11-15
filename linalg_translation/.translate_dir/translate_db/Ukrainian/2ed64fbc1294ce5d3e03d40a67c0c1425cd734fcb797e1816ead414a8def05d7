@@ -1,0 +1,17 @@
+\begin{prop}
+   . 
+   \begin{enumerate}
+       \item $(X|Y)$ є "лінійним відносно Y"
+           \begin{itemize}
+               \item $(Z|X + Y) = (Z|X) + (Z|Y)$
+               \item $(Z|\lambda X) = \lambda(Z|X) \quad \lambda \in \C$
+               \item  $(Z|\lambda X + \mu Y) = \lambda(Z|X) + \mu(Z|Y)$
+               \item  $(X + Y|Z) = (X|Z) + (Y|Z)$
+               \item $(\lambda X|Z) = \overline{\lambda}(X|Z) \quad \lambda \in \C$
+               \item $(\lambda X + \mu Y|Z) = \overline{\lambda}(X|Z) + \mu(Y|Z)$
+           \end{itemize}
+       \item $(Y|X) = \overline{(X|Y)}$
+       \item $(X|X) = \sum_{n=1}^{d} \overline{x_i}x_i = \sum_{n=1}^{d} |x_i|^2$\\
+           $(X|X) \ge 0$ і $(X|X) = 0 \iff X = 0_d$
+   \end{enumerate}
+\end{prop}

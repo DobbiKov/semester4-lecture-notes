@@ -1,0 +1,7 @@
+\begin{definition}
+    Let $A \subset E$. 
+    \begin{enumerate}
+        \item $x_0 \in E$ is \underline{adherent} to $A$, if $\forall \delta > 0, \, B(x_0, \delta)$ intersects $A$. (equivalent to $d(x_0, A) = 0$)
+        \item $Adh(A)$ (adherence or closure of $A$) = set of adherent points to $A$ (also denoted $\overline{A}$)
+    \end{enumerate}
+\end{definition}

@@ -1,0 +1,11 @@
+\begin{definition}
+    Soit $A = [a_{i, j}] \in \mathcal{M}_{n}(\R)$ une matrice carée $n \times n$, alors:
+    \[
+        \operatorname{det}(A) = \sum_{\sigma \in S_n}^{} \operatorname{signe}(\sigma) \cdot \prod_{i=1}^{n} a_{i, \sigma(i)} 
+    \] 
+    où 
+    \begin{itemize}
+        \item $S_n$ est un groupe de toute permutation de  $\{1, \ldots, n\}$
+        \item $\operatorname{signe}(\sigma)$ est une signe de pérmutation
+    \end{itemize}
+\end{definition}

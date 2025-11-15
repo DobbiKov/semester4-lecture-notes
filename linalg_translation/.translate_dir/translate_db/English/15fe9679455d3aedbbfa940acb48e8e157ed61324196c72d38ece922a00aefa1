@@ -1,0 +1,6 @@
+\begin{theorem}
+    The set $\operatorname{Sol}(H)$ of solutions to  $(H)$ is given by
+     \[
+         x(t) = e^{tA}x_0 \quad x_0 \in \mathbb{C}^{n}
+    \] 
+\end{theorem}

@@ -1,0 +1,26 @@
+\begin{preuve}
+     
+    \[
+        \mathcal{M}_n(\mathbb{C}) \sim \mathbb{C}^{n \times n}
+    \] 
+    $\| \cdot \|_{HS}$ канонічна норма на $\mathbb{C}^{n \times n}$ !
+    \[
+        (Ax)_{i} = \sum_{i=1}^{n} a_{i, j}x_j
+    \] 
+    \[
+        (y|Ax) = \sum_{i=1}^{n} \overline{y_i}\sum_{j=1}^{n} a_{i,j}x_j = \sum_{1 \le i,j \le n}^{} a_{i, j}\overline{y_i}x_{j}
+    \] 
+    Нехай $b_{i, j} = y_i \overline{x_j}$ 
+    \[
+        (y|Ax) = \sum_{i,j}^{} \overline{b_{i,j}}a_{i,j}
+    \] 
+    \[
+        |(y|Ax)| \le \left( \sum_{i,j}^{} |a_{i,j}|^2 \right)^{\frac{1}{2}} \times \left( \sum_{i,j}^{} |b_{i,j}|^2 \right)^{\frac{1}{2}}
+    \] 
+    \[
+        \left( \sum_{i,j}^{} |b_{i,j}|^2 \right)^{\frac{1}{2}} = \left( \sum_{1\le i,j \le n}^{} |y_i|^2 |x_i|^2 \right)^{\frac{1}{2}} = \left( \sum_{1\le i \le n}^{} |y_i|^2 \right)^{\frac{1}{2}} \times \left( \sum_{1 \le j \le n}^{} |x_j|^2 \right)^{\frac{1}{2}} = \|y\| \|x\|
+    \] 
+    \[
+    \left| (y|Ax) \right| \le \|A\|_{HS} \|x\| \|y\| \implies \|A\| \le \|A\|_{HS}
+    \] 
+ \end{preuve}

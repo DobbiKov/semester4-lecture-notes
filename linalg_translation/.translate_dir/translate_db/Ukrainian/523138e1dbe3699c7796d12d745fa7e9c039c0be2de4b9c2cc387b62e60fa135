@@ -1,0 +1,8 @@
+\begin{itemize}
+    \item 
+\underline{неперервність:} $f(x_1, x_2) \xrightarrow[(x_1, x_2) \to (a_1, a_2)]{}  f(a_1, a_1)$  
+    \item 
+\underline{часткова:} $f(x_1, a_2) \xrightarrow[x_1 \to a_1]{}   f(a_1, a_2)$ та $f(a_1, x_2) \xrightarrow[x_2 \to a_2]{}  f(a_1, a_2)$
+    \item 
+\underline{Гарне поняття:} неперервність передбачає часткову неперервність (зворотне хибне)
+\end{itemize}

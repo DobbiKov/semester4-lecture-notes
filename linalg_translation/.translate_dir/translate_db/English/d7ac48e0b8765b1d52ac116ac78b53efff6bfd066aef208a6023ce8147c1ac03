@@ -1,0 +1,8 @@
+\begin{propriete}[Properties of the exponential]
+    \begin{enumerate}
+        \item \(\|e^A\| \le e^{\|A\|}\) (for any subordinate or Frobenius matrix norm).
+        \item If \(AB=BA\), then \(e^{A+B} = e^A e^B\).
+        \item \(e^0 = I\). \((e^A)^{-1} = e^{-A}\).
+        \item \(\frac{d}{dt} (e^{tA}) = A e^{tA} = e^{tA} A\).
+    \end{enumerate}
+\end{propriete}

@@ -1,0 +1,29 @@
+\begin{preuve} Доведення Проп. \ref{prop:suite-lien-avec-adherence}
+    \begin{enumerate}
+        \item ($\impliedby$) Нехай $(x_n)$ з  $x_n \in A \quad \forall n \in \N$ і $\lim_{n \to \infty} x_n = x$.
+            \par
+            Маю $d(x_n, x) \xrightarrow[n \to \infty]{} 0$ і $x_n \in A$, тому
+             \[
+                 inf_{y \in A}(d(x, y)) = 0 = d(x, A)
+            \] 
+            \[
+            d(x, A) = 0 \iff x \in Adh(A)
+            \] 
+            \par
+            ($\implies$) Нехай $x \in Adh(A)$
+             \begin{align*}
+                 \iff& d(x, A) = 0\\
+                \iff& \forall \epsilon > 0, \, \exists x_{\epsilon} \in A \text{ такий що } d(x, x_{\epsilon}) < \epsilon
+            \end{align*}
+            Візьмемо $\epsilon = \frac{1}{n}$, покладемо $u_n = x_{\frac{1}{n}}$. $u_n \in A$  $d(x, u_n) < \frac{1}{n}$, тому $\lim_{n \to \infty} u_n = x$ 
+        \item ($\implies$) Нехай $A$ замкнена, тому 
+             \[
+            A = Adh(A)
+            \] 
+            Якщо $(x_n)$ послідовність в  $A$, що збігається до  $x$.
+             \[
+            x \in Adh(A) = A
+            \] 
+            ($\impliedby$) Кажуть, що $Adh(A) \subset A$. Оскільки $A \subset Adh(A)$, тому $A = Adh(A)$
+    \end{enumerate} 
+ \end{preuve}

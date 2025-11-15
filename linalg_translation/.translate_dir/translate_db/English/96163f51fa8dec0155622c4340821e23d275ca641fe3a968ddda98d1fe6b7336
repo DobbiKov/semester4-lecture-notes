@@ -1,0 +1,3 @@
+\begin{definition}
+    $u, v \in E$ are \textbf{orthogonal} if $\scalair{u, v} = 0$ and we denote them as $u \perp v$
+\end{definition}

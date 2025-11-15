@@ -1,0 +1,3 @@
+\begin{lemma} Riesz's Lemma:\\
+    Let $(E, \scalair{.,.})$ be a finite-dimensional Euclidean space and $f \in E^*$. Then, $\exists! u \in E$ such that $f(x) = \scalair{u, x} \quad \forall x \in E$. The linear form $f$ is given by an inner product with a vector.
+\end{lemma}

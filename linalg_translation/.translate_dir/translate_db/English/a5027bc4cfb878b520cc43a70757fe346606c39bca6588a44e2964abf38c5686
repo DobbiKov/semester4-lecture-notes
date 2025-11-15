@@ -1,0 +1,10 @@
+\begin{intuition}
+    Since $Q(f) = 0$, therefore $\forall v \in E, Q(f)(v) = 0$ which means
+    $\operatorname{Ker}(Q(f)) = E$. $\exists v_1, \ldots, v_p$ such that $v = v_1 +
+    \ldots + v_p$. However, all polynomials are pairwise coprime, so
+    only one of them annihilates $v_i$, thus $v_i \in \operatorname{Ker}Q_i(f)$ and
+    this remains true for all $v_1, \ldots, v_p$. And since the polynomials
+    are coprime, if $k \neq j$ and $Q_k(v_i) = 0$, then $Q_j(v_i) \neq
+    0$ because $Q_j$ and $Q_k$ are different. Therefore, $\forall i, j \,
+    \operatorname{Ker}Q_i \cap \operatorname{Ker}Q_j = \{0\}$.
+\end{intuition}

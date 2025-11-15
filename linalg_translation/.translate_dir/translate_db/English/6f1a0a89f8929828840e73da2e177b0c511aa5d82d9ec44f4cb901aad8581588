@@ -1,0 +1,11 @@
+\begin{definition}
+Let $f: \R^n \to \R$ be a continuous function is differentiable and functions $g_1: \R \to \R$, $\ldots$, $g_n: \R \to \R$ be differentiable and continuous functions and  
+\begin{align*}
+    h: \R &\longrightarrow \R \\
+    t &\longmapsto h(t) = f(g_1(t), g_2(t), \ldots, g_n(t))
+\end{align*}
+then 
+\[
+h'(t) = \frac{\partial g_1}{\partial h}g_1'(t) + \frac{\partial g_2}{\partial h}g_2'(t) + \ldots + \frac{\partial g_n}{\partial h}g_n'(t)
+\] 
+\end{definition}

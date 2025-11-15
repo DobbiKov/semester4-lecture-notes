@@ -1,0 +1,7 @@
+\begin{intuition}
+   Les vecteurs propres sont les vecteurs qui sous l'action de $f$ ne changent pas de diréctions, justement la longueure (même pas toujours). Cela simplifie le calcul de tel vecteurs. Pouvez-vous calculer  $A^3v_3$? Pas très facile, alors le vecteur  $A^3v_2$? 
+   \[
+    Av_2 = 2v_2 \implies A^2v_2 = 2\cdot 2v_2 = 4v_2 \implies A^3v_2 = 2 \cdot 4v_2 = 8v_2 = \begin{pmatrix} -8 \\ 8 \end{pmatrix} 
+   \] 
+   C'est cool, n'est-ce pas?
+\end{intuition}

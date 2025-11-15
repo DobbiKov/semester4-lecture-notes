@@ -1,0 +1,7 @@
+
+
+Supposons \( A \) diagonalisable. Il existe alors \( A' \) matrice diagonale et \( P \) matrice inversible telles que : 
+\[
+A' = P^{-1}AP.
+\]
+Si on considère \( A \) comme la matrice d’un endomorphisme dans la base canonique, \( A' \) est la matrice de \( f \) dans la base de vecteurs propres \( \{v_i\} \).

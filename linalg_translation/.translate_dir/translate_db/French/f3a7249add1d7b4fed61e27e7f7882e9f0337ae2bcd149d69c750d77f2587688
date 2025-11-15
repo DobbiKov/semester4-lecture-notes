@@ -1,0 +1,43 @@
+\begin{eg}
+$n = 2$
+ \[
+A = \begin{pmatrix} 
+    a_{1,1} & a_{1, 2}\\
+    a_{2, 1} & a_{2, 2}
+\end{pmatrix} 
+\] 
+$(a_{1,2} = a_{2, 1})$
+\par
+Valeurs propres: racines du pol. Caractéristique:  
+\[
+    P(\lambda) = \det(A - \lambda I) = \begin{vmatrix} a_{1,1} - \lambda & a_{1, 2} \\ a_{2, 1} & a_{2,2} - \lambda \end{vmatrix} = (\lambda - a_{1,1})(\lambda - a_{2,2}) -  a_{1,2}a_{2,1}
+\] 
+\[
+    \lambda^2 - (a_{1,1} + a_{2,2})\lambda + a_{1,1}a_{2,2} - a_{2,1}a_{1,2}
+\] 
+\[
+    a_{1,1} + a_{2,2} = Tr(A)
+\] 
+\[
+    a_{1,1}a_{2,2} - a_{2,1}a_{1,2} = \det(A)
+\] 
+\[
+    x^2 - Sx + P = x^2 - (\lambda_1 + \lambda_2)x + \lambda_1\lambda_2
+\] 
+\begin{align*}
+    &\det(A) = \text{ produit des valeurs propres}\\
+    &Tr(A) = \text{ somme des valeurs propres}
+\end{align*}
+\[
+A = H_f(X_0)
+\] 
+\begin{enumerate}
+    \item si $\det(A) < 0$,  $X_0$ point col
+    \item si $\det(A) > 0$
+         \begin{enumerate}
+            \item $Tr(A) > 0$, $X_0$ minimum
+            \item  $Tr(A) < 0$, $X_0$ maximum
+        \end{enumerate}
+    \item $\det(A) = 0$,  $X_0$ point critique dégénéré
+\end{enumerate}
+\end{eg}

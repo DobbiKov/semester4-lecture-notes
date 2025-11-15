@@ -1,0 +1,9 @@
+\begin{remark}
+   \begin{enumerate}
+       \item If $\lambda$ is not an eigenvalue of $f$, then $E_\lambda = \{0\}$
+       \item If $\lambda$ is an eigenvalue, then:
+            \[
+                E_\lambda = \{ \text{ eigenvectors associated with } \lambda \} \cup \{0\} \text{ and } \dim E_\lambda \ge 1
+           \] 
+   \end{enumerate} 
+\end{remark}

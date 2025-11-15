@@ -1,0 +1,14 @@
+\begin{theorem}
+    Soit $A \in \mathcal{L}(E, F)$. Les propriétés suivantes sont équivalentes:
+    \begin{enumerate}
+        \item $A: E \to F$ est continue
+        \item $A$ est continue en  $0_E$
+        \item  $\exists C \ge 0$ telle que 
+            \[
+            \|Ax\|_F \le C\|x\|_E \quad \forall x \in E
+            \] 
+            cela s'appelle que $A$ est bornée
+        \item $A$ est bornée sur  $B_E(0, R)$ $\forall R > 0$
+    \end{enumerate}
+    On dit que $A$ est bornée (si $A$ est continue et linéaire)
+\end{theorem}
