@@ -3,14 +3,19 @@
 % src_checksum: c989bfd3ebf41acd1af67154558c73f359661474e55820d188f711ad6f74328a
 % --- CHUNK_METADATA_END ---
 \usepackage[utf8]{inputenc}
-\usepackage[T2A, T1]{fontenc}
-\usepackage[ukrainian]{babel}
+\usepackage[T2A]{fontenc}
 
+\usepackage{lmodern}
 \usepackage{textcomp}
 
-\addto\captionsukrainian{%
-  \renewcommand{\appendixname}{Appendix}%
-}
+\usepackage[ukrainian]{babel}
+\usepackage[toc,page]{appendix}
+% \AtBeginDocument{%
+%   \addto\captionsukrainian{%
+%     \renewcommand{\appendixname}{Appendix}%
+%   }
+% }
+
 
 \usepackage{url}
 
@@ -280,7 +285,7 @@
 \pgfplotsset{compat=1.11}
 \usepackage{subcaption}
 
-\author{Yehor Korotenko}
+\author{Єгор Коротенко}
 
 \newcommand{\scalar}[2]{\langle #1, #2 \rangle}
 \newcommand{\scalair}[1]{\left\langle #1 \right\rangle}
@@ -289,5 +294,5 @@
 \usepackage{lipsum}
 \usepackage[Lenny]{fncychap}
 \ChNameUpperCase
-\ChNumVar{\fontsize{40}{42}\fontfamily{ptm}\selectfont}
+\ChNumVar{\fontencoding{T2A}\fontsize{40}{42}\fontfamily{ptm}\selectfont}
 \ChTitleVar{\Large\sc}
