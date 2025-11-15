@@ -75,7 +75,7 @@ jobs:
         file linalg_translation/src/linalg/main.pdf | grep -q ' PDF '
         file linalg_translation/linalg_en/linalg/main.pdf | grep -q ' PDF '
         file linalg_translation/linalg_ua/linalg/main.pdf | grep -q ' PDF '
-        file linalg/cheatsheet.pdf | grep -q ' PDF '
+        file linalg_cheatsheet/cheatsheet.pdf | grep -q ' PDF '
         file anal-avec-python/main.pdf | grep -q ' PDF '
         file anp-cheatsheet/main.pdf | grep -q ' PDF '
         
