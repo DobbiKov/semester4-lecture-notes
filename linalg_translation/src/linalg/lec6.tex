@@ -197,3 +197,17 @@ Ce qui est important, c'est que les polynômes annulateurs sont très liés aux 
             D'où $m_A(X) \neq (X-1)(X-2)$ et donc $A$ n'est pas diagonalisable.
    \end{enumerate} 
 \end{eg}
+\begin{intuition}
+   Un endomorphisme est diagonalisable si et seulement si on peut décomposer
+   l'espace en sous-espaces propres sans répétition.
+
+Le polynôme minimal à racines simples signifie exactement : chaque valeur
+propre n'apparaît qu'une seule fois dans la contrainte fondamentale de $f$.
+Cela force chaque valeur propre à avoir suffisamment de vecteurs propres pour
+"remplir" son sous-espace.
+
+Si une racine est multiple dans $m_f$, ça signifie que $f$ a un comportement
+"Jordan" autour de cette valeur propre — il y a des directions où $f$ n'agit
+pas comme une simple homothétie, mais avec un effet de "glissement" (bloc de
+Jordan).
+\end{intuition}
